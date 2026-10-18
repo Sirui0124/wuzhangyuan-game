@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "date": "2026-10-11",
+  "status": "runtime-sfx-source-provenance",
+  "assets": [
+    {
+      "id": "ui_click_a",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/ui_click_a.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/ui_click_a.wav",
+      "description": "普通按钮：短促、柔化的点击候选A",
+      "durationMs": 29.6,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -14.0,
+      "wavRmsDbfs": -28.51,
+      "source": "originals/kenney_interface-sounds/Audio/click_001.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9",
+      "sha256": "2fa84256701d8d62d830d9976e1473eacd194ea877cc706a74b9b86d155183f3",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 3000,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 4.94,
+        "targetPeakDbfs": -14,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "ui_click_b",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/ui_click_b.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/ui_click_b.wav",
+      "description": "普通按钮：更暗、更轻的点击候选B",
+      "durationMs": 29.6,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -15.0,
+      "wavRmsDbfs": -29.39,
+      "source": "originals/kenney_interface-sounds/Audio/click_001.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "ccfb7fa0cccdd9faec0eb16033c732b1e308d139d80f799161495d58f7adcdb9",
+      "sha256": "b30fba6f4828af571e4ffa29772cf9c64349cd46411f4ac17e541f341d585e00",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 2400,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 4.94,
+        "targetPeakDbfs": -15,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "dialogue_next",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/dialogue_next.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/dialogue_next.wav",
+      "description": "逐句推进：很轻的短点",
+      "durationMs": 21.6,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -20.0,
+      "wavRmsDbfs": -35.58,
+      "source": "originals/kenney_interface-sounds/Audio/tick_001.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "9d057b918024c787bbe6c00beed13a7ef72a3fa0c259add3cef36582792f4230",
+      "sha256": "8ee3b66dc873ad78dcf531ead05ce2309da35f0d55f58d58a38991f66c3b7601",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 2200,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 3.58,
+        "targetPeakDbfs": -20,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "panel_open",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/panel_open.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/panel_open.wav",
+      "description": "打开证据或记录：开册短音",
+      "durationMs": 143.4,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -16.0,
+      "wavRmsDbfs": -32.94,
+      "source": "originals/kenney_rpg-audio/Audio/bookOpen.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "953390534377222bee89ac8cd9e60a58fdc037c71a4d7c18c43cd647c7f34ba8",
+      "sha256": "552b1804e4c803099ba7af52f13cc235b397c545ed0505d2513616b4b0a76dd8",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 4000,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -16,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "panel_close",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/panel_close.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/panel_close.wav",
+      "description": "关闭面板：轻合册",
+      "durationMs": 210.8,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -17.0,
+      "wavRmsDbfs": -37.6,
+      "source": "originals/kenney_rpg-audio/Audio/bookClose.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "81e976532565f4372abd14e83d2684195fa548d0a28d345de221e56052454f32",
+      "sha256": "b62b15d58ad1f15420062af5da99e62f0ba9e9059eade4e0d03e79202ff35d83",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 3200,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -17,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "paper_turn",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/paper_turn.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/paper_turn.wav",
+      "description": "证据详情、页签：短翻纸",
+      "durationMs": 392.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -17.0,
+      "wavRmsDbfs": -45.65,
+      "source": "originals/kenney_rpg-audio/Audio/bookFlip2.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "3409042acbfaebc24c1a6327dc073e36f9250841712e96c5040da566a97df73c",
+      "sha256": "b1a939ceb9e242937840b43338a7166077389d79a317e6928ee7c15370f792fb",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 4600,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -17,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "evidence_select",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/evidence_select.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/evidence_select.wav",
+      "description": "选择一项证据：轻扣候选",
+      "durationMs": 40.4,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -17.0,
+      "wavRmsDbfs": -32.8,
+      "source": "originals/kenney_interface-sounds/Audio/select_001.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "aec0c31ea934a35936ae0d2ab8fac8123c93aa5647f935853a58dbaf90278b7a",
+      "sha256": "ed330afa7b4c6ad6b5e958fa56fd5fcf7e0113b5128718ff668bd0d5a101ac6d",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 2600,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 6.73,
+        "targetPeakDbfs": -17,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "evidence_present",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/evidence_present.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/evidence_present.wav",
+      "description": "实际出示证据：册页落案候选",
+      "durationMs": 204.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -14.0,
+      "wavRmsDbfs": -31.89,
+      "source": "originals/kenney_rpg-audio/Audio/bookPlace1.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "26f3ce60fbde85b678b0ad7f6624d80535fe540d88232ad1e38e47a96662d977",
+      "sha256": "f8764b9fc33dbc6db0105ce6374fe9ceef427464b13cf901fe74cae999494ab6",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 3400,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -14,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "evidence_gain",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/evidence_gain.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/evidence_gain.wav",
+      "description": "首次获得证据：古琴感三音阶轻拨弦（D4–F4–A4）",
+      "durationMs": 700.0,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -13.0,
+      "wavRmsDbfs": -24.96,
+      "source": "originals/kenney_interface-sounds/Audio/pluck_002.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "项目合成拨弦音体；Kenney 拨弦触感层",
+      "sourceSha256": "c977fe249ff42d1c93a552b33abc13a8399df3879fa510475426e5c4bbac1da9",
+      "sha256": "0d49d44fe10ec9f1c98ebec3cb34f9f21a0f03bcbd764d552d9c1516e4292a80",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 3000,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -13,
+        "mono": true,
+        "phraseNotes": [
+          "D4",
+          "F4",
+          "A4"
+        ],
+        "noteOnsetsMs": [
+          0,
+          140,
+          290
+        ],
+        "synthesis": "damped plucked-string harmonics with quiet CC0 pick texture",
+        "synthesisScript": "prepare-sfx.py",
+        "tailFadeMs": 30
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "submit",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/submit.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/submit.wav",
+      "description": "实际提交文字：低沉落案候选",
+      "durationMs": 247.5,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -15.0,
+      "wavRmsDbfs": -33.52,
+      "source": "originals/kenney_rpg-audio/Audio/bookPlace2.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "831874e8fd142d4d0a03ff009f1f83966338a7878c0f6f38c613ae5b80dd731e",
+      "sha256": "ed6ab26be7680a44329278544d0ccb4dc8e359ebfe000a19b09e5a7b8e71d556",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 2800,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -15,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "ui_warning",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/ui_warning.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/ui_warning.wav",
+      "description": "空白提交、操作不足或服务错误：暗短扣",
+      "durationMs": 225.9,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -19.0,
+      "wavRmsDbfs": -37.71,
+      "source": "originals/kenney_rpg-audio/Audio/bookPlace3.ogg",
+      "sourceUrl": "https://kenney.nl/assets/rpg-audio",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "b1afa711e1cabfe5b2c56e20e20e0f9d82142d067727447fa992ddc43dbdb06e",
+      "sha256": "79a457657c0634d3795d4f80da94393bfe2a3de21e6518c4adbbb249fe9822d1",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 1600,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -19,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    },
+    {
+      "id": "response_ready",
+      "file": "../../../GameStarter/web-demo/public/audio/sfx/response_ready.wav",
+      "wav": "../../../GameStarter/web-demo/public/audio/sfx/response_ready.wav",
+      "description": "回应到达：中性短提示候选",
+      "durationMs": 99.5,
+      "sampleRate": 48000,
+      "channels": 1,
+      "wavPeakDbfs": -19.0,
+      "wavRmsDbfs": -35.81,
+      "source": "originals/kenney_interface-sounds/Audio/pluck_001.ogg",
+      "sourceUrl": "https://kenney.nl/assets/interface-sounds",
+      "license": "CC0-1.0",
+      "author": "Kenney",
+      "sourceSha256": "be97ec4893a02d6eccfb678daa76c83e34cb2583b834ec2593d2641def739fa4",
+      "sha256": "e93d693509c71e473d3e4748aba1a2e5afd86d337791c3cf6849894ae3ec102b",
+      "processing": {
+        "highpassHz": 90,
+        "lowpassHz": 2600,
+        "trimSilence": true,
+        "fadeInMs": 2.0,
+        "fadeOutMs": 8.0,
+        "targetPeakDbfs": -19,
+        "mono": true
+      },
+      "review": "已做解码、时长和电平检查；听感由试听页确认，尚未游戏内混音验收"
+    }
+  ],
+  "mix": {
+    "sfxMasterGain": 0.65,
+    "maxConcurrentVoices": 3,
+    "sameEventCooldownMs": 90,
+    "uiBusMono": true,
+    "typingSounds": false,
+    "hoverSounds": false,
+    "suppressGenericClickWhenSemanticSoundPlays": true
+  },
+  "events": {
+    "generic_button": {
+      "sounds": [
+        "ui_click_a",
+        "ui_click_b"
+      ],
+      "variant": "alternate",
+      "priority": 1
+    },
+    "confirmed_dialogue_advance": {
+      "sound": "dialogue_next",
+      "priority": 1,
+      "guard": "实际推进一句对白；鼠标、空格、Enter统一"
+    },
+    "panel_open": {
+      "sound": "panel_open",
+      "priority": 2,
+      "actions": [
+        "evidence",
+        "browse-evidence",
+        "records",
+        "help",
+        "save",
+        "settings",
+        "retry-ending",
+        "ending-collection"
+      ]
+    },
+    "panel_close": {
+      "sound": "panel_close",
+      "priority": 2,
+      "guard": "面板实际关闭；含Esc和遮罩"
+    },
+    "evidence_detail_change": {
+      "sound": "paper_turn",
+      "priority": 2,
+      "actions": [
+        "tab",
+        "inspect-evidence"
+      ],
+      "guard": "实际变化时播放"
+    },
+    "evidence_selection_change": {
+      "sound": "evidence_select",
+      "priority": 2,
+      "actions": [
+        "toggle-evidence"
+      ]
+    },
+    "evidence_presented": {
+      "sound": "evidence_present",
+      "priority": 3,
+      "actions": [
+        "present"
+      ],
+      "guard": "选择恰好一项并实际出示；不表示证据正确"
+    },
+    "evidence_newly_acquired": {
+      "sound": "evidence_gain",
+      "priority": 4,
+      "guard": "新增证据且出现获得提示；同批只响一次，重读、载入不播放"
+    },
+    "free_input_submitted": {
+      "sound": "submit",
+      "priority": 3,
+      "actions": [
+        "submit"
+      ],
+      "guard": "非空，提交被接受且进入pending；不表示判定成功"
+    },
+    "recoverable_warning": {
+      "sound": "ui_warning",
+      "priority": 4,
+      "guard": "空白提交、没有选够证据或技术错误；不用于NPC驳回，不是死亡提示"
+    },
+    "current_response_ready": {
+      "sound": "response_ready",
+      "priority": 3,
+      "guard": "当前有效请求得到结果并显示对白；取消后的迟到结果不播放"
+    },
+    "location_changed": {
+      "sound": "paper_turn",
+      "gain": 0.7,
+      "priority": 2,
+      "actions": [
+        "scene"
+      ],
+      "guard": "实际换地点一次；不用每次点击都播脚步"
+    }
+  }
+}

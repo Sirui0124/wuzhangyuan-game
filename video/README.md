@@ -1,13 +1,9 @@
-> 迁移说明：最新未验收原片在根目录 `../video-new/`。当前构建仅使用 `current/` 的四段白名单视频；legacy fallback 仍在使用。其他历史接入记录保留备查。
+# 视频素材
 
-# 五丈原视频目录
+- `current/`：当前构建白名单的四段视频。两段 legacy-fallback 仍有实际引用。
+- `pending/`：14.25 秒开场前半，也是最新 SC01 剪辑的源片，保留。
+- `in-progress/raw/`：现用与在制的新原片。
+- `in-progress/references/`：当前在制视频的人物、场景参考图，不含生图 Prompt。
+- `in-progress/edits/`：最新优选的六段剪辑；`manifest.json` 记录现有相对路径、时间线、哈希及待听审状态。
 
-- `current/`：全部正在应用的4条媒体：新EN01、新03，以及文件名标明legacy-fallback的旧版临时开场/结尾。
-- `pending/`：待补魏延的14.25秒开场前半，未进入游戏。
-- `fallback/`：已停止作为活跃媒体目录，原两条媒体已原样迁至current。
-- `video-new/`：原始视频及参考PNG，除明确删除的EN02A外保留到剪辑验收完成。
-- `legacy/`：原public/video的四条旧MP4原件，已脱离现行引用，保留供恢复/历史核对。
-
-游戏的真实引用以`GameStarter/web-demo/public/cinematics.json`和`video/media-manifest.json`为准。构建只复制白名单current，不扫描整目录。
-
-本轮剪辑、时间码、废纸篓恢复路径、Library附件和验证详见`../outputs/视频剪辑整理_20261016/交付报告.md`。EN02A已通过系统废纸篓可恢复删除；未清空任何素材目录。
+实际播放以 `GameStarter/web-demo/public/cinematics.json` 和 `public/video/media-manifest.json` 为准。在制素材不会自动进入游戏；六段剪辑仍需人工听审与接入验收。历史审片包、旧版序章与被替代的原片已移入本机废纸篓。

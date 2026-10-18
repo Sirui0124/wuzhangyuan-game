@@ -85,9 +85,7 @@ npm.cmd run test:smoke
 
 需要编辑 Cocos 时，在 Windows 的 Cocos Dashboard 安装 **3.8.8** 并打开 `GameStarter`，让编辑器自己重建 `temp` 和 `library`。根 `tsconfig.json` 继承的 `temp/tsconfig.cocos.json` 由编辑器生成，不能从 Mac 缓存复制代替。完整玩法目前以 HTML 版为交付面，尚无 Windows 原生 EXE。
 
-`package:mac`、AppKit 启动器、codesign、ditto 只支持 macOS；Windows 已有明确平台报错。历史音频转写脚本使用 MLX，仅用于 Mac 离线审片；在制转写结果已保留。需要复跑可设置 `WHISPER_MODEL_DIR` 指向自己的模型目录，Windows 需另外替换转写后端。
-
-历史视频加工脚本需 Python 与 FFmpeg。旧 v01 剪辑器原片位于工作区外，改为显式读取 `WUZHANG_LEGACY_VIDEO_SOURCE`；旧 v02 可用随目录保留的原片，或设置 `EN02_SOURCE_FILE`。这些脚本属于历史加工工具，普通安装不要运行；不会由 npm 安装或构建触发。
+`package:mac`、AppKit 启动器、codesign、ditto 只支持 macOS；Windows 已有明确平台报错。当前保留的音频加工脚本需要 Python 与 FFmpeg，仅用于重新加工现用原音频；不属于安装、启动或构建步骤。旧剪辑、转写和审片过程工具已清理，最新剪辑来源与时间线见 `video/in-progress/edits/manifest.json`。
 
 ## 存档和配置
 
@@ -99,7 +97,7 @@ npm.cmd run test:smoke
 
 - `Cannot find module typescript`：回到根目录运行 `npm.cmd ci`，不要依赖全局 tsc。
 - 端口被占：关闭重复启动的进程；不要直接结束不明进程。网页可设置 `$env:DEMO_PORT='8812'` 后重启。
-- 视频是文本指针或不能播放：若未来使用 LFS 克隆，运行 `git lfs pull`，再构建。
+- 视频是文本指针或不能播放：若使用 LFS 克隆，运行 `git lfs pull`，再构建。
 - 页面存在但交涉不可用：确认 8787 代理已启动、密钥可用、服务账户支持该模型。
 - Cocos 报缺少生成的 tsconfig：在 Creator 3.8.8 打开工程生成配置；HTML 构建不依赖此文件。
 

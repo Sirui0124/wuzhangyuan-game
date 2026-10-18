@@ -1,0 +1,38 @@
+{
+  "version": "wuzhang-assets-v1.2",
+  "sourceRoot": "../../source-art/visuals",
+  "characters": {
+    "weiyan": "runtime/characters/weiyan.png",
+    "scout": "runtime/characters/scout-transparent-v02.png",
+    "guard": "runtime/characters/guard.png",
+    "relay": "runtime/characters/relay.png",
+    "jiangwei": "runtime/characters/jiangwei.png",
+    "zhugeliang": "runtime/characters/zhugeliang.png"
+  },
+  "scenes": {
+    "camp_gate": "runtime/scenes/camp_gate.png",
+    "report_post": "runtime/scenes/report_post.png",
+    "relay_tent": "runtime/scenes/relay_tent.png",
+    "waiting_area": "runtime/scenes/waiting_area.png"
+  },
+  "cinematics": {
+    "weiyan_report_post": "runtime/cinematics/weiyan_report_post.png",
+    "report_post_people": "runtime/cinematics/report_post_people.png"
+  },
+  "ui": {
+    "scene-paper": "runtime/ui/scene-paper.svg",
+    "scene-active": "runtime/ui/scene-active.svg",
+    "title-ink": "runtime/ui/title-ink.svg",
+    "evidence-tag": "runtime/ui/evidence-tag.svg",
+    "evidence-notice": "runtime/ui/evidence-notice.svg",
+    "evidence-report": "runtime/ui/evidence-report.svg",
+    "evidence-testimony": "runtime/ui/evidence-testimony.svg",
+    "evidence-pass": "runtime/ui/evidence-pass.svg"
+  },
+  "fallbackCharacters": {
+    "camp_gate": "guard",
+    "report_post": "weiyan",
+    "relay_tent": "relay",
+    "waiting_area": "weiyan"
+  }
+}

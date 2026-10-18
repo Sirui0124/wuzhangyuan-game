@@ -23,20 +23,20 @@ npm run start:api
 
 ## 目录职责
 
-| 目录 | 内容与维护方式 |
+| 目录 | 内容 |
 | --- | --- |
-| `GameStarter/` | 游戏源码、测试、网页资源、AI 代理及 Cocos 工程 |
-| `content/` | 剧情格式契约、正式章节、最新编辑稿与路线说明 |
-| `docs/` | 设计、提示词说明、历史交接及迁移指南 |
-| `source-art/` | 原始美术、音频、完整生成提示词、授权说明与加工记录 |
-| `video/current/` | 构建白名单引用的四段现用视频，含两段仍在使用的 legacy fallback |
-| `video/pending/`、`video/review/`、`video-new/` | 在制视频、审片剪辑成果与新原片；保留但不自动进入游戏 |
-| `video/legacy/` | 历史影片，保留作恢复及来源核对 |
-| `scripts/` | 剧情审稿、导出和同步工具 |
-| `tools/migration/` | 迁移审计、资源引用核对和浏览器冒烟验证 |
-| `outputs/`、`releases/` | 本地验证资料与历史发布包，排除 Git 上传 |
+| `GameStarter/` | 有效游戏源码、测试、网页发布资源、AI 代理与 Cocos 工程 |
+| `content/` | 剧情格式、正式 JSON、完整人工编辑稿、最新第一轮确认稿与路线说明 |
+| `docs/` | 当前编写规范、核心架构和迁移指南 |
+| `source-art/visuals/` | 当前美术原件与绑定索引 |
+| `source-art/audio/` | 现用音频的原件、许可及加工工具 |
+| `video/current/` | 当前四段影片，包含仍在使用的 legacy fallback |
+| `video/pending/`、`video/in-progress/` | 待接入素材、最新原片、参考图与六段优选剪辑 |
+| `tools/migration/` | 审计、资源引用核对与浏览器冒烟工具 |
 
-运行内容以 `content/chapters/wuzhang/chapter.json` 为准。人工改稿保留 `五丈原_完整剧本与逻辑_编辑稿.md`；改稿后核对并同步 JSON，不能用导出覆盖人工修改。AI 判定提示词在 `GameStarter/assets/scripts/narrative/weiyan-first.ts` 和 `weiyan-second.ts`；所有版本创作提示词均保留。
+运行内容以 `content/chapters/wuzhang/chapter.json` 为准。人工编辑稿与最新 `第一轮_转呈未竟_20261016.md` 共同保留；人工稿正文尚未完全反映最新第一轮，修改后须核对 JSON。AI 判定提示词仅以 `GameStarter/assets/scripts/narrative/weiyan-first.ts` 和 `weiyan-second.ts` 源码为准。
+
+图片生成 Prompt、历史过程稿、无关研究参考、旧版审片和重复加工输出已从当前版本移除，本机原文件进入废纸篓。Git 历史仍保留先前提交的恢复记录。
 
 ## 验证
 

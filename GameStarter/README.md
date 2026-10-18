@@ -10,4 +10,4 @@
 
 Cocos 主场景 `assets/scenes/Main.scene` 尚未接入完整玩法。浏览器游戏可运行，不代表 Cocos 或原生应用已验收。场景资源及 `.meta` 原样保留。
 
-`npm run package:mac` 仅支持 macOS。自 2026-10-18 起新构建不再把开发者密钥写入 `api-defaults.json`；玩家首次启动须填写自己的密钥。既有 `../releases/` 包保留本地、排除 Git，可能包含旧密钥，不能直接分发。
+`npm run package:mac` 仅支持 macOS。自 2026-10-18 起新构建不再把开发者密钥写入 `api-defaults.json`；玩家首次启动须填写自己的密钥。既有旧发布包已移入本机废纸篓，未上传 Git；完整私有检查点可能包含旧密钥，不能分发。
