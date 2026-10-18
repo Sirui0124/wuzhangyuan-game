@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {chapter,NarrativeEngine,preset,normal,open,finish,choose,permit,prepared,input} from './weiyan-fixture.mjs';
-const before=JSON.parse(readFileSync(new URL('../../../outputs/剧情审稿/正式同步v07/before/chapter.json',import.meta.url)));
+const before=JSON.parse(readFileSync(new URL('../fixtures/wuzhang-v07-before.json',import.meta.url)));
 const require=createRequire(import.meta.url);
 const {WEIYAN_TUTORIAL_PROMPT}=require('../../.narrative-build/GameStarter/assets/scripts/narrative/weiyan-first.js');
 const scenes=e=>e.interactions().scenes.map(s=>s.id);
