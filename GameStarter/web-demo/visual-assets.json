@@ -1,0 +1,43 @@
+{
+  "version": "wuzhang-assets-v1",
+  "sourceRoot": "../../source-art/五丈原_游戏资产库_v01",
+  "characters": {
+    "weiyan": "runtime/characters/weiyan.png",
+    "scout": "runtime/characters/scout-transparent-v02.png",
+    "guard": "runtime/characters/guard.png",
+    "relay": "runtime/characters/relay.png",
+    "jiangwei": "runtime/characters/jiangwei.png",
+    "zhugeliang": "runtime/characters/zhugeliang.png",
+    "jiangwei_guard": "runtime/characters/guard.png"
+  },
+  "scenes": {
+    "camp_gate": "runtime/scenes/camp_gate.png",
+    "report_post": "runtime/scenes/report_post.png",
+    "relay_tent": "runtime/scenes/relay_tent.png",
+    "waiting_area": "runtime/scenes/waiting_area.png",
+    "notice_front": "runtime/scenes/camp_gate.png",
+    "jiangwei_tent_front": "runtime/scenes/relay_tent.png"
+  },
+  "fallbackCharacters": {
+    "camp_gate": "guard",
+    "report_post": "weiyan",
+    "relay_tent": "relay",
+    "waiting_area": "weiyan",
+    "notice_front": "guard",
+    "jiangwei_tent_front": "jiangwei_guard"
+  },
+  "cinematics": {
+    "weiyan_report_post": "runtime/cinematics/weiyan_report_post.png",
+    "report_post_people": "runtime/cinematics/report_post_people.png"
+  },
+  "ui": {
+    "scene_paper": "runtime/ui/scene-paper.svg",
+    "scene_active": "runtime/ui/scene-active.svg",
+    "title_ink": "runtime/ui/title-ink.svg",
+    "evidence_tag": "runtime/ui/evidence-tag.svg",
+    "evidence_notice": "runtime/ui/evidence-notice.svg",
+    "evidence_report": "runtime/ui/evidence-report.svg",
+    "evidence_testimony": "runtime/ui/evidence-testimony.svg",
+    "evidence_pass": "runtime/ui/evidence-pass.svg"
+  }
+}

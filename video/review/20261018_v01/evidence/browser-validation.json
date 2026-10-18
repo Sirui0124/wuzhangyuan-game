@@ -1,0 +1,238 @@
+{
+  "clips": [
+    {
+      "id": "PR01",
+      "file": "PR01-prologue-27s-review.mp4",
+      "duration": 27,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.461818,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 13.5,
+          "actual": 13.860075,
+          "decoded": 139,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 26.75,
+          "actual": 27,
+          "decoded": 260,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 27,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "id": "LI01",
+      "file": "LI01-grain-road-rescue-review.mp4",
+      "duration": 24.625,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.461256,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 12.3125,
+          "actual": 12.673239,
+          "decoded": 239,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 24.375,
+          "actual": 24.625,
+          "decoded": 246,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 24.55,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "id": "LI02",
+      "file": "LI02A-LI02B-visit-complete-review.mp4",
+      "duration": 28.833333,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.460048,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 14.4166665,
+          "actual": 14.774667,
+          "decoded": 124,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 28.583333,
+          "actual": 28.833333,
+          "decoded": 138,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 28.766666666666666,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "id": "SC01",
+      "file": "SC01-lamps-weiyan-complete-review.mp4",
+      "duration": 38.208333,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.460058,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 19.1041665,
+          "actual": 19.460198,
+          "decoded": 64,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 37.958333,
+          "actual": 38.208333,
+          "decoded": 86,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 38.11666666666667,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "id": "EN04",
+      "file": "EN04-jiangwei-response-review.mp4",
+      "duration": 19.333333,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.461504,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 9.6666665,
+          "actual": 10.027851,
+          "decoded": 260,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 19.083333,
+          "actual": 19.333333,
+          "decoded": 474,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 19.266666666666666,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    },
+    {
+      "id": "EN03EN04",
+      "file": "EN03-EN04-ending-complete-review.mp4",
+      "duration": 31.958333,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.462284,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 15.9791665,
+          "actual": 16.341201,
+          "decoded": 108,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 31.708333,
+          "actual": 31.958333,
+          "decoded": 322,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 31.916666666666668,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Isolated localhost review root, no game config/state changed"
+  ],
+  "mode": "sampled real browser playback plus full FFmpeg decode",
+  "success": true
+}

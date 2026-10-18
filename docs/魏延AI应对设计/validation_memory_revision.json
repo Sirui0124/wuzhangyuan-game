@@ -1,0 +1,73 @@
+{
+  "passedMeaning": "分类与固定分支符合样例预期；不包含自动对白语义审核",
+  "scope": "设计样例API验证，非正式游戏试玩",
+  "model": "doubao-seed-evolving",
+  "thinking": "disabled",
+  "cases": [
+    {
+      "id": "issue_persists",
+      "playerText": "那就让我现在去请姜将军接报，您稍等。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": {
+        "type": "AUTHORITY_UNPROVEN",
+        "quote": "奉姜将军之命，你不得入帐。"
+      },
+      "classifier": {
+        "requestId": "issue_persists",
+        "status": "need_evidence",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [
+          "entry_notice",
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "AUTHORITY_UNPROVEN"
+        ],
+        "explanation": "玩家虽改为自行去请姜维接报，但此前假称奉命的未决问题未明确纠正，仍须先处理权威依据质疑。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "authority_unproven",
+      "expected": "authority_unproven",
+      "passed": true,
+      "generatedLead": "你既愿去请，便快去，姜将军允否我尚不能认。",
+      "immutableAnchor": "你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "displayedReply": "你既愿去请，便快去，姜将军允否我尚不能认。你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "replyFallback": null,
+      "promptHash": "43bc659483e8134a11f8546a644d10a2ac45e6c4556896dd2da0cdf38afd1a69",
+      "timingSeconds": {
+        "classify": 2.53,
+        "render": 2.38
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1575,
+          "output_tokens": 87,
+          "total_tokens": 1662,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 910,
+          "output_tokens": 22,
+          "total_tokens": 932,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "passed": 1,
+  "total": 1,
+  "promptHash": "43bc659483e8134a11f8546a644d10a2ac45e6c4556896dd2da0cdf38afd1a69"
+}

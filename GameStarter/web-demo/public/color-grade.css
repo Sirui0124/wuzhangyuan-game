@@ -1,0 +1,38 @@
+/* Approved C · 旧影柔调, 100% strength. Match the archived comparison preset.
+   Grade artwork once, leaving text, controls and the whitebox untouched. */
+:root[data-mode="art"] {
+  --art-filter: saturate(.65) contrast(.89) brightness(1.075) sepia(.18);
+  --art-veil: rgba(81, 65, 43, .055);
+}
+html[data-mode="art"] :is(.world-image, .dialogue-shot, .figure.character-image, .menu-background, .cinema-frame video) {
+  filter: var(--art-filter);
+}
+html[data-mode="art"] .world-shade {
+  background: linear-gradient(var(--art-veil), var(--art-veil)), linear-gradient(180deg, #00000010, #0000 55%, #00000018);
+}
+html[data-mode="art"] .menu-shade {
+  background: linear-gradient(var(--art-veil), var(--art-veil)), linear-gradient(90deg, #07101266, #0710121a 40%, transparent 70%), linear-gradient(0deg, #050b0c80, transparent 18%, transparent 85%, #050b0c40);
+}
+/* Put atlas artwork on its own layer so the map labels keep their contrast. */
+html[data-mode="art"] .campaign-map { background-image: none; }
+html[data-mode="art"] .campaign-map::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image: linear-gradient(var(--art-veil), var(--art-veil)), linear-gradient(180deg, #07101866 0%, #0710180d 36%, #07101826 65%, #071018b3 100%), url('/campaign-landscape-v02.png');
+  background-position: center;
+  background-size: cover;
+  filter: var(--art-filter);
+}
+html[data-mode="art"] .cinema-frame::after {
+  content: "";
+  grid-area: 1 / 1;
+  pointer-events: none;
+  background: var(--art-veil);
+}
+html[data-mode="art"] .cinema-frame video { grid-area: 1 / 1; }
+@media (max-width: 680px) {
+  html[data-mode="art"] .campaign-map::after { background-position: 58% center; }
+}

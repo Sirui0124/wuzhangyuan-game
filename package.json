@@ -1,0 +1,25 @@
+{
+  "name": "wuzhangyuan-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "逆转五丈原：完整源码、剧情和素材工作区",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "npm --prefix GameStarter run build:demo",
+    "start": "npm --prefix GameStarter run start:demo",
+    "start:api": "npm --prefix GameStarter/server start",
+    "check": "npm --prefix GameStarter run check:narrative",
+    "test": "npm --prefix GameStarter run test:narrative",
+    "test:api": "node --test GameStarter/server/server.test.mjs",
+    "validate:story": "npm --prefix GameStarter run validate:story",
+    "audit:migration": "python3 tools/migration/audit.py",
+    "test:smoke": "node tools/migration/smoke.mjs",
+    "check:assets": "node tools/migration/check-assets.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "playwright": "1.56.1"
+  }
+}

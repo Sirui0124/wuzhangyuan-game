@@ -1,0 +1,44 @@
+
+#///////////////////////////
+# Cocos Creator 3D Project
+#///////////////////////////
+library/
+temp/
+local/
+build/
+profiles/
+native
+#//////////////////////////
+# NPM
+#//////////////////////////
+node_modules/
+
+#//////////////////////////
+# VSCode
+#//////////////////////////
+.vscode/
+
+#//////////////////////////
+# WebStorm
+#//////////////////////////
+.idea/
+.DS_Store
+
+# Local API credentials
+.env
+.env.*
+!.env.example
+
+# Standalone narrative core type-check/test output
+.narrative-build/
+
+# Browser whitebox output
+web-demo/.build/
+web-demo/verification/
+
+# Standalone release products
+../releases/
+packaging/.work/
+
+server/.env*
+!server/.env.example

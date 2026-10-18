@@ -1,0 +1,103 @@
+{
+  "version": "wuzhang-assets-v1.2",
+  "referenceCanvas": {
+    "width": 1672,
+    "height": 941
+  },
+  "colors": {
+    "dialogue": "rgba(10,12,14,0.70)",
+    "popup": "rgba(17,19,21,0.94)",
+    "text": "#eee8dc",
+    "muted": "#b9b5aa",
+    "cinnabar": "#8c4034",
+    "paper": "#cdbfa3",
+    "newBackground": "#343b3b"
+  },
+  "typography": {
+    "mainDialogueOptionScene": 29,
+    "speaker": 32,
+    "utility": 26,
+    "popupTitle": 28,
+    "popupBody": 22,
+    "new": 16,
+    "fontStack": [
+      "Kaiti SC",
+      "STKaiti",
+      "KaiTi",
+      "serif"
+    ],
+    "note": "参考画布尺寸。按视口缩放并保证可读性，正文/场景名/主要选项保持同一字号。"
+  },
+  "layout": {
+    "dialogue": {
+      "x": 240,
+      "y": 573,
+      "width": 1190,
+      "height": 331,
+      "border": "none",
+      "opacity": 0.7,
+      "endConversation": {
+        "placement": "对白框右上角，与人物姓名同一行",
+        "style": "半透明浅色底框和细边界，保留清晰点击范围，窄屏不遮挡姓名",
+        "background": "rgba(238,232,220,0.10)",
+        "border": "1px solid rgba(238,232,220,0.25)",
+        "fontSize": "与对白正文相同"
+      },
+      "continueHint": {
+        "text": "点击对话框继续",
+        "placement": "对白框底部居中",
+        "fontSize": "较v09放大一号，正式画面为clamp(16px, 正文字号×0.65, 27px)",
+        "opacity": 0.7,
+        "transparency": 0.3
+      }
+    },
+    "evidencePopup": {
+      "x": 1045,
+      "y": 62,
+      "width": 596,
+      "height": 487,
+      "minDialogueGap": 24,
+      "maxBottom": 549,
+      "columns": "list 46%, detail 54%",
+      "overflow": "内部滚动，底部操作固定可见"
+    },
+    "sceneNav": {
+      "x": 0,
+      "y": 109,
+      "width": 280
+    },
+    "menu": {
+      "placement": "top-right",
+      "items": [
+        "重玩本关",
+        "设置",
+        "存档",
+        "帮助"
+      ],
+      "restartEmphasis": "紧邻设置左侧，以克制朱红底和细描边突出，字号与菜单一致"
+    }
+  },
+  "interaction": {
+    "weiyanNegotiation": "话题入口为将军且听我一言；移除还缺什么依据及固定路线选项。有效出示后直接展示开放文本框、查看提示、提交；不显示意图下拉框和向魏延说明模块。查看提示展开沟通方向，点击只填入可编辑草稿，提交后才结合证据和表达判断",
+    "negotiationNotice": "交涉提示：请你选择证据先出示，随后自行写好沟通，本轮你的沟通很重要，人物会结合证据及你的话来做出选择。",
+    "restartChapter": "点击重玩本关先确认；取消保留当前进度；确认后清空本关自动存档、证据、回溯记忆、已读话题与交涉草稿，从开头重新开始",
+    "sceneClick": "选择地点后显示该场景可交谈人物与调查热点",
+    "personClick": "选择人物后进入对话",
+    "newScene": "首次进入清除",
+    "newPerson": "首次开始交谈清除",
+    "newPersistence": "跨回溯保留已读状态",
+    "evidence": "点击列表仅选中；明确确认才算出示",
+    "memory": "只读，不可当作本轮许可",
+    "responsive": "桌面优先；窄屏上下分区，确保浮窗与对白不重叠",
+    "conversation": "交谈时隐藏人物与物件热点，结束后恢复",
+    "completedTopic": "已读知识话题置灰，仍可点击回看；按人物与语义话题持续记录，切换话题、重进和读档不丢失；回看不重复触发证据、动效或剧情副作用",
+    "evidenceBrowser": "保留右上纸色横向「证据与记忆」入口和数量，独立于交谈中的竖向「出示证据」入口",
+    "evidenceEligibility": "具备证据交涉能力的人物显示竖向入口；当前章节包括斥候、守帐卒甲、魏延与传令卒乙。交谈话题列表和对白播放期间持续显示，不能以当前条件是否满足来隐藏",
+    "evidenceFailure": "无适用交涉或条件不符时，人物回应「你给我看这个有何用？」；不授予许可、不推进剧情，随后恢复原交谈位置",
+    "acquisition": "新证据/记忆首次到账时淡入轻移提示，约2.4秒后退场；已有项不重复",
+    "minimalUI": "移除状态条、轮次、回溯常驻按钮、任务提示、节点副标题和页面脚注",
+    "evidenceDetail": "本轮证据与回溯记忆均删除整个「能够说明」段落；保留标题、事实与来源、尚不能说明等其他信息，内部证据语义与判定不变",
+    "advanceDialogue": "对白播放及已读回看显示「点击对话框继续」提示；仅点击对白框正文、提示或空白区域推进一条，框外不推进，保留空格键。选项、输入框、按钮、弹窗、选中文本或拖动不推进；等待AI回复及无对白时不推进",
+    "scoutEvidenceFlow": "告示加入证据后显示玩家心声，读完回场景；营前同时可选魏延与斥候。点击斥候直接听急报，不授予完整军情证据；出示告示后可追问营门或离开找魏延，仅确认营门未失守的答复后授予证据；重复回看不重复奖励"
+  }
+}

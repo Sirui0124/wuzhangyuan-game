@@ -1,0 +1,47 @@
+{
+  "host": "http://127.0.0.1:8811",
+  "media": [
+    {
+      "file": "wuzhang-opening-v01.mp4",
+      "head": 200,
+      "range": 206,
+      "contentRange": "bytes 0-255/9757543",
+      "mime": "video/mp4"
+    },
+    {
+      "file": "wuzhang-success-common-v01.mp4",
+      "head": 200,
+      "range": 206,
+      "contentRange": "bytes 0-255/2251949",
+      "mime": "video/mp4"
+    },
+    {
+      "file": "wuzhang-blame-v01.mp4",
+      "head": 200,
+      "range": 206,
+      "contentRange": "bytes 0-255/3027232",
+      "mime": "video/mp4"
+    },
+    {
+      "file": "wuzhang-safe-future-v01.mp4",
+      "head": 200,
+      "range": 206,
+      "contentRange": "bytes 0-255/7708246",
+      "mime": "video/mp4"
+    }
+  ],
+  "independentBrowserCheck": {
+    "browser": "Codex IAB",
+    "origin": "http://localhost:8811",
+    "opening": true,
+    "seekTo21Seconds": true,
+    "speeds": [
+      1,
+      1.5,
+      2
+    ],
+    "reloadRestoresTimeAndSpeed": true,
+    "screenshot": "review/game-player.png",
+    "returnedToStartAt1x": true
+  }
+}

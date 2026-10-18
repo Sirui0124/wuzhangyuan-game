@@ -1,0 +1,49 @@
+{
+  "file": "../../../../video/review/20261018_v02/PR01-prologue-27s-clean-v02.mp4",
+  "duration": 27,
+  "dimensions": [
+    1280,
+    720
+  ],
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "frames": 648,
+  "crop": {
+    "source": [
+      1280,
+      720
+    ],
+    "x": 80,
+    "y": 0,
+    "width": 1120,
+    "height": 630,
+    "scaleBack": [
+      1280,
+      720
+    ],
+    "zoom": 1.1428571428571428
+  },
+  "decodeExitCode": 0,
+  "blackIntervals": [],
+  "sha256": "2288206920cf45a5ada48b30d0eed8de0d100e05a4f443f1a55a701430420668",
+  "audioPacketHash": "SHA256=bb1c73e764732008d842bd011cc198d8ecfbc57a6040406c45d486bbf2152f0b",
+  "audioExactlyMatchesV01": true,
+  "v01AllSixUnchanged": {
+    "PR01-prologue-27s-review.mp4": true,
+    "LI01-grain-road-rescue-review.mp4": true,
+    "LI02A-LI02B-visit-complete-review.mp4": true,
+    "SC01-lamps-weiyan-complete-review.mp4": true,
+    "EN04-jiangwei-response-review.mp4": true,
+    "EN03-EN04-ending-complete-review.mp4": true
+  },
+  "currentAndGameUnchanged": {
+    "video/current/opening-legacy-fallback.mp4": true,
+    "video/current/SC03-awaken-guard-20261016.mp4": true,
+    "video/current/EN01-seven-days-20261016.mp4": true,
+    "video/current/ending-legacy-fallback.mp4": true,
+    "GameStarter/web-demo/public/cinematics.json": true,
+    "GameStarter/web-demo/public/ending-video.json": true,
+    "GameStarter/web-demo/public/video/media-manifest.json": true,
+    "content/chapters/wuzhang/chapter.json": true
+  }
+}

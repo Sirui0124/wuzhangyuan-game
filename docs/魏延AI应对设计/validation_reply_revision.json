@@ -1,0 +1,129 @@
+{
+  "passedMeaning": "分类与固定分支符合样例预期；不包含自动对白语义审核",
+  "scope": "设计样例API验证，非正式游戏试玩",
+  "model": "doubao-seed-evolving",
+  "thinking": "disabled",
+  "cases": [
+    {
+      "id": "first_accept",
+      "playerText": "军情不能耽搁，姜将军还在帐里。我还没准信，先到帐门请他接报，请将军稍候。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "first_accept",
+        "status": "accept",
+        "interpretedIntentId": "propose_wait",
+        "supportedEvidenceIds": [
+          "entry_notice",
+          "scout_statement"
+        ],
+        "missingPoints": [],
+        "explanation": "玩家承认军情不可延误，在无许可情况下提出立即赴帐门请姜维接报，符合无令自请方案。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "accepted_direct",
+      "expected": "accepted_direct",
+      "passed": true,
+      "generatedLead": "速去请姜将军接报，莫在帐门耽搁。",
+      "immutableAnchor": "好，我在候报处等。你去请姜维，莫误军情。只是尚未得令，这一趟的责任，你自己担。",
+      "displayedReply": "速去请姜将军接报，莫在帐门耽搁。好，我在候报处等。你去请姜维，莫误军情。只是尚未得令，这一趟的责任，你自己担。",
+      "replyFallback": null,
+      "promptHash": "43bc659483e8134a11f8546a644d10a2ac45e6c4556896dd2da0cdf38afd1a69",
+      "timingSeconds": {
+        "classify": 4.22,
+        "render": 2.93
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1564,
+          "output_tokens": 78,
+          "total_tokens": 1642,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 910,
+          "output_tokens": 18,
+          "total_tokens": 928,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "missing_plan",
+      "playerText": "军情确实紧急，但今夜帐中有要事，请将军稍等。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "missing_plan",
+        "status": "need_plan",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [
+          "entry_notice",
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "MISSING_REQUEST",
+          "MISSING_RECEIVER",
+          "MISSING_REPLY"
+        ],
+        "explanation": "玩家承认军情紧急并举出禁入告示，但只要求等待，未说明立即去帐门请求姜维接报、由谁接报及如何带回回话。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "need_plan_reply",
+      "expected": "need_plan",
+      "passed": false,
+      "generatedLead": "你只说稍等，却没说谁接此急报。",
+      "immutableAnchor": "军情递入之后，谁把姜将军的回话带来？",
+      "displayedReply": "你只说稍等，却没说谁接此急报。军情递入之后，谁把姜将军的回话带来？",
+      "replyFallback": null,
+      "promptHash": "43bc659483e8134a11f8546a644d10a2ac45e6c4556896dd2da0cdf38afd1a69",
+      "timingSeconds": {
+        "classify": 25.04,
+        "render": 2.85
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1547,
+          "output_tokens": 100,
+          "total_tokens": 1647,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 875,
+          "output_tokens": 19,
+          "total_tokens": 894,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "passed": 1,
+  "total": 2,
+  "promptHash": "43bc659483e8134a11f8546a644d10a2ac45e6c4556896dd2da0cdf38afd1a69"
+}

@@ -1,0 +1,390 @@
+[
+  {
+    "id": "PR01",
+    "file": "PR01-prologue-27s-review.mp4",
+    "purpose": "序章独立插槽；不与SC01或粮运强合并",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "PR01",
+        "source": "video-new/01-若能早一步-20261018-012916.mp4",
+        "in": 0,
+        "outExclusive": 27,
+        "speed": 1,
+        "reason": "保留完整27秒叙述和唯一时光倒流愿望；仅去编码尾部，无剧情剪除",
+        "outputIn": 0,
+        "outputOut": 27.0,
+        "outputFrames": 648,
+        "outputDuration": 27.0
+      }
+    ],
+    "removed": [
+      {
+        "sourceId": "PR01",
+        "in": 27,
+        "outExclusive": 27.071995,
+        "reason": "编码尾部，语音26.48秒前结束"
+      }
+    ],
+    "nominalDuration": 27.0,
+    "sha256": "02431cc05f84e91edf4b70facf209d4452d297b3c75540a1fef66782d290c400",
+    "bytes": 5911149,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  },
+  {
+    "id": "LI01",
+    "file": "LI01-grain-road-rescue-review.mp4",
+    "purpose": "粮运章节进入/救人演出独立插槽；不跨玩家后续交互",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "LI01",
+        "source": "video/video-new/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4",
+        "in": 0,
+        "outExclusive": 6,
+        "speed": 1.5,
+        "reason": "山路队伍建立略长，完整保留但加快",
+        "outputIn": 0,
+        "outputOut": 4.0,
+        "outputFrames": 96,
+        "outputDuration": 4.0
+      },
+      {
+        "sourceId": "LI01",
+        "source": "video/video-new/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4",
+        "in": 6,
+        "outExclusive": 14.5,
+        "speed": 1.125,
+        "reason": "保留回到粮运时期的全部主角旁白",
+        "outputIn": 4.0,
+        "outputOut": 11.583333333333332,
+        "outputFrames": 182,
+        "outputDuration": 7.583333333333333
+      },
+      {
+        "sourceId": "LI01",
+        "source": "video/video-new/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4",
+        "in": 14.5,
+        "outExclusive": 24.5,
+        "speed": 1.25,
+        "reason": "保留滑倒、伸手、抓紧、拉起的完整救援动作",
+        "outputIn": 11.583333333333332,
+        "outputOut": 19.583333333333332,
+        "outputFrames": 192,
+        "outputDuration": 8.0
+      },
+      {
+        "sourceId": "LI01",
+        "source": "video/video-new/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4",
+        "in": 24.5,
+        "outExclusive": 30.041666666666668,
+        "speed": 1.1,
+        "reason": "保留苟安两句救人对白，轻微加速保音高",
+        "outputIn": 19.583333333333332,
+        "outputOut": 24.625,
+        "outputFrames": 121,
+        "outputDuration": 5.041666666666667
+      }
+    ],
+    "removed": [],
+    "nominalDuration": 24.625,
+    "sha256": "91b4bcbceda6f0cfac59b23276e66abfeacd7019b38c10b687e475d5f3e5f467",
+    "bytes": 13641298,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  },
+  {
+    "id": "LI02",
+    "file": "LI02A-LI02B-visit-complete-review.mp4",
+    "purpose": "粮仓打听后连续走入伤帐；若未来插入玩家选项则应拆开，不可跨过选项",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "LI02A",
+        "source": "video-new/01-粮仓探听-苟安受罚-20261018012502.mp4",
+        "in": 0,
+        "outExclusive": 20.041666666666668,
+        "speed": 1.125,
+        "reason": "完整保留问讯、迟粮十日、杖责八十、问去向、指帐及转向伤帐",
+        "outputIn": 0,
+        "outputOut": 17.833333333333332,
+        "outputFrames": 428,
+        "outputDuration": 17.833333333333332
+      },
+      {
+        "sourceId": "LI02B",
+        "source": "video-new/LI02B-入帐探望-20261018-012518.mp4",
+        "in": 0,
+        "outExclusive": 4.5,
+        "speed": 1.5,
+        "reason": "完整保留进入伤帐和靠近，适度提速",
+        "outputIn": 17.833333333333332,
+        "outputOut": 20.833333333333332,
+        "outputFrames": 72,
+        "outputDuration": 3.0
+      },
+      {
+        "sourceId": "LI02B",
+        "source": "video-new/LI02B-入帐探望-20261018-012518.mp4",
+        "in": 4.5,
+        "outExclusive": 12,
+        "speed": 1.125,
+        "reason": "保留看清脸、认出恩人及原来你就是苟安全句",
+        "outputIn": 20.833333333333332,
+        "outputOut": 27.5,
+        "outputFrames": 160,
+        "outputDuration": 6.666666666666667
+      },
+      {
+        "sourceId": "LI02B",
+        "source": "video-new/LI02B-入帐探望-20261018-012518.mp4",
+        "in": 12,
+        "outExclusive": 14,
+        "speed": 1.5,
+        "reason": "保留认人后反应，压缩无对白尾部",
+        "outputIn": 27.5,
+        "outputOut": 28.833333333333332,
+        "outputFrames": 32,
+        "outputDuration": 1.3333333333333333
+      }
+    ],
+    "removed": [
+      {
+        "sourceId": "LI02B",
+        "in": 14,
+        "outExclusive": 15.071995,
+        "reason": "认人对白结束后的重复静止尾部；对白已于11.4秒前结束"
+      }
+    ],
+    "nominalDuration": 28.833333333333332,
+    "sha256": "7a55b5875c1d9a0c42b6b4dfc6c2c77b4020a5967f0cb45068b0994448e34726",
+    "bytes": 10995245,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  },
+  {
+    "id": "SC01",
+    "file": "SC01-lamps-weiyan-complete-review.mp4",
+    "purpose": "借寿→军情→魏延入帐→主灯熄灭完整段，之后可接现有SC03；不跨玩家交互",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "PREFIX",
+        "source": "video/pending/SC01-prefix-PENDING-weiyan-20261016.mp4",
+        "in": 0,
+        "outExclusive": 14.25,
+        "speed": 1.125,
+        "reason": "保留前轮已认可营帐、点灯、持剑前半全部内容，适度加快",
+        "outputIn": 0,
+        "outputOut": 12.666666666666666,
+        "outputFrames": 304,
+        "outputDuration": 12.666666666666666
+      },
+      {
+        "sourceId": "SC01B",
+        "source": "video/video-new/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4",
+        "in": 0,
+        "outExclusive": 6.125,
+        "speed": 1.25,
+        "reason": "完整保留战场、奔马、回营",
+        "outputIn": 12.666666666666666,
+        "outputOut": 17.583333333333332,
+        "outputFrames": 118,
+        "outputDuration": 4.916666666666667
+      },
+      {
+        "sourceId": "SC01B",
+        "source": "video/video-new/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4",
+        "in": 6.125,
+        "outExclusive": 10.041666666666666,
+        "speed": 1.125,
+        "reason": "完整保留教训/军情紧急声段，待人工听审首词",
+        "outputIn": 17.583333333333332,
+        "outputOut": 21.083333333333332,
+        "outputFrames": 84,
+        "outputDuration": 3.5
+      },
+      {
+        "sourceId": "SC01B",
+        "source": "video/video-new/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4",
+        "in": 10.041666666666666,
+        "outExclusive": 17.791666666666668,
+        "speed": 1.25,
+        "reason": "完整保留战场交替、守军陪同趋帐",
+        "outputIn": 21.083333333333332,
+        "outputOut": 27.291666666666664,
+        "outputFrames": 149,
+        "outputDuration": 6.208333333333333
+      },
+      {
+        "sourceId": "SC01B",
+        "source": "video/video-new/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4",
+        "in": 17.791666666666668,
+        "outExclusive": 25.666666666666668,
+        "speed": 1.125,
+        "reason": "完整保留揭帘、闯帐、灯被吹灭关键因果",
+        "outputIn": 27.291666666666664,
+        "outputOut": 34.291666666666664,
+        "outputFrames": 168,
+        "outputDuration": 7.0
+      },
+      {
+        "sourceId": "SC01B",
+        "source": "video/video-new/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4",
+        "in": 25.666666666666668,
+        "outExclusive": 30.041666666666668,
+        "speed": 1.125,
+        "reason": "保留诸葛亮反应、魏延反打和灯灭收尾",
+        "outputIn": 34.291666666666664,
+        "outputOut": 38.20833333333333,
+        "outputFrames": 94,
+        "outputDuration": 3.9166666666666665
+      }
+    ],
+    "removed": [],
+    "nominalDuration": 38.20833333333333,
+    "sha256": "2a2efdba6d67989570ed760960c83ff22c1e495902b32e8e094b0c9310bef24a",
+    "bytes": 14001412,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  },
+  {
+    "id": "EN04",
+    "file": "EN04-jiangwei-response-review.mp4",
+    "purpose": "姜维两句→主角画外回应，独立结尾下半",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 0,
+        "outExclusive": 6,
+        "speed": 1.5,
+        "reason": "回望军帐及转身完整保留，缩短铺垫",
+        "outputIn": 0,
+        "outputOut": 4.0,
+        "outputFrames": 96,
+        "outputDuration": 4.0
+      },
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 6,
+        "outExclusive": 19.5,
+        "speed": 1.125,
+        "reason": "姜维两句指定对白完整保留，保音高加速",
+        "outputIn": 4.0,
+        "outputOut": 16.0,
+        "outputFrames": 288,
+        "outputDuration": 12.0
+      },
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 21.75,
+        "outExclusive": 25.5,
+        "speed": 1.125,
+        "reason": "保留画外哎那我有办法及姜维闭口听取反应",
+        "outputIn": 16.0,
+        "outputOut": 19.333333333333332,
+        "outputFrames": 80,
+        "outputDuration": 3.3333333333333335
+      }
+    ],
+    "removed": [
+      {
+        "sourceId": "EN04",
+        "in": 19.5,
+        "outExclusive": 21.75,
+        "reason": "两位角色发言之间重复无对白停顿；下一声段约22.35秒起，预留0.6秒"
+      },
+      {
+        "sourceId": "EN04",
+        "in": 25.5,
+        "outExclusive": 30.048005,
+        "reason": "主角回应后长尾重复反应；28秒后姜维无对白张嘴会误导角色归属"
+      }
+    ],
+    "nominalDuration": 19.333333333333332,
+    "sha256": "2e61cf5149b9464de32dc22669cc71f00ef0281bd66d3d1db3c06e81159a231e",
+    "bytes": 4173172,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  },
+  {
+    "id": "EN03EN04",
+    "file": "EN03-EN04-ending-complete-review.mp4",
+    "purpose": "接现有EN01后的完整后续结尾；旧EN03去掉重复首句后的12.625秒+本轮新EN04",
+    "status": "review-awaiting-human-audio",
+    "segments": [
+      {
+        "sourceId": "OLDEN03",
+        "source": "video/current/ending-legacy-fallback.mp4",
+        "in": 3.375,
+        "outExclusive": 16,
+        "speed": 1,
+        "reason": "旧EN03开头七日期满主灯未灭与现有EN01重复，删0–3.375秒；完整保留北伐停滞、半月后病重、再次借寿旁白",
+        "outputIn": 0,
+        "outputOut": 12.625,
+        "outputFrames": 303,
+        "outputDuration": 12.625
+      },
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 0,
+        "outExclusive": 6,
+        "speed": 1.5,
+        "reason": "回望军帐及转身完整保留，缩短铺垫",
+        "outputIn": 12.625,
+        "outputOut": 16.625,
+        "outputFrames": 96,
+        "outputDuration": 4.0
+      },
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 6,
+        "outExclusive": 19.5,
+        "speed": 1.125,
+        "reason": "姜维两句指定对白完整保留，保音高加速",
+        "outputIn": 16.625,
+        "outputOut": 28.625,
+        "outputFrames": 288,
+        "outputDuration": 12.0
+      },
+      {
+        "sourceId": "EN04",
+        "source": "video/video-new/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4",
+        "in": 21.75,
+        "outExclusive": 25.5,
+        "speed": 1.125,
+        "reason": "保留画外哎那我有办法及姜维闭口听取反应",
+        "outputIn": 28.625,
+        "outputOut": 31.958333333333332,
+        "outputFrames": 80,
+        "outputDuration": 3.3333333333333335
+      }
+    ],
+    "removed": [
+      {
+        "sourceId": "EN04",
+        "in": 19.5,
+        "outExclusive": 21.75,
+        "reason": "两位角色发言之间重复无对白停顿；下一声段约22.35秒起，预留0.6秒"
+      },
+      {
+        "sourceId": "EN04",
+        "in": 25.5,
+        "outExclusive": 30.048005,
+        "reason": "主角回应后长尾重复反应；28秒后姜维无对白张嘴会误导角色归属"
+      },
+      {
+        "sourceId": "OLDEN03",
+        "in": 0,
+        "outExclusive": 3.375,
+        "reason": "接现有EN01使用，首句七日期满主灯未灭为已播放的重复信息；不删后续北伐停滞/半月/再借寿"
+      }
+    ],
+    "nominalDuration": 31.958333333333332,
+    "sha256": "12889c16fae9d5b8d19003b2ad9ee4026f6ad1c4d0664d8a823affadf2c30f2a",
+    "bytes": 7220923,
+    "audioProcessing": "atempo (pitch-preserving); original source ambience; 15ms short fades; measured two-pass loudnorm -18 LUFS / -1.5 dBTP; no TTS/replacement voices"
+  }
+]

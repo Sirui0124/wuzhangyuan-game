@@ -1,0 +1,7286 @@
+{
+  "schemaVersion": 1,
+  "id": "wuzhang",
+  "title": "五丈原：守住这一盏灯",
+  "entrySceneId": "camp_gate",
+  "initialFlags": [
+    {
+      "id": "loop.seen_intro",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "已确认穿越开场"
+    },
+    {
+      "id": "loop.completed_wuzhang",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "已完成安全传报，解锁后续章节入口"
+    },
+    {
+      "id": "loop.player_alive",
+      "scope": "loop",
+      "owner": "player",
+      "initial": true,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "玩家仍存活"
+    },
+    {
+      "id": "loop.lamp_lit",
+      "scope": "loop",
+      "owner": "player",
+      "initial": true,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "主灯仍亮"
+    },
+    {
+      "id": "loop.guard_heard_urgent_rule",
+      "scope": "loop",
+      "owner": "guard",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮听完甲的急报规则"
+    },
+    {
+      "id": "loop.entry_notice_read",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮看完告示"
+    },
+    {
+      "id": "loop.knows_jiangwei_inside",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮听甲确认姜维在帐内"
+    },
+    {
+      "id": "loop.scout_questioned",
+      "scope": "loop",
+      "owner": "scout",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮听完斥候的完整军情范围"
+    },
+    {
+      "id": "loop.relay_agreed",
+      "scope": "loop",
+      "owner": "relay",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "乙认可代问请求，尚未实际递话"
+    },
+    {
+      "id": "loop.request_sent",
+      "scope": "loop",
+      "owner": "relay",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "玩家实际托乙递出请求"
+    },
+    {
+      "id": "loop.jiangwei_approval",
+      "scope": "loop",
+      "owner": "relay",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮听完姜维有限许可"
+    },
+    {
+      "id": "loop.npc_weiyan_saw_approval",
+      "scope": "loop",
+      "owner": "weiyan",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "魏延本次交涉实际看过有效凭条"
+    },
+    {
+      "id": "loop.risk_warned",
+      "scope": "loop",
+      "owner": "guard",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "已听完甲的架空风险警告"
+    },
+    {
+      "id": "loop.risk_accepted",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "玩家选择承担，尚未越职递报"
+    },
+    {
+      "id": "loop.unauthorized_reroute",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "实际越职交付军情"
+    },
+    {
+      "id": "loop.weiyan_status",
+      "scope": "loop",
+      "owner": "weiyan",
+      "initial": "approaching",
+      "allowedValues": [
+        "approaching",
+        "waiting",
+        "departed"
+      ],
+      "description": "魏延互斥进度"
+    },
+    {
+      "id": "loop.relay_location",
+      "scope": "loop",
+      "owner": "relay",
+      "initial": "relay_tent",
+      "allowedValues": [
+        "relay_tent",
+        "waiting_area"
+      ],
+      "description": "乙的互斥位置"
+    },
+    {
+      "id": "loop.report_status",
+      "scope": "loop",
+      "owner": "weiyan",
+      "initial": "none",
+      "allowedValues": [
+        "none",
+        "delivered",
+        "replied",
+        "relayed"
+      ],
+      "description": "军情执行进度；姜维回话作为本轮记录，不另发道具。"
+    },
+    {
+      "id": "loop.route",
+      "scope": "loop",
+      "owner": "weiyan",
+      "initial": "none",
+      "allowedValues": [
+        "none",
+        "direct",
+        "authorized"
+      ],
+      "description": "已接受的传报方案；同轮不可切换或重启承诺"
+    },
+    {
+      "id": "loop.result",
+      "scope": "loop",
+      "owner": "player",
+      "initial": "none",
+      "allowedValues": [
+        "none",
+        "lamp_failure",
+        "execution",
+        "safe",
+        "tutorial_execution"
+      ],
+      "description": "本轮互斥结算"
+    },
+    {
+      "id": "loop.delay_stage",
+      "scope": "loop",
+      "owner": "weiyan",
+      "initial": 0,
+      "allowedValues": [
+        0,
+        1,
+        2
+      ],
+      "description": "显式无关行动次数，第一次警告，第二次破约"
+    },
+    {
+      "id": "loop.inferred_plan",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "description": "玩家将当夜告示、守帐规矩和敌情合成及时帐外接报的判断；每轮重新确认。"
+    },
+    {
+      "id": "loop.knows_illness",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "description": "调查得知丞相病势早于今夜；不等于可解决病根。"
+    },
+    {
+      "id": "progress.tutorial_completed",
+      "scope": "progress",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "已完成一次教学，仅选择重新开始的起点，不提供游戏信息"
+    },
+    {
+      "id": "loop.relay_discovered",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮向守帐卒问明侧帐位置"
+    },
+    {
+      "id": "loop.scout_report_heard",
+      "scope": "loop",
+      "owner": "scout",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮听完斥候初报，不等于已知营门情况"
+    },
+    {
+      "id": "loop.scout_notice_presented",
+      "scope": "loop",
+      "owner": "scout",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本轮向斥候出示告示并听完回应"
+    },
+    {
+      "id": "loop.tutorial_step",
+      "scope": "loop",
+      "owner": "player",
+      "initial": "approach",
+      "allowedValues": [
+        "approach",
+        "block",
+        "notice",
+        "input",
+        "resolved"
+      ],
+      "description": "首次交涉的出示顺序，仅本轮流程"
+    },
+    {
+      "id": "loop.tutorial_blocks",
+      "scope": "loop",
+      "owner": "player",
+      "initial": 0,
+      "allowedValues": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "description": "直接阻拦次数"
+    },
+    {
+      "id": "loop.tutorial_notice_presented",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "本次教学交涉已实际出示并确认禁令"
+    },
+    {
+      "id": "loop.weiyan_notice_presented",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "description": "本次第二次交涉已实际确认禁令"
+    },
+    {
+      "id": "loop.execution_reason",
+      "scope": "loop",
+      "owner": "player",
+      "initial": "none",
+      "description": "当场处斩原因",
+      "allowedValues": [
+        "none",
+        "provocation"
+      ]
+    },
+    {
+      "id": "loop.guard_window_heard",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "第二轮 v07 本轮确认事实"
+    },
+    {
+      "id": "loop.jiangwei_line_heard",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "第二轮 v07 本轮确认事实"
+    },
+    {
+      "id": "loop.scout_card_presented",
+      "scope": "loop",
+      "owner": "player",
+      "initial": false,
+      "allowedValues": [
+        false,
+        true
+      ],
+      "description": "第二轮 v07 本轮确认事实"
+    },
+    {
+      "id": "loop.eaves_count",
+      "scope": "loop",
+      "owner": "player",
+      "initial": 0,
+      "allowedValues": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "description": "已主动选择并确认的偷听次数，阅读停留不计时"
+    },
+    {
+      "id": "loop.tutorial_report_stage",
+      "scope": "loop",
+      "owner": "player",
+      "initial": "none",
+      "allowedValues": [
+        "none",
+        "promised",
+        "handed_to_guard",
+        "unanswered",
+        "punished"
+      ],
+      "description": "首轮承诺与去向：军报交到守帐卒后未确认有权者接报、决策与回令；虽未酿祸，魏延仍严酷处死主角。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "camp_gate",
+      "title": "中军帐门",
+      "visibleWhen": {
+        "any": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "not": {
+                  "flag": "loop.result",
+                  "equals": "none"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "enterWhen": {
+        "any": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "lockedText": "先请姜维的亲兵带回许可，再到中军帐前。",
+      "mediaId": null
+    },
+    {
+      "id": "notice_front",
+      "title": "告示前",
+      "visibleWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "enterWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "lockedText": "眼下先依已取得的许可传报。",
+      "mediaId": null
+    },
+    {
+      "id": "jiangwei_tent_front",
+      "title": "姜维将军帐前",
+      "visibleWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "flag": "loop.guard_heard_urgent_rule",
+            "equals": true
+          },
+          {
+            "flag": "loop.guard_window_heard",
+            "equals": true
+          },
+          {
+            "flag": "loop.jiangwei_line_heard",
+            "equals": true
+          }
+        ]
+      },
+      "enterWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "lockedText": "先与甲乙聊完，问清请示的时机与姜维的线索。",
+      "mediaId": null
+    },
+    {
+      "id": "report_post",
+      "title": "营前传报处",
+      "visibleWhen": {
+        "any": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "flag": "loop.seen_intro",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "enterWhen": {
+        "any": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "lockedText": "先拿到姜维的回话，再去营前核实军情。",
+      "mediaId": null
+    },
+    {
+      "id": "relay_tent",
+      "title": "传令侧帐",
+      "visibleWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "enterWhen": {
+        "all": []
+      },
+      "lockedText": "你尚未得知侧帐的传报途径。",
+      "mediaId": null
+    },
+    {
+      "id": "waiting_area",
+      "title": "中军帐外候报处",
+      "visibleWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "enterWhen": {
+        "all": []
+      },
+      "lockedText": "目前没有在这里候报的安排。",
+      "mediaId": null
+    }
+  ],
+  "characters": [
+    {
+      "id": "player",
+      "name": "我",
+      "motivation": "作为普通值守小卒，调查当前军营情况，寻找合乎当前许可的接报办法。",
+      "placements": [
+        {
+          "sceneId": "camp_gate",
+          "when": {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          }
+        },
+        {
+          "sceneId": "notice_front",
+          "when": {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          }
+        }
+      ],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "第六夜·傍晚。"
+    },
+    {
+      "id": "narrator",
+      "name": "旁白",
+      "motivation": "呈现已发生的事实，不授予权限。",
+      "placements": [],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "flag": "loop.player_alive",
+        "equals": false
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": ""
+    },
+    {
+      "id": "notice",
+      "name": "禁入告示",
+      "motivation": "调查物件：只禁止闲人入帐。",
+      "placements": [
+        {
+          "sceneId": "camp_gate",
+          "when": {
+            "any": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "all": [
+                  {
+                    "flag": "progress.tutorial_completed",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.jiangwei_approval",
+                    "equals": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "sceneId": "notice_front",
+          "when": {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "纸上墨迹尚新。"
+    },
+    {
+      "id": "guard",
+      "name": "守帐卒甲",
+      "motivation": "守门并保障急报进入；如实记录未经许可改变传报的行为。",
+      "placements": [
+        {
+          "sceneId": "camp_gate",
+          "when": {
+            "any": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "all": [
+                  {
+                    "flag": "progress.tutorial_completed",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.jiangwei_approval",
+                    "equals": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "sceneId": "notice_front",
+          "when": {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          }
+        }
+      ],
+      "visibleWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": []
+          }
+        ]
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "甲守在帐帘旁，目光时而转向传报处。"
+    },
+    {
+      "id": "relay",
+      "name": "传令卒乙",
+      "motivation": "透露姜维的身份、位置及亲兵请示办法，不代为跑腿或发许可。",
+      "placements": [
+        {
+          "sceneId": "camp_gate",
+          "when": {
+            "any": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "all": [
+                  {
+                    "flag": "progress.tutorial_completed",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.jiangwei_approval",
+                    "equals": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "sceneId": "notice_front",
+          "when": {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          }
+        },
+        {
+          "sceneId": "relay_tent",
+          "when": {
+            "not": {
+              "all": []
+            }
+          }
+        },
+        {
+          "sceneId": "waiting_area",
+          "when": {
+            "not": {
+              "all": []
+            }
+          }
+        }
+      ],
+      "visibleWhen": {
+        "flag": "progress.tutorial_completed",
+        "equals": true
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "乙整理着待送的文书。"
+    },
+    {
+      "id": "curtain",
+      "name": "帐后",
+      "motivation": "调查物件：听见病中咳嗽，不可入帐。",
+      "placements": [
+        {
+          "sceneId": "notice_front",
+          "when": {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          }
+        },
+        {
+          "sceneId": "camp_gate",
+          "when": {
+            "not": {
+              "all": []
+            }
+          }
+        }
+      ],
+      "visibleWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": []
+          }
+        ]
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "帐后传来低语，守帐的正事还没有办完。"
+    },
+    {
+      "id": "scout",
+      "name": "斥候",
+      "motivation": "准确报告亲见敌情，不能把未知敌意说成确定结论。",
+      "placements": [
+        {
+          "sceneId": "report_post",
+          "when": {
+            "all": []
+          }
+        }
+      ],
+      "visibleWhen": {
+        "any": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "flag": "loop.entry_notice_read",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "斥候仍在喘息，衣摆沾着尘土。"
+    },
+    {
+      "id": "weiyan",
+      "name": "魏延",
+      "motivation": "军情紧急，必须及时抵达有权处置的人；可靠的替代通报途径可以避免亲自闯帐。",
+      "placements": [
+        {
+          "sceneId": "report_post",
+          "when": {
+            "flag": "loop.weiyan_status",
+            "equals": "approaching"
+          }
+        },
+        {
+          "sceneId": "waiting_area",
+          "when": {
+            "flag": "loop.weiyan_status",
+            "equals": "waiting"
+          }
+        }
+      ],
+      "visibleWhen": {
+        "any": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": false
+              },
+              {
+                "flag": "loop.seen_intro",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "progress.tutorial_completed",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.jiangwei_approval",
+                    "equals": true
+                  }
+                ]
+              },
+              {
+                "flag": "loop.scout_questioned",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "not": {
+              "flag": "loop.weiyan_status",
+              "equals": "departed"
+            }
+          }
+        ]
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": "魏延握着佩剑，望向中军帐。"
+    },
+    {
+      "id": "jiangwei",
+      "name": "姜维",
+      "motivation": "留在中军帐，隔帘接报，决定今夜军务并承担自己军令的责任。",
+      "placements": [],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "flag": "loop.player_alive",
+        "equals": false
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": ""
+    },
+    {
+      "id": "zhugeliang",
+      "name": "诸葛亮",
+      "motivation": "病中于帐内祈禳；本关不设直接攀谈。",
+      "placements": [],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "flag": "loop.player_alive",
+        "equals": false
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": ""
+    },
+    {
+      "id": "executor",
+      "name": "军法执行者",
+      "motivation": "仅用于架空追责演出，不代表史书记载的军法或诸葛亮命令。",
+      "placements": [],
+      "visibleWhen": {
+        "all": []
+      },
+      "talkWhen": {
+        "flag": "loop.player_alive",
+        "equals": false
+      },
+      "unavailableText": "当前无法交谈；请查看军情进度或本轮结算。",
+      "idleText": ""
+    },
+    {
+      "id": "jiangwei_guard",
+      "name": "姜维的亲兵",
+      "motivation": "留守姜维自己的将军帐；合理军务请求由他到中军帐外请示，再如实带回许可。",
+      "placements": [
+        {
+          "sceneId": "jiangwei_tent_front",
+          "when": {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          }
+        }
+      ],
+      "visibleWhen": {
+        "flag": "progress.tutorial_completed",
+        "equals": true
+      },
+      "talkWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "unavailableText": "请先完成当前剧情。",
+      "idleText": "姜将军在中军帐内，亲兵留守自己的将军帐前。"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "entry_notice",
+      "title": "禁入告示摘录",
+      "source": "中军帐门的禁入告示：今夜帐内有要事，闲人不得擅入。",
+      "proves": [
+        "本夜存在禁止闲人入帐的安排"
+      ],
+      "cannotProve": [
+        "急报可以扣留",
+        "玩家有权阻拦将领或改军令"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "guard_statement",
+      "title": "守帐卒证词",
+      "source": "帐门值守甲的当夜证词：急报必须传递；未经命令，小卒无权自行改换传报办法。",
+      "proves": [
+        "急报仍须处理",
+        "小卒未获改变传报程序的权限"
+      ],
+      "cannotProve": [
+        "姜维已经批准替代办法",
+        "任何真实军法会对救灯者处斩"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "scout_statement",
+      "title": "斥候证词：营门未失守",
+      "source": "营前斥候当夜口述：魏兵逼近，营门尚未失守；敌军意图未能断言，魏延将亲报中军。",
+      "proves": [
+        "敌军逼近，军情必须及时送达",
+        "营门尚未失守，可短暂等候帐外接报，不能长期拖延"
+      ],
+      "cannotProve": [
+        "敌军确定只是在试探",
+        "可以拖到明早报告"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "approval_note",
+      "title": "姜维传报凭条",
+      "source": "姜维通过乙送出的当夜准信：只准今夜这份急报由乙在帐外接取递入；姜维得报出帐，回话须如实转达。",
+      "proves": [
+        "本轮这次军情获准由乙转递",
+        "姜维会出帐处置"
+      ],
+      "cannotProve": [
+        "拘押魏延",
+        "调兵或替姜维发布战术命令",
+        "回溯后的许可仍有效"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "illness_trace",
+      "title": "病势早于今夜",
+      "source": "在候报期间问过军医帐外的值卒：丞相连日咳嗽、少食，今夜之前已在服药。",
+      "proves": [
+        "丞相的病势在今夜之前已出现",
+        "守住灯不等于消除病因"
+      ],
+      "cannotProve": [
+        "丞相必定因某一桩旧事患病",
+        "调查病因可以替代当前传报"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "jiangwei_route",
+      "title": "守帐卒证词：找姜维接报",
+      "source": "姜将军就在帐内。可在帐外叫他出来接报，不必闯帐；急报须立即送到他手中。",
+      "proves": [
+        "姜维在帐内，可以从帐外请他出来接报"
+      ],
+      "cannotProve": [
+        "姜维已经下令",
+        "军情已经送达",
+        "可以拖延军报"
+      ],
+      "historicalBasis": "fiction"
+    },
+    {
+      "id": "jiangwei_authorization",
+      "title": "姜维：什么事情都先经过我",
+      "source": "姜维的亲兵从中军帐外请示后，当面复述姜维本人的回话。",
+      "proves": [
+        "今夜军务由姜维接报处置，姜维有决策权",
+        "姜维承担自己作出的军务决定；急报须在帐外立即报明"
+      ],
+      "cannotProve": [
+        "可以入帐见丞相",
+        "玩家能替姜维下令",
+        "姜维替任意违令承担罪责",
+        "复活后旧轮许可继续有效"
+      ],
+      "historicalBasis": "fiction"
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "player.intro",
+      "sceneId": "camp_gate",
+      "characterId": "player",
+      "topicId": "arrival",
+      "title": "看看自己身在何处",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.seen_intro",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "once_ever",
+      "lines": [
+        {
+          "id": "player.intro.arrival",
+          "speakerId": "narrator",
+          "text": "你睁开眼，已站在五丈原的中军帐外。第六夜，帐内的主灯还亮着。",
+          "effects": []
+        },
+        {
+          "id": "player.intro.goal",
+          "speakerId": "player",
+          "text": "得拦住魏延，别让他掀开帐帘。先去营前找他。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.seen_intro",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.duty",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "duty",
+      "title": "今夜为何守得这样严？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.duty.text",
+          "speakerId": "guard",
+          "text": "把矛握稳，别总往帘子里看。今夜帐内有要事，闲人不得近前。军报若来了，可别误了。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.ask_urgent",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "urgent_rule",
+      "title": "急报来了，也不能入帐？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "guard.ask_urgent.text",
+          "speakerId": "guard",
+          "text": "急报自然得报。来人可在帐外报名候见，帐内自会示下。至于换谁接报、由谁转递，须先请准，你我定不得。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.guard_heard_urgent_rule",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "guard_statement"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.ask_urgent.reread",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "urgent_rule",
+      "title": "重读：急报来了，也不能入帐？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 30,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.ask_urgent.reread.text",
+          "speakerId": "guard",
+          "text": "急报自然得报。来人可在帐外报名候见，帐内自会示下。至于换谁接报、由谁转递，须先请准，你我定不得。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.ask_inside",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "inside",
+      "title": "姜将军可在帐内？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "guard.ask_inside.text",
+          "speakerId": "guard",
+          "text": "姜将军就在帐内。可在帐外叫他出来接报，不必闯帐；急报须立即送到他手中。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.knows_jiangwei_inside",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "jiangwei_route"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.ask_inside.reread",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "inside",
+      "title": "重读：姜将军可在帐内？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 30,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.ask_inside.reread.text",
+          "speakerId": "guard",
+          "text": "姜将军就在里头。有事先在帐外报名，等里头示下。那帘子，碰不得。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "notice.read",
+      "sceneId": "notice_front",
+      "characterId": "notice",
+      "topicId": "entry_notice",
+      "title": "查看禁入告示",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.entry_notice_read",
+                "equals": false
+              },
+              {
+                "all": []
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "notice.read.text",
+          "speakerId": "notice",
+          "text": "今夜帐内有要事，闲人不得擅入。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.entry_notice_read",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "entry_notice"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "notice.read.reread",
+      "sceneId": "notice_front",
+      "characterId": "notice",
+      "topicId": "entry_notice",
+      "title": "重读：查看禁入告示",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.entry_notice_read",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "notice.read.reread.text",
+          "speakerId": "notice",
+          "text": "今夜帐内有要事，闲人不得擅入。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "curtain.listen",
+      "sceneId": "camp_gate",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "隔帘听一听",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "curtain.listen.text",
+          "speakerId": "narrator",
+          "text": "你靠近半步，又停住。帘后有人压低声音说话，接着是一阵咳嗽。灯光透过帐布，亮得很薄。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "scout.report",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "report",
+      "title": "前头出了何事？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.scout.arrival",
+          "speakerId": "narrator",
+          "text": "你收好姜维的回话，赶到营前通报处。斥候正在候报，魏延尚在前营核查。",
+          "effects": []
+        },
+        {
+          "id": "scout.report.text",
+          "speakerId": "scout",
+          "text": "魏兵正在向营前逼近，魏将军马上就到，要入帐禀报。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_report_heard",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "scout.scope",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "report_scope",
+      "title": "营门可曾失守？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "scout.scope.text",
+          "speakerId": "scout",
+          "text": "还没有。我只见他们向营前来，究竟要做什么，眼下说不准。快把话报上去，别等他们到了再问！",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_questioned",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "scout_statement"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "scout.scope.reread",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "report_scope",
+      "title": "重读：营门可曾失守？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 30,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "scout.scope.reread.text",
+          "speakerId": "scout",
+          "text": "还没有。我只见他们向营前来，究竟要做什么，眼下说不准。快把话报上去，别等他们到了再问！",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "scout.followup",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "followup",
+      "title": "问清军情范围",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "flag": "loop.scout_notice_presented",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "scout.followup.text",
+          "speakerId": "scout",
+          "text": "营门还没有失守。魏兵正往这里来，究竟要做什么，我说不准。快报中军！",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_questioned",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "scout_statement"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.purpose",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "purpose",
+      "title": "将军为何急着入帐？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.weiyan_status",
+                "equals": "approaching"
+              },
+              {
+                "flag": "loop.route",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.arrival.1",
+          "speakerId": "narrator",
+          "text": "魏延从前营回来，正要往中军帐去。你迎上前。",
+          "effects": []
+        },
+        {
+          "id": "v07.arrival.2",
+          "speakerId": "weiyan",
+          "text": "营前有变，我要去见丞相。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.contact",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "contact_jiangwei",
+      "title": "请乙向姜维递句话",
+      "targetStatement": "要请姜将军如何处置？军报从何处来，你先说清。",
+      "trigger": "present_evidence",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.contact.open",
+          "speakerId": "relay",
+          "text": "有话要递给姜将军？别急，慢慢说。军报从何处来，你想请他如何处置？",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": {
+        "intentOptions": [
+          {
+            "id": "ask_contact",
+            "label": "请乙向姜将军代问"
+          },
+          {
+            "id": "revise_plan",
+            "label": "把递话请求说明白"
+          }
+        ],
+        "placeholder": "说明禁入和急报同时存在，请乙向帐内姜维问清可行办法。",
+        "guidingQuestions": [
+          "拿哪些眼前凭据给他看？这些凭据能说明什么？",
+          "让谁接报、递给谁，怎样保证军情不耽误？",
+          "对方最担心什么？你怎样回应？"
+        ],
+        "starterText": "帐前禁令不敢违，急报也耽误不得。可否劳你向姜将军代问……",
+        "maxLength": 1000,
+        "evidenceSelection": "optional",
+        "judgeId": "relay_contact",
+        "outcomes": {
+          "accept": {
+            "reply": [
+              {
+                "id": "relay.contact.feedback.accept",
+                "speakerId": "relay",
+                "text": "你说的办法尚未落实。禁令、急报和接报规矩，你可问清如何兼顾了？",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          },
+          "need_evidence": {
+            "reply": [
+              {
+                "id": "relay.contact.feedback.need_evidence",
+                "speakerId": "relay",
+                "text": "你说帐前有禁令，又说敌兵已近，凭据呢？拿来给我看。若已得姜将军准信，也一并拿来。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          },
+          "need_plan": {
+            "reply": [
+              {
+                "id": "relay.contact.feedback.need_plan",
+                "speakerId": "relay",
+                "text": "不入帐，军报总得进去。由谁接、递给谁，你先说清，我才好替你问。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          },
+          "out_of_scope": {
+            "reply": [
+              {
+                "id": "relay.contact.feedback.out_of_scope",
+                "speakerId": "relay",
+                "text": "这话，我递不得。扣报、拘人，等到明日再说——你我哪来的令，敢这么办？",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          },
+          "clarify": {
+            "reply": [
+              {
+                "id": "relay.contact.feedback.clarify",
+                "speakerId": "relay",
+                "text": "你是请我代问，还是已得了令？这两件事可不能混着说。先说清楚，我才好往里递话。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      },
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.duty",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "duty",
+      "title": "你能替我向姜将军递话？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.duty.text",
+          "speakerId": "relay",
+          "text": "我在帐外传话，姜将军在里头听。你要改个接报的法子，我能替你问。至于准不准，须他亲口应下。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.send_request",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "send_request",
+      "title": "托乙向姜维递话",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.send_request.open",
+          "speakerId": "relay",
+          "text": "好，我替你问。要问什么，你先定下来。到了帘边，可不好再改口。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "relay.send_request.receive",
+          "label": "请代问姜将军：今夜可否由你在帐外接报？",
+          "intentId": "ask_contact",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "relay.send_request",
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.send_request.receive.reply",
+                "speakerId": "relay",
+                "text": "成。你在这里候着，我这就去问。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "relay.send_request.coordinate",
+          "label": "禁令不可违，军报不可误。请姜将军一并安排。",
+          "intentId": "ask_contact",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "relay.send_request",
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.send_request.coordinate.reply",
+                "speakerId": "relay",
+                "text": "我把帐前禁令和敌情一并禀明。该如何处置，听姜将军的。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "relay.send_request.delay",
+          "label": "让魏将军止步，军情明早再报。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.send_request.delay.reply",
+                "speakerId": "relay",
+                "text": "等到明早？敌兵也肯等么？这话不成。你若想在帐外接报，我可以替你问。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "jiangwei.approval",
+      "sceneId": "relay_tent",
+      "characterId": "jiangwei",
+      "topicId": "approval",
+      "title": "帘边的有限准信",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "jiangwei.approval.relay",
+          "speakerId": "relay",
+          "text": "禀姜将军，魏将军携急报将至。帐前禁令尚在，可否由小卒在外接报，递入请将军处置？",
+          "effects": []
+        },
+        {
+          "id": "jiangwei.approval.order",
+          "speakerId": "jiangwei",
+          "text": "军情不可迟误。今夜这份急报，由你在外接了递入。请文长稍候，我随后出帐与他议事。写下准信，拿去告知他。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.jiangwei_approval",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "approval_note"
+            }
+          ]
+        },
+        {
+          "id": "jiangwei.approval.scope",
+          "speakerId": "relay",
+          "text": "拿好。准的是今夜这份军报由我转递，可没准你扣报、拦人，更没让你替将军发令。军报要送到，回话也得带回来。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.approval_read",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "approval",
+      "title": "重读今夜准信与范围",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.approval_read.text",
+          "speakerId": "relay",
+          "text": "上头写得明白：今夜这份急报，由我在帐外接了递入，姜将军得报出帐。你先给魏将军看，再来叫我。回话也须照原话传。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.negotiate",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "wait_plan",
+      "title": "出示两个证据，说明如何接报",
+      "targetStatement": "军情不能迟误，丞相谁也不得入帐；姜维已获权接报处置，须立即隔帘请他接报定夺。",
+      "trigger": "present_evidence",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.weiyan_status",
+            "equals": "approaching"
+          },
+          {
+            "flag": "loop.weiyan_notice_presented",
+            "equals": true
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.dismissal.2.negotiate",
+          "speakerId": "player",
+          "text": "姜将军的亲兵方才请示过。姜将军说，今夜军务由他接报处置，什么事情都先经过他。",
+          "effects": [],
+          "when": {
+            "flag": "loop.npc_weiyan_saw_approval",
+            "equals": false
+          }
+        },
+        {
+          "id": "v07.dismissal.3.negotiate",
+          "speakerId": "weiyan",
+          "text": "他算老几？我要亲自找丞相",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.npc_weiyan_saw_approval",
+              "value": true
+            }
+          ],
+          "when": {
+            "flag": "loop.npc_weiyan_saw_approval",
+            "equals": false
+          }
+        },
+        {
+          "id": "v07.arrival.scout_response.negotiate",
+          "speakerId": "weiyan",
+          "text": "营门尚守，也不能坐等魏兵到了再说。你究竟打算怎么报？",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_card_presented",
+              "value": true
+            }
+          ],
+          "when": {
+            "flag": "loop.scout_card_presented",
+            "equals": false
+          }
+        }
+      ],
+      "choices": [],
+      "freeInput": {
+        "intentOptions": [
+          {
+            "id": "propose_wait",
+            "label": "说明立即接报、守令与决策责任"
+          }
+        ],
+        "placeholder": "军情不能耽误，丞相的禁令也不能冲撞。你已取得姜维的许可，现在如何接报、由谁作决定并承担责任？",
+        "guidingQuestions": [
+          "如何现在就把急报送到，避免贻误战机？",
+          "丞相禁止谁也不得入帐，径入会有什么风险？",
+          "姜维已有接报与决策权，如何请他隔帘接报、立即定夺并承担自己的决定？"
+        ],
+        "starterText": "",
+        "maxLength": 1000,
+        "evidenceSelection": "required",
+        "judgeId": "weiyan_wait",
+        "outcomes": {
+          "accept": {
+            "reply": [
+              {
+                "id": "weiyan.second.accept",
+                "speakerId": "weiyan",
+                "text": "哼，那就叫他马上接报！若有耽误，别拿规矩来搪塞。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "waiting"
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.route",
+                "value": "authorized"
+              }
+            ],
+            "next": "v07.handoff"
+          },
+          "need_evidence": {
+            "reply": [
+              {
+                "id": "weiyan.second.fail",
+                "speakerId": "weiyan",
+                "text": "这办法保不住及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "departed"
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.lamp_lit",
+                "value": false
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.result",
+                "value": "lamp_failure"
+              }
+            ],
+            "next": "ending.lamp_failure"
+          },
+          "need_plan": {
+            "reply": [
+              {
+                "id": "weiyan.second.fail",
+                "speakerId": "weiyan",
+                "text": "这办法保不住及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "departed"
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.lamp_lit",
+                "value": false
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.result",
+                "value": "lamp_failure"
+              }
+            ],
+            "next": "ending.lamp_failure"
+          },
+          "out_of_scope": {
+            "reply": [
+              {
+                "id": "weiyan.provocation.order",
+                "speakerId": "weiyan",
+                "text": "竟敢在军前如此放肆！来人，拿下，处斩！",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.execution"
+          },
+          "clarify": {
+            "reply": [
+              {
+                "id": "weiyan.second.fail",
+                "speakerId": "weiyan",
+                "text": "这办法保不住及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "departed"
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.lamp_lit",
+                "value": false
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.result",
+                "value": "lamp_failure"
+              }
+            ],
+            "next": "ending.lamp_failure"
+          }
+        }
+      },
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.preset",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "preset",
+      "title": "将军且听我一言",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.weiyan_status",
+                "equals": "approaching"
+              },
+              {
+                "flag": "loop.route",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.preset.open",
+          "speakerId": "narrator",
+          "text": "交涉提示：请你选择证据先出示，随后自行写好沟通，本轮你的沟通很重要，人物会结合证据及你的话来做出选择。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.preset",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "preset",
+      "title": "使用预设递话请求",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.preset.open",
+          "speakerId": "narrator",
+          "text": "递话提示：可选下面的请求，也可返回自行表达。仍须向乙出示眼前凭据。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "relay.preset.contact",
+          "label": "帐前有禁令，急报又等不得。请代问帐外接报之法。",
+          "intentId": "ask_contact",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "evidence": "entry_notice",
+                    "mode": "presented"
+                  },
+                  {
+                    "evidence": "scout_statement",
+                    "mode": "presented"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.inferred_plan",
+                "equals": true
+              }
+            ]
+          },
+          "lockedText": "先向乙出示今夜告示与完整军情，再请他代问。 并完成本轮三条线索的关联判断。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.preset.contact.reply",
+                "speakerId": "relay",
+                "text": "成，我替你问。准不准，得听姜将军的。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.relay_agreed",
+                "value": true
+              }
+            ],
+            "next": "relay.send_request"
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.waiting",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "waiting",
+      "title": "还在等哪一步？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.waiting.direct",
+          "speakerId": "weiyan",
+          "text": "姜维可来接报？你既应下了，就快去请。莫让军报停在这里。",
+          "effects": [],
+          "when": {
+            "flag": "loop.route",
+            "equals": "direct"
+          }
+        },
+        {
+          "id": "weiyan.waiting.relay",
+          "speakerId": "weiyan",
+          "text": "接报的传令卒呢？有了准信，还不快把人带来！",
+          "effects": [],
+          "when": {
+            "all": [
+              {
+                "flag": "loop.route",
+                "equals": "authorized"
+              },
+              {
+                "flag": "loop.relay_location",
+                "equals": "relay_tent"
+              }
+            ]
+          }
+        },
+        {
+          "id": "weiyan.waiting.deliver",
+          "speakerId": "weiyan",
+          "text": "人既到了，便接报吧。前头的兵可不会停下来等我们。",
+          "effects": [],
+          "when": {
+            "all": [
+              {
+                "flag": "loop.route",
+                "equals": "authorized"
+              },
+              {
+                "flag": "loop.relay_location",
+                "equals": "waiting_area"
+              },
+              {
+                "flag": "loop.report_status",
+                "equals": "none"
+              }
+            ]
+          }
+        },
+        {
+          "id": "weiyan.waiting.reply",
+          "speakerId": "weiyan",
+          "text": "军报送进去了，姜维如何处置？快去取回话。",
+          "effects": [],
+          "when": {
+            "all": [
+              {
+                "flag": "loop.route",
+                "equals": "authorized"
+              },
+              {
+                "flag": "loop.report_status",
+                "equals": "delivered"
+              }
+            ]
+          }
+        },
+        {
+          "id": "weiyan.waiting.relay_reply",
+          "speakerId": "weiyan",
+          "text": "回话既已取到，便照实说。姜维怎么吩咐？",
+          "effects": [],
+          "when": {
+            "flag": "loop.report_status",
+            "equals": "replied"
+          }
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.risk",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "direct_report",
+      "title": "请甲传报，听他说明后果",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.risk.warning",
+          "speakerId": "guard",
+          "text": "报个来意、等候示下，是守门的本分。可你已许了魏将军，要换我接下军报，把他留在帐外；这番安排还未请准。我能替你递，事后却须照实禀明。追究下来，你可想清楚了？",
+          "effects": []
+        },
+        {
+          "id": "guard.risk.fiction_notice",
+          "speakerId": "narrator",
+          "text": "选择提示：这条越职转报路线将导致架空的处斩结局，即使灯被保住。承担后还须亲手交付军情。该处罚不代表史书记载，也非诸葛亮下令。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.risk_warned",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "guard.risk.accept",
+          "label": "军报不能误。这桩罪责，我来担。",
+          "intentId": "propose_wait",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "flag": "loop.risk_warned",
+            "equals": true
+          },
+          "lockedText": "先听完甲的警告和处斩风险提示，再决定是否承担。",
+          "actionId": "direct.accept_risk",
+          "outcome": {
+            "reply": [
+              {
+                "id": "guard.risk.accept.reply",
+                "speakerId": "guard",
+                "text": "……好，把军情交来。该递的，我替你递；该说的，我也不能瞒。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "guard.deliver"
+          }
+        },
+        {
+          "id": "guard.risk.retract",
+          "label": "未曾得令，这番安排还是作罢。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "promise.abandon",
+          "outcome": {
+            "reply": [
+              {
+                "id": "guard.risk.retract.reply",
+                "speakerId": "player",
+                "text": "未曾得令，是我唐突。这番安排，作罢。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.deliver",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "direct_report",
+      "title": "交付军情",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 30,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.deliver.open",
+          "speakerId": "guard",
+          "text": "既已想定，便把军情交来。前头还等着。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "guard.deliver.now",
+          "label": "交出军情，请甲即刻通报。",
+          "intentId": "propose_wait",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "先听完甲的警告，并选择承担越职转报的后果。",
+          "actionId": "direct.deliver_report",
+          "outcome": {
+            "reply": [
+              {
+                "id": "guard.deliver.now.reply",
+                "speakerId": "guard",
+                "text": "收下了。你在此候着，我即刻通报。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.invite",
+      "sceneId": "relay_tent",
+      "characterId": "relay",
+      "topicId": "invite",
+      "title": "请乙到候报处",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.invite.open",
+          "speakerId": "relay",
+          "text": "魏将军已看过准信？好，我随你去。军情须当面交清，省得传错。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "relay.invite.now",
+          "label": "魏将军正在等，请随我去候报处。",
+          "intentId": "propose_handoff",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "先向魏延出示准信，得到他等候接报的答复。",
+          "actionId": "relay.invite",
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.invite.now.reply",
+                "speakerId": "relay",
+                "text": "走吧，莫让魏将军久等。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.handoff",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "handoff",
+      "title": "核对军情，再交乙递入",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.handoff.open",
+          "speakerId": "weiyan",
+          "text": "传令卒，听报：敌兵逼近，营门尚守，来意未明。即刻报姜维，请他处置。你也听着，莫把未明之事说成定论。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "weiyan.handoff.now",
+          "label": "敌兵逼近，营门尚守，来意未明；请乙即刻递入。",
+          "intentId": "propose_handoff",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先把乙带到候报处，魏延才能当面交报。",
+          "actionId": "report.handoff",
+          "outcome": {
+            "reply": [
+              {
+                "id": "weiyan.handoff.delivery",
+                "speakerId": "narrator",
+                "text": "乙复述一遍，待魏延点头，便快步往帐门去。片刻后，他带着回话回来。",
+                "effects": []
+              },
+              {
+                "id": "weiyan.handoff.now.reply",
+                "speakerId": "relay",
+                "text": "军情已递入。姜将军有话带给魏将军，你来听。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "handoff.exaggerate.0",
+          "label": "敌军已经攻破营门，请即刻救援！（误传会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 0
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_0",
+          "outcome": {
+            "reply": [
+              {
+                "id": "handoff.exaggerate.0.reply",
+                "speakerId": "weiyan",
+                "text": "谁说营门已破？听清楚：敌兵逼近，营门尚守，来意未明。重新核对，莫再传错。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.delay_warning"
+          }
+        },
+        {
+          "id": "handoff.minimize.0",
+          "label": "敌军不过试探，暂不必惊动帐内。（误传会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 0
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_0",
+          "outcome": {
+            "reply": [
+              {
+                "id": "handoff.minimize.0.reply",
+                "speakerId": "weiyan",
+                "text": "来意未明，怎能断言是试探？莫拿自己的猜测误了军报。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.delay_warning"
+          }
+        },
+        {
+          "id": "handoff.exaggerate.1",
+          "label": "敌军已经攻破营门，请即刻救援！（误传会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 1
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_1",
+          "outcome": {
+            "reply": [
+              {
+                "id": "handoff.exaggerate.1.reply",
+                "speakerId": "weiyan",
+                "text": "谁说营门已破？听清楚：敌兵逼近，营门尚守，来意未明。重新核对，莫再传错。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "handoff.minimize.1",
+          "label": "敌军不过试探，暂不必惊动帐内。（误传会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 1
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_1",
+          "outcome": {
+            "reply": [
+              {
+                "id": "handoff.minimize.1.reply",
+                "speakerId": "weiyan",
+                "text": "来意未明，怎能断言是试探？莫拿自己的猜测误了军报。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.receive_reply",
+      "sceneId": "waiting_area",
+      "characterId": "relay",
+      "topicId": "receive_reply",
+      "title": "收取姜维回话",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.receive_reply.open",
+          "speakerId": "relay",
+          "text": "听仔细了，这是姜将军的原话。你听过，便去告诉魏将军，莫传错了。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "relay.receive_reply.now",
+          "label": "听取回话，记下姜将军的吩咐。",
+          "intentId": "confirm_reply",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "军报须先由乙接取递入，才有回话可取。",
+          "actionId": "report.receive_reply",
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.receive_reply.now.reply",
+                "speakerId": "jiangwei",
+                "text": "军情已知，我即刻出帐。请文长在帐外候令，依我安排应敌，勿误。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.relay_reply",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "relay_reply",
+      "title": "向魏延转达原话",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.relay_reply.open",
+          "speakerId": "weiyan",
+          "text": "姜维怎么说？",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "weiyan.relay_reply.now",
+          "label": "军情已知，姜将军即刻出帐；请将军候令，依其安排应敌。",
+          "intentId": "confirm_reply",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "先从乙那里听取姜维的回话，才能照实转达。",
+          "actionId": "report.relay_reply",
+          "outcome": {
+            "reply": [
+              {
+                "id": "weiyan.relay_reply.now.reply",
+                "speakerId": "weiyan",
+                "text": "好，我在此候令。你退到一旁，莫误传报。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "reply.add_order.0",
+          "label": "姜将军命将军即刻率兵出营！（添令会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 0
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_0",
+          "outcome": {
+            "reply": [
+              {
+                "id": "reply.add_order.0.reply",
+                "speakerId": "weiyan",
+                "text": "率兵出营？准信只许接报，这道调兵令从何而来？回去核对原话。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.delay_warning"
+          }
+        },
+        {
+          "id": "reply.add_order.1",
+          "label": "姜将军命将军即刻率兵出营！（添令会耗时）",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.delay_stage",
+            "equals": 1
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": "delay.unrelated_1",
+          "outcome": {
+            "reply": [
+              {
+                "id": "reply.add_order.1.reply",
+                "speakerId": "weiyan",
+                "text": "率兵出营？准信只许接报，这道调兵令从何而来？回去核对原话。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.reply_record",
+      "sceneId": "waiting_area",
+      "characterId": "relay",
+      "topicId": "reply_record",
+      "title": "重读今夜回话记录",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "relay.reply_record.text",
+          "speakerId": "relay",
+          "text": "原话是：“军情已知，我即刻出帐。请文长在帐外候令，依我安排应敌，勿误。”只传这句话，别添自己的主意。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.abandon",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "abandon",
+      "title": "解释办不到或放弃承诺",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.abandon.open",
+          "speakerId": "weiyan",
+          "text": "办不到，便直说。我等的是接报的人，可不能一直等你一句空话。你收回安排，我自去面禀。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "weiyan.abandon.now",
+          "label": "这事我办不到，请将军依原途径禀报。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "promise.abandon",
+          "outcome": {
+            "reply": [
+              {
+                "id": "weiyan.abandon.now.reply",
+                "speakerId": "weiyan",
+                "text": "让开。我即刻入帐！",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.leave_initial",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "leave_initial",
+      "title": "结束阻拦，让魏延按原途径入帐",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.leave_initial.open",
+          "speakerId": "weiyan",
+          "text": "既无人接报，我便入帐。你还有什么话？",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "weiyan.leave_initial.now",
+          "label": "退到一旁，让魏延入帐（主灯可能熄灭）。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "weiyan.enter_tent",
+          "outcome": {
+            "reply": [
+              {
+                "id": "weiyan.leave_initial.now.reply",
+                "speakerId": "narrator",
+                "text": "魏延拨开挡路的矛杆，快步走向帐门。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "player.delay_0",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "unrelated_delay",
+      "title": "追查帐内咳嗽与病势",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "player.delay_0.warning",
+          "speakerId": "narrator",
+          "text": "军医帐外的值卒或许知道丞相病势。此项调查会耗时，读对白和查看已有证据不耗时。魏延仍在等接报。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "player.delay_0.now",
+          "label": "去军医帐外，问明咳嗽是否始于今夜（耗时）。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "delay.unrelated_0",
+          "outcome": {
+            "reply": [
+              {
+                "id": "player.delay_0.reply",
+                "speakerId": "narrator",
+                "text": "值卒说，丞相连日咳嗽，饭也吃得少，早已在服药。你记下这件事，赶回候报处。魏延正望着帐门。",
+                "effects": [
+                  {
+                    "type": "grantEvidence",
+                    "evidenceId": "illness_trace"
+                  },
+                  {
+                    "type": "setFlag",
+                    "flag": "loop.knows_illness",
+                    "value": true
+                  }
+                ]
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.delay_warning"
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "player.delay_1",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "unrelated_delay",
+      "title": "另查病势的来由（再次耗时）",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 11,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "player.delay_1.warning",
+          "speakerId": "narrator",
+          "text": "你已耽搁过一次。此时另查病势，虽可能得到旧事线索，却会用尽魏延剩下的等待机会。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "player.delay_1.now",
+          "label": "另查何事累及丞相（再次耗时，将失约）。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先完成当前提示中的前提；阅读和重试不会推进事件。",
+          "actionId": "delay.unrelated_1",
+          "outcome": {
+            "reply": [
+              {
+                "id": "player.delay_1.reply",
+                "speakerId": "narrator",
+                "text": "值卒提起连年的军务与粮运。话未问完，营前已传来甲胄声——魏延不肯再等，转身往帐门去了。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.delay_warning",
+      "sceneId": "waiting_area",
+      "characterId": "weiyan",
+      "topicId": "delay_warning",
+      "title": "临界警告",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.delay_warning.text",
+          "speakerId": "weiyan",
+          "text": "还去问那些闲事？再耽搁，我便自己入帐！该传报就传报，该取回话就快去。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "ending.execution",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "ending",
+      "title": "主灯守住，越职被处斩",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "ending.execution.lamp",
+          "speakerId": "narrator",
+          "text": "甲在帐外通报，姜维随即出帐。魏延迎上前，两人的声音渐渐远去。帘后那盏灯，仍稳稳地亮着。",
+          "effects": []
+        },
+        {
+          "id": "ending.execution.sentence",
+          "speakerId": "executor",
+          "text": "未奉军令，擅改急报传递，罪责已定。押下，处斩！",
+          "effects": []
+        },
+        {
+          "id": "ending.execution.death",
+          "speakerId": "narrator",
+          "text": "你回头看了一眼帐门。灯还亮着，甲却低下了头。刀影落下，夕阳、营栅和那盏灯一齐沉入黑暗。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.player_alive",
+              "value": false
+            }
+          ]
+        },
+        {
+          "id": "ending.execution.result",
+          "speakerId": "narrator",
+          "text": "本次结局：主灯守住，军情送达；你因越职转报被处斩。重新开始会回到正常调查起点，本轮信息全部清空。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "ending.lamp_failure",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "ending",
+      "title": "灯灭：帐外方案没有兑现",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "lamp_failure"
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "ending.lamp_failure.no_plan",
+          "speakerId": "narrator",
+          "text": "没人能在帐外接下这份急报。魏延疾步来到帐门，一把掀开帘子。风卷进帐内，主灯灭了。",
+          "effects": [],
+          "when": {
+            "flag": "loop.route",
+            "equals": "none"
+          }
+        },
+        {
+          "id": "ending.lamp_failure.no_report",
+          "speakerId": "narrator",
+          "text": "你说过会让人接报，军情却一直未递进去。魏延不再等候，径直掀帘入帐。灯焰猛地一晃，灭了。",
+          "effects": [],
+          "when": {
+            "all": [
+              {
+                "not": {
+                  "flag": "loop.route",
+                  "equals": "none"
+                }
+              },
+              {
+                "flag": "loop.report_status",
+                "equals": "none"
+              }
+            ]
+          }
+        },
+        {
+          "id": "ending.lamp_failure.no_reply",
+          "speakerId": "narrator",
+          "text": "军报虽已递入，姜维的回话却无人取来。魏延望了望帐门，终于迈步入内。帘子扬起，主灯随之熄灭。",
+          "effects": [],
+          "when": {
+            "flag": "loop.report_status",
+            "equals": "delivered"
+          }
+        },
+        {
+          "id": "ending.lamp_failure.not_relayed",
+          "speakerId": "narrator",
+          "text": "姜维的回话停在你这里，魏延仍未得令。他不再等你，转身入帐问报。风过帐帘，灯灭了。",
+          "effects": [],
+          "when": {
+            "flag": "loop.report_status",
+            "equals": "replied"
+          }
+        },
+        {
+          "id": "ending.lamp_failure.result",
+          "speakerId": "narrator",
+          "text": "本次结局：主灯熄灭，你仍活着。重新开始会回到正常调查起点，本轮信息全部清空。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "ending.safe",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "ending",
+      "title": "守住这一夜，活着站在帐门",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "safe"
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "ending.safe.result",
+          "speakerId": "narrator",
+          "text": "本次结局：阻拦成功，军情及时送达，你平安生还。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.completed_wuzhang",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "ending.safe.cough",
+          "speakerId": "narrator",
+          "text": "人散了，你仍守在帐门。灯光从帘缝里透出来，咳嗽声却又响起。诸葛亮伏在案边，许久没有抬头。这一夜过去了，他仍病着。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.connect_evidence",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "connect_evidence",
+      "title": "把禁令、规矩与敌情合起来看",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "guard.connect_evidence.open",
+          "speakerId": "guard",
+          "text": "告示不许闲人擅入，急报却不能压着。你打算如何两全？",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "deduction.block",
+          "label": "有禁令在，便能挡住魏将军。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "deduction.block.reply",
+                "speakerId": "guard",
+                "text": "他是来报军情的，怎能与闲人混为一谈？告示可没给你拦将领的令。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "deduction.delay",
+          "label": "营门未失守，这份军报可以缓一缓。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "deduction.delay.reply",
+                "speakerId": "guard",
+                "text": "未失守，不等于没有军情。等营门破了才报，还来得及么？",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": null
+          }
+        },
+        {
+          "id": "deduction.relay",
+          "label": "人不必入帐，军报却须及时递入；先找能接报的人。",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先确认眼前情况。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "deduction.relay.reply",
+                "speakerId": "guard",
+                "text": "这话才周全。姜将军在里头。先请他定接报的办法，莫把商议当成已经得令。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.inferred_plan",
+                "value": true
+              }
+            ],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.notice",
+      "sceneId": "camp_gate",
+      "characterId": "notice",
+      "topicId": "notice",
+      "title": "查看告示",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.seen_intro",
+            "equals": true
+          },
+          {
+            "flag": "loop.entry_notice_read",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "tutorial.notice.text",
+          "speakerId": "notice",
+          "text": "今夜帐内有要事，闲人不得擅入。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.entry_notice_read",
+              "value": true
+            },
+            {
+              "type": "grantEvidence",
+              "evidenceId": "entry_notice"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": "player.notice_plan"
+    },
+    {
+      "id": "tutorial.scout",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "scout",
+      "title": "问明军情",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.entry_notice_read",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "tutorial.scout.report",
+          "speakerId": "scout",
+          "text": "魏兵正在向营前逼近，魏将军马上就到，要入帐禀报。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_report_heard",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.weiyan",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "weiyan",
+      "title": "请将军不要入帐",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.tutorial_step",
+                "equals": "approach"
+              },
+              {
+                "flag": "loop.tutorial_step",
+                "equals": "block"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "tutorial.weiyan.urgent",
+          "speakerId": "weiyan",
+          "text": "军情紧急，我须入帐通报。",
+          "effects": [],
+          "when": {
+            "flag": "loop.tutorial_step",
+            "equals": "approach"
+          }
+        },
+        {
+          "id": "tutorial.weiyan.player",
+          "speakerId": "player",
+          "text": "请将军不要进去，帐内有要事。",
+          "effects": [],
+          "when": {
+            "flag": "loop.tutorial_step",
+            "equals": "approach"
+          }
+        },
+        {
+          "id": "tutorial.weiyan.answer",
+          "speakerId": "weiyan",
+          "text": "我就是要事",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_step",
+              "value": "block"
+            }
+          ],
+          "when": {
+            "flag": "loop.tutorial_step",
+            "equals": "approach"
+          }
+        }
+      ],
+      "choices": [
+        {
+          "id": "tutorial.block",
+          "label": "阻拦",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.tutorial_blocks",
+            "equals": 0
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "tutorial.block.reply.1",
+                "speakerId": "weiyan",
+                "text": "我必须进去通报，你拦不了我",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.tutorial_blocks",
+                "value": 1
+              }
+            ],
+            "next": "tutorial.weiyan"
+          }
+        },
+        {
+          "id": "tutorial.block.2",
+          "label": "阻拦",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.tutorial_blocks",
+            "equals": 1
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "tutorial.block.reply.2",
+                "speakerId": "weiyan",
+                "text": "我必须进去通报，你拦不了我",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.tutorial_blocks",
+                "value": 2
+              }
+            ],
+            "next": "tutorial.weiyan"
+          }
+        },
+        {
+          "id": "tutorial.block.3",
+          "label": "阻拦",
+          "intentId": "revise_plan",
+          "visibleWhen": {
+            "flag": "loop.tutorial_blocks",
+            "equals": 2
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "tutorial.block.reply.3",
+                "speakerId": "weiyan",
+                "text": "我必须进去通报，你拦不了我",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.tutorial_blocks",
+                "value": 3
+              }
+            ],
+            "next": "tutorial.failure"
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.execution",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "execution",
+      "title": "灯守住了，转呈的承诺却未兑现",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "flag": "loop.weiyan_status",
+            "equals": "waiting"
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "tutorial.execution.promise",
+          "speakerId": "player",
+          "text": "军情我会转呈，将军放心。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_report_stage",
+              "value": "promised"
+            }
+          ]
+        },
+        {
+          "id": "tutorial.execution.departure",
+          "speakerId": "narrator",
+          "text": "魏延看了你一眼，转身回营。你松了口气：帐帘没有掀开，灯还亮着。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.weiyan_status",
+              "value": "departed"
+            }
+          ]
+        },
+        {
+          "id": "tutorial.execution.handoff",
+          "speakerId": "player",
+          "text": "甲，营前急报：魏兵逼近，营门尚守，来意未明。魏将军让我转呈，你替我递进去。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.guard",
+          "speakerId": "guard",
+          "text": "我只能守门递话，军情怎么处置，我可作不得主。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_report_stage",
+              "value": "handed_to_guard"
+            }
+          ]
+        },
+        {
+          "id": "tutorial.execution.mistake",
+          "speakerId": "player",
+          "text": "知道了，交给你了。魏延没进去，灯也没灭……总算拦住了。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.success",
+          "speakerId": "narrator",
+          "text": "你回到值守处，没有再追问军报递到了谁手里，也没有取回处置军情的回令。帐内的主灯亮过了这一夜。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_report_stage",
+              "value": "unanswered"
+            }
+          ]
+        },
+        {
+          "id": "tutorial.execution.morning",
+          "speakerId": "narrator",
+          "text": "次日清晨，魏延在帐前叫住你。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.question",
+          "speakerId": "weiyan",
+          "text": "昨夜军报，你交给谁了？谁回的令？",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.answer",
+          "speakerId": "player",
+          "text": "我……交给守帐的甲了。回令……我没问。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.verdict",
+          "speakerId": "weiyan",
+          "text": "虽未酿祸，也不堪此用。别让我再看见他。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.death",
+          "speakerId": "narrator",
+          "text": "亲兵将你押走。没有战损传来，也没有补上的回令。刀影落下，眼前归于黑暗——你因未落实转报承诺，被魏延处死。",
+          "effects": []
+        },
+        {
+          "id": "tutorial.execution.reflection",
+          "speakerId": "narrator",
+          "text": "主灯守住了。军情却只停在守帐卒手中，没有得到有权者的有效处置与回令。这一次，你没能活下来。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.player_alive",
+          "value": false
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.result",
+          "value": "tutorial_execution"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.tutorial_report_stage",
+          "value": "punished"
+        },
+        {
+          "type": "setFlag",
+          "flag": "progress.tutorial_completed",
+          "value": true
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "player.revival",
+      "sceneId": "notice_front",
+      "characterId": "player",
+      "topicId": "revival",
+      "title": "复活",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "player.revival.scene",
+          "speakerId": "narrator",
+          "text": "你又站在告示前。告示旁多了两名小兵：守帐卒甲守着帐门，传令卒乙正整理文书。",
+          "effects": []
+        },
+        {
+          "id": "player.revival.thought",
+          "speakerId": "player",
+          "text": "这次先问清楚：谁能接报作主，回令又该怎么带回来。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.entry_notice_read",
+          "value": true
+        },
+        {
+          "type": "grantEvidence",
+          "evidenceId": "entry_notice"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "player.investigation",
+      "sceneId": "notice_front",
+      "characterId": "player",
+      "topicId": "investigation",
+      "title": "重新调查军营",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "player.investigation.soldiers",
+          "speakerId": "narrator",
+          "text": "告示旁，守帐卒甲守着帐门，传令卒乙正整理文书。你需要重新调查这一夜的军营。",
+          "effects": []
+        },
+        {
+          "id": "player.investigation.thought",
+          "speakerId": "player",
+          "text": "看来不能莽撞，得先了解下这个军营的情况",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.entry_notice_read",
+          "value": true
+        },
+        {
+          "type": "grantEvidence",
+          "evidenceId": "entry_notice"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "guard.ask_relay",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "ask_relay",
+      "title": "若要请示，找谁递话？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "guard.ask_relay.text",
+          "speakerId": "guard",
+          "text": "告示旁那条小路通向传令侧帐。乙在那里候命，能从帐外向姜将军递话。要改接报的办法，先请他代问。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.relay_discovered",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "relay.introduction",
+      "sceneId": "camp_gate",
+      "characterId": "relay",
+      "topicId": "introduction",
+      "title": "你在忙什么？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 10,
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "relay.introduction.v06",
+          "speakerId": "relay",
+          "text": "先问斥候，营门是否失守；再问守帐卒，姜将军能否接报。军情不能耽误，帐门也不能乱闯。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "player.notice_plan",
+      "sceneId": "camp_gate",
+      "characterId": "player",
+      "topicId": "notice_plan",
+      "title": "营前探访",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "flag": "loop.entry_notice_read",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "player.notice_plan.thought",
+          "speakerId": "player",
+          "text": "既然有这么个告示在，那再好不过，我去营前转一转，拦住魏将军",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "scout.notice",
+      "sceneId": "report_post",
+      "characterId": "scout",
+      "topicId": "notice",
+      "title": "出示禁入告示",
+      "targetStatement": null,
+      "trigger": "present_evidence",
+      "priority": 10,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "flag": "loop.scout_report_heard",
+            "equals": true
+          },
+          {
+            "evidence": "entry_notice",
+            "mode": "presented"
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "scout.notice.answer",
+          "speakerId": "scout",
+          "text": "确实紧急，还是要让魏将军进来",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_notice_presented",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "scout.notice.question",
+          "label": "营门失守了吗？",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完回应。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "scout.notice.ask",
+                "speakerId": "player",
+                "text": "营门失守了吗？",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "scout.followup"
+          }
+        },
+        {
+          "id": "scout.notice.leave",
+          "label": "好，我找魏将军沟通",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完回应。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.weiyan.notice",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "tutorial_notice",
+      "title": "出示禁令",
+      "targetStatement": null,
+      "trigger": "present_evidence",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "flag": "loop.tutorial_step",
+            "equals": "block"
+          },
+          {
+            "evidence": "entry_notice",
+            "mode": "presented"
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "tutorial.weiyan.notice.player",
+          "speakerId": "player",
+          "text": "确有要事，已有全军告示在先",
+          "effects": []
+        },
+        {
+          "id": "tutorial.weiyan.notice.answer",
+          "speakerId": "weiyan",
+          "text": "但是此刻军情紧急",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_notice_presented",
+              "value": true
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.tutorial_step",
+              "value": "notice"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.weiyan.negotiate",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "tutorial_reason",
+      "title": "出示军情，说明如何传报",
+      "targetStatement": "告示已经看过，军情仍须及时通报。你有什么不误军情的办法？",
+      "trigger": "present_evidence",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          },
+          {
+            "flag": "loop.tutorial_step",
+            "equals": "notice"
+          },
+          {
+            "flag": "loop.tutorial_notice_presented",
+            "equals": true
+          },
+          {
+            "evidence": "scout_statement",
+            "mode": "presented"
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "tutorial.weiyan.negotiate.answer",
+          "speakerId": "weiyan",
+          "text": "斥候的军情我看过了。你既要拦我，便说清如何不误通报。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": {
+        "intentOptions": [
+          {
+            "id": "propose_wait",
+            "label": "说明不入帐也能及时通报的办法"
+          }
+        ],
+        "placeholder": "请自己输入：怎样劝将军暂缓入帐？你准备如何承担眼前的军情转呈？",
+        "guidingQuestions": [
+          "禁令仍在，军情又不能扣下。",
+          "你愿意立即代为转呈军情吗？说出你的承诺。"
+        ],
+        "starterText": "",
+        "maxLength": 1000,
+        "evidenceSelection": "required",
+        "judgeId": "weiyan_tutorial",
+        "outcomes": {
+          "accept": {
+            "reply": [
+              {
+                "id": "tutorial.reason.accepted",
+                "speakerId": "weiyan",
+                "text": "好，我暂不入帐。就按你说的立即传报，莫误军情。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "waiting"
+              }
+            ],
+            "next": "tutorial.execution"
+          },
+          "need_evidence": {
+            "reply": [
+              {
+                "id": "tutorial.reason.failed",
+                "speakerId": "weiyan",
+                "text": "你没有说清如何及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "tutorial.failure"
+          },
+          "need_plan": {
+            "reply": [
+              {
+                "id": "tutorial.reason.failed",
+                "speakerId": "weiyan",
+                "text": "你没有说清如何及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "tutorial.failure"
+          },
+          "out_of_scope": {
+            "reply": [
+              {
+                "id": "weiyan.provocation.order",
+                "speakerId": "weiyan",
+                "text": "竟敢在军前如此放肆！来人，拿下，处斩！",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "weiyan.execution"
+          },
+          "clarify": {
+            "reply": [
+              {
+                "id": "tutorial.reason.failed",
+                "speakerId": "weiyan",
+                "text": "你没有说清如何及时通报。我必须进去，你拦不了我。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "tutorial.failure"
+          }
+        }
+      },
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "tutorial.failure",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "tutorial_failure",
+      "title": "阻拦失败",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": false
+          },
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "tutorial.failure.entry",
+          "speakerId": "narrator",
+          "text": "魏延绕开你，径直掀帘入帐。风卷入帐内，主灯熄灭。阻拦失败。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.lamp_lit",
+              "value": false
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.weiyan_status",
+              "value": "departed"
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.result",
+              "value": "lamp_failure"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.notice",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "notice",
+      "title": "先出示禁令",
+      "targetStatement": null,
+      "trigger": "present_evidence",
+      "priority": 30,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              },
+              {
+                "flag": "loop.weiyan_status",
+                "equals": "approaching"
+              }
+            ]
+          },
+          {
+            "flag": "loop.weiyan_notice_presented",
+            "equals": false
+          },
+          {
+            "evidence": "entry_notice",
+            "mode": "presented"
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "weiyan.notice.player",
+          "speakerId": "player",
+          "text": "确有要事，已有全军告示在先",
+          "effects": []
+        },
+        {
+          "id": "weiyan.notice.weiyan",
+          "speakerId": "weiyan",
+          "text": "但是此刻军情紧急",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.weiyan_notice_presented",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.execution",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "immediate_execution",
+      "title": "触怒魏延，当场处斩",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 40,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "loop.player_alive",
+            "equals": true
+          },
+          {
+            "flag": "loop.result",
+            "equals": "none"
+          }
+        ]
+      },
+      "repeat": "once_per_loop",
+      "lines": [
+        {
+          "id": "weiyan.execution.death",
+          "speakerId": "narrator",
+          "text": "魏延喝令亲兵将你按倒。急报尚未传入，你已因军前严重挑衅被当场处斩。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.execution_reason",
+              "value": "provocation"
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.player_alive",
+              "value": false
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.weiyan_status",
+              "value": "departed"
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.result",
+              "value": "execution"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.gossip",
+      "sceneId": "notice_front",
+      "characterId": "guard",
+      "topicId": "guard.gossip",
+      "title": "问甲：急报也不能进，那该怎么办？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.gossip.1",
+          "speakerId": "player",
+          "text": "今夜守帐怎么这么严？有急报也不许进去？",
+          "effects": []
+        },
+        {
+          "id": "v07.gossip.2",
+          "speakerId": "guard",
+          "text": "丞相有口谕，今夜谁也不得入帐求见。前回有个小卒见人拿着急报，就自作主张放了进去。后来上头问起，来报的只说军情急，放人的却得自己解释为什么违令。",
+          "effects": []
+        },
+        {
+          "id": "v07.gossip.3",
+          "speakerId": "player",
+          "text": "可要是拦住不报，误了军情呢？",
+          "effects": []
+        },
+        {
+          "id": "v07.gossip.4",
+          "speakerId": "guard",
+          "text": "那也要问罪。咱们能做的是把急报赶紧送到，却不能自己决定这道禁令什么时候算数。",
+          "effects": []
+        },
+        {
+          "id": "v07.gossip.5",
+          "speakerId": "player",
+          "text": "得有人来定：军情怎么办，禁令又怎么守。",
+          "effects": []
+        },
+        {
+          "id": "v07.gossip.6",
+          "speakerId": "guard",
+          "text": "得找有权处置军务的人，让他接报、作决定。不是随便拉个人来替你担罪。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.guard_heard_urgent_rule",
+          "value": true
+        }
+      ],
+      "next": "guard.window"
+    },
+    {
+      "id": "guard.window",
+      "sceneId": "notice_front",
+      "characterId": "guard",
+      "topicId": "guard.window",
+      "title": "问甲：什么时候能去找人？",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "flag": "loop.guard_heard_urgent_rule",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.window.1",
+          "speakerId": "player",
+          "text": "那我现在去找，来得及吗？",
+          "effects": []
+        },
+        {
+          "id": "v07.window.2",
+          "speakerId": "guard",
+          "text": "营前已经有人报急，魏将军还在营前，尚未到帐门。趁这时候，把急报该由谁接、谁能作主先问准。",
+          "effects": []
+        },
+        {
+          "id": "v07.window.3",
+          "speakerId": "player",
+          "text": "我去找人，帐门怎么办？",
+          "effects": []
+        },
+        {
+          "id": "v07.window.4",
+          "speakerId": "guard",
+          "text": "我守着。你趁将军未到，先去找能递话的人问准。等将军站到帐前，你再说找人，他哪里肯等？",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.guard_window_heard",
+          "value": true
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "relay.jiangwei_line",
+      "sceneId": "notice_front",
+      "characterId": "relay",
+      "topicId": "relay.jiangwei_line",
+      "title": "问乙：姜维是谁，去哪儿找？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "flag": "loop.guard_heard_urgent_rule",
+            "equals": true
+          },
+          {
+            "flag": "loop.guard_window_heard",
+            "equals": true
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.decision_maker.1",
+          "speakerId": "player",
+          "text": "甲说要找有权处置军务的人。今夜谁能作主？",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.2",
+          "speakerId": "relay",
+          "text": "姜伯约，姜维将军。入夜前，丞相吩咐过，今夜军务由他接报处置。",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.3",
+          "speakerId": "player",
+          "text": "他在哪里？",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.4",
+          "speakerId": "relay",
+          "text": "他此刻在丞相的中军帐内。他自己的将军帐就在这边，帐前有他的亲兵。你去找姜将军的亲兵，请他替你向姜将军请示。",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.5",
+          "speakerId": "player",
+          "text": "还得先找亲兵？",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.6",
+          "speakerId": "relay",
+          "text": "亲兵认得他的传令规矩，能到中军帐外递话。你把急报的来意讲清，他才好替你问。",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.7",
+          "speakerId": "player",
+          "text": "十万火急了都，还要层层请示。",
+          "effects": []
+        },
+        {
+          "id": "v07.decision_maker.8",
+          "speakerId": "player",
+          "text": "唉罢了，我也不能说是未卜先知到了魏延会过来。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.jiangwei_line_heard",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.knows_jiangwei_inside",
+          "value": true
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "relay.ask_guard_first",
+      "sceneId": "notice_front",
+      "characterId": "relay",
+      "topicId": "relay.ask_guard_first",
+      "title": "今夜谁能作主？",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "flag": "loop.guard_window_heard",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.relay.first",
+          "speakerId": "relay",
+          "text": "急报怎么处置、何时能去请示，先问问守帐的甲；他清楚今夜的规矩。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "jiangwei_guard.arrival",
+      "sceneId": "jiangwei_tent_front",
+      "characterId": "jiangwei_guard",
+      "topicId": "jiangwei_guard.arrival",
+      "title": "说明急报的来意",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.new_scene.1",
+          "speakerId": "narrator",
+          "text": "你按乙指的方向走到姜维将军帐前。一名留守亲兵看向你，手仍按着腰间兵器。",
+          "effects": []
+        },
+        {
+          "id": "v07.new_scene.2",
+          "speakerId": "jiangwei_guard",
+          "text": "姜将军在中军帐里，叫我留守此处。你找他什么事？",
+          "effects": []
+        },
+        {
+          "id": "v07.new_scene.3",
+          "speakerId": "player",
+          "text": "营前有急报。听说今夜军务由姜将军接报，我想先问准。",
+          "effects": []
+        },
+        {
+          "id": "v07.new_scene.4",
+          "speakerId": "jiangwei_guard",
+          "text": "将军交代过，有军务可以在帐外递话。你要我请示哪件事？",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": "jiangwei_guard.request"
+    },
+    {
+      "id": "jiangwei_guard.request",
+      "sceneId": "jiangwei_tent_front",
+      "characterId": "jiangwei_guard",
+      "topicId": "jiangwei_guard.request",
+      "title": "请选择请示理由",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.request.1",
+          "speakerId": "jiangwei_guard",
+          "text": "把急报的来意说清，我再替你去请示。",
+          "effects": []
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.request.good",
+          "label": "营前已有急报，可今夜谁也不能进帐。请先问姜将军，急报能否都交他接报处置，免得耽误军情，又冲撞禁令。",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "v07.request.good.reply",
+                "speakerId": "jiangwei_guard",
+                "text": "这话问的是接报规矩，也确有急报。你在这里稍候，我去中军帐外请示。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "jiangwei_guard.authorization"
+          }
+        },
+        {
+          "id": "v07.request.bypass",
+          "label": "军情这么急，先请姜将军准许我直接进帐见丞相，禁令以后再说。",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "v07.request.bypass.reply",
+                "speakerId": "jiangwei_guard",
+                "text": "谁也不得入帐求见，急报也不能由你自己改规矩。你是要问接报办法，还是要我替你讨个闯帐的借口？",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "jiangwei_guard.request"
+          }
+        },
+        {
+          "id": "v07.request.blame",
+          "label": "你让姜将军先答应：魏延要是闯帐，罪就由他担，别问到我头上。",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "v07.request.blame.reply",
+                "speakerId": "jiangwei_guard",
+                "text": "我能替你问军情由谁处置，不能替你找人担一件还没发生的罪。你连急报怎么送都没说。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "jiangwei_guard.request"
+          }
+        },
+        {
+          "id": "v07.request.curious",
+          "label": "我想知道帐内到底在做什么，你去替我探一探，再叫姜将军出来。",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [
+              {
+                "id": "v07.request.curious.reply",
+                "speakerId": "jiangwei_guard",
+                "text": "帐内的事不是你我该打听的。若是为军情，就把军情的来意说清；探听闲事，我不去。",
+                "effects": []
+              }
+            ],
+            "effects": [],
+            "next": "jiangwei_guard.request"
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "jiangwei_guard.authorization",
+      "sceneId": "jiangwei_tent_front",
+      "characterId": "jiangwei_guard",
+      "topicId": "jiangwei_guard.authorization",
+      "title": "姜维的回话",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.authorization.1",
+          "speakerId": "narrator",
+          "text": "亲兵快步去往中军帐外，隔着帐帘禀明来意。你在姜维帐前稍候，片刻后，他折返回来。",
+          "effects": []
+        },
+        {
+          "id": "v07.authorization.2",
+          "speakerId": "jiangwei_guard",
+          "text": "姜将军让我原话带给你：",
+          "effects": []
+        },
+        {
+          "id": "v07.authorization.3",
+          "speakerId": "jiangwei_guard",
+          "text": "丞相有令，今夜谁也不得入帐求见。军情不可迟误，什么事情都先经过我。今夜军务，由我接报处置；该由我作的决定，责任由我担。若有急报，叫来报的人在帐外报明军情，我来定夺。",
+          "effects": []
+        },
+        {
+          "id": "v07.authorization.4",
+          "speakerId": "player",
+          "text": "明白了。将军到时，立即请姜将军接报。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.jiangwei_approval",
+          "value": true
+        },
+        {
+          "type": "grantEvidence",
+          "evidenceId": "jiangwei_authorization"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "jiangwei_guard.recall",
+      "sceneId": "jiangwei_tent_front",
+      "characterId": "jiangwei_guard",
+      "topicId": "jiangwei_guard.recall",
+      "title": "再确认姜将军的回话",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.permit.recall",
+          "speakerId": "jiangwei_guard",
+          "text": "丞相有令，今夜谁也不得入帐求见。军情不可迟误，什么事情都先经过我。今夜军务，由我接报处置；该由我作的决定，责任由我担。若有急报，叫来报的人在帐外报明军情，我来定夺。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "guard.permit_reminder",
+      "sceneId": "camp_gate",
+      "characterId": "guard",
+      "topicId": "guard.permit_reminder",
+      "title": "先去营前核实军情",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.scout_questioned",
+            "equals": false
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.guard.reminder",
+          "speakerId": "guard",
+          "text": "许可问准了。你先到营前问明急报，魏将军还在那里；我继续守着帐门。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.present_authorization",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "weiyan.present_authorization",
+      "title": "出示姜维的回话",
+      "targetStatement": null,
+      "trigger": "present_evidence",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.weiyan_status",
+                "equals": "approaching"
+              },
+              {
+                "flag": "loop.weiyan_notice_presented",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "evidence": "jiangwei_authorization",
+            "mode": "presented"
+          },
+          {
+            "not": {
+              "evidence": "scout_statement",
+              "mode": "presented"
+            }
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.dismissal.2",
+          "speakerId": "player",
+          "text": "姜将军的亲兵方才请示过。姜将军说，今夜军务由他接报处置，什么事情都先经过他。",
+          "effects": []
+        },
+        {
+          "id": "v07.dismissal.3",
+          "speakerId": "weiyan",
+          "text": "他算老几？我要亲自找丞相",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.npc_weiyan_saw_approval",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "weiyan.present_scout",
+      "sceneId": "report_post",
+      "characterId": "weiyan",
+      "topicId": "weiyan.present_scout",
+      "title": "出示斥候证词",
+      "targetStatement": null,
+      "trigger": "present_evidence",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.weiyan_status",
+                "equals": "approaching"
+              },
+              {
+                "flag": "loop.weiyan_notice_presented",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "evidence": "scout_statement",
+            "mode": "presented"
+          },
+          {
+            "not": {
+              "evidence": "jiangwei_authorization",
+              "mode": "presented"
+            }
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.arrival.scout_response",
+          "speakerId": "weiyan",
+          "text": "营门尚守，也不能坐等魏兵到了再说。你究竟打算怎么报？",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.scout_card_presented",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.handoff",
+      "sceneId": "camp_gate",
+      "characterId": "narrator",
+      "topicId": "v07.handoff",
+      "title": "军情报到，姜维下令",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 20,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              },
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              }
+            ]
+          },
+          {
+            "flag": "loop.weiyan_status",
+            "equals": "waiting"
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.handoff.1",
+          "speakerId": "narrator",
+          "text": "你与魏延来到中军帐门。你将姜维的回话告诉甲，甲随即在帐外禀明急报。",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.2",
+          "speakerId": "player",
+          "text": "请姜将军立即接报！",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.3",
+          "speakerId": "narrator",
+          "text": "姜维走到帘后，隔帘应声；帐门没有打开。",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.4",
+          "speakerId": "jiangwei",
+          "text": "魏将军，营前情势如何？",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.5",
+          "speakerId": "weiyan",
+          "text": "魏兵正向营前逼近，营门尚守。我来请示如何应对。",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.6",
+          "speakerId": "jiangwei",
+          "text": "先令前营严守营门，派斥候再探敌军动向，未明虚实，不得擅自出营追击。有新军情，立即报我。我会向丞相禀明，方才这道军令由我负责。",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.7",
+          "speakerId": "weiyan",
+          "text": "……好，我这就去。",
+          "effects": []
+        },
+        {
+          "id": "v07.handoff.8",
+          "speakerId": "narrator",
+          "text": "魏延转身回营，传令卒随即递出军令。帐帘始终垂着，主灯仍亮。军情及时报到，也有人当场作了决定。你仍站在帐外。",
+          "effects": []
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [
+        {
+          "type": "setFlag",
+          "flag": "loop.report_status",
+          "value": "relayed"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "v07.listen.1",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 1,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 0
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 1
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.1.1",
+          "speakerId": "narrator",
+          "text": "你靠近半步，又停住。帘后有人压低声音说话，接着是一阵咳嗽。灯光透过帐布，亮得很薄。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.1.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.2"
+          }
+        },
+        {
+          "id": "v07.listen.1.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.2",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 2,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 1
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 2
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.2.1",
+          "speakerId": "narrator",
+          "text": "你靠近半步，又停住。帘后有人压低声音说话，接着是一阵咳嗽。灯光透过帐布，亮得很薄。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.2.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.3"
+          }
+        },
+        {
+          "id": "v07.listen.2.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.3",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 3,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 2
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 3
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.3.1",
+          "speakerId": "narrator",
+          "text": "你又贴近帐后。低语声这回清楚了些：“旁灯再挪远些，莫靠主灯。”帐布上，有人缓缓弯下腰。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.3.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.4"
+          }
+        },
+        {
+          "id": "v07.listen.3.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.4",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 4,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 3
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 4
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.4.1",
+          "speakerId": "narrator",
+          "text": "咳嗽停了。一个虚弱的声音说：“今夜已是第六夜……七夜之间，不可使主灯灭。”你下意识朝那道灯影又靠近一点。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 4
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.4.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.5"
+          }
+        },
+        {
+          "id": "v07.listen.4.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.5",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 5,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 4
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 5
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.5.1",
+          "speakerId": "narrator",
+          "text": "有人低声劝：“丞相，歇一歇吧。”那声音只答：“军中之事，照先前吩咐办。”营前忽然传来急促的脚步，听着比方才近了。你仍想听清下一句。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 5
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.5.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.6"
+          }
+        },
+        {
+          "id": "v07.listen.5.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.6",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "topic",
+      "priority": 6,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 5
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 6
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.6.1",
+          "speakerId": "narrator",
+          "text": "帘后的声音断断续续：“若能再得些时日……”随后又是一阵咳嗽。帐前方向传来喝问声，甲似乎在答话。你迟疑了：再听一句，还是现在回去？",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 6
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "id": "v07.listen.6.continue",
+          "label": "继续偷听",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": "v07.listen.7"
+          }
+        },
+        {
+          "id": "v07.listen.6.leave",
+          "label": "离开帐后，回去办正事",
+          "intentId": "ask_rule",
+          "visibleWhen": {
+            "all": []
+          },
+          "enabledWhen": {
+            "all": []
+          },
+          "lockedText": "请先听完当前回话。",
+          "actionId": null,
+          "outcome": {
+            "reply": [],
+            "effects": [],
+            "next": null
+          }
+        }
+      ],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    },
+    {
+      "id": "v07.listen.7",
+      "sceneId": "notice_front",
+      "characterId": "curtain",
+      "topicId": "listen",
+      "title": "听帐内的动静",
+      "targetStatement": null,
+      "trigger": "event",
+      "priority": 7,
+      "availableWhen": {
+        "all": [
+          {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "flag": "loop.player_alive",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.result",
+                    "equals": "none"
+                  }
+                ]
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": false
+              }
+            ]
+          },
+          {
+            "any": [
+              {
+                "flag": "loop.eaves_count",
+                "equals": 6
+              },
+              {
+                "flag": "loop.eaves_count",
+                "equals": 7
+              }
+            ]
+          }
+        ]
+      },
+      "repeat": "repeatable",
+      "lines": [
+        {
+          "id": "v07.listen.7.1",
+          "speakerId": "narrator",
+          "text": "你等了片刻，帐内却再没有可听清的话。忽然，帐前一声厉喝，帐布被掀动，方才映在布上的灯影骤然消失。",
+          "effects": []
+        },
+        {
+          "id": "v07.listen.7.2",
+          "speakerId": "narrator",
+          "text": "你绕回帐前，魏延已经闯了进去。甲的阻拦没有留住他；你才发觉，自己在帐后停留了这么久。该递到姜维手中的急报，始终没有安排。",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flag": "loop.eaves_count",
+              "value": 7
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.lamp_lit",
+              "value": false
+            },
+            {
+              "type": "setFlag",
+              "flag": "loop.weiyan_status",
+              "value": "departed"
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "freeInput": null,
+      "onComplete": [],
+      "next": null
+    }
+  ],
+  "actions": [
+    {
+      "id": "relay.send_request",
+      "title": "实际托乙向帐内姜维递话",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.request_sent",
+          "value": true
+        }
+      ],
+      "next": "jiangwei.approval"
+    },
+    {
+      "id": "direct.accept_risk",
+      "title": "确认承担架空越职追责风险",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.risk_accepted",
+          "value": true
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "direct.deliver_report",
+      "title": "实际将急报交甲递入",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.unauthorized_reroute",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.report_status",
+          "value": "delivered"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "relay.invite",
+      "title": "实际请乙到候报处",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.relay_location",
+          "value": "waiting_area"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "report.handoff",
+      "title": "实际交接军情并由乙递入",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.report_status",
+          "value": "delivered"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "report.receive_reply",
+      "title": "实际收取姜维回话",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.report_status",
+          "value": "replied"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "report.relay_reply",
+      "title": "实际向魏延转达姜维原话",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.report_status",
+          "value": "relayed"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "promise.abandon",
+      "title": "明确放弃已答应的传报承诺",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "breakPromise",
+          "promiseId": "direct_report"
+        },
+        {
+          "type": "breakPromise",
+          "promiseId": "authorized_handoff"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "weiyan.enter_tent",
+      "title": "结束阻拦，魏延按原途径入帐急报",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "none",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.lamp_lit",
+          "value": false
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "delay.unrelated_0",
+      "title": "无关耗时行动：首次警告",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "delay",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.delay_stage",
+          "value": 1
+        }
+      ],
+      "next": null
+    },
+    {
+      "id": "delay.unrelated_1",
+      "title": "无关耗时行动：再次行动将破约",
+      "availableWhen": {
+        "not": {
+          "all": []
+        }
+      },
+      "timeCost": "delay",
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.delay_stage",
+          "value": 2
+        }
+      ],
+      "next": null
+    }
+  ],
+  "promises": [
+    {
+      "id": "direct_report",
+      "description": "魏延暂缓。去帐门听风险，承担后实际交甲递报；重谈不会重置等待。",
+      "requiredActionIds": [
+        "direct.accept_risk",
+        "direct.deliver_report"
+      ],
+      "completedWhen": {
+        "all": [
+          {
+            "flag": "loop.route",
+            "equals": "direct"
+          },
+          {
+            "flag": "loop.unauthorized_reroute",
+            "equals": true
+          },
+          {
+            "flag": "loop.report_status",
+            "equals": "delivered"
+          }
+        ]
+      },
+      "delayBudget": 2,
+      "brokenEffects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.lamp_lit",
+          "value": false
+        }
+      ]
+    },
+    {
+      "id": "authorized_handoff",
+      "description": "按本轮有限许可，请乙到场、当面交报、取姜维回话、向魏延转达。",
+      "requiredActionIds": [
+        "relay.invite",
+        "report.handoff",
+        "report.receive_reply",
+        "report.relay_reply"
+      ],
+      "completedWhen": {
+        "all": [
+          {
+            "flag": "loop.route",
+            "equals": "authorized"
+          },
+          {
+            "flag": "loop.jiangwei_approval",
+            "equals": true
+          },
+          {
+            "flag": "loop.report_status",
+            "equals": "relayed"
+          },
+          {
+            "flag": "loop.unauthorized_reroute",
+            "equals": false
+          }
+        ]
+      },
+      "delayBudget": 2,
+      "brokenEffects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.lamp_lit",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "judges": [
+    {
+      "id": "relay_contact",
+      "acceptedIntentIds": [
+        "ask_contact",
+        "revise_plan"
+      ],
+      "requiredPoints": [
+        "语义认可须同时理解禁入与真实急报；不把告示当扣报授权。",
+        "请求乙从帐外向帐内姜维代问：可否在帐外接报，由乙递入并由姜维处置。",
+        "军情及时送达；接受许可由姜维决定；不同等价措辞有效，无需关键词或文采。"
+      ],
+      "forbiddenClaims": [
+        "谎称旧轮许可在本轮有效",
+        "命乙调兵、拘押魏延或将急报拖到明早",
+        "宣称未来记忆证明敌军当前一定只是试探"
+      ],
+      "acceptanceCases": [
+        {
+          "when": {
+            "all": [
+              {
+                "flag": "progress.tutorial_completed",
+                "equals": true
+              },
+              {
+                "all": [
+                  {
+                    "all": [
+                      {
+                        "all": [
+                          {
+                            "flag": "loop.player_alive",
+                            "equals": true
+                          },
+                          {
+                            "flag": "loop.result",
+                            "equals": "none"
+                          }
+                        ]
+                      },
+                      {
+                        "all": [
+                          {
+                            "flag": "progress.tutorial_completed",
+                            "equals": true
+                          },
+                          {
+                            "flag": "loop.relay_discovered",
+                            "equals": true
+                          }
+                        ]
+                      },
+                      {
+                        "flag": "loop.route",
+                        "equals": "none"
+                      },
+                      {
+                        "flag": "loop.relay_agreed",
+                        "equals": false
+                      },
+                      {
+                        "flag": "loop.relay_location",
+                        "equals": "relay_tent"
+                      },
+                      {
+                        "evidence": "entry_notice",
+                        "mode": "presented"
+                      },
+                      {
+                        "evidence": "scout_statement",
+                        "mode": "presented"
+                      }
+                    ]
+                  },
+                  {
+                    "flag": "loop.inferred_plan",
+                    "equals": true
+                  }
+                ]
+              }
+            ]
+          },
+          "outcome": {
+            "reply": [
+              {
+                "id": "relay.contact.accepted",
+                "speakerId": "relay",
+                "text": "成，我替你问。准不准，得听姜将军的。你把要问的话定下来，我这就过去。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.relay_agreed",
+                "value": true
+              }
+            ],
+            "next": "relay.send_request"
+          }
+        }
+      ]
+    },
+    {
+      "id": "weiyan_wait",
+      "acceptedIntentIds": [
+        "propose_wait"
+      ],
+      "requiredPoints": [
+        "如何现在就把急报送到，避免贻误战机？",
+        "丞相禁止谁也不得入帐，径入会有什么风险？",
+        "姜维已有接报与决策权，如何请他隔帘接报、立即定夺并承担自己的决定？"
+      ],
+      "forbiddenClaims": [
+        "营门未失守等于军情不重要",
+        "假称奉令或行动已完成",
+        "将急报拖到明日"
+      ],
+      "acceptanceCases": [
+        {
+          "when": {
+            "all": [
+              {
+                "all": [
+                  {
+                    "flag": "progress.tutorial_completed",
+                    "equals": true
+                  },
+                  {
+                    "all": [
+                      {
+                        "flag": "loop.player_alive",
+                        "equals": true
+                      },
+                      {
+                        "flag": "loop.result",
+                        "equals": "none"
+                      }
+                    ]
+                  },
+                  {
+                    "flag": "loop.weiyan_status",
+                    "equals": "approaching"
+                  },
+                  {
+                    "flag": "loop.weiyan_notice_presented",
+                    "equals": true
+                  },
+                  {
+                    "flag": "loop.jiangwei_approval",
+                    "equals": true
+                  }
+                ]
+              },
+              {
+                "evidence": "entry_notice",
+                "mode": "presented"
+              },
+              {
+                "evidence": "scout_statement",
+                "mode": "presented"
+              },
+              {
+                "evidence": "jiangwei_authorization",
+                "mode": "presented"
+              }
+            ]
+          },
+          "outcome": {
+            "reply": [
+              {
+                "id": "weiyan.second.accept",
+                "speakerId": "weiyan",
+                "text": "哼，那就叫他马上接报！若有耽误，别拿规矩来搪塞。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "waiting"
+              },
+              {
+                "type": "setFlag",
+                "flag": "loop.route",
+                "value": "authorized"
+              }
+            ],
+            "next": "v07.handoff"
+          }
+        }
+      ]
+    },
+    {
+      "id": "weiyan_tutorial",
+      "acceptedIntentIds": [
+        "propose_wait"
+      ],
+      "requiredPoints": [
+        "禁令与军情证据齐全，不扣报或拖到明日",
+        "玩家承诺由自己立即转呈军情即可暂候；本轮尚不要求找对决策者或取得许可"
+      ],
+      "forbiddenClaims": [
+        "军情不重要",
+        "虚称奉命",
+        "明日再报"
+      ],
+      "acceptanceCases": [
+        {
+          "when": {
+            "all": [
+              {
+                "flag": "loop.tutorial_notice_presented",
+                "equals": true
+              },
+              {
+                "evidence": "entry_notice",
+                "mode": "held"
+              },
+              {
+                "evidence": "scout_statement",
+                "mode": "presented"
+              }
+            ]
+          },
+          "outcome": {
+            "reply": [
+              {
+                "id": "tutorial.reason.accepted",
+                "speakerId": "weiyan",
+                "text": "好，我暂不入帐。就按你说的立即传报，莫误军情。",
+                "effects": []
+              }
+            ],
+            "effects": [
+              {
+                "type": "setFlag",
+                "flag": "loop.weiyan_status",
+                "value": "waiting"
+              }
+            ],
+            "next": "tutorial.execution"
+          }
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "event.lamp_failure",
+      "priority": 300,
+      "when": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              },
+              {
+                "flag": "loop.lamp_lit",
+                "equals": false
+              }
+            ]
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.result",
+          "value": "lamp_failure"
+        }
+      ],
+      "next": "ending.lamp_failure"
+    },
+    {
+      "id": "event.direct_execution",
+      "priority": 200,
+      "when": {
+        "not": {
+          "all": []
+        }
+      },
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.result",
+          "value": "execution"
+        },
+        {
+          "type": "setFlag",
+          "flag": "loop.weiyan_status",
+          "value": "departed"
+        }
+      ],
+      "next": "ending.execution"
+    },
+    {
+      "id": "event.safe",
+      "priority": 100,
+      "when": {
+        "all": [
+          {
+            "flag": "progress.tutorial_completed",
+            "equals": true
+          },
+          {
+            "all": [
+              {
+                "flag": "loop.result",
+                "equals": "none"
+              },
+              {
+                "flag": "loop.route",
+                "equals": "authorized"
+              },
+              {
+                "flag": "loop.jiangwei_approval",
+                "equals": true
+              },
+              {
+                "flag": "loop.npc_weiyan_saw_approval",
+                "equals": true
+              },
+              {
+                "flag": "loop.report_status",
+                "equals": "relayed"
+              },
+              {
+                "flag": "loop.unauthorized_reroute",
+                "equals": false
+              },
+              {
+                "flag": "loop.lamp_lit",
+                "equals": true
+              },
+              {
+                "flag": "loop.player_alive",
+                "equals": true
+              }
+            ]
+          }
+        ]
+      },
+      "effects": [
+        {
+          "type": "setFlag",
+          "flag": "loop.result",
+          "value": "safe"
+        }
+      ],
+      "next": "ending.safe"
+    }
+  ],
+  "restart": {
+    "preserveFlagIds": [
+      "progress.tutorial_completed"
+    ],
+    "afterNodeId": "tutorial.execution",
+    "restartNodeId": "player.investigation",
+    "revivalNodeId": "player.revival"
+  }
+}

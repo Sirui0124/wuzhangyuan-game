@@ -1,0 +1,108 @@
+/* Shared ending treatment: ink, aged cloth and the game's muted cinnabar. */
+@font-face {
+  font-family: 'Ending Brush';
+  src: url('./fonts/ending-brush.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.ending-screen {
+  --ending-paper: #e5dfd2;
+  --ending-heading-size: clamp(26px, 2.4vw, 36px);
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100svh;
+  background-color: #050505;
+  background-image: url('./ending-grain.svg'), radial-gradient(ellipse at 50% 42%, #20212094, #0c0d0dc9 54%, #050505 88%);
+  color: var(--ending-paper);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'Songti SC', 'STSong', serif;
+  padding: 38px clamp(32px, 5vw, 84px);
+  isolation: isolate;
+}
+.ending-frame { position: absolute; inset: 20px; border: 1px solid #81776a25; pointer-events: none; z-index: -1; }
+.ending-frame::before { content: ''; position: absolute; inset: 6px; border: 1px solid #81776a12; }
+.ending-frame i { position: absolute; width: 120px; height: 120px; background: url('./ending-corner.svg') center / contain no-repeat; opacity: .52; }
+.ending-frame i:nth-child(1) { left: -1px; top: -1px; }
+.ending-frame i:nth-child(2) { right: -1px; top: -1px; transform: rotate(90deg); }
+.ending-frame i:nth-child(3) { right: -1px; bottom: -1px; transform: rotate(180deg); }
+.ending-frame i:nth-child(4) { left: -1px; bottom: -1px; transform: rotate(270deg); }
+.ending-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 16px; letter-spacing: 2px; color: #9c978c; }
+.ending-header > span { padding-left: 12px; border-left: 2px solid #743c32; }
+.ending-screen button, .ending-modal button {
+  position: relative;
+  font: inherit;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 13px 32px;
+  background: url('./ending-grain.svg'), linear-gradient(#282825, #191b1a);
+  border: 1px solid #716b5e;
+  color: #e0d9cb;
+  border-radius: 1px;
+  box-shadow: inset 0 0 0 3px #111412, inset 0 0 0 4px #716b5e35, 0 5px 16px #0005;
+  cursor: pointer;
+  transition: border-color .2s, color .2s;
+}
+.ending-screen button:hover, .ending-modal button:hover:not(:disabled) { border-color: #a49b8a; color: #f2ede3; }
+.ending-screen button:focus-visible, .ending-modal button:focus-visible { outline: 2px solid #c0b6a5; outline-offset: 5px; }
+.ending-screen .ending-link { background: transparent; border-color: transparent; box-shadow: none; color: #aaa396; font-size: 16px; padding: 8px 10px; }
+.ending-screen .ending-link:hover { background: #ffffff05; border-color: #81776a45; }
+.ending-screen .ending-primary { background: url('./ending-grain.svg'), linear-gradient(135deg, #703a31, #4e2925); border-color: #965b4e; color: #eee4d6; box-shadow: inset 0 0 0 3px #351e1a, inset 0 0 0 4px #ae74613d, 0 5px 20px #0007; }
+.ending-screen .ending-primary:hover { background: url('./ending-grain.svg'), linear-gradient(135deg, #82463a, #60332b); border-color: #b17966; }
+.ending-content { position: relative; width: min(860px, 100%); margin: auto; box-sizing: border-box; text-align: center; padding: 76px 0 60px; animation: ending-reveal 1s ease both; }
+/* A weathered seal impression supports the name without adding another label. */
+.ending-screen h1 { position: relative; display: table; font-family: 'Ending Brush', 'Kaiti SC', 'STKaiti', 'KaiTi', serif; font-size: var(--ending-heading-size); font-weight: 400; letter-spacing: .2em; text-indent: .2em; line-height: 1.6; margin: 0 auto; text-wrap: balance; white-space: normal; color: var(--ending-paper); text-shadow: 0 3px 16px #000; }
+.ending-screen[data-ending="tutorial-sacrifice"] h1 { color: #be7866; text-shadow: 0 2px 1px #200e0b, 0 4px 18px #000; }
+.ending-screen h1::before { content: ''; position: absolute; z-index: -1; width: 1.6em; height: 1.6em; left: 50%; top: 50%; border: 1px solid #743c3245; outline: 1px solid #743c322b; outline-offset: -5px; background: linear-gradient(130deg, #743c3222, #743c3205); transform: translate(-50%, -50%) rotate(-7deg); }
+.ending-summary { font-size: var(--ending-heading-size); line-height: 1.8; color: #ccc4b6; margin: 18px 0 0; text-wrap: balance; letter-spacing: 1px; }
+.ending-rule { position: relative; width: 196px; height: 1px; margin: 32px auto; background: linear-gradient(90deg, transparent, #756b5c77 35%, transparent 35%, transparent 65%, #756b5c77 65%, transparent); }
+.ending-rule::before, .ending-rule::after { content: ''; position: absolute; left: 50%; top: 50%; width: 9px; height: 9px; border: 1px solid #855044; transform: translate(-50%, -50%) rotate(45deg); }
+.ending-rule::after { width: 3px; height: 3px; background: #855044; }
+.ending-description, .ending-reflection { max-width: 650px; font-size: 19px; line-height: 2; text-wrap: pretty; }
+.ending-description { margin: 0 auto; color: #bcb7ad; }
+.ending-reflection { margin: 20px auto 0; color: #a59e91; }
+.ending-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin: 42px 0 0; }
+.ending-actions button { min-width: 156px; letter-spacing: 2px; }
+.ending-warning { font-size: 14px; color: #aaa396; margin: 24px 0 0; }
+.scrim:has(.ending-modal) { background: #030505d9; z-index: 40; backdrop-filter: blur(5px); }
+.scrim .modal.ending-modal { background: url('./ending-grain.svg'), linear-gradient(145deg, #202320, #111413 85%); color: #d7cfc1; border: 1px solid #756b5c; border-radius: 1px; box-shadow: inset 0 0 0 5px #121513, inset 0 0 0 6px #756b5c40, 0 24px 100px #000c; width: min(720px, 94vw); padding: 34px; max-height: 86svh; font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'Songti SC', serif; }
+.ending-modal .panel-head { padding-bottom: 18px; border-bottom: 1px solid #756b5c40; }
+.scrim .ending-modal h2, .scrim .ending-modal h3 { color: #e0d9cb; font-weight: 500; }
+.ending-modal .panel-head h2 { font-size: 28px; letter-spacing: 3px; }
+.scrim .ending-modal p { color: #b2ac9f; font-size: 17px; line-height: 1.9; }
+.ending-modal button { padding: 10px 18px; font-size: 17px; }
+.ending-modal button:disabled { opacity: .38; cursor: not-allowed; }
+.ending-modal .quiet { background: transparent; box-shadow: none; border-color: transparent; color: #aaa396; }
+.retry-options { display: grid; gap: 16px; margin-top: 24px; }
+.retry-options button { text-align: left; padding: 22px; border-left: 3px solid #84483c; }
+.retry-options strong { display: block; font-size: 22px; font-weight: 500; letter-spacing: 1px; }
+.retry-options small { display: block; font-size: 15px; margin-top: 8px; line-height: 1.7; color: #afa698; }
+.ending-shelf { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 22px; }
+.ending-item { padding: 22px; border: 1px solid #716b5e66; background: #090c0b55; box-shadow: inset 0 3px #743c3280; }
+.ending-item small { color: #b9a494; font-size: 14px; letter-spacing: 2px; }
+.ending-modal .ending-item h3 { font-size: 22px; margin: 12px 0; }
+.ending-modal .ending-item p { font-size: 15px; margin: 0; }
+.ending-item.sealed { border-color: #756b5c30; background: #090c0b22; box-shadow: none; }
+.ending-item.sealed h3, .ending-item.sealed small, .ending-item.sealed p { color: #827e73; }
+@keyframes ending-reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 600px) {
+  .ending-screen { padding: 26px; }
+  .ending-frame { inset: 10px; }
+  .ending-frame i { width: 64px; height: 64px; opacity: .4; }
+  .ending-header { font-size: 12px; letter-spacing: 1px; }
+  .ending-header > span { padding-left: 8px; }
+  .ending-header .ending-link { font-size: 12px; padding: 8px 0; }
+  .ending-content { padding: 52px 0 40px; }
+  .ending-summary { letter-spacing: 0; margin-top: 16px; }
+  .ending-rule { margin: 26px auto; width: 148px; }
+  .ending-description, .ending-reflection { font-size: 17px; }
+  .ending-actions { gap: 14px; margin-top: 32px; }
+  .ending-actions button { min-width: 132px; font-size: 16px; padding: 13px 18px; letter-spacing: 1px; }
+  .ending-shelf { grid-template-columns: 1fr; }
+  .scrim .modal.ending-modal { padding: 24px; }
+  .ending-modal .panel-head h2 { font-size: 24px; }
+  .ending-modal .quiet { padding: 6px; font-size: 15px; }
+  .retry-options button { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .ending-content { animation: none; } .ending-screen button, .ending-modal button { transition: none; } }

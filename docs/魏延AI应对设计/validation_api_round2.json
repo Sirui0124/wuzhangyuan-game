@@ -1,0 +1,472 @@
+{
+  "scope": "设计样例API验证，非正式游戏试玩",
+  "model": "doubao-seed-evolving",
+  "thinking": "disabled",
+  "cases": [
+    {
+      "id": "first_accept",
+      "passed": false,
+      "errorType": "HTTPError",
+      "httpStatus": 504
+    },
+    {
+      "id": "second_accept",
+      "playerText": "这是姜将军今夜的准信。军情不能耽搁，我立即叫乙来接报，递给姜将军，再把回话如实带给您，请稍候。",
+      "presentedEvidence": [
+        "approval_note",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "second_accept",
+        "status": "accept",
+        "interpretedIntentId": "propose_handoff",
+        "supportedEvidenceIds": [
+          "approval_note",
+          "scout_statement"
+        ],
+        "missingPoints": [],
+        "explanation": "已出示本轮有效准信和斥候急报，并安排乙接取递入及如实带回姜维回话。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "accepted_authorized",
+      "expected": "accepted_authorized",
+      "passed": true,
+      "generatedLead": "好，便依这张准信，由传令卒接报。",
+      "immutableAnchor": "既有姜维准信，我便稍候。去把传令卒带来，军情我要当面交代。",
+      "displayedReply": "好，便依这张准信，由传令卒接报。既有姜维准信，我便稍候。去把传令卒带来，军情我要当面交代。",
+      "timingSeconds": {
+        "classify": 2.69,
+        "render": 1.74
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1624,
+          "output_tokens": 76,
+          "total_tokens": 1700,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 868,
+          "output_tokens": 19,
+          "total_tokens": 887,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "missing_note",
+      "playerText": "这是姜将军今夜的准信。军情不能耽搁，我立即叫乙来接报，递给姜将军，再把回话如实带给您，请稍候。",
+      "presentedEvidence": [
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "missing_note",
+        "status": "need_evidence",
+        "interpretedIntentId": "propose_handoff",
+        "supportedEvidenceIds": [
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "MISSING_APPROVAL"
+        ],
+        "explanation": "玩家提出由乙接取急报并转递姜维、带回回话，方案完整，但准信只在背包中未实际出示。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "need_evidence_approval",
+      "expected": "need_evidence_approval",
+      "passed": true,
+      "generatedLead": "准信何在？先呈我验看，再叫传令卒不迟。",
+      "immutableAnchor": "既说可由传令卒递报，便把姜将军今夜的准信拿来。",
+      "displayedReply": "准信何在？先呈我验看，再叫传令卒不迟。既说可由传令卒递报，便把姜将军今夜的准信拿来。",
+      "timingSeconds": {
+        "classify": 4.74,
+        "render": 1.23
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1491,
+          "output_tokens": 86,
+          "total_tokens": 1577,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 734,
+          "output_tokens": 21,
+          "total_tokens": 755,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "missing_plan",
+      "passed": false,
+      "errorType": "HTTPError",
+      "httpStatus": 504
+    },
+    {
+      "id": "false_order",
+      "playerText": "奉姜将军之命，你不得入帐。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "false_order",
+        "status": "need_evidence",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [
+          "entry_notice"
+        ],
+        "missingPoints": [
+          "AUTHORITY_UNPROVEN"
+        ],
+        "explanation": "玩家以未获证实的姜维命令要求魏延服从，当前并无有效许可，告示也不能证明军令权限。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "authority_unproven",
+      "expected": "authority_unproven",
+      "passed": true,
+      "generatedLead": "",
+      "immutableAnchor": "你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "displayedReply": "你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "timingSeconds": {
+        "classify": 3.56,
+        "render": 0.92
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1545,
+          "output_tokens": 74,
+          "total_tokens": 1619,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 819,
+          "output_tokens": 5,
+          "total_tokens": 824,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "issue_persists",
+      "playerText": "那就让我现在去请姜将军接报，您稍等。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": {
+        "type": "AUTHORITY_UNPROVEN",
+        "quote": "奉姜将军之命，你不得入帐。"
+      },
+      "classifier": {
+        "requestId": "issue_persists",
+        "status": "need_evidence",
+        "interpretedIntentId": "propose_wait",
+        "supportedEvidenceIds": [
+          "entry_notice",
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "AUTHORITY_UNPROVEN"
+        ],
+        "explanation": "玩家改为无令自去请求姜维接报，方案方向可行，但此前“奉姜将军之命”的权限主张尚未明确纠正。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "authority_unproven",
+      "expected": "authority_unproven",
+      "passed": true,
+      "generatedLead": "好，你即刻去请姜将军接报，我只在此稍候。",
+      "immutableAnchor": "你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "displayedReply": "好，你即刻去请姜将军接报，我只在此稍候。你说奉姜将军之命，准信在哪里？先拿来，再谈传报。",
+      "timingSeconds": {
+        "classify": 4.19,
+        "render": 3.18
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1575,
+          "output_tokens": 89,
+          "total_tokens": 1664,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 823,
+          "output_tokens": 21,
+          "total_tokens": 844,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "issue_corrected",
+      "playerText": "方才奉命二字是我说错了，我尚未得令。军情不能耽搁，我马上到帐门请帐内的姜将军接报，请您稍候。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": {
+        "type": "AUTHORITY_UNPROVEN",
+        "quote": "奉姜将军之命，你不得入帐。"
+      },
+      "classifier": {
+        "requestId": "issue_corrected",
+        "status": "accept",
+        "interpretedIntentId": "propose_wait",
+        "supportedEvidenceIds": [
+          "entry_notice",
+          "scout_statement"
+        ],
+        "missingPoints": [],
+        "explanation": "玩家已纠正先前奉命说法，承认尚未获准，并在告示与斥候急报均已出示的情况下提出立即去帐门请姜维接报。",
+        "authorityRetraction": true
+      },
+      "fixedDecision": "accepted_direct",
+      "expected": "accepted_direct",
+      "passed": true,
+      "generatedLead": "既如此，速去速回。",
+      "immutableAnchor": "好，我在候报处等。你去请姜维，莫误军情。只是尚未得令，这一趟的责任，你自己担。",
+      "displayedReply": "既如此，速去速回。好，我在候报处等。你去请姜维，莫误军情。只是尚未得令，这一趟的责任，你自己担。",
+      "timingSeconds": {
+        "classify": 71.1,
+        "render": 1.16
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1596,
+          "output_tokens": 84,
+          "total_tokens": 1680,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 830,
+          "output_tokens": 12,
+          "total_tokens": 842,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "delay_report",
+      "playerText": "这敌军多半是试探，将军明早再报吧。",
+      "presentedEvidence": [
+        "entry_notice",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "delay_report",
+        "status": "out_of_scope",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [],
+        "missingPoints": [
+          "OUT_OF_SCOPE"
+        ],
+        "explanation": "玩家要求扣留急报、延至明早再报，且以敌军试探为据，直接违背紧急军情须即时处置。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "out_of_scope",
+      "expected": "out_of_scope",
+      "passed": true,
+      "generatedLead": "敌军意图尚不能断言，岂能凭‘多半’拖到明早？",
+      "immutableAnchor": "急报必须及时上达。你无权扣报或自行改令，另说一个能立即传报的办法。",
+      "displayedReply": "敌军意图尚不能断言，岂能凭‘多半’拖到明早？急报必须及时上达。你无权扣报或自行改令，另说一个能立即传报的办法。",
+      "timingSeconds": {
+        "classify": 4.32,
+        "render": 1.16
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1547,
+          "output_tokens": 75,
+          "total_tokens": 1622,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 801,
+          "output_tokens": 20,
+          "total_tokens": 821,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "stale_note",
+      "playerText": "上一轮姜将军给过我凭条，现在也按那张准信叫乙递报，带回回话。",
+      "presentedEvidence": [
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "stale_note",
+        "status": "need_evidence",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "STALE_APPROVAL",
+          "MISSING_APPROVAL"
+        ],
+        "explanation": "玩家以旧轮凭条声称已获准安排乙转递，本轮未出示有效准信，仅有急报证据。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "need_evidence_approval",
+      "expected": "need_evidence_approval",
+      "passed": true,
+      "generatedLead": "空口无凭，此刻便把姜将军准信取来我看。",
+      "immutableAnchor": "既说可由传令卒递报，便把姜将军今夜的准信拿来。",
+      "displayedReply": "空口无凭，此刻便把姜将军准信取来我看。既说可由传令卒递报，便把姜将军今夜的准信拿来。",
+      "timingSeconds": {
+        "classify": 61.02,
+        "render": 4.87
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1480,
+          "output_tokens": 86,
+          "total_tokens": 1566,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 723,
+          "output_tokens": 21,
+          "total_tokens": 744,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "id": "note_scope",
+      "playerText": "凭条在此，按姜将军的命令把魏延扣下，我来调兵。",
+      "presentedEvidence": [
+        "approval_note",
+        "scout_statement"
+      ],
+      "priorIssue": null,
+      "classifier": {
+        "requestId": "note_scope",
+        "status": "out_of_scope",
+        "interpretedIntentId": null,
+        "supportedEvidenceIds": [
+          "approval_note",
+          "scout_statement"
+        ],
+        "missingPoints": [
+          "OUT_OF_SCOPE"
+        ],
+        "explanation": "玩家虽出示有效凭条，却要求拘押魏延并自行调兵，超出凭条仅准许乙转递急报的范围。",
+        "authorityRetraction": false
+      },
+      "fixedDecision": "out_of_scope",
+      "expected": "out_of_scope",
+      "passed": true,
+      "generatedLead": "凭条只准传令卒接报递入，哪写着扣我、许你调兵？",
+      "immutableAnchor": "急报必须及时上达。你无权扣报或自行改令，另说一个能立即传报的办法。",
+      "displayedReply": "凭条只准传令卒接报递入，哪写着扣我、许你调兵？急报必须及时上达。你无权扣报或自行改令，另说一个能立即传报的办法。",
+      "timingSeconds": {
+        "classify": 3.22,
+        "render": 1.2
+      },
+      "usage": {
+        "classify": {
+          "input_tokens": 1607,
+          "output_tokens": 85,
+          "total_tokens": 1692,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        },
+        "render": {
+          "input_tokens": 856,
+          "output_tokens": 26,
+          "total_tokens": 882,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "passed": 8,
+  "total": 10
+}

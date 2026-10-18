@@ -1,0 +1,87 @@
+{
+  "version": "v03",
+  "purpose": "SC01扩展至18秒，盘坐守灯和骑兵空间补图",
+  "tool": "image_gen",
+  "items": [
+    {
+      "key": "v3wide",
+      "name": "01_秋营_高位远景.png",
+      "args": {
+        "prompt": "Create ONE 16:9 live-action historical feature-film still, full frame no lettering, no collage. Retain the references' original character identities, worn authentic materials, blue-grey low-saturation twilight and practical amber oil-light palette, organic film grain, believable lens optics and tactile cloth. Photographic humans, not wax, glass or polished CGI. Expand the referenced same central command tent and muddy encampment into an elevated 24mm wide establishing shot from a low hillside. Bleak late autumn, bare twisted branches and withered reeds in foreground, layered rows of weathered canvas tents and wooden palisades below, mountains and cold cloud. Main command tent identifiable center-right, small fire bowls sparse, frayed military banners stir. Clear outer perimeter dirt road runs across lower middle outside fence, suitable for mounted troops later. Foreground branches/flag poles, midground camp, distant mountains give parallax for a crane descending while gliding right toward command tent. Dusk nearly night, no snowfall, no glamorous sunset, no huge fantasy fortress.",
+        "referenced_image_paths": [
+          "../../../source-art/开场视频/电影参考图_v02/02_军营_灯灭后夜景.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "01_秋营_高位远景.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/01_秋营_高位远景.png"
+    },
+    {
+      "key": "v3med",
+      "name": "02_诸葛亮_盘坐守灯.png",
+      "args": {
+        "prompt": "Create ONE 16:9 live-action historical feature-film still, full frame no lettering, no collage. Retain the references' original character identities, worn authentic materials, blue-grey low-saturation twilight and practical amber oil-light palette, organic film grain, believable lens optics and tactile cloth. Photographic humans, not wax, glass or polished CGI. Replace the old seated-at-desk pose with a fresh spacious wide interior of SAME tent. Zhuge Liang same gaunt weathered Chinese man 50s, gray beard, dark soft cloth cap, wears loose dark grey coarse Daoist robe, sits CROSS-LEGGED on woven mat at left-middle ground, both knees and crossed feet clearly visible, quietly meditating, lowered eyes. IMPORTANT no desk in front of him: ONE larger shallow bronze oil bowl stands on a little ankle-height wooden block immediately beside his right knee (image center foreground); FOUR smaller bronze oil bowls on separate low wooden blocks make a loose semicircle behind and beside the main bowl. Exactly FIVE visible lit oil flames total, main lamp visibly larger, not candles. Both natural hands low beside the MAIN bowl, palms cupped protectively on either side of flame without touching flame or bowl. No giant magic circle or floating lamps. Entrance is RIGHT REAR, almost closed heavy patterned coarse curtain, cool sliver behind it, no Wei Yan yet. Old campaign map remains on left wall, rolled scrolls stowed at far left edge. Show realistic floor, small lamp supports and full seated body. Calm fragile amber illumination on wrinkled face against cold blue fabric shadows. Camera seated-eye height 35mm, three-quarter frontal composition, sufficient empty right doorway for later entry.",
+        "referenced_image_paths": [
+          "../../../source-art/开场视频/电影参考图_v02/03_帐内_掀帘灯未灭.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "02_诸葛亮_盘坐守灯.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/02_诸葛亮_盘坐守灯.png"
+    },
+    {
+      "key": "v3cavalry",
+      "name": "03_营外_骑兵疾驰.png",
+      "args": {
+        "prompt": "Create ONE 16:9 live-action historical feature-film still, full frame no lettering, no collage. Retain the references' original character identities, worn authentic materials, blue-grey low-saturation twilight and practical amber oil-light palette, organic film grain, believable lens optics and tactile cloth. Photographic humans, not wax, glass or polished CGI. A coherent troop of approximately TWENTY-FOUR mounted Chinese soldiers (20-30 riders), galloping left-to-right on a muddy outer perimeter road beside the same army camp. Medium-wide low side tracking camera 35mm, two near horses and riders sharp in right half, successive pairs of riders diminish along road to left-background, all part of one readable column; enough visible mounted figures to convey a troop of 20-30, not an army of hundreds. Real separate anatomy for horses/legs/tack, rough lamellar armor brown cloth and modest helmets, restrained spear pennants, no ornate superhero armor. Strong gust throws dry fallen leaves and dust across hoof level, frayed flags and camp curtain lift in background. Command tent visible behind wooden fence at center-right, no cavalry entering tent or trampling lamps. Same cold blue-grey early-night light, sparse torches, desolate bare slopes. Cinematic selective motion blur in background and hooves, not smeared faces.",
+        "referenced_image_paths": [
+          "../../../source-art/开场视频/电影参考图_v02/02_军营_灯灭后夜景.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "03_营外_骑兵疾驰.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/03_营外_骑兵疾驰.png"
+    },
+    {
+      "key": "v3wind",
+      "name": "04_魏延_掀帘进风.png",
+      "args": {
+        "prompt": "ONE full-frame 16:9 live-action feature film still, original Chinese historical characters, photoreal opaque natural skin pores and wrinkles, coarse cloth and tarnished bronze, low saturation blue-grey and practical amber only, organic grain. No text, no collage, no fantasy magic. EDIT second reference's NEW meditation tent, maintaining Zhuge Liang CROSS-LEGGED on floor mat at LEFT, same main larger bronze oil bowl in center foreground on ankle-height wooden block and same FOUR smaller auxiliary oil bowls on their floor blocks. FIVE lamps all still lit. Hands protect main lamp. Main flame and auxiliary flames lean LEFT from incoming gust. Add Wei Yan using FIRST reference solely for original face, beard, black headwrap, dark lamellar armor and muted red sleeves: at RIGHT rear entrance, he has just arrived on foot, urgently raising the RIGHT heavy tent curtain upward/outward with one hand. His free hand relaxed near waist, no touching or blowing lamp. Entrance newly open, cold outside wind travels RIGHT BACK to LEFT FRONT; coarse curtain billows LEFT into tent, cloth edge high above floor lamps, never contacts flame. Exactly two indistinct standing guards OUTSIDE behind him. Keep Zhuge face and main lamp unobscured, show entire seated posture and all five floor lamps. Camera low 35mm wide composition, Wei right background full upper body, Zhuge left midground, oil flame centerforeground. This is the key moment BEFORE main lamp extinguishes. Cool moonlike twilight through doorway, amber lamps on wrinkled face, realistic physical depth.",
+        "referenced_image_paths": [
+          "../../../source-art/开场视频/电影参考图_v02/01_魏延_电影人物.png",
+          "02_诸葛亮_盘坐守灯.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "04_魏延_掀帘进风.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/04_魏延_掀帘进风.png"
+    },
+    {
+      "key": "v3out",
+      "name": "05_盘坐_主灯熄灭.png",
+      "args": {
+        "prompt": "ONE full-frame 16:9 live-action feature film still, original Chinese historical characters, photoreal opaque natural skin pores and wrinkles, coarse cloth and tarnished bronze, low saturation blue-grey and practical amber only, organic grain. No text, no collage, no fantasy magic. EDIT referenced meditation interior to AFTER the catastrophic gust: KEEP original cross-legged Zhuge LEFT floor mat, same EXACT FIVE bronze oil bowls and ankle-height separate wooden blocks in their locations. Main bigger bowl center foreground has BLACK extinguished wick and ONE very fine wisp of smoke, ALL FIVE lamps now unlit so absolutely NO warm amber light inside. Replace lamp lighting with faint cold blue-grey diffuse twilight from right rear curtain gap. Camera slightly closer but maintain readable main bowl lower center, Zhuge left middle-ground and smaller bowls behind/beside. Zhuge's hands have lowered to his knees, shoulders slump gently, gaze down at dead lamp with quiet despair; alive, no collapse, no corpse. Same weathered wrinkles gray beard cloth cap and grey Daoist robe, feet crossed partlyvisible. Entrance rightrear dark empty, no newcharacterrequired. Natural dark scene with retained shadow detail, not pitch black and not cinematic spotlight. Bronze lamp matte and cool, no glow or flame, no thick magical smoke.",
+        "referenced_image_paths": [
+          "02_诸葛亮_盘坐守灯.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "05_盘坐_主灯熄灭.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/05_盘坐_主灯熄灭.png"
+    },
+    {
+      "key": "v3dusk",
+      "name": "06_小卒_帘缝守灯.png",
+      "args": {
+        "prompt": "ONE full-frame 16:9 live-action feature film still, original Chinese historical characters, photoreal opaque natural skin pores and wrinkles, coarse cloth and tarnished bronze, low saturation blue-grey and practical amber only, organic grain. No text, no collage, no fantasy magic. Create the PRE-DISASTER twilight first-person doorway view. FIRST reference controls exterior rough tent fabric, right hand on wooden spear shaft at right edge, modest brown soldier sleeve, thin distant dim sunset on far LEFT sky. SECOND reference controls changed interior: gaunt gray-bearded Zhuge now CROSS-LEGGED on FLOOR mat, ONE larger oil bowl on ankle-height block beside knee and FOUR small auxiliary bowls. A narrow vertical tent curtain gap in central frame, camera from standing soldier eye height angled slightly DOWN, through slit glimpse larger MAIN oil bowl visibly burning steadily close to floor and at least one smaller flame farther back; Zhuge's seated dark robe and meditating grey-bearded face soft blur behind the light. No desk, no tabletop lamp, no Wei Yan, no rescue outcome. Natural original hand firmly grips spear at right, fingertips intact, no modern accessories. Rough patterned curtain dominates edges, wood poles and rope frame, hoof churned mud below, tiny sunset is restrained and colder than oldgoldenimage. All five interior lamp positions same as meditation reference, small lamps can be occluded by narrow cloth gap but must not relocate. Cinematic live-action body weight and practical warm light, clear stable main flame.",
+        "referenced_image_paths": [
+          "../../../source-art/开场视频/电影参考图_v02/07_傍晚_帐门灯仍亮.png",
+          "02_诸葛亮_盘坐守灯.png"
+        ],
+        "transparent_background": false
+      },
+      "generated_path": "06_小卒_帘缝守灯.png",
+      "destination": "../../../source-art/开场视频/电影参考图_v03/06_小卒_帘缝守灯.png"
+    }
+  ]
+}

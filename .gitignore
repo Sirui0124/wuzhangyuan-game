@@ -1,0 +1,33 @@
+# Local credentials and private runtime state
+**/.env
+**/.env.*
+!**/.env.example
+**/api-defaults.json
+**/*credentials*.json
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+# Dependencies, Cocos caches, generated builds
+**/node_modules/
+**/library/
+**/temp/
+**/local/
+**/build/
+**/.build/
+**/.narrative-build/
+**/.cache/
+**/__pycache__/
+**/*.pyc
+**/*.tsbuildinfo
+**/packaging/.work/
+# Local reports can contain saves, API responses, paths and personal data
+/outputs/
+/GameStarter/web-demo/verification/
+/releases/
+# OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+.idea/

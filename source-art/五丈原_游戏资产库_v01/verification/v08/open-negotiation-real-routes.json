@@ -1,0 +1,84 @@
+{
+  "report": [
+    "Direct route via actual UI: collected evidence, showed to Wei Yan, submitted actual free text to the real API, accepted warning, delivered report, lamp kept, execution clue confirmed.",
+    "Rewind resets current evidence; unlocked side tent and read-only old-loop evidence remain.",
+    "Authorized route via actual UI: re-collection, presented to relay, actual request, current-loop permit, presented to Wei Yan, invited relay, handed off, retrieved reply, relayed reply; lamp lit and alive.",
+    "Later chapter entrance shows not-yet-produced response.",
+    "Reload restores stable local save."
+  ],
+  "errors": [],
+  "api": [
+    {
+      "status": 200,
+      "result": {
+        "text": "{\"requestId\":\"judge-1791698067885-42\",\"status\":\"accept\",\"interpretedIntentId\":\"propose_wait\",\"supportedEvidenceIds\":[\"entry_notice\",\"scout_statement\"],\"missingPoints\":[],\"explanation\":\"玩家出示禁入告示与斥候急报，承认军情不可耽误且自己尚未得令，提出立即到帐门请姜维接报，符合无令自去请求接报的可接受方案。\",\"authorityRetraction\":false}",
+        "responseId": "resp_0217916980699923d3436761e68cde6bd2815b0b11060acd5c39b",
+        "usage": {
+          "input_tokens": 1952,
+          "output_tokens": 110,
+          "total_tokens": 2062,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "status": 200,
+      "result": {
+        "text": "{\"lead\":\"你既愿即刻去帐门请姜将军接报，便可快去。\"}",
+        "responseId": "resp_0217916980746503d3436761e68cde6bd2815b0b11060acf9d836",
+        "usage": {
+          "input_tokens": 922,
+          "output_tokens": 20,
+          "total_tokens": 942,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "status": 200,
+      "result": {
+        "text": "{\"requestId\":\"judge-1791698079368-150\",\"status\":\"accept\",\"interpretedIntentId\":\"propose_handoff\",\"supportedEvidenceIds\":[\"approval_note\",\"scout_statement\"],\"missingPoints\":[],\"explanation\":\"玩家出示本轮有效准信与斥候证词，安排乙在帐外接取急报、递入姜维并如实带回回话，符合已许可转递方案。\",\"authorityRetraction\":false}",
+        "responseId": "resp_0217916980793883d3436761e68cde6bd2815b0b11060acee3ca4",
+        "usage": {
+          "input_tokens": 1986,
+          "output_tokens": 104,
+          "total_tokens": 2090,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "status": 200,
+      "result": {
+        "text": "{\"lead\":\"\"}",
+        "responseId": "resp_0217916980844403d3436761e68cde6bd2815b0b11060acffbb69",
+        "usage": {
+          "input_tokens": 937,
+          "output_tokens": 5,
+          "total_tokens": 942,
+          "input_tokens_details": {
+            "cached_tokens": 0
+          },
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          }
+        }
+      }
+    }
+  ]
+}

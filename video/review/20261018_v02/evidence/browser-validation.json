@@ -1,0 +1,48 @@
+{
+  "clips": [
+    {
+      "id": "PR01-v02",
+      "file": "PR01-prologue-27s-clean-v02.mp4",
+      "duration": 27,
+      "size": [
+        1280,
+        720
+      ],
+      "rate": 1,
+      "samples": [
+        {
+          "requested": 0.1,
+          "actual": 0.461601,
+          "decoded": 15,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 13.5,
+          "actual": 13.859196,
+          "decoded": 139,
+          "error": null,
+          "readyState": 4
+        },
+        {
+          "requested": 26.75,
+          "actual": 27,
+          "decoded": 260,
+          "error": null,
+          "readyState": 4
+        }
+      ],
+      "audio": {
+        "duration": 27,
+        "channels": 2,
+        "sampleRate": 48000
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Isolated localhost review root, no game config/state changed"
+  ],
+  "mode": "sampled real browser playback plus full FFmpeg decode",
+  "success": true
+}

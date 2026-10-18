@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "sources": {
+    "SC01": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/SC01_秋营疾风与魏延掀帘灯灭_seedance2.5_720p_20261011-1445.mp4",
+      "sha256": "87a6f2f2e22671b354b8e737889ff4bb2e69d92eeb2b0e9a46714292e77d8bda",
+      "videoDuration": 20.041667
+    },
+    "SC02": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/SC02_手机观看与愤怒许愿_seedance2.5_720p_20261011-1441.mp4",
+      "sha256": "66feb692617087f068b1754ce9f2104cb67c465a844a6bfece3ddfff3b577e3b",
+      "videoDuration": 9.041667
+    },
+    "SC03": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/SC03_穿越成为普通小卒_seedance2.5_720p_20261011-1443.mp4",
+      "sha256": "d911b98aa74ab1c3d2760fa640320576d506ac4e0a7aee5a99dca7f85baf3356",
+      "videoDuration": 8.041667
+    },
+    "EN01": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/EN01_守灯成功七日期满_seedance2.5_720p_20261011-1443.mp4",
+      "sha256": "b21631e596048ff9126d1ace0d34c1588ea4ad0e3dcfcf25add227a7395159bc",
+      "videoDuration": 12.041667
+    },
+    "EN02": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/EN02_魏延出帐与小卒被架走_20261011_144343.mp4",
+      "sha256": "560f07cc1587ced0036b9d2601ed3baabc4de15e27026e1c6cb6c0fdb4918f87",
+      "videoDuration": 16.041667
+    },
+    "EN03": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/EN03-北伐停滞与半月后病重_seedance2.5_16s_16x9_720p_20261011-144255.mp4",
+      "sha256": "f6d83efad2645598a7657a1863ee0c453bc0a01227af2ed273788901a289ca89",
+      "videoDuration": 16.041667
+    },
+    "EN04": {
+      "path": "${EXTERNAL_REFERENCES}/Documents/ChatGPT/707-dog/final_seedance/EN04_姜维感叹与主角回溯回应_seedance2.5_720p_20261011-1444.mp4",
+      "sha256": "cee84940df6e5bcec41dd9d488fc6e1a05b49f495243e03c13326d6a64df73f7",
+      "videoDuration": 18.041667
+    }
+  },
+  "clips": [
+    {
+      "file": "wuzhang-opening-v01.mp4",
+      "url": "/video/wuzhang-opening-v01.mp4",
+      "duration": 34.375,
+      "containerDuration": 34.375021,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "videoCodec": "h264",
+      "bytes": 9757543,
+      "sha256": "1dd4048477e12e056569f2f1aaa71869da86ebd2094af7d9f1b49764d1abdec0",
+      "timeline": [
+        {
+          "source": "SC01",
+          "sourceStart": 0,
+          "sourceEnd": 18.875,
+          "speed": 1,
+          "outputStart": 0,
+          "outputEnd": 18.875
+        },
+        {
+          "source": "SC02",
+          "sourceStart": 0,
+          "sourceEnd": 9,
+          "speed": 1,
+          "outputStart": 18.875,
+          "outputEnd": 27.875
+        },
+        {
+          "source": "SC03",
+          "sourceStart": 0,
+          "sourceEnd": 1,
+          "speed": 1,
+          "outputStart": 27.875,
+          "outputEnd": 28.875
+        },
+        {
+          "source": "SC03",
+          "sourceStart": 2.5,
+          "sourceEnd": 8,
+          "speed": 1,
+          "outputStart": 28.875,
+          "outputEnd": 34.375
+        }
+      ]
+    },
+    {
+      "file": "wuzhang-success-common-v01.mp4",
+      "url": "/video/wuzhang-success-common-v01.mp4",
+      "duration": 12.0,
+      "containerDuration": 12.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "videoCodec": "h264",
+      "bytes": 2251949,
+      "sha256": "eb1fd0e0db5a36873d60caa5ab303c89dd468f3c92db9eb3aa15cea7b9e29187",
+      "timeline": [
+        {
+          "source": "EN01",
+          "sourceStart": 0,
+          "sourceEnd": 12,
+          "speed": 1,
+          "outputStart": 0,
+          "outputEnd": 12.0
+        }
+      ]
+    },
+    {
+      "file": "wuzhang-blame-v01.mp4",
+      "url": "/video/wuzhang-blame-v01.mp4",
+      "duration": 11.5,
+      "containerDuration": 11.5,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "videoCodec": "h264",
+      "bytes": 3027232,
+      "sha256": "c5281ad307ab351fcd7b2ba35b57cfcf6284d53e5ba6258bf4515f62f7d66e8f",
+      "timeline": [
+        {
+          "source": "EN02",
+          "sourceStart": 0,
+          "sourceEnd": 9,
+          "speed": 1,
+          "outputStart": 0,
+          "outputEnd": 9.0
+        },
+        {
+          "source": "EN02",
+          "sourceStart": 11,
+          "sourceEnd": 16,
+          "speed": 2,
+          "outputStart": 9.0,
+          "outputEnd": 11.5
+        }
+      ]
+    },
+    {
+      "file": "wuzhang-safe-future-v01.mp4",
+      "url": "/video/wuzhang-safe-future-v01.mp4",
+      "duration": 34.0,
+      "containerDuration": 34.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "videoCodec": "h264",
+      "bytes": 7708246,
+      "sha256": "6e1d2cc9f62e675b123c0862cfb8854bcdbf59584a0e16eb46f60161c4855526",
+      "timeline": [
+        {
+          "source": "EN03",
+          "sourceStart": 0,
+          "sourceEnd": 16,
+          "speed": 1,
+          "outputStart": 0,
+          "outputEnd": 16.0
+        },
+        {
+          "source": "EN04",
+          "sourceStart": 0,
+          "sourceEnd": 18,
+          "speed": 1,
+          "outputStart": 16.0,
+          "outputEnd": 34.0
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "SC01 removes the duplicate camp tail starting at 18.875s.",
+    "SC03 removes silent black frames from 1.0 to 2.5s; all voices retained.",
+    "EN02 uses [0,9) then [11,16) at 2x, per user instruction.",
+    "EN03 and EN04 are the latest user-supplied generated clips.",
+    "Player speed choices multiply the already edited speed."
+  ]
+}

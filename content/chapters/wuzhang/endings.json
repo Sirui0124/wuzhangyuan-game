@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "wuzhang",
+  "endings": [
+    {
+      "id": "tutorial-blocked",
+      "number": "001",
+      "phase": "教学 · 阻拦",
+      "result": "lamp_failure",
+      "title": "你还在，灯却灭了。",
+      "description": "你试图把魏延拦在帐外，却没有给这份急报找到及时送达的办法。魏延绕开你入帐，风吹灭了主灯。",
+      "hint": "先查明禁令与军情，再提出能立即执行的传报办法。只说“不能进去”，还不够。",
+      "kind": "遗憾",
+      "when": {
+        "flag": "progress.tutorial_completed",
+        "equals": false
+      }
+    },
+    {
+      "id": "tutorial-sacrifice",
+      "number": "002",
+      "phase": "教学 · 转呈未竟",
+      "result": "tutorial_execution",
+      "title": "诸葛亮活了，但你挂了。",
+      "description": "你承诺转呈军情，魏延退走，主灯守住了。急报却只交给无权处置的守帐卒，没有得到有权者的有效处置与回令。次日魏延问起，你答不上来。虽未酿祸，他仍以不堪此用将你处死。",
+      "hint": "继续，重新调查这一夜：先问清谁能接报、作决定，再让军情与回令走完该走的路。",
+      "kind": "牺牲",
+      "note": "“活了”指守住这一夜，并非治愈。没有新增战损；魏延严酷处死主角为游戏架空，不代表真实军法。"
+    },
+    {
+      "id": "no-plan",
+      "number": "003",
+      "phase": "调查 · 接报方案",
+      "result": "lamp_failure",
+      "title": "一阵风，吹回了原来的命运。",
+      "description": "你没有找到帐外接报的转机。魏延仍按原来的途径掀帘入帐，主灯随之熄灭。你活着，守灯的目标却落空了。",
+      "hint": "先听甲乙的线索，找姜维亲兵取得本轮许可，再核实营门尚守。向魏延出示军情与许可，说清立即隔帘接报、由姜维定夺担责的安排。",
+      "kind": "遗憾",
+      "when": {
+        "flag": "progress.tutorial_completed",
+        "equals": true
+      }
+    },
+    {
+      "id": "safe",
+      "number": "004",
+      "phase": "五丈原 · 姜维接报",
+      "result": "safe",
+      "title": "灯没灭，你也活下来了。",
+      "description": "你提前取得姜维本人接报处置的许可，并查明营门尚守。魏延接受即时隔帘传报的安排，姜维当场下令并承担决策责任，魏延回营执行。帐帘未开，主灯守住了，你也平安站在帐门。",
+      "hint": "这一夜已经守住。丞相的病与劳损仍在，下一次回溯将寻找更早的转机。",
+      "kind": "生还"
+    },
+    {
+      "id": "provocation",
+      "number": "005",
+      "phase": "交涉 · 军前挑衅",
+      "result": "execution",
+      "when": {
+        "flag": "loop.execution_reason",
+        "equals": "provocation"
+      },
+      "title": "话还没说完，你先没了。",
+      "description": "你在军前严重挑衅魏延，被亲兵按倒，当场处斩。急报还没有送入帐内，守灯的转机也停在了这里。",
+      "hint": "想改变这一夜，先把话说到军情与规矩上。威胁和辱骂无法代替接报办法。",
+      "kind": "殒命"
+    }
+  ]
+}

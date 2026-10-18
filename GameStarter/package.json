@@ -1,0 +1,16 @@
+{
+  "name": "GameStarter",
+  "uuid": "27e24b77-1975-45e3-9df5-7a3bc0ce4f31",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "scripts": {
+    "build:demo": "node web-demo/build.mjs",
+    "start:demo": "node web-demo/build.mjs && node web-demo/serve.mjs",
+    "test:narrative": "node scripts/test-narrative.mjs",
+    "validate:story": "node scripts/validate-story.mjs",
+    "pack:story": "node scripts/pack-story.mjs",
+    "check:narrative": "tsc -p tsconfig.narrative.json --noEmit",
+    "package:mac": "node packaging/build-release.mjs"
+  }
+}
