@@ -5,7 +5,7 @@
 /* Shared dialog layout. Warm ink surface is supplied by ink-panels.css.
    The underlying workspace is concealed only while a modal is open. */
 /* Preserve the landscape through the silk without letting two pages of writing overlap. */
-:root[data-ui-theme="xuan"] #game-root:has(> .game-modal-shade:not(.phone-shade)) > .workspace-screen :is(.workspace-layout,.workspace-modes,.thought-inventory,.inventory-tab,.thought-tail-link,.thought-notice) { visibility: hidden; }
+:root[data-ui-theme="xuan"] #game-root:has(> .game-modal-shade) > .workspace-screen :is(.workspace-layout,.workspace-modes,.thought-inventory,.inventory-tab,.thought-tail-link,.thought-notice) { visibility: hidden; }
 :root[data-ui-theme="xuan"] #game-root .game-modal-shade {
   position: fixed; inset: 0; z-index: 50; display: grid; place-items: center;
   padding: 38px 48px; background: linear-gradient(180deg,#0612164d,#07141a70);

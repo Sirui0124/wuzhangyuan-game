@@ -19,7 +19,7 @@ export class CinematicPlayer {
     private prepared: { src: string; video: HTMLVideoElement } | null = null;
     private handoff: { frame: HTMLCanvasElement; muted: boolean } | null = null;
     private diagnostics: CinematicDiagnostic[] = [];
-    constructor(private version: string, private storageKey = KEY, private menuEnabled = false) {
+    constructor(private version: string, private storageKey = KEY, private menuEnabled = false, private mutedAutoplayFallback = true) {
         this.progress = { version, completed: [], active: null };
         try {
             const p = JSON.parse(localStorage.getItem(this.storageKey) ?? 'null');
@@ -181,13 +181,13 @@ export class CinematicPlayer {
             catch (error) {
                 if (!current() || failed) return;
                 // Fresh browser visits can reject audible autoplay; keep the film moving.
-                if (error instanceof DOMException && error.name === 'NotAllowedError' && !video.muted) {
+                if (this.mutedAutoplayFallback && error instanceof DOMException && error.name === 'NotAllowedError' && !video.muted) {
                     video.muted = true;
                     try { await video.play(); soundStatus(); return; }
                     catch { /* Retain manual playback and skip if muted playback is also blocked. */ }
                 }
                 if (video.error) mediaFailure();
-                else if (current()) status.textContent = '浏览器暂停了自动播放，点击播放或跳过继续。';
+                else if (current()) { status.textContent = '点击播放，开始观看影片'; play.textContent = '播放影片'; screen.dataset.mediaState = 'blocked'; }
             }
         };
         const complete = (skipped = false) => {

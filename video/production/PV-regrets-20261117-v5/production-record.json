@@ -1,0 +1,47 @@
+{
+  "units": [
+    {
+      "id": "A01R",
+      "prompt": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\A01R\\prompt.txt",
+      "prompt_sha256": "d7d3068e1d500e283fb6bc7d2be59f672c92d7fbc4b2abbc13648211accfcf6b",
+      "reference": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\references\\A01R-雨中谷地-实拍质感参考-v1.png",
+      "duration": 8,
+      "prompt状态": "待review",
+      "当前状态": "待review",
+      "authorization": "用户明确要求微调后生成并剪辑，随后提供凭据恢复调用；不等同用户审片通过。"
+    },
+    {
+      "id": "C01K",
+      "prompt": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\C01K\\prompt.txt",
+      "prompt_sha256": "6f376efdae877381f3cf048b135db331866aaac467a51192117d6d5c501f4ed3",
+      "reference": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png",
+      "duration": 7,
+      "prompt状态": "待review",
+      "当前状态": "待更新",
+      "authorization": "用户明确要求微调后生成并剪辑，随后提供凭据恢复调用；不等同用户审片通过。"
+    },
+    {
+      "id": "C01K2",
+      "prompt": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\C01K2\\prompt.txt",
+      "prompt_sha256": "cb068ff347a5fe90c22c8152c4eb1138fa3e219c5c8a4b2a3257060845a5b4c7",
+      "prompt状态": "待review",
+      "当前状态": "待review",
+      "reference": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png"
+    }
+  ],
+  "added_bgm": false,
+  "output_status": "待review",
+  "output": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\三国遗憾-PV-v5-写实谷地与马谡叩首.mp4",
+  "actual_submissions": 3,
+  "selected_shots": [
+    "A01R 2.5—8秒",
+    "C01K2 0—7秒"
+  ],
+  "excluded_shots": [
+    "C01K全部：右侧新增人物",
+    "A01R前2.5秒：夸张火球"
+  ],
+  "technical": "全片完整解码；62.75秒，1506帧，1280×720，24fps",
+  "audio": "原v3已选音轨和本地合成非音调风声；两条新视频原声不进入成片；无新增BGM或对白。",
+  "review_scope": "原片2fps联系表及成片开场、叩首反打、夜帐接点抽帧；未声称完整人工听审或用户通过。"
+}

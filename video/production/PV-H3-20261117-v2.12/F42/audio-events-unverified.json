@@ -1,0 +1,61 @@
+{
+  "source_sha256": "f4031eb88580331f7f491359ffbaa6a613a80f4e49df7c0ed75e88beb2ae6177",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.8002
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0896
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0508
+        },
+        {
+          "label": "Speech",
+          "p": 0.041
+        },
+        {
+          "label": "Rain",
+          "p": 0.0305
+        },
+        {
+          "label": "Run",
+          "p": 0.0282
+        },
+        {
+          "label": "Fire",
+          "p": 0.0262
+        },
+        {
+          "label": "Horse",
+          "p": 0.0248
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0225
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.021
+        },
+        {
+          "label": "Crack",
+          "p": 0.0194
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0193
+        }
+      ],
+      "music": 0.8002
+    }
+  ]
+}

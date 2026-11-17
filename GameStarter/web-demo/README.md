@@ -30,7 +30,7 @@
 - `src/session/contracts.ts`：共享存档身份。具体存档结构和恢复策略由章节维护。
 - `src/chapter-session.ts`、`thought-canvas-model.ts`、`thought-workspace.ts`：保留已有调用方的薄兼容导出。
 
-默认入口读取 `content/chapters/wuzhang/chapter-one.script.json` 和 `chapter-one.flow.json`，正文与流程的哈希决定存档内容版本。旧版网页和专属剧情数据不再发布。第一章专有类型名为 `ChapterOne*`，旧类型名保留兼容导出。
+默认入口读取 `content/chapters/wuzhang/chapter-one.branch.json` 的新版对话图；旧 script/flow 只保留兼容与外壳元数据。三份文件的哈希决定存档内容版本。新版第一章接入、视频取舍和旧档迁移见[接入记录](../../docs/design/CHAPTER-ONE-MAINLINE-20261117.md)。旧版网页和专属剧情数据不再发布。第一章专有类型名为 `ChapterOne*`，旧类型名保留兼容导出。
 
 `public/` 保存网页和发布资源。`public/game.css` 与 `thought-workspace.css` 保留原 URL，以有序 `@import` 组合 `public/styles/` 下的组件样式。调整顺序可能改变层叠结果。
 

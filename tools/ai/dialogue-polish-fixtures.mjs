@@ -19,7 +19,7 @@ export async function polishFixtures(build='outputs/dialogue-polish-20261027/bui
  const story=read('chapter-three.story.json');
  for(const id of ['JT-OPEN-R1','JT-OPEN-R2','JT-OPEN-R3','JT-OPEN-R4','JT-OPEN-R5','JT-OPEN-WITHDRAW','JT-OPEN-LURE']){
   const kind=id.includes('WITHDRAW')?'withdrawal':id.includes('LURE')?'lure':'reinforcement';
-  const s=createJietingPlaytest(story,kind,{aiEnabled:false,phoneAllowed:false});
+  const s=createJietingPlaytest(story,kind,{aiEnabled:false});
   if(id==='JT-OPEN-R2'||id==='JT-OPEN-R3'){
    const target=id==='JT-OPEN-R2'?'JT-R2-FIXED':'JT-R3-FIXED';
    for(let i=0;i<200&&s.current.id!==target;i++){let o=s.options?.find(o=>['JT-O132','JT-O167'].includes(o.id))??s.options?.[0];if(!s.advance(o?.id))throw Error('jieting fixture stuck '+s.current.id);}
@@ -29,7 +29,7 @@ export async function polishFixtures(build='outputs/dialogue-polish-20261027/bui
    const picks={'JT-R1-FIXED':'JT-O133','JT-R2-FIXED':'JT-O168','JT-R3-FIXED':'JT-O199','JT-R4-FIXED':'r4-none'};
    for(let i=0;i<250&&s.current.id!==target;i++)if(!s.advance(s.current.kind==='choice'?picks[s.current.id]:undefined))throw Error('extra jieting fixture stuck '+s.current.id);
   }
-  s.setMode({aiEnabled:true,phoneAllowed:false});s.state.node=id;
+  s.setMode({aiEnabled:true});s.state.node=id;
   const ids=id==='JT-OPEN-R1'?['JT-C02','JT-C04','JT-C08']:id==='JT-OPEN-R2'?['JT-C03','JT-C04','JT-C05','JT-C08']:id==='JT-OPEN-R3'?['JT-C06','JT-C08','JT-C09']:id.includes('WITHDRAW')?['JT-C03','JT-C05','JT-C06','JT-C08','JT-C10','JT-C12']:['JT-C07','JT-C09','JT-C10','JT-C11','JT-C12'];
   s.state.selected=s.clues.filter(c=>c.current!==false&&ids.includes(c.id)).map(c=>c.id);
   s.state.draft=id==='JT-OPEN-R1'?'请增兵分守正面与侧路，别等告急才下山。':id==='JT-OPEN-R2'?'前一趟守路的人继续守路，请再拨一部提前护住水路，别等出事后才下山。':id==='JT-OPEN-R3'?'请再拨一部提前下山接应，让前面守路护水的人有退路，也能相互照应。':id.includes('WITHDRAW')?'请将军带兵趁路还能走时下山，分批下去，让王平安排接应和掩护，山上留人殿后，别全挤在山道上。':'请以山下营中现有旗帜和人手装作准备撤营，诱敌离开原处；王平带兵接应。派出的人不追远，敌人近前才合击；若敌人不来，便收旗退回营内，不冒险硬攻。';

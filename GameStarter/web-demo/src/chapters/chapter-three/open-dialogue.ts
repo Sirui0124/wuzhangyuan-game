@@ -5,8 +5,6 @@ import { reviewJietingReply } from './ai-response';
 import { jietingReplyLimits, type JietingEvaluationRequest, type JietingJudgment } from './ai-contracts';
 export * from './ai-contracts';
 export { parseJietingJudgment, validateJietingRequest, jietingPrompt };
-export { prepareJietingItem, parseJietingItemPreparation, jietingItemPreparationPrompt } from './item-preparation';
-export type { JietingItemPreparation, JietingItemPreparationRequest } from './item-preparation';
 export type JietingResponder = { respond(request: GameApiRequest, signal?: AbortSignal): Promise<GameApiResponse> };
 
 export async function judgeJietingDialogue(request: JietingEvaluationRequest, signal: AbortSignal,

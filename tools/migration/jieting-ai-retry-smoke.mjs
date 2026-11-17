@@ -28,7 +28,6 @@ try{
         const headers={'Access-Control-Allow-Origin':'*'};
         if(route.request().method()==='OPTIONS')return route.fulfill({status:204,headers:{...headers,'Access-Control-Allow-Headers':'Content-Type','Access-Control-Allow-Methods':'POST,GET,OPTIONS'}});
         if(path==='/health')return route.fulfill({headers,json:{ok:true,configured:true}});
-        if(path==='/api/game/personality')return route.fulfill({status:503,headers,json:{error:'Test-only assessment unavailable'}});
         assert.equal(path,'/api/game/respond');
         const text=route.request().postDataJSON().text;
         if(text.includes('你帮助玩家整理一段')){

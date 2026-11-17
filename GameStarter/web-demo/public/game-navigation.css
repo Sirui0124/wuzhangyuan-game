@@ -1,5 +1,5 @@
 /* One navigation size, matching the expanded thought page. */
-:root[data-ui-theme=xuan] #game-root :is(.game-scene,.workspace-screen) .game-hud nav button:not(.phone-launcher),
+:root[data-ui-theme=xuan] #game-root :is(.game-scene,.workspace-screen) .game-hud nav button,
 :root[data-ui-theme=xuan] #game-root :is(.cinema-menu,.character-floating){font-size:16px;line-height:1.6;min-height:44px}
 :root[data-ui-theme=xuan] #game-root .game-hud nav small{font-size:16px;line-height:1.6}
 #game-root .cinema-menu{position:absolute;right:3vw;top:24px;z-index:12;padding:10px 16px;color:#eee1c6;background:#2b1e17e6;border:1px solid #b0956d80;border-radius:2px;font-family:var(--serif)}

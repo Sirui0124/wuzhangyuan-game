@@ -1,0 +1,12 @@
+﻿using System;
+using System.IO;
+using System.Linq;
+using System.Web.Script.Serialization;
+using Wuzhangyuan;
+class PortTests {
+ static int count;
+ static void Check(bool value,string label){if(!value)throw new Exception(label);count++;}
+ static void Do(StorySession s,string command){Check(s.Apply(command),command);}
+ static StorySession Start(StoryData data){var s=new StorySession(data);Check(!s.Apply("action:meet-first-scout"),"cannot bypass awakening");Do(s,"next");Do(s,"next");Do(s,"action:read-notice");Check(!s.Clues.Contains("C06"),"no clue before read");Do(s,"next");Check(s.Clues.Contains("C06"),"notice grants C06");Do(s,"move:report_post");Do(s,"action:meet-first-scout");Do(s,"next");return s;}
+ public static void Main(string[] args){var json=new JavaScriptSerializer();var data=json.Deserialize<StoryData>(File.ReadAllText(args[0]));if(args.Length>1){var replay=new StorySession(data);var trace=new System.Collections.Generic.List<object>();foreach(var command in json.Deserialize<string[]>(File.ReadAllText(args[1]))){if(!replay.Apply(command))throw new Exception("invalid command: "+command);trace.Add(new { phase=replay.Phase, scene=replay.SceneId, row=replay.CurrentRow==null?null:replay.CurrentRow.id, clues=replay.Clues });}Console.WriteLine(json.Serialize(trace));return;}var a=Start(data);Do(a,"choice:a");Do(a,"next");Check(!a.Clues.Contains("T02"),"question is not evidence");Do(a,"next");Check(a.Clues.Contains("T02"),"answer grants T02");var restored=StorySession.Restore(data,json.Deserialize<SaveData>(json.Serialize(a.Snapshot())));Check(restored.Phase==a.Phase&&restored.Clues.SequenceEqual(a.Clues),"restore preserves facts");var b=Start(data);Do(b,"choice:b");Do(b,"next");Do(b,"next");Check(!b.Clues.Contains("T02"),"B cannot grant A evidence");Check(!b.Apply("choice:a"),"cannot choose again");Do(b,"action:intercept-first");while(b.Phase=="dialogue")Do(b,"next");Check(b.Phase=="boundary","stop at unported expression");Check(b.Clues.Contains("C05"),"Weiyan source collected");var bad=a.Snapshot();bad.commands=new[]{"action:intercept-first"};bool rejected=false;try{StorySession.Restore(data,bad);}catch(ArgumentException){rejected=true;}Check(rejected,"forged save rejected");bad=a.Snapshot();bad.contentHash="old";rejected=false;try{StorySession.Restore(data,bad);}catch(ArgumentException){rejected=true;}Check(rejected,"version mismatch rejected");Console.WriteLine("PASS "+count+" native C# assertions; actual exported chapter rows and branches");}
+}

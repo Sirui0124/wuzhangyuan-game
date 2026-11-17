@@ -72,7 +72,7 @@ export function chapterAccess(store: Store, sources = specs): Record<ChapterId, 
     const furthestEntered = Math.max(0, ...[...entered].filter(mainline).map(id => chapterOrder.indexOf(id)));
     const furthestUnlocked = Math.max(furthestEntered, ...[...completed].filter(mainline).map(id => Math.min(chapterOrder.length - 1, chapterOrder.indexOf(id) + 1)));
     remember(store, { ...saved, entered: chapterOrder.filter(id => entered.has(id)), completed: chapterOrder.filter(id => completed.has(id)) });
-    return Object.fromEntries(chapterOrder.map((id, index) => [id, { unlocked: id === 'yiling' || index <= furthestUnlocked, completed: completed.has(id), replayable: completed.has(id) || index < furthestEntered, earlyAccess: id === 'yiling' && index > furthestUnlocked }])) as Record<ChapterId, ChapterAccess>;
+    return Object.fromEntries(chapterOrder.map((id, index) => [id, { unlocked: id === 'wuzhang' || id === 'yiling', completed: completed.has(id), replayable: completed.has(id) || index < furthestEntered, earlyAccess: id === 'yiling' && index > furthestUnlocked }])) as Record<ChapterId, ChapterAccess>;
 }
 /** A new campaign keeps archives but must never migrate their old access again. */
 export function startNewChapterProgress(store: Store & Pick<Storage, 'removeItem'> = localStorage, sources = specs) {
@@ -101,7 +101,7 @@ export async function initializeChapterAccess(): Promise<void> {
 }
 export function chapterAccessMessage(id: ChapterId) {
     const previous = specs[chapterOrder.indexOf(id) - 1];
-    return previous ? `先通关${previous.title}，再开启这一章。` : '';
+    return id === 'wuzhang' || id === 'yiling' ? '' : '暂未开放';
 }
 export function requestedChapter(value: string | null): ChapterId {
     if (value === 'masu') return 'jieting';

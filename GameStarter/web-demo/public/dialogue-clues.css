@@ -1,0 +1,99 @@
+/* Shared dialogue typography and lightweight clue references. */
+.expression-workspace { --reply-font: clamp(18px, 1.666667vw, 28px); --reply-line: 1.65; }
+.expression-workspace .expression-paper { display:grid; grid-template-columns:minmax(0,1fr) minmax(170px,22%); gap:28px; }
+.expression-workspace .expression-main { min-width:0; }
+.expression-workspace .expression-current-reply p,
+.expression-workspace .clue-references,
+.expression-workspace .dialogue-clues h2,
+.expression-workspace .dialogue-clues h3,
+.expression-workspace .dialogue-clues p,
+.expression-workspace .expression-writing-wash,
+.expression-workspace :is(#player-expression,.expression-draft) { font-size:var(--reply-font); line-height:var(--reply-line); }
+.expression-workspace .expression-heading,
+.expression-workspace .expression-current-reply,
+.expression-workspace .expression-result,
+.expression-workspace .clue-references,
+.expression-workspace .dialogue-clues h2,
+.expression-workspace .dialogue-clues article { border:0; }
+.expression-workspace .clue-references { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0; }
+.expression-workspace .clue-reference { display:inline-flex; align-items:center; gap:8px; padding:4px 10px; border-radius:4px; background:#413c35; color:#f3eee4; }
+.expression-workspace .clue-reference button { min-width:32px; min-height:36px; border:0; background:transparent; color:inherit; font:inherit; }
+.expression-workspace .expression-writing-wash { display:flex; align-items:flex-start; background:#413c35; color:#f3eee4; padding:12px; gap:8px; }
+.expression-workspace :is(#player-expression,.expression-draft) { background:transparent; color:inherit; padding:0; margin:0; border:0; box-shadow:none; min-width:0; width:100%; min-height:calc(var(--reply-font) * 1.65 * 2.5); height:auto; max-height:45vh; field-sizing:content; resize:vertical; }
+.expression-workspace .dialogue-clues { min-width:0; max-height:60vh; overflow:auto; padding-left:16px; border-left:1px solid #ffffff22; }
+.expression-workspace .dialogue-clues h2 { margin:0 0 16px; }
+.expression-workspace .dialogue-clues h3 { margin:0 0 8px; font-weight:500; }
+.expression-workspace .dialogue-clues p { margin:0 0 10px; overflow-wrap:anywhere; }
+.expression-workspace .dialogue-clues article { margin-bottom:24px; }
+.expression-workspace .expression-actions { flex-wrap:wrap; }
+@media(max-width:700px) {
+ .expression-workspace .expression-paper { display:flex; flex-direction:column; gap:16px; }
+ .expression-workspace .dialogue-clues { order:-1; max-height:30vh; border:0; padding:0; }
+ .expression-workspace .clue-reference { max-width:100%; overflow-wrap:anywhere; }
+}
+/* Approved reply layout: translucent references and on-demand floating clue details. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace { --reply-font:clamp(18px,1.666667vw,28px); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace > .workspace-layout { width:min(1180px,calc(100% - 48px)); margin:0 auto; padding:0; position:relative; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace { display:flex; flex-direction:column; justify-content:flex-end; min-height:100dvh; padding:100px 0 28px; box-sizing:border-box; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout { max-width:none; margin:0; padding:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-center { width:100%; max-width:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-heading { display:flex; align-items:center; gap:20px; padding:12px 20px; margin:0; background:#181613c9; border:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-heading h1 { display:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply { display:flex; flex-direction:row-reverse; justify-content:flex-end; align-items:baseline; gap:20px; max-width:none; margin:0; border:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply p { margin:0; font-size:var(--reply-font); line-height:1.65; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply small { white-space:nowrap; color:#e5d7bf; font-size:var(--reply-font); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-paper { display:block !important; padding:12px 20px 18px !important; border:0; border-image:none; background:#181613d9; box-shadow:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main { display:grid; grid-template-columns:1fr auto; gap:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .clue-references,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-help,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .ai-guidance { grid-column:1 / -1; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .clue-references { margin:0; gap:8px; font-size:var(--reply-font); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .clue-reference { background:rgb(110 99 83 / 22%); padding:2px 6px; gap:2px; max-width:100%; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .clue-reference button { font:inherit; color:inherit; background:transparent; border:0; padding:2px 6px; min-height:36px; white-space:normal; text-align:left; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace [data-clue-picker] { background:#6e63532e; border:0; color:inherit; font:inherit; min-width:40px; min-height:40px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-writing-wash { border:0; border-radius:4px; background:#51493c73; padding:12px; display:flex; align-items:flex-start; gap:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace :is(#player-expression,.expression-draft) { font-size:var(--reply-font) !important; line-height:1.65 !important; min-height:calc(var(--reply-font) * 1.65 * 2.5); height:auto; padding:0 !important; border:0 !important; background:transparent !important; box-shadow:none; resize:vertical; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-status:empty { display:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-actions { grid-column:2; align-self:start; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .polish-actions { grid-column:1; align-self:start; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues { position:fixed; inset:auto; margin:0; box-sizing:border-box; overflow:auto; padding:16px 20px; border:1px solid #ab96713d; border-radius:6px; background:#24211ef5; color:#f3eee4; box-shadow:0 12px 48px #0008; font-size:var(--reply-font); line-height:1.65; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues::backdrop { background:transparent; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues button { font:inherit; color:inherit; background:#6e63532e; border:0; border-radius:4px; padding:4px 12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues button:disabled { opacity:.5; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues details { padding:8px 0; border:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues summary { cursor:pointer; font:inherit; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues p { font:inherit; margin:12px 0; white-space:pre-wrap; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .clue-chosen { margin-left:12px; color:#b8ad99; font:inherit; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:focus-visible,:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace summary:focus-visible { outline:2px solid #d9bd87; outline-offset:3px; }
+@media(max-width:700px) {
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace > .workspace-layout { width:calc(100% - 24px); }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main { display:flex; flex-direction:column; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-paper { padding:12px !important; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-heading { padding:12px; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply { gap:10px; }
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .clue-references { grid-area:1 / 1 / 2 / 3; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .expression-result { grid-area:2 / 1 / 3 / 3 !important; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .polish-actions { grid-area:3 / 1 / 4 / 2; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .expression-actions { grid-area:3 / 2 / 4 / 3; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .expression-help { grid-area:4 / 1 / 5 / 3; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-main > .ai-guidance { grid-area:5 / 1 / 6 / 3; border:0; margin:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result::before,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-writing-wash::before { display:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply { margin:0; text-align:left; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply p,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply small { font-size:var(--reply-font) !important; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace > .workspace-layout { inset:auto; transform:none; flex:none; overflow:visible; scrollbar-gutter:auto; z-index:4; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply { width:100%; justify-content:flex-end; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply p { flex:1; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-writing-wash { margin-top:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply p,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply small { color:#e8dfce; opacity:1; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .dialogue-clues header { position:sticky; top:-16px; z-index:1; background:#24211e; padding:8px 0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .thought-landscape { display:block; }
+/* Short viewports must scroll the conversation instead of sliding it beneath the HUD. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace { justify-content:safe flex-end; overflow-y:auto; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace > .workspace-layout { inset:auto !important; flex-shrink:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.has-deployment .jieting-deployment { position:relative; inset:auto; transform:none; width:min(1180px,calc(100% - 48px)); flex-shrink:0; margin:0 auto 20px; max-height:none; }

@@ -1,0 +1,77 @@
+{
+  "duration": 75.83333333333333,
+  "shots": [
+    {
+      "id": "PV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.14\\夷陵撤离-PV-v2.14-远景至近景.mp4",
+      "start": 0,
+      "frames": 946,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "timeline_in": 0,
+      "duration": 39.416666666666664,
+      "timeline_out": 39.416666666666664,
+      "source_sha256": "a799c34dce8337cef71eb670d6506f0bb9d294dbbcc07584b23172f1d1b1d968"
+    },
+    {
+      "id": "L01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\L01\\source.mp4",
+      "start": 0,
+      "frames": 192,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24,fade=t=in:st=0:d=0.25",
+      "timeline_in": 39.416666666666664,
+      "duration": 8.0,
+      "timeline_out": 47.416666666666664,
+      "source_sha256": "4354243454a288216373c49716c278872516e311cf1fd500ed48d76dc9671421"
+    },
+    {
+      "id": "L02S",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\L02S\\source.mp4",
+      "start": 0,
+      "frames": 144,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "timeline_in": 47.416666666666664,
+      "duration": 6.0,
+      "timeline_out": 53.416666666666664,
+      "source_sha256": "3f4033530fe8315753fef99587eebf7004ebe4b40005edf581d937855176713c"
+    },
+    {
+      "id": "L03",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\L03\\source.mp4",
+      "start": 0,
+      "frames": 174,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "timeline_in": 53.416666666666664,
+      "duration": 7.25,
+      "timeline_out": 60.666666666666664,
+      "source_sha256": "6ac7f9e00a5422d5ede9cc310faa2ac6113bb002af82e041faa8faef9f1cb45b"
+    },
+    {
+      "id": "L04R",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\L04R\\source.mp4",
+      "start": 0,
+      "frames": 264,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "timeline_in": 60.666666666666664,
+      "duration": 11.0,
+      "timeline_out": 71.66666666666666,
+      "source_sha256": "1245fa292c8e683abeab1b995c0f539073b08db67c689b930c467770cda0f847"
+    },
+    {
+      "id": "L05",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\L05\\source.mp4",
+      "start": 2.5,
+      "frames": 64,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "timeline_in": 71.66666666666666,
+      "duration": 2.6666666666666665,
+      "timeline_out": 74.33333333333333,
+      "source_sha256": "eb7f9aaf4f86eebb17a484773f874055977b121c10260ef185cbf8e8598a2610"
+    }
+  ],
+  "map_handoff": {
+    "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\demos\\yiling-rescue\\public\\art\\yiling-retreat-map-v1.png",
+    "duration": 2,
+    "overlap": 0.5,
+    "note": "现行游戏地图画面，不自动修改游戏逻辑"
+  }
+}

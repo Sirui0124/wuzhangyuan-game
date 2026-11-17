@@ -15,10 +15,10 @@ export function checkEmptyTrack(clip, film, cues, dispositions) {
   if (cues.length) return null;
   const entry = dispositions.find(entry => entry.id === clip.id);
   if (!entry || entry.videoSha256 !== film.sha256 || !entry.reason?.trim()
-      || !['planned-no-dialogue', 'unexpected-speech'].includes(entry.status)) {
+      || !['planned-no-dialogue', 'unexpected-speech', 'pending-transcription'].includes(entry.status)) {
     throw new Error(`${clip.id}: empty subtitles need a review record for this exact video SHA in video/subtitles/empty-tracks.json`);
   }
-  return entry.status === 'unexpected-speech' ? clip.id : null;
+  return entry.status !== 'planned-no-dialogue' ? clip.id : null;
 }
 export function checkSubtitles({ sync = false, normalize = false } = {}) {
   if (normalize && !sync) throw new Error('Normalization requires --sync; read-only checks never modify subtitles.');

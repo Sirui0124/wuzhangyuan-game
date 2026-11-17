@@ -1,0 +1,277 @@
+{
+  "source_sha256": "4402d45b4f665ada081d05f5810260316bec3a3ced14e36a251bce5016bd91f5",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8319
+        },
+        {
+          "label": "Fire",
+          "p": 0.0466
+        },
+        {
+          "label": "Boiling",
+          "p": 0.033
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0249
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0189
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0183
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0171
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0153
+        },
+        {
+          "label": "Animal",
+          "p": 0.0136
+        },
+        {
+          "label": "Music",
+          "p": 0.0121
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0112
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0104
+        }
+      ],
+      "music": 0.0121
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7191
+        },
+        {
+          "label": "Scratch",
+          "p": 0.1028
+        },
+        {
+          "label": "White noise",
+          "p": 0.0284
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0272
+        },
+        {
+          "label": "Music",
+          "p": 0.0261
+        },
+        {
+          "label": "Rustle",
+          "p": 0.026
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0259
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0234
+        },
+        {
+          "label": "Scratching (performance technique)",
+          "p": 0.0188
+        },
+        {
+          "label": "Scrape",
+          "p": 0.0158
+        },
+        {
+          "label": "Drip",
+          "p": 0.0154
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0135
+        }
+      ],
+      "music": 0.0261
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.9078
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0589
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0584
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0277
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0253
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0244
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0239
+        },
+        {
+          "label": "Fire",
+          "p": 0.0179
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0162
+        },
+        {
+          "label": "Flap",
+          "p": 0.0127
+        },
+        {
+          "label": "Stomach rumble",
+          "p": 0.0125
+        },
+        {
+          "label": "Noise",
+          "p": 0.0119
+        }
+      ],
+      "music": 0.01
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Animal",
+          "p": 0.1917
+        },
+        {
+          "label": "Horse",
+          "p": 0.1589
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.1357
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.118
+        },
+        {
+          "label": "Fire",
+          "p": 0.0421
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0207
+        },
+        {
+          "label": "Stomach rumble",
+          "p": 0.0171
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0171
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0145
+        },
+        {
+          "label": "Run",
+          "p": 0.0143
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0109
+        },
+        {
+          "label": "Flap",
+          "p": 0.0097
+        }
+      ],
+      "music": 0.0092
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Stomach rumble",
+          "p": 0.322
+        },
+        {
+          "label": "Flap",
+          "p": 0.0468
+        },
+        {
+          "label": "Noise",
+          "p": 0.0372
+        },
+        {
+          "label": "White noise",
+          "p": 0.0343
+        },
+        {
+          "label": "Crackle",
+          "p": 0.026
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0247
+        },
+        {
+          "label": "Throbbing",
+          "p": 0.0211
+        },
+        {
+          "label": "Heart sounds, heartbeat",
+          "p": 0.0198
+        },
+        {
+          "label": "Static",
+          "p": 0.0195
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0174
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0157
+        },
+        {
+          "label": "Rattle",
+          "p": 0.0145
+        }
+      ],
+      "music": 0.0083
+    }
+  ]
+}

@@ -1,16 +1,14 @@
+import { savedFields } from '../../session/saved-fields';
 import { migrateJiangDutySave, jiangDutyMigration } from './jiang-duty-migration';
 import { migrateSixClueSave, sixClueMigration } from './clue-save-migration';
 import type { ChapterFlow, FlowSection } from '../../../../../content/schema/chapter-session';
 import { parseNpcTurn, persuasionCodes, validCode } from '../../npc-dialogue';
 import { restoreThoughtWorkspace } from './thought-workspace';
 import { clueSources, commitRow, derive, freshReview, inferenceRules, validAuthorization, type ChapterReview, type StoryRow } from './thought-canvas-model';
-import { CHAPTER_ID, clone, freshComposition, phases, speechHistoryRound, WEIYAN_JUDGMENT_VERSION, type GameSessionState } from './session-state';
+import { CHAPTER_ID, clone, freshComposition, freshSessionState, phases, speechHistoryRound, WEIYAN_JUDGMENT_VERSION, type GameSessionState } from './session-state';
 import { isCompatibleContentVersion, migrationRuleVersion } from './content-version-compatibility';
-import { restoreSupplyState } from './supply-restore';
-import { restorePhone } from './phone-state';
 import { tentStages } from './tent-visit';
 type RestoreContext = {
-    grantPhoneReward?: boolean;
     content: ChapterReview;
     flow: ChapterFlow;
     contentVersion: string;
@@ -59,7 +57,7 @@ export function restoreSessionState(raw: string, context: RestoreContext): GameS
         || story.history.some(h => !h || typeof h.text !== 'string' || typeof h.feedback !== 'string' || typeof h.accepted !== 'boolean' || (h.round !== undefined && ![1, 2].includes(h.round)) || (h.evidence !== undefined && (!array(h.evidence) || h.evidence.some(id => !validIds.has(id)))))
         || !array(candidate.finishedSections) || candidate.finishedSections.some(id => !context.sections.has(id)) || !array(candidate.finishedCinematics) || candidate.finishedCinematics.some(id => !context.flow.cinematics.some(c => c.id === id)) || !array(candidate.panelOpened)
         || !Number.isInteger(candidate.lineIndex) || candidate.lineIndex < 0 || (candidate.section !== null && !context.sections.has(candidate.section)) || (candidate.notesReturn !== null && !phases.includes(candidate.notesReturn))
-        || !['review', 'P1', 'P2'].includes(candidate.notesPurpose) || typeof candidate.lastFeedback !== 'string' || ![null, 'tutorial-sacrifice', 'weiyan-execution', 'tent-execution', 'era-arrest', 'safe', 'radio-relay', 'light-signal', 'item-plan'].includes(candidate.end))
+        || !['review', 'P1', 'P2'].includes(candidate.notesPurpose) || typeof candidate.lastFeedback !== 'string' || ![null, 'tutorial-sacrifice', 'weiyan-execution', 'tent-execution', 'safe'].includes(candidate.end))
         throw new Error('存档内容不完整，原记录请保留');
     candidate.displayedRows ??= {};
     if (!candidate.displayedRows || typeof candidate.displayedRows !== 'object' || Array.isArray(candidate.displayedRows)
@@ -99,10 +97,8 @@ export function restoreSessionState(raw: string, context: RestoreContext): GameS
     if (candidate.phase === 'spoken' && !candidate.speech)
         throw new Error('缺少实际表达');
     const executionEnding = candidate.phase === 'death' && candidate.end === 'weiyan-execution';
-    const eraEnding = candidate.phase === 'death' && candidate.end === 'era-arrest';
-    if (candidate.end === 'era-arrest' && (!eraEnding || !candidate.speech?.itemDecision?.eraFailure)) throw new Error('时代失败缺少物品判断');
     if ((candidate.end === 'weiyan-execution' && !executionEnding)
-        || (candidate.phase === 'death' && !['tutorial-sacrifice', 'weiyan-execution', 'tent-execution', 'era-arrest'].includes(candidate.end ?? ''))
+        || (candidate.phase === 'death' && !['tutorial-sacrifice', 'weiyan-execution', 'tent-execution'].includes(candidate.end ?? ''))
         || (candidate.end === 'tutorial-sacrifice' && candidate.phase !== 'death')
         || (candidate.end === 'safe' && !['ending', 'map'].includes(candidate.phase)))
         throw new Error('结局阶段不兼容');
@@ -111,7 +107,7 @@ export function restoreSessionState(raw: string, context: RestoreContext): GameS
         throw new Error('帐外经历缺少告示前置');
     if (candidate.end === 'tent-execution' && (candidate.phase !== 'death' || candidate.tent !== 'dead' || !candidate.finishedSections.includes('notice')))
         throw new Error('帐外结局不完整');
-    if (candidate.phase === 'reply' || candidate.notesReturn === 'reply' || executionEnding || eraEnding) {
+    if (candidate.phase === 'reply' || candidate.notesReturn === 'reply' || executionEnding) {
         const speech = candidate.speech, previous = story.history.at(-1);
         const result = speech?.result, row = result ? context.rows.get(result === 'R1-RETRY' ? 'A-40' : result) : undefined;
         const execution = result === 'execute';
@@ -156,7 +152,7 @@ export function restoreSessionState(raw: string, context: RestoreContext): GameS
         story.flags.P1_OPENED = true;
     if (candidate.panelOpened.includes('P2'))
         story.flags.P2_OPENED = true;
-    if (candidate.round === 2 && (['expression', 'spoken', 'reply'].includes(candidate.phase) || ['expression', 'spoken', 'reply'].includes(candidate.notesReturn ?? '') || executionEnding || eraEnding) && !validAuthorization(story))
+    if (candidate.round === 2 && (['expression', 'spoken', 'reply'].includes(candidate.phase) || ['expression', 'spoken', 'reply'].includes(candidate.notesReturn ?? '') || executionEnding) && !validAuthorization(story))
         throw new Error('交涉缺少本人授权');
     if (candidate.end === 'tutorial-sacrifice' && (candidate.round !== 1 || !story.flags.FIRST_FAILURE_EXPERIENCED))
         throw new Error('首次回溯缺少真实问责经历');
@@ -172,11 +168,13 @@ export function restoreSessionState(raw: string, context: RestoreContext): GameS
         delete candidate.speech.result;
         delete candidate.speech.npcTurn;
         delete candidate.speech.judgmentVersion;
-        delete candidate.speech.itemDecision;
     }
-    restoreSupplyState(candidate, context.grantPhoneReward);
-    candidate.phone = restorePhone(candidate.phone);
-    const restored = clone(candidate);
+    const restored = clone(savedFields(candidate, [...Object.keys(freshSessionState(context.content.version, context.contentVersion)), 'runtimeMode']));
+    restored.story = savedFields(restored.story, [...Object.keys(freshReview(context.content.version)), 'pending']);
+    restored.story.history = restored.story.history.map(entry => savedFields(entry, ['text','feedback','accepted','evidence','npcTurn','round']));
+    if (restored.speech) restored.speech = savedFields(restored.speech, ['text','selected','status','result','npcTurn','judgmentVersion']);
+    restored.composition = savedFields(restored.composition, [...Object.keys(freshComposition()), 'diagnostic', 'previousDraft']);
+    restored.runtimeMode = restored.runtimeMode === 'offline' ? 'offline' : 'ai';
     restored.story.requestSeq = Number.isSafeInteger(story.requestSeq) ? story.requestSeq + 1 : 0;
     return restored;
 }

@@ -1,7 +1,7 @@
 import { GameApi } from '../../../assets/scripts/GameApi';
 import { createSettingsController } from './settings';
 import { createGameUIState } from './ui-state';
-import { readRuntimeMode, readPhonePreference, saveRuntimeMode, setRuntimeConnection } from '../runtime-mode';
+import { readRuntimeMode, saveRuntimeMode, setRuntimeConnection } from '../runtime-mode';
 import { readAiVoiceEnabled, saveAiVoiceEnabled } from '../voice-preference';
 
 /** Reuse the existing settings controller without adding a chapter-specific configuration system. */
@@ -25,7 +25,7 @@ export function openAISetup(onClose: () => void = () => {}) {
     });
     dialog.addEventListener('input', event => {
         const input = event.target as HTMLInputElement;
-        if (input.id === 'game-ai-enabled') settings.setRuntime(input.checked, readPhonePreference());
+        if (input.id === 'game-ai-enabled') settings.setRuntime(input.checked);
     });
     dialog.addEventListener('toggle', event => { if ((event.target as HTMLElement).id === 'api-settings') settings.setDetails((event.target as HTMLDetailsElement).open); }, true);
     dialog.addEventListener('close', () => { settings.close(); dialog.remove(); onClose(); }, { once: true });

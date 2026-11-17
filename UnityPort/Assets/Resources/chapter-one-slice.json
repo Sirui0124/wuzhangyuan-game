@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "chapter": "wuzhang",
+  "entry": "awakening",
+  "sections": [
+    {
+      "id": "awakening",
+      "title": "第六夜 · 醒来",
+      "scene": "camp_gate",
+      "rows": [
+        "A-08",
+        "A-16"
+      ],
+      "nextKind": "phase",
+      "nextId": "explore"
+    },
+    {
+      "id": "notice",
+      "title": "帐前的禁令",
+      "scene": "camp_gate",
+      "rows": [
+        "A-17"
+      ],
+      "nextKind": "phase",
+      "nextId": "explore"
+    },
+    {
+      "id": "first-scout",
+      "title": "急报将至",
+      "scene": "report_post",
+      "rows": [
+        "A-19"
+      ],
+      "nextKind": "phase",
+      "nextId": "choice"
+    },
+    {
+      "id": "first-weiyan",
+      "title": "拦住魏延",
+      "scene": "report_post",
+      "rows": [
+        "A-28",
+        "A-29",
+        "A-30",
+        "A-33",
+        "A-34",
+        "A-37"
+      ],
+      "nextKind": "phase",
+      "nextId": "expression"
+    },
+    {
+      "id": "scout-option-a",
+      "title": "向斥候问清",
+      "scene": "report_post",
+      "rows": [
+        "A-23",
+        "A-24"
+      ],
+      "nextKind": "phase",
+      "nextId": "explore"
+    },
+    {
+      "id": "scout-option-b",
+      "title": "向斥候问清",
+      "scene": "report_post",
+      "rows": [
+        "A-23B",
+        "A-24B"
+      ],
+      "nextKind": "phase",
+      "nextId": "explore"
+    }
+  ],
+  "rows": [
+    {
+      "id": "A-08",
+      "speaker": "我（心声）",
+      "text": "五丈原……第六夜。",
+      "clue": ""
+    },
+    {
+      "id": "A-16",
+      "speaker": "我（心声）",
+      "text": "魏延还没来。先看看帐前的告示。",
+      "clue": ""
+    },
+    {
+      "id": "A-17",
+      "speaker": "告示",
+      "text": "今夜帐内有要事，闲人不得擅入。",
+      "clue": "C06"
+    },
+    {
+      "id": "A-19",
+      "speaker": "斥候",
+      "text": "魏兵正在向营前逼近，魏将军马上就到，要入帐禀报。",
+      "clue": ""
+    },
+    {
+      "id": "A-23",
+      "speaker": "我（选项）",
+      "text": "营门失守了？",
+      "clue": ""
+    },
+    {
+      "id": "A-24",
+      "speaker": "斥候",
+      "text": "敌骑还在营外，没碰鹿角，也没见步卒跟进。前哨守得住。",
+      "clue": "T02"
+    },
+    {
+      "id": "A-23B",
+      "speaker": "我（选项）",
+      "text": "不行，今晚谁都不能进",
+      "clue": ""
+    },
+    {
+      "id": "A-24B",
+      "speaker": "斥候",
+      "text": "那便请你向魏将军说清楚。",
+      "clue": ""
+    },
+    {
+      "id": "A-28",
+      "speaker": "魏延",
+      "text": "军情紧急，我须入帐通报。",
+      "clue": ""
+    },
+    {
+      "id": "A-29",
+      "speaker": "我",
+      "text": "将军留步，帐前有禁令，今夜非要事不得入",
+      "clue": ""
+    },
+    {
+      "id": "A-30",
+      "speaker": "魏延",
+      "text": "我就是要事。",
+      "clue": ""
+    },
+    {
+      "id": "A-33",
+      "speaker": "魏延",
+      "text": "魏军都到营前了，他们还在阵前叫嚷：“诸葛亮怎么不出来了？”",
+      "clue": ""
+    },
+    {
+      "id": "A-34",
+      "speaker": "魏延",
+      "text": "还在问：“蜀军如今是谁发令？”",
+      "clue": "C05"
+    },
+    {
+      "id": "A-37",
+      "speaker": "魏延",
+      "text": "你既要拦我，便说清如何不误通报。",
+      "clue": ""
+    }
+  ],
+  "actions": [
+    {
+      "id": "read-notice",
+      "label": "查看告示",
+      "description": "",
+      "scene": "camp_gate",
+      "round": 1,
+      "section": "notice",
+      "requires": [
+        "awakening"
+      ],
+      "x": 71,
+      "y": 40
+    },
+    {
+      "id": "meet-first-scout",
+      "label": "询问斥候",
+      "description": "营前有人带回急报。",
+      "scene": "report_post",
+      "round": 1,
+      "section": "first-scout",
+      "requires": [
+        "notice"
+      ],
+      "x": 30,
+      "y": 46
+    },
+    {
+      "id": "intercept-first",
+      "label": "迎上魏延",
+      "description": "魏延正要向中军帐走去。",
+      "scene": "report_post",
+      "round": 1,
+      "section": "first-weiyan",
+      "requires": [
+        "first-scout"
+      ],
+      "x": 72,
+      "y": 45
+    }
+  ],
+  "scenes": [
+    {
+      "id": "camp_gate",
+      "title": "中军帐前",
+      "description": "帐帘垂着，里面仍有灯光。",
+      "routes": [
+        "report_post",
+        "jiangwei_tent_front"
+      ]
+    },
+    {
+      "id": "report_post",
+      "title": "营前传报处",
+      "description": "号角声落了，远处仍有马蹄。",
+      "routes": [
+        "camp_gate",
+        "jiangwei_tent_front"
+      ]
+    }
+  ],
+  "choices": [
+    {
+      "id": "a",
+      "row": "A-23",
+      "section": "scout-option-a"
+    },
+    {
+      "id": "b",
+      "row": "A-23B",
+      "section": "scout-option-b"
+    }
+  ],
+  "contentHash": "6f9f9c26c9ecbe27e7776675da3a758a432cc116bd46fec61fb6edbc516191f9"
+}

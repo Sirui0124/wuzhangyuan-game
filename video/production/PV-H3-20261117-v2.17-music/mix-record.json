@@ -1,0 +1,77 @@
+{
+  "version": "v2.17",
+  "authorization": "用户明确授权嵌入指定配乐并直接替换第四章PV",
+  "source_film": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\yiling-opening-v2.16-20261117.mp4",
+  "music": "C:\\Users\\zhousirui\\Downloads\\用户5806 - Silence Before the Storm.mp3",
+  "music_sha256": "eda1edcdddfb18c829f1e0f1e08d7604ec83bedfc881a424f78424c8548c30c7",
+  "music_excerpt": [
+    0,
+    75.83333333333333
+  ],
+  "gain_points_db": [
+    [
+      0,
+      -60
+    ],
+    [
+      2,
+      -16
+    ],
+    [
+      4,
+      -23
+    ],
+    [
+      4.7,
+      -26
+    ],
+    [
+      20.5,
+      -26
+    ],
+    [
+      22.5,
+      -10
+    ],
+    [
+      36.5,
+      -10
+    ],
+    [
+      39.4,
+      -18
+    ],
+    [
+      45.8,
+      -18
+    ],
+    [
+      47.2,
+      -27
+    ],
+    [
+      73.8,
+      -27
+    ],
+    [
+      75.83333333333333,
+      -80
+    ]
+  ],
+  "dialogue_environment_gain": 1,
+  "picture": "stream-copy unchanged",
+  "film": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.17-music\\夷陵撤离与认印托付-PV-v2.17-配乐版.mp4",
+  "sha256": "a9de1d29b67a0856432c7fb41d78b54ada2d0da9f5136b609da3dc83e8f376e0",
+  "status": "待review",
+  "verification_note": "声量包络和技术检查不等同人工听审",
+  "checks": {
+    "picture_bitstream_identical_to_v216": true,
+    "video_bitstream_sha256": "e5ff925c889adfcf26b306dd49203f8a6a666b3f45605f7bcabe6acbb767b41a",
+    "duration": 75.834,
+    "decoded_audio_peak_dbfs": -2.1,
+    "decoded_audio_mean_dbfs": -24.9,
+    "build": "passed",
+    "browser": "复跑通过双入口、自然结束、跳过、刷新、重看与restart开场；首轮出现一次未定位的hidden空节点异常，增加堆栈记录后未复现。",
+    "live_8812": "实际章节模块已引用v2.17"
+  }
+}

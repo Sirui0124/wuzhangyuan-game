@@ -34,8 +34,6 @@
     "check:architecture": "node tools/architecture/check.mjs",
     "test:architecture": "node --test tools/architecture/check.test.mjs",
     "test:characters": "node tools/migration/characters-smoke.mjs",
-    "test:personality": "node --test GameStarter/tests/personality-core.test.mjs GameStarter/tests/personality-module.test.mjs GameStarter/tests/personality-assess.test.mjs GameStarter/server/personality.test.mjs",
-    "test:personality:browser": "node GameStarter/tests/personality.browser.mjs && node GameStarter/tests/chapter-three-personality.browser.mjs",
     "test:pangtong": "node --test GameStarter/tests/chapter-seven-session.test.mjs && node tools/migration/chapter-seven-smoke.mjs",
     "test:subtitles": "node --test tools/video/*.test.mjs",
     "test:rescue": "npm --prefix demos/yiling-rescue test",
@@ -44,7 +42,13 @@
     "test:chapters:browser": "node tools/migration/chapter-two-films-smoke.mjs && node tools/migration/chapter-three-endings-smoke.mjs && node tools/migration/jieting-deployment-smoke.mjs && node tools/migration/jieting-five-round-smoke.mjs",
     "test:release:browser": "npm run test:stability:browser && npm run test:chapters:browser",
     "verify:daily": "npm run check && npm --prefix GameStarter run build:demo && npm run test:smoke",
-    "test:ai-guidance": "node tools/migration/ai-guidance-smoke.mjs"
+    "test:ai-guidance": "node tools/migration/ai-guidance-smoke.mjs",
+    "build:windows": "node GameStarter/packaging/windows/quick-build.mjs",
+    "unity:sync": "node tools/unity/export-slice.mjs",
+    "test:unity-core": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/unity/test-core.ps1 && node tools/unity/parity.mjs",
+    "build:mac-web": "node tools/release/build-mac-web.mjs",
+    "build:delivery": "node tools/release/build-delivery.mjs",
+    "publish:github": "node tools/release/publish-github.mjs"
   },
   "devDependencies": {
     "playwright": "1.56.1",

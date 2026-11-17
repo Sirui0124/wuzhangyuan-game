@@ -14,8 +14,8 @@ import {fixedJudgment} from '../web-demo/.build/GameStarter/web-demo/src/chapter
 const read=p=>JSON.parse(readFileSync(new URL('../../content/chapters/'+p,import.meta.url)));
 const third=read('jieting/chapter-three.story.json'),grain=read('grain/chapter-two.films.json'),rubric=read('grain/chapter-two.films-rubric.json');
 const memory=()=>{const data=new Map();return {getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};};
-test('27 new cards keep story-owned ending titles and distinct early/late case records',()=>{
- const cards=extraAchievementCatalog(third);assert.equal(cards.length,27);assert.equal(milestoneAchievements.length,12);assert.equal(new Set(cards.map(e=>e.id)).size,cards.length);
+test('22 narrative cards keep story-owned ending titles and distinct early/late case records',()=>{
+ const cards=extraAchievementCatalog(third);assert.equal(cards.length,22);assert.equal(milestoneAchievements.length,9);assert.equal(new Set(cards.map(e=>e.id)).size,cards.length);
  for(const e of third.endings){const card=cards.find(c=>c.id==='jieting-'+e.id);assert.equal(card.title,e.title);assert.equal(card.description,e.description);}
  assert.equal(cards.filter(e=>e.title==='认下来的罪').length,2);
 });
@@ -58,10 +58,8 @@ test('real grain route awards reading and letter milestones only after their sce
  assert.equal(beforeLetter,true);assert.equal(s.current.ending,'E1');const ids=grainAchievementIds(s);for(const id of ['grain-dates','grain-ledgers','grain-letter','grain-E1'])assert.ok(ids.includes(id),id);
 });
 
-test('first-chapter memorials follow the actual rewind, questioning, gift and pickup',async()=>{
+test('first-chapter memorials follow the actual rewind and questioning',async()=>{
  const f=await dialogueFixtures(fileURLToPath(new URL('../web-demo/.build/',import.meta.url)));
  assert.deepEqual(chapterOneAchievementIds(f.first().snapshot()),[]);
- const s=await f.thoughts();assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-second-night'));assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-inquiry'));assert.ok(!chapterOneAchievementIds(s.snapshot()).includes('wuzhang-headscarf'));
- const before=s.serialize();s.closeNotes();s.move('camp_gate');assert.ok(s.pickUpCup());assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-wine-cup'));
- s.restore(before);s.think();s.continueThought();s.placeThought('C06');s.placeThought('C07');s.think();assert.ok(s.followPlan());f.read(s);assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-headscarf'));
+ const s=await f.thoughts();assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-second-night'));assert.ok(chapterOneAchievementIds(s.snapshot()).includes('wuzhang-inquiry'));
 });

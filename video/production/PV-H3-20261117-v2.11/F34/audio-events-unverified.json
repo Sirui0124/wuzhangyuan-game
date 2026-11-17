@@ -1,0 +1,61 @@
+{
+  "source_sha256": "0f3923723d1e814a9b8f15e5931fefdd4bec749127ca0dc6508f88267384d5de",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Vehicle",
+          "p": 0.3737
+        },
+        {
+          "label": "Aircraft",
+          "p": 0.0814
+        },
+        {
+          "label": "Engine",
+          "p": 0.0673
+        },
+        {
+          "label": "Car",
+          "p": 0.0577
+        },
+        {
+          "label": "Helicopter",
+          "p": 0.0487
+        },
+        {
+          "label": "Flap",
+          "p": 0.0457
+        },
+        {
+          "label": "Vibration",
+          "p": 0.045
+        },
+        {
+          "label": "Idling",
+          "p": 0.0439
+        },
+        {
+          "label": "Heavy engine (low frequency)",
+          "p": 0.0427
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0387
+        },
+        {
+          "label": "Motorcycle",
+          "p": 0.0324
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0265
+        }
+      ],
+      "music": 0.0028
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /* Warm ink and fine paper grain for the shared game dialogs. Phone keeps its own shell. */
-:root[data-ui-theme=xuan] #game-root .game-modal-shade:not(.phone-shade){background:radial-gradient(ellipse at center,#13110e30,#100f0d8a);backdrop-filter:blur(2px)}
+:root[data-ui-theme=xuan] #game-root .game-modal-shade{background:radial-gradient(ellipse at center,#13110e30,#100f0d8a);backdrop-filter:blur(2px)}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{
  --panel-paper:#25231ff5;--panel-ink:#eee3cf;--panel-muted:#b9ad97;--panel-accent:#b89a68;--panel-jade:#c6b38c;--panel-edge:#b99b624d;
  background-color:var(--panel-paper);background-image:url('/ui/panel-grain.svg'),radial-gradient(ellipse at 12% 0,#aa885c19,transparent 60%),linear-gradient(120deg,#302d27a6,#201f1cf2 80%);
@@ -33,8 +33,6 @@
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-cover{background:#191713}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-leaf.is-empty{background:#15131033;border-color:#b19a6930}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-leaf.is-empty .save-cover{background:url('/ui/panel-grain.svg'),linear-gradient(145deg,#51483744,#1e1b1626);color:#a89b81}
-:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .supply-card{background:linear-gradient(135deg,#aa885c12,#19171380);border-color:#b19a6944;border-radius:2px}
-:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .supply-card button{background:#cbb58a;color:#29251e;border-color:#b99b6270;border-radius:2px}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-badge{background:#27231ce8;color:#e1cca1}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-location{color:#d1c4ab}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .history-content small{color:#c4a77a}

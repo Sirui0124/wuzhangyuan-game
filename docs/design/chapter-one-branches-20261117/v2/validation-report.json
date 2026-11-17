@@ -1,0 +1,473 @@
+{
+  "source": "chapter-one.design.v2.json",
+  "sha256": "bec2b5ef0e7aeb9806f366aba0e7add442da9237d6679612f45b17789e636242",
+  "status": "静态图与状态路径检查通过，未接入游戏或真实模型，待用户审阅对白",
+  "nodes": 42,
+  "reachableStates": 129,
+  "endings": [
+    "E-COOP",
+    "E-DEATH",
+    "E-FORMAL",
+    "E-LAMP"
+  ],
+  "checks": [
+    "节点编号唯一",
+    "全部内部出口有效",
+    "选择与结局节点各两个按钮",
+    "所有节点状态可达",
+    "条件出口无重叠无缺口",
+    "全部可达状态能结束阅读",
+    "缺当值提示不可成功或转灯灭",
+    "成功前已实际应允接报回令",
+    "死亡后才开放第二轮守卫问题"
+  ],
+  "routeTests": {
+    "首轮默认禁令问题后死亡": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-GUARD-RULE",
+        "C01-GUARD-NEXT",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-FAIL-HANDOFF",
+        "C01-FAIL-NIGHT",
+        "C01-FAIL-JUDGMENT",
+        "C01-FAIL-SENTENCE",
+        "C01-END-DEATH"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": false,
+        "jiangAgreed": false,
+        "metWei": true,
+        "enteredWithoutDuty": true,
+        "stance": "unset",
+        "reportHandled": false,
+        "orderDelivered": false
+      }
+    },
+    "首轮默认敌情问题后死亡": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-GUARD-ENEMY",
+        "C01-GUARD-NEXT",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-ORDER",
+        "C01-GATE-PLAN",
+        "C01-FAIL-HANDOFF",
+        "C01-FAIL-NIGHT",
+        "C01-FAIL-JUDGMENT",
+        "C01-FAIL-SENTENCE",
+        "C01-END-DEATH"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": false,
+        "jiangAgreed": false,
+        "metWei": true,
+        "enteredWithoutDuty": true,
+        "stance": "unset",
+        "reportHandled": false,
+        "orderDelivered": false
+      }
+    },
+    "两个默认问题都问仍不获得姜维": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-GUARD-RULE",
+        "C01-GUARD-NEXT",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-GUARD-ENEMY",
+        "C01-GUARD-NEXT",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-WEI-WAIT",
+        "C01-GATE-PLAN",
+        "C01-FAIL-HANDOFF",
+        "C01-FAIL-NIGHT",
+        "C01-FAIL-JUDGMENT",
+        "C01-FAIL-SENTENCE",
+        "C01-END-DEATH"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": false,
+        "jiangAgreed": false,
+        "metWei": true,
+        "enteredWithoutDuty": true,
+        "stance": "unset",
+        "reportHandled": false,
+        "orderDelivered": false
+      }
+    },
+    "自由问出姜维先取得承诺首轮合作成功": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-HINT-JIANG",
+        "C01-JIANG",
+        "C01-JIANG-BOUND",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-WEI-TEST",
+        "C01-REPORT-COOP",
+        "C01-REPORT",
+        "C01-ORDER-FRONT",
+        "C01-DAWN",
+        "C01-GATE-SUCCESS",
+        "C01-END-COOP"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": true,
+        "jiangAgreed": true,
+        "metWei": true,
+        "enteredWithoutDuty": false,
+        "stance": "cooperate",
+        "reportHandled": true,
+        "orderDelivered": true
+      }
+    },
+    "知道当值先见魏延再请姜维成功": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-HINT-JIANG",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-ORDER",
+        "C01-GATE-PLAN",
+        "C01-WEI-ASK-JIANG",
+        "C01-JIANG",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-REPORT-FORMAL",
+        "C01-REPORT",
+        "C01-ORDER-TENT",
+        "C01-DAWN",
+        "C01-GATE-SUCCESS",
+        "C01-END-FORMAL"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": true,
+        "jiangAgreed": true,
+        "metWei": true,
+        "enteredWithoutDuty": false,
+        "stance": "formal",
+        "reportHandled": true,
+        "orderDelivered": true
+      }
+    },
+    "收回过度保证仍可首轮成功": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-HINT-JIANG",
+        "C01-JIANG",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-WEI-WAIT",
+        "C01-GATE-PLAN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-WEI-TEST",
+        "C01-WEI-REPAIR",
+        "C01-REPORT-COOP",
+        "C01-REPORT",
+        "C01-ORDER-TENT",
+        "C01-DAWN",
+        "C01-GATE-SUCCESS",
+        "C01-END-COOP"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": true,
+        "jiangAgreed": true,
+        "metWei": true,
+        "enteredWithoutDuty": false,
+        "stance": "cooperate",
+        "reportHandled": true,
+        "orderDelivered": true
+      }
+    },
+    "过度保证后主动让路导致灯灭": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-HINT-JIANG",
+        "C01-JIANG",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-WEI-TEST",
+        "C01-WEI-REPAIR",
+        "C01-END-LAMP"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": true,
+        "jiangAgreed": true,
+        "metWei": true,
+        "enteredWithoutDuty": false,
+        "stance": "unset",
+        "reportHandled": false,
+        "orderDelivered": false
+      }
+    },
+    "死亡回溯后默认正确问题通关": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-GUARD-RULE",
+        "C01-GUARD-NEXT",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-FAIL-HANDOFF",
+        "C01-FAIL-NIGHT",
+        "C01-FAIL-JUDGMENT",
+        "C01-FAIL-SENTENCE",
+        "C01-END-DEATH",
+        "C01-REWIND",
+        "C01-GATE-GUARD",
+        "C01-GUARD-2",
+        "C01-HINT-JIANG",
+        "C01-JIANG",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-WEI-TEST",
+        "C01-REPORT-COOP",
+        "C01-REPORT",
+        "C01-ORDER-TENT",
+        "C01-DAWN",
+        "C01-GATE-SUCCESS",
+        "C01-END-COOP",
+        "C01-EPILOGUE",
+        "C01-NEXT-CHAPTER"
+      ],
+      "state": {
+        "deathSeen": true,
+        "knowsJiang": true,
+        "jiangAgreed": true,
+        "metWei": true,
+        "enteredWithoutDuty": false,
+        "stance": "cooperate",
+        "reportHandled": true,
+        "orderDelivered": true
+      }
+    },
+    "灯灭重试不冒充死亡解锁提示": {
+      "nodes": [
+        "C01-OPEN",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1",
+        "C01-HINT-JIANG",
+        "C01-JIANG",
+        "C01-GATE-WEI-RETURN",
+        "C01-WEI-ENTRY",
+        "C01-WEI-OPEN",
+        "C01-WEI-REPORT",
+        "C01-GATE-PLAN",
+        "C01-WEI-ARRANGEMENT",
+        "C01-WEI-TEST",
+        "C01-WEI-REPAIR",
+        "C01-END-LAMP",
+        "C01-REWIND-LAMP",
+        "C01-GATE-GUARD",
+        "C01-GUARD-1"
+      ],
+      "state": {
+        "deathSeen": false,
+        "knowsJiang": false,
+        "jiangAgreed": false,
+        "metWei": false,
+        "enteredWithoutDuty": false,
+        "stance": "unset",
+        "reportHandled": false,
+        "orderDelivered": false
+      }
+    }
+  },
+  "predecessors": {
+    "C01-OPEN": [
+      "C01-END-COOP",
+      "C01-END-FORMAL"
+    ],
+    "C01-GATE-GUARD": [
+      "C01-GUARD-NEXT",
+      "C01-OPEN",
+      "C01-REWIND",
+      "C01-REWIND-LAMP"
+    ],
+    "C01-GUARD-1": [
+      "C01-GATE-GUARD"
+    ],
+    "C01-GUARD-2": [
+      "C01-GATE-GUARD"
+    ],
+    "C01-GUARD-RULE": [
+      "C01-GUARD-1",
+      "C01-GUARD-2"
+    ],
+    "C01-GUARD-ENEMY": [
+      "C01-GUARD-1",
+      "C01-GUARD-2"
+    ],
+    "C01-GUARD-OTHER": [
+      "C01-GUARD-1",
+      "C01-GUARD-2"
+    ],
+    "C01-GUARD-NEXT": [
+      "C01-GUARD-ENEMY",
+      "C01-GUARD-OTHER",
+      "C01-GUARD-RULE"
+    ],
+    "C01-HINT-JIANG": [
+      "C01-GUARD-1",
+      "C01-GUARD-2"
+    ],
+    "C01-JIANG": [
+      "C01-HINT-JIANG",
+      "C01-WEI-ASK-JIANG"
+    ],
+    "C01-JIANG-BOUND": [
+      "C01-JIANG"
+    ],
+    "C01-GATE-WEI-RETURN": [
+      "C01-JIANG",
+      "C01-JIANG-BOUND"
+    ],
+    "C01-WEI-ENTRY": [
+      "C01-GATE-WEI-RETURN",
+      "C01-GUARD-NEXT",
+      "C01-HINT-JIANG"
+    ],
+    "C01-WEI-OPEN": [
+      "C01-WEI-ENTRY"
+    ],
+    "C01-WEI-REPORT": [
+      "C01-WEI-OPEN",
+      "C01-WEI-ORDER"
+    ],
+    "C01-WEI-ORDER": [
+      "C01-WEI-OPEN"
+    ],
+    "C01-WEI-WAIT": [
+      "C01-WEI-REPORT"
+    ],
+    "C01-GATE-PLAN": [
+      "C01-WEI-ORDER",
+      "C01-WEI-REPORT",
+      "C01-WEI-WAIT"
+    ],
+    "C01-WEI-ASK-JIANG": [
+      "C01-GATE-PLAN"
+    ],
+    "C01-FAIL-HANDOFF": [
+      "C01-GATE-PLAN"
+    ],
+    "C01-FAIL-NIGHT": [
+      "C01-FAIL-HANDOFF"
+    ],
+    "C01-FAIL-JUDGMENT": [
+      "C01-FAIL-NIGHT"
+    ],
+    "C01-FAIL-SENTENCE": [
+      "C01-FAIL-JUDGMENT"
+    ],
+    "C01-END-DEATH": [
+      "C01-FAIL-SENTENCE"
+    ],
+    "C01-REWIND": [
+      "C01-END-DEATH"
+    ],
+    "C01-WEI-ARRANGEMENT": [
+      "C01-GATE-PLAN",
+      "C01-GATE-WEI-RETURN"
+    ],
+    "C01-REPORT-FORMAL": [
+      "C01-WEI-ARRANGEMENT"
+    ],
+    "C01-WEI-TEST": [
+      "C01-WEI-ARRANGEMENT"
+    ],
+    "C01-WEI-REPAIR": [
+      "C01-WEI-TEST"
+    ],
+    "C01-REPORT-COOP": [
+      "C01-WEI-REPAIR",
+      "C01-WEI-TEST"
+    ],
+    "C01-REPORT": [
+      "C01-REPORT-COOP",
+      "C01-REPORT-FORMAL"
+    ],
+    "C01-ORDER-FRONT": [
+      "C01-REPORT"
+    ],
+    "C01-ORDER-TENT": [
+      "C01-REPORT"
+    ],
+    "C01-DAWN": [
+      "C01-ORDER-FRONT",
+      "C01-ORDER-TENT"
+    ],
+    "C01-GATE-SUCCESS": [
+      "C01-DAWN"
+    ],
+    "C01-END-FORMAL": [
+      "C01-GATE-SUCCESS"
+    ],
+    "C01-END-COOP": [
+      "C01-GATE-SUCCESS"
+    ],
+    "C01-END-LAMP": [
+      "C01-WEI-REPAIR"
+    ],
+    "C01-REWIND-LAMP": [
+      "C01-END-LAMP"
+    ],
+    "C01-EPILOGUE": [
+      "C01-END-COOP",
+      "C01-END-FORMAL"
+    ],
+    "C01-NEXT-CHAPTER": [
+      "C01-EPILOGUE"
+    ],
+    "C01-EXIT": [
+      "C01-END-DEATH",
+      "C01-END-LAMP",
+      "C01-EPILOGUE"
+    ]
+  }
+}

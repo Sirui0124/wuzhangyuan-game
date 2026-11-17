@@ -13,14 +13,12 @@ const { GRAIN_SAVE_KEY }=await built('chapters/chapter-two/navigation.js');
 const { createJietingPlaytest }=await built('chapters/chapter-three/session.js');
 const read = p => JSON.parse(readFileSync(p, 'utf8'));
 const first = read(resolve(build,'playtest/weiyan-second.json'));
-first.supplies = { version:2, rewards:['weiyan-action'], legacyPurchases:['flashlight','batteries','radio-pair'], purchases:['flashlight','batteries','radio-pair'], attached:[], agreement:null };
 first.story.selected = [];
 const one = new ChapterSession(read('content/chapters/wuzhang/chapter-one.script.json'), read('content/chapters/wuzhang/chapter-one.flow.json'), first.contentVersion); one.restore(JSON.stringify(first));
 const two = new GrainSession(read('content/chapters/grain/chapter-two.films.json'), undefined, read('content/chapters/grain/chapter-two.films-rubric.json'), true);
 for (let i=0;i<100 && two.current.kind!=='open';i++) assert.ok(two.advance(two.current.options?.[0]?.id));
-two.unlockPhone(); two.state.supplies.purchases=['flashlight','batteries','radio-pair']; two.state.supplies.legacyPurchases=[...two.state.supplies.purchases];
-const three=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:true,phoneAllowed:true});
-three.state.supplies.worldItems={acquired:['fuhu-wood-tiger'],sold:['fuhu-wood-tiger']};three.state.supplies.purchases=['flashlight','batteries'];
+
+const three=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:true});
 const output=resolve(process.env.MOBILE_OUTPUT ?? 'outputs/release-fixes-20261027/ui'); mkdirSync(output,{recursive:true});
 // Diagnostic mode reads only source CSS and the standalone viewport helper.
 // The default verifies the real unified build without overriding its files.
@@ -55,11 +53,8 @@ try {
   assert.ok(await page.locator('.thought-inventory').evaluate(e=>e.clientWidth>=240),'Readable clue column');
   await page.locator('.thought-inventory .inventory-row').first().click();await reachable('.thought-detail-popover');await shot('clues');
   await page.locator('.speech-add-item').click();await reachable('.thought-inventory .inventory-place');await page.locator('.thought-inventory .inventory-place').first().click();await shot('items');
-  assert.equal(await page.locator('.phone-launcher').evaluate(e=>getComputedStyle(e).position),'static','Phone entry stays in navigation');
   assert.ok(await page.locator('.game-hud nav button').evaluateAll(nodes=>nodes.every(e=>{const r=e.getBoundingClientRect();return r.height<55&&r.left>=0&&r.right<=innerWidth;})),'Navigation stays on one line');
   await reachable('.confirm-expression');
-  await page.locator('.phone-launcher').click();await page.locator('#shopping-query').fill('手机横屏输入检查，不发送');await reachable('.phone-send');await shot('phone');
-  await page.setViewportSize({width,height:220});await reachable('#shopping-query');await reachable('.phone-send');await shot('keyboard-phone');
   await page.locator('.phone-header [data-action=close-modal]').click();await page.locator('#player-expression').fill('发言输入检查，不发送');await reachable('#player-expression');await reachable('.confirm-expression');await shot('keyboard-expression');
   assert.ok(await page.locator('#player-expression').evaluate(e=>{const r=e.getBoundingClientRect(),button=document.querySelector('.confirm-expression').getBoundingClientRect();return r.height>=80&&r.top>=0&&r.bottom<=button.top+1&&button.bottom<=innerHeight;}),'Editor and Send fit together above keyboard');
   await page.setViewportSize({width,height});await page.locator('[data-action=pause]').first().click();await reachable('.pause-actions [data-action=pause-restart]');await reachable('.pause-actions [data-action=pause-home]');await shot('pause');

@@ -1,5 +1,4 @@
 import type { RuntimeMode } from '../runtime-mode';
-import { itemSystemEnabled, saveItemSystemEnabled, readRuntimePreference } from '../runtime-mode';
 import type { GameApi } from '../../../assets/scripts/GameApi';
 import type { GameAudio } from '../audio';
 import type { GameUIState } from './ui-state';
@@ -17,7 +16,7 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
         }
     }
     function settingsHTML() {
-        return settingsPanelHTML({ runtimeMode: runtime.get(), itemSystemEnabled: itemSystemEnabled(), music: audio.volume('music'), sfx: audio.volume('sfx'), aiVoiceEnabled: voice.isEnabled(),
+        return settingsPanelHTML({ runtimeMode: runtime.get(), music: audio.volume('music'), sfx: audio.volume('sfx'), aiVoiceEnabled: voice.isEnabled(),
             apiLoaded, apiSaving, apiDetailsOpen, apiConfig: initialApiSettings, apiStatus, initialSetup, aiOnly: options.aiOnly });
     }
     function openSettings(focusAI = false, firstRun = false) {
@@ -52,15 +51,9 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
         } finally { apiSaving = false; render(); }
     }
     return { settingsHTML, openSettings, saveApiSettings,
-        setRuntime(ai: boolean, _phone: boolean) {
+        setRuntime(ai: boolean) {
             captureApiFields();
             runtime.set(!ai ? 'offline' : 'ai');
-            render();
-        },
-        setItemSystem(enabled: boolean) {
-            captureApiFields();
-            if (!saveItemSystemEnabled(enabled)) { ui.storageWarning = '系统设置暂未保存，请重试。'; render(); return; }
-            runtime.set(readRuntimePreference() === 'offline' ? 'offline' : 'ai');
             render();
         },
         setVoiceEnabled(enabled: boolean) { voice.setEnabled(enabled); },

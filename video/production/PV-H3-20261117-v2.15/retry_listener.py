@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,hashlib
+R=Path(__file__).resolve().parent;d=R/'L02R';d.mkdir(exist_ok=True)
+p='''6 seconds, 16:9 live-action historical film. Animate the supplied still as a QUIET LISTENING REACTION SHOT. Same exact elderly Chinese man Liu Bei, same face, armor, cloak, tent, lamp and table. Camera is fixed at his eye level. His lips remain completely CLOSED for all six seconds. He NEVER speaks, NEVER smiles, never nods repeatedly. At first eyes glance down below the camera, then slowly look toward the viewer, one natural breath and one blink, subtle troubled attentive expression. This shot contains NO dialogue in its audio at all. No other person speaks. No narration. No music or BGM. Only low wind, cloth and breathing. No extra movement or action. No hands entering foreground. No letters, scrolls or documents are given to him. No object is passed. The tabletop remains as in reference, nothing rises in front of it. Do not introduce a token or seal in this shot. No subtitles, no captions, no printed text. Maintain face and natural lighting with warm lamp at right and dark blue predawn at left. This is a human silent reaction insert to be edited under separately recorded off-screen dialogue; DO NOT generate that dialogue, DO NOT lip sync any sound. 唯一允许发声的原句：无。'''
+refs=[str(R/'references/L02-刘备倾听.png')]
+(d/'prompt.txt').write_text(p,'utf-8');(d/'references.json').write_text(json.dumps(refs,ensure_ascii=False),'utf-8');(d/'视频生成Prompt.md').write_text('# L02R｜静默倾听修订\n\nL02已取得原片但出现文书和错误口型，停止选用画面。本请求新编号；6秒，H3 768P，16:9。玩家画外声音后期单独配入。\n\n参考图：'+refs[0]+'\n\n'+p,'utf-8')
+plan=json.loads((R/'production-plan.json').read_text('utf-8'))
+for u in plan['units']:
+ if u['id']=='L02':u.update(selected_for_edit=False,video_status='待更新',rejection='无授权文书与倾听者错误口型')
+if not any(u['id']=='L02R' for u in plan['units']):plan['units'].append(dict(id='L02R',title='静默倾听修订',duration=6,edit_duration=6,depends_on=None,reference_paths=refs,prompt_status='待review',video_status='待生成',prompt_path=str(d/'视频生成Prompt.md'),request_prompt_sha256=hashlib.sha256(p.encode()).hexdigest()))
+(R/'production-plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),'utf-8')
+(R/'L02/review.json').write_text(json.dumps(dict(technical='pass',method='2fps联系表目视',motion_review='reject',user_review='待review',selected_for_work_edit=False,notes=['新增无授权文书','刘备错误承担玩家口型，后半段出现笑容']),ensure_ascii=False,indent=2),'utf-8')

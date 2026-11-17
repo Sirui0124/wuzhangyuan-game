@@ -10,6 +10,7 @@
 **/*.pfx
 # Dependencies, Cocos caches, generated builds
 **/node_modules/
+/.local-tools/
 **/library/
 **/temp/
 **/local/
@@ -40,3 +41,12 @@ Desktop.ini
 /source-art/audio/bgm/prepared/
 /source-art/audio/bgm/previews/
 /source-art/audio/sfx/sfx/
+
+# Independent Unity migration project
+/UnityPort/[Ll]ibrary/
+/UnityPort/[Tt]emp/
+/UnityPort/[Oo]bj/
+/UnityPort/[Ll]ogs/
+/UnityPort/UserSettings/
+/UnityPort/*.csproj
+/UnityPort/*.sln

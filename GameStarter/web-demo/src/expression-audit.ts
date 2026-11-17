@@ -17,7 +17,7 @@ export function expressionAuditTargets(brief: ExpressionBrief): ExpressionAuditT
     };
 }
 
-const labels = { intent: '改变了你的表达意思', actors: '人物或物品归属不一致', facts: '加入了缺少依据的内容', items: '物品说明不准确', coverage: '遗漏了选中的线索' } as const;
+const labels = { intent: '改变了你的表达意思', actors: '人物关系不一致', facts: '加入了缺少依据的内容', coverage: '遗漏了选中的线索' } as const;
 export type ExpressionDiagnostic = { kind: 'content' | 'format'; issues: string[]; reason: string; candidate: string };
 export class ExpressionInputConflictError extends ExpressionSafetyError {
     constructor() { super('补充说明与准备说的话有不一致之处，本次未替换原稿。请先改好其中一处。'); }
@@ -35,7 +35,7 @@ export function checkExpressionAudit(value: unknown, candidate: string, requireI
     const keys = Object.keys(labels), valid = !!a && typeof a === 'object' && a.checks
         && keys.every(key => typeof a.checks![key] === 'boolean');
     const issues = valid ? keys.filter(key => a!.checks![key] === false) : [];
-    // The five checks are authoritative; do not require duplicate approval or prose on success.
+    // The four checks are authoritative; do not require duplicate approval or prose on success.
     // A legacy explicit veto with all-positive checks is ambiguous, so request a fresh audit.
     if (!valid || (requireInputConflictCheck && typeof a!.inputConflict !== 'boolean') || (!issues.length && a!.supported === false)) throw new ExpressionAuditError({
         kind: 'format', issues: [], reason: '审核结果缺少有效字段，或分项与总体结论不一致。', candidate,

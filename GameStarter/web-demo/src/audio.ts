@@ -1,3 +1,4 @@
+import { filmOwnsSound, FILM_FOCUS_EVENT } from './film-focus';
 export type Sound = 'ui_click_a' | 'ui_click_b' | 'dialogue_next' | 'panel_open' | 'panel_close' | 'paper_turn' | 'evidence_select' | 'evidence_present' | 'evidence_gain' | 'submit' | 'ui_warning' | 'response_ready';
 import { readFilmAudio, saveFilmAudio } from './film-audio';
 export type Music = 'home' | 'round1' | 'round2' | 'weiyan';
@@ -29,6 +30,7 @@ export class GameAudio {
     private musicVoices = new Set<{ source: AudioBufferSourceNode; gain: GainNode }>();
     private musicRequest = 0;
     private musicPaused = false;
+    private filmVisible = false;
     private pageInactive = document.hidden;
     private musicPosition: { id: Music; offset: number } | null = null;
     private cachedMusic: { src: string; promise: Promise<AudioBuffer | null> } | null = null;
@@ -53,6 +55,12 @@ export class GameAudio {
             for (const src of Object.values(m.sfx)) if (src) void this.buffer(src);
             void this.updateMusic();
         }).catch(() => {});
+        // A mounted film owns the soundtrack even while loading, paused or in settings.
+        const syncFilm = () => { if (this.syncFilmState() && !this.filmVisible) void this.updateMusic(); };
+        new MutationObserver(syncFilm).observe(document.documentElement, { childList: true, subtree: true });
+        document.addEventListener('play', syncFilm, true);
+        window.addEventListener(FILM_FOCUS_EVENT, syncFilm);
+        syncFilm();
         document.addEventListener('pointerdown', () => this.unlock(), { capture: true });
         document.addEventListener('keydown', () => this.unlock(), { capture: true });
         const visibility = () => {
@@ -71,6 +79,7 @@ export class GameAudio {
     setVolume(bus: AudioBus, value: number) {
         if (!Number.isFinite(value)) return;
         if (bus === 'film') { saveFilmAudio({ volume: value, muted: value <= 0 }); return; }
+        this.syncFilmState();
         this.volumes[bus] = Math.round(Math.max(0, Math.min(100, value)));
         this.applyVolume(bus);
         if (bus === 'sfx' && !this.volumes.sfx) { this.effectsEpoch++; this.pending = null; this.stopEffects(); }
@@ -80,7 +89,7 @@ export class GameAudio {
     private applyVolume(bus: 'music' | 'sfx', immediate = false) {
         const gain = bus === 'music' ? this.musicGain : this.sfxGain, ctx = this.context;
         if (!gain || !ctx) return;
-        const value = this.pageInactive || (bus === 'music' && this.musicPaused) ? 0 : this.volumes[bus] / 100 * (bus === 'sfx' ? .65 : .6);
+        const value = this.pageInactive || (bus === 'music' && (this.musicPaused || this.filmVisible)) ? 0 : this.volumes[bus] / 100 * (bus === 'sfx' ? .65 : .6);
         gain.gain.cancelScheduledValues(ctx.currentTime);
         if (value === 0) { gain.gain.value = 0; gain.gain.setValueAtTime(0, ctx.currentTime); return; }
         gain.gain.setValueAtTime(gain.gain.value, ctx.currentTime);
@@ -141,6 +150,15 @@ export class GameAudio {
         else this.play('ui_click_a');
     }
     private stopEffects() { for (const voice of this.voices) voice.stop(); this.voices.clear(); }
+    private syncFilmState() {
+        // MutationObserver runs later: check synchronously as well, including after decoding.
+        const visible = filmOwnsSound();
+        if (visible === this.filmVisible) return false;
+        this.filmVisible = visible;
+        this.applyVolume('music');
+        if (visible) this.parkMusic();
+        return true;
+    }
     private parkMusic() {
         this.musicRequest++;
         const voice = this.musicVoice;
@@ -167,12 +185,14 @@ export class GameAudio {
         void this.updateMusic();
     }
     private async updateMusic() {
+        this.syncFilmState();
         const ctx = this.context, id = this.desiredMusic, track = id ? this.manifest.music[id] : null;
-        if (!ctx || !this.musicGain || this.musicPaused || this.pageInactive || !this.volumes.music) return;
+        if (!ctx || !this.musicGain || this.musicPaused || this.filmVisible || this.pageInactive || !this.volumes.music) return;
         if (!track || !id) { this.fadeMusic(); return; }
         if (!this.unlocked || ctx.state !== 'running' || this.musicVoice?.id === id) return;
         const request = this.musicRequest, buffer = await this.buffer(track.src, true);
-        if (!buffer || this.musicPaused || this.pageInactive || !this.volumes.music || request !== this.musicRequest || this.desiredMusic !== id || this.musicVoice?.id === id) return;
+        this.syncFilmState();
+        if (!buffer || this.musicPaused || this.filmVisible || this.pageInactive || !this.volumes.music || request !== this.musicRequest || this.desiredMusic !== id || this.musicVoice?.id === id) return;
         this.fadeMusic();
         const source = ctx.createBufferSource(), gain = ctx.createGain();
         source.buffer = buffer; source.loop = true;

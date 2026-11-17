@@ -1,0 +1,21 @@
+import type {Front,Order} from './campaign-intent.js';
+export type Session={scenarioId:string;total?:number;revision:number;round:number;phase:string;reserve:number;wounded:number;dead:number;difficulty:string;ended:boolean;grade:string|null;nextSendAt:number;facts:Record<string,boolean>;fronts:Record<Front,{status:string;urgency:number;progress:number;work:number}>;units:Record<string,{id:string;name?:string;men:number;status:string;at:string;state:string;target:Front|null;task:string;eta:number;pending?:Order}>;messages:{id:string;speaker:string;text:string;kind:string;front:Front|null;unit:string|null;round:number}[]};
+type Mutation={path:string;body:{scenarioId:string;requestId:string;expectedRevision:number;[key:string]:unknown}};
+export const integrated=new URLSearchParams(location.search).get('campaign')==='1';
+export const SESSION_KEY=integrated?'yiling-shared-campaign-v1':'yiling-shared-playtest-v1';
+export function read<T>(key:string):T|null{try{return JSON.parse(localStorage.getItem(key)||'null');}catch{return null;}}
+export class CampaignClient{
+ session:Session|null=null;busy=false;error='';pending:Mutation|null=null;
+ constructor(private changed:()=>void){}
+ private accept(s:Session){if(!s?.scenarioId||!s.fronts||!s.units||!Number.isInteger(s.reserve))throw Error('军情回执不完整。');if(this.session?.scenarioId===s.scenarioId&&this.session.revision>s.revision)return;this.session=s;const old=read<{id:string;history:string[]}>(SESSION_KEY);localStorage.setItem(SESSION_KEY,JSON.stringify({id:s.scenarioId,history:[...new Set([...(old?.history||[]),s.scenarioId])]}));}
+ private async post(path:string,body:unknown){const response=await fetch('/api/campaign/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(95000)});const data=await response.json();if(data.session)this.accept(data.session);if(!response.ok)throw Object.assign(Error(data.error||'未收到回执。'),{definite:response.status<500});if(!data.session)throw Error('回执不完整。');return data.session as Session;}
+ async load(fresh=false,difficulty='normal'){
+  if(this.busy)throw Error('请等上一道回执。');this.busy=true;this.error='';this.changed();
+  try{const id=fresh?undefined:this.session?.scenarioId||read<{id:string}>(SESSION_KEY)?.id;const s=await this.post('session',{scenarioId:id,difficulty});this.pending=read<Mutation>('yiling-shared-pending-'+s.scenarioId);return s;}catch(e){this.error=(e as Error).message;throw e;}finally{this.busy=false;this.changed();}
+ }
+ async act(path:string,payload:Record<string,unknown>={}){if(!this.session)throw Error('军情尚未读取。');if(this.pending)throw Error('上次回执待核实，请先重试。');return this.execute({path,body:{...payload,scenarioId:this.session.scenarioId,requestId:crypto.randomUUID(),expectedRevision:this.session.revision}});}
+ async retry(){if(!this.pending)throw Error('没有待核实请求。');return this.execute(this.pending);}
+ private async execute(m:Mutation){if(this.busy)throw Error('请等上一道回执。');this.pending=m;localStorage.setItem('yiling-shared-pending-'+m.body.scenarioId,JSON.stringify(m));this.busy=true;this.error='';this.changed();
+  try{const s=await this.post(m.path,m.body);this.pending=null;localStorage.removeItem('yiling-shared-pending-'+m.body.scenarioId);return s;}catch(e){if((e as {definite?:boolean}).definite){this.pending=null;localStorage.removeItem('yiling-shared-pending-'+m.body.scenarioId);}this.error=(e as Error).message;throw e;}finally{this.busy=false;this.changed();}
+ }
+}

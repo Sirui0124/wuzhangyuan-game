@@ -1,0 +1,277 @@
+{
+  "source_sha256": "2f35552142da66f0f81648913ceb71da2d6ba7880215b70b45a8782f411efa08",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7964
+        },
+        {
+          "label": "Fire",
+          "p": 0.0539
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0328
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0224
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0204
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0186
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0178
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0146
+        },
+        {
+          "label": "Animal",
+          "p": 0.0134
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0122
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0111
+        },
+        {
+          "label": "Music",
+          "p": 0.0106
+        }
+      ],
+      "music": 0.0106
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7154
+        },
+        {
+          "label": "Scratch",
+          "p": 0.0945
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0316
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0236
+        },
+        {
+          "label": "Music",
+          "p": 0.0227
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.022
+        },
+        {
+          "label": "White noise",
+          "p": 0.0217
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0211
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0187
+        },
+        {
+          "label": "Drip",
+          "p": 0.0167
+        },
+        {
+          "label": "Scrape",
+          "p": 0.0166
+        },
+        {
+          "label": "Scratching (performance technique)",
+          "p": 0.0161
+        }
+      ],
+      "music": 0.0227
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.835
+        },
+        {
+          "label": "Stomach rumble",
+          "p": 0.7115
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0575
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0441
+        },
+        {
+          "label": "Rumble",
+          "p": 0.038
+        },
+        {
+          "label": "Music",
+          "p": 0.0102
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0083
+        },
+        {
+          "label": "White noise",
+          "p": 0.0065
+        },
+        {
+          "label": "Noise",
+          "p": 0.0063
+        },
+        {
+          "label": "Mechanical fan",
+          "p": 0.0059
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0059
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0059
+        }
+      ],
+      "music": 0.0102
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Stomach rumble",
+          "p": 0.536
+        },
+        {
+          "label": "Noise",
+          "p": 0.098
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0473
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0449
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0281
+        },
+        {
+          "label": "Throbbing",
+          "p": 0.0256
+        },
+        {
+          "label": "Flap",
+          "p": 0.0213
+        },
+        {
+          "label": "Car",
+          "p": 0.0195
+        },
+        {
+          "label": "White noise",
+          "p": 0.0189
+        },
+        {
+          "label": "Music",
+          "p": 0.0142
+        },
+        {
+          "label": "Static",
+          "p": 0.014
+        },
+        {
+          "label": "Aircraft",
+          "p": 0.0131
+        }
+      ],
+      "music": 0.0142
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Stomach rumble",
+          "p": 0.2805
+        },
+        {
+          "label": "Flap",
+          "p": 0.0462
+        },
+        {
+          "label": "White noise",
+          "p": 0.0329
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0267
+        },
+        {
+          "label": "Noise",
+          "p": 0.0261
+        },
+        {
+          "label": "Crackle",
+          "p": 0.025
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0249
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0205
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0157
+        },
+        {
+          "label": "Throbbing",
+          "p": 0.0154
+        },
+        {
+          "label": "Static",
+          "p": 0.0147
+        },
+        {
+          "label": "Car",
+          "p": 0.0141
+        }
+      ],
+      "music": 0.0084
+    }
+  ]
+}

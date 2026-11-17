@@ -1,0 +1,61 @@
+{
+  "source_sha256": "3f4033530fe8315753fef99587eebf7004ebe4b40005edf581d937855176713c",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Gasp",
+          "p": 0.4776
+        },
+        {
+          "label": "Sigh",
+          "p": 0.3549
+        },
+        {
+          "label": "Snort",
+          "p": 0.2621
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0263
+        },
+        {
+          "label": "Fire",
+          "p": 0.0109
+        },
+        {
+          "label": "Speech",
+          "p": 0.0091
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0084
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0075
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0064
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.006
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0059
+        },
+        {
+          "label": "Music",
+          "p": 0.0044
+        }
+      ],
+      "music": 0.0044
+    }
+  ]
+}

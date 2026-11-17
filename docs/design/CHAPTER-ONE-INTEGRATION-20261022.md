@@ -45,7 +45,7 @@
 
 新版自动进度使用 `wuzhang-chapter-session-v1`，结局使用 `wuzhang-chapter-endings-v2`，影片使用独立键。旧存档没有足以证明新线索与授权的事件，不静默补证或冒充新版通关。开始新游戏前保留上一份自动记录；两个手动记录和已收录结局保留。
 
-正文更新流程：重新下载实际文案表，运行 `python tools/import-chapter-one-review.py` 导入创作源；核对 `tools/prepare-chapter-one-flow.mjs` 的范围后再生成流程。构建从创作目录复制，不手改生成目录。
+正文更新从本地当前创作源开始；核对 `tools/prepare-chapter-one-flow.mjs` 的范围后再生成流程，构建从创作目录复制，不手改生成目录。
 
 ## 素材采用与待补
 

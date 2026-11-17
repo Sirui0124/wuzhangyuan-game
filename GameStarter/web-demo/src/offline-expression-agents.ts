@@ -51,10 +51,9 @@ export function offlineWeiyanTurn(input: ExpressionJudgeInput): NpcTurn {
 
 export function offlineExpressionAgents(): { judge: ExpressionJudge; generate: ExpressionGenerator } {
     return {
-        judge: async (input, signal) => { signal.throwIfAborted(); if (input.items?.length) throw new Error('无 AI 模式不提交手机物品'); return offlineWeiyanTurn(input); },
+        judge: async (input, signal) => { signal.throwIfAborted(); return offlineWeiyanTurn(input); },
         generate: async ({ brief, verificationSources }, signal) => {
             signal.throwIfAborted();
-            if (brief.attachedItems?.length) throw new ExpressionSafetyError('无 AI 模式不使用手机物品。');
             if (brief.playerIntent.draft?.trim() && brief.playerIntent.focus?.trim()
                 && brief.playerIntent.draft.trim() !== brief.playerIntent.focus.trim())
                 throw new ExpressionSafetyError('无 AI 模式无法合并补充说明，请直接修改准备说的话；两处输入已保留。');

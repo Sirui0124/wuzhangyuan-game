@@ -8,7 +8,7 @@
 | `art/` | 美术清单、审阅和界面验证 |
 | `ai/` | AI 模块相关验证 |
 | `musein/` | 专用媒体制作工具；见该目录 README |
-| `import-chapter-one-review.py`、`prepare-chapter-one-flow.mjs`、`sync-chapter-one-plan.py` | 第一章特定版本的导入/映射工具；运行前对照最新策划，不能直接重放旧稿 |
+| `prepare-chapter-one-flow.mjs` | 第一章本地流程稿生成工具；运行前对照当前策划 |
 
 当前入口使用根目录 `package.json` 的命令。脚本输出放 `outputs/`，可重建缓存与构建产物按 `.gitignore` 保持本地。
 

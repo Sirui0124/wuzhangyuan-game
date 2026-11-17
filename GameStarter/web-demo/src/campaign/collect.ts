@@ -35,7 +35,7 @@ export async function collectCampaign(store: ResultStore = localStorage, read: F
             const done = (ending: string, detail: string) => { r.status='completed'; r.ending=ending; r.detail=detail; };
             if (id === 'wuzhang') {
                 if (s.schemaVersion!==1 || s.chapterId!==id || !s.story || !Array.isArray(s.story.completed)) throw new Error('存档身份错误');
-                if (['ending','map'].includes(s.phase) && ['safe','radio-relay','light-signal','item-plan'].includes(s.end)) done(s.end,'守灯与军情交接完成，但北伐困境仍在。');
+                if (['ending','map'].includes(s.phase) && ['safe'].includes(s.end)) done(s.end,'守灯与军情交接完成，但北伐困境仍在。');
             } else if (id === 'grain') {
                 const story = await read('/story/chapter-two.films.json');
                 if (s.version!==story.version || !Array.isArray(s.visited) || !Array.isArray(s.chosen)) throw new Error('存档身份错误');

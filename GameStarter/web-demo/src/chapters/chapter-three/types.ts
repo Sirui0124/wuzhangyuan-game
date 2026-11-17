@@ -1,5 +1,3 @@
-import type { Supplies } from '../../phone/supplies';
-import type { PhoneSave } from '../../phone/phone-state';
 import type { JietingJudgment, JietingArgument } from './ai-contracts';
 
 export type JietingScores = { w: number; m: number; r: number };
@@ -7,7 +5,7 @@ export type JietingRound = 1 | 2 | 3 | 4 | 5;
 export type JietingVisit = 'wang' | 'ma' | 'camp';
 export type JietingPhase = 'reinforcement' | 'withdrawal' | 'lure';
 export type JietingOutcome = 'great' | 'small' | 'none';
-export type JietingEndingId = 'hold-both' | 'hold-masu-dies' | 'great-victory' | 'retreat' | 'era-arrest' | 'execution' | 'mountain-trapped' | 'rear-sacrifice';
+export type JietingEndingId = 'hold-both' | 'hold-masu-dies' | 'great-victory' | 'retreat' | 'execution' | 'mountain-trapped' | 'rear-sacrifice';
 export type JietingScene = 'jieting_camp' | 'jieting_masu_tent' | 'jieting_wangping_camp' | 'jieting_water_path' | 'jieting_mountain_path' | 'jieting_evening_camp' | 'jieting_battlefield' | 'jieting_lure_camp';
 export type JietingCondition = { flag: string; value?: string | boolean | number } | { visitedPlace: JietingVisit } | { not: JietingCondition } | { all: JietingCondition[] } | { any: JietingCondition[] } | { gate: string };
 export type JietingEffect =
@@ -15,7 +13,6 @@ export type JietingEffect =
     | { type: 'score'; id: string; delta: Partial<JietingScores> }
     | { type: 'flag'; key: string; value: boolean | string | number }
     | { type: 'visit'; place: JietingVisit }
-    | { type: 'item'; id: string }
     | { type: 'round-result'; round: JietingRound; outcome: JietingOutcome }
     | { type: 'round-order'; round: JietingRound }
     | { type: 'round-arrival'; round: JietingRound }
@@ -45,7 +42,6 @@ export type JietingRoundRecord = {
     ordered: boolean; arrived: boolean; reported: boolean;
     source: 'fixed' | 'ai'; input?: string; clueIds?: string[];
     tasks: ('road' | 'water' | 'reception')[];
-    usedItemIds: string[];
     argument?: JietingArgument;
     supportedTroops?: number;
 };
@@ -62,18 +58,14 @@ export type JietingProgress = {
     transcript: JietingTranscript[]; acceptedReasons: JietingReason[]; unresolvedConcerns: string[];
     followupUsed: Partial<Record<string, boolean>>;
     ending: JietingEndingId | null;
-    itemTrials: Record<string, { input: string; operation: string; effect: string }>;
-    lureItemIds: string[];
-    withdrawalItemIds: string[];
-    itemUses: { at: string; itemIds: string[]; effects: { id: string; name: string; effect: string }[] }[];
     guidedQuestions?: Record<string, { question: string; clueIds: string[] }>;
 };
-export type JietingCheckpoint = JietingProgress & { supplies: Supplies; phone: PhoneSave; judgments: JietingJudgment[] };
+export type JietingCheckpoint = JietingProgress & { judgments: JietingJudgment[] };
 export type JietingSave = JietingProgress & {
     schema: 1; version: string; run: number; revision: number;
-    draft: string; selected: string[]; supplies: Supplies; phone: PhoneSave;
+    draft: string; selected: string[];
     judgments: JietingJudgment[]; pendingJudgment: JietingJudgment | null;
     checkpoints: Record<string, JietingCheckpoint>;
 };
-export type JietingMode = { aiEnabled?: boolean; phoneAllowed?: boolean };
+export type JietingMode = { aiEnabled?: boolean };
 export type JietingGuardAssessment = { cooperation: number; strength: number; receptionBonus: number; failedLurePenalty: number; score: number; holds: boolean; allRearSafe: boolean; masuAlive: boolean };

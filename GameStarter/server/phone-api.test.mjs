@@ -7,7 +7,7 @@ import { mkdtemp, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-test('retired phone endpoints cannot purchase, guard or confirm; health advertises no shopping', async () => {
+test('retired endpoints cannot purchase, guard, confirm or assess personality', async () => {
     const directory = await mkdtemp(join(tmpdir(), 'retired-phone-'));
     const reserve = http.createServer(); reserve.listen(0, '127.0.0.1'); await once(reserve, 'listening');
     const port = reserve.address().port; await new Promise(resolve => reserve.close(resolve));
@@ -17,8 +17,8 @@ test('retired phone endpoints cannot purchase, guard or confirm; health advertis
     try {
         await Promise.race([once(child.stdout, 'data'), once(child, 'exit').then(() => { throw new Error('API failed to start: ' + diagnostics); })]);
         const base = `http://127.0.0.1:${port}`;
-        assert.equal((await (await fetch(base + '/health')).json()).shopping, false);
-        for (const path of ['/api/game/shop', '/api/game/shop/confirm', '/api/game/phone/guard']) {
+        assert.equal((await (await fetch(base + '/health')).json()).shopping, undefined);
+        for (const path of ['/api/game/shop', '/api/game/shop/confirm', '/api/game/phone/guard', '/api/game/personality']) {
             const response = await fetch(base + path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
             assert.equal(response.status, 404, path);
         }

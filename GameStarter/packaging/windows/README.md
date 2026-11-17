@@ -9,7 +9,7 @@
 - `main.cjs`、`backend-child.cjs` 是桌面启动与本机服务入口，打入 `resources/app.asar`。
 - `stage-payload.mjs` 按发布白名单从本次完整网页构建及当前后端源文件准备载荷，生成逐文件大小与 SHA-256 清单。
 - `verify-payload.cjs` 在资源复制完成后、生成安装器之前核对清单中每个文件的大小和 SHA-256，并拒绝多余文件和从包外解析到的 `ws`。`ws` 使用独立资源映射，因为 electron-builder 26.18.0 的通用资源过滤器会跳过资源根目录下的 `node_modules`。
-- `resources/game/web` 保存预编译网页和发布资源；`resources/game/GameStarter/server`、`resources/game/docs/design/personality` 和 `resources/game/node_modules/ws` 保留后端的相对依赖层级。大视频在 ASAR 外，便于 Range 读取。
+- `resources/game/web` 保存预编译网页和发布资源；`resources/game/GameStarter/server` 和 `resources/game/node_modules/ws` 保留后端的相对依赖层级。大视频在 ASAR 外，便于 Range 读取。
 - API 配置和游戏用户数据由启动器写到当前用户的独立可写目录，不写安装目录。卸载配置保留用户数据；旧浏览器试玩存档不会自动进入 Electron 的独立浏览器资料。
 - 游戏本机服务使用应用自己的进程；启动器不关闭已有开发服务，不把真实凭据或玩家存档复制进安装载荷。
 
@@ -48,3 +48,11 @@ node GameStarter/packaging/windows/build-release.mjs --build .cache/windows-rele
 `release-artifacts.json` 记录安装器文件大小、SHA-256 和构建版本。目录构建不标记 `installerGenerated`；NSIS 构建成功后才标记。脚本不会自行将安装、启动和卸载标为通过。实际安装验证由另行保存的验证脚本和报告记录。
 
 必须分别验证安装器生成、实际安装、安装后启动、静态资源与本机 API、退出后的服务清理、升级时进度保留和卸载。测试使用独立安装目录与用户数据，不使用玩家真实资料。Android APK 未包含在这条构建路径中。
+
+## 快速打包入口（2026-11-17）
+
+工作区根目录执行 `npm run build:windows`，或双击根目录的 `打包Windows.cmd`。命令先检查架构，再在独立时间戳目录构建网页、准备载荷并生成NSIS安装程序；不会覆盖已有安装包。需要本机已安装本目录package-lock锁定的打包依赖。
+
+只需要目录版时执行 `npm run build:windows -- --dir`。输出位于 `outputs/windows-release-时间戳/`。当前网页与Windows使用同一套游戏代码；UnityPort是独立试验工程，不参与此打包。
+
+当前新增营救指令服务的运行依赖已加入发布白名单，其TypeScript规则在打包时转成JavaScript，Windows不依赖外部TypeScript环境；运行存档使用玩家数据目录。

@@ -2,7 +2,7 @@
 export function createGameUIState() {
     return {
         storageWarning: '', home: true, menuMap: false, overlay: '', restoring: false,
-        filmKey: '', previewFilm: '', noteOpen: '', notice: '', notesShown: false, inventoryKind: 'clues' as 'clues' | 'items',
+        filmKey: '', previewFilm: '', noteOpen: '', notice: '', notesShown: false, inventoryKind: 'clues' as 'clues',
         revealAt: 0, revealTimer: 0, inventoryScroll: 0, renderedWorkspace: '', unfoldThoughts: false,
         reduced: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
         typed: true, typeTimer: 0, currentLineId: '', lineText: '', typeIndex: 0,

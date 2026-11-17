@@ -5,7 +5,7 @@ import { recordDialogueDiagnostic } from './dialogue-diagnostics';
 import { auditPlayerWordsRef, auditQuoteReferenceVersion, resolveAuditQuoteReferences } from './dialogue-audit-quotes';
 import { composeIntentResponse, intentPrompt, responseIntentBank, validateIntentEvidence, type DialogueIntentCandidate } from './dialogue-intents';
 
-export type DialogueResponseContext = { baseScores: { trust: number; rigor: number; responsibility: number }; giftAlreadyAccepted: boolean };
+export type DialogueResponseContext = { baseScores: { trust: number; rigor: number; responsibility: number } };
 export const responseVersion = 'gouan-response-20261026-v1';
 // Prompt/audit changes do not invalidate already verified responses in saved games.
 export const semanticReviewVersion = 'gouan-semantic-review-20261027-v7-independent-final';
@@ -88,7 +88,7 @@ export async function verifyDialogueResponse(candidate: DialogueIntentCandidate,
     }]));
     let cooperation: boolean | null = null;
     if (context) {
-        const trust = Math.min(10, Math.max(0, context.baseScores.trust + judgment.scores.trust.delta) + (context.giftAlreadyAccepted || judgment.gift?.ids.length ? 1 : 0));
+        const trust = Math.min(10, Math.max(0, context.baseScores.trust + judgment.scores.trust.delta));
         const responsibility = Math.max(0, Math.min(10, context.baseScores.responsibility + judgment.scores.responsibility.delta));
         cooperation = trust >= 4 && responsibility >= 4;
     }

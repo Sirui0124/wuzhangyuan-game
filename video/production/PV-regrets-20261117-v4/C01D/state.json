@@ -1,0 +1,12 @@
+{
+  "id": "C01D",
+  "version": "v2",
+  "status": "superseded_before_submission",
+  "started_at": "2026-11-17T13:19:26.333023+08:00",
+  "updated_at": "2026-11-17T13:19:33.857132+08:00",
+  "submission_started": "2026-11-17T13:19:32.118721+08:00",
+  "preflight": "pass",
+  "exit_code": 1,
+  "note": "核对api-run.log及入口脚本：配置指定的DPAPI文件缺失，脚本在第69行、本地凭据检查处终止，未到POST。C01D对白被用户取消，禁止使用。",
+  "remote_submission_occurred": false
+}

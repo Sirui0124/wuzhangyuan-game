@@ -1,0 +1,547 @@
+{
+  "source_sha256": "5b59366d9764926b7c7b006e8cc60cd94d63c72834f0ced9bbc5a7b53047458d",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7984
+        },
+        {
+          "label": "Fire",
+          "p": 0.0532
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0526
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0218
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0218
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0184
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0147
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0142
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0127
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0123
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0115
+        },
+        {
+          "label": "Animal",
+          "p": 0.0115
+        }
+      ],
+      "music": 0.0098
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6635
+        },
+        {
+          "label": "Scratch",
+          "p": 0.057
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0419
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0321
+        },
+        {
+          "label": "Drip",
+          "p": 0.027
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0238
+        },
+        {
+          "label": "White noise",
+          "p": 0.0229
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0225
+        },
+        {
+          "label": "Scrape",
+          "p": 0.021
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0202
+        },
+        {
+          "label": "Music",
+          "p": 0.019
+        },
+        {
+          "label": "Squish",
+          "p": 0.0127
+        }
+      ],
+      "music": 0.019
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8284
+        },
+        {
+          "label": "Stomach rumble",
+          "p": 0.6008
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0537
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.043
+        },
+        {
+          "label": "Rumble",
+          "p": 0.039
+        },
+        {
+          "label": "Music",
+          "p": 0.012
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0068
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0066
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.006
+        },
+        {
+          "label": "White noise",
+          "p": 0.006
+        },
+        {
+          "label": "Mechanical fan",
+          "p": 0.005
+        },
+        {
+          "label": "Eruption",
+          "p": 0.005
+        }
+      ],
+      "music": 0.012
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Stomach rumble",
+          "p": 0.4705
+        },
+        {
+          "label": "Noise",
+          "p": 0.1248
+        },
+        {
+          "label": "Rumble",
+          "p": 0.077
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0541
+        },
+        {
+          "label": "Throbbing",
+          "p": 0.0508
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0329
+        },
+        {
+          "label": "Car",
+          "p": 0.0289
+        },
+        {
+          "label": "Flap",
+          "p": 0.0252
+        },
+        {
+          "label": "Music",
+          "p": 0.0236
+        },
+        {
+          "label": "Hum",
+          "p": 0.0215
+        },
+        {
+          "label": "Heart sounds, heartbeat",
+          "p": 0.0184
+        },
+        {
+          "label": "White noise",
+          "p": 0.0129
+        }
+      ],
+      "music": 0.0236
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Stomach rumble",
+          "p": 0.336
+        },
+        {
+          "label": "Noise",
+          "p": 0.0848
+        },
+        {
+          "label": "White noise",
+          "p": 0.0503
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0453
+        },
+        {
+          "label": "Music",
+          "p": 0.0284
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0265
+        },
+        {
+          "label": "Flap",
+          "p": 0.0227
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0218
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0209
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0171
+        },
+        {
+          "label": "Fire",
+          "p": 0.0158
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0133
+        }
+      ],
+      "music": 0.0284
+    },
+    {
+      "start": 40.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6391
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0761
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0614
+        },
+        {
+          "label": "Wind",
+          "p": 0.0519
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0452
+        },
+        {
+          "label": "White noise",
+          "p": 0.0398
+        },
+        {
+          "label": "Fire",
+          "p": 0.0396
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0374
+        },
+        {
+          "label": "Train",
+          "p": 0.0366
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0349
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0343
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0334
+        }
+      ],
+      "music": 0.0055
+    },
+    {
+      "start": 48.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7895
+        },
+        {
+          "label": "Fire",
+          "p": 0.1593
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0968
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0612
+        },
+        {
+          "label": "Rain",
+          "p": 0.0598
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0495
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0265
+        },
+        {
+          "label": "Bicycle",
+          "p": 0.023
+        },
+        {
+          "label": "Wind",
+          "p": 0.0228
+        },
+        {
+          "label": "White noise",
+          "p": 0.0209
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0208
+        },
+        {
+          "label": "Animal",
+          "p": 0.0203
+        }
+      ],
+      "music": 0.0084
+    },
+    {
+      "start": 56.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7302
+        },
+        {
+          "label": "Sigh",
+          "p": 0.3618
+        },
+        {
+          "label": "Gasp",
+          "p": 0.057
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0529
+        },
+        {
+          "label": "White noise",
+          "p": 0.0387
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.018
+        },
+        {
+          "label": "Whimper",
+          "p": 0.0177
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0172
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0149
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0147
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0133
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0111
+        }
+      ],
+      "music": 0.0015
+    },
+    {
+      "start": 64.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.72
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0564
+        },
+        {
+          "label": "White noise",
+          "p": 0.0343
+        },
+        {
+          "label": "Rain",
+          "p": 0.027
+        },
+        {
+          "label": "Animal",
+          "p": 0.0211
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0194
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0188
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0174
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0162
+        },
+        {
+          "label": "Wind",
+          "p": 0.0158
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0153
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.015
+        }
+      ],
+      "music": 0.0064
+    },
+    {
+      "start": 72.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8976
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0231
+        },
+        {
+          "label": "Oink",
+          "p": 0.0202
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0196
+        },
+        {
+          "label": "Whoop",
+          "p": 0.015
+        },
+        {
+          "label": "Music",
+          "p": 0.0141
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0122
+        },
+        {
+          "label": "White noise",
+          "p": 0.011
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0106
+        },
+        {
+          "label": "Animal",
+          "p": 0.0079
+        },
+        {
+          "label": "Domestic animals, pets",
+          "p": 0.0075
+        },
+        {
+          "label": "Quack",
+          "p": 0.0075
+        }
+      ],
+      "music": 0.0141
+    }
+  ]
+}

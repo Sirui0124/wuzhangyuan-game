@@ -6,7 +6,7 @@ import vm from 'node:vm';
 import ts from 'typescript';
 
 function fixture() {
-    const document = Object.assign(new EventTarget(), { hidden: false });
+    const document = Object.assign(new EventTarget(), { hidden: false, documentElement: {}, querySelector: () => null });
     const window = new EventTarget(), values = new Map(), sources = [], requests = [];
     const localStorage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
     class FakeAudioContext {
@@ -18,7 +18,7 @@ function fixture() {
         decodeAudioData() { return Promise.resolve({ duration: 10 }); }
     }
     const manifest = { sfx: { ui_click_a: '/sfx/click.wav' }, music: { home: { src: '/home.wav', loopStart: 4, loopEnd: 10 }, round1: { src: '/round1.wav', loopStart: 0, loopEnd: 10 } } };
-    const sandbox = vm.createContext({ document, window, localStorage, AudioContext: FakeAudioContext, Event, CustomEvent, performance, queueMicrotask,
+    const sandbox = vm.createContext({ document, window, localStorage, AudioContext: FakeAudioContext, MutationObserver: class { constructor(callback) { document.syncFilm = callback; } observe() {} }, Event, CustomEvent, performance, queueMicrotask,
         fetch: async src => { requests.push(src); return { ok: true, json: async () => manifest, arrayBuffer: async () => new ArrayBuffer(16) }; } });
     const modules = new Map();
     const load = name => {
@@ -66,6 +66,35 @@ test('music finishing its decode after a film begins cannot start playing', asyn
     assert.equal(audio.musicVoice, null); assert.equal(audio.musicVoices.size, 0);
 });
 
+test('film insertion blocks a pending decode before the DOM observer fires', async () => {
+    const { audio, document, sources } = fixture(); await settle();
+    let finish; audio.buffer = () => new Promise(ok => { finish = ok; });
+    audio.setMusic('home');
+    document.querySelector = () => ({ paused: true });
+    finish({ duration: 10 }); await settle();
+    assert.equal(audio.musicVoice, null);
+    assert.equal(sources.filter(s => s.loop && s.starts.length).length, 0);
+    audio.setVolume('music', 80);
+    document.dispatchEvent(new Event('pointerdown'));
+    document.hidden = true; document.dispatchEvent(new Event('visibilitychange'));
+    document.hidden = false; document.dispatchEvent(new Event('visibilitychange')); await settle();
+    assert.equal(audio.musicVoice, null);
+    assert.equal(audio.musicGain.gain.value, 0);
+});
+
+test('adjusting music immediately after film insertion stops every active fade', async () => {
+    const { audio, document, sources } = fixture(); await settle();
+    audio.setMusic('home'); await settle();
+    audio.setMusic('round1'); await settle();
+    document.querySelector = () => ({ paused: false });
+    audio.setVolume('music', 70);
+    assert.equal(audio.musicVoices.size, 0);
+    assert.equal(audio.musicGain.gain.value, 0);
+    assert.ok(sources.filter(s => s.loop).every(s => s.stops.some(args => args.length === 0)));
+    document.querySelector = () => null; document.syncFilm(); await settle();
+    assert.equal(audio.musicVoice.id, 'round1');
+});
+
 test('only the current BGM is retained in the decode cache; effects remain separate', async () => {
     const { audio } = fixture(); await settle();
     audio.setMusic('home'); await settle(); assert.equal(audio.cachedMusic.src, '/home.wav');
@@ -103,4 +132,15 @@ test('chapter mappings use existing music and suspend all BGM for films and expl
     updateChapterAudio(audio, 'grain', { kind: 'video' });
     updateChapterAudio(audio, 'jieting', { kind: 'ending' }, { silent: true });
     assert.deepEqual(calls, [['paused', true], ['paused', true]]);
+});
+
+ test('mounted films stop BGM and prevent settings or delayed loads from restarting it', async () => {
+    const { audio, document } = fixture(); await settle();
+    audio.setMusic('home'); await settle(); assert.ok(audio.musicVoice);
+    document.querySelector = () => ({}); document.syncFilm();
+    assert.equal(audio.musicVoices.size, 0); assert.equal(audio.musicGain.gain.value, 0);
+    audio.setMusicPaused(false); audio.setVolume('music', 80); audio.setMusic('round1'); await settle();
+    assert.equal(audio.musicVoice, null);
+    document.querySelector = () => null; document.syncFilm(); await settle();
+    assert.equal(audio.musicVoice.id, 'round1');
 });

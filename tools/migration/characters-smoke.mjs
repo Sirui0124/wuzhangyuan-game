@@ -55,26 +55,7 @@ try {
     await grain.keyboard.press('Escape');
     await grain.reload(); await grain.locator('[data-character-open]').first().click();
     assert.equal(await grain.locator('[data-character-select=gouan]').count(), 1);
-    // Unmount/remount the phone: disabled instances attach no handlers and restore does not duplicate listeners.
-    const lifecycle = await grain.evaluate(async () => {
-        const { createPhoneModule } = await import('/GameStarter/web-demo/src/phone/module.js');
-        const { createGameUIState } = await import('/GameStarter/web-demo/src/game/ui-state.js');
-        const { freshPhone } = await import('/GameStarter/web-demo/src/phone/phone-state.js');
-        const { freshSupplies } = await import('/GameStarter/web-demo/src/phone/supplies.js');
-        const root = document.createElement('div'); root.innerHTML = '<textarea id="shopping-query"></textarea>';
-        const ui = createGameUIState(); let writes = 0;
-        const state = { supplies: freshSupplies(), phone: freshPhone(), phase: 'explore', round: 1, story: { run: 'test', requestSeq: 0 } };
-        const host = { snapshot: () => state, scene: { title: 'test' }, canPrepareSupplies: () => false, rememberPhone: value => { state.phone = value; writes++; }, applyPhonePenalty() {}, buySuggestedItem: () => false, expressionContext: () => ({ evidence: [] }) };
-        const module = createPhoneModule(root, host, ui, () => {}, () => {});
-        const input = () => { root.querySelector('textarea').dispatchEvent(new Event('input', { bubbles: true })); };
-        input(); const disabled = writes;
-        module.setEnabled(true); const before = writes; input(); const once = writes - before;
-        module.setEnabled(false); const off = writes; input(); const removed = writes - off;
-        module.setEnabled(true); const again = writes; input(); const remounted = writes - again;
-        module.dispose(); const disposed = writes; input(); return { disabled, once, removed, remounted, disposed: writes - disposed };
-    });
-    assert.deepEqual(lifecycle, { disabled: 0, once: 1, removed: 0, remounted: 1, disposed: 0 });
     await grain.close(); assert.deepEqual(errors, []); assert.deepEqual(requests, []);
-    writeFileSync(resolve(output, 'browser.json'), JSON.stringify({ passed: true, errors, requests, lifecycle, checks: ['chapter one unlocks and reload', 'unseen characters hidden', 'no story mutation from dossier or keyboard', '390px layout', 'film paused for reading', 'Gou An recognition gate and reload', 'phone unload and remount'] }, null, 2));
+    writeFileSync(resolve(output, 'browser.json'), JSON.stringify({ passed: true, errors, requests, checks: ['chapter one unlocks and reload', 'unseen characters hidden', 'no story mutation from dossier or keyboard', '390px layout', 'film paused for reading', 'Gou An recognition gate and reload'] }, null, 2));
     console.log('Character module browser checks passed');
 } finally { await browser.close(); await new Promise(ok => server.close(ok)); }

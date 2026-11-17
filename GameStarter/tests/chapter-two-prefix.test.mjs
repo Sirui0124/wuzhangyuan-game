@@ -79,17 +79,3 @@ test('first-half clue titles and displayed source quotes exactly follow latest e
     }
     assert.equal(story.nodes.find(n=>n.id==='CH2-LY02-009A').text,rows[18][3]);
 });
-
-test('chapter two grants 20 once and accepted gifts consume owned items without retry farming',async()=>{
-    const {balance,buySuggestedSupply}=await import('../web-demo/.build/GameStarter/web-demo/src/phone/supplies.js');
-    const s=new GrainSession(story,undefined,rubric);reach(s,'CH2-LY03-018');s.unlockPhone();s.unlockPhone();assert.equal(balance(s.state.supplies),2000);
-    const item={id:'shop-11111111-2222-4333-8444-555555555555',name:'水',price:300,ability:'饮用',boundary:'不能治伤',source:'',quote:'估价',date:'2026-10-25',priceKind:'estimate',why:'饮用',request:'买水',searchState:'empty',sources:[]};
-    assert.equal(buySuggestedSupply(s.state.supplies,item),true);s.state.supplies.attached=[item.id];
-    const j=judgment([1,0,0]);j.gift={ids:[item.id],quote:input};s.submit(j);
-    assert.equal(s.scores.trust,4);assert.equal(balance(s.state.supplies),1700);
-    assert.deepEqual(s.state.supplies.consumed,[item.id]);assert.throws(()=>s.submit(j));
-    const restored=new GrainSession(story,JSON.parse(JSON.stringify(s.state)),rubric);restored.unlockPhone();
-    assert.equal(balance(restored.state.supplies),1700);assert.equal(restored.scores.trust,4);
-    assert.match(restored.state.judgments['CH2-LY03-018'].reply,/东西我收下了/);
-    restored.submit(judgment([0,0,0]));assert.equal(restored.scores.trust,3);
-});

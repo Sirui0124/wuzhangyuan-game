@@ -1,0 +1,7 @@
+# L02R｜静默倾听修订
+
+L02已取得原片但出现文书和错误口型，停止选用画面。本请求新编号；6秒，H3 768P，16:9。玩家画外声音后期单独配入。
+
+参考图：C:\Users\zhousirui\Documents\ChatGPT\逆转五丈原\video\production\PV-H3-20261117-v2.15\references\L02-刘备倾听.png
+
+6 seconds, 16:9 live-action historical film. Animate the supplied still as a QUIET LISTENING REACTION SHOT. Same exact elderly Chinese man Liu Bei, same face, armor, cloak, tent, lamp and table. Camera is fixed at his eye level. His lips remain completely CLOSED for all six seconds. He NEVER speaks, NEVER smiles, never nods repeatedly. At first eyes glance down below the camera, then slowly look toward the viewer, one natural breath and one blink, subtle troubled attentive expression. This shot contains NO dialogue in its audio at all. No other person speaks. No narration. No music or BGM. Only low wind, cloth and breathing. No extra movement or action. No hands entering foreground. No letters, scrolls or documents are given to him. No object is passed. The tabletop remains as in reference, nothing rises in front of it. Do not introduce a token or seal in this shot. No subtitles, no captions, no printed text. Maintain face and natural lighting with warm lamp at right and dark blue predawn at left. This is a human silent reaction insert to be edited under separately recorded off-screen dialogue; DO NOT generate that dialogue, DO NOT lip sync any sound. 唯一允许发声的原句：无。

@@ -1,0 +1,1589 @@
+{
+  "schemaVersion": "1.0",
+  "id": "wuzhang-ch1-branch-review",
+  "version": "2026-11-17-v2",
+  "status": "关键问话润色稿，待用户审阅",
+  "title": "第一章 守灯与军报 对话分支讨论稿",
+  "scope": "独立设计文件，不由游戏导入；节点对白为新讨论稿。",
+  "entry": "C01-OPEN",
+  "initialState": {
+    "deathSeen": false,
+    "knowsJiang": false,
+    "jiangAgreed": false,
+    "metWei": false,
+    "enteredWithoutDuty": false,
+    "stance": "unset",
+    "reportHandled": false,
+    "orderDelivered": false
+  },
+  "stateSemantics": {
+    "deathSeen": "经历转呈未竟死亡后为真；回溯保留，用于守卫第二轮默认问题。",
+    "knowsJiang": "本轮实际听到小甲说明姜维当值；回溯重取。",
+    "jiangAgreed": "本轮实际听完姜维亲口应允，不由提示推断。",
+    "metWei": "本轮已开始魏延交涉。",
+    "enteredWithoutDuty": "初见魏延时未获得当值提示；本轮锁定转呈未竟。",
+    "stance": "unset / formal / cooperate；根据真实选择赋值，不是好感积分。",
+    "reportHandled": "姜维实际听报并下令。",
+    "orderDelivered": "军令实际到达前营并有确认。"
+  },
+  "executionContract": {
+    "passage": "依次读完lines，应用afterLines，再进入next。",
+    "choice": "依次读完lines，应用afterLines和hintAward，显示恰好两个choices；守卫另有freeInput。选中后依次播放say（如有）与response，再应用effects并进入target。只有say为实际人物发言；动作选项不自动朗读label。",
+    "router": "无玩家界面；所有routes中恰好一个when完全匹配，应用该出口effects后跳转。",
+    "ending": "先读结局与应用afterLines，两个按钮是结局操作，不是人物发言。",
+    "terminal": "停止本章阅读。",
+    "conditions": "when/requires均为状态字段与值的精确相等，多个字段取且。",
+    "resets": "回溯清除本轮提示、承诺、交涉、军报和回令，仅保留deathSeen；重读本章从initialState开始。",
+    "predecessors": "前驱由全部next、choices、routes和freeInput出口自动推导，不手工维护第二份。",
+    "freeInput": "仅守卫节点：玩家输入确认后先记录其实际原话，再按语义意图跳转。未确认草稿不授予提示；技术故障留原节点。"
+  },
+  "hints": [
+    {
+      "id": "H-JIANG-DUTY",
+      "title": "姜维今夜代为处理军务",
+      "sourceNode": "C01-HINT-JIANG",
+      "state": "knowsJiang",
+      "text": "小甲说，今夜军务由姜维接报处置，可请亲兵通传。尚未取得姜维本人答应。"
+    },
+    {
+      "id": "H-JIANG-AGREED",
+      "title": "姜维已答应帐外接报",
+      "sourceNode": "C01-JIANG",
+      "state": "jiangAgreed",
+      "text": "姜维亲口答应在帐外等魏延；听完军情，再决定是否禀报丞相。"
+    }
+  ],
+  "freeInputContract": {
+    "evaluation": "读取玩家已确认原话与本轮已说内容，按请求意图分流；仅自由输入渠道可在首轮问出当值。",
+    "ask_decision_maker": {
+      "definition": "询问急报由谁接手、谁能作决定或承担处置责任，或询问是否可请其他有权者协助。",
+      "positiveExamples": [
+        "你只能递话，那谁能作主？",
+        "丞相不能见，还有谁能处理军情？",
+        "能不能请个有权担责的人来？",
+        "姜维能替丞相接报吗？"
+      ],
+      "negativeExamples": [
+        "出事我负责，你放行。",
+        "你为什么不让我进去？",
+        "魏延会不会生气？",
+        "营外有多少敌人？"
+      ],
+      "priority": "多意图问题确实含此请求时优先；提及名字、责任二字或玩家自称已有授权本身不成立。"
+    },
+    "unknown": "意图不明归other，可继续问，不罚款、不判死、不补线索。",
+    "technicalFailure": "留在原节点，保留输入供重试，不当作角色拒绝或剧情失败。",
+    "reviewSimulation": "校验用预先标注的意图事件，不宣称已实现或测试自然语言模型。"
+  },
+  "designDecisions": [
+    {
+      "date": "2026-11-17",
+      "status": "用户明确要求",
+      "text": "首轮默认问题不透露姜维；自然语言询问谁能处理或担责，可获姜维提示。缺少提示便初见魏延，本轮转呈未竟死亡；死亡回溯后默认问题加入正确方向。此项替代此前取消必死的讨论方案。"
+    },
+    {
+      "date": "2026-11-17",
+      "status": "待用户审阅",
+      "text": "保留有线索后的灯灭、办妥但留误会、办妥并获认可三条走向；加上缺线索教学死亡，共四种结果。首轮有线索可以通关。"
+    },
+    {
+      "date": "2026-11-17",
+      "status": "范围说明",
+      "text": "本稿覆盖告示到章末，不扩写既有穿越PV。手机物品、窥帐及思绪画布尚未接入本讨论图；不表示删除现行游戏功能。"
+    },
+    {
+      "date": "2026-11-17",
+      "status": "四种结局方向用户认可；本版措辞与灯灭触发调整待审",
+      "text": "按江山北望第一章人物各自争取安排、追问前一句承诺的方式重写关键交涉。两个成功分支分别争取职责上的配合与当面判断的合作；灯灭路线改成过度保证被核实后，以军情为重明确让路。未改游戏。"
+    }
+  ],
+  "reference": {
+    "path": "D:/Projects/Game/recovery-20261112-v001/chapter-script-v001/01-雨打萍-完整剧本.md",
+    "method": "参考稳定节点、分支后合流、前面表态影响后续追问的组织方式。原作隐藏条件未完整恢复；此JSON的条件是本项目新设计，不冒称原作格式或判定复原。"
+  },
+  "nodes": [
+    {
+      "id": "C01-OPEN",
+      "title": "第六夜",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "穿越开场后，我在中军帐前醒来。帐帘垂着，里面仍有灯光。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "五丈原……第六夜。魏延还没来。"
+        },
+        {
+          "speaker": "告示",
+          "text": "今夜帐内有要事，闲人不得擅入。"
+        },
+        {
+          "speaker": "小甲",
+          "text": "看清了？今夜你我守这里。有人来，先问来意。"
+        }
+      ],
+      "next": "C01-GATE-GUARD",
+      "note": "承接既有穿越开场；这里只记录内容接口，不宣称这段文字为现用影片转录。"
+    },
+    {
+      "id": "C01-GATE-GUARD",
+      "title": "守卫问题版本",
+      "kind": "router",
+      "lines": [],
+      "routes": [
+        {
+          "when": {
+            "deathSeen": false
+          },
+          "target": "C01-GUARD-1"
+        },
+        {
+          "when": {
+            "deathSeen": true
+          },
+          "target": "C01-GUARD-2"
+        }
+      ]
+    },
+    {
+      "id": "C01-GUARD-1",
+      "title": "先问小甲",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "还有什么不明白的？趁现在问。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "rules",
+          "label": "为何不许入帐？",
+          "target": "C01-GUARD-RULE"
+        },
+        {
+          "id": "enemy",
+          "label": "营外有动静吗？",
+          "target": "C01-GUARD-ENEMY"
+        }
+      ],
+      "freeInput": {
+        "placeholder": "向小甲问一句……",
+        "submitLabel": "问他",
+        "intentRoutes": [
+          {
+            "intent": "ask_decision_maker",
+            "target": "C01-HINT-JIANG"
+          },
+          {
+            "intent": "ask_restriction",
+            "target": "C01-GUARD-RULE"
+          },
+          {
+            "intent": "ask_enemy",
+            "target": "C01-GUARD-ENEMY"
+          },
+          {
+            "intent": "other",
+            "target": "C01-GUARD-OTHER"
+          }
+        ],
+        "onTechnicalError": "stay_preserve_input",
+        "note": "这里只声明语义与分支契约，不调用模型；不得按关键词“姜维”单独判定，也不得在默认问题或占位文字里泄露解法。"
+      }
+    },
+    {
+      "id": "C01-GUARD-2",
+      "title": "重来后问小甲",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "怎么又看着我？有话就问。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "上一回，军报交出去了，却没有等到回令。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "decision",
+          "label": "还有谁能处理军情？",
+          "target": "C01-HINT-JIANG"
+        },
+        {
+          "id": "rules",
+          "label": "禁令究竟怎么说？",
+          "target": "C01-GUARD-RULE"
+        }
+      ],
+      "freeInput": {
+        "placeholder": "向小甲问一句……",
+        "submitLabel": "问他",
+        "intentRoutes": [
+          {
+            "intent": "ask_decision_maker",
+            "target": "C01-HINT-JIANG"
+          },
+          {
+            "intent": "ask_restriction",
+            "target": "C01-GUARD-RULE"
+          },
+          {
+            "intent": "ask_enemy",
+            "target": "C01-GUARD-ENEMY"
+          },
+          {
+            "intent": "other",
+            "target": "C01-GUARD-OTHER"
+          }
+        ],
+        "onTechnicalError": "stay_preserve_input",
+        "note": "这里只声明语义与分支契约，不调用模型；不得按关键词“姜维”单独判定，也不得在默认问题或占位文字里泄露解法。"
+      }
+    },
+    {
+      "id": "C01-GUARD-RULE",
+      "title": "禁令",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "丞相吩咐，今夜谁也不得入帐求见。"
+        },
+        {
+          "speaker": "我",
+          "text": "来了急报呢？"
+        },
+        {
+          "speaker": "小甲",
+          "text": "急报当然得递。可帐门也不能随便开。"
+        },
+        {
+          "speaker": "演出",
+          "text": "小甲看了一眼帐帘，把声音压低。"
+        },
+        {
+          "speaker": "小甲",
+          "text": "你我守好这里，别叫人闯进去。"
+        }
+      ],
+      "next": "C01-GUARD-NEXT",
+      "note": "不透露姜维，不授予当值提示。"
+    },
+    {
+      "id": "C01-GUARD-ENEMY",
+      "title": "营前动静",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "方才有斥候回来，说魏骑又逼近了。"
+        },
+        {
+          "speaker": "我",
+          "text": "打进来了？"
+        },
+        {
+          "speaker": "小甲",
+          "text": "还没有。前几夜也来过，号角一响就退。今夜怎么还没散，我也在等消息。"
+        },
+        {
+          "speaker": "演出",
+          "text": "营前传来一阵马嘶，小甲朝那边望了一眼。"
+        }
+      ],
+      "next": "C01-GUARD-NEXT",
+      "note": "不透露姜维。敌情只到小甲实际知道的范围。"
+    },
+    {
+      "id": "C01-GUARD-OTHER",
+      "title": "没有问到当值",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "你想问什么，直说便是。我还得看着帐门。"
+        }
+      ],
+      "next": "C01-GUARD-NEXT",
+      "note": "审稿用固定兜底；正式自然语言回应另行设计，不允许兜底自动透露姜维。"
+    },
+    {
+      "id": "C01-GUARD-NEXT",
+      "title": "问完之后",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "帐里的灯影落在帘上，营前已有几个人快步走来。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "ask",
+          "label": "再问一句",
+          "target": "C01-GATE-GUARD"
+        },
+        {
+          "id": "meet",
+          "label": "去迎魏延",
+          "target": "C01-WEI-ENTRY"
+        }
+      ]
+    },
+    {
+      "id": "C01-HINT-JIANG",
+      "title": "谁能作决定",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "今夜军务，丞相交给姜维将军接报处置。"
+        },
+        {
+          "speaker": "小甲",
+          "text": "他人在中军帐里。去他自己帐前找亲兵，能替你叫他出来。"
+        },
+        {
+          "speaker": "我",
+          "text": "他可以在外面听报？"
+        },
+        {
+          "speaker": "小甲",
+          "text": "得问他本人。我能告诉你谁当值，可不能替他答应。"
+        }
+      ],
+      "afterLines": {
+        "knowsJiang": true
+      },
+      "hintAward": "H-JIANG-DUTY",
+      "choices": [
+        {
+          "id": "jiang",
+          "label": "先去请姜维",
+          "target": "C01-JIANG"
+        },
+        {
+          "id": "wei",
+          "label": "先去迎魏延",
+          "target": "C01-WEI-ENTRY"
+        }
+      ]
+    },
+    {
+      "id": "C01-JIANG",
+      "title": "请姜维出帐",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "姜维帐前的亲兵听明来意，带我来到中军帐外。过了一会儿，姜维走出帐来。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "什么军情？"
+        },
+        {
+          "speaker": "我",
+          "text": "魏骑逼近，魏将军正要来禀报。帐前有禁令，我想请将军在外面听。"
+        },
+        {
+          "speaker": "演出",
+          "text": "帐内传出一声咳嗽。姜维停了一下。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "我知道了。请魏将军过来，营前的情形，让他当面说。"
+        },
+        {
+          "speaker": "我",
+          "text": "您在这里等他？"
+        },
+        {
+          "speaker": "姜维",
+          "text": "我等。要不要禀报丞相，听完再定。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "你也跟他去，免得传岔了。"
+        },
+        {
+          "speaker": "演出",
+          "text": "亲兵应了一声，走到我身旁。"
+        }
+      ],
+      "requires": {
+        "knowsJiang": true,
+        "enteredWithoutDuty": false
+      },
+      "afterLines": {
+        "jiangAgreed": true
+      },
+      "hintAward": "H-JIANG-AGREED",
+      "choices": [
+        {
+          "id": "go",
+          "label": "我去请他",
+          "target": "C01-GATE-WEI-RETURN",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "我去请他。"
+            }
+          ]
+        },
+        {
+          "id": "ask",
+          "label": "若他坚持入帐？",
+          "target": "C01-JIANG-BOUND",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "若魏将军坚持面见丞相呢？"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-JIANG-BOUND",
+      "title": "姜维的回答",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "姜维",
+          "text": "那就先听他为什么非进去不可。真到了不能等的时候，我自会禀报。"
+        },
+        {
+          "speaker": "我",
+          "text": "明白。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "快去，别让他在前营和这里两头跑。"
+        }
+      ],
+      "next": "C01-GATE-WEI-RETURN"
+    },
+    {
+      "id": "C01-GATE-WEI-RETURN",
+      "title": "初见或返回",
+      "kind": "router",
+      "lines": [],
+      "routes": [
+        {
+          "when": {
+            "metWei": false
+          },
+          "target": "C01-WEI-ENTRY"
+        },
+        {
+          "when": {
+            "metWei": true
+          },
+          "target": "C01-WEI-ARRANGEMENT"
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-ENTRY",
+      "title": "见魏延前记录已知情况",
+      "kind": "router",
+      "lines": [],
+      "routes": [
+        {
+          "when": {
+            "knowsJiang": false
+          },
+          "target": "C01-WEI-OPEN",
+          "effects": {
+            "metWei": true,
+            "enteredWithoutDuty": true
+          }
+        },
+        {
+          "when": {
+            "knowsJiang": true
+          },
+          "target": "C01-WEI-OPEN",
+          "effects": {
+            "metWei": true,
+            "enteredWithoutDuty": false
+          }
+        }
+      ],
+      "note": "在实际初见魏延时锁定本轮教学路线。知道当值与已有本人承诺分开；未问出当值便见魏延，本轮只能走转呈未竟，不在交涉中补发提示。"
+    },
+    {
+      "id": "C01-WEI-OPEN",
+      "title": "拦住魏延",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "军情紧急，我须入帐通报。"
+        },
+        {
+          "speaker": "我",
+          "text": "将军留步，今夜帐前有禁令。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "我来报军情。"
+        },
+        {
+          "speaker": "我",
+          "text": "帐内现在不能进。"
+        },
+        {
+          "speaker": "演出",
+          "text": "魏延看了看我手中的长矛。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "你是怕误了丞相的事，还是怕我误事？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "concern",
+          "label": "将军为军情，我也是",
+          "target": "C01-WEI-REPORT",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "将军为军情，我也是。"
+            }
+          ]
+        },
+        {
+          "id": "order",
+          "label": "不敢让将军担责",
+          "target": "C01-WEI-ORDER",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "禁令在前，我不敢让将军为此担责。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-REPORT",
+      "title": "敌军在等什么",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "魏军在阵前喊，诸葛亮怎么不出来了，蜀军如今是谁发令。"
+        },
+        {
+          "speaker": "我",
+          "text": "他们攻营了？"
+        },
+        {
+          "speaker": "魏延",
+          "text": "没有。号角响了也不退。我们向东调人，西边又来一队。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他说到这里，朝帐门看了一眼。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "他们在看我们怎么应对。前营等着回令，我不能空着手回去。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "arrange",
+          "label": "这份军情，确实不能搁",
+          "target": "C01-GATE-PLAN",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "这份军情，确实不能搁。"
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "label": "他们等的，未必是咱们出兵",
+          "target": "C01-WEI-WAIT",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "他们等的，未必是咱们出兵。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-ORDER",
+      "title": "谁也在奉命",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "我来报军情，怎么先替我算起罪来了？"
+        },
+        {
+          "speaker": "演出",
+          "text": "魏延瞥了一眼告示，又看向我。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "前营等着我回去。你若真替我着想，就别只顾着这道门。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "relay",
+          "label": "请容我先把话递到",
+          "target": "C01-GATE-PLAN",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "将军既亲自来了，我总得把这份急报递到。"
+            }
+          ]
+        },
+        {
+          "id": "listen",
+          "label": "是我失言，先说军情",
+          "target": "C01-WEI-REPORT",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "是我失言。将军，前营究竟怎样？"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-WAIT",
+      "title": "尚未攻营不是保证",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "你是说，他们想引我出去？"
+        },
+        {
+          "speaker": "我",
+          "text": "也许。我怕咱们越急，越让他们看出虚实。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "也可能就等着咱们迟疑。你看出他们在试探，我在前营就看不出来？"
+        },
+        {
+          "speaker": "演出",
+          "text": "他收回指向营外的手。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "正因为拿不准，我才来请示。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "correct",
+          "label": "是我多虑，先请示",
+          "target": "C01-GATE-PLAN",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "将军说得是。这两种可能，都该让能作主的人知道。"
+            }
+          ]
+        },
+        {
+          "id": "take",
+          "label": "我替将军把疑虑带到",
+          "target": "C01-GATE-PLAN",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "容我把将军的原话递进去，不替将军省掉半句。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-GATE-PLAN",
+      "title": "按已知情况接续",
+      "kind": "router",
+      "lines": [],
+      "routes": [
+        {
+          "when": {
+            "enteredWithoutDuty": true
+          },
+          "target": "C01-FAIL-HANDOFF"
+        },
+        {
+          "when": {
+            "enteredWithoutDuty": false,
+            "jiangAgreed": false
+          },
+          "target": "C01-WEI-ASK-JIANG"
+        },
+        {
+          "when": {
+            "enteredWithoutDuty": false,
+            "jiangAgreed": true
+          },
+          "target": "C01-WEI-ARRANGEMENT"
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-ASK-JIANG",
+      "title": "知道是谁仍要亲自问准",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "我",
+          "text": "我问过守卫，今夜军务由姜维将军接报。容我请他出来。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "他叫你来的？"
+        },
+        {
+          "speaker": "我",
+          "text": "没有。我还没见到他，不能替他答应。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "去问。我到帐前等你。"
+        }
+      ],
+      "next": "C01-JIANG",
+      "requires": {
+        "knowsJiang": true,
+        "jiangAgreed": false,
+        "enteredWithoutDuty": false
+      }
+    },
+    {
+      "id": "C01-FAIL-HANDOFF",
+      "title": "转呈",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "好，你即刻转呈，莫误军情。"
+        },
+        {
+          "speaker": "演出",
+          "text": "魏延交代了营前情势，转身回了前营。我赶回帐前。"
+        },
+        {
+          "speaker": "我",
+          "text": "小甲，魏骑逼近，闻号不退，还随着我军调动换向。魏将军让我转呈。"
+        },
+        {
+          "speaker": "小甲",
+          "text": "我替你递话。可怎么处置，得等里面回令。"
+        }
+      ],
+      "requires": {
+        "enteredWithoutDuty": true
+      },
+      "choices": [
+        {
+          "id": "wait",
+          "label": "我在这里等",
+          "target": "C01-FAIL-NIGHT",
+          "response": [
+            {
+              "speaker": "我",
+              "text": "有回令就叫我。"
+            },
+            {
+              "speaker": "小甲",
+              "text": "知道了。"
+            }
+          ]
+        },
+        {
+          "id": "urge",
+          "label": "请你赶紧递进去",
+          "target": "C01-FAIL-NIGHT",
+          "response": [
+            {
+              "speaker": "小甲",
+              "text": "我已经递话了，还没听见回音。"
+            },
+            {
+              "speaker": "演出",
+              "text": "他看向帐帘，又站回门边。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-FAIL-NIGHT",
+      "title": "天亮前没有回令",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "小甲隔帘通传，帐内没有传出如何处置的答复。远处马蹄声时近时远，帐里的灯一直亮着。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "灯还在。只要撑过这一夜……"
+        },
+        {
+          "speaker": "演出",
+          "text": "天色发白。我仍握着长矛，魏延已从营前回来。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "昨夜军报，谁接了？"
+        },
+        {
+          "speaker": "我",
+          "text": "我交给小甲，他递了话。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "我问谁作的处置。谁回的令？"
+        }
+      ],
+      "next": "C01-FAIL-JUDGMENT"
+    },
+    {
+      "id": "C01-FAIL-JUDGMENT",
+      "title": "清晨问责",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "小甲低下头。魏延没有看他，只等着我的回答。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "admit",
+          "label": "没有等到回令",
+          "target": "C01-FAIL-SENTENCE",
+          "response": [
+            {
+              "speaker": "魏延",
+              "text": "那你就让前营等了一夜？"
+            }
+          ],
+          "say": [
+            {
+              "speaker": "我",
+              "text": "没有等到回令。"
+            }
+          ]
+        },
+        {
+          "id": "defend",
+          "label": "我确实把话送到了",
+          "target": "C01-FAIL-SENTENCE",
+          "response": [
+            {
+              "speaker": "魏延",
+              "text": "你答应的是不误军情。送到门口，就算办完了？"
+            }
+          ],
+          "say": [
+            {
+              "speaker": "我",
+              "text": "我确实把话送到了。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-FAIL-SENTENCE",
+      "title": "收矛",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "虽未酿祸，也不堪此用。"
+        },
+        {
+          "speaker": "演出",
+          "text": "亲兵上前收走我的长矛。帐内又传来咳嗽，我转头望过去。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "丞相还活着。"
+        },
+        {
+          "speaker": "演出",
+          "text": "我被押离中军帐。刀落下来，眼前骤然一黑。"
+        }
+      ],
+      "next": "C01-END-DEATH",
+      "note": "沿用原教学问责与处死的架空安排；没有新增实际战损。死亡仅在缺少姜维当值线索的本轮发生。"
+    },
+    {
+      "id": "C01-END-DEATH",
+      "title": "诸葛亮活了，但你挂了",
+      "kind": "ending",
+      "lines": [
+        {
+          "speaker": "结算",
+          "text": "灯守住了。军报没有得到处置，我没能活到第二夜。"
+        }
+      ],
+      "endingId": "E-DEATH",
+      "afterLines": {
+        "deathSeen": true
+      },
+      "choices": [
+        {
+          "id": "rewind",
+          "label": "再来一次",
+          "target": "C01-REWIND",
+          "effects": {
+            "knowsJiang": false,
+            "jiangAgreed": false,
+            "metWei": false,
+            "enteredWithoutDuty": false,
+            "stance": "unset",
+            "reportHandled": false,
+            "orderDelivered": false
+          }
+        },
+        {
+          "id": "stop",
+          "label": "暂时停在这里",
+          "target": "C01-EXIT"
+        }
+      ]
+    },
+    {
+      "id": "C01-REWIND",
+      "title": "还是那片夕阳",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "小甲",
+          "text": "魂丢哪儿去了？"
+        },
+        {
+          "speaker": "演出",
+          "text": "长矛还在手里，告示就在面前。营前的马蹄声尚未响起。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "还是第六夜。小甲能递话，可那份军报还得有人作决定。"
+        }
+      ],
+      "next": "C01-GATE-GUARD"
+    },
+    {
+      "id": "C01-WEI-ARRANGEMENT",
+      "title": "先过伯约这一关",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "我",
+          "text": "姜将军答应在帐外接报，正在等您。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "我的军报，先要过伯约这一关？"
+        },
+        {
+          "speaker": "演出",
+          "text": "他看向随行亲兵。亲兵点头，刚要开口，魏延又把目光转回来。"
+        }
+      ],
+      "requires": {
+        "jiangAgreed": true,
+        "enteredWithoutDuty": false
+      },
+      "choices": [
+        {
+          "id": "duty",
+          "label": "丞相有安排，先依安排",
+          "target": "C01-REPORT-FORMAL",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "丞相既让伯约当值，想必也有这一层安排。请将军先见他。"
+            }
+          ]
+        },
+        {
+          "id": "direct",
+          "label": "将军亲见的，我传不全",
+          "target": "C01-WEI-TEST",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "将军在前营亲眼所见，我传不全。伯约出来听，省得隔着我猜。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-REPORT-FORMAL",
+      "title": "先按安排办事",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "既是丞相的安排，我去。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他越过我，向中军帐走去。亲兵赶上前引路。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "伯约，今夜的军情，都先交你？"
+        },
+        {
+          "speaker": "姜维",
+          "text": "是。将军有何顾虑，当面说就是。"
+        },
+        {
+          "speaker": "演出",
+          "text": "魏延看了一眼帐帘，才展开军报。"
+        }
+      ],
+      "afterLines": {
+        "stance": "formal"
+      },
+      "next": "C01-REPORT"
+    },
+    {
+      "id": "C01-WEI-TEST",
+      "title": "到底拦的是什么",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "倒知道你传不全。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他没有再往前走。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "伯约若也说该禀丞相，你还拦不拦？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "judge",
+          "label": "听过军情，请他定夺",
+          "target": "C01-REPORT-COOP",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "将军把军情说清，伯约听过再定。我不敢替你们两位把话说死。"
+            }
+          ]
+        },
+        {
+          "id": "absolute",
+          "label": "伯约应了，自有安排",
+          "target": "C01-WEI-REPAIR",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "伯约既答应出来，想必已有安排，不会让将军白等。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-WEI-REPAIR",
+      "title": "拿姜维作挡箭牌",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "他答应听报，还是答应今夜就不必见丞相了？"
+        },
+        {
+          "speaker": "演出",
+          "text": "我看向亲兵。"
+        },
+        {
+          "speaker": "亲兵",
+          "text": "姜将军只说，请魏将军来，听完军情再定。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "你替他多应了一句，我却得拿这句话回前营。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他侧过身，望着帐门。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "你若还不能说准，我便自己进去问。"
+        }
+      ],
+      "choices": [
+        {
+          "id": "repair",
+          "label": "是我话满了，当面说",
+          "target": "C01-REPORT-COOP",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "是我把话说满了。伯约就在帐外，请将军当面问，免得再误在我嘴上。"
+            }
+          ]
+        },
+        {
+          "id": "insist",
+          "label": "军情为重，我不再拦",
+          "target": "C01-END-LAMP",
+          "say": [
+            {
+              "speaker": "我",
+              "text": "军情为重，我不敢再耽误。请将军入帐禀报。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C01-REPORT-COOP",
+      "title": "把军情当面说清",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "魏延看了一眼身旁的亲兵。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "伯约就在帐前？"
+        },
+        {
+          "speaker": "亲兵",
+          "text": "正在等将军。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "走。"
+        },
+        {
+          "speaker": "演出",
+          "text": "到中军帐外，姜维迎了上来。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "伯约，前营的事，我得跟你说仔细。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "将军请说。"
+        }
+      ],
+      "afterLines": {
+        "stance": "cooperate"
+      },
+      "next": "C01-REPORT"
+    },
+    {
+      "id": "C01-REPORT",
+      "title": "接报与回令",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "魏骑在两翼轮着动，号角吓不退。我们一调人，他们就换方向。尚未见步卒跟进。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "可有人越过鹿角？"
+        },
+        {
+          "speaker": "魏延",
+          "text": "没有。我怕他们摸清虚实，再引我们出去。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "严守营门，再探敌情。未明虚实，不得追击。有新军情，立即报我。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "若他们真压上来？"
+        },
+        {
+          "speaker": "姜维",
+          "text": "立刻来报。我在这里，要禀丞相时，由我进去。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "好，我回前营。"
+        }
+      ],
+      "afterLines": {
+        "reportHandled": true
+      },
+      "choices": [
+        {
+          "id": "follow",
+          "label": "随魏延送回军令",
+          "target": "C01-ORDER-FRONT"
+        },
+        {
+          "id": "stay",
+          "label": "留在帐前等消息",
+          "target": "C01-ORDER-TENT"
+        }
+      ]
+    },
+    {
+      "id": "C01-ORDER-FRONT",
+      "title": "军令到前营",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "我随魏延来到前营。他召来守将，把军令逐项交代。"
+        },
+        {
+          "speaker": "守将",
+          "text": "守住营门，再探敌情，不得追击。有变立即报姜将军。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "照办。"
+        },
+        {
+          "speaker": "演出",
+          "text": "守将分派人手。我听见军令传到哨口，才返回帐前。"
+        }
+      ],
+      "afterLines": {
+        "orderDelivered": true
+      },
+      "next": "C01-DAWN"
+    },
+    {
+      "id": "C01-ORDER-TENT",
+      "title": "帐前等到回信",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "我",
+          "text": "我留在这里。有新军情，也好接应。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "可以。"
+        },
+        {
+          "speaker": "演出",
+          "text": "过了一会儿，前营传令兵回来复命。"
+        },
+        {
+          "speaker": "传令兵",
+          "text": "魏将军已传令，各处守营，再派斥候出探。"
+        },
+        {
+          "speaker": "演出",
+          "text": "姜维点了点头。我握着长矛的手终于松下来。"
+        }
+      ],
+      "afterLines": {
+        "orderDelivered": true
+      },
+      "next": "C01-DAWN"
+    },
+    {
+      "id": "C01-DAWN",
+      "title": "灯影渐淡",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "天色亮起来，帐内的灯仍未熄灭。魏延回来交代敌骑退去的消息。姜维听完，才让守帐的人换班。"
+        }
+      ],
+      "next": "C01-GATE-SUCCESS"
+    },
+    {
+      "id": "C01-GATE-SUCCESS",
+      "title": "按交涉经过收尾",
+      "kind": "router",
+      "lines": [],
+      "requires": {
+        "reportHandled": true,
+        "orderDelivered": true
+      },
+      "routes": [
+        {
+          "when": {
+            "stance": "formal"
+          },
+          "target": "C01-END-FORMAL"
+        },
+        {
+          "when": {
+            "stance": "cooperate"
+          },
+          "target": "C01-END-COOP"
+        }
+      ]
+    },
+    {
+      "id": "C01-END-FORMAL",
+      "title": "灯火未灭",
+      "kind": "ending",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "魏延交代完敌骑退去的消息，临走时叫住我。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "今夜依伯约的安排办了。下次有急报，早些请他来。"
+        },
+        {
+          "speaker": "我",
+          "text": "是。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他点了点头，没有再多说。"
+        },
+        {
+          "speaker": "结算",
+          "text": "灯守住了，军报也办妥了。魏延接受了今夜的安排，对我的阻拦仍有几分保留。"
+        }
+      ],
+      "endingId": "E-FORMAL",
+      "choices": [
+        {
+          "id": "continue",
+          "label": "看七日之后",
+          "target": "C01-EPILOGUE"
+        },
+        {
+          "id": "reread",
+          "label": "重读这一章",
+          "target": "C01-OPEN",
+          "effects": {
+            "deathSeen": false,
+            "knowsJiang": false,
+            "jiangAgreed": false,
+            "metWei": false,
+            "enteredWithoutDuty": false,
+            "stance": "unset",
+            "reportHandled": false,
+            "orderDelivered": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-END-COOP",
+      "title": "帐外同议",
+      "kind": "ending",
+      "lines": [
+        {
+          "speaker": "魏延",
+          "text": "还站着？"
+        },
+        {
+          "speaker": "我",
+          "text": "等前营回信。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "已经交代清楚了。去换班吧。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他走出几步，又回头问我的名字。我报了名字，他点点头，继续往前营走。"
+        },
+        {
+          "speaker": "结算",
+          "text": "灯守住了，军令也传到了。魏延记住了这个拦过他、又陪他把军情办完的人。"
+        }
+      ],
+      "endingId": "E-COOP",
+      "choices": [
+        {
+          "id": "continue",
+          "label": "看七日之后",
+          "target": "C01-EPILOGUE"
+        },
+        {
+          "id": "reread",
+          "label": "重读这一章",
+          "target": "C01-OPEN",
+          "effects": {
+            "deathSeen": false,
+            "knowsJiang": false,
+            "jiangAgreed": false,
+            "metWei": false,
+            "enteredWithoutDuty": false,
+            "stance": "unset",
+            "reportHandled": false,
+            "orderDelivered": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01-END-LAMP",
+      "title": "一阵风",
+      "kind": "ending",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "我收回长矛，让开帐门前的位置。"
+        },
+        {
+          "speaker": "魏延",
+          "text": "军情耽误不得。"
+        },
+        {
+          "speaker": "演出",
+          "text": "魏延上前报了一声，掀帘入帐。亲兵跟到门边，没来得及再说话。"
+        },
+        {
+          "speaker": "演出",
+          "text": "风灌进帐中。灯火猛地一晃，暗了下去。"
+        },
+        {
+          "speaker": "结算",
+          "text": "我不愿再耽误军情，终于让开了路。那盏灯却没能等到天明。"
+        }
+      ],
+      "endingId": "E-LAMP",
+      "choices": [
+        {
+          "id": "rewind",
+          "label": "重试这一夜",
+          "target": "C01-REWIND-LAMP",
+          "effects": {
+            "knowsJiang": false,
+            "jiangAgreed": false,
+            "metWei": false,
+            "enteredWithoutDuty": false,
+            "stance": "unset",
+            "reportHandled": false,
+            "orderDelivered": false
+          }
+        },
+        {
+          "id": "stop",
+          "label": "暂时停在这里",
+          "target": "C01-EXIT"
+        }
+      ],
+      "note": "v2新讨论：不再由蛮横坚持禁令触发。玩家替姜维作过度保证，被核实后选择以军情为重、明确让魏延入帐；灯灭后重试，不授予死亡提示。"
+    },
+    {
+      "id": "C01-REWIND-LAMP",
+      "title": "灯灭后的重试",
+      "kind": "passage",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "这次尝试停在帐帘掀起的一刻。重新开始时，眼前又是第六夜的告示。"
+        }
+      ],
+      "next": "C01-GATE-GUARD",
+      "note": "玩家重试界面，不新增角色死亡或死亡记忆；无此前死亡则仍显示首轮默认问题。"
+    },
+    {
+      "id": "C01-EPILOGUE",
+      "title": "七日期满",
+      "kind": "choice",
+      "lines": [
+        {
+          "speaker": "演出",
+          "text": "七日期满，主灯未灭。诸葛亮仍需休养，军报暂由姜维整理后呈入。"
+        },
+        {
+          "speaker": "我",
+          "text": "这一夜，总算改过来了。"
+        },
+        {
+          "speaker": "姜维",
+          "text": "丞相今日多看了两份军报。看得慢些，精神比前几日好。"
+        },
+        {
+          "speaker": "演出",
+          "text": "他把案上的旧卷收起，其中一卷写着祁山粮运。"
+        },
+        {
+          "speaker": "我",
+          "text": "这是从前的军报？"
+        },
+        {
+          "speaker": "姜维",
+          "text": "那次粮运失期，退下来的时候，好些安排都来不及了。"
+        },
+        {
+          "speaker": "我（心声）",
+          "text": "眼前这一夜能改，更早的那一次呢？"
+        }
+      ],
+      "choices": [
+        {
+          "id": "next",
+          "label": "再往前，去祁山",
+          "target": "C01-NEXT-CHAPTER"
+        },
+        {
+          "id": "stop",
+          "label": "先留在这一夜",
+          "target": "C01-EXIT"
+        }
+      ],
+      "note": "新写的讨论尾声，保留延寿不等于治愈；未替换现有影片、字幕或章间文本。"
+    },
+    {
+      "id": "C01-NEXT-CHAPTER",
+      "title": "第二章边界",
+      "kind": "terminal",
+      "lines": [],
+      "boundary": {
+        "kind": "next_chapter_design",
+        "chapter": "grain",
+        "implemented": false
+      },
+      "note": "第一章阅读结束。只声明下一章，不把未写的第二章节点当作本文件内部目标。"
+    },
+    {
+      "id": "C01-EXIT",
+      "title": "结束本次阅读",
+      "kind": "terminal",
+      "lines": [],
+      "boundary": {
+        "kind": "stop_review"
+      }
+    }
+  ],
+  "previousVersion": "../chapter-one.design.v1.json"
+}

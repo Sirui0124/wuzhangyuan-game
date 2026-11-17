@@ -1,0 +1,20 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "text": "A six-second silent live-action portrait reaction, tightly framed head and shoulders exactly like the reference. Fixed camera. Preserve this exact elderly Chinese man's face, graying hair, beard, worn dark cloak, warm light on the right and cool predawn behind him. His lips stay gently pressed together throughout. He watches someone just beside the lens in quiet thoughtful silence. One subtle breath, one natural blink, eyes settle downward slightly at the very end. Keep his expression composed, attentive and tired. The frame remains the same tight head and shoulders throughout. Quiet room tone and soft breathing only. This is an entirely silent listening performance with no spoken words, no singing and no music. Clean film picture with no captions or subtitles.",
+      "type": "text"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/b4597a0e1ba525c372207e67f6dc1e5ec152126936b70978a8b8fc038df9978f.jpg"
+      },
+      "role": "reference_image"
+    }
+  ],
+  "resolution": "768P",
+  "duration": 6,
+  "ratio": "16:9"
+}

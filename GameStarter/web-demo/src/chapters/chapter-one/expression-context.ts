@@ -1,4 +1,3 @@
-import { isAvailableSupply, supplyById } from './supplies';
 import type { ExpressionGenerationInput, ExpressionMaterial, ExpressionSource } from '../../expression-contract';
 import { currentEnemyObservation, JIANG_CONFIRMED_CONSENT_FACT } from '../../weiyan-facts';
 import type { ChapterSessionContext } from './session-context';
@@ -80,16 +79,11 @@ export function buildExpressionInput(context: ChapterSessionContext): Expression
         });
         verificationSources.push({ evidenceId: id, basisIds, originals });
     }
-    const attachedItems = state.supplies.attached.map(id => {
-        const item = supplyById(id, state.supplies);
-        if (!item || !isAvailableSupply(id, state.supplies)) throw new Error('物品尚未购买或已消耗');
-        return { kind: 'item' as const, id: item.id, name: item.name, ability: item.ability, boundary: item.boundary };
-    });
     const listenerText = expressionListenerTurn(state, id => rows.get(id));
     const previousTurns = state.story.history
         .filter(turn => speechHistoryRound(turn, state.round) === state.round
             && turn.text.trim() && turn.feedback.trim()
-            && turn.npcTurn?.classification.disposition !== 'execute' && !turn.itemDecision?.eraFailure)
+            && turn.npcTurn?.classification.disposition !== 'execute')
         .map(turn => ({ text: turn.text, reply: turn.feedback }));
     const draft = state.story.draft.trim(), focus = state.composition.focus.trim();
     const words = draft || focus;
@@ -106,7 +100,6 @@ export function buildExpressionInput(context: ChapterSessionContext): Expression
             },
             playerIntent: { mode: words ? selectedEvidence.length ? 'compose-selected-with-intent' : 'polish-player-words' : 'compose-from-selected', words, draft, focus },
             selectedEvidence,
-            ...(attachedItems.length ? { attachedItems } : {}),
         },
         verificationSources,
     };

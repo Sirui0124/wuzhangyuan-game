@@ -18,7 +18,7 @@ try{
  async function render(person,chapter=3){
   await p.evaluate(({person,chapter})=>{
    const {media,story,grain,j,v,g,gv}=window.review;
-   if(chapter===3){const s=new j.JietingSession(story,undefined,{aiEnabled:false,phoneAllowed:false});const n=story.nodes.find(n=>n.speaker===person&&n.kind==='line'&&(person==='马谡'?n.scene==='jieting_masu_tent':person==='王平'?n.scene==='jieting_wangping_camp':true));if(!n)throw Error(person);s.state.node=n.id;document.querySelector('#game-root').innerHTML=v.jietingView(s,media,{busy:false,error:'',online:false,phone:false,changedScene:false});}
+   if(chapter===3){const s=new j.JietingSession(story,undefined,{aiEnabled:false});const n=story.nodes.find(n=>n.speaker===person&&n.kind==='line'&&(person==='马谡'?n.scene==='jieting_masu_tent':person==='王平'?n.scene==='jieting_wangping_camp':true));if(!n)throw Error(person);s.state.node=n.id;document.querySelector('#game-root').innerHTML=v.jietingView(s,media,{busy:false,error:'',online:false,phone:false,changedScene:false});}
    else {const s=new g.GrainSession(grain);const n=grain.nodes.find(n=>n.speaker==='苟安'&&n.kind==='line'&&n.image);s.state.node=n.id;document.querySelector('#game-root').innerHTML=gv.grainView(s,media,{notes:false,items:false,editing:false,busy:false,error:'',phoneEnabled:false});}
   },{person,chapter});
   if(chapter===3)await p.locator('.portrait-stage img').evaluate(i=>i.decode());await p.evaluate(()=>document.fonts.ready);

@@ -90,7 +90,7 @@ async function run(c) {
                     assert.ok(s.finishExecution(),'execution scene must finish');
                     assert.equal(s.snapshot().end,'weiyan-execution');
                 }
-                result.next = { phase: s.snapshot().phase, section: s.snapshot().section, end:s.snapshot().end, itemAgreement: s.snapshot().supplies.agreement };
+                result.next = { phase: s.snapshot().phase, section: s.snapshot().section, end:s.snapshot().end };
             } else {
                 result.input = c.input;
                 result.text = await polishDialogue(c.input, signal, api);

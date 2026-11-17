@@ -2,7 +2,6 @@ import { createCompositionGuard } from './composition-guard';
 import type { ChapterSession, GameSessionState } from '../chapter-session';
 import type { GameAudio } from '../audio';
 import type { CinematicPlayer, Clip } from '../cinematics';
-import { clearItemReceipts } from '../item-receipt';
 import { esc } from './view-common';
 import { createStoryFilms, type StoryFilm } from './story-films';
 import { endingFilmForState, type EndingFilm } from './ending-films';
@@ -17,6 +16,7 @@ type Views = {
     modalHTML(state: GameSessionState): string;
 };
 type RendererOptions = {
+    branch?: { html(): string; sync(): void };
     paused?(): boolean;
     presented?(): void;
     root: HTMLElement; game: ChapterSession; ui: GameUIState; audio: GameAudio;
@@ -46,6 +46,7 @@ export function createGameRenderer(options: RendererOptions) {
         try { renderContent(); } finally { options.presented?.(); }
     }
     function renderContent() {
+        options.branch?.sync();
         if (options.paused?.()) return;
         // The composition guard above keeps asynchronous updates out of a live IME session.
         const state = game.snapshot(); clearInterval(ui.typeTimer);
@@ -62,7 +63,6 @@ export function createGameRenderer(options: RendererOptions) {
         const focusAttribute = active?.closest('.workspace-screen') ? ['data-action'].find(name => active.hasAttribute(name)) : undefined;
         const workspaceFocus = active?.closest('.workspace-screen') ? active.id ? `#${CSS.escape(active.id)}` : focusAttribute ? `[${focusAttribute}="${CSS.escape(active.getAttribute(focusAttribute)!)}"]` : '' : '';
         const caret = active instanceof HTMLTextAreaElement || active instanceof HTMLInputElement ? [active.selectionStart, active.selectionEnd] : null;
-        if (ui.home || ui.previewFilm || ['cinematic', 'death', 'ending', 'map'].includes(state.phase)) clearItemReceipts();
         // Scene nodes stay mounted between lines, but their modal sibling must be replaced too.
         root.querySelectorAll(':scope > .game-modal-shade').forEach(node => node.remove());
         const previousScroll = root.querySelector<HTMLElement>('.workspace-layout')?.scrollTop ?? 0;
@@ -70,7 +70,7 @@ export function createGameRenderer(options: RendererOptions) {
         const storyMode = ['thought-prompt', 'thoughts', 'expression'].includes(state.phase) && !ui.home;
         if (ui.home) { cinema.dispose(); ui.filmKey = ''; audio.setMusicPaused(false); audio.setMusic('home'); root.innerHTML = ui.menuMap ? mapHTML() : menu(); }
         else if (ui.previewFilm || state.phase === 'cinematic') {
-            const cinematic = game.currentCinematic(), clips = ui.previewFilm ? (ui.previewFilm === 'grain' ? movies.chapterPreview ?? [] : (movies.chapterScenes ?? []).filter(clip => clip.id === ui.previewFilm)) : (movies[cinematic!.group] ?? []).filter(clip => !cinematic!.clipIds || cinematic!.clipIds.includes(clip.id));
+            const cinematic = game.currentCinematic(), clips = ui.previewFilm ? (ui.previewFilm === 'prologue' ? movies.prologue ?? [] : ui.previewFilm === 'grain' ? movies.chapterPreview ?? [] : (movies.chapterScenes ?? []).filter(clip => clip.id === ui.previewFilm)) : (movies[cinematic!.group] ?? []).filter(clip => !cinematic!.clipIds || cinematic!.clipIds.includes(clip.id));
             const key = ui.previewFilm ? `chapter-preview:${ui.previewFilm}` : `${state.story.run}:${cinematic!.id}`;
             audio.setMusicPaused(true);
             if (ui.filmKey !== key || !root.querySelector('video')) {
@@ -78,6 +78,9 @@ export function createGameRenderer(options: RendererOptions) {
                 cinema.mount(root.querySelector('#film-host')!, key, clips, ui.previewFilm ? 'chapterPreview' : cinematic!.group, () => { ui.filmKey = ''; if (ui.previewFilm) { ui.previewFilm = ''; ui.home = true; ui.menuMap = true; ui.overlay = ''; render(); } else game.finishCinematic(); });
             }
             return;
+        } else if (state.phase==='branch' && options.branch) {
+            cinema.dispose();ui.filmKey='';audio.setMusicPaused(false);audio.setMusic('round1');
+            root.innerHTML=options.branch.html();
         } else if (endingFilm && !cinema.done(endingKey(endingFilm))) {
             const key = endingKey(endingFilm);
             audio.setMusicPaused(true);
@@ -95,7 +98,7 @@ export function createGameRenderer(options: RendererOptions) {
             ui.filmKey = '';
             return;
         } else {
-            cinema.dispose(); ui.filmKey = ''; audio.setMusicPaused(state.end === 'weiyan-execution' || state.end === 'era-arrest'); audio.setMusic(['expression', 'spoken', 'reply'].includes(state.phase) ? 'weiyan' : state.round === 1 ? 'round1' : 'round2');
+            cinema.dispose(); ui.filmKey = ''; audio.setMusicPaused(state.end === 'weiyan-execution'); audio.setMusic(['expression', 'spoken', 'reply'].includes(state.phase) ? 'weiyan' : state.round === 1 ? 'round1' : 'round2');
             if (state.phase === 'death' || state.phase === 'ending') {
                 root.innerHTML = endingHTML(state);
                 if (endingFilm && cinema.done(endingKey(endingFilm))) {

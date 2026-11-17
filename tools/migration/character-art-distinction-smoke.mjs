@@ -19,7 +19,7 @@ const targets = new Map([
     ['JT-061', 'jieting-mover'], ['JT-125', 'jieting-messenger'], ['JT-127', 'jieting-leader'],
 ]);
 const picks = { 'JT-Q1':'JT-O018', 'JT-Q2':'JT-O029', 'JT-Q3':'JT-O093', 'JT-Q4':'JT-O111' };
-const session = new JietingSession(story, undefined, { aiEnabled:false, phoneAllowed:false });
+const session = new JietingSession(story, undefined, { aiEnabled:false });
 const snapshots = new Map();
 for (let step = 0; step < 220 && snapshots.size < targets.size; step++) {
     const id = session.current.id;

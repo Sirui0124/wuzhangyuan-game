@@ -12,7 +12,7 @@ const grainOutcomes: Record<string, string> = {
 
 /** Fixed chapter epilogues. These describe outcomes, never award progress. */
 export function chapterOnward(chapter: string, ending: string) {
-    if (chapter === 'wuzhang' && ['safe', 'radio-relay', 'light-signal', 'item-plan'].includes(ending)) return {
+    if (chapter === 'wuzhang' && ['safe'].includes(ending)) return {
         title: '再往前，去祁山', href: '/?chapter=grain', label: '前往第二章 · 祁山', paragraphs: [
             '军报送进去了，今夜的灯也保住了。可守住这一夜，还不能替丞相解决往后每一次出兵的难处。',
             '我想起更早的祁山，那次因粮运而起的退兵。如果回到那次退兵之前，我能不能让事情有所不同？',

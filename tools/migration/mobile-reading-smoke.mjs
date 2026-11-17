@@ -10,16 +10,18 @@ const {ChapterSession,GAME_SAVE_KEY}=await mod('chapter-session.js');
 const {GrainSession}=await mod('chapters/chapter-two/session.js');
 const {GRAIN_SAVE_KEY}=await mod('chapters/chapter-two/navigation.js');
 const {createJietingPlaytest}=await mod('chapters/chapter-three/session.js');
-const firstRead=read(resolve(build,'playtest/item-headscarf.json'));
-// A restored position in the middle of C1FIX15 correctly falls back to text.
-firstRead.lineIndex=11;firstRead.story.current='J13';firstRead.scene='camp_gate';firstRead.story.completed=firstRead.story.completed.filter(id=>id!=='J13');delete firstRead.displayedRows.J13;
+const {dialogueFixtures}=await import('../ai/dialogue-fixtures.mjs');
+const f=await dialogueFixtures(build), reading=await f.thoughts();
+reading.think();reading.continueThought();reading.placeThought('C06');reading.placeThought('C07');reading.think();assert.ok(reading.followPlan());
+while(reading.row()&&reading.row().id!=='J13')reading.nextLine();
+const firstRead=reading.snapshot();
 const firstChoice=new ChapterSession(read('content/chapters/wuzhang/chapter-one.script.json'),read('content/chapters/wuzhang/chapter-one.flow.json'),firstRead.contentVersion,undefined,undefined,'offline');
 firstChoice.finishCinematic();while(firstChoice.row())firstChoice.nextLine();firstChoice.act('read-notice');while(firstChoice.row())firstChoice.nextLine();firstChoice.move('report_post');firstChoice.act('meet-first-scout');while(firstChoice.row())firstChoice.nextLine();assert.equal(firstChoice.snapshot().phase,'choice');
 const films=read('content/chapters/grain/chapter-two.films.json'),rubric=read('content/chapters/grain/chapter-two.films-rubric.json');
 const secondRead=new GrainSession(films,undefined,rubric,false);for(let i=0;i<100&&secondRead.current.kind!=='line';i++)assert.ok(secondRead.advance(secondRead.current.options?.[0]?.id),secondRead.current.id);assert.equal(secondRead.current.kind,'line');
 const secondChoice=new GrainSession(films,undefined,rubric,false);for(let i=0;i<100&&secondChoice.current.kind!=='choice';i++)assert.ok(secondChoice.advance(secondChoice.current.options?.[0]?.id),secondChoice.current.id);assert.equal(secondChoice.current.kind,'choice');
-const thirdChoice=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:false,phoneAllowed:false});
-const thirdRead=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:false,phoneAllowed:false});assert.ok(thirdRead.advance('JT-O132'),thirdRead.current.id);for(let i=0;i<100&&thirdRead.current.kind!=='line';i++)assert.ok(thirdRead.advance(thirdRead.options[0]?.id),thirdRead.current.id);assert.equal(thirdRead.current.kind,'line');
+const thirdChoice=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:false});
+const thirdRead=createJietingPlaytest(read(resolve(build,'story/chapter-three.story.json')),'reinforcement',{aiEnabled:false});assert.ok(thirdRead.advance('JT-O132'),thirdRead.current.id);for(let i=0;i<100&&thirdRead.current.kind!=='line';i++)assert.ok(thirdRead.advance(thirdRead.options[0]?.id),thirdRead.current.id);assert.equal(thirdRead.current.kind,'line');
 const fixtures=[['one-read',GAME_SAVE_KEY,JSON.stringify(firstRead),'/',null],['one-choice',GAME_SAVE_KEY,firstChoice.serialize(),'/', '[data-scout-choice]'],['two-read',GRAIN_SAVE_KEY,JSON.stringify(secondRead.state),'/?chapter=grain',null],['two-choice',GRAIN_SAVE_KEY,JSON.stringify(secondChoice.state),'/?chapter=grain','[data-option]'],['three-read','jieting-chapter-three-v1',JSON.stringify(thirdRead.state),'/?chapter=jieting',null],['three-choice','jieting-chapter-three-v1',JSON.stringify(thirdChoice.state),'/?chapter=jieting','[data-option]']];
 const server=createStaticServer({root:build});await new Promise(ok=>server.listen(0,'127.0.0.1',ok));const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),checks=[],errors=[];
 try {
@@ -38,7 +40,7 @@ try {
  }
  // The old first-chapter document must use the same shell and retain query params.
  const c=await browser.newContext({viewport:{width:667,height:375},hasTouch:true});await c.route('http://127.0.0.1:8787/**',r=>r.fulfill({json:{configured:false},headers:{'Access-Control-Allow-Origin':'*'}}));const p=await c.newPage();
- await p.goto(base+'/chapter-one.html?chapter=grain&playtest=item-headscarf&review=mobile');await p.waitForURL(u=>u.pathname==='/'&&u.searchParams.get('review')==='mobile');assert.equal(new URL(p.url()).searchParams.has('chapter'),false);assert.equal(new URL(p.url()).searchParams.get('playtest'),'item-headscarf');assert.ok(await p.locator('link[href="/mobile-landscape.css"]').count());
- await p.goto(base+'/?chapter=grain&playtest=item-candlestick');const tent=p.getByRole('button',{name:'看看自己的军帐'});await tent.tap();await p.screenshot({path:resolve(out,'two-667-candlestick-tap.png')});checks.push({name:'compatibility entry and candlestick touch',passed:true});await c.close();
+ await p.goto(base+'/chapter-one.html?chapter=grain&playtest=weiyan-second&review=mobile');await p.waitForURL(u=>u.pathname==='/'&&u.searchParams.get('review')==='mobile');assert.equal(new URL(p.url()).searchParams.has('chapter'),false);assert.equal(new URL(p.url()).searchParams.get('playtest'),'weiyan-second');assert.ok(await p.locator('link[href="/mobile-landscape.css"]').count());
+ await c.close();
  assert.deepEqual(errors,[]);writeFileSync(resolve(out,'verification.json'),JSON.stringify({passed:true,checks,errors},null,2));console.log(`PASS ${checks.length} reading/choice/entry checks.`);
 }finally{await browser.close();server.closeAllConnections();await new Promise(ok=>server.close(ok));}

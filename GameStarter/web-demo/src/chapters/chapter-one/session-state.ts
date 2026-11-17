@@ -6,13 +6,11 @@ import type { ThoughtWorkspace } from './thought-workspace';
 import type { ExpressionGenerationInput } from '../../expression-contract';
 export type { ExpressionGenerationInput } from '../../expression-contract';
 import { freshReview, type ReviewSave } from './thought-canvas-model';
-import { freshSupplies, type Supplies, type SupplyId, type ItemDecision, type ItemRoute } from './supplies';
-import { freshPhone, type PhoneSave } from './phone-state';
 import type { TentStage } from './tent-visit';
 export const GAME_SAVE_KEY = 'wuzhang-chapter-session-v1';
 export const GAME_ENDINGS_KEY = 'wuzhang-chapter-endings-v2';
 /** Bump when judgment rules change so an unread saved verdict cannot bypass the current rules. */
-  export const WEIYAN_JUDGMENT_VERSION = 'weiyan-item-conduct-20261028-v6';
+  export const WEIYAN_JUDGMENT_VERSION = 'weiyan-narrative-20261117-v7';
 export type Speech = {
     text: string;
     selected: string[];
@@ -20,17 +18,19 @@ export type Speech = {
     result?: PersuasionResult;
     npcTurn?: NpcTurn;
     judgmentVersion?: string;
-    items?: SupplyId[];
-    itemDecision?: ItemDecision;
+
+
 };
 export const CHAPTER_ID = 'wuzhang' as const;
-export type SpeechHistoryEntry = ReviewSave['history'][number] & { round?: 1 | 2; items?: SupplyId[]; itemDecision?: ItemDecision };
+
+export type SpeechHistoryEntry = ReviewSave['history'][number] & { round?: 1 | 2 };
 export type ChapterStorySave = Omit<ReviewSave, 'history'> & { history: SpeechHistoryEntry[] };
 /** Older sessions cleared history on the tutorial rewind, so untagged entries belong to that saved round. */
 export function speechHistoryRound(entry: SpeechHistoryEntry, savedRound: 1 | 2): 1 | 2 {
     return entry.round ?? (entry.npcTurn ? (entry.npcTurn.stage === 'first' ? 1 : 2) : savedRound);
 }
 export type GameSessionState = SessionIdentity<typeof CHAPTER_ID> & {
+    branch?: import('./branch-progress').BranchSave;
     runtimeMode?: RuntimeMode;
     story: ChapterStorySave;
     /** Text actually presented when a fixed dialogue row was completed. */
@@ -47,10 +47,10 @@ export type GameSessionState = SessionIdentity<typeof CHAPTER_ID> & {
     notesPurpose: 'review' | 'P1' | 'P2';
     speech: Speech | null;
     lastFeedback: string;
-    end: 'tutorial-sacrifice' | 'weiyan-execution' | 'tent-execution' | 'era-arrest' | 'safe' | ItemRoute | null;
+    end: 'tutorial-sacrifice' | 'weiyan-execution' | 'tent-execution' | 'safe' | null;
     tent: TentStage;
-    supplies: Supplies;
-    phone: PhoneSave;
+
+
     panelOpened: string[];
     savedAt: string;
     thinking: ThoughtWorkspace | null;
@@ -83,18 +83,16 @@ export type ExpressionJudgeInput = {
     }[];
     said: string[];
     current: string;
-    items?: { id: SupplyId; name: string; ability: string; boundary: string }[];
-    /** Set by the item adapter after its independent ordinary-interaction check, never from player text. */
-    incidentalItemConversation?: boolean;
+
 };
-export type ExpressionJudge = (input: ExpressionJudgeInput, signal: AbortSignal) => Promise<NpcTurn | { npcTurn: NpcTurn; itemDecision: ItemDecision }>;
+export type ExpressionJudge = (input: ExpressionJudgeInput, signal: AbortSignal) => Promise<NpcTurn>;
 export type ExpressionGenerator = (input: ExpressionGenerationInput, signal: AbortSignal) => Promise<{
     text: string;
     evidenceIds: string[];
     provenance?: 'local';
 }>;
 export type SessionEvent = {
-    type: 'line' | 'clue' | 'section' | 'cinematic' | 'ending' | 'graph' | 'speech' | 'item' | 'change';
+    type: 'line' | 'clue' | 'section' | 'cinematic' | 'ending' | 'graph' | 'speech' | 'change';
     id?: string;
     message?: string;
 };
@@ -106,6 +104,6 @@ export function freshSessionState(scriptVersion: string, contentVersion: string)
         phase: 'explore', scene: 'camp_gate', round: 1, section: null, lineIndex: 0,
         finishedSections: [], cinematic: null, finishedCinematics: [],
         notesReturn: null, notesPurpose: 'review', speech: null, lastFeedback: '', end: null, tent: 'unheard',
-        panelOpened: [], savedAt: new Date().toISOString(), thinking: null, composition: freshComposition(), supplies: freshSupplies(), phone: freshPhone(),
+        panelOpened: [], savedAt: new Date().toISOString(), thinking: null, composition: freshComposition(),
     };
 }

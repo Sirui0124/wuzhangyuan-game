@@ -1,6 +1,6 @@
 # GitHub 管理
 
-私有仓库：[Sirui0124/wuzhangyuan-game](https://github.com/Sirui0124/wuzhangyuan-game)，按用户 2026-10-18 明确授权创建及上传。仅 main 分支；没有发布公开仓库或 Release。
+私有仓库：[Sirui0124/wuzhangyuan-game](https://github.com/Sirui0124/wuzhangyuan-game)，按用户 2026-10-18 明确授权创建及上传。2026-11-18用户要求保存完整设计并发布Windows安装EXE和Mac本地网页版；源码快照使用独立delivery分支，玩家产物使用私有GitHub Release。固定流程见[Windows与Mac发布流程](RELEASE-WINDOWS-MAC.md)。
 
 `.env`、凭据、api-defaults.json、私钥、node_modules、Cocos 缓存、构建、outputs 和 releases 已排除。请勿用强制添加绕过 .gitignore。本机全量检查点可能含密钥，不能上传。旧 Mac 发布产物已经移入废纸篓。
 

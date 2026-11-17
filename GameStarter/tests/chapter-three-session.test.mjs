@@ -6,7 +6,6 @@ import { pathToFileURL } from 'node:url';
 const base = process.env.JIETING_BUILD ? pathToFileURL(resolve(process.env.JIETING_BUILD, 'GameStarter/web-demo/src/chapters/chapter-three/session.js')) : new URL('../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-three/session.js', import.meta.url);
 const { JietingSession, createJietingPlaytest } = await import(base);
 const { guardAssessment, lureEligible, rearReceptionEligible, earlyWithdrawalEligible } = await import(new URL('rules.js', base));
-const { buySupply, balance } = await import(new URL('../../phone/supplies.js', base));
 const { jietingPolishInput } = await import(new URL('polish.js', base));
 const story = JSON.parse(readFileSync(new URL('../../content/chapters/jieting/chapter-three.story.json', import.meta.url)));
 const defaults = { 'JT-Q1':'JT-O018', 'JT-Q2':'JT-O031', 'JT-Q3':'JT-O093', 'JT-Q4':'JT-O111', 'JT-R1-FIXED':'JT-O132', 'JT-R2-FIXED':'JT-O167', 'JT-R3-FIXED':'JT-O198', 'JT-ROUTE-CHOICE':'JT-O228', 'JT-WITHDRAW-FIXED':'JT-O232', 'JT-WITHDRAW-REPLY':'withdraw-facts', 'JT-LAST-TASK':'JT-O251', 'JT-GUARD-CONFIRM':'guard-go', 'JT-LURE-METHOD':'JT-O278', 'JT-LURE-CONFIRM':'JT-O305', 'JT-LURE-SIGNAL':'lure-wait-signal', 'JT-RETREAT-CHOICE':'JT-O372' };
@@ -30,17 +29,13 @@ function judgment(s, outcome='great', more={}) {
     const reinforcementAssessment={supportedTroops:outcome==='great'?5000:outcome==='small'?3000:0,quote:s.state.draft,reason:'受控测试：按本次论证完整度给出支持人数'};
     return {version:1,nodeId:c.nodeId,contextKey:c.contextKey,input:s.state.draft,clueIds:[...s.state.selected],phase:c.phase,round:c.round,status:'final',outcome,response:'我听明白了，先把要守的地方安排好。',criteria,verifiedClueIds:[],acceptedReasons:[],unresolvedConcerns:[],deploymentTasks:['road'],argument,reasoning,reinforcementAssessment,...more};
 }
-function testLight(s) { const c=s.getEvaluationContext();assert.equal(s.confirmItemPreparation({version:1,nodeId:c.nodeId,contextKey:c.contextKey,itemId:'flashlight',input:'开灯试照',operation:'开灯试照',status:'ready',effect:'灯亮了，照见近处地面。',requirements:[]}),true); }
 
-test('four questions, all three visits, source-read clue and gift semantics',()=>{
+test('four questions, all three visits, source-read clue semantics',()=>{
     const s=new JietingSession(story,undefined,{aiEnabled:false});
     reach(s,'JT-008'); assert.equal(s.clues.length,0); s.advance(); assert.deepEqual(s.clues.map(c=>c.id),['JT-C01']);
     reach(s,'JT-Q1'); assert.equal(s.advance(),false); s.advance('JT-O020');
     reach(s,'JT-024'); assert.ok(!s.clues.some(c=>c.id==='JT-C05'));s.advance();assert.ok(s.clues.some(c=>c.id==='JT-C05'));
     reach(s,'JT-R1-FIXED'); assert.equal(s.state.visits.length,3); assert.equal(s.clues.length,8);assert.equal(s.scores.r,8);
-    assert.equal(s.state.supplies.worldItems.acquired.length,0);
-    const gift=createJietingPlaytest(story,'item',{aiEnabled:true});assert.deepEqual(gift.state.supplies.worldItems.acquired,['fuhu-wood-tiger']);
-    assert.deepEqual(gift.state.supplies.rewards,[]);assert.equal(balance(gift.state.supplies),0);
 });
 test('round settlement waits for response, actual order, then actual arrival',()=>{
     const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true}); const before=s.scores;
@@ -152,7 +147,7 @@ test('guard formula preserves average trust, exclusive rescue task, exact half p
     assert.equal(guardAssessment({w:3,m:4,r:5},10000,{rearReception:true}).score,21.5);
     assert.equal(guardAssessment({w:3,m:4,r:5},10000,{rearReception:true}).masuAlive,false);
     assert.equal(lureEligible({w:4,m:4,r:7},10000,'fixed'),true);assert.equal(lureEligible({w:4,m:4,r:7},20000,'fixed'),true);
-    assert.equal(lureEligible({w:4,m:4,r:6},10000,'fixed'),false);assert.equal(lureEligible({w:4,m:4,r:5},10000,'phone'),true);
+    assert.equal(lureEligible({w:4,m:4,r:6},10000,'fixed'),false);assert.equal(lureEligible({w:4,m:4,r:5},10000,'discussion'),true);
 });
 test('three success endings and three ordinary failure endings are reachable from source choices',()=>{
     const alive=createJietingPlaytest(story,'withdrawal',{aiEnabled:false});assert.equal(finish(alive),'hold-both');
@@ -168,30 +163,12 @@ test('ordinary refusal is retryable; a direct confirmed offense reaches executio
     assert.equal(s.submit({...j,special:{kind:'execution',quote:j.input,reason:'mock confirmed directed threat'}}),true);assert.equal(s.state.ending,null);s.advance();assert.equal(s.current.id,'JT-410');assert.equal(s.state.ending,null);assert.equal(finish(s),'execution');
     assert.equal(s.retry(),true);assert.equal(s.current.id,'JT-OPEN-R1');assert.equal(s.below,5000);assert.equal(s.state.ending,null);
 });
-test('500yuan sale, no free allowance, atomic economy on rewind and no duplicate sale on repeat',()=>{
-    const s=createJietingPlaytest(story,'item',{aiEnabled:true});assert.equal(s.sellWorldItem('fuhu-wood-tiger'),true);assert.equal(balance(s.state.supplies),50000);assert.equal(s.sellWorldItem('fuhu-wood-tiger'),false);
-    assert.equal(buySupply(s.state.supplies,'flashlight'),true);assert.equal(balance(s.state.supplies),30100);
-    const saved=new JietingSession(story,s.snapshot(),{aiEnabled:true});assert.equal(balance(saved.state.supplies),30100);
-    assert.equal(s.retry('act1'),true);assert.equal(balance(s.state.supplies),0);assert.deepEqual(s.state.supplies.worldItems,{acquired:[],sold:[]});assert.deepEqual(s.state.supplies.purchases,[]);
-    s.setMode({aiEnabled:false});reach(s,'JT-R1-FIXED');s.state.node='JT-OPEN-R1';s.setMode({aiEnabled:true});assert.equal(s.sellWorldItem('fuhu-wood-tiger'),true);assert.equal(balance(s.state.supplies),50000);
-});
 test('stale context, evidence, duplicate submission, and fabricated saved scores/arrivals are rejected',()=>{
     const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true});const j=judgment(s);s.state.selected=['JT-C03'];assert.equal(s.submit(j),false);
     const valid=judgment(s);assert.equal(s.submit(valid),true);assert.equal(s.submit(valid),false);
     const bad=s.snapshot();bad.scores.m+=1;assert.throws(()=>new JietingSession(story,bad));
     const noSource=createJietingPlaytest(story,'reinforcement',{aiEnabled:true}).snapshot();noSource.clueIds.push('JT-C12');noSource.clueSourceNodes['JT-C12']=['JT-192'];assert.throws(()=>new JietingSession(story,noSource));
     const troop=s.snapshot();troop.roundResults[1]={round:1,outcome:'great',troops:5000,ordered:true,arrived:true,reported:true,source:'fixed',tasks:['road']};assert.throws(()=>new JietingSession(story,troop));
-});
-test('item trial must be current and owned; era arrest needs confirmed observed effect from shown item',()=>{
-    const s=createJietingPlaytest(story,'item',{aiEnabled:true});s.sellWorldItem('fuhu-wood-tiger');buySupply(s.state.supplies,'flashlight');
-    let j=judgment(s,'none',{special:{kind:'era-arrest',quote:'山上的水还要运。',reason:'mock severe mismatch',itemIds:['flashlight']}});assert.equal(s.submit(j),false);
-    const c=s.getEvaluationContext();const trial={version:1,nodeId:c.nodeId,contextKey:c.contextKey,itemId:'flashlight',input:'打开照明',status:'ready',operation:'打开照明',effect:'灯亮了。',requirements:[]};
-    assert.equal(s.confirmItemPreparation({...trial,contextKey:'stale'}),false);assert.equal(s.confirmItemPreparation(trial),true);s.state.supplies.attached=['flashlight'];
-    j=judgment(s,'none',{special:{kind:'era-arrest',quote:'山上的水还要运。',reason:'mock severe mismatch',itemIds:['flashlight']}});assert.equal(s.submit(j),true);s.advance();assert.equal(finish(s),'era-arrest');assert.equal(s.retry(),true);assert.equal(balance(s.state.supplies),30100);assert.ok(s.state.itemTrials.flashlight);
-});
-test('all-items off skips gift scene while retaining ordinary support score',()=>{
-    const previous=globalThis.localStorage;globalThis.localStorage={getItem:key=>key==='wuzhang-item-system-enabled-v1'?'0':null};
-    try {const s=createJietingPlaytest(story,'item',{aiEnabled:false});assert.equal(s.scores.m,2);assert.ok(!s.state.visited.includes('JT-054'));assert.deepEqual(s.state.supplies.worldItems.acquired,[]);}finally{globalThis.localStorage=previous;}
 });
 test('lure cancellation has no penalty; only an actual launched plan can enter failed-lure retreat',()=>{
     const s=createJietingPlaytest(story,'lure',{aiEnabled:false});reach(s,'JT-LURE-CONFIRM');s.advance('JT-O306');assert.equal(s.state.flags.failedLure,undefined);
@@ -207,18 +184,9 @@ test('clue source quotes freeze the actual heard numbers rather than future plac
     const s=createJietingPlaytest(story,'lure',{aiEnabled:false});const clue=s.clues.find(c=>c.id==='JT-C10');
     assert.ok(clue.sources.some(q=>q.text.includes('10,000')));assert.ok(clue.sources.every(q=>!q.text.includes('{below}')));assert.ok(clue.text.includes('20,000'));assert.ok(clue.sources.some(q=>q.node==='JT-215'));
 });
-test('AI-assisted lure can work without buying an item, and its actual authority still precedes battle',()=>{
-    const s=createJietingPlaytest(story,'lure',{aiEnabled:true,phoneAllowed:true});s.advance('JT-O277');reach(s,'JT-OPEN-LURE');assert.equal(s.state.supplies.purchases.length,0);
+test('AI-assisted lure follows narrative criteria, and its actual authority still precedes battle',()=>{
+    const s=createJietingPlaytest(story,'lure',{aiEnabled:true});s.advance('JT-O277');reach(s,'JT-OPEN-LURE');
     const j=judgment(s,'accepted');assert.equal(s.submit(j),true);s.advance();assert.equal(s.current.id,'JT-303');assert.notEqual(s.state.flags.lureAuthorized,true);s.advance();assert.equal(s.state.flags.lureAuthorized,true);assert.equal(finish(s),'great-victory');
-});
-test('a genuinely adopted phone item is consumed once at order, not at trial, follow-up or final response',()=>{
-    const s=createJietingPlaytest(story,'item',{aiEnabled:true});s.sellWorldItem('fuhu-wood-tiger');buySupply(s.state.supplies,'flashlight');s.state.supplies.attached=['flashlight'];
-    testLight(s);const j=judgment(s,'great',{usedItemIds:['flashlight']});assert.equal(s.submit(j),true);assert.deepEqual(s.state.supplies.consumed,[]);s.advance();assert.deepEqual(s.state.supplies.consumed,[]);s.advance();assert.deepEqual(s.state.supplies.consumed,['flashlight']);assert.equal(s.state.itemUses.length,1);
-    reach(s,'JT-OPEN-R2');assert.equal(s.getEvaluationContext().items.find(i=>i.id==='flashlight').available,false);assert.equal(new JietingSession(story,s.snapshot(),{aiEnabled:true}).state.itemUses.length,1);
-});
-test('lure adopts and consumes an item at authorization, while approved effects survive until execution',()=>{
-    const s=createJietingPlaytest(story,'lure',{aiEnabled:true,phoneAllowed:true});s.advance('JT-O277');reach(s,'JT-OPEN-LURE');s.sellWorldItem('fuhu-wood-tiger');buySupply(s.state.supplies,'flashlight');s.state.supplies.attached=['flashlight'];
-    testLight(s);assert.equal(s.submit(judgment(s,'accepted',{usedItemIds:['flashlight']})),true);s.advance();assert.deepEqual(s.state.supplies.consumed,[]);s.advance();assert.deepEqual(s.state.supplies.consumed,['flashlight']);s.advance();assert.ok(s.options.some(o=>o.id==='JT-O305'));assert.equal(finish(s),'great-victory');assert.equal(s.state.itemUses.length,1);
 });
 test('revising the last assignment can return to an earlier accepted choice without stale flags',()=>{
     const s=createJietingPlaytest(story,'withdrawal',{aiEnabled:false});reach(s,'JT-LAST-TASK');s.advance('JT-O249');reach(s,'JT-GUARD-CONFIRM');assert.equal(s.state.flags.early,true);
@@ -228,13 +196,9 @@ test('revising the last assignment can return to an earlier accepted choice with
 test('explicitly keeping the existing order never grants troops even when prior arguments were recognized',()=>{
     const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true});const j=judgment(s,'great');s.state.draft+='不过这回先照原令。';j.input=s.state.draft;j.contextKey=s.getEvaluationContext().contextKey;j.maintain=true;j.maintainQuote='这回先照原令';j.outcome='none';assert.equal(s.submit(j),true);s.advance();reach(s,'JT-151');s.advance();assert.equal(s.below,5000);assert.equal(s.state.roundResults[1].outcome,'none');
 });
-test('withdrawal consumes an actually adopted item only when Ma gives the withdrawal order',()=>{
-    const s=createJietingPlaytest(story,'withdrawal',{aiEnabled:true});s.sellWorldItem('fuhu-wood-tiger');buySupply(s.state.supplies,'flashlight');s.state.supplies.attached=['flashlight'];testLight(s);
-    assert.equal(s.submit(judgment(s,'accepted',{usedItemIds:['flashlight']})),true);s.advance();reach(s,'JT-242');assert.deepEqual(s.state.supplies.consumed,[]);s.advance();assert.deepEqual(s.state.supplies.consumed,['flashlight']);assert.equal(s.state.itemUses[0].at,'JT-242');
-});
 test('W4 cooperation requires an earlier Wang choice; high Ma trust cannot replace it',()=>{
-    for(const method of ['phone','fixed']) {
-        const r=method==='phone'?5:7;
+    for(const method of ['discussion','fixed']) {
+        const r=method==='discussion'?5:7;
         assert.equal(lureEligible({w:3,m:10,r},20000,method),false);
         assert.equal(lureEligible({w:4,m:4,r},10000,method),true);
         assert.equal(lureEligible({w:10,m:3,r},20000,method),false);

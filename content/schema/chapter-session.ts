@@ -1,6 +1,6 @@
 /** First-chapter content contract. Other chapters own their scenes, rules and flow contracts. */
 export type ChapterOneScene = 'camp_gate' | 'report_post' | 'jiangwei_tent_front';
-export type ChapterOnePhase = 'explore' | 'dialogue' | 'choice' | 'cinematic' | 'thought-prompt' | 'thoughts' | 'expression' | 'spoken' | 'reply' | 'death' | 'ending' | 'map' | 'tent';
+export type ChapterOnePhase = 'branch' | 'explore' | 'dialogue' | 'choice' | 'cinematic' | 'thought-prompt' | 'thoughts' | 'expression' | 'spoken' | 'reply' | 'death' | 'ending' | 'map' | 'tent';
 export type ChapterOneFlowTarget = { kind: 'section' | 'cinematic' | 'phase'; id: string };
 export type ChapterOneFlowSection = {
     id: string; title: string; scene: ChapterOneScene; round: 1 | 2;

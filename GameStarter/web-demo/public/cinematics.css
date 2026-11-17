@@ -48,3 +48,6 @@
 .story-film-actions{display:flex;align-items:center;justify-content:center;gap:18px}
 .story-film-confirm .story-film-replay{font-size:16px;min-height:44px;padding:8px 14px;background:#111a;border-color:#ffffff66;box-shadow:none}
 @media(prefers-reduced-motion:reduce){.story-film-confirm button{transition:none}}
+
+/* Audible autoplay requires an explicit gesture in some embedded browsers. */
+.cinema-screen[data-media-state="blocked"] .cinema-controls [data-cinema-action="toggle"]{background:#ddd0b6;color:#211c14;outline:2px solid #e9ddc8;border-radius:4px;padding:6px 16px;font-size:14px}

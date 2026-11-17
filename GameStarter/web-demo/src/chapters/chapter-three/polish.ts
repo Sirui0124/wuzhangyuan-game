@@ -47,7 +47,6 @@ export function jietingPolishInput(s:JietingSession):DialoguePolishInput {
     return {scene:s.current.id,node:s.current.id,listener:'马谡',question:c.unresolvedConcerns.join('；')||c.currentQuestion||s.current.text,words:s.state.draft,
         direction:direction+'压短时，把已有兵力、旧岗位或已核准的回报作为简短前提，直接说明本次还缺什么；不逐项回顾曾怎样查、怎样送报，不加“可作为判断依据”等解释。选中JT-C05时，核对敌骑与探马归途、报给两将这件已完成的事仍需简短带到，不能因它是前情而删掉。continuity中NPC已知的人数不是本次所选材料时不必重复报数。相同用途只请求一次，旧队与新队仍分清；下山耗时写成“告急再下山列阵恐怕迟援”这类风险，不能写“提前护水才来得及”来保证结果。',
         evidence:c.ownedClues.filter(x=>s.state.selected.includes(x.id)).map(x=>polishEvidence(s,x)),
-        items:(c.items??[]).filter(x=>x.shown&&x.available),
         continuity:{below:c.below,above:c.above,acceptedReasons:c.acceptedReasons,unresolvedConcerns:c.unresolvedConcerns,
             roundResults:Object.values(s.state.roundResults).map(record=>({round:record!.round,troops:record!.troops,ordered:record!.ordered,
                 arrived:record!.arrived,reported:record!.reported,tasks:[...record!.tasks]}))}};

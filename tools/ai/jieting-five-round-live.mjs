@@ -7,7 +7,7 @@ const root=resolve('GameStarter/web-demo/.build/GameStarter/web-demo/src/chapter
 const {createJietingPlaytest}=await import(pathToFileURL(resolve(root,'session.js')));
 const {judgeJietingDialogue}=await import(pathToFileURL(resolve(root,'open-dialogue.js')));
 const story=JSON.parse(readFileSync('content/chapters/jieting/chapter-three.story.json'));
-const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true,phoneAllowed:false});
+const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true});
 const output=resolve('outputs/jieting-five-rounds-20261027');mkdirSync(output,{recursive:true});
 const words=[
     '暂照原令，我先到山下把情况问明白，再回来禀报。',

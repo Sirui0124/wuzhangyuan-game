@@ -1,0 +1,2775 @@
+{
+  "v2_matrix": {
+    "宽松": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 89.8,
+        "p90_loss": 106,
+        "mean_dead": 17.3,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 89.1,
+        "p90_loss": 105,
+        "mean_dead": 18.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0.382,
+        "median_home_round": null,
+        "mean_loss": 187.2,
+        "p90_loss": 201,
+        "mean_dead": 27.1,
+        "max_slots": 5,
+        "mean_orders": 5.5
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 112.0,
+        "p90_loss": 129,
+        "mean_dead": 23.9,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 119.7,
+        "p90_loss": 138,
+        "mean_dead": 21.6,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 12.0,
+        "mean_loss": 123.6,
+        "p90_loss": 144,
+        "mean_dead": 30.3,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 234.4,
+        "p90_loss": 263,
+        "mean_dead": 59.9,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 106.1,
+        "p90_loss": 125,
+        "mean_dead": 22.4,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 80.4,
+        "p90_loss": 97,
+        "mean_dead": 15.6,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "按路编队": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 92.0,
+        "p90_loss": 108,
+        "mean_dead": 17.8,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    },
+    "标准": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 128.6,
+        "p90_loss": 150,
+        "mean_dead": 29.4,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 127.4,
+        "p90_loss": 149,
+        "mean_dead": 30.0,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0,
+        "median_home_round": null,
+        "mean_loss": 192.0,
+        "p90_loss": 205,
+        "mean_dead": 34.1,
+        "max_slots": 5,
+        "mean_orders": 5
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 159.8,
+        "p90_loss": 181,
+        "mean_dead": 38.5,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 172.2,
+        "p90_loss": 196,
+        "mean_dead": 37.9,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 12.0,
+        "mean_loss": 176.2,
+        "p90_loss": 202,
+        "mean_dead": 46.1,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 334.7,
+        "p90_loss": 372,
+        "mean_dead": 89.3,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 152.3,
+        "p90_loss": 176,
+        "mean_dead": 36.7,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 115.0,
+        "p90_loss": 137,
+        "mean_dead": 26.2,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "按路编队": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 132.3,
+        "p90_loss": 153,
+        "mean_dead": 30.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    },
+    "困难": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 174.4,
+        "p90_loss": 202,
+        "mean_dead": 43.3,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 172.2,
+        "p90_loss": 200,
+        "mean_dead": 43.5,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0,
+        "median_home_round": null,
+        "mean_loss": 197.4,
+        "p90_loss": 210,
+        "mean_dead": 40.1,
+        "max_slots": 5,
+        "mean_orders": 5
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 215.4,
+        "p90_loss": 244,
+        "mean_dead": 55.4,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 0.902,
+        "wilson95": [
+          0.8882,
+          0.9143
+        ],
+        "mean_rescued": 2.902,
+        "median_home_round": 12.0,
+        "mean_loss": 231.1,
+        "p90_loss": 258,
+        "mean_dead": 56.0,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 12.0,
+        "mean_loss": 237.2,
+        "p90_loss": 269,
+        "mean_dead": 64.4,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 0.6955,
+        "wilson95": [
+          0.675,
+          0.7153
+        ],
+        "mean_rescued": 2.672,
+        "median_home_round": 12,
+        "mean_loss": 445.7,
+        "p90_loss": 491,
+        "mean_dead": 122.3,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 206.6,
+        "p90_loss": 239,
+        "mean_dead": 52.8,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 155.7,
+        "p90_loss": 184,
+        "mean_dead": 38.5,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "按路编队": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 179.8,
+        "p90_loss": 206,
+        "mean_dead": 44.4,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    }
+  },
+  "v2_changes": {
+    "cover_required": [
+      200,
+      300,
+      400
+    ],
+    "escort_reference": [
+      400,
+      400,
+      300
+    ],
+    "escort_cap": 1.25,
+    "work_range": [
+      0.85,
+      1.15
+    ],
+    "loss_factor": "1.4-.7*min(1,cover/(required*1.5))"
+  },
+  "sweep": [
+    {
+      "escort": 200,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1,
+      "median_home_round": null,
+      "mean_loss": 111.2,
+      "p90_loss": 124,
+      "mean_dead": 22.9,
+      "max_slots": 3,
+      "mean_orders": 5
+    },
+    {
+      "escort": 200,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1.07,
+      "median_home_round": null,
+      "mean_loss": 224.6,
+      "p90_loss": 243,
+      "mean_dead": 45.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1.07,
+      "median_home_round": null,
+      "mean_loss": 224.6,
+      "p90_loss": 243,
+      "mean_dead": 45.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1,
+      "median_home_round": null,
+      "mean_loss": 109.9,
+      "p90_loss": 123,
+      "mean_dead": 22.5,
+      "max_slots": 3,
+      "mean_orders": 5
+    },
+    {
+      "escort": 200,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 0.93,
+      "wilson95": [
+        0.8954,
+        0.9538
+      ],
+      "mean_rescued": 2.93,
+      "median_home_round": 14,
+      "mean_loss": 177.3,
+      "p90_loss": 194,
+      "mean_dead": 34.9,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 0.93,
+      "wilson95": [
+        0.8954,
+        0.9538
+      ],
+      "mean_rescued": 2.93,
+      "median_home_round": 14,
+      "mean_loss": 177.3,
+      "p90_loss": 194,
+      "mean_dead": 34.9,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1.003,
+      "median_home_round": null,
+      "mean_loss": 142.5,
+      "p90_loss": 157,
+      "mean_dead": 32.6,
+      "max_slots": 3,
+      "mean_orders": 5
+    },
+    {
+      "escort": 200,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 230.0,
+      "p90_loss": 249,
+      "mean_dead": 51.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 230.0,
+      "p90_loss": 249,
+      "mean_dead": 51.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1.003,
+      "median_home_round": null,
+      "mean_loss": 175.2,
+      "p90_loss": 191,
+      "mean_dead": 42.3,
+      "max_slots": 3,
+      "mean_orders": 5
+    },
+    {
+      "escort": 200,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 283.2,
+      "p90_loss": 303,
+      "mean_dead": 67.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 200,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 283.2,
+      "p90_loss": 303,
+      "mean_dead": 67.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 1,
+      "median_home_round": null,
+      "mean_loss": 144.5,
+      "p90_loss": 159,
+      "mean_dead": 33.0,
+      "max_slots": 3,
+      "mean_orders": 5
+    },
+    {
+      "escort": 300,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 0.78,
+      "wilson95": [
+        0.7297,
+        0.8232
+      ],
+      "mean_rescued": 2.78,
+      "median_home_round": 14.0,
+      "mean_loss": 234.9,
+      "p90_loss": 259,
+      "mean_dead": 52.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 0.78,
+      "wilson95": [
+        0.7297,
+        0.8232
+      ],
+      "mean_rescued": 2.78,
+      "median_home_round": 14.0,
+      "mean_loss": 234.9,
+      "p90_loss": 259,
+      "mean_dead": 52.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 2,
+      "median_home_round": null,
+      "mean_loss": 122.1,
+      "p90_loss": 135,
+      "mean_dead": 27.5,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 129.9,
+      "p90_loss": 143,
+      "mean_dead": 26.5,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 129.9,
+      "p90_loss": 143,
+      "mean_dead": 26.5,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 2,
+      "median_home_round": null,
+      "mean_loss": 152.5,
+      "p90_loss": 167,
+      "mean_dead": 36.7,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 163.5,
+      "p90_loss": 179,
+      "mean_dead": 37.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 163.5,
+      "p90_loss": 179,
+      "mean_dead": 37.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 2,
+      "median_home_round": null,
+      "mean_loss": 182.9,
+      "p90_loss": 199,
+      "mean_dead": 45.7,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 197.2,
+      "p90_loss": 213,
+      "mean_dead": 47.2,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 300,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 197.2,
+      "p90_loss": 213,
+      "mean_dead": 47.2,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 2,
+      "median_home_round": null,
+      "mean_loss": 151.9,
+      "p90_loss": 167,
+      "mean_dead": 36.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 210.1,
+      "p90_loss": 233,
+      "mean_dead": 48.8,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 210.1,
+      "p90_loss": 233,
+      "mean_dead": 48.8,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 144.2,
+      "p90_loss": 159,
+      "mean_dead": 34.1,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 122.5,
+      "p90_loss": 136,
+      "mean_dead": 26.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 122.5,
+      "p90_loss": 136,
+      "mean_dead": 26.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 174.4,
+      "p90_loss": 191,
+      "mean_dead": 43.3,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 149.8,
+      "p90_loss": 165,
+      "mean_dead": 35.0,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 149.8,
+      "p90_loss": 165,
+      "mean_dead": 35.0,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 205.2,
+      "p90_loss": 223,
+      "mean_dead": 52.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 177.5,
+      "p90_loss": 195,
+      "mean_dead": 43.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 400,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 177.5,
+      "p90_loss": 195,
+      "mean_dead": 43.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 0.0,
+      "wilson95": [
+        0,
+        0.0126
+      ],
+      "mean_rescued": 2,
+      "median_home_round": null,
+      "mean_loss": 188.2,
+      "p90_loss": 205,
+      "mean_dead": 47.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 180.2,
+      "p90_loss": 196,
+      "mean_dead": 42.9,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 180.2,
+      "p90_loss": 196,
+      "mean_dead": 42.9,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 123.9,
+      "p90_loss": 138,
+      "mean_dead": 29.8,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 109.8,
+      "p90_loss": 123,
+      "mean_dead": 24.7,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 109.8,
+      "p90_loss": 123,
+      "mean_dead": 24.7,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 147.4,
+      "p90_loss": 163,
+      "mean_dead": 37.0,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 132.0,
+      "p90_loss": 146,
+      "mean_dead": 31.8,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 132.0,
+      "p90_loss": 146,
+      "mean_dead": 31.8,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 170.9,
+      "p90_loss": 187,
+      "mean_dead": 44.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 154.3,
+      "p90_loss": 170,
+      "mean_dead": 38.5,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 500,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 154.3,
+      "p90_loss": 170,
+      "mean_dead": 38.5,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 13.0,
+      "mean_loss": 199.0,
+      "p90_loss": 231,
+      "mean_dead": 50.9,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 167.0,
+      "p90_loss": 195,
+      "mean_dead": 40.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 167.0,
+      "p90_loss": 195,
+      "mean_dead": 40.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 11.0,
+      "mean_loss": 116.0,
+      "p90_loss": 129,
+      "mean_dead": 28.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 105.4,
+      "p90_loss": 119,
+      "mean_dead": 24.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 105.4,
+      "p90_loss": 119,
+      "mean_dead": 24.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 11.0,
+      "mean_loss": 136.0,
+      "p90_loss": 150,
+      "mean_dead": 34.6,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 124.7,
+      "p90_loss": 139,
+      "mean_dead": 30.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 124.7,
+      "p90_loss": 139,
+      "mean_dead": 30.4,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 11.0,
+      "mean_loss": 156.0,
+      "p90_loss": 171,
+      "mean_dead": 40.6,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 146.3,
+      "p90_loss": 161,
+      "mean_dead": 37.7,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 146.3,
+      "p90_loss": 161,
+      "mean_dead": 37.7,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 13.0,
+      "mean_loss": 205.7,
+      "p90_loss": 233,
+      "mean_dead": 53.6,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 178.4,
+      "p90_loss": 198,
+      "mean_dead": 44.2,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 178.4,
+      "p90_loss": 198,
+      "mean_dead": 44.2,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 11.0,
+      "mean_loss": 128.5,
+      "p90_loss": 142,
+      "mean_dead": 32.1,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 116.4,
+      "p90_loss": 130,
+      "mean_dead": 27.6,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 116.4,
+      "p90_loss": 130,
+      "mean_dead": 27.6,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 121.8,
+      "p90_loss": 137,
+      "mean_dead": 31.1,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 114.0,
+      "p90_loss": 129,
+      "mean_dead": 29.0,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 114.0,
+      "p90_loss": 129,
+      "mean_dead": 29.0,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 138.5,
+      "p90_loss": 155,
+      "mean_dead": 36.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 138.5,
+      "p90_loss": 155,
+      "mean_dead": 36.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 700,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 138.5,
+      "p90_loss": 155,
+      "mean_dead": 36.2,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 100,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 13.0,
+      "mean_loss": 229.9,
+      "p90_loss": 260,
+      "mean_dead": 61.0,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 100,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 198.9,
+      "p90_loss": 220,
+      "mean_dead": 50.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 100,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 198.9,
+      "p90_loss": 220,
+      "mean_dead": 50.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 200,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 11.0,
+      "mean_loss": 141.1,
+      "p90_loss": 156,
+      "mean_dead": 36.0,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 131.4,
+      "p90_loss": 146,
+      "mean_dead": 33.0,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 131.4,
+      "p90_loss": 146,
+      "mean_dead": 33.0,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 300,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 132.1,
+      "p90_loss": 148,
+      "mean_dead": 34.3,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 300,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 132.1,
+      "p90_loss": 148,
+      "mean_dead": 34.3,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 300,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 132.1,
+      "p90_loss": 148,
+      "mean_dead": 34.3,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 400,
+      "parallel": 1,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 148.8,
+      "p90_loss": 165,
+      "mean_dead": 39.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 400,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 148.8,
+      "p90_loss": 165,
+      "mean_dead": 39.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    {
+      "escort": 800,
+      "cover": 400,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 148.8,
+      "p90_loss": 165,
+      "mean_dead": 39.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    }
+  ],
+  "frontier": [
+    {
+      "escort": 600,
+      "cover": 200,
+      "parallel": 2,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 105.4,
+      "p90_loss": 119,
+      "mean_dead": 24.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    {
+      "escort": 600,
+      "cover": 200,
+      "parallel": 3,
+      "n": 300,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9874,
+        1.0
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 7.0,
+      "mean_loss": 105.4,
+      "p90_loss": 119,
+      "mean_dead": 24.3,
+      "max_slots": 5,
+      "mean_orders": 7
+    }
+  ],
+  "version": "proposal-logistics-v1",
+  "seed_start": 20261117,
+  "checks": [
+    "reject non-100 increment",
+    "reject overspend",
+    "reject sixth team",
+    "37 casualties conserved",
+    "return exact 63 survivors",
+    "return frees slot",
+    "cannot reuse committed reserve"
+  ],
+  "presets": {
+    "宽松": {
+      "mult": 0.7,
+      "budget": 16
+    },
+    "标准": {
+      "mult": 1,
+      "budget": 13
+    },
+    "困难": {
+      "mult": 1.35,
+      "budget": 11
+    }
+  },
+  "strategies": {
+    "双路轮换400+300": {
+      "escort": 400,
+      "cover": 300,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 2
+    },
+    "双路轮换500+300": {
+      "escort": 500,
+      "cover": 300,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 2
+    },
+    "100人铺满": {
+      "escort": 100,
+      "cover": 100,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 3
+    },
+    "双路600+200": {
+      "escort": 600,
+      "cover": 200,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 2
+    },
+    "三路300+200": {
+      "escort": 300,
+      "cover": 200,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 3
+    },
+    "单路重兵800+600": {
+      "escort": 800,
+      "cover": 600,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 1
+    },
+    "只派护送不掩护": {
+      "escort": 400,
+      "cover": 0,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 3
+    },
+    "均衡但迟两轮": {
+      "escort": 400,
+      "cover": 300,
+      "order": [
+        0,
+        2,
+        1
+      ],
+      "parallel": 2,
+      "delay": 2
+    },
+    "均衡先旧营": {
+      "escort": 400,
+      "cover": 300,
+      "order": [
+        1,
+        0,
+        2
+      ],
+      "parallel": 2
+    }
+  },
+  "work": [
+    2.0,
+    2.6,
+    3.0
+  ],
+  "matrix": {
+    "宽松": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 105.6,
+        "p90_loss": 118,
+        "mean_dead": 21.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 93.0,
+        "p90_loss": 105,
+        "mean_dead": 19.3,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0.55,
+        "median_home_round": null,
+        "mean_loss": 157.1,
+        "p90_loss": 170,
+        "mean_dead": 18.4,
+        "max_slots": 5,
+        "mean_orders": 5.1
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 7.0,
+        "mean_loss": 74.0,
+        "p90_loss": 85,
+        "mean_dead": 14.5,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 92.6,
+        "p90_loss": 104,
+        "mean_dead": 14.9,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 128.3,
+        "p90_loss": 142,
+        "mean_dead": 33.2,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 13.0,
+        "mean_loss": 186.8,
+        "p90_loss": 204,
+        "mean_dead": 44.9,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 124.4,
+        "p90_loss": 138,
+        "mean_dead": 27.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 98.6,
+        "p90_loss": 112,
+        "mean_dead": 20.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    },
+    "标准": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 150.0,
+        "p90_loss": 165,
+        "mean_dead": 35.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 131.9,
+        "p90_loss": 147,
+        "mean_dead": 31.6,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0,
+        "median_home_round": null,
+        "mean_loss": 159.8,
+        "p90_loss": 172,
+        "mean_dead": 24.3,
+        "max_slots": 5,
+        "mean_orders": 5
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 7.0,
+        "mean_loss": 105.1,
+        "p90_loss": 118,
+        "mean_dead": 24.2,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 130.2,
+        "p90_loss": 144,
+        "mean_dead": 26.6,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 182.6,
+        "p90_loss": 199,
+        "mean_dead": 49.4,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 13.0,
+        "mean_loss": 277.4,
+        "p90_loss": 305,
+        "mean_dead": 71.4,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 176.2,
+        "p90_loss": 192,
+        "mean_dead": 43.3,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 140.2,
+        "p90_loss": 155,
+        "mean_dead": 33.1,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    },
+    "困难": {
+      "双路轮换400+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 9.0,
+        "mean_loss": 200.5,
+        "p90_loss": 218,
+        "mean_dead": 50.5,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "双路轮换500+300": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 8.0,
+        "mean_loss": 176.8,
+        "p90_loss": 193,
+        "mean_dead": 45.2,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "100人铺满": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 0,
+        "median_home_round": null,
+        "mean_loss": 164.0,
+        "p90_loss": 177,
+        "mean_dead": 29.7,
+        "max_slots": 5,
+        "mean_orders": 5
+      },
+      "双路600+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 7.0,
+        "mean_loss": 141.0,
+        "p90_loss": 156,
+        "mean_dead": 35.2,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "三路300+200": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 173.0,
+        "p90_loss": 188,
+        "mean_dead": 40.2,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "单路重兵800+600": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 245.6,
+        "p90_loss": 265,
+        "mean_dead": 68.3,
+        "max_slots": 3,
+        "mean_orders": 7
+      },
+      "只派护送不掩护": {
+        "n": 2000,
+        "all_rate": 0.0,
+        "wilson95": [
+          0,
+          0.0019
+        ],
+        "mean_rescued": 2,
+        "median_home_round": null,
+        "mean_loss": 348.0,
+        "p90_loss": 368,
+        "mean_dead": 92.7,
+        "max_slots": 4,
+        "mean_orders": 4
+      },
+      "均衡但迟两轮": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 11.0,
+        "mean_loss": 235.2,
+        "p90_loss": 253,
+        "mean_dead": 60.9,
+        "max_slots": 5,
+        "mean_orders": 7
+      },
+      "均衡先旧营": {
+        "n": 2000,
+        "all_rate": 1.0,
+        "wilson95": [
+          0.9981,
+          1
+        ],
+        "mean_rescued": 3,
+        "median_home_round": 10.0,
+        "mean_loss": 187.5,
+        "p90_loss": 205,
+        "mean_dead": 47.4,
+        "max_slots": 5,
+        "mean_orders": 7
+      }
+    }
+  },
+  "sensitivity": {
+    "兵力1200": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 14.0,
+      "mean_loss": 174.5,
+      "p90_loss": 191,
+      "mean_dead": 43.4,
+      "max_slots": 3,
+      "mean_orders": 7
+    },
+    "兵力1400": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 12.0,
+      "mean_loss": 156.4,
+      "p90_loss": 172,
+      "mean_dead": 38.1,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    "兵力1600": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 150.0,
+      "p90_loss": 165,
+      "mean_dead": 35.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    "兵力1800": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 150.0,
+      "p90_loss": 165,
+      "mean_dead": 35.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    "兵力2000": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 150.0,
+      "p90_loss": 165,
+      "mean_dead": 35.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    "兵力2200": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 9.0,
+      "mean_loss": 150.0,
+      "p90_loss": 165,
+      "mean_dead": 35.1,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    "队伍上限4": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 127.2,
+      "p90_loss": 140,
+      "mean_dead": 26.8,
+      "max_slots": 4,
+      "mean_orders": 7
+    },
+    "队伍上限5": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 10.0,
+      "mean_loss": 130.2,
+      "p90_loss": 144,
+      "mean_dead": 26.6,
+      "max_slots": 5,
+      "mean_orders": 7
+    },
+    "队伍上限6": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 122.7,
+      "p90_loss": 136,
+      "mean_dead": 24.2,
+      "max_slots": 6,
+      "mean_orders": 7
+    },
+    "无战损": {
+      "n": 2000,
+      "all_rate": 1.0,
+      "wilson95": [
+        0.9981,
+        1
+      ],
+      "mean_rescued": 3,
+      "median_home_round": 8.0,
+      "mean_loss": 0,
+      "p90_loss": 0,
+      "mean_dead": 0,
+      "max_slots": 5,
+      "mean_orders": 7
+    }
+  },
+  "probability_audit": {
+    "source_version": "2026-11-17-v3",
+    "source_sha256": "c9364bb2eb464965a9a25af0051a47dd9535f4d752f25e15e549f4dae45c6e0b",
+    "fixed_crisis_rows": [
+      {
+        "crisis": 99,
+        "p": 0.0,
+        "within3_fixed": 0.0,
+        "expected_fixed_rounds": null
+      },
+      {
+        "crisis": 80,
+        "p": 0.0451,
+        "within3_fixed": 0.1293,
+        "expected_fixed_rounds": 22.16
+      },
+      {
+        "crisis": 60,
+        "p": 0.1901,
+        "within3_fixed": 0.4688,
+        "expected_fixed_rounds": 5.26
+      },
+      {
+        "crisis": 40,
+        "p": 0.4351,
+        "within3_fixed": 0.8197,
+        "expected_fixed_rounds": 2.3
+      },
+      {
+        "crisis": 20,
+        "p": 0.78,
+        "within3_fixed": 0.9894,
+        "expected_fixed_rounds": 1.28
+      },
+      {
+        "crisis": 10,
+        "p": 0.99,
+        "within3_fixed": 1.0,
+        "expected_fixed_rounds": 1.01
+      },
+      {
+        "crisis": 9,
+        "p": 1,
+        "within3_fixed": 1,
+        "expected_fixed_rounds": 1.0
+      }
+    ]
+  },
+  "limitations": [
+    "not live game engine",
+    "Fu consent assumed at round 3 plus delay",
+    "two other fronts are abstract transport workloads",
+    "no route geometry or player errors",
+    "normal approximation for casualties",
+    "all_rate measures logistics cleared before budget; not full chapter win rate",
+    "returned by budget+1 counts; no per-front death deadline"
+  ]
+}

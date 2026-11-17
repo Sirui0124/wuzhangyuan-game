@@ -6,12 +6,22 @@ import { fileURLToPath } from 'node:url';
 const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), '.build');
 const port = Number(process.env.DEMO_PORT || 8812);
 const mime = { '.vtt': 'text/vtt; charset=utf-8', '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm', '.ogv': 'video/ogg', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.woff2': 'font/woff2' };
-export function createStaticServer({ root = defaultRoot, onRequest, rescueOptions } = {}) {
+export function createStaticServer({ root = defaultRoot, onRequest, rescueOptions, commandOptions } = {}) {
 let rescue;
+let commandMap;
+let chapterOne;
 return createServer(async (req, res) => {
   try {
     if (onRequest && await onRequest(req, res)) return;
     const url = new URL(req.url, `http://127.0.0.1:${port}`);
+    if (url.pathname.startsWith('/api/chapter-one/')) {
+      chapterOne ??= import('../server/chapter-one-http.mjs').then(({chapterOneHandler})=>chapterOneHandler(root));
+      return (await chapterOne)(req,res);
+    }
+    if (url.pathname.startsWith('/api/yiling-command/')) {
+      commandMap ??= import('../../demos/yiling-ui-prototype-v1/campaign-runtime.mjs').then(({campaignHandler,createCampaignRuntime}) => campaignHandler(createCampaignRuntime({directory:resolve(dirname(fileURLToPath(import.meta.url)),'../../.cache/yiling-command/saves'),...commandOptions})));
+      return (await commandMap)(req,res);
+    }
     if (url.pathname.startsWith('/api/yiling-rescue/')) {
       rescue ??= import('../../demos/yiling-rescue/server.mjs').then(({createDemoServer}) => createDemoServer({
         saveDir: process.env.GAME_RESCUE_SAVE_DIR || resolve(dirname(fileURLToPath(import.meta.url)), '../../.cache/yiling-campaign/saves'),

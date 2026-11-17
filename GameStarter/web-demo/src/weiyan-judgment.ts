@@ -90,11 +90,6 @@ export function createWeiyanJudge(api: Pick<GameApi, 'respond'>): ExpressionJudg
         signal.throwIfAborted();
         // Malformed assessments remain a technical failure; never invent a story outcome.
         const assessment = parseWeiyanAssessment(decode(raw.text), input);
-        // Harmless item conversation already receives a revisable item response; attaching an ordinary item must not invent a new execution route.
-        if (input.incidentalItemConversation === true && input.stage === 'authorized' && input.items?.length && assessment.fatal.type === 'off_topic')
-            return parseNpcTurn({ schemaVersion: 1, npcId: 'weiyan', stage: input.stage,
-                classification: { code: 'P2-F1', disposition: 'revise', reason: '普通物品话题尚未说明军报安排。', evidenceIds: [] },
-                reply: { speaker: '魏延', text: '你叫住我，是要禀何事？' } }, input.stage, input.evidence.map(e => e.id));
         const decision = decideWeiyan(input.stage, assessment);
         const intent = weiyanReplyIntent(input.stage, decision);
         let text = intent;

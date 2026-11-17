@@ -1,4 +1,4 @@
-import { readPhonePreference } from '../runtime-mode';
+
 import { hasExpressionMaterial } from '../expression-contract';
 import type { ChapterSession } from '../chapter-session';
 import type { GameAudio, AudioBus } from '../audio';
@@ -7,7 +7,7 @@ import { bindDialogueScreenInput } from './dialogue-screen-input';
 
 type InputOptions = {
     root: HTMLElement; game: ChapterSession; ui: GameUIState; audio: GameAudio;
-    settings: { setDetails(open: boolean): void; setVoiceEnabled(enabled: boolean): void; setRuntime(ai: boolean, phone: boolean): void; setItemSystem(enabled: boolean): void };
+    settings: { setDetails(open: boolean): void; setVoiceEnabled(enabled: boolean): void; setRuntime(ai: boolean): void };
     persist(): void;
     render(): void;
     reviseExpression(): void;
@@ -26,7 +26,7 @@ export function bindGameInputEvents(options: InputOptions) {
         const state = game.snapshot();
         if (state.phase === 'tent' && state.tent !== 'side' && state.tent !== 'footsteps') return () => game.tentAction('next');
         if (state.phase === 'dialogue') return next;
-        if (state.phase === 'reply') return state.speech?.result === 'execute' || state.speech?.itemDecision?.eraFailure ? next : reviseExpression;
+        if (state.phase === 'reply') return state.speech?.result === 'execute' ? next : reviseExpression;
         if (state.phase === 'spoken' && state.speech?.status === 'ready') return () => game.acknowledgeReply();
     };
     bindDialogueScreenInput(root, readingAction);
@@ -39,7 +39,7 @@ export function bindGameInputEvents(options: InputOptions) {
             const confirm = root.querySelector<HTMLButtonElement>('[data-action=confirm-focus]');
             if (confirm) confirm.disabled = !target.value.trim();
             const polish = root.querySelector<HTMLButtonElement>('[data-action=generate-expression]');
-            if (polish) { polish.disabled = !hasExpressionMaterial(game.snapshot().story.selected.length, game.snapshot().supplies.attached.length, game.snapshot().story.draft.trim() || game.snapshot().composition.focus); polish.textContent = game.aiEnabled() ? '润色表达' : '整理参考句'; }
+            if (polish) { polish.disabled = !hasExpressionMaterial(game.snapshot().story.selected.length, game.snapshot().story.draft.trim() || game.snapshot().composition.focus); polish.textContent = game.aiEnabled() ? '润色表达' : '整理参考句'; }
             root.querySelector('[data-action=cancel-generation]')?.remove();
             const speak = root.querySelector<HTMLButtonElement>('[data-action=speak]'); if (speak) speak.disabled = true;
             const result = root.querySelector('[data-expression-result]'); result?.classList.remove('is-ready'); result?.classList.add('is-pending');
@@ -52,12 +52,11 @@ export function bindGameInputEvents(options: InputOptions) {
             const result = root.querySelector('[data-expression-result]'); result?.classList.add('is-ready'); result?.classList.remove('is-pending');
             const heading = result?.querySelector('header label'); if (heading) heading.textContent = '准备说的话';
             const status = root.querySelector('.expression-status'); if (status) status.textContent = '';
-            const polish = root.querySelector<HTMLButtonElement>('[data-action=generate-expression]'); if (polish) { polish.disabled = !hasExpressionMaterial(game.snapshot().story.selected.length, game.snapshot().supplies.attached.length, game.snapshot().story.draft.trim() || game.snapshot().composition.focus); polish.textContent = game.aiEnabled() ? '润色表达' : '整理参考句'; }
+            const polish = root.querySelector<HTMLButtonElement>('[data-action=generate-expression]'); if (polish) { polish.disabled = !hasExpressionMaterial(game.snapshot().story.selected.length, game.snapshot().story.draft.trim() || game.snapshot().composition.focus); polish.textContent = game.aiEnabled() ? '润色表达' : '整理参考句'; }
             root.querySelector('[data-action=cancel-generation]')?.remove();
         }
         if (target.dataset.volume) { audio.setVolume(target.dataset.volume as AudioBus, Number(target.value)); target.style.setProperty('--range', `${target.value}%`); const output = target.nextElementSibling; if (output) output.textContent = target.value + '%'; }
-        if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked, readPhonePreference());
-        if (target.id === 'game-item-system-enabled') settings.setItemSystem(target.checked);
+        if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked);
         if (target.id === 'ai-voice-enabled') settings.setVoiceEnabled(target.checked);
     });
     document.addEventListener('keydown', event => {

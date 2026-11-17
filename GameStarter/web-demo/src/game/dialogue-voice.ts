@@ -44,10 +44,10 @@ export function createDialogueVoice(game: ChapterSession, notice: (text: string)
             handoff();
             return;
         }
-        const row = state.phase === 'reply' ? game.currentReply() : state.phase === 'dialogue' ? game.row() : null;
+        const row = state.phase === 'reply' ? game.currentReply() : ['dialogue','branch'].includes(state.phase) ? game.row() : null;
         // Only the post-canvas exchange and its continuation; no narration/video overdubs.
         const speaker = row?.speaker.split(/[（·]/)[0];
-        if (!speechKey || !row || !speaker || !['魏延', '我', '主角'].includes(speaker) || row.speaker.includes('心声')) { stop(); return; }
+        if ((!speechKey && state.phase!=='branch') || !row || !speaker || !['魏延', '我', '主角'].includes(speaker) || row.speaker.includes('心声')) { stop(); return; }
         const key = `${row.id}:${row.text}`;
         if (rowKey === key) return;
         rowKey = key; active?.stop();

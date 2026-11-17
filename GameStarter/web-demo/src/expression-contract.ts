@@ -13,10 +13,8 @@ export type ExpressionSource = {
     basisIds: string[];
     originals: { id: string; speaker: string; text: string }[];
 };
-export type ExpressionItem = { kind: 'item'; id: string; name: string; ability: string; boundary: string };
-export type ExpressionItemLink = { itemId: string; evidenceIds: string[]; quote: string };
-export const hasExpressionMaterial = (evidenceCount: number, itemCount: number, words: string) =>
-    evidenceCount > 0 || itemCount > 0 || !!words.trim();
+export const hasExpressionMaterial = (evidenceCount: number, words: string) =>
+    evidenceCount > 0 || !!words.trim();
 export type ExpressionBrief = {
     schemaVersion: 2;
     conversation: {
@@ -38,8 +36,6 @@ export type ExpressionBrief = {
         focus?: string;
     };
     selectedEvidence: ExpressionMaterial[];
-    /** Only owned items actually attached to this utterance; never shopping suggestions. */
-    attachedItems?: ExpressionItem[];
 };
 export type ExpressionGenerationInput = {
     brief: ExpressionBrief;

@@ -1,0 +1,115 @@
+{
+  "source_sha256": "91751e1a3aa864b0401cff97de36623999f558d57a14f60ea51d1fe4bf623bbb",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Sigh",
+          "p": 0.8634
+        },
+        {
+          "label": "Speech",
+          "p": 0.7243
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0292
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0271
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0222
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0214
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.021
+        },
+        {
+          "label": "Clicking",
+          "p": 0.0141
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0092
+        },
+        {
+          "label": "Female speech, woman speaking",
+          "p": 0.0028
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0028
+        },
+        {
+          "label": "Snort",
+          "p": 0.0028
+        }
+      ],
+      "music": 0.0013
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8767
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.4416
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0972
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0623
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0143
+        },
+        {
+          "label": "Conversation",
+          "p": 0.0117
+        },
+        {
+          "label": "Radio",
+          "p": 0.0103
+        },
+        {
+          "label": "Static",
+          "p": 0.0089
+        },
+        {
+          "label": "Television",
+          "p": 0.0071
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0067
+        },
+        {
+          "label": "Spray",
+          "p": 0.0053
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0051
+        }
+      ],
+      "music": 0.0016
+    }
+  ]
+}

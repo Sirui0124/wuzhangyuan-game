@@ -7,8 +7,8 @@ import { deploymentAxisHTML } from './deployment-view';
 /** Uses the same expression, evidence and inspection components as chapters one and two. */
 export function jietingExpression(s: JietingSession, v: JietingViewState, hud: string, background: string) {
     const question = s.state.followupUsed[s.current.id] ? s.state.unresolvedConcerns.at(-1) ?? s.current.text : s.current.text;
-    const paper = expressionPaperHTML({ evidence: '',
-        draft:s.state.draft, busy:v.busy, placeholder:'回答马将军的问题，也可以用已知军情提出自己的办法。', status:v.error||(v.questioning?'马谡正在斟酌……':v.polishing?'正在润色……':v.busy?'正在等待回应……':''),
+    const paper = expressionPaperHTML({ evidence: '', clues:s.clues.filter(c=>c.current!==false), selected:s.state.selected,
+        draft:s.state.draft, busy:v.busy, status:v.error||(v.questioning?'马谡正在斟酌……':v.polishing?'正在润色……':v.busy?'正在等待回应……':''),
         polishActions:v.polishing?btn('cancel-speech','取消润色','cancel-polish'):!v.busy?`${v.retryAction==='question'?btn('retry-question','重试提问'):''}${btn('polish-expression',v.error&&v.retryAction==='polish'?'重试润色':'润色表达','polish-button',!s.state.draft.trim()&&!s.state.selected.length)}${v.canUndoPolish?btn('undo-polish','撤销润色','restore-draft'):''}`:'',
         confirmActions:v.busy&&!v.polishing?btn('cancel-speech','停止等待'):btn('speak',v.error&&v.retryAction==='speak'?'重试说出 ↗':'确认说出 ↗','confirm-expression',v.busy||!s.state.draft.trim()),
     });

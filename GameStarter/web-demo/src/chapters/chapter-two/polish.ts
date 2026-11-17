@@ -1,5 +1,4 @@
 import type { GrainSession } from './session';
-import { isAvailableSupply, supplyById } from '../../phone/supplies';
 import type { DialoguePolishInput } from '../../dialogue-polish';
 
 export const grainPolishDirections = {
@@ -31,6 +30,5 @@ export function grainPolishInput(s: GrainSession): DialoguePolishInput {
         direction:grainPolishDirections[round] + '这段话由我对苟安说。question是苟安刚刚说的话，其中“我”指苟安，不能照抄成我的立场。用眼前材料的自然称呼交代来源，不朗读“属于口述”“文书所载”等资料标签，也不以“我提一个方案”开场；重复事实可以合成一句。'
             + (round==='O2'?'本幕合并同义内容，不压掉不同事实：粮账用实收不足应征、差额仍欠的一句话表达，要求交纳的数不等于已经收到，不逐字解释术语。交接、缺额报告送达、签认的同日关系只说一次。选中第二封信时，保留李丰担心父亲、劝李严与苟安停手；选中供述时，连着说清真心救命在前，后来与李严借查粮逼退军，由李严担部分责任、苟安扮顶罪者并骗我送材料。这两项各有独立含义，不能因为说了粮账、赴魏或补救就整项省去；未选则不补。选中赴魏计划时，保留退军后仍催征这一触发条件、尚未实施，以及泄露粮道、招来追击、谣言难收且他无把握控制的风险；这些可合在一句，不能用“仍有责任”代替。陪同送报、附原件、确认收到、不保免罪按原话合成具体补救，不再重复“我想帮你”或另问一遍是否同意。':''),
         evidence:s.clues.filter(c=>s.state.selected.includes(c.id)).map(grainPolishEvidence),
-        items:s.phoneAllowed?s.state.supplies.attached.filter(id=>isAvailableSupply(id,s.state.supplies)).map(id=>{const x=supplyById(id,s.state.supplies)!;return {id,name:x.name,ability:x.ability,boundary:x.boundary};}):[],
         continuity:{previousWords:Object.values(s.state.judgments).map(j=>j.input),currentReply:s.state.judgments[s.current.id]?.reply??''}};
 }

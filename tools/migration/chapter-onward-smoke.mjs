@@ -37,7 +37,7 @@ for(const mode of ['withdrawal','dead','lure']){
 }
 for(const ending of third.endings.filter(e=>!e.success))assert.equal(chapterOnward('jieting',ending.id),null);
 assert.equal(chapterOnward('yiling','reception-loss'),null);
-for(const ending of ['safe','radio-relay','light-signal','item-plan'])assert.equal(chapterOnward('wuzhang',ending).href,'/?chapter=grain');
+for(const ending of ['safe'])assert.equal(chapterOnward('wuzhang',ending).href,'/?chapter=grain');
 const out=resolve('outputs/chapter-onward-20261028');mkdirSync(out,{recursive:true});
 const server=createStaticServer({root:build});await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),errors=[],checks=[];

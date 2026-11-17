@@ -12,4 +12,4 @@ Cocos 主场景 `assets/scenes/Main.scene` 尚未接入完整玩法。浏览器�
 
 旧版 macOS 打包脚本及 `package:mac` 命令已退出维护。Windows 安装版沿用网页游戏，发布启动器与 NSIS 构建配置位于 [packaging/windows](packaging/windows/README.md)，使用独立的预编译资源和用户数据目录；玩家不需要安装 Node、TypeScript 或 Cocos。安装器生成、安装后启动及卸载结果分别记录在每次发布报告中。
 
-物品栏保留姜维头巾、营地酒杯和第二章蜡烛台等剧情物品。手机、购物与出售入口已移除；旧存档数据继续保留。当前改动见[剧情与选择架构记录](../docs/architecture/ITERATION-20261117.md)。
+物品栏及物品收取、赠送、购物、出售、手机和人格评估已移除；线索栏只承载已有剧情信息。旧存档原始数据继续保护，退役字段不再进入运行状态。第四章保留多路营救，使用公共暂停、设置与手动存档界面。当前改动见[剧情与选择架构记录](../docs/architecture/ITERATION-20261117.md)。

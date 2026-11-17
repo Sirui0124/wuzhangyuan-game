@@ -1,0 +1,40 @@
+import {chromium} from 'playwright';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+const dir=path.join(process.cwd(),'video/production/PV-H3-20261117-v2.15');
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+console.log('browser launched');
+const page=await browser.newPage({viewport:{width:1440,height:1050},deviceScaleFactor:1});const errors=[];
+page.setDefaultTimeout(20000);
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto(pathToFileURL(path.join(dir,'成片审阅-v2.15.html')).href,{waitUntil:'domcontentloaded',timeout:20000});
+console.log('page loaded');
+await page.waitForFunction(()=>document.querySelector('video').readyState>=1);
+const expectedDuration=JSON.parse(await fs.readFile(path.join(dir,'final-technical.json'),'utf8')).duration;const video=page.locator('video');
+const metadata=await video.evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.message||null}));
+console.log(JSON.stringify(metadata));
+if(Math.abs(metadata.duration-expectedDuration)>.05||metadata.width!==1280||metadata.height!==720||metadata.error)throw Error(JSON.stringify(metadata));
+await video.evaluate(v=>{v.muted=true;v.playbackRate=1;v.play().catch(e=>{v.dataset.playError=String(e)});});
+await page.evaluate(()=>scrollTo(0,0));
+await page.waitForFunction(()=>document.querySelector('video').currentTime>1);
+console.log('play started');
+await page.screenshot({path:path.join(dir,'review-desktop.png')});
+console.log(JSON.stringify({stage:'playing',metadata}));
+await page.waitForFunction(()=>document.querySelector('video').ended,null,{timeout:130000});
+const playback=await video.evaluate(v=>({ended:v.ended,currentTime:v.currentTime,duration:v.duration,error:v.error?.message||null,quality:v.getVideoPlaybackQuality?.()}));
+const target=page.locator('button').filter({hasText:'L01'});const targetTime=Number(await target.getAttribute('data-time'));await target.click();
+await page.waitForFunction(t=>{const v=document.querySelector('video');return Math.abs(v.currentTime-t)<.1&&!v.seeking},targetTime);
+console.log('seek pass');
+await page.locator('img').evaluateAll(a=>a.forEach(i=>i.loading='eager'));
+await page.waitForFunction(()=>[...document.querySelectorAll('img')].every(i=>i.complete&&i.naturalWidth>0));
+await page.setViewportSize({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));
+const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile overflow');
+await page.screenshot({path:path.join(dir,'review-mobile.png')});
+const links=await page.locator('a[href]').evaluateAll(a=>a.map(x=>x.href));for(const link of links){if(link.startsWith('file:'))await fs.access(new URL(link));}
+await browser.close();
+if(errors.length||!playback.ended||playback.error)throw Error(JSON.stringify({errors,playback}));
+await fs.writeFile(path.join(dir,'browser-verification.json'),JSON.stringify({date:'2026-11-17',status:'pass',metadata,playback,mobileOverflow:overflow,seek:'pass',localLinksExist:true,pageErrors:errors,note:'Headless Chrome muted playback at1x to end; technical only, not human visual/auditory approval.'},null,2));
+console.log(JSON.stringify({stage:'complete',playback,mobileOverflow:overflow}));
+
+

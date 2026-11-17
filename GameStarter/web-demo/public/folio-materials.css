@@ -35,7 +35,7 @@
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body :is(h2,h3,blockquote){color:#443825}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body :is(.quiet-button,summary){color:#73452e}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .settings-section h2{color:#dfc895;border-bottom:1px solid #ac8e4b33;padding-bottom:10px}
-:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] :is(.save-leaf,.supply-card){background:url('/ui/panel-grain.svg'),linear-gradient(105deg,#51432e52,#191a14b3);border:1px solid #b49a624d;box-shadow:inset 0 0 0 3px #b49a620c,0 3px 10px #0003;border-radius:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-leaf{background:url('/ui/panel-grain.svg'),linear-gradient(105deg,#51432e52,#191a14b3);border:1px solid #b49a624d;box-shadow:inset 0 0 0 3px #b49a620c,0 3px 10px #0003;border-radius:0}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-leaf.is-empty{background:url('/ui/panel-grain.svg'),#1c1b1566;border-style:dashed}
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-button{
  color:#eddbb4;background:url('/ui/panel-grain.svg'),linear-gradient(105deg,#7b633540,#29271dcc 45%,#6f5c3533);border:1px solid #ae915d;border-radius:0;

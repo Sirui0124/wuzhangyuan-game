@@ -5,7 +5,6 @@ const esc = (value: string) => value.replace(/[&<>"']/g, c => ({ '&': '&amp;', '
 /** Shared by the map shelf, album overview and expanded card. Copy stays in the ending catalog. */
 const artwork: Record<string, string> = {
     safe: 'safe', 'tutorial-sacrifice': 'tutorial-sacrifice', 'tent-execution': 'tent-execution',
-    'radio-relay': 'radio-relay', 'light-signal': 'light-signal', 'item-plan': 'item-plan', 'era-arrest': 'era-arrest',
 };
 
 export function achievementCardHTML(ending: Ending, revealed = true): string {

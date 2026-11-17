@@ -1,0 +1,20 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "text": "8-second continuous live-action historical epic shot, landscape 16:9. Use reference image 1 as the exact composition and spatial layout: broad side view of an evacuation road, seven small soldiers and one wooden supply cart in the lower third, enormous burning encampment behind them.\r\n\r\nLOCKED TRIPOD CAMERA. The mountain notch, left dead tree, right watchtower and road remain at exactly the same screen positions and exactly the same scale for all eight seconds. Absolutely no pan, no tracking, no dolly, no zoom, no rotation, no reframing, no approach toward people. A stationary camera observes the scene; it does not follow the people.\r\n\r\nFrom 0 to 8 seconds, the existing soldiers and the one cart continuously walk briskly from screen RIGHT to screen LEFT along the road. The front man holds the cart shafts and pulls left, the man behind pushes the rear of the cart left; wheels rotate with actual ground contact. Leading soldiers leave the left edge first; the cart follows, and trailing soldiers follow it. All people remain the SAME SMALL SCALE as the reference, full bodies readable. Nobody runs toward camera or turns back toward the flames. Do not add people or horses. Clothing and secured cargo remain consistent. Fire in background stays vigorous, natural flame and smoke movement, dry dust stirred lightly by feet. No rain, no wet ground, no extinction, no dawn. Deep focus, clear foreground and midground, natural dusk colors, no CGI or miniature appearance.\r\n\r\nAudio: ONLY nonverbal environmental sound: distant roaring fire, dry footsteps, wooden cart wheel creaking, clothing friction. NO speech whatsoever, no narration, no shouted words, no singing, NO music or musical instruments, NO soundtrack. No text or subtitles in the picture. Do not read these instructions aloud.",
+      "type": "text"
+    },
+    {
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/0ec1c7a84cb2342d0720dd9d31dbd43f1e41cf5c73543cd139a0d6252fdd901a.jpg"
+      },
+      "role": "reference_image",
+      "type": "image_url"
+    }
+  ],
+  "resolution": "768P",
+  "duration": 8,
+  "ratio": "16:9"
+}

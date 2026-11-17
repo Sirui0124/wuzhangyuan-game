@@ -17,6 +17,7 @@ const allowedTestRoot=resolve(process.env.LOCALAPPDATA,'WuzhangyuanReleaseTests'
 const testRoot=resolve(option('validation-root') || resolve(allowedTestRoot,releaseLabel));
 assert.ok(testRoot.startsWith(allowedTestRoot+sep),'Installed validation must be isolated outside the workspace');
 const unpackedProbe=process.argv.includes('--unpacked-probe');
+const currentAccess=process.argv.includes('--current-access');
 const executable=resolve(process.argv[2] || resolve(testRoot,'app/Wuzhangyuan.exe'));
 const allowedExecutableRoot=unpackedProbe?resolve(testRoot,'unpacked'):resolve(testRoot,'app');
 assert.ok(executable.startsWith(allowedExecutableRoot+sep),'Validation executable must be inside this run’s isolated install directory or explicit unpacked probe root');
@@ -61,7 +62,7 @@ async function launch(index){
  await app.evaluate(({BrowserWindow})=>{const window=BrowserWindow.getAllWindows()[0];window.webContents.setBackgroundThrottling(false);window.hide();});
  page.on('pageerror',error=>report.errors.push(error.message));
  page.on('response',response=>{if(response.status()===404)report.missing.push(response.url());});
- page.on('request',request=>{if(request.method()==='POST' && /\/api\/game\/(respond|tts|shop|phone|personality)(?:$|\/)/.test(request.url()) && !request.url().endsWith('/tts/settings'))report.billableRequests.push(request.url());});
+ page.on('request',request=>{if(request.method()==='POST' && /\/api\/game\/(respond|tts)(?:$|\/)/.test(request.url()) && !request.url().endsWith('/tts/settings'))report.billableRequests.push(request.url());});
  await page.locator('.game-menu').waitFor();
  // ready-to-show may run after the first hide; keep the test window hidden once loaded.
  await app.evaluate(({BrowserWindow})=>BrowserWindow.getAllWindows()[0].hide());
@@ -118,6 +119,10 @@ try{
  report.resolvedWs=resolvedWs;
  report.checks.push('All manifest file sizes and SHA256 hashes match the installation; ws resolves inside the installed runtime dependency directory.');
  active=await launch(1);let {page}=active;
+ const inlineConfig=await active.app.evaluate(()=>({settingsFile:process.env.GAME_SETTINGS_FILE,hasInheritedKey:!!process.env.DEEPSEEK_API_KEY}));
+ assert.equal(resolve(inlineConfig.settingsFile),resolve(userData,'settings/.env'));
+ assert.equal(inlineConfig.hasInheritedKey,false);
+ report.checks.push('Inline chapter-one and command-map handlers share the player settings path and do not inherit provider credentials.');
  const savedSettings=await page.evaluate(async()=>{
   const response=await fetch('http://127.0.0.1:8787/api/game/tts/settings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({apiKey:'',player:'validation-player',weiyan:'validation-weiyan',resource:'seed-tts-2.0'})});
   return {status:response.status,body:await response.json()};
@@ -162,6 +167,14 @@ try{
  await page.waitForFunction(()=>new URL(location.href).searchParams.get('locked')==='grain');
  assert.equal(await page.evaluate(()=>localStorage.getItem('grain-chapter-two-films-v1')),null);
  report.checks.push('A fresh profile cannot enter the locked second chapter; later chapter probes use explicit isolated prerequisite history without changing plot saves.');
+ if(currentAccess){
+  for(const chapter of ['grain','jieting','jingzhou','luofengpo']){
+   await page.goto(`http://127.0.0.1:8812/?chapter=${chapter}`);
+   await page.waitForFunction(id=>new URL(location.href).searchParams.get('locked')===id,chapter);
+  }
+  report.checks.push('Current release keeps chapters two, three, five and seven closed; chapter source content remains packaged.');
+ }
+ if(!currentAccess){
  await completePrerequisite(page,'wuzhang');
  await page.goto('http://127.0.0.1:8812/?chapter=grain');
  await page.waitForFunction(()=>!!localStorage.getItem('grain-chapter-two-films-v1'));
@@ -197,9 +210,11 @@ try{
  await page.waitForFunction(()=>!!localStorage.getItem('jieting-chapter-three-v1'));
  await page.waitForFunction(()=>document.querySelector('video,.game-scene,.workspace-screen'));
  await capture(active,'04-installed-chapter-three.png');
+ }
  {
   await completePrerequisite(page,'jieting');
   await page.goto('http://127.0.0.1:8812/?chapter=yiling');
+  await page.locator('[data-cinema-action=skip]').click();
   await page.frameLocator('iframe').locator('[data-action=start]').click();
   await page.frameLocator('iframe').locator('.campaign-header').waitFor();
   await page.waitForFunction(()=>!!localStorage.getItem('yiling-rescue-campaign-session-v1'));
@@ -212,6 +227,7 @@ try{
   assert.ok(existsSync(resolve(userData,'yiling-rescue/saves',rescue.id+'.json')));
   report.rescue={id:rescue.id,revision:rescue.state.revision};
   await capture(active,'04b-installed-chapter-four.png');
+  if(!currentAccess){
   await completePrerequisite(page,'yiling');
   await page.goto('http://127.0.0.1:8812/?chapter=jingzhou');
   await page.locator('#spoken-line').waitFor();
@@ -222,6 +238,7 @@ try{
   await page.locator('main[data-node]').waitFor();
   await page.waitForFunction(()=>!!localStorage.getItem('luofengpo-chapter-seven-v1'));
   await capture(active,'04d-installed-finale.png');
+  }
  }
  // Release URLs must not request excluded playtest JSON.
  await page.goto('http://127.0.0.1:8812/?playtest=weiyan-second');await page.locator('.game-menu').waitFor();
@@ -230,7 +247,7 @@ try{
  const expected=await page.evaluate(keys=>Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)])),recordKeys);
  assert.equal(expected[key],saved);
  writeFileSync(resolve(output,'save-records-before-restart.json'),JSON.stringify(expected,null,2));
- report.checks.push(`All ${saveKeys.length} chapters start from packaged resources with test prerequisites; release entry removes excluded playtest parameters.`);
+ report.checks.push(currentAccess?'Open chapters one and four start from packaged resources; other chapters preserve current closed gates; release entry removes playtest parameters.':`All ${saveKeys.length} chapters start from packaged resources with test prerequisites; release entry removes excluded playtest parameters.`);
  await closeAndCheck(active);active=null;
  active=await launch(2);page=active.page;
  const restored=await page.evaluate(keys=>Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)])),recordKeys);

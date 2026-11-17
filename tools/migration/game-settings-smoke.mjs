@@ -30,15 +30,7 @@ try{
  await page.locator('.modal-close').focus();await page.keyboard.press('Shift+Tab');assert.equal(await page.evaluate(()=>!!document.activeElement.closest('.game-modal')),true);await page.keyboard.press('Tab');assert.equal(await page.locator('.modal-close').evaluate(node=>node===document.activeElement),true);
  assert.equal(await page.locator('#game-phone-enabled').count(),0);
  assert.equal(await page.locator('#api-status').innerText(),'');
- const itemHelp=page.locator('.settings-help').filter({has:page.locator('#item-system-description')});
- await itemHelp.locator('summary').click();assert.equal(await itemHelp.getAttribute('open'),'');
- assert.equal(await page.locator('#game-item-system-enabled').isChecked(),true);
- await itemHelp.locator('summary').click();
- await page.locator('#game-item-system-enabled').uncheck();
- assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-item-system-enabled-v1')),'0');
- assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-runtime-mode-v1')),'ai');
- await page.locator('#game-item-system-enabled').check();
- assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-runtime-mode-v1')),'ai');
+ assert.equal(await page.locator('#game-item-system-enabled').count(),0);
  await page.locator('#api-model').fill('edited-model');await page.locator('[data-action=save-api]').click();await page.getByText('配置已保存。',{exact:true}).waitFor();assert.equal(saves,1);assert.equal(fixture.model,'edited-model');assert.equal(fixture.apiKey,'fixture-only-key');
  await page.locator('#api-model').fill('connection-model');await page.locator('[data-action=test-api]').click();
  await page.getByText('配置已保存，正在测试模型连接……',{exact:true}).waitFor();

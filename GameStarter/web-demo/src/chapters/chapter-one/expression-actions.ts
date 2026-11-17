@@ -1,5 +1,4 @@
 import { hasExpressionMaterial } from '../../expression-contract';
-import { eraArrestReply } from '../../phone/era-judgment';
 import { ExpressionSafetyError, parseNpcTurn } from '../../npc-dialogue';
 import { currentClueSources, clueSources, validAuthorization } from './thought-canvas-model';
 import { clone, speechHistoryRound, WEIYAN_JUDGMENT_VERSION, type ExpressionGenerator, type ExpressionJudge, type ExpressionJudgeInput } from './session-state';
@@ -8,7 +7,6 @@ import { buildExpressionInput } from './expression-context';
 import { expressionHelp } from './expression-help';
 import { weiyanConfig } from '../../weiyan-prompt-config';
 import { ExpressionAuditError } from '../../expression-audit';
-import { consumeSupplies, isAvailableSupply, parseItemDecision, supplyById } from './supplies';
 /** First-chapter expression state and cancellation. The AI adapter stays independent. */
 export class ChapterExpressionActions {
     private request: AbortController | null = null;
@@ -90,7 +88,7 @@ export class ChapterExpressionActions {
             return false;
         this.cancelGeneration(false);
         const input = buildExpressionInput(this.context), selected = input.brief.selectedEvidence;
-        if (!hasExpressionMaterial(selected.length, input.brief.attachedItems?.length ?? 0, input.brief.playerIntent.words))
+        if (!hasExpressionMaterial(selected.length, input.brief.playerIntent.words))
             return false;
         const controller = new AbortController(), seq = ++this.generationSeq;
         this.generation = controller;
@@ -134,7 +132,6 @@ export class ChapterExpressionActions {
         }
     }
     expressionContext(text: string): ExpressionJudgeInput {
-        const items = this.context.state.speech?.items ?? this.context.state.supplies.attached;
         return {
             stage: this.context.state.round === 1 ? 'first' : 'authorized',
             evidence: this.context.content.clues.filter(c => this.context.collected.includes(c.id)).map(c => ({
@@ -146,23 +143,17 @@ export class ChapterExpressionActions {
                 })
             })),
             said: this.context.state.story.history.filter(h => speechHistoryRound(h, this.context.state.round) === this.context.state.round).map(h => h.text), current: text,
-            ...(items.length ? { items: items.map(id => {
-                const item = supplyById(id, this.context.state.supplies);
-                if (!item || !isAvailableSupply(id, this.context.state.supplies)) throw new Error('物品尚未购买或已消耗');
-                return { id: item.id, name: item.name, ability: item.ability, boundary: item.boundary };
-            }) } : {}),
         };
     }
     async confirmExpression(): Promise<boolean> {
-        if (this.request || this.context.state.phase !== 'expression' || (this.context.state.round === 2 && !validAuthorization(this.context.state.story)) || !['ready', 'cancelled', 'failed'].includes(this.context.state.composition.status)
-            || this.context.state.supplies.attached.some(id => !isAvailableSupply(id, this.context.state.supplies)))
+        if (this.request || this.context.state.phase !== 'expression' || (this.context.state.round === 2 && !validAuthorization(this.context.state.story)) || !['ready', 'cancelled', 'failed'].includes(this.context.state.composition.status))
             return false;
         const text = this.context.state.story.draft.trim();
         if (!text)
             return false;
         this.cancelGeneration(false);
         this.context.state.speech = {
-            text, selected: [...this.context.state.story.selected], status: 'waiting', items: [...this.context.state.supplies.attached]
+            text, selected: [...this.context.state.story.selected], status: 'waiting'
         };
         this.context.state.phase = 'spoken';
         this.context.emit({
@@ -204,12 +195,7 @@ export class ChapterExpressionActions {
             } : await this.judge!(input, controller.signal);
             if (controller.signal.aborted || seq !== this.context.state.story.requestSeq || run !== this.context.state.story.run || this.context.state.speech !== speech)
                 return false;
-            const material = 'itemDecision' in turn ? parseItemDecision(turn.itemDecision, speech.items ?? [], speech.text) : undefined;
-            const checked = parseNpcTurn('npcTurn' in turn ? turn.npcTurn : turn, input.stage, input.evidence.map(e => e.id));
-            if ((speech.items?.length && !material) || (material && (!speech.items?.length || input.stage !== 'authorized'
-                || (checked.classification.code === 'ok') !== (!!material.route || material.mainlineAccepted === true)))) throw new Error('物品与回应不一致');
-            if (material?.eraFailure && (checked.classification.code !== 'P2-F1' || checked.reply.text !== eraArrestReply)) throw new Error('时代失败回应不一致');
-            if (material) speech.itemDecision = material;
+            const checked = parseNpcTurn(turn, input.stage, input.evidence.map(e => e.id));
             speech.status = 'ready';
             speech.result = checked.classification.code;
             speech.npcTurn = clone(checked);
@@ -246,7 +232,6 @@ export class ChapterExpressionActions {
             });
     }
     reviseExpression(): boolean {
-        if (this.context.state.speech?.itemDecision?.eraFailure) return false;
         const rejectedReply = this.context.state.phase === 'reply' && this.context.state.speech?.status === 'ready' && this.context.state.speech.result !== 'ok' && this.context.state.speech.result !== 'execute';
         if (!this.context.state.speech || (!rejectedReply && (this.context.state.phase !== 'spoken' || this.context.state.speech.status === 'ready')))
             return false;
@@ -270,18 +255,13 @@ export class ChapterExpressionActions {
         if (this.context.state.round === 2 && !validAuthorization(this.context.state.story))
             return false;
         const accepted = speech.result === 'ok', feedback = speech.npcTurn?.reply.text ?? (accepted ? '' : this.context.rows.get(speech.result === 'R1-RETRY' ? 'A-40' : speech.result)!.text);
-        if (accepted && speech.itemDecision?.itemIds.some(id => !isAvailableSupply(id, this.context.state.supplies))) return false;
         this.context.state.story.history.push({
             round: this.context.state.round, text: speech.text, feedback, accepted, ...(speech.npcTurn ? {
                 npcTurn: clone(speech.npcTurn)
-            } : {}), ...(speech.items?.length ? { items: [...speech.items], itemDecision: clone(speech.itemDecision!) } : {})
+            } : {})
         });
         this.context.state.lastFeedback = feedback;
         if (accepted) {
-            if (speech.itemDecision?.route) {
-                this.context.state.supplies.agreement = clone(speech.itemDecision);
-                consumeSupplies(this.context.state.supplies, speech.itemDecision.itemIds);
-            }
             this.context.state.speech = null;
             this.context.state.story.draft = '';
             this.context.state.composition.status = 'idle';

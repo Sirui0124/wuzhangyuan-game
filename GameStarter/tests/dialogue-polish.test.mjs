@@ -28,15 +28,15 @@ test('semantic doubts and incomplete evidence metadata do not gate an otherwise 
 });
 
 test('an empty needs_revision preserves the original wording as an editable draft',async()=>{
- const input={...cases[0].input,words:'我先试着用手里的电池隔空传话。'};let calls=0;
- assert.equal(await polishDialogue(input,new AbortController().signal,{respond:async()=>{calls++;return{text:JSON.stringify({status:'needs_revision',text:'',reason:'物品不具备这项能力'})};}}),input.words);
+ const input={...cases[0].input,words:'我打算等到明日再报。'};let calls=0;
+ assert.equal(await polishDialogue(input,new AbortController().signal,{respond:async()=>{calls++;return{text:JSON.stringify({status:'needs_revision',text:'',reason:'提议有风险'})};}}),input.words);
  assert.equal(calls,1);
 });
 
-test('empty generation without words retries once then composes only selected cores and neutral item display',async()=>{
- const input={...cases[0].input,words:'',evidence:[{id:'A',text:'帐内禁入。'}],items:[{id:'item',name:'小本子',ability:'可记事',boundary:'不含笔'}]};let calls=0;
+test('empty generation without words retries once then composes only selected cores',async()=>{
+ const input={...cases[0].input,words:'',evidence:[{id:'A',text:'帐内禁入。'}]};let calls=0;
  const result=await polishDialogue(input,new AbortController().signal,{respond:async()=>{calls++;return{text:JSON.stringify({status:'needs_revision',text:''})};}});
- assert.equal(calls,2);assert.equal(result,'帐内禁入。 我带着小本子。');assert.doesNotMatch(result,/写下|送给|已经|同意/);
+ assert.equal(calls,2);assert.equal(result,'帐内禁入。');assert.doesNotMatch(result,/写下|送给|已经|同意/);
 });
 
 test('the writer gets core meanings and role metadata while original source prose stays verification-only',()=>{
@@ -74,7 +74,7 @@ test('cancellation after generation returns prevents any replacement draft or fu
 
 test('semantic citation checking remains available only as an offline quality check',()=>{
  const input={...cases[0].input,words:'我想帮你。我陪你送报。',evidence:[{id:'A',text:'六月领粮。',sources:[{speaker:'文书',text:'纸角沾了雨。'}]}]},candidate='六月领粮，我陪你送报。';
- const record={facts:true,intent:true,coverage:true,logic:true,items:true,reason:'',intentComparison:[{id:'0',quote:'我陪你送报',styleOnly:false},{id:'1',quote:'我陪你送报',styleOnly:false}],evidenceMatches:[{id:'A',points:[{sourceQuote:'六月领粮',quote:'六月领粮'}]}]};
+ const record={facts:true,intent:true,coverage:true,logic:true,reason:'',intentComparison:[{id:'0',quote:'我陪你送报',styleOnly:false},{id:'1',quote:'我陪你送报',styleOnly:false}],evidenceMatches:[{id:'A',points:[{sourceQuote:'六月领粮',quote:'六月领粮'}]}]};
  assert.doesNotThrow(()=>checkDialoguePolishAudit(record,input,candidate));
  const invalid=structuredClone(record);invalid.evidenceMatches[0].points[0].sourceQuote='纸角沾了雨';assert.throws(()=>checkDialoguePolishAudit(invalid,input,candidate),/审核未逐条/);
 });

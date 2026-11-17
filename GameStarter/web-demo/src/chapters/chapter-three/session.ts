@@ -1,17 +1,14 @@
+import { savedFields } from '../../session/saved-fields';
 import { projectDecision } from '../../narrative/presentation';
-import { acquireWorldItem, sellWorldItem, freshWorldInventory, ownedWorldItems } from '../../inventory/world-items';
-import { itemSystemEnabled } from '../../runtime-mode';
 import { indexStoryGraph } from '../../session/story-graph';
-import { freshSupplies, restoreSupplies, isAvailableSupply, supplyById, consumeSupplies } from '../../phone/supplies';
-import { freshPhone, restorePhone } from '../../phone/phone-state';
-import type { JietingEvaluationContext, JietingJudgment, JietingDialogueItem, JietingOpeningQuestion } from './ai-contracts';
+import type { JietingEvaluationContext, JietingJudgment, JietingOpeningQuestion } from './ai-contracts';
 import { fallbackOpeningQuestion } from './opening-question';
 import type { JietingStory, JietingNode, JietingSave, JietingProgress, JietingCheckpoint, JietingMode, JietingCondition, JietingEffect, JietingRound, JietingOutcome, JietingRoundRecord } from './types';
-import { JIETING_INITIAL_BELOW, JIETING_TOTAL, JIETING_TIGER, clampScore, contextDigest, troopsForOutcome, reinforcementOutcome, withdrawalReady, lurePlanReady, lureEligible, earlyWithdrawalEligible, rearReceptionEligible, guardAssessment } from './rules';
+import { JIETING_INITIAL_BELOW, JIETING_TOTAL, clampScore, contextDigest, troopsForOutcome, reinforcementOutcome, withdrawalReady, lurePlanReady, lureEligible, earlyWithdrawalEligible, rearReceptionEligible, guardAssessment } from './rules';
 import { REINFORCEMENT_LIMIT, REINFORCEMENT_TARGET, argumentLedger, argumentSupported, argumentTopics, grantForJudgment, recordTopic, reinforcementGrant, troopWords } from './persuasion';
 
 const copy = <T>(value: T): T => JSON.parse(JSON.stringify(value));
-const emptyProgress = (node: string): JietingProgress => ({ node, visited: [], chosen: [], flags: {}, visits: [], scores: { w: 0, m: 0, r: 0 }, scoreEvents: [], clueIds: [], clueSourceNodes: {}, clueUpdates: {}, sourceReadings: {}, roundResults: {}, transcript: [], acceptedReasons: [], unresolvedConcerns: [], followupUsed: {}, ending: null, itemTrials: {}, lureItemIds: [], withdrawalItemIds: [], itemUses: [] });
+const emptyProgress = (node: string): JietingProgress => ({ node, visited: [], chosen: [], flags: {}, visits: [], scores: { w: 0, m: 0, r: 0 }, scoreEvents: [], clueIds: [], clueSourceNodes: {}, clueUpdates: {}, sourceReadings: {}, roundResults: {}, transcript: [], acceptedReasons: [], unresolvedConcerns: [], followupUsed: {}, ending: null });
 const equal = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
 
 /** All material outcomes are committed here, after their authored dialogue/action is read. */
@@ -20,15 +17,14 @@ export class JietingSession {
     private readonly nodes: Map<string, JietingNode>;
     private mode: Required<JietingMode>;
     constructor(readonly story: JietingStory, saved?: unknown, mode: JietingMode = {}) {
-        this.mode = { aiEnabled: mode.aiEnabled ?? true, phoneAllowed: mode.phoneAllowed ?? true };
+        this.mode = { aiEnabled: mode.aiEnabled ?? true };
         this.nodes = indexStoryGraph(story.nodes, story.start, '第三章');
-        this.state = { ...emptyProgress(story.start), schema: 1, version: story.version, run: Date.now(), revision: 0, draft: '', selected: [], supplies: freshSupplies(), phone: freshPhone(), judgments: [], pendingJudgment: null, checkpoints: {} };
+        this.state = { ...emptyProgress(story.start), schema: 1, version: story.version, run: Date.now(), revision: 0, draft: '', selected: [], judgments: [], pendingJudgment: null, checkpoints: {} };
         if (saved != null) this.restore(saved);
         if (!this.state.checkpoints.act1) this.checkpoint('act1');
         this.resolveRoutes();
         this.applyModeToOpen();
     }
-    get phoneAllowed() { return this.mode.phoneAllowed; }
     get scores() { return { ...this.state.scores }; }
     get below() { return JIETING_INITIAL_BELOW + Object.values(this.state.roundResults).reduce((n, r) => n + (r?.arrived ? r.troops : 0), 0); }
     get above() { return JIETING_TOTAL - this.below; }
@@ -73,12 +69,11 @@ export class JietingSession {
         this.state.revision++; return true;
     }
     setMode(mode: JietingMode) {
-        this.mode = { aiEnabled: mode.aiEnabled ?? this.mode.aiEnabled, phoneAllowed: mode.phoneAllowed ?? this.mode.phoneAllowed };
+        this.mode = { aiEnabled: mode.aiEnabled ?? this.mode.aiEnabled };
         this.state.revision++;
         this.applyModeToOpen();
     }
     private applyModeToOpen() {
-        if (!itemSystemEnabled() && /^JT-05[4-9]$/.test(this.current.id)) { this.go('JT-MA-END'); return; }
         if (this.mode.aiEnabled && this.current.kind === 'choice') {
             const match = /^JT-R([12345])-(?:FIXED|FOLLOW|SAFE-FIXED|SAFE-FOLLOW)$/.exec(this.current.id);
             if (match && !this.state.roundResults[Number(match[1]) as JietingRound]) {
@@ -95,7 +90,6 @@ export class JietingSession {
     getEvaluationContext(): JietingEvaluationContext {
         const n = this.current;
         if (n.kind !== 'open' || !n.phase) throw new Error('当前不在可进言处');
-        const items = this.dialogueItems();
         const verifiedClueIds = this.clues.filter(c => this.state.flags[`verified-${c.id}`] === true && c.current !== false).map(c => c.id);
         // A previous phase's unfinished question is history, not a new requirement for this scene.
         const previousPhase = this.state.judgments.at(-1)?.phase;
@@ -104,31 +98,10 @@ export class JietingSession {
             ownedClues: this.clues.map(c => ({ id: c.id, title: c.title, text: c.text, current: c.current })),
             confirmedTranscript: copy(this.state.transcript), acceptedReasons: copy(this.state.acceptedReasons.filter(r => r.clueIds.every(id => this.clues.some(c => c.id === id && c.current !== false)))),
             unresolvedConcerns: [...currentConcerns], followupUsed: !!this.state.followupUsed[n.id], verifiedClueIds,
-            roundResults: copy(Object.values(this.state.roundResults).map(r => ({ ...r, adoptedItems: this.state.itemUses.filter(use => use.itemIds.some(id => r?.usedItemIds.includes(id))) }))), mode: this.mode.aiEnabled ? 'online' : 'offline', items,
+            roundResults: copy(Object.values(this.state.roundResults)), mode: this.mode.aiEnabled ? 'online' : 'offline',
             reinforcement: { limit: REINFORCEMENT_LIMIT, targetBelow: REINFORCEMENT_TARGET, arguments: argumentLedger(Object.values(this.state.roundResults)) } };
-        context.contextKey = contextDigest({ context, run: this.state.run, revision: this.state.revision, draft: this.state.draft.trim(), selected: this.state.selected, mode: this.mode, itemTrials: this.state.itemTrials });
+        context.contextKey = contextDigest({ context, run: this.state.run, revision: this.state.revision, draft: this.state.draft.trim(), selected: this.state.selected, mode: this.mode });
         return context;
-    }
-    dialogueItems(): JietingDialogueItem[] {
-        if (!itemSystemEnabled() || !this.mode.phoneAllowed) return [];
-        const s = this.state.supplies;
-        return [...s.purchases.map(id => { const item = supplyById(id, s)!; const trial = this.state.itemTrials[id]; return { id, name: item.name, ability: item.ability, boundary: item.boundary, source: 'phone' as const, available: isAvailableSupply(id, s), shown: s.attached.includes(id), ...(trial ? { tested: true, observedEffect: trial.effect } : {}) }; }),
-            ...ownedWorldItems(s.worldItems).map(i => ({ id: i.id, name: i.name, ability: i.description, boundary: '普通随身物品，不代表军令或将领授权。', source: 'world' as const, available: true, shown: false }))];
-    }
-    confirmItemPreparation(result: { version: number; nodeId: string; contextKey: string; itemId: string; input: string; status: string; operation: string; effect: string; requirements: { satisfied: boolean; sourceItemIds: string[]; specQuote: string }[] }) {
-        if (this.current.kind !== 'open' || this.feedback || !this.phoneAllowed || !itemSystemEnabled() || result.version !== 1 || result.status !== 'ready'
-            || result.nodeId !== this.current.id || result.contextKey !== this.getEvaluationContext().contextKey || !isAvailableSupply(result.itemId, this.state.supplies)
-            || !result.input.trim() || !result.operation.trim() || !result.effect.trim() || !Array.isArray(result.requirements) || result.requirements.some(r => !r.satisfied || !r.specQuote || r.sourceItemIds.some(id => !isAvailableSupply(id, this.state.supplies)))) return false;
-        this.state.itemTrials[result.itemId] = { input: result.input, operation: result.operation, effect: result.effect };
-        this.state.transcript.push({ speaker: '试用', text: result.operation + ' ' + result.effect });
-        this.state.revision++;
-        return true;
-    }
-    sellWorldItem(id: string) {
-        if (!itemSystemEnabled() || !this.phoneAllowed || this.current.kind !== 'open' || this.feedback || this.state.ending) return false;
-        const result = sellWorldItem(this.state.supplies.worldItems ??= freshWorldInventory(), id);
-        if (result) this.state.revision++;
-        return result;
     }
     /** Confirmation stores an NPC response, never an order or an arrival. */
     submit(j: JietingJudgment) {
@@ -139,14 +112,11 @@ export class JietingSession {
             || !equal(j.clueIds, this.state.selected) || j.phase !== n.phase || j.round !== n.round || !['followup', 'final'].includes(j.status)
             || typeof j.response !== 'string' || !j.response.trim() || (j.status === 'followup' && this.state.followupUsed[n.id])
             || j.clueIds.some(id => !context.ownedClues.some(c => c.id === id && c.current !== false))) return false;
-        const usedItemIds = j.usedItemIds ?? [];
-        if (!Array.isArray(usedItemIds) || new Set(usedItemIds).size !== usedItemIds.length || usedItemIds.some(id => !context.items?.some(i => i.id === id && i.source === 'phone' && i.available && i.shown && i.tested && i.observedEffect))) return false;
         if (j.maintain && (!j.maintainQuote?.trim() || !j.input.includes(j.maintainQuote) || n.phase !== 'reinforcement')) return false;
         const criteria = ['factsReliable', 'gapEstablished', 'reinforcementUse', 'concernAnswered', 'risk', 'route', 'reception', 'motive', 'means', 'withdrawal'];
         if (!j.criteria || criteria.some(k => typeof j.criteria[k as keyof typeof j.criteria] !== 'boolean')) return false;
         if (j.special) {
-            if (j.status !== 'final' || !j.special.quote || !j.input.includes(j.special.quote) || !['era-arrest', 'execution'].includes(j.special.kind)) return false;
-            if (j.special.kind === 'era-arrest' && (!j.special.itemIds?.length || j.special.itemIds.some(id => !context.items?.some(i => i.id === id && i.source === 'phone' && i.available && i.shown && i.tested && i.observedEffect)))) return false;
+            if (j.status !== 'final' || !j.special.quote || !j.input.includes(j.special.quote) || j.special.kind !== 'execution') return false;
         } else if (j.status === 'final') {
             const assessment = j.reinforcementAssessment;
             if (n.phase === 'reinforcement' && (!assessment || !Number.isInteger(assessment.supportedTroops) || assessment.supportedTroops < 0 || assessment.supportedTroops > 5000
@@ -181,12 +151,11 @@ export class JietingSession {
             if (!j || optionId) return false;
             this.state.transcript.push({ speaker: '马谡', text: j.response, ...(n.round ? { round: n.round } : {}) });
             this.state.pendingJudgment = null; this.state.draft = ''; this.state.selected = []; this.state.revision++;
-            if (j.special) { this.state.flags.specialOrigin = n.id; this.state.flags.specialKind = j.special.kind; this.go(j.special.kind === 'era-arrest' ? 'JT-403' : 'JT-410'); return true; }
+            if (j.special) { this.state.flags.specialOrigin = n.id; this.state.flags.specialKind = j.special.kind; this.go('JT-410'); return true; }
             if (j.status === 'followup') { this.state.followupUsed[n.id] = true; this.applyModeToOpen(); return true; }
             this.markRead(n);
             if (n.phase === 'reinforcement' && n.round) this.setRoundResult(n.round, j.outcome as JietingOutcome, 'ai', j);
-            if (n.phase === 'lure') { this.state.flags.lurePlanReady = lurePlanReady(j.criteria); this.state.lureItemIds = j.outcome === 'accepted' ? [...(j.usedItemIds ?? [])] : []; }
-            if (n.phase === 'withdrawal') this.state.withdrawalItemIds = j.outcome === 'accepted' ? [...(j.usedItemIds ?? [])] : [];
+            if (n.phase === 'lure') { this.state.flags.lurePlanReady = lurePlanReady(j.criteria); }
             this.go(j.outcome === 'revise' ? n.phase === 'withdrawal' ? 'JT-245' : 'JT-300' : n.next!);
             return true;
         }
@@ -206,7 +175,7 @@ export class JietingSession {
         for (const effect of n.effects ?? []) this.effect(effect, n.id);
         this.state.revision++; this.go(n.next); return true;
     }
-    /** Retrying a completed branch restores narrative and money from the same checkpoint. */
+    /** Retrying a completed branch restores narrative progress from the same checkpoint. */
     retry(target: 'round' | 'act1' | 'act2' | 'act3' | 'final' = 'round') {
         let name: string = target;
         if (target === 'round') {
@@ -256,13 +225,11 @@ export class JietingSession {
         if (outcome) return this.state.roundResults[Number(outcome[1]) as JietingRound]?.outcome === outcome[2];
         switch (key) {
             case 'ai': return this.mode.aiEnabled;
-            case 'items': return itemSystemEnabled();
             case 'all-visits': return this.state.visits.length === 3;
             case 'water-protected': return Object.values(this.state.roundResults).some(r => r?.arrived && r.troops > 0 && r.tasks.includes('water'));
             case 'r1-reinforced': return !!this.state.roundResults[1]?.arrived && this.state.roundResults[1].troops > 0;
             case 'lure-entry': return this.below >= 10000;
             case 'reinforcement-target': return this.below >= REINFORCEMENT_TARGET;
-            case 'phone-ai': return this.mode.aiEnabled && this.mode.phoneAllowed && itemSystemEnabled();
             case 'ma-trust3': return this.scores.m >= 3;
             case 'early-eligible': return earlyWithdrawalEligible(this.scores);
             case 'rear-eligible': return rearReceptionEligible(this.scores);
@@ -270,8 +237,9 @@ export class JietingSession {
             case 'guard-rear-unsafe': return this.guard.holds && !this.guard.allRearSafe;
             case 'guard-masu-alive': return this.guard.masuAlive;
             case 'fixed-lure-eligible': return lureEligible(this.scores, this.below, 'fixed');
-            case 'phone-lure-ready': return this.gate('phone-ai') && lureEligible(this.scores, this.below, 'phone') && this.state.flags.lurePlanReady === true;
-            case 'lure-execution-ready': return this.state.flags.lurePlanReady === true && this.state.flags.lureAuthorized === true && this.state.flags.lureReceptionConfirmed === true && (this.state.flags.lureMethod === 'fixed' ? this.gate('fixed-lure-eligible') : this.gate('phone-lure-ready'));
+            case 'discussion-ai': return this.mode.aiEnabled;
+            case 'discussion-lure-ready': return this.mode.aiEnabled && lureEligible(this.scores, this.below, 'discussion') && this.state.flags.lurePlanReady === true;
+            case 'lure-execution-ready': return this.state.flags.lurePlanReady === true && this.state.flags.lureAuthorized === true && this.state.flags.lureReceptionConfirmed === true && (this.state.flags.lureMethod === 'fixed' ? this.gate('fixed-lure-eligible') : this.gate('discussion-lure-ready'));
             default: throw new Error(`未知第三章条件：${key}`);
         }
     }
@@ -282,7 +250,7 @@ export class JietingSession {
         const argument = j?.argument ?? { topic, quote: this.state.transcript.filter(t => t.speaker === '我').at(-1)?.text ?? '', clueIds: [] };
         const criteria = j?.criteria ?? { factsReliable: true, gapEstablished: outcome !== 'none', reinforcementUse: outcome !== 'none', concernAnswered: outcome === 'great' };
         const grant = j ? grantForJudgment(j, Object.values(this.state.roundResults), this.below) : reinforcementGrant(criteria as JietingJudgment['criteria'], argument, Object.values(this.state.roundResults), this.below);
-        this.state.roundResults[round] = { round, outcome: grant.outcome, troops: grant.troops, ordered: false, arrived: false, reported: false, source, ...(source === 'fixed' || j?.argument ? { argument } : {}), ...(j?.reinforcementAssessment ? { supportedTroops: j.reinforcementAssessment.supportedTroops } : {}), tasks: grant.troops ? tasks : [], usedItemIds: grant.troops ? [...(j?.usedItemIds ?? [])] : [], ...(j ? { input: j.input, clueIds: [...j.clueIds] } : {}) };
+        this.state.roundResults[round] = { round, outcome: grant.outcome, troops: grant.troops, ordered: false, arrived: false, reported: false, source, ...(source === 'fixed' || j?.argument ? { argument } : {}), ...(j?.reinforcementAssessment ? { supportedTroops: j.reinforcementAssessment.supportedTroops } : {}), tasks: grant.troops ? tasks : [], ...(j ? { input: j.input, clueIds: [...j.clueIds] } : {}) };
     }
     private effect(e: JietingEffect, source: string) {
         switch (e.type) {
@@ -296,16 +264,12 @@ export class JietingSession {
             case 'score': if (!this.state.scoreEvents.includes(e.id)) { this.state.scoreEvents.push(e.id); for (const key of ['w', 'm', 'r'] as const) this.state.scores[key] = clampScore(this.state.scores[key] + (e.delta[key] ?? 0)); } break;
             case 'flag':
                 this.state.flags[e.key] = e.value;
-                if (e.key === 'lureMethod' || (e.key === 'lurePlanReady' && e.value === false)) this.state.lureItemIds = [];
-                if (e.key === 'lureAuthorized' && e.value === true) this.commitItemUse(source, this.state.lureItemIds);
-                if (e.key === 'withdrawalAuthorized' && e.value === true) this.commitItemUse(source, this.state.withdrawalItemIds);
                 break;
             case 'visit': if (!this.state.visits.includes(e.place)) this.state.visits.push(e.place); break;
-            case 'item': if (itemSystemEnabled()) acquireWorldItem(this.state.supplies.worldItems ??= freshWorldInventory(), e.id); break;
             case 'round-result': this.setRoundResult(e.round, e.outcome, 'fixed'); break;
             case 'round-order': {
                 const r = this.state.roundResults[e.round]; if (!r) throw new Error('调令缺少已确认的说服结果');
-                if (!r.ordered) { r.ordered = true; if (r.troops) { this.commitItemUse(source, r.usedItemIds); if (e.round <= 3) this.effect({ type: 'score', id: `round${e.round}-m`, delta: { m: 1 } }, source); } } break;
+                if (!r.ordered) { r.ordered = true; if (r.troops) { if (e.round <= 3) this.effect({ type: 'score', id: `round${e.round}-m`, delta: { m: 1 } }, source); } } break;
             }
             case 'round-arrival': { const r = this.state.roundResults[e.round]; if (!r?.ordered) throw new Error('到营缺少实际调令'); r.arrived = true; break; }
             case 'round-report': { const r = this.state.roundResults[e.round]; if (!r?.ordered) throw new Error('回令缺少实际军令'); if (!r.reported) { r.reported = true; if (e.round <= 3) this.effect({ type: 'score', id: `round${e.round}-w`, delta: { w: 1 } }, source); } break; }
@@ -313,48 +277,43 @@ export class JietingSession {
             case 'ending': this.state.ending = e.id; break;
         }
     }
-    private commitItemUse(at: string, itemIds: string[]) {
-        if (!itemIds.length || this.state.itemUses.some(use => use.at === at && equal(use.itemIds, itemIds))) return;
-        if (itemIds.some(id => !isAvailableSupply(id, this.state.supplies))) throw new Error('已采用的方案物品不在当前库存中');
-        this.state.itemUses.push({ at, itemIds: [...itemIds], effects: itemIds.map(id => ({ id, name: supplyById(id, this.state.supplies)!.name, effect: this.state.itemTrials[id]?.effect ?? supplyById(id, this.state.supplies)!.ability })) });
-        consumeSupplies(this.state.supplies, itemIds);
-    }
     private checkpoint(name: string) {
         const { schema: _schema, version: _version, run: _run, revision: _revision, draft: _draft, selected: _selected, pendingJudgment: _pending, checkpoints: _checkpoints, ...progress } = this.state;
         this.state.checkpoints[name] = copy(progress);
+    }
+    private supportedCheckpoint(value: JietingCheckpoint): JietingCheckpoint {
+        const progress = savedFields(value, [...Object.keys(emptyProgress(value.node)), 'guidedQuestions', 'judgments']);
+        const judgmentFields = ['version','nodeId','contextKey','input','clueIds','phase','round','status','outcome','response','responseOrigin','criteria','verifiedClueIds','acceptedReasons','unresolvedConcerns','deploymentTasks','argument','reasoning','reinforcementAssessment','maintain','maintainQuote','special'];
+        progress.judgments = value.judgments.map(j => savedFields(j, judgmentFields));
+        progress.roundResults = Object.fromEntries(Object.entries(value.roundResults).map(([round, record]) => [round, savedFields(record!, ['round','outcome','troops','ordered','arrived','reported','source','input','clueIds','tasks','argument','supportedTroops'])]));
+        return copy(progress);
     }
     private restore(raw: unknown) {
         const s = raw as JietingSave;
         if (!s || s.schema !== 1 || ![this.story.version, 'jieting-20261026-1a640d464f8a'].includes(s.version) || !Number.isSafeInteger(s.revision) || !Number.isFinite(s.run)) throw new Error('第三章存档版本不兼容');
         this.validateProgress(s);
-        const supplies = this.restoreEconomy(s);
         if (!Array.isArray(s.judgments) || !s.checkpoints || typeof s.checkpoints !== 'object') throw new Error('进言或重试记录缺失');
         const checkpoints: Record<string, JietingCheckpoint> = {};
-        for (const [key, value] of Object.entries(s.checkpoints)) { this.validateProgress(value); checkpoints[key] = { ...copy(value), ...this.restoreEconomy(value) }; }
-        Object.assign(this.state, copy(s), supplies, { checkpoints, draft: typeof s.draft === 'string' ? s.draft.slice(0, 2000) : '', selected: Array.isArray(s.selected) ? s.selected.filter(id => s.clueIds.includes(id)) : [], pendingJudgment: null });
+        for (const [key, value] of Object.entries(s.checkpoints)) { this.validateProgress(value); checkpoints[key] = copy(this.supportedCheckpoint(value)); }
+        Object.assign(this.state, copy(savedFields(s, [...Object.keys(this.state), 'guidedQuestions'])), { ...this.supportedCheckpoint(s), checkpoints, draft: typeof s.draft === 'string' ? s.draft.slice(0, 2000) : '', selected: Array.isArray(s.selected) ? s.selected.filter(id => s.clueIds.includes(id)) : [], pendingJudgment: null });
         this.state.version = this.story.version;
         // Saved pending responses remain read-only feedback; they cannot invent a new grant.
         if (s.pendingJudgment) {
             const j = s.pendingJudgment;
             if (j.nodeId !== s.node || this.current.kind !== 'open' || !s.judgments.some(jj => equal(jj, j))) throw new Error('待回应进言缺少确认来源');
-            this.state.pendingJudgment = copy(j);
+            this.state.pendingJudgment = copy(this.supportedCheckpoint({ ...s, judgments: [j] }).judgments[0]);
             if (s.version === 'jieting-20261026-1a640d464f8a' && j.phase === 'reinforcement' && !j.argument) {
                 this.state.pendingJudgment.argument = { topic: j.deploymentTasks?.[0] ?? (j.round === 1 ? 'road' : j.round === 2 ? 'water' : 'reception'), quote: j.input, clueIds: [...j.clueIds] };
                 this.state.judgments.push(copy(this.state.pendingJudgment));
             }
         }
     }
-    private restoreEconomy(s: JietingCheckpoint | JietingSave) {
-        const supplies = restoreSupplies(s.supplies, [], true, 'jieting-action', false);
-        if (supplies.rewards.length || supplies.legacyPurchases?.length || supplies.worldItems?.acquired.some(id => id !== JIETING_TIGER || !s.visited.includes('JT-058'))) throw new Error('第三章资金或木雕缺少实际来源');
-        return { supplies, phone: restorePhone(s.phone) };
-    }
     private validateProgress(s: JietingProgress) {
         const unique = (a: unknown): a is string[] => Array.isArray(a) && a.every(x => typeof x === 'string') && new Set(a).size === a.length;
         if (!s || !this.nodes.has(s.node) || !unique(s.visited) || s.visited.some(id => !this.nodes.has(id)) || !unique(s.chosen)
             || s.chosen.some(id => !this.story.nodes.some(n => n.options?.some(o => o.id === id))) || !unique(s.clueIds) || !unique(s.scoreEvents)
             || !Array.isArray(s.visits) || new Set(s.visits).size !== s.visits.length || s.visits.some(v => !['wang', 'ma', 'camp'].includes(v))
-            || !s.flags || !s.clueSourceNodes || !s.clueUpdates || !s.sourceReadings || !s.roundResults || !s.followupUsed || !Array.isArray(s.transcript) || !Array.isArray(s.acceptedReasons) || !Array.isArray(s.unresolvedConcerns) || !s.itemTrials || !unique(s.lureItemIds) || !unique(s.withdrawalItemIds) || !Array.isArray(s.itemUses)) throw new Error('第三章剧情记录不完整');
+            || !s.flags || !s.clueSourceNodes || !s.clueUpdates || !s.sourceReadings || !s.roundResults || !s.followupUsed || !Array.isArray(s.transcript) || !Array.isArray(s.acceptedReasons) || !Array.isArray(s.unresolvedConcerns)) throw new Error('第三章剧情记录不完整');
         for (const id of s.clueIds) {
             const c = this.story.clues.find(c => c.id === id), sources = s.clueSourceNodes[id];
             if (!c || !unique(sources) || !sources.length || sources.some(node => !s.visited.includes(node) || !c.sources.some(v => v.node === node) || typeof s.sourceReadings[node]?.text !== 'string')) throw new Error('线索没有已经读过的来源');
@@ -372,7 +331,7 @@ export class JietingSession {
         const credits: Partial<Record<string, number>> = {};
         for (const [k, r] of Object.entries(s.roundResults).sort(([a], [b]) => Number(a) - Number(b))) {
             const rr = r as JietingRoundRecord, round = Number(k);
-            if (![1, 2, 3, 4, 5].includes(round) || rr.round !== round || !['great', 'small', 'none'].includes(rr.outcome) || !Array.isArray(rr.tasks) || rr.tasks.some(t => !['road', 'water', 'reception'].includes(t)) || !unique(rr.usedItemIds) || !['fixed', 'ai'].includes(rr.source)) throw new Error('调兵记录无效');
+            if (![1, 2, 3, 4, 5].includes(round) || rr.round !== round || !['great', 'small', 'none'].includes(rr.outcome) || !Array.isArray(rr.tasks) || rr.tasks.some(t => !['road', 'water', 'reception'].includes(t)) || !['fixed', 'ai'].includes(rr.source)) throw new Error('调兵记录无效');
             if (rr.argument && (!Object.hasOwn(argumentTopics, rr.argument.topic) || typeof rr.argument.quote !== 'string' || !unique(rr.argument.clueIds) || rr.argument.clueIds.some(id => !s.clueIds.includes(id)))) throw new Error('调兵理由缺少已获线索');
             if (rr.argument && rr.source === 'ai' && !(s as JietingCheckpoint).judgments?.some(j => j.phase === 'reinforcement' && j.round === round && j.input === rr.input && equal(j.argument, rr.argument))) throw new Error('调兵理由缺少已经确认的发言');
             const topic = recordTopic(rr), prior = credits[topic] ?? 0;
@@ -396,21 +355,14 @@ export class JietingSession {
         }
         if (s.scoreEvents.some(id => !validEvents.has(id)) || !s.scores || ['w', 'm', 'r'].some(k => s.scores[k as keyof typeof expected] !== clampScore(expected[k as keyof typeof expected]))) throw new Error('分值缺少实际选项或回报来源');
         if (s.ending !== null && !this.story.endings.some(e => e.id === s.ending && s.node === 'JT-END-' + e.id.toUpperCase())) throw new Error('结局记录与现场不符');
-        for (const [id, trial] of Object.entries(s.itemTrials)) if (!trial || typeof trial.input !== 'string' || typeof trial.operation !== 'string' || typeof trial.effect !== 'string' || !(s as JietingCheckpoint).supplies?.purchases.includes(id)) throw new Error('试用缺少已购物品');
-        const used = new Set<string>();
-        for (const use of s.itemUses) {
-            if (!s.visited.includes(use.at) || !unique(use.itemIds) || !use.itemIds.length || !Array.isArray(use.effects) || use.itemIds.some(id => used.has(id) || !(s as JietingCheckpoint).supplies.purchases.includes(id) || !use.effects.some(e => e.id === id && typeof e.effect === 'string'))) throw new Error('物品消耗缺少实际采用来源');
-            use.itemIds.forEach(id => used.add(id));
-        }
-        if (!equal([...(s as JietingCheckpoint).supplies.consumed ?? []].sort(), [...used].sort())) throw new Error('物品消耗记录与采用结果不符');
     }
 }
 
 /** Fixtures play through real options and source lines; no future clues or cash are injected. */
 export function createJietingPlaytest(story: JietingStory, kind: string, mode: JietingMode = {}) {
-    const session = new JietingSession(story, undefined, { aiEnabled: false, phoneAllowed: mode.phoneAllowed ?? true });
+    const session = new JietingSession(story, undefined, { aiEnabled: false });
     const picks: Record<string, string> = { 'JT-Q1': 'JT-O018', 'JT-Q2': 'JT-O029', 'JT-Q3': 'JT-O093', 'JT-Q4': 'JT-O111', 'JT-R1-FIXED': 'JT-O132', 'JT-R2-FIXED': 'JT-O167', 'JT-R3-FIXED': 'JT-O198', 'JT-ROUTE-CHOICE': kind === 'withdrawal' ? 'JT-O228' : 'JT-O229' };
-    const target = kind === 'item' || kind === 'reinforcement' ? 'JT-R1-FIXED' : kind === 'withdrawal' ? 'JT-WITHDRAW-FIXED' : 'JT-LURE-METHOD';
+    const target = kind === 'reinforcement' ? 'JT-R1-FIXED' : kind === 'withdrawal' ? 'JT-WITHDRAW-FIXED' : 'JT-LURE-METHOD';
     for (let i = 0; i < 500 && session.current.id !== target; i++) {
         if (session.current.kind === 'choice') {
             const id = picks[session.current.id] ?? (session.current.id === 'JT-VISIT-REMAINING' ? session.options[0]?.id : undefined);
@@ -419,7 +371,7 @@ export function createJietingPlaytest(story: JietingStory, kind: string, mode: J
     }
     if (session.current.id !== target) throw new Error('试玩检查点超出合理路径');
     session.setMode(mode);
-    if (mode.aiEnabled !== false && (kind === 'reinforcement' || kind === 'item')) {
+    if (mode.aiEnabled !== false && (kind === 'reinforcement')) {
         // Switching a fixed prompt to its equivalent open prompt changes no material progress.
         session.state.node = 'JT-OPEN-R1';
     } else if (mode.aiEnabled !== false && kind === 'withdrawal') session.state.node = 'JT-OPEN-WITHDRAW';

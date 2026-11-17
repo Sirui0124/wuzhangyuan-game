@@ -1,10 +1,9 @@
-import { hasExpressionMaterial, type ExpressionGenerationInput, type ExpressionItemLink } from './expression-contract';
+import { hasExpressionMaterial, type ExpressionGenerationInput } from './expression-contract';
 import { GameApi } from '../../assets/scripts/GameApi';
 import type { ExpressionJudge, ExpressionGenerator } from './chapter-session';
 import { createWeiyanJudge } from './weiyan-judgment';
 import { expressionWriterPrompt, expressionPromptScope } from './expression-prompts';
 import { expressionScenePrompt, expressionLengthBudget } from './expression-scene-prompts';
-import { withItemDialogue } from './item-dialogue';
 
 const decode = (text: string) => JSON.parse(text.trim().replace(/^```(?:json)?\s*|\s*```$/gi, '').trim());
 
@@ -12,16 +11,14 @@ const decode = (text: string) => JSON.parse(text.trim().replace(/^```(?:json)?\s
 export function expressionAgents(api: GameApi): { judge: ExpressionJudge; generate: ExpressionGenerator } {
     const generate = async ({ brief, verificationSources }: ExpressionGenerationInput, signal: AbortSignal) => {
         signal.throwIfAborted();
-        const allowedIds = brief.selectedEvidence.map(item => item.id), items = brief.attachedItems ?? [];
+        const allowedIds = brief.selectedEvidence.map(item => item.id);
         const intent = brief.playerIntent;
         if ((intent.draft !== undefined || intent.focus !== undefined) &&
             ((intent.draft !== undefined && typeof intent.draft !== 'string') || (intent.focus !== undefined && typeof intent.focus !== 'string') ||
                 intent.words !== (intent.draft?.trim() || intent.focus?.trim() || '')))
             throw new Error('表达原稿与补充输入不一致');
-        if (brief.schemaVersion !== 2 || !Array.isArray(items) || items.length > 2 || new Set(items.map(item => item?.id)).size !== items.length ||
-            items.some(item => !item || item.kind !== 'item' || ['id', 'name', 'ability', 'boundary'].some(key => typeof item[key as keyof typeof item] !== 'string' || !item[key as keyof typeof item].trim())) ||
-            (items.length > 0 && brief.conversation.stage !== 'authorized') ||
-            !hasExpressionMaterial(allowedIds.length, items.length, intent.words) ||
+        if (brief.schemaVersion !== 2 ||
+            !hasExpressionMaterial(allowedIds.length, intent.words) ||
             brief.selectedEvidence.some(item => !verificationSources.some(source => source.evidenceId === item.id)))
             throw new Error('表达资料不完整');
         const scene = expressionScenePrompt(brief.conversation.stage), length = expressionLengthBudget(brief);
@@ -48,7 +45,7 @@ export function expressionAgents(api: GameApi): { judge: ExpressionJudge; genera
                     continue;
                 }
                 if (['needs_revision','input_conflict'].includes(result?.status)) {
-                    const fallback=[...brief.selectedEvidence.map(e=>e.meaning),...items.map(i=>`我带着${i.name}。`)].join('');
+                    const fallback=[...brief.selectedEvidence.map(e=>e.meaning)].join('');
                     if(fallback)return {text:fallback,evidenceIds:allowedIds};
                 }
                 throw new Error('润色服务没有返回文字，请重试。');
@@ -59,10 +56,9 @@ export function expressionAgents(api: GameApi): { judge: ExpressionJudge; genera
             }
             // References describe a draft, not approval. Invalid metadata never blocks speech.
             const evidenceIds: string[]=Array.isArray(result.evidenceIds)?[...new Set<string>(result.evidenceIds.filter((id:unknown)=>typeof id==='string'&&allowedIds.includes(id)))]:[];
-            const itemLinks: ExpressionItemLink[]=Array.isArray(result.itemLinks)?result.itemLinks.filter((link:any)=>link&&items.some(i=>i.id===link.itemId)&&typeof link.quote==='string'&&!!link.quote.trim()&&text.includes(link.quote)).map((link:any)=>({itemId:link.itemId,quote:link.quote,evidenceIds:Array.isArray(link.evidenceIds)?link.evidenceIds.filter((id:unknown)=>typeof id==='string'&&evidenceIds.includes(id)):[]})):[];
-            return {text,evidenceIds,...(itemLinks.length?{itemLinks}: {})};
+            return {text,evidenceIds};
         }
         throw new Error('润色服务暂时未完成，请重试。');
     };
-    return {generate,judge:withItemDialogue(api,createWeiyanJudge(api))};
+    return {generate,judge:createWeiyanJudge(api)};
 }

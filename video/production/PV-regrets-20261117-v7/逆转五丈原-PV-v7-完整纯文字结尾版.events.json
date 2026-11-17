@@ -1,0 +1,493 @@
+{
+  "source_sha256": "51ef44f218b5c65991faf4fb4f16d9f04ab06715153ab52b004fe4267a02c6d4",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Pink noise",
+          "p": 0.1037
+        },
+        {
+          "label": "Rain",
+          "p": 0.0701
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0467
+        },
+        {
+          "label": "White noise",
+          "p": 0.0418
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0356
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0316
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0305
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0277
+        },
+        {
+          "label": "Stream",
+          "p": 0.0241
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0173
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0144
+        },
+        {
+          "label": "Thunder",
+          "p": 0.014
+        }
+      ],
+      "music": 0.0118
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "White noise",
+          "p": 0.4126
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.2714
+        },
+        {
+          "label": "Noise",
+          "p": 0.135
+        },
+        {
+          "label": "Static",
+          "p": 0.077
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0327
+        },
+        {
+          "label": "Silence",
+          "p": 0.0249
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0189
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0176
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0165
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0075
+        },
+        {
+          "label": "Hum",
+          "p": 0.0068
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0063
+        }
+      ],
+      "music": 0.0056
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Firecracker",
+          "p": 0.1101
+        },
+        {
+          "label": "Arrow",
+          "p": 0.068
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0606
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0518
+        },
+        {
+          "label": "Silence",
+          "p": 0.0233
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0206
+        },
+        {
+          "label": "Fire",
+          "p": 0.0195
+        },
+        {
+          "label": "Burst, pop",
+          "p": 0.0184
+        },
+        {
+          "label": "Speech",
+          "p": 0.0167
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0166
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0164
+        },
+        {
+          "label": "White noise",
+          "p": 0.0112
+        }
+      ],
+      "music": 0.0038
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "White noise",
+          "p": 0.1871
+        },
+        {
+          "label": "Eruption",
+          "p": 0.061
+        },
+        {
+          "label": "Static",
+          "p": 0.0533
+        },
+        {
+          "label": "Noise",
+          "p": 0.0314
+        },
+        {
+          "label": "Silence",
+          "p": 0.0263
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0181
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.018
+        },
+        {
+          "label": "Rustle",
+          "p": 0.015
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0141
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0095
+        },
+        {
+          "label": "Wind",
+          "p": 0.0078
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0078
+        }
+      ],
+      "music": 0.0027
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Eruption",
+          "p": 0.1007
+        },
+        {
+          "label": "White noise",
+          "p": 0.0968
+        },
+        {
+          "label": "Static",
+          "p": 0.0669
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0221
+        },
+        {
+          "label": "Silence",
+          "p": 0.0198
+        },
+        {
+          "label": "Noise",
+          "p": 0.0176
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0124
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0119
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0119
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0116
+        },
+        {
+          "label": "Hum",
+          "p": 0.0107
+        },
+        {
+          "label": "Sine wave",
+          "p": 0.0061
+        }
+      ],
+      "music": 0.0013
+    },
+    {
+      "start": 40.0,
+      "top": [
+        {
+          "label": "White noise",
+          "p": 0.1148
+        },
+        {
+          "label": "Static",
+          "p": 0.09
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0502
+        },
+        {
+          "label": "Noise",
+          "p": 0.0231
+        },
+        {
+          "label": "Silence",
+          "p": 0.0187
+        },
+        {
+          "label": "Hum",
+          "p": 0.0179
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0114
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0112
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0104
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0103
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0086
+        },
+        {
+          "label": "Radio",
+          "p": 0.0069
+        }
+      ],
+      "music": 0.0015
+    },
+    {
+      "start": 48.0,
+      "top": [
+        {
+          "label": "Arrow",
+          "p": 0.1379
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.1023
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0392
+        },
+        {
+          "label": "Silence",
+          "p": 0.0233
+        },
+        {
+          "label": "Thunk",
+          "p": 0.0166
+        },
+        {
+          "label": "Fire",
+          "p": 0.0157
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0149
+        },
+        {
+          "label": "Eruption",
+          "p": 0.013
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0108
+        },
+        {
+          "label": "Flap",
+          "p": 0.0101
+        },
+        {
+          "label": "Bicycle",
+          "p": 0.01
+        },
+        {
+          "label": "Noise",
+          "p": 0.0097
+        }
+      ],
+      "music": 0.0079
+    },
+    {
+      "start": 56.0,
+      "top": [
+        {
+          "label": "Silence",
+          "p": 0.1795
+        },
+        {
+          "label": "Fire",
+          "p": 0.0722
+        },
+        {
+          "label": "Rustle",
+          "p": 0.061
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0509
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0432
+        },
+        {
+          "label": "Rain",
+          "p": 0.0367
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0312
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.027
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0254
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.024
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0238
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0183
+        }
+      ],
+      "music": 0.0065
+    },
+    {
+      "start": 64.0,
+      "top": [
+        {
+          "label": "Burst, pop",
+          "p": 0.2593
+        },
+        {
+          "label": "Bang",
+          "p": 0.2208
+        },
+        {
+          "label": "Explosion",
+          "p": 0.1547
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0792
+        },
+        {
+          "label": "Whip",
+          "p": 0.0177
+        },
+        {
+          "label": "Silence",
+          "p": 0.0171
+        },
+        {
+          "label": "Artillery fire",
+          "p": 0.0168
+        },
+        {
+          "label": "Gunshot, gunfire",
+          "p": 0.0168
+        },
+        {
+          "label": "Static",
+          "p": 0.0165
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0124
+        },
+        {
+          "label": "Firecracker",
+          "p": 0.0117
+        },
+        {
+          "label": "Music",
+          "p": 0.0114
+        }
+      ],
+      "music": 0.0114
+    }
+  ]
+}

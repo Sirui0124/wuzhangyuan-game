@@ -19,7 +19,7 @@ const grain=new GrainSession(story,undefined,rubric,false);
 for(let i=0;i<200&&grain.current.kind!=='open';i++)assert.ok(grain.advance(grain.current.options?.[0]?.id));
 assert.equal(grain.current.kind,'open');const manual=JSON.stringify(grain.state);
 const old=JSON.stringify({...grain.state,version:story.version+'-old-test'});
-const thirdOld=createJietingPlaytest(third,'reinforcement',{aiEnabled:false,phoneAllowed:false}).snapshot();thirdOld.version='jieting-20261026-1a640d464f8a';
+const thirdOld=createJietingPlaytest(third,'reinforcement',{aiEnabled:false}).snapshot();thirdOld.version='jieting-20261026-1a640d464f8a';
 const server=createStaticServer({root:build});await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
 const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true});
 const checks=[],errors=[];

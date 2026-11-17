@@ -9,20 +9,20 @@ import { ChapterThoughtActions } from './thought-actions';
 import type { ChapterSessionContext } from './session-context';
 import { validateChapterFlow } from './flow-validation';
 import { restoreSessionState } from './session-restore';
-import { buySupply, buySuggestedSupply, rechargeSupplies, supplyById, isAvailableSupply, applyPhonePenalty, parsePhonePenaltyReceipt, money } from './supplies';
-import { restorePhone } from './phone-state';
-import { aiEnabled, phoneEnabled, itemSystemEnabled, type RuntimeMode } from '../../runtime-mode';
-import { acquireWorldItem, sellWorldItem, freshWorldInventory } from '../../inventory/world-items';
+import { aiEnabled, type RuntimeMode } from '../../runtime-mode';
 import { advanceTent } from './tent-visit';
+import { BranchProgress } from './branch-progress';
+import type { Story as BranchStory, AiReceipt } from './branch-engine';
 /** One state machine for the whole chapter. Presentation, timers and generated text cannot grant facts. */
 export class ChapterOneSession {
+    branch?: BranchProgress;
     private state: GameSessionState;
     private rows: Map<string, StoryRow>;
     private sections: Map<string, FlowSection>;
     private expressions: ChapterExpressionActions;
     private thoughts: ChapterThoughtActions;
     private listeners = new Set<(event: SessionEvent) => void>();
-    constructor(readonly content: ChapterReview, readonly flow: ChapterFlow, readonly contentVersion: string, judge?: ExpressionJudge, generate?: ExpressionGenerator, private mode: RuntimeMode = 'ai-phone') {
+    constructor(readonly content: ChapterReview, readonly flow: ChapterFlow, readonly contentVersion: string, judge?: ExpressionJudge, generate?: ExpressionGenerator, private mode: RuntimeMode = 'ai', branchStory?: BranchStory) {
         this.rows = new Map(content.rows.map(row => [row.id, row]));
         this.sections = new Map(flow.sections.map(section => [section.id, section]));
         validateChapterFlow(content, flow);
@@ -42,6 +42,7 @@ export class ChapterOneSession {
         this.expressions = new ChapterExpressionActions(context, judge, generate);
         this.thoughts = new ChapterThoughtActions(context);
         this.state = freshSessionState(this.content.version, this.contentVersion);
+        if (branchStory) this.branch = new BranchProgress(branchStory);
         this.enter(flow.entry);
     }
     onChange(listener: (event: SessionEvent) => void) {
@@ -56,11 +57,10 @@ export class ChapterOneSession {
             listener(event);
     }
     snapshot(): GameSessionState {
-        return clone({ ...this.state, runtimeMode: this.mode });
+        return clone({ ...this.state, ...(this.branch ? {branch:this.branch.snapshot()} : {}), runtimeMode: this.mode });
     }
     runtimeMode() { return this.mode; }
     aiEnabled() { return aiEnabled(this.mode); }
-    phoneEnabled() { return phoneEnabled(this.mode); }
     setRuntimeMode(mode: RuntimeMode) {
         if (mode === this.mode) return;
         this.cancelSpeech(false);
@@ -77,31 +77,12 @@ export class ChapterOneSession {
             if (this.state.phase === 'spoken') this.state.phase = 'expression';
             else this.state.notesReturn = 'expression';
         }
-        if (!this.phoneEnabled()) this.state.supplies.attached = [];
-        if (this.phoneEnabled() && this.state.round === 2 && this.state.panelOpened.includes('P2') && validAuthorization(this.state.story))
-            rechargeSupplies(this.state.supplies);
     }
     serialize() {
         return JSON.stringify(this.snapshot());
     }
-    rememberPhone(value: unknown) {
-        this.state.phone = restorePhone(value);
-        this.state.savedAt = new Date().toISOString();
-    }
-    applyPhonePenalty(raw: unknown) {
-        const receipt = parsePhonePenaltyReceipt(raw);
-        if (!this.state.supplies.penalties.some(entry => entry.id === receipt.id)
-            && this.state.phone.pendingGuard?.requestId !== receipt.id) throw new Error('系统核验回执与消息不符');
-        const result = applyPhonePenalty(this.state.supplies, receipt);
-        if (result.applied) this.state.phone.messages.push({ role: 'assistant',
-            text: result.amount === 0 ? '不能更改系统规则。余额为¥0，本次不扣款。'
-                : `不能更改系统规则。已扣除¥${money(result.amount)}，余额¥${money(result.balance)}。` });
-        if (this.state.phone.pendingGuard?.requestId === receipt.id) delete this.state.phone.pendingGuard;
-        this.state.phone.pending = false;
-        this.state.savedAt = new Date().toISOString();
-        return result;
-    }
     row(): StoryRow | null {
+        if(this.state.phase==='branch' && this.branch?.currentLine) return {id:`${this.branch.dialogue.nodeId}:${this.branch.dialogue.audit.length}:${this.branch.line}`, ...this.branch.currentLine} as StoryRow;
         const row = this.state.phase === 'dialogue' ? this.rows.get(this.sections.get(this.state.section!)!.rows[this.state.lineIndex]) ?? null : null;
         const last = this.state.story.history.at(-1);
         if (row && last?.accepted && last.npcTurn && row.id === (last.npcTurn.stage === 'first' ? 'A-40B' : 'W07'))
@@ -199,7 +180,6 @@ export class ChapterOneSession {
                 if (!this.state.panelOpened.includes(this.state.round === 1 ? 'R1' : 'P2'))
                     this.state.panelOpened.push(this.state.round === 1 ? 'R1' : 'P2');
                 this.state.story.flags.P2_OPENED = true;
-                if (this.state.round === 2 && this.phoneEnabled()) rechargeSupplies(this.state.supplies);
             }
             if (target.id === 'death') {
                 this.state.end = 'tutorial-sacrifice';
@@ -208,7 +188,7 @@ export class ChapterOneSession {
             if (target.id === 'ending') {
                 if (!this.state.story.flags.REPORT_CLOSED)
                     throw new Error('军报尚未闭环，不能进入生还结局');
-                this.state.end = this.state.supplies.agreement?.route ?? 'safe';
+                this.state.end = 'safe';
             }
         }
     }
@@ -272,7 +252,6 @@ export class ChapterOneSession {
             return false;
         (this.state.displayedRows ??= {})[row.id] ??= row.text;
         const gained = this.commit(row.id);
-        let itemGained = false;
         if (this.state.lineIndex + 1 < section.rows.length) {
             this.state.lineIndex++;
             this.state.story.current = section.rows[this.state.lineIndex];
@@ -283,7 +262,6 @@ export class ChapterOneSession {
         else {
             if (!this.state.finishedSections.includes(section.id))
                 this.state.finishedSections.push(section.id);
-            if (section.id === 'jiang-commitment' && itemSystemEnabled()) itemGained = acquireWorldItem(this.state.supplies.worldItems ??= freshWorldInventory(), 'jiang-headscarf');
             this.enter(section.next);
         }
         this.emit(gained ? {
@@ -293,19 +271,19 @@ export class ChapterOneSession {
         } : {
             type: 'line', id: row.id
         });
-        if (itemGained) this.emit({ type: 'item', id: 'jiang-headscarf' });
         return true;
     }
     finishCinematic(): boolean {
         const cinematic = this.currentCinematic();
         if (this.state.phase !== 'cinematic' || !cinematic)
             return false;
-        for (const id of cinematic.coveredRows)
+        for (const id of this.branch ? [] : cinematic.coveredRows)
             this.commit(id);
         if (!this.state.finishedCinematics.includes(cinematic.id))
             this.state.finishedCinematics.push(cinematic.id);
         this.state.cinematic = null;
-        this.enter(cinematic.next);
+        if (this.branch && cinematic.id==='opening') this.state.phase='branch';
+        else this.enter(cinematic.next);
         this.emit(this.state.end && ['death', 'ending'].includes(this.state.phase)
             ? { type: 'ending', id: this.state.end }
             : { type: 'cinematic', id: cinematic.id });
@@ -372,7 +350,6 @@ export class ChapterOneSession {
         return true;
     }
     objective(): string {
-        if (this.state.end === 'era-arrest') return '异物引起了惊疑，我已被押走。可以重试本次交谈。';
         if (this.state.end === 'weiyan-execution')
             return '这次交涉已告失败，可以回到本轮对话之前。';
         if (this.state.phase === 'death')
@@ -434,27 +411,6 @@ export class ChapterOneSession {
         this.state.notesReturn = null;
         this.emit({ type: 'ending', id: 'weiyan-execution' });
         return true;
-    }
-    finishEraArrest(): boolean {
-        const speech = this.state.speech, previous = this.state.story.history.at(-1);
-        if (this.state.phase !== 'reply' || speech?.status !== 'ready' || !speech.itemDecision?.eraFailure
-            || !previous || previous.accepted || previous.text !== speech.text
-            || JSON.stringify(previous.itemDecision) !== JSON.stringify(speech.itemDecision) || !validAuthorization(this.state.story)) return false;
-        this.cancelSpeech(false);
-        this.state.phase = 'death'; this.state.end = 'era-arrest'; this.state.notesReturn = null;
-        this.emit({ type: 'ending', id: 'era-arrest' });
-        return true;
-    }
-    retryEraArrest(): boolean {
-        if (this.state.phase !== 'death' || this.state.end !== 'era-arrest' || !this.state.speech?.itemDecision?.eraFailure) return false;
-        this.cancelSpeech(false);
-        this.state.story.draft = this.state.speech.text;
-        // Rewind only the failed utterance, keeping earlier explanations and real progress.
-        this.state.story.history.pop();
-        this.state.speech = null; this.state.end = null; this.state.lastFeedback = '';
-        this.state.phase = 'expression'; this.state.notesReturn = null; this.state.notesPurpose = 'P2';
-        this.state.composition.status = 'ready'; this.state.composition.error = '';
-        this.emit(); return true;
     }
     /** Re-enter only this round's introduction; clues, reasoning and real authorization remain intact. */
     retryWeiyanRound(): boolean {
@@ -519,41 +475,6 @@ export class ChapterOneSession {
     selectEvidence(id: string) {
         return this.expressions.selectEvidence(id);
     }
-    canPickUpCup() {
-        return itemSystemEnabled() && this.state.round === 2 && this.state.phase === 'explore' && this.state.scene === 'camp_gate'
-            && this.state.finishedSections.includes('rewind') && !this.state.panelOpened.includes('P2')
-            && !this.state.supplies.worldItems?.acquired.includes('worn-wine-cup');
-    }
-    pickUpCup() {
-        if (!this.canPickUpCup() || !acquireWorldItem(this.state.supplies.worldItems ??= freshWorldInventory(), 'worn-wine-cup')) return false;
-        this.emit({ type: 'item', id: 'worn-wine-cup' }); return true;
-    }
-    sellWorldItem(id: string) {
-        if (!this.canPrepareSupplies() || !sellWorldItem(this.state.supplies.worldItems ??= freshWorldInventory(), id)) return false;
-        this.emit(); return true;
-    }
-    canPrepareSupplies() {
-        return this.phoneEnabled() && this.state.round === 2 && this.state.supplies.rewards.length > 0 && !this.state.speech && !this.state.story.flags.PERSUADED
-            && ['explore', 'dialogue', 'thoughts', 'expression'].includes(this.state.phase);
-    }
-    buyItem(id: string) {
-        if (!this.canPrepareSupplies() || !buySupply(this.state.supplies, id)) return false;
-        this.emit(); return true;
-    }
-    attachItem(id: string) {
-        const supplies = this.state.supplies, item = supplyById(id, supplies);
-        if (!this.phoneEnabled() || !item || this.state.phase !== 'expression' || this.state.round !== 2 || this.state.speech
-            || !isAvailableSupply(item.id, supplies) || !validAuthorization(this.state.story)) return false;
-        if (!supplies.attached.includes(item.id) && supplies.attached.length >= 2) return false;
-        this.cancelGeneration(false);
-        supplies.attached = supplies.attached.includes(item.id) ? supplies.attached.filter(other => other !== id) : [...supplies.attached, item.id];
-        this.state.composition.status = this.state.story.draft.trim() ? 'ready' : 'idle';
-        this.emit(); return true;
-    }
-    buySuggestedItem(item: unknown) {
-        if (!this.canPrepareSupplies() || !buySuggestedSupply(this.state.supplies, item)) return false;
-        this.emit(); return true;
-    }
     setDraft(text: string) {
         this.expressions.setDraft(text);
     }
@@ -603,18 +524,58 @@ export class ChapterOneSession {
     restart() {
         this.cancelSpeech(false);
         this.state = freshSessionState(this.content.version, this.contentVersion);
+        if(this.branch)this.branch=new BranchProgress(this.branch.story);
         this.enter(this.flow.entry);
         this.emit();
     }
     restore(raw: string) {
+        if(this.branch) {
+            const saved=JSON.parse(raw) as GameSessionState;
+            if(!saved || saved.chapterId && saved.chapterId!=='wuzhang')throw Error('不是第一章存档。');
+            const fresh=freshSessionState(this.content.version,this.contentVersion);
+            if(saved.branch) {
+                if(saved.schemaVersion!==1 || typeof saved.story?.run!=='string')throw Error('第一章存档身份不完整。');
+                const branch=new BranchProgress(this.branch.story);branch.restore(saved.branch);
+                this.branch=branch;this.state=fresh;
+                this.state.story.run=saved.story.run;
+                if(saved.phase==='cinematic' && saved.cinematic==='opening')this.enter(this.flow.entry);
+                else {this.state.phase=saved.phase==='map' && branch.completed?'map':'branch';this.syncBranch(false);}
+            } else {
+                // Legacy content cannot safely resume halfway through rewritten dialogue.
+                // The UI archives the original record before requesting this migration.
+                restoreSessionState(raw,{content:this.content,flow:this.flow,contentVersion:saved.contentVersion,rows:this.rows,sections:this.sections});
+                this.state=fresh;this.branch=new BranchProgress(this.branch.story);
+                this.enter(this.flow.entry);
+            }
+            this.cancelSpeech(false);this.emit();return;
+        }
         const restored = restoreSessionState(raw, {
-            content: this.content, flow: this.flow, contentVersion: this.contentVersion, grantPhoneReward: this.phoneEnabled(),
+            content: this.content, flow: this.flow, contentVersion: this.contentVersion,
             rows: this.rows, sections: this.sections,
         });
         this.cancelSpeech(false);
         this.state = restored;
         if (this.state.phase === 'explore') this.establishNarrativePlan();
-        this.applyMode((restored.runtimeMode ?? 'ai-phone') !== this.mode);
+        this.applyMode((restored.runtimeMode ?? 'ai') !== this.mode);
         this.emit();
+    }
+    branchAct(kind:'next'|'choose'|'ask'|'retry'|'offline'|'notice', value='', text='') {
+        if(this.state.phase!=='branch'||!this.branch)return;
+        const b=this.branch;
+        if(kind==='notice')b.openNotice();else if(kind==='next')b.next();else if(kind==='choose')b.choose(value);else if(kind==='ask')b.ask(value);else if(kind==='retry')b.retry();else b.offline(value,text);
+        this.syncBranch();
+    }
+    branchReply(text:string,result:AiReceipt) { if(this.state.phase!=='branch'||!this.branch)return;this.branch.apply(text,result);this.syncBranch(); }
+    branchDraft(text:string) {if(this.branch)this.branch.draft=text.slice(0,800);}
+    branchChanged() { this.emit(); }
+    private syncBranch(emit=true) {
+        const b=this.branch!;const g=b.dialogue;
+        this.state.round=g.state.deathSeen?2:1;
+        this.state.scene=g.nodeId.includes('JIANG')?'jiangwei_tent_front':g.nodeId.includes('ORDER')||g.nodeId==='C01-REPORT'?'report_post':'camp_gate';
+        this.state.story.flags.REPORT_CLOSED=b.completed;
+        this.state.end=b.completed?'safe':null;
+        if(g.node.kind==='terminal' && b.completed)this.state.phase='map';
+        const ending=g.node.endingId;
+        if(emit)this.emit(ending&&b.atLastLine?{type:'ending',id:({'E-COOP':'branch-coop','E-FORMAL':'branch-formal','E-DEATH':'tutorial-sacrifice','E-LAMP':'branch-lamp'} as Record<string,string>)[ending]}:{type:'line'});
     }
 }

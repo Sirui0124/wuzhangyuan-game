@@ -5,7 +5,7 @@ import { characters } from '../web-demo/.build/GameStarter/web-demo/src/characte
 import { characterEntrances, encounteredCharacters } from '../web-demo/.build/GameStarter/web-demo/src/characters/encounters.js';
 import { createEvaluationModule } from '../web-demo/.build/GameStarter/web-demo/src/modules/evaluation.js';
 import { gameModules } from '../web-demo/.build/GameStarter/web-demo/src/modules/config.js';
-import { aiEnabled, phoneEnabled } from '../web-demo/.build/GameStarter/web-demo/src/runtime-mode.js';
+import { aiEnabled } from '../web-demo/.build/GameStarter/web-demo/src/runtime-mode.js';
 const json = file => JSON.parse(readFileSync(new URL(file, import.meta.url)));
 const progress = (chapter, entered = [], completed = []) => ({ chapter, entered, completed, visible: true });
 test('every entrance points to an existing live node and an illustrated profile', () => {
@@ -53,7 +53,7 @@ test('unloading rejects even a provider that ignores cancellation', async () => 
     await assert.rejects(result, { name: 'AbortError' });
 });
 test('deployment switches enforce module boundaries independently of stored mode', () => {
-    try { gameModules.phone = false; assert.equal(phoneEnabled('ai-phone'), false); assert.equal(aiEnabled('ai'), true);
-        gameModules.aiEvaluation = false; assert.equal(aiEnabled('ai-phone'), false); assert.equal(phoneEnabled('ai-phone'), false);
-    } finally { gameModules.phone = true; gameModules.aiEvaluation = true; }
+    try {  assert.equal(aiEnabled('ai'), true);
+        gameModules.aiEvaluation = false; assert.equal(aiEnabled('ai'), false);
+    } finally { gameModules.aiEvaluation = true; }
 });

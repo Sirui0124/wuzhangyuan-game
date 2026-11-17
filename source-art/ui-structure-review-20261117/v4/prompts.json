@@ -1,0 +1,7 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "edit",
+  "prompt": "Edit the supplied historical game UI mockup, preserving the scene, Weiyan portrait, ink charcoal palette, Chinese calligraphy style and bottom anchored layout. Refine ONLY UI. Right clue sidebar must become narrower: around 21% of full width instead of 28%, leaving 75% for dialogue. Do not shrink its text to fit; wrap clue details. ALL text in NPC quote, citation row and clue sidebar (titles and clue detail) MUST use the SAME visually consistent body font size, about 24px at 1440 width. Player reply can also use same size. Reorder left content from top to bottom: 1 slim NPC line 魏延 “军情有变，我要面见丞相！” 2 citation row 引用：营门禁令 × ABOVE player input; 3 player writing box 我 | 将军，今夜帐内有禁令。请先把军情交给我，我替您转呈。 4 bottom controls AI润色, muted 撤销润色 at left; 清空 then red 确认说出 at right. Replace ONLY bottom 收起 with 清空. Right sidebar title 线索, selected 营门禁令 and fact 今夜帐内有要事，闲人不得擅入。 and 插入原话 button, then collapsed 斥候回报 and 敌军动向. No items, inventory, phone, yellow input backgrounds, or top-level page changes. Clue sidebar compact padding and fine separators. Make citation no longer a tiny-font chip: same text size as NPC words and clue body, with quiet thin outline or bare line. Keep portrait face unobstructed. Professional polished Chinese narrative game mockup.",
+  "reference": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/ui-structure-review-20261117/v3/B-clues-right.png",
+  "output": "B-clues-right-refined.png"
+}

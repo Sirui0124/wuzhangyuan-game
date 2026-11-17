@@ -1,3 +1,4 @@
+import { handleCluePopup } from './game/dialogue-clues';
 import { acceptsChoice } from './narrative/presentation';
 import { createCompositionGuard } from './game/composition-guard';
 import { chapterOnwardHTML } from './game/chapter-onward';
@@ -14,22 +15,17 @@ import { createSettingsController } from './game/settings';
 import { createGameUIState } from './game/ui-state';
 import { esc, type Media } from './game/view-common';
 import { frameModal, recordsPanelHTML, savePanelHTML } from './game-ui-panels';
-import { readRuntimeMode, aiEnabled, phoneEnabled, itemSystemEnabled, saveRuntimeMode, readPhonePreference, setRuntimeConnection } from './runtime-mode';
+import { readRuntimeMode, aiEnabled, saveRuntimeMode, setRuntimeConnection } from './runtime-mode';
 import { generateOpeningQuestion } from './chapters/chapter-three/opening-question';
 import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
-import { balance, money, isAvailableSupply, supplyById } from './phone/supplies';
-import { bagHTML } from './inventory/view';
-import { worldItem } from './inventory/world-items';
-import { showItemReceipt, clearItemReceipts } from './item-receipt';
 import { JietingSession, createJietingPlaytest } from './chapters/chapter-three/session';
 import type { JietingStory } from './chapters/chapter-three/types';
-import { judgeJietingDialogue, prepareJietingItem, type JietingItemPreparation } from './chapters/chapter-three/open-dialogue';
+import { judgeJietingDialogue } from './chapters/chapter-three/open-dialogue';
 import { jietingView } from './chapters/chapter-three/view';
 import { JietingReading, savedReading, withoutReading } from './chapters/chapter-three/reading';
 import { createCharacterModule } from './characters/module';
 import { chapterThreeCharacters } from './chapters/chapter-three/characters';
 import { gameModules } from './modules/config';
-import { createPersonalityTracker } from './personality/module';
 import { updateChapterAudio } from './chapter-audio';
 
 const SAVE = 'jieting-chapter-three-v1', COMPLETED = 'jieting-chapter-three-completed-v1';
@@ -41,10 +37,10 @@ async function read<T>(url: string): Promise<T> { const r = await fetch(url); if
 async function start() {
     const [story, media] = await Promise.all([read<JietingStory>('/story/chapter-three.story.json'), read<Media>('/media/manifest.json')]);
     const url = new URL(location.href), playtest = url.searchParams.get('playtest') ?? '';
-    const supportedPlaytests = ['reinforcement', 'lure', 'item', 'withdrawal'];
+    const supportedPlaytests = ['reinforcement', 'lure', 'withdrawal'];
     const isolated = supportedPlaytests.includes(playtest), key = isolated ? `${SAVE}:playtest:${playtest}` : SAVE;
     const restarting = url.searchParams.get('restart') === '1' && !isolated;
-    const mode = () => ({ aiEnabled: aiEnabled(readRuntimeMode()), phoneAllowed: phoneEnabled(readRuntimeMode()) });
+    const mode = () => ({ aiEnabled: aiEnabled(readRuntimeMode()) });
     let saved: unknown, error = '', retryAction: 'polish' | 'speak' | 'question' | undefined;
     let originalRaw: string | null = null, storageUnreadable = false;
     let protectedSave: ReturnType<typeof protectSave> | undefined;
@@ -67,20 +63,7 @@ async function start() {
         } catch { saved = undefined; preserveOriginal(); }
     }
     url.searchParams.delete('restart'); history.replaceState(null, '', url);
-    // Personality belongs to the entry checkpoint, never to recursive gameplay checkpoints.
-    const create = (value?: unknown) => {
-        const plain = withoutReading(value);
-        if (!plain || typeof plain !== 'object' || Array.isArray(plain)) return new JietingSession(story, plain, mode());
-        const { personality: _personality, ...gameplay } = plain as Record<string, unknown>;
-        if (gameplay.checkpoints && typeof gameplay.checkpoints === 'object' && !Array.isArray(gameplay.checkpoints)) {
-            gameplay.checkpoints = Object.fromEntries(Object.entries(gameplay.checkpoints).map(([name, checkpoint]) => {
-                if (!checkpoint || typeof checkpoint !== 'object' || Array.isArray(checkpoint)) return [name, checkpoint];
-                const { personality: _nestedPersonality, ...progress } = checkpoint as Record<string, unknown>;
-                return [name, progress];
-            }));
-        }
-        return new JietingSession(story, gameplay, mode());
-    };
+    const create = (value?: unknown) => new JietingSession(story, withoutReading(value), mode());
     const reading = new JietingReading();
     let session: JietingSession;
     try { session = isolated ? createJietingPlaytest(story, playtest, mode()) : create(saved); if (!isolated) reading.restore(savedReading(saved)); }
@@ -89,36 +72,15 @@ async function start() {
     const ui = createGameUIState(); ui.home = false;
     const audio = new GameAudio();
     let evidenceDetail = '';
-    let request: AbortController | null = null, generation = 0, lastScene = '', trackedEnding = '', lastBelow = session.below;
-    let personality: Awaited<ReturnType<typeof createPersonalityTracker>>;
-    let preparingItem = '', preparationWords = '', preparation: JietingItemPreparation | null = null, preparationNotice = '';
+    let request: AbortController | null = null, generation = 0, lastScene = '', lastBelow = session.below;
     const people = createCharacterModule({ root, portraits: media.characters, enabled: gameModules.characters });
     const questionAttempts = new Set<string>();
     let questioning = false;
     const cancel = () => { request?.abort(); request = null; polishing=false; questioning=false; generation++; };
-    const personalityInputs = () => {
-        const byNode = new Map<string, string>(), prefixes: string[] = [];
-        for (const judgment of session.state.judgments) {
-            const previous = byNode.get(judgment.nodeId), combined = previous ? `${previous}\n${judgment.input}` : judgment.input;
-            byNode.set(judgment.nodeId, combined); prefixes.push(combined);
-        }
-        return { byNode, prefixes };
-    };
-    const snapshot = () => ({ ...session.state, reading: reading.save(session.current), personality: personality?.snapshot() });
+    const snapshot = () => ({ ...session.state, reading: reading.save(session.current) });
     const persist = () => {
         try {
             if (storageUnreadable) throw new Error('原存档尚未读取');
-            if (personality && session.current.kind === 'ending') {
-                const ending = story.endings.find(e => e.id === session.current.ending);
-                const identity = `${session.state.run}:${ending?.id}`;
-                if (ending && trackedEnding !== identity) {
-                    trackedEnding = identity;
-                    personality.complete(ending.id);
-                    if (['execution', 'mountain-trapped', 'rear-sacrifice'].includes(ending.id)) {
-                        personality.death(ending.id, ending.title, ending.description, session.current.id);
-                    }
-                }
-            }
             if (!isolated) recordAchievements(jietingAchievementIds(session), `jieting:${session.state.run}`);
             const raw = JSON.stringify(snapshot());
             if (protectedSave) protectedSave.write(raw); else localStorage.setItem(key, raw);
@@ -131,19 +93,17 @@ async function start() {
             }
         } catch { ui.storageWarning = '当前进度未能保存，仍可继续游玩。'; }
     };
-    personality = await createPersonalityTracker('jieting', { enabled: () => mode().aiEnabled, onSettled: () => persist() });
-    if (restarting) personality.restart(); else personality.attach(saved);
+    
     const settings = createSettingsController(root, new GameApi(), audio, ui, render, { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled }, {
         get: readRuntimeMode, set: m => { saveRuntimeMode(m); applyMode(); }, connected: c => { setRuntimeConnection(c); applyMode(); },
     });
-    const pause = createPauseMenu(root, ui, { render, settings: settings.settingsHTML, home, saves: saveHTML, restart, personality,
+    const pause = createPauseMenu(root, ui, { render, settings: settings.settingsHTML, home, saves: saveHTML, restart,
         suspend: () => { cancel(); audio.setMusicPaused(true); } });
     function home() { cancel(); persist(); location.href = '/'; }
     function applyMode() {
         cancel(); questionAttempts.clear(); session.setMode(mode());
-        if (!mode().phoneAllowed) session.state.supplies.attached = [];
         persist(); render();
-        personality.resume();
+        
     }
     function saveHTML() {
         return savePanelHTML([1, 2, 3].map(i => {
@@ -154,16 +114,15 @@ async function start() {
     }
     function restart() {
         try { localStorage.setItem(`${key}:before-new`, JSON.stringify(snapshot())); } catch { ui.storageWarning = '当前进度未能备份，请先存档后重试。'; render(); return; }
-        cancel(); clearItemReceipts(); session = create(); personality.restart(); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();
+        cancel();  session = create();   reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();
     }
     function next(option?: string) {
         if (request || ui.overlay || session.current.kind === 'ending') return;
         if (!option && !session.feedback && reading.advance(session.current)) { persist(); render(); audio.play('dialogue_next'); return; }
-        const clues = new Set(session.clues.map(c => c.id)), items = new Set(session.state.supplies.worldItems?.acquired ?? []), previousNode = session.current;
+        const clues = new Set(session.clues.map(c => c.id)), previousNode = session.current;
         if (!session.advance(option)) return;
-        if (option && previousNode.kind === 'choice') personality.choice(option, previousNode.id, previousNode.round);
+        
         error = ''; persist(); render(); audio.play('dialogue_next');
-        for (const id of session.state.supplies.worldItems?.acquired ?? []) if (!items.has(id)) { showItemReceipt(root, worldItem(id)!.name, ui.reduced); audio.play('evidence_gain'); }
     }
     let polishing=false, previousPolish:{node:string;run:number;before:string;after:string}|null=null;
     const canUndoPolish=()=>!!previousPolish&&previousPolish.node===session.current.id&&previousPolish.run===session.state.run&&previousPolish.after===session.state.draft;
@@ -197,12 +156,7 @@ async function start() {
             const result = await judgeJietingDialogue({ context, input, clueIds: [...session.state.selected], confirmed: true }, controller.signal);
             if (controller.signal.aborted || generation !== seq || run !== session.state.run || session.current.id !== node) return;
             if (!session.submit(result)) throw new Error('军情已有变化，原话已保留，请重新说出。');
-            personality.open(node, personalityInputs().byNode.get(node)!, { origin: 'self-authored', round: context.round, context: {
-                currentSceneFacts: context.ownedClues.filter(clue => clue.current !== false).map(clue => `${clue.id}: ${clue.text}`),
-                phase: context.phase, below: context.below, above: context.above,
-                followupUsed: context.followupUsed, unresolvedConcerns: context.unresolvedConcerns,
-                dialogueOrder: '原话按同一问题下的实际发生顺序排列；后句明确撤回或改变前句时，以后句为准。',
-            } });
+            
             error = ''; persist(); audio.play('response_ready');
         } catch (e) { if (!controller.signal.aborted && generation === seq) recordAiError('speak',e instanceof Error ? e.message : '回应未完成，原话已保留，请重试。'); }
         finally { if (request === controller) { request = null; persist(); render(); } }
@@ -224,37 +178,16 @@ async function start() {
             if (!controller.signal.aborted && seq === generation) { error = '开场提问暂未生成，当前问题和自由输入仍可使用。'; retryAction = 'question'; }
         } finally { if (request === controller) { request = null; questioning = false; render(); } }
     }
-    async function tryItem() {
-        if (request || !mode().phoneAllowed || session.current.kind !== 'open' || session.feedback || !preparationWords.trim()) return;
-        const context = session.getEvaluationContext(), item = context.items?.find(i => i.id === preparingItem && i.available);
-        if (!item) { preparationNotice = '物品当前不可用。'; render(); return; }
-        const controller = new AbortController(), seq = ++generation;
-        request = controller; preparation = null; preparationNotice = ''; render();
-        try {
-            const result = await prepareJietingItem({ nodeId: context.nodeId, contextKey: context.contextKey, input: preparationWords.trim(), confirmed: true, item, availableItems: context.items ?? [] }, controller.signal);
-            if (controller.signal.aborted || seq !== generation || session.getEvaluationContext().contextKey !== context.contextKey) return;
-            preparation = result; preparationNotice = result.feedback;
-        } catch (e) { if (!controller.signal.aborted && seq === generation) preparationNotice = e instanceof Error ? e.message : '试用没有完成，说明已保留。'; }
-        finally { if (request === controller) { request = null; render(); } }
-    }
     function render() {
         if (composition.defer()) return;
         if (pause?.render()) return;
-        if (session.current.kind === 'ending') clearItemReceipts();
-        updateChapterAudio(audio,'jieting',session.current,{silent:session.state.ending==='era-arrest'||session.state.ending==='execution'});
+        updateChapterAudio(audio,'jieting',session.current,{silent:session.state.ending==='execution'});
         const changedScene = lastScene !== session.current.scene; lastScene = session.current.scene;
         const previousBelow = lastBelow; lastBelow = session.below;
         const page = reading.current(session.current);
         root.dataset.node = session.current.id; root.dataset.chapter = 'jieting'; root.dataset.readingPage = String(page.page);
         const expression = session.current.kind === 'open' && !session.feedback && mode().aiEnabled;
-        const picker = expression && (ui.overlay === 'notes' || (ui.overlay === 'items' && mode().phoneAllowed)) ? ui.overlay : undefined;
-        root.innerHTML = jietingView(session, media, { busy: !!request, error, polishing, questioning, canUndoPolish:canUndoPolish(), retryAction, online: mode().aiEnabled, phone: mode().phoneAllowed, changedScene, readingText: page.text, picker, detail: evidenceDetail, previousBelow });
-        if (ui.overlay === 'bag') root.insertAdjacentHTML('beforeend', frameModal('物品栏', bagHTML(session.state.supplies), 'items'));
-        if (ui.overlay === 'prepare-item') {
-            const item = supplyById(preparingItem, session.state.supplies);
-            const body = `<section class="jieting-item-test"><h2>${esc(item?.name)}</h2><p>${esc(item?.ability)}</p><p>${esc(item?.boundary)}</p><label for="item-preparation">你准备怎样试用？</label><textarea id="item-preparation" maxlength="1500" ${request || preparation?.status === 'ready' ? 'disabled' : ''}>${esc(preparationWords)}</textarea>${preparation?.status === 'ready' ? `<p>${esc(preparation.effect)}</p><button class="folio-button" data-action="confirm-item-test">记下试用结果</button><button data-action="revise-item-test">修改试用办法</button>` : `<button class="folio-button" data-action="test-item" ${request || !preparationWords.trim() ? 'disabled' : ''}>${request ? '正在试用……' : '开始试用'}</button>`}<p role="status">${esc(preparationNotice)}</p>${request ? '<button data-action="cancel-item-test">停止等待</button>' : ''}</section>`;
-            root.insertAdjacentHTML('beforeend', frameModal('帐侧试用', body, 'items'));
-        }
+        root.innerHTML = jietingView(session, media, { busy: !!request, error, polishing, questioning, canUndoPolish:canUndoPolish(), retryAction, online: mode().aiEnabled, changedScene, readingText: page.text, detail: evidenceDetail, previousBelow });
         if (ui.overlay === 'records') root.insertAdjacentHTML('beforeend', frameModal('这一程的对白', recordsPanelHTML(session.state.transcript), 'history'));
         if (ui.overlay === 'save') root.insertAdjacentHTML('beforeend', frameModal('存档', saveHTML(), 'saves'));
         if (ui.overlay === 'settings') root.insertAdjacentHTML('beforeend', frameModal('设置', settings.settingsHTML(), 'settings'));
@@ -266,16 +199,16 @@ async function start() {
     }
     root.addEventListener('input', event => {
         const t = event.target as HTMLInputElement;
-        if (t.id === 'player-expression') { session.state.draft = t.value; persist(); const button = root.querySelector<HTMLButtonElement>('[data-action=speak]'); if (button) button.disabled = !t.value.trim();const polishButton=root.querySelector<HTMLButtonElement>('[data-action=polish-expression]');if(polishButton)polishButton.disabled=!!request||(!t.value.trim()&&!session.state.selected.length&&!session.state.supplies.attached.length);const undo=root.querySelector<HTMLButtonElement>('[data-action=undo-polish]');if(undo)undo.hidden=!canUndoPolish(); }
-        if (t.id === 'item-preparation') { preparationWords = t.value; preparation = null; const button = root.querySelector<HTMLButtonElement>('[data-action=test-item]'); if (button) button.disabled = !t.value.trim(); }
+        if (t.id === 'player-expression') { session.state.draft = t.value; persist(); const button = root.querySelector<HTMLButtonElement>('[data-action=speak]'); if (button) button.disabled = !t.value.trim();const polishButton=root.querySelector<HTMLButtonElement>('[data-action=polish-expression]');if(polishButton)polishButton.disabled=!!request||(!t.value.trim()&&!session.state.selected.length&&true);const undo=root.querySelector<HTMLButtonElement>('[data-action=undo-polish]');if(undo)undo.hidden=!canUndoPolish(); }
         if (t.dataset.volume) { audio.setVolume(t.dataset.volume as AudioBus, Number(t.value)); if (t.nextElementSibling) t.nextElementSibling.textContent = t.value + '%'; }
         if (t.id === 'ai-voice-enabled') settings.setVoiceEnabled(t.checked);
-        if (t.id === 'game-ai-enabled') settings.setRuntime(t.checked, readPhonePreference());
-        if (t.id === 'game-item-system-enabled') settings.setItemSystem(t.checked);
+        if (t.id === 'game-ai-enabled') settings.setRuntime(t.checked);
     });
     root.addEventListener('toggle', e => { if ((e.target as HTMLElement).id === 'api-settings') settings.setDetails((e.target as HTMLDetailsElement).open); }, true);
     root.addEventListener('click', e => {
-        const target = e.target as HTMLElement, b = target.closest<HTMLElement>('[data-detail],[data-action],[data-option],[data-select],[data-attach-item],[data-prepare-item],[data-store-slot],[data-load-slot]');
+        const clueButton = (e.target as HTMLElement).closest<HTMLElement>('button');
+        if (clueButton && handleCluePopup(root, clueButton)) return;
+        const target = e.target as HTMLElement, b = target.closest<HTMLElement>('[data-detail],[data-action],[data-option],[data-select],[data-store-slot],[data-load-slot]');
         if (!b) { if (!ui.overlay && !request && target.closest('.game-scene') && !target.closest('button,a,input,textarea,.game-hud,[role=dialog]') && !window.getSelection()?.toString()) next(); return; }
         if (b instanceof HTMLButtonElement && b.disabled) return;
         if (b.dataset.action && !['next', 'speak'].includes(b.dataset.action)) audio.action(b.dataset.action);
@@ -285,9 +218,19 @@ async function start() {
             try { if (localStorage.getItem(`${key}:slot:${id}`) && ui.slotOverwrite !== id) { ui.slotOverwrite = id; render(); return; } localStorage.setItem(`${key}:slot:${id}`, JSON.stringify({ ...snapshot(), savedAt: Date.now() })); ui.slotOverwrite = ''; ui.notice = '已存档。'; ui.storageWarning = ''; } catch { ui.storageWarning = '暂时无法写入存档，当前进度保留。'; } render(); return;
         }
         if (b.dataset.loadSlot) {
-            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); pause.dismiss(); clearItemReceipts(); session = restored; personality.attach(value); trackedEnding = ''; reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; persist(); render(); personality.resume(); }
+            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); pause.dismiss();  session = restored;   reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();  }
             catch { ui.storageWarning = '这份存档暂不可读，当前进度和原存档已保留。'; render(); } return;
         }
+        if (['insert-clue','remove-clue','clear-expression'].includes(b.dataset.action ?? '') && session.current.kind === 'open' && (!request || polishing)) {
+            const clue = session.clues.find(c => c.id === b.dataset.clue);
+            cancel(); previousPolish = null; error = '';
+            if (b.dataset.action === 'clear-expression') { session.state.draft = ''; session.state.selected = []; }
+            else if (clue) { if (b.dataset.action === 'remove-clue') session.state.selected = session.state.selected.filter(id=>id!==clue.id);
+                else if (!session.state.selected.includes(clue.id)) { session.state.selected.push(clue.id); } }
+            
+            persist(); render(); return;
+        }
+        if (b.dataset.action === 'show-clues') { root.querySelector<HTMLElement>('.dialogue-clues')?.focus(); return; }
         switch (b.dataset.action) {
             case 'next': next(); break;
             case 'polish-expression': void polish(); break;
@@ -295,16 +238,11 @@ async function start() {
             case 'speak': void speak(); break;
             case 'retry-question': void askOpeningQuestion(true); break;
             case 'cancel-speech': retryAction = questioning ? 'question' : polishing ? 'polish' : 'speak'; cancel(); error = '已停止等待，当前问题与原话已保留。'; render(); break;
-            case 'test-item': void tryItem(); break;
-            case 'revise-item-test': preparation = null; preparationNotice = ''; render(); root.querySelector<HTMLTextAreaElement>('#item-preparation')?.focus(); break;
-            case 'cancel-item-test': cancel(); preparationNotice = '已停止等待，操作说明已保留。'; render(); break;
-            case 'confirm-item-test': if (preparation && session.confirmItemPreparation(preparation)) { persist(); preparation = null; ui.overlay = 'items'; render(); } else { preparationNotice = '物品或军情已有变化，请重新试用。'; render(); } break;
-            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) { personality.prune({ choices: [...session.state.chosen], inputs: personalityInputs().prefixes }); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; clearItemReceipts(); persist(); render(); personality.resume(); } break;
+            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) {   reading.restore(); ui.overlay = ''; error = '';  persist(); render();  } break;
             case 'notes-list': ui.overlay = ''; evidenceDetail = ''; render(); break;
             case 'close-evidence-detail': evidenceDetail = ''; render(); break;
             case 'records': case 'save': case 'situation': cancel(); ui.overlay = b.dataset.action; render(); break;
-            case 'bag': if (itemSystemEnabled()) { cancel(); ui.overlay = 'bag'; render(); } break;
-            case 'close-modal': if (ui.overlay === 'prepare-item') cancel(); ui.overlay = ''; render(); break;
+            case 'close-modal': ui.overlay = ''; render(); break;
             case 'settings': case 'configure-ai': settings.openSettings(b.dataset.action === 'configure-ai'); break;
             case 'save-api': case 'test-api': void settings.saveApiSettings(b.dataset.action === 'test-api'); break;
             case 'menu': home(); break;
@@ -319,7 +257,7 @@ async function start() {
         if (e.key === 'Escape' && ui.overlay) { cancel(); ui.overlay = ''; render(); }
         else if (e.code === 'Space' && !ui.overlay && !(e.target as HTMLElement).closest('input,textarea,button,a,summary')) { e.preventDefault(); next(); }
     });
-    window.addEventListener('pagehide', () => { cancel(); people.dispose(); personality.dispose(); persist(); });
-    persist(); render(); personality.resume();
+    window.addEventListener('pagehide', () => { cancel(); people.dispose();  persist(); });
+    persist(); render(); 
 }
 void start().catch(e => { root.innerHTML = `<main class="game-scene"><section class="dialogue-box"><p>${esc(e instanceof Error ? e.message : '第三章未能载入。')}</p><a href="/">返回开始页</a></section></main>`; });

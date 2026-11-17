@@ -1,0 +1,115 @@
+{
+  "source_sha256": "1245fa292c8e683abeab1b995c0f539073b08db67c689b930c467770cda0f847",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7994
+        },
+        {
+          "label": "Sigh",
+          "p": 0.5028
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0798
+        },
+        {
+          "label": "Clicking",
+          "p": 0.0635
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0544
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0497
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0238
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0234
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0228
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.005
+        },
+        {
+          "label": "Conversation",
+          "p": 0.0046
+        },
+        {
+          "label": "Whispering",
+          "p": 0.0042
+        }
+      ],
+      "music": 0.0022
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8317
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.1274
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0567
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0338
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0208
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.0204
+        },
+        {
+          "label": "Clicking",
+          "p": 0.0169
+        },
+        {
+          "label": "Typing",
+          "p": 0.0137
+        },
+        {
+          "label": "Sigh",
+          "p": 0.011
+        },
+        {
+          "label": "Tap",
+          "p": 0.0099
+        },
+        {
+          "label": "Mouse",
+          "p": 0.0085
+        },
+        {
+          "label": "Animal",
+          "p": 0.0083
+        }
+      ],
+      "music": 0.0046
+    }
+  ]
+}

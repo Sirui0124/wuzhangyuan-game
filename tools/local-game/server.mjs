@@ -22,7 +22,7 @@ async function sourceSignature() {
     'GameStarter/web-demo/build.mjs', 'GameStarter/web-demo/tsconfig.json', 'GameStarter/web-demo/visual-assets.json',
     'tools/video/media.mjs', 'tools/video/subtitles.mjs', 'tools/video/vtt.mjs', 'video/subtitles/catalog.json', 'video/subtitles/empty-tracks.json',
     'demos/yiling-rescue/src', 'demos/yiling-rescue/public', 'demos/yiling-rescue/build.mjs',
-    'docs/design/personality', 'tools/personality/prepare-playtest.mjs', 'tools/personality/preview-witness.json',
+    'demos/yiling-ui-prototype-v1/src', 'demos/yiling-ui-prototype-v1/public', 'demos/yiling-ui-prototype-v1/build.mjs', 'demos/yiling-ui-prototype-v1/publish.mjs',
     'GameStarter/scripts/run-tsc.mjs', 'GameStarter/scripts/chapter-access-manifest.mjs', 'GameStarter/assets/scripts/narrative', 'GameStarter/assets/scripts/GameApi.ts',
     'content/schema', 'content/chapters/wuzhang', 'content/chapters/grain', 'content/chapters/jieting', 'content/chapters/yiling', 'content/chapters/jingzhou', 'content/chapters/luofengpo', 'video/current',
   ];

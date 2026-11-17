@@ -3,7 +3,7 @@ import { readFilmAudio } from './film-audio';
 /** 设置、存档与对话记录面板的 HTML 渲染。 */
 export interface SettingsPanelProps {
     runtimeMode?: RuntimeMode;
-    itemSystemEnabled?: boolean;
+
     music: number;
     sfx: number;
     aiVoiceEnabled: boolean;
@@ -31,7 +31,7 @@ export interface SaveSlotProps {
 }
 
 export interface DialogueRecord { speaker: string; text: string }
-export type ModalPage = 'settings' | 'saves' | 'history' | 'new' | 'supplies' | 'items' | 'pause';
+export type ModalPage = 'settings' | 'saves' | 'history' | 'new' | 'pause';
 
 function esc(value: unknown): string {
     return String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]!);
@@ -47,7 +47,6 @@ function help(text: string, label: string, id = ''): string {
 
 export function settingsPanelHTML(props: SettingsPanelProps): string {
     if (props.aiOnly) return apiSettingsHTML(props);
-    const itemsEnabled = props.itemSystemEnabled !== false;
     const ranges = (['music', 'sfx', 'film'] as const).map(bus => {
         const setting = bus === 'film' ? readFilmAudio().volume : props[bus];
         const value = Number.isFinite(setting) ? Math.min(100, Math.max(0, setting)) : 0;
@@ -57,7 +56,6 @@ export function settingsPanelHTML(props: SettingsPanelProps): string {
       <section class="settings-section"><h2>游戏模式</h2>
         <label class="toggle-row" for="game-ai-enabled"><span>启用 AI</span><input id="game-ai-enabled" class="motion-switch" type="checkbox"${props.runtimeMode && props.runtimeMode !== 'offline' ? ' checked' : ''}></label>
         ${apiSettingsHTML(props)}
-        <div class="toggle-row"><div class="setting-label"><label for="game-item-system-enabled">物品</label>${help('开启后可获取和查看剧情物品；关闭后保留已有物品记录。', '物品', 'item-system-description')}</div><input id="game-item-system-enabled" class="motion-switch" type="checkbox" aria-describedby="item-system-description"${itemsEnabled ? ' checked' : ''}></div>
       </section>
       <section class="settings-section"><h2>声音与阅读</h2>${ranges}
         <div class="toggle-row"><div class="setting-label"><label for="ai-voice-enabled">AI语音</label>${help('开启后朗读我与魏延的交谈；关闭后保留文字对白，点击继续。', 'AI语音', 'ai-voice-description')}</div><input id="ai-voice-enabled" class="motion-switch" type="checkbox" aria-describedby="ai-voice-description"${props.aiVoiceEnabled ? ' checked' : ''}${props.runtimeMode === 'offline' ? ' disabled' : ''}></div>
@@ -112,7 +110,7 @@ export function recordsPanelHTML(records: readonly DialogueRecord[]): string {
 }
 
 export function newGamePanelHTML(): string {
-    return `<div class="newgame-confirmation"><h2 class="newgame-question">重新走进这一夜？</h2><p>从第一章重新开始，后续章节需要再次逐章通关解锁；夷陵仍可抢先体验。当前各章自动进度会备份，手动存档与已获得成就保留。</p><div class="button-row">${action('new-confirmed', '开始新的经历 →', true)}${action('close-modal', '返回')}</div></div>`;
+    return `<div class="newgame-confirmation"><h2 class="newgame-question">重新走进这一夜？</h2><p>播放开篇影片后进入舆图，可选择第一章或第四章，其他章节暂未开放。当前各章自动进度会备份，手动存档与已获得成就保留。</p><div class="button-row">${action('new-confirmed', '开始新的经历 →', true)}${action('close-modal', '返回')}</div></div>`;
 }
 
 /** Body must be renderer-produced markup. All display titles and props are escaped separately. */

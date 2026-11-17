@@ -51,7 +51,7 @@ function replySources(j: JietingJudgment, request: JietingEvaluationRequest): Re
         ...Object.fromEntries(c.ownedClues.filter(clue => clue.current !== false).map(clue => ['clue:' + clue.id, clue.text])),
         ...Object.fromEntries(c.acceptedReasons.map((reason, index) => ['accepted:' + index, reason.text])),
         result: JSON.stringify({ phase: j.phase, outcome: j.outcome, status: j.status, criteria: j.criteria, reasoning: j.reasoning, reinforcementAssessment: j.reinforcementAssessment }),
-        state: JSON.stringify({ below: c.below, above: c.above, roundResults: c.roundResults, items: c.items }),
+        state: JSON.stringify({ below: c.below, above: c.above, roundResults: c.roundResults }),
         'rule:no-orders': '本回应只评价建议，正式军令由后续剧情发出。' };
 }
 

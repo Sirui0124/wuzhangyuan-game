@@ -1,6 +1,11 @@
 /** Authored entrances, never text/name matching. Mentioning a name grants nothing. */
 export type CharacterEntrance = { chapter: 'wuzhang' | 'grain' | 'jieting'; node: string; people: string[]; when: 'enter' | 'complete'; note: string };
 export const characterEntrances: CharacterEntrance[] = [
+    {chapter:'wuzhang',node:'branch-person:小甲',people:['guard'],when:'complete',note:'新版中实际读到小甲发言。'},
+    {chapter:'wuzhang',node:'branch-person:魏延',people:['weiyan'],when:'complete',note:'新版中实际读到魏延发言。'},
+    {chapter:'wuzhang',node:'branch-person:姜维',people:['jiangwei'],when:'complete',note:'新版中实际见到姜维并听他发言；提名不授予。'},
+    {chapter:'wuzhang',node:'branch-person:亲兵',people:['jiangwei_guard'],when:'complete',note:'新版实际读到亲兵发言。'},
+    {chapter:'wuzhang',node:'branch-person:诸葛亮',people:['zhugeliang'],when:'complete',note:'新版实际读到诸葛亮发言。'},
     { chapter: 'jieting', node: 'JT-004', people: ['jieting-water'], when: 'enter', note: '与我一起挑水的军士实际开口。' },
     { chapter: 'jieting', node: 'JT-008', people: ['wangping'], when: 'enter', note: '帐前实际见王平陈述守亭任务。' },
     { chapter: 'jieting', node: 'JT-009', people: ['masu'], when: 'enter', note: '马谡当面说明自己的打法；心声中的提名不计。' },

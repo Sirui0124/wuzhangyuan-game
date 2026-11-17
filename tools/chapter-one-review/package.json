@@ -1,0 +1,10 @@
+{
+  "name": "chapter-one-dialogue-review",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json",
+    "start": "node server.mjs",
+    "test": "npm run build && node --test review.test.mjs && node browser.test.mjs"
+  }
+}

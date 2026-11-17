@@ -47,7 +47,7 @@
       "phase": "五丈原 · 姜维接报",
       "result": "safe",
       "title": "灯没灭，你也活下来了。",
-      "description": "你提前取得姜维本人接报处置的许可，并查明营门尚守。魏延接受即时隔帘传报的安排，姜维当场下令并承担决策责任，魏延回营执行。帐帘未开，主灯守住了，你也平安站在帐门。",
+      "description": "军报交由姜维听取并处置，回令实际送达前营。帐前的灯没有灭，我也平安度过了这一夜。",
       "hint": "这一夜已经守住。丞相的病与劳损仍在，下一次回溯将寻找更早的转机。",
       "kind": "生还"
     },
@@ -64,6 +64,42 @@
       "description": "你在军前严重挑衅魏延，被亲兵按倒，当场处斩。急报还没有送入帐内，守灯的转机也停在了这里。",
       "hint": "想改变这一夜，先把话说到军情与规矩上。威胁和辱骂无法代替接报办法。",
       "kind": "殒命"
+    },
+    {
+      "id": "branch-coop",
+      "number": "新版-01",
+      "phase": "第一章",
+      "result": "branch_safe",
+      "title": "记住了你的名字",
+      "description": "请伯约出面，军报与回令完成交接，魏延记住了我。",
+      "hint": "重读第一章，尝试另一种交涉。",
+      "kind": "生还",
+      "chapter": "wuzhang",
+      "category": "ending"
+    },
+    {
+      "id": "branch-formal",
+      "number": "新版-02",
+      "phase": "第一章",
+      "result": "branch_safe",
+      "title": "灯火未灭",
+      "description": "将军报交伯约处置，回令送回前营，这一夜平安过去。",
+      "hint": "重读第一章，尝试另一种交涉。",
+      "kind": "生还",
+      "chapter": "wuzhang",
+      "category": "ending"
+    },
+    {
+      "id": "branch-lamp",
+      "number": "新版-03",
+      "phase": "第一章",
+      "result": "branch_failure",
+      "title": "主灯已灭",
+      "description": "魏延闯入帐中，主灯熄灭。",
+      "hint": "重读第一章，尝试另一种交涉。",
+      "kind": "遗憾",
+      "chapter": "wuzhang",
+      "category": "ending"
     }
   ]
 }

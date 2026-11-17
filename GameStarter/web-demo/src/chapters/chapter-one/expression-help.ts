@@ -3,10 +3,10 @@ import { validAuthorization } from './thought-canvas-model';
 
 /** Authored opt-in speech, available only after actual clarification replies in this round. */
 export function expressionHelp(state: GameSessionState): string | null {
-    if (!['expression', 'spoken'].includes(state.phase) || state.supplies.attached.length
-        || state.speech?.items?.length) return null;
+    if (!['expression', 'spoken'].includes(state.phase)
+       ) return null;
     const attempts = state.story.history.filter(h => speechHistoryRound(h, state.round) === state.round
-        && !h.accepted && h.npcTurn?.classification.disposition === 'revise' && !h.itemDecision?.eraFailure);
+        && !h.accepted && h.npcTurn?.classification.disposition === 'revise');
     if (attempts.length < 2) return null;
     const known = new Set(state.story.collected);
     if (!known.has('C06')) return null;

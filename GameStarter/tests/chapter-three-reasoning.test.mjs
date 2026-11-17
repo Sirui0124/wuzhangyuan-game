@@ -11,9 +11,9 @@ const words='正面和侧路都要守，下山以后又得列阵，等交上手�
 function fixture(input=words){const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true});s.state.draft=input;return s;}
 const request=s=>({context:s.getEvaluationContext(),input:s.state.draft,clueIds:[...s.state.selected],confirmed:true});
 function raw(s,linked=true){
-    const input=s.state.draft,criteria=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],itemIds:[],reason:''}]));
-    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])criteria[k]={value:true,quote:input,evidenceIds:['JT-C04','JT-C08'],itemIds:[],reason:'当前守备与调兵耗时共同支持提前补侧路'};
-    return {reinforcementAssessment:{supportedTroops:linked?5000:0,quote:linked?input:'',reason:'受控论证人数'},version:1,valid:true,factsReliable:true,factualIssues:[],criteria,argument:{topic:'road',quote:input,clueIds:['JT-C04','JT-C08']},reasoning:{linked,quote:linked?input:'',evidenceIds:linked?['JT-C04','JT-C08']:[],conclusion:linked?'须提前补侧路，不能等告急才调兵':''},maintain:{value:false,quote:''},deploymentTasks:[{task:'road',quote:input}],acknowledgment:linked?'等交上手才赶来，是怕误了工夫。提前补侧路这个办法，我同意。':'这回只说要人，还没有说到眼前的难处。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},eraAssessment:{version:1,severeMismatch:false,explanation:'coherent',itemIds:[],quote:'',reason:'无异常展示'}};
+    const input=s.state.draft,criteria=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],reason:''}]));
+    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])criteria[k]={value:true,quote:input,evidenceIds:['JT-C04','JT-C08'],reason:'当前守备与调兵耗时共同支持提前补侧路'};
+    return {reinforcementAssessment:{supportedTroops:linked?5000:0,quote:linked?input:'',reason:'受控论证人数'},version:1,valid:true,factsReliable:true,factualIssues:[],criteria,argument:{topic:'road',quote:input,clueIds:['JT-C04','JT-C08']},reasoning:{linked,quote:linked?input:'',evidenceIds:linked?['JT-C04','JT-C08']:[],conclusion:linked?'须提前补侧路，不能等告急才调兵':''},maintain:{value:false,quote:''},deploymentTasks:[{task:'road',quote:input}],acknowledgment:linked?'等交上手才赶来，是怕误了工夫。提前补侧路这个办法，我同意。':'这回只说要人，还没有说到眼前的难处。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},};
 }
 const parse=(s,r=raw(s))=>parseJietingJudgment(JSON.stringify(r),request(s));
 test('weak bare requests get one in-world followup, then zero troops without technical failure',()=>{
@@ -35,7 +35,7 @@ test('two card IDs without a causal explanation remain insufficient, and invente
     const forged=parse(s);delete forged.reasoning;assert.equal(s.submit(forged),false);
 });
 test('same-round inference survives a short followup without forcing the player to repeat it',()=>{
-    const s=fixture(),r=raw(s);r.criteria.concernAnswered={value:false,quote:'',evidenceIds:[],itemIds:[],reason:''};r.followup={needed:true,question:'这队人下去以后，原来守路的人动不动？'};
+    const s=fixture(),r=raw(s);r.criteria.concernAnswered={value:false,quote:'',evidenceIds:[],reason:''};r.followup={needed:true,question:'这队人下去以后，原来守路的人动不动？'};
     const first=parse(s,r);assert.equal(first.status,'followup');s.submit(first);s.advance();
     s.state.draft='原来守路的人不动，这队是另派的。';const next=raw(s);next.reasoning={linked:true,quote:words,evidenceIds:['JT-C04','JT-C08'],conclusion:'仍按先前有依据的判断提前补侧路'};
     const final=parse(s,next);assert.equal(final.outcome,'great');assert.ok(s.submit(final));

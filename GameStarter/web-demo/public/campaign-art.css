@@ -1,0 +1,62 @@
+/* Shared operating surfaces, 2026-11-17. Dialogue, portraits and subtitles are deliberately outside this scope. */
+:root {
+  --campaign-material:url('/ui/campaign/material-atlas-v1.png');
+  --campaign-frame:url('/ui/campaign/ledger-frame.svg');
+  --campaign-text:#e8dfce; --campaign-muted:#c3b49b;
+  --campaign-bronze:#ac9060; --campaign-dark:#211e19; --campaign-red:#542c24;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-writing-wash::before { content:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-writing-wash { margin-top:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-paper #player-expression {
+  font:20px/1.8 var(--serif);border-radius:0;caret-color:var(--campaign-text);box-shadow:inset 0 2px 5px #0005;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace #player-expression::placeholder { color:var(--campaign-muted);opacity:1; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace #player-expression:focus-visible { outline:2px solid #c4a578;outline-offset:3px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:is(.polish-button,.confirm-expression) {
+  min-height:44px;border:1px solid #ac906077;border-radius:0;padding:8px 20px;color:var(--campaign-text);background:#24201a;box-shadow:inset 0 0 0 2px #ac906014;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button.confirm-expression {
+  border:3px double #b49568;background:linear-gradient(#542c2444,#21120f88),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,100% 100%;color:#f0dfbd;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:is(.polish-button,.confirm-expression):hover:not(:disabled) { filter:brightness(1.16);background-color:#542c24; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:is(.polish-button,.confirm-expression):disabled { opacity:.45; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .ai-guidance { border:0;border-top:1px solid #ac906044;border-radius:0;background:none;padding:12px 0 0;font-family:var(--serif); }
+/* The menu retains its landscape and title. Plates share the ledger materials. */
+:root #game-root main.game-menu nav button,
+:root #game-root main.game-menu nav button:first-child {
+  color:var(--campaign-text);background:linear-gradient(#17161288,#171612bb),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,100% 0;
+  border:1px solid #ac906066;border-radius:0;box-shadow:inset 0 0 0 3px #ac906012,0 3px 8px #0005;text-shadow:0 1px 2px #000;
+}
+:root #game-root main.game-menu nav button::before { content:none; }
+:root #game-root main.game-menu nav button:first-child { background-position:0 0,100% 100%;border:3px double #b49568;color:#f0dfbd; }
+:root #game-root main.game-menu nav button:hover:not(:disabled),
+:root #game-root main.game-menu nav button:first-child:hover:not(:disabled) { color:#fff0d2;filter:brightness(1.15);transform:none;border-color:#c4a578; }
+:root #game-root main.game-menu nav button:focus-visible { outline:2px solid #e0c18e;outline-offset:4px; }
+/* Common folio shell; existing light reading leaves remain legible. */
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page],
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] {
+  --panel-ink:var(--campaign-text);--panel-muted:var(--campaign-muted);--panel-accent:var(--campaign-bronze);
+  background:linear-gradient(#17151280,#171512bb),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,100% 0;
+  border:8px solid transparent;border-image:var(--campaign-frame) 32 stretch;border-image-width:16px;color:var(--campaign-text);
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-context { color:var(--campaign-muted);text-shadow:none; }
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary { background:#211e1966;border-color:#ac906044;color:var(--campaign-text); }
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary:hover { background:#ac906022;border-color:#c4a578; }
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-button { background:#542c24;color:#f0dfbd;border-color:#ac9060; }
+/* Chapter five's compact inquiry shares the paper and submit treatment. */
+#game-root .jz-scene { background-color:#211e19; }
+#game-root .jz-scene::after { background:linear-gradient(90deg,#1c1915e0,#211e19b0,#1c1915eb); }
+#game-root .jz-scene .jz-report { border:8px solid transparent;border-image:var(--campaign-frame) 32 stretch;border-image-width:16px;border-radius:0;background:linear-gradient(#19171480,#191714bb),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,100% 0; }
+#game-root .jz-scene .jz-message { border-radius:0;background:linear-gradient(#29251f66,#201c1888),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,0 100%; }
+#game-root .jz-scene .jz-message-player { border-color:#ac906088; }
+#game-root .jz-scene .jz-verdict { background:#211e1980; }
+#game-root .jz-scene .jz-composer textarea { background:linear-gradient(#29251f66,#201c1888),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,0 100%;color:var(--campaign-text);border-color:#ac906077;border-radius:0; }
+#game-root .jz-scene .jz-composer textarea::placeholder { color:var(--campaign-muted);opacity:1; }
+#game-root .jz-scene .jz-composer button { background:#542c24;color:#f0dfbd;border:3px double #b49568;border-radius:0; }
+@media(max-width:700px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout { padding-left:0;padding-right:0; }
+}
+@media(forced-colors:active) {
+  html #game-root .expression-workspace .expression-paper,html #game-root .expression-workspace #player-expression { background:Canvas !important;color:CanvasText !important;border:1px solid CanvasText;border-image:none; }
+  :root #game-root main.game-menu nav button,:root #game-root main.game-menu nav button:first-child,:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] { background:Canvas;border:1px solid CanvasText;border-image:none;color:CanvasText; }
+}

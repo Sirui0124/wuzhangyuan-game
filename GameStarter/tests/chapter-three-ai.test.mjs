@@ -5,7 +5,7 @@ import { resolve } from 'node:path';
 
 const entry = process.env.JIETING_AI_BUILD ? pathToFileURL(resolve(process.env.JIETING_AI_BUILD, 'GameStarter/web-demo/src/chapters/chapter-three/open-dialogue.js'))
     : new URL('../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-three/open-dialogue.js', import.meta.url);
-const { parseJietingJudgment, judgeJietingDialogue, jietingPrompt, jietingCriteria, prepareJietingItem, parseJietingItemPreparation } = await import(entry);
+const { parseJietingJudgment, judgeJietingDialogue, jietingPrompt, jietingCriteria } = await import(entry);
 const { reviewJietingReply } = await import(new URL('ai-response.js', entry));
 const replyAuditOk = (j, req = request()) => ({
     checks: Object.fromEntries(['consistent', 'grounded', 'uncertainty', 'noNewRequirements', 'noOrders'].map(key => [key,
@@ -13,14 +13,14 @@ const replyAuditOk = (j, req = request()) => ({
     approval: { explicit: true, quote: j.response }, certaintyPairs: [],
 });
 const words = '山上的水都靠下面运。请先增兵守水路，现有的人还得守正面和侧路；晚派兵下山还要列阵。';
-const empty = () => ({ value: false, quote: '', evidenceIds: [], itemIds: [], reason: '' });
+const empty = () => ({ value: false, quote: '', evidenceIds: [], reason: '' });
 function request(overrides = {}) {
     return { confirmed: true, input: words, clueIds: ['03', '04', '08'], context: {
         nodeId: 'round-1', contextKey: 'run-1:revision-2', phase: 'reinforcement', round: 1,
         scores: { w: 1, m: 1, r: 2 }, below: 5000, above: 20000,
         ownedClues: [{ id: '03', text: '山上用水从山下运' }, { id: '04', text: '正面与侧路都需守' }, { id: '08', text: '下山与列阵需要时间' }],
         confirmedTranscript: [], acceptedReasons: [], unresolvedConcerns: [], followupUsed: false,
-        verifiedClueIds: ['08'], items: [], ...overrides,
+        verifiedClueIds: ['08'], ...overrides,
     } };
 }
 function judgment(overrides = {}) {
@@ -30,10 +30,9 @@ function judgment(overrides = {}) {
         acknowledgment: '你说要先护水，又不撤守路的人，这个用意我听明白了。',
         followup: { needed: false, question: '' },
         offense: { direct: false, target: 'none', kind: 'none', context: 'asserted', quote: '', reason: '正常进言' },
-        eraAssessment: { version: 1, severeMismatch: false, explanation: 'coherent', itemIds: [], quote: '', reason: '无异常物品展示' },
         deploymentTasks: [{ task: 'water', quote: '请先增兵守水路' }], ...overrides,
     };
-    for (const key of ['gapEstablished', 'reinforcementUse', 'concernAnswered']) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03', '04', '08'], itemIds: [], reason: '既有守路与水路需要，提前部署避免迟援' };
+    for (const key of ['gapEstablished', 'reinforcementUse', 'concernAnswered']) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03', '04', '08'], reason: '既有守路与水路需要，提前部署避免迟援' };
     return raw;
 }
 const parse = (raw, req = request()) => parseJietingJudgment(JSON.stringify(raw), req);
@@ -140,7 +139,7 @@ test('fallback replies preserve a missing condition and distinguish valid withdr
     for (const phase of ['withdrawal', 'lure']) {
         const req = request({ phase, round: undefined }), raw = judgment();
         const keys = phase === 'withdrawal' ? ['risk', 'route', 'reception'] : ['motive', 'means', 'reception', 'withdrawal'];
-        for (const key of keys) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], itemIds: [], reason: '受控语义依据' };
+        for (const key of keys) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], reason: '受控语义依据' };
         const result = await reviewJietingReply(parse(raw, req), req, signal, reject);
         assert.equal(result.outcome, 'accepted'); assert.equal(result.responseOrigin, 'review-fallback');
         assert.ok(result.response.length <= 100); assert.doesNotMatch(result.response, /传令|不能下山|再说/);
@@ -170,14 +169,13 @@ test('maintaining orders consumes no invented grant and does not prompt again', 
     const out = parse(raw, req); assert.equal(out.status, 'final'); assert.equal(out.outcome, 'none'); assert.equal(out.deploymentTasks, undefined);
     assert.equal(out.maintain, true); assert.equal(out.maintainQuote, '这次仍照原令，不加兵。');
     assert.equal(out.criteria.gapEstablished, true); assert.equal(out.criteria.concernAnswered, true);
-    assert.deepEqual(out.usedItemIds, []);
+
 });
 
 test('future, stale, unowned evidence and manufactured quotes are retryable, never rewards', () => {
     for (const mutate of [
         r => r.criteria.gapEstablished.evidenceIds.push('12'),
         r => r.criteria.gapEstablished.quote = '敌军已经突破了',
-        r => r.criteria.reinforcementUse.itemIds = ['invented-item'],
         r => r.deploymentTasks[0].quote = '我同意调十万兵',
         r => r.factualIssues = [{ quote: '不是玩家原话', reason: '无来源' }],
     ]) { const raw = judgment(); mutate(raw); assert.throws(() => parse(raw), /保留/); }
@@ -207,50 +205,19 @@ test('withdrawal and lure have independent criteria; neither decides command gat
         const raw = judgment();
         const keys = phase === 'withdrawal' ? ['risk', 'route', 'reception'] : ['motive', 'means', 'reception', 'withdrawal'];
         assert.equal(parse(raw, req).outcome, 'revise');
-        for (const key of keys) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], itemIds: [], reason: '受控语义测试依据' };
+        for (const key of keys) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], reason: '受控语义测试依据' };
         const out = parse(raw, req); assert.equal(out.outcome, 'accepted'); assert.equal(out.ending, undefined);
         raw.criteria[keys[1]] = empty(); assert.equal(parse(raw, req).outcome, 'revise');
     }
 });
 
-test('lure reception is independently necessary; AI-assisted ordinary flags need no purchased item', () => {
+test('lure reception is independently necessary; AI-assisted plans require ordinary facts', () => {
     const req = request({ phase: 'lure', round: undefined, below: 10000, above: 15000 });
     const raw = judgment();
-    for (const key of ['motive', 'means', 'withdrawal']) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], itemIds: [], reason: '已有军情与普通人员动作支持方案' };
+    for (const key of ['motive', 'means', 'withdrawal']) raw.criteria[key] = { value: true, quote: words, evidenceIds: ['03'], reason: '已有军情与普通人员动作支持方案' };
     assert.equal(parse(raw, req).outcome, 'revise');
-    raw.criteria.reception = { value: true, quote: words, evidenceIds: ['04'], itemIds: [], reason: '已有接应安排' };
-    const result = parse(raw, req); assert.equal(result.outcome, 'accepted'); assert.deepEqual(result.usedItemIds, []);
-});
-
-test('adopted item IDs derive only from true, stage-relevant criteria, never model-authored usedItemIds', () => {
-    const req = request(); req.input += '用喇叭传信。';
-    req.context.items = [{ id: 'signal-speaker', name: '喇叭', source: 'phone', available: true, shown: true, tested: true, observedEffect: '按键播放预录声音', ability: '播放预录声音', boundary: '不能确保远处可闻' }];
-    const raw = judgment({ usedItemIds: ['forged'] });
-    assert.deepEqual(parse(raw, req).usedItemIds, []);
-    raw.criteria.motive = { value: true, quote: '用喇叭传信', evidenceIds: ['03'], itemIds: ['signal-speaker'], reason: '与本次增兵阶段不相关的字段' };
-    assert.deepEqual(parse(raw, req).usedItemIds, []);
-    raw.criteria.reinforcementUse = { value: true, quote: '用喇叭传信', evidenceIds: ['03'], itemIds: ['signal-speaker'], reason: '当前采用真实的传信手段' };
-    assert.deepEqual(parse(raw, req).usedItemIds, ['signal-speaker']);
-    raw.criteria.concernAnswered.itemIds = ['signal-speaker'];
-    assert.deepEqual(parse(raw, req).usedItemIds, ['signal-speaker']);
-    for (const modify of [i => i.available = false, i => i.shown = false, i => i.tested = false, i => i.observedEffect = '']) {
-        const changed = structuredClone(req); modify(changed.context.items[0]); assert.throws(() => parse(raw, changed), /保留/);
-    }
-});
-
-test('followup, maintaining orders, none and revise never adopt an attached item', () => {
-    const req = request(); req.input += '用喇叭传信。这次仍照原令。';
-    req.context.items = [{ id: 'signal-speaker', name: '喇叭', source: 'phone', available: true, shown: true, tested: true, observedEffect: '按键播放预录声音', ability: '播放预录声音', boundary: '不能确保远处可闻' }];
-    const raw = judgment({ followup: { needed: true, question: '为何现在还需增兵？' } });
-    raw.criteria.reinforcementUse.itemIds = ['signal-speaker']; raw.criteria.concernAnswered = empty();
-    assert.equal(parse(raw, req).status, 'followup'); assert.deepEqual(parse(raw, req).usedItemIds, []);
-    assert.deepEqual(parse(raw, { ...req, context: { ...req.context, followupUsed: true } }).usedItemIds, ['signal-speaker']);
-    raw.maintain = { value: true, quote: '这次仍照原令。' }; assert.deepEqual(parse(raw, req).usedItemIds, []);
-    raw.maintain = { value: false, quote: '' }; raw.criteria.gapEstablished = empty(); raw.followup.needed = false;
-    assert.equal(parse(raw, req).outcome, 'none'); assert.deepEqual(parse(raw, req).usedItemIds, []);
-    const lure = { ...req, context: { ...req.context, phase: 'lure', round: undefined } };
-    raw.criteria.means = { value: true, quote: '用喇叭传信', evidenceIds: ['03'], itemIds: ['signal-speaker'], reason: '手段可用，但接应尚缺' };
-    assert.equal(parse(raw, lure).outcome, 'revise'); assert.deepEqual(parse(raw, lure).usedItemIds, []);
+    raw.criteria.reception = { value: true, quote: words, evidenceIds: ['04'], reason: '已有接应安排' };
+    const result = parse(raw, req); assert.equal(result.outcome, 'accepted');
 });
 
 test('dissent, negated insult, quotation, and a model label alone never execute the player', () => {
@@ -263,20 +230,6 @@ test('dissent, negated insult, quotation, and a model label alone never execute 
     const req = request(); req.input = '马谡，你这个蠢货！';
     const raw = judgment({ offense: { direct: true, target: 'ma-su', kind: 'insult', context: 'asserted', intent: 'abuse', targetQuote: '马谡', actQuote: '你这个蠢货', quote: req.input, reason: '明确直接辱骂统将' } });
     assert.equal(parse(raw, req).special.kind, 'execution');
-});
-
-test('era failure requires actual demonstrated usable phone item and both semantic conditions; precedes execution', () => {
-    const req = request(); req.input = '我开启匣子放出人影，这是我拘来的魂魄。马谡，你这个蠢货！';
-    const item = { id: 'shown-1', name: '显示器', source: 'phone', available: true, shown: true, tested: true, observedEffect: '旋转灯形成悬空人像', ability: '显示预置图像', boundary: '不能拘魂' };
-    req.context.items = [item];
-    const raw = judgment({ eraAssessment: { version: 1, severeMismatch: true, explanation: 'incoherent', itemIds: [item.id], quote: '我开启匣子放出人影，这是我拘来的魂魄。', reason: '悬空人像异常，拘魂说法与器具效果矛盾' }, offense: { direct: true, target: 'ma-su', kind: 'insult', context: 'asserted', intent: 'abuse', targetQuote: '马谡', actQuote: '你这个蠢货', quote: '马谡，你这个蠢货！', reason: '直接辱骂' } });
-    assert.equal(parse(raw, req).special.kind, 'era-arrest');
-    for (const modify of [i => i.shown = false, i => i.available = false, i => i.source = 'world', i => i.observedEffect = '']) {
-        const r = structuredClone(req); modify(r.context.items[0]); assert.throws(() => parse(raw, r));
-    }
-    raw.offense.direct = false;
-    for (const key of jietingCriteria) raw.criteria[key] = empty(); raw.deploymentTasks = [];
-    for (const explanation of ['coherent', 'uncertain']) { raw.eraAssessment.explanation = explanation; assert.equal(parse(raw, req).special, undefined); }
 });
 
 test('malformed, unconfirmed, timeout and cancelled requests remain retryable and do not mutate inputs', async () => {
@@ -310,34 +263,3 @@ test('semantic humiliation and threats need separate target and act quotations, 
 const trialItem = { id: 'speaker-1', name: '录音喇叭', ability: '按键播放预录声音，内置已充电电池。', boundary: '仅能播放预录内容，声音能传多远须实地试用。', source: 'phone', available: true, shown: false };
 const trialRequest = () => ({ nodeId: 'lure-plan', contextKey: 'trial-revision-1', confirmed: true, input: '在帐侧按下喇叭的播放键，听一段预录喊声。', item: structuredClone(trialItem), availableItems: [structuredClone(trialItem)] });
 const trialResult = () => ({ version: 1, status: 'ready', supportedOperation: true, operationQuote: '按下喇叭的播放键', requirements: [{ text: '播放需要电源', satisfied: true, sourceItemIds: ['speaker-1'], specQuote: '内置已充电电池' }], effect: '喇叭响起预录喊声，停止播放后声音停下。', effectSources: [{ itemId: 'speaker-1', quote: '按键播放预录声音' }], feedback: '帐侧可以听见声音，传到敌探处的距离还不能据此保证。' });
-
-test('item trial validates owned specifications and returns a preview without activating the inventory', () => {
-    const req = trialRequest(), before = structuredClone(req);
-    const out = parseJietingItemPreparation(JSON.stringify(trialResult()), req);
-    assert.equal(out.status, 'ready'); assert.equal(out.operation, req.input); assert.equal(out.itemId, 'speaker-1');
-    assert.deepEqual(req, before); assert.equal(req.item.tested, undefined); assert.equal(req.item.observedEffect, undefined);
-    assert.equal(out.balance, undefined); assert.equal(out.scores, undefined); assert.equal(out.ending, undefined);
-});
-
-test('item trial missing power stays revise; invented accessories, unsupported effects and sold items are rejected', () => {
-    const missing = trialResult(); missing.status = 'revise'; missing.requirements[0] = { text: '尚缺可用电源', satisfied: false, sourceItemIds: [], specQuote: '' }; missing.effect = ''; missing.effectSources = []; missing.feedback = '先补齐真实可用的电源，或换一种不需要供电的办法。';
-    assert.equal(parseJietingItemPreparation(JSON.stringify(missing), trialRequest()).status, 'revise');
-    missing.status = 'ready'; assert.throws(() => parseJietingItemPreparation(JSON.stringify(missing), trialRequest()), /保留/);
-    for (const mutate of [
-        r => r.requirements[0].sourceItemIds = ['imaginary-battery'],
-        r => r.requirements[0].specQuote = '接上营中的市电',
-        r => r.effectSources[0].quote = '能让十万人听到',
-        r => r.effect = '敌军已经上钩了，街亭大捷。',
-    ]) { const raw = trialResult(); mutate(raw); assert.throws(() => parseJietingItemPreparation(JSON.stringify(raw), trialRequest()), /保留/); }
-    const sold = trialRequest(); sold.availableItems[0].available = false;
-    assert.throws(() => parseJietingItemPreparation(JSON.stringify(trialResult()), sold), /保留/);
-});
-
-test('item trial cancellation and malformed response never complete a demonstration', async () => {
-    const req = trialRequest(), before = structuredClone(req);
-    await assert.rejects(prepareJietingItem(req, new AbortController().signal, { respond: async () => ({ text: '{broken', responseId: 'test' }) }), /保留/);
-    let finish; const abort = new AbortController();
-    const pending = prepareJietingItem(req, abort.signal, { respond: () => new Promise(resolve => { finish = resolve; }) });
-    abort.abort(); finish({ text: JSON.stringify(trialResult()), responseId: 'test' });
-    await assert.rejects(pending, { name: 'AbortError' }); assert.deepEqual(req, before);
-});

@@ -1,0 +1,45 @@
+{
+  "duration": 39.416666666666664,
+  "shots": [
+    {
+      "id": "PREFIX",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.11\\夷陵撤离-PV-v2.11-完整成片.mp4",
+      "source_in": 0,
+      "duration": 17.416666666666668,
+      "timeline_in": 0,
+      "timeline_out": 17.416666666666668,
+      "source_sha256": "4402d45b4f665ada081d05f5810260316bec3a3ced14e36a251bce5016bd91f5",
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24,eq=brightness=-0.025:gamma=0.90:saturation=1.0:enable='lt(t,4.75)'"
+    },
+    {
+      "id": "F41",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.12\\F41\\source.mp4",
+      "source_in": 0,
+      "duration": 6,
+      "timeline_in": 17.416666666666668,
+      "timeline_out": 23.416666666666668,
+      "source_sha256": "73805050e05a224671e560b3afac8c974aa4e537c2593d86e69497391b7b4544",
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24"
+    },
+    {
+      "id": "F42",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.12\\F42\\source.mp4",
+      "source_in": 0,
+      "duration": 8,
+      "timeline_in": 23.416666666666668,
+      "timeline_out": 31.416666666666668,
+      "source_sha256": "f4031eb88580331f7f491359ffbaa6a613a80f4e49df7c0ed75e88beb2ae6177",
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24"
+    },
+    {
+      "id": "F43",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.12\\F43\\source.mp4",
+      "source_in": 0,
+      "duration": 8,
+      "timeline_in": 31.416666666666668,
+      "timeline_out": 39.41666666666667,
+      "source_sha256": "03f3438b50bc3754f2832bd87cbd8ac363b9178f0c1ac7288ab2f465efdbf742",
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24,fade=t=out:st=7.5:d=0.5"
+    }
+  ]
+}

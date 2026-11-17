@@ -5,7 +5,7 @@ import {createStaticServer} from '../../GameStarter/web-demo/serve.mjs';
 import {createJietingPlaytest} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-three/session.js';
 const out='outputs/achievements-20261027';mkdirSync(out,{recursive:true});
 const story=JSON.parse(readFileSync('content/chapters/jieting/chapter-three.story.json'));
-const fixture=createJietingPlaytest(story,'reinforcement',{aiEnabled:false,phoneAllowed:false}).state;
+const fixture=createJietingPlaytest(story,'reinforcement',{aiEnabled:false}).state;
 const server=createStaticServer();await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({channel:'chrome',headless:true});
 try{
  const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));

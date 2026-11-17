@@ -180,7 +180,7 @@ test('two clarifications unlock optional authored help; confirmation progresses 
  }
 });
 
-test('help cannot bypass facts, items, edits, other-round history or technical failures', async () => {
+test('help cannot bypass facts, edits, other-round history or technical failures', async () => {
  const { expressionHelp } = await import('../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/expression-help.js');
  let calls=0;
  const s=await authorized(async input=>{calls++;return npcTurn(input,'P2-F4');});
@@ -191,7 +191,6 @@ test('help cannot bypass facts, items, edits, other-round history or technical f
   assert.equal(expressionHelp(changed),null,id);
  }
  const companion=structuredClone(state);companion.story.flags.COMPANION_PRESENT=false;assert.equal(expressionHelp(companion),null);
- const items=structuredClone(state);items.supplies.attached=['wooden-mallet'];assert.equal(expressionHelp(items),null);
  const old=structuredClone(state);old.story.history.forEach(h=>h.round=1);assert.equal(expressionHelp(old),null);
  s.useExpressionHelp();s.setDraft(text+'不过等明天再报。');await s.confirmExpression();
  assert.equal(calls,3);assert.notEqual(s.snapshot().speech.result,'ok');

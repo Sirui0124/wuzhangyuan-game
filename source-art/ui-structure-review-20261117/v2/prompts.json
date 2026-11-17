@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-17",
+  "tool": "image_gen.imagegen",
+  "status": "待审阅，未实施",
+  "jobs": [
+    {
+      "id": "01-dark-dialogue",
+      "refs": [
+        "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/ui-structure-review-20261117/v1/01-dialogue-expanded.png"
+      ],
+      "prompt": "High fidelity professional Chinese historical narrative game UI mockup, 16:9. Exact reference-based composition, cinematic, restrained dark charcoal and dark grey brown, off-white KaiTi text. No pale cream, yellow or beige fields, no saturated gold, no nested large frames, no full screen inventory, no reasoning canvas. Readable consistent Chinese type sizes, dialogue and input equal around 24px at 1440 width, buttons20px, supporting16px. Only requested labels. Edit reference: preserve exact NPC identity position, camp composition and top navigation. Redesign ONLY bottom conversation UI to add inventory insertion and AI polish. Bottom 36% of screen, feathered translucent charcoal ink wash, no yellow paper. Name and line \"魏延   军情有变，我要面见丞相！\" at top. Under it a dark desaturated grey-brown inset text field, very subtle thin bronze-grey edge, ivory text \"将军，先把军情交给我。我替您转呈，不会耽误。\" Input surface nearly same darkness as surrounding ink and must not look like beige paper. Beneath field compact outlined removable chips: \"已插入：营门禁令 ×\" and \"随附：营地酒杯 ×\", no duplicated labels. One horizontal toolbar below: left two clear understated buttons \"线索／物品\" and \"AI 润色\"; right quiet \"收起\" and cinnabar primary \"确认说出\". Buttons all same size and aligned baseline. Retain plenty of scene visible above. No empty full page and no huge header. This is the closed inventory state."
+    },
+    {
+      "id": "02-insert-tray",
+      "refs": [
+        "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/ui-structure-review-20261117/v1/01-dialogue-expanded.png"
+      ],
+      "prompt": "High fidelity professional Chinese historical narrative game UI mockup, 16:9. Exact reference-based composition, cinematic, restrained dark charcoal and dark grey brown, off-white KaiTi text. No pale cream, yellow or beige fields, no saturated gold, no nested large frames, no full screen inventory, no reasoning canvas. Readable consistent Chinese type sizes, dialogue and input equal around 24px at 1440 width, buttons20px, supporting16px. Only requested labels. Edit reference: preserve NPC/camp identity and face; create separate OPEN inventory-insertion design state, compact tray attached directly above bottom dialogue input. Avoid bright yellow. Bottom interaction area uses x10%-90% and y50%-96%, NPC face remains completely visible. Top of tray is small row of tabs \"线索\" (active with bronze underline), \"物品\", and right \"收起\". Under tabs horizontal compact list of THREE text-only item tiles: \"营门禁令\" (selected), \"斥候回报\", \"姜维应允\". No fancy icons, no item counts or invented completion checkmarks. Beneath tiles a single concise detail strip: \"营门禁令\" and \"今夜帐内有要事，闲人不得擅入。\" with a right aligned clearly separate button \"插入\". Dark charcoal fibre background, hairline separation only. Directly beneath tray, keep the NPC context line \"魏延   军情有变，我要面见丞相！\", then 2-line capacity low-contrast DARK grey brown input field containing \"将军，先把军情交给我。\" in ivory. Bottom horizontal toolbar \"线索／物品\" \"AI 润色\" on left, \"收起\" and cinnabar \"确认说出\" on right. This is a readable compact inventory drawer, not a full-screen evidence panel, no drag/drop, no reasoning map, no side screen. Input, tray and context share width and readable type scale."
+    },
+    {
+      "id": "03-settings-current-page",
+      "refs": [
+        "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/outputs/campaign-style-20261117/opening-preserved.png",
+        "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/ui-structure-review-20261117/v1/03-settings-overlay.png"
+      ],
+      "prompt": "High fidelity professional Chinese historical narrative game UI mockup, 16:9. Exact reference-based composition, cinematic, restrained dark charcoal and dark grey brown, off-white KaiTi text. No pale cream, yellow or beige fields, no saturated gold, no nested large frames, no full screen inventory, no reasoning canvas. Readable consistent Chinese type sizes, dialogue and input equal around 24px at 1440 width, buttons20px, supporting16px. Only requested labels. Composite UI overlay. IMAGE1 is the exact underlying current game page to PRESERVE: nighttime wooden notice board, tent, first-person hand, top HUD, existing bottom feathered dialogue with text. Do not invent a general or Weiyan or replace the underlying scene. IMAGE2 is reference ONLY for approved centered settings panel layout, labels, sliders and two columns. Overlay an even black translucent scrim at about55% opacity onto IMAGE1, keeping recognizable edges, original crop and bottom dialogue behind. Then place approved settings panel from image2 centered, width60%, height57%, dark grey-brown paper with ONE thin bronze edge, no scenery inside panel. Header \"设置\" and \"返回\". Left group \"声音\": \"背景音乐\" 35%, \"交互音效\"45%, \"影片声音\"100%, thin sliders. Right group \"玩法\": \"启用 AI\", \"物品\", \"AI 语音\"; secondary \"模型与密钥设置 ›\". Footer \"设置自动保存\". The underlying current page remains identical and stationary, only darkened. No new scenic backdrop, no portrait, no Weiyan. This illustrates temporary modal layering over current gameplay."
+    }
+  ]
+}

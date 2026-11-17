@@ -3,7 +3,6 @@ import type { JietingGuardAssessment, JietingOutcome, JietingScores } from './ty
 
 export const JIETING_TOTAL = 25000;
 export const JIETING_INITIAL_BELOW = 5000;
-export const JIETING_TIGER = 'fuhu-wood-tiger';
 export const JIETING_SAVE_KEY = 'wuzhang-jieting-save-v1';
 export const troopsForOutcome = (outcome: JietingOutcome): 0 | 3000 | 5000 => outcome === 'great' ? 5000 : outcome === 'small' ? 3000 : 0;
 export const clampScore = (n: number) => Math.max(0, Math.min(10, Number.isFinite(n) ? n : 0));
@@ -19,8 +18,8 @@ export function withdrawalReady(c: JietingCriteria) {
 export function lurePlanReady(c: JietingCriteria) {
     return c.factsReliable && c.motive && c.means && c.reception && c.withdrawal;
 }
-export function lureEligible(scores: JietingScores, below: number, method: 'phone' | 'fixed') {
-    return below >= 10000 && scores.m >= 4 && scores.w >= 4 && scores.r >= (method === 'phone' ? 5 : 7);
+export function lureEligible(scores: JietingScores, below: number, method: 'discussion' | 'fixed') {
+    return below >= 10000 && scores.m >= 4 && scores.w >= 4 && scores.r >= (method === 'discussion' ? 5 : 7);
 }
 export function earlyWithdrawalEligible(scores: JietingScores) { return scores.m >= 4; }
 export function rearReceptionEligible(scores: JietingScores) { return scores.w >= 4 && scores.r >= 5; }

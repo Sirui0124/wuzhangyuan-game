@@ -21,7 +21,6 @@
 
 2026-10-25最新用户要求：游戏使用原 `https://api.deepseek.com` / `deepseek-flash`，不要使用 OpenAI Next。已将本机档案 `activeId` 持久化切为 `primary`，运行服务即时生效，原密钥保持不变。配置2已停用；其原计划是本日临时使用，到2026-10-26 00:00（Asia/Shanghai）恢复主配置，此计划已被本次立即恢复取代。阶段快照保存在本机 `.cache/model-profiles/`，不提交Git。调试脚本应通过本机代理读取当前配置，不从主配置文件推断生效模型。恢复后通过真实游戏表达代理完成首轮接受、第二轮接受及缺项追问三项验证，见 `outputs/deepseek-restored-20261025/verification.json`。
 
-此渠道实测Messages端点没有遵守单独的system指令，且在请求关闭思考后仍返回thinking块。因此配置2额外显式保存同源 `systemBaseUrl:https://api.openai-next.com/v1/chat/completions`；只有带独立system规则的采购/定价请求走此兼容接口，模型仍为同一个 `deepseek-v4-flash`。普通表达、判定等完整提示词请求仍走Messages。兼容接口已实测遵守系统指令，且无reasoning内容；不会把定价规则降为玩家数据。Messages健康状态标为 `disabled-requested`，不宣称渠道真正关闭了思考。
 
 本轮验证：40项后端测试及类型/架构检查通过，覆盖到期即恢复、重启持久化、设置保存保留主配置、协议和系统角色、截断拒绝与思考过滤。实际调用记录（不含密钥）在 `outputs/model-config2-20261025/`。
 
@@ -29,6 +28,6 @@
 
 ## 已退役的手机接口（2026-11-17）
 
-手机、购物、核价及预检模块已移除。`POST /api/game/shop`、`POST /api/game/shop/confirm`、`POST /api/game/phone/guard` 返回 404；`/health` 的 `shopping` 为 false。旧存档兼容数据不启用这些接口。上面的配置2采购说明仅为 2026-10-25 历史记录，不代表当前开放功能。
+手机、购物、核价及预检模块已移除。`POST /api/game/shop`、`POST /api/game/shop/confirm`、`POST /api/game/phone/guard` 返回 404；`/health` 的 `shopping` 为 false。旧存档兼容数据不启用这些接口。
 
 根目录运行 `npm run test:api` 验证隔离服务端测试；后端更新后须重启本地游戏服务。

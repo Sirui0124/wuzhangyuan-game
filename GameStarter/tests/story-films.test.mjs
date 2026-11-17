@@ -7,23 +7,15 @@ const movies=JSON.parse(readFileSync(new URL('../web-demo/public/cinematics.json
 const flow=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.flow.json',import.meta.url)));
 const script=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.script.json',import.meta.url)));
 
-test('结局影片只呈现已发生的结果，次日问责和未完成物品交接不借用结局影片',()=>{
- const state={phase:'reply',end:'weiyan-execution',tent:'caught',story:{flags:{}},supplies:{agreement:null}};
+test('结局影片只呈现已发生的结果，次日问责不借用结局影片',()=>{
+ const state={phase:'reply',end:'weiyan-execution',tent:'caught',story:{flags:{}}};
  assert.equal(endingFilmForState(movies.chapterEndings,state),null);
  state.phase='death';
  assert.equal(endingFilmForState(movies.chapterEndings,state).id,'C1END-EXEC');
  state.end='tutorial-sacrifice';assert.equal(endingFilmForState(movies.chapterEndings,state),null);
  state.end='tent-execution';assert.equal(endingFilmForState(movies.chapterEndings,state),null);
  state.tent='dead';assert.equal(endingFilmForState(movies.chapterEndings,state).id,'C1END-TENT');
- for(const route of ['radio-relay','light-signal','item-plan']){
-  state.phase='dialogue';state.section='after-report';state.lineIndex=0;state.end=null;state.story.flags={};state.supplies.agreement={route};
-  assert.equal(endingFilmForState(movies.chapterEndings,state),null);
-  state.story.flags.REPORT_CLOSED=true;
-  assert.equal(endingFilmForState(movies.chapterEndings,state).ending,route);
-  state.phase='ending';state.end=route;assert.equal(endingFilmForState(movies.chapterEndings,state),null);
-  state.phase='dialogue';state.end=null;
-  state.supplies.agreement=null;assert.equal(endingFilmForState(movies.chapterEndings,state),null);
- }
+
 });
 
 test('片段只覆盖现有连续剧情行，旧存档在片段中途时保留原文，不从片头重造事件',()=>{

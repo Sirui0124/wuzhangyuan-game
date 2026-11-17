@@ -1,0 +1,60 @@
+{
+  "version": "v2.16",
+  "authorization": "用户本轮明确要求修改最后3—4秒，使地图与第四章游戏更一致",
+  "map_basis": "前线军令三路军令版本：demos/yiling-ui-prototype-v1/server.mjs及publish.mjs引用terrain-night-v1.png；不是旧九路归路图",
+  "units": [
+    {
+      "id": "G01",
+      "title": "同地形军图",
+      "duration": 4,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\references\\G01-第四章同地形绢图.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\references\\第四章前线军令-实际地图.png"
+      ],
+      "prompt_status": "待review",
+      "video_status": "待review",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\G01\\视频生成Prompt.md",
+      "request_prompt_sha256": "0dd44e2daf9c4af75a4a4c1320b390384e9462ba6473dfa5eaa4fd1293c4cc27",
+      "current_video": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\G01\\source.mp4",
+      "task_id": "task_LdK2ce2UeZADLghMnQlUIphw7Y8uJe1x",
+      "reference_records": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\references\\G01-第四章同地形绢图.png",
+          "sha256": "29bd0a7ddff4c6a868501b296596bbb0bcbbca30540ac9617db6f65ae666dd1c"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\references\\第四章前线军令-实际地图.png",
+          "sha256": "53249efedac375a99b01082b59416736ef0b4e46112bd49535af868da56d0f41"
+        }
+      ]
+    }
+  ],
+  "current_film": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\夷陵撤离与认印托付-PV-v2.16-第四章地图.mp4",
+  "film_sha256": "7e4b190f80d66b0d9ead1956575231ccb51eaa43d9822cf48082bba6a9002509",
+  "film_status": "待review",
+  "edit": {
+    "prefix_parts": [
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\edit\\PV.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\edit\\L01.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\edit\\L02S.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\edit\\L03.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\edit\\L04R.mp4"
+    ],
+    "changed_range": [
+      71.66666666666667,
+      75.83333333333333
+    ],
+    "native_silk_selection": [
+      0,
+      2.6666666666666665
+    ],
+    "map_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.16\\references\\第四章前线军令-实际地图.png",
+    "map_sha256": "53249efedac375a99b01082b59416736ef0b4e46112bd49535af868da56d0f41",
+    "map_display": "和游戏CSS相同的居中cover裁切，16:9；无新增兵力/任务状态",
+    "crossfade": 0.5,
+    "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.15\\夷陵撤离与认印托付-PV-v2.15.mp4",
+    "audio_bitstream_copy": true
+  }
+}

@@ -92,6 +92,32 @@
       "status": "planned-no-dialogue",
       "reason": "原稿要求无对白。本版移除原音轨，替换为单独合成的风声和动作拟音，无人声、无配乐；视频流原样复制。详见 video/production/ENDINGS-AUDIO-20261029/repair.json。",
       "humanListeningReview": false
+    },
+    {
+      "id": "yiling-opening-v2.16",
+      "videoSha256": "7e4b190f80d66b0d9ead1956575231ccb51eaa43d9822cf48082bba6a9002509",
+      "status": "pending-transcription",
+      "reason": "2026-11-17 用户要求接入现有完整成片；保留原声。对白尚未完成逐字听审与字幕时间码核对，暂不显示字幕，不以旧策划或ASR代替成片转录。"
+    },
+    {
+      "id": "opening-pv-regrets-v7-20261117",
+      "videoSha256": "51ef44f218b5c65991faf4fb4f16d9f04ab06715153ab52b004fe4267a02c6d4",
+      "status": "planned-no-dialogue",
+      "reason": "70秒开篇PV设计为无对白；片尾楷体结语及书法Logo已在画面中，不另加字幕。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "opening-pv-regrets-v8-zhige-20261117",
+      "videoSha256": "32618cbdd0b3c42763eaf31322f2395b9f05307db5cdd1dffd0460021ff53e86",
+      "status": "planned-no-dialogue",
+      "reason": "不新增剧情对白；使用用户提供《止戈》作为配乐，不制作歌词字幕；楷体结语与Logo已在画面中。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "yiling-opening-v2.17",
+      "videoSha256": "a9de1d29b67a0856432c7fb41d78b54ada2d0da9f5136b609da3dc83e8f376e0",
+      "status": "pending-transcription",
+      "reason": "配乐版保留v2.16原对白，独立字幕仍待逐字听审与时间码核对。"
     }
   ]
 }

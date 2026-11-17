@@ -48,13 +48,13 @@ test('repeat arguments cannot farm troops; improving a 3000 plan adds only 2000 
 test('AI can cite owned but unselected facts; repeated successful topic is locally downgraded',()=>{
     const s=createJietingPlaytest(story,'reinforcement',{aiEnabled:true});s.state.draft=argument.quote;
     const context=s.getEvaluationContext(),req={confirmed:true,context,input:s.state.draft,clueIds:[]};
-    const checks=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],itemIds:[],reason:''}]));
-    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])checks[k]={value:true,quote:req.input,evidenceIds:['JT-C03'],itemIds:[],reason:'护水与守路需要不同队伍'};
-    const raw={version:1,valid:true,factsReliable:true,factualIssues:[],criteria:checks,argument,reasoning:{linked:true,quote:req.input,evidenceIds:['JT-C03','JT-C04'],conclusion:'守路和护水不能依靠同一队人'},maintain:{value:false,quote:''},deploymentTasks:[{task:'water',quote:req.input}],acknowledgment:'原来的守路人不动，另外的人护住往返的水路，这个安排可以商量。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},eraAssessment:{version:1,severeMismatch:false,explanation:'coherent',itemIds:[],quote:'',reason:'没有异常展示'}};
+    const checks=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],reason:''}]));
+    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])checks[k]={value:true,quote:req.input,evidenceIds:['JT-C03'],reason:'护水与守路需要不同队伍'};
+    const raw={version:1,valid:true,factsReliable:true,factualIssues:[],criteria:checks,argument,reasoning:{linked:true,quote:req.input,evidenceIds:['JT-C03','JT-C04'],conclusion:'守路和护水不能依靠同一队人'},maintain:{value:false,quote:''},deploymentTasks:[{task:'water',quote:req.input}],acknowledgment:'原来的守路人不动，另外的人护住往返的水路，这个安排可以商量。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},};
     raw.reinforcementAssessment={supportedTroops:5000,quote:req.input,reason:'受控完整论证'};
     const j=parseJietingJudgment(JSON.stringify(raw),req);assert.equal(j.outcome,'great');assert.ok(s.submit(j));assert.equal(s.below,5000);
     const duplicate=structuredClone(req);duplicate.context.round=4;duplicate.context.below=10000;duplicate.context.above=15000;duplicate.context.roundResults=[record(5000)];
-    const out=parseJietingJudgment(JSON.stringify(raw),duplicate);assert.equal(out.outcome,'none');assert.deepEqual(out.usedItemIds,[]);
+    const out=parseJietingJudgment(JSON.stringify(raw),duplicate);assert.equal(out.outcome,'none');
     assert.equal(s.state.roundResults[1],undefined,'mere generation did not issue an order');
     const forged=structuredClone(raw);forged.argument.clueIds=['JT-C12'];assert.throws(()=>parseJietingJudgment(JSON.stringify(forged),req),/保留/);
 });

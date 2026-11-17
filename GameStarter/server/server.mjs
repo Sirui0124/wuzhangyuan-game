@@ -7,7 +7,6 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseEnv } from 'node:util';
 import { randomUUID } from 'node:crypto';
-import { evaluatePersonality, validatePersonalityRequest, excludedPersonality } from './personality.mjs';
 
 const settingsFile = resolve(process.env.GAME_SETTINGS_FILE || resolve(dirname(fileURLToPath(import.meta.url)), '.env'));
 const readSettingsFile = async () => { try { return await readFile(settingsFile, 'utf8'); } catch (error) { if (error.code === 'ENOENT') return ''; throw error; } };
@@ -91,19 +90,17 @@ const server = http.createServer(async (req, res) => {
   try { selected = selectProfile(config, await readProfiles(settingsFile)); }
   catch { send(503, { error: '本机模型配置档案无法读取，请检查保存的配置。' }); return; }
   const current = selected.config;
-  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), shopping: false, profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
+  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
   if (voiceSettingsRequest && req.method === 'GET') {
     const values = { ...process.env, ...parseEnv(await readSettingsFile()) };
     send(200, { configured: Boolean(values.TTS_API_KEY), player: values.TTS_PLAYER_VOICE || '', weiyan: values.TTS_WEIYAN_VOICE || '', resource: values.TTS_RESOURCE_ID || 'seed-tts-2.0' }); return;
   }
   if (settingsRequest && req.method === 'GET') { send(200, current); return; }
-  const personalityRequest = req.url === '/api/game/personality';
-  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url) && !personalityRequest) { send(404, { error: '接口不存在' }); return; }
-  if (personalityRequest) res.setHeader('Cache-Control', 'no-store');
+  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url)) { send(404, { error: '接口不存在' }); return; }
   if (settingsRequest && req.headers['content-type']?.split(';')[0].trim().toLowerCase() !== 'application/json') { send(415, { error: '设置需要使用 JSON 提交' }); return; }
   try {
     let body = ''; let bytes = 0;
-    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : personalityRequest ? 131072 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
+    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
     let data;
     try { data = JSON.parse(body); } catch { send(400, { error: '无效 JSON' }); return; }
     if (voiceSettingsRequest) {
@@ -117,18 +114,6 @@ const server = http.createServer(async (req, res) => {
       try { next = validateSettings(data, current); } catch (error) { send(400, { error: error.message }); return; }
       try { if (selected.profile === 'config2') await saveTemporaryProfile(settingsFile, next, selected.expiresAt); else await persistSettings(next); } catch { send(500, { error: '无法保存本机 API 设置，请检查配置目录权限' }); return; }
       send(200, { ok: true }); return;
-    }
-    if (personalityRequest) {
-      const request = validatePersonalityRequest(data), excluded = excludedPersonality(request);
-      if (excluded) { send(200, excluded); return; }
-      if (!current.apiKey) { send(503, { error: '人格评估尚未配置 AI，原话已保留。' }); return; }
-      const controller = new AbortController(), disconnect = () => { if (!res.writableEnded) controller.abort(); };
-      res.once('close', disconnect);
-      const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45000)]);
-      try { send(200, await evaluatePersonality(request, { signal, model: (input, callSignal) => callModel(current, input, callSignal) })); }
-      catch (error) { if (!controller.signal.aborted) send(signal.aborted ? 504 : error.status || 502, { error: signal.aborted ? '人格评估超时，原话已保留。' : '人格依据未核对完整，暂不计分。' }); }
-      finally { res.removeListener('close', disconnect); }
-      return;
     }
     if (!current.apiKey) { send(503, { error: '请先在游戏设置中填写 API 密钥' }); return; }
     if (!data || typeof data !== 'object' || typeof data.text !== 'string' || !data.text.trim() || (data.images !== undefined && (!Array.isArray(data.images) || data.images.length > 8 || data.images.some(x => typeof x !== 'string' || !/^(https:\/\/|data:image\/)/.test(x)))) || (data.previousResponseId !== undefined && typeof data.previousResponseId !== 'string')) {

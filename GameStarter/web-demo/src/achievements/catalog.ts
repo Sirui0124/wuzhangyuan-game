@@ -7,12 +7,9 @@ const milestone = (chapter: AchievementChapter, id: string, title: string, descr
 });
 export const milestoneAchievements: Ending[] = [
     milestone('wuzhang', 'second-night', '再赴夕阳', '再一次站在营前，夕阳仍旧。上一回没能走完的路，这回可以重新走过。', '经历第一次回溯，重返第六夜。', 'rewind'),
-    milestone('wuzhang', 'headscarf', '一诺随身', '姜维递来的头巾收在衣里。这一夜，军报终于有了愿意接过它的人。', '收到姜维赠予的头巾。', 'cloth'),
-    milestone('wuzhang', 'wine-cup', '旧杯微光', '野草里的亮光，是一只磨损的酒杯。营中那些无人留意的小东西，也有自己的来处。', '在营地拾起破旧的酒杯。', 'cup'),
     milestone('wuzhang', 'inquiry', '把话问全', '敌军的动静、帐前的禁令、能够接报的人，你都亲耳问过。这次回话，有了更完整的依据。', '收集袭扰变化、敌军探问、帐前禁令与姜维代行军务的五条见闻。', 'report'),
     milestone('grain', 'dates', '五月与六月', '一句五月的自述，一笔六月的记录。把两处日期放在一起，事情便有了需要再问的地方。', '听完苟安饮酒自述，并读到六月初二的领粮记录。', 'calendar'),
     milestone('grain', 'ledgers', '六册相照', '签收、交付、损耗、入仓、实收、应征，六份记录都翻过了。缺口落在哪一程，得让账目自己说话。', '逐一查看粮队交接处的六份账目。', 'ledger'),
-    milestone('grain', 'candlestick', '旧灯随行', '临行前，从自己的军帐带上一只蜡烛台。灯还没有点亮，东西已经收在身边。', '回到自己的军帐，拿起蜡烛台。', 'lamp'),
     milestone('grain', 'letter', '落笔为凭', '口头说过的话，落成了正式补报。正文与附件一并送出，往后便有据可查。', '确认并送出共同补报的正文与附件。', 'letter'),
     milestone('jieting', 'visits', '三处问明', '王平的担忧、马谡的打算、营后的见闻，你都走了一趟。山上山下的事，开始接在一起。', '完成王平、马谡与营后三处走访。', 'map'),
     milestone('jieting', 'water', '护水有兵', '护水的兵已经走到山下。取水的人身边，有了一队专门护送的兵。', '让负责护水的增援实际到营。', 'water'),
@@ -27,9 +24,8 @@ export const grainEndingCopy = [
     ['E4-early', '认下来的罪', '你选择提早停下追查。这份案卷最终留下的，是认下来的罪。', '早停查'],
     ['E4-late', '认下来的罪', '追查走到了后面，补报却缺少足够支撑。事情最终落在了认下来的罪上。', '晚交案 · 支撑不足'],
     ['E5', '还是走上了险路', '你放苟安离开。先前谈过的险路，终于成了后来发生的事。', '放行'],
-    ['era-arrest', '妖孽现世', '出示异物之后，这次交涉以被军士拿下告终。', '异物交涉'],
 ] as const;
-export const jietingEndingIds = ['hold-both', 'hold-masu-dies', 'great-victory', 'retreat', 'era-arrest', 'execution', 'mountain-trapped', 'rear-sacrifice'] as const;
+export const jietingEndingIds = ['hold-both', 'hold-masu-dies', 'great-victory', 'retreat', 'execution', 'mountain-trapped', 'rear-sacrifice'] as const;
 export const pangtongEndingIds = ['retreat','sacrifice','feign','future'] as const;
 export const extraAchievementIds = new Set([...milestoneAchievements.map(e => e.id), ...grainEndingCopy.map(e => `grain-${e[0]}`), ...jietingEndingIds.map(id => `jieting-${id}`), ...pangtongEndingIds.map(id => `luofengpo-${id}`)]);
 

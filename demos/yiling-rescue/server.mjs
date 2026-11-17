@@ -29,6 +29,17 @@ export function createDemoServer({ai=liveAI,saveDir=resolve(home,'.cache/saves')
     const s=await load(body.session);
     if(url.pathname==='/api/commit'&&s.lastCommit===body.token)return send(200,{state:publicView(s)});
     if(body.revision!==s.revision)return send(409,{error:'进度已变化，请刷新后继续，尚未扣兵。'});
+    // Checkpoints stay on the server, including private deterministic battle seeds.
+    if(url.pathname==='/api/checkpoint'){
+     const snapshot={...structuredClone(s),id:randomUUID(),checkpoint:true};await save(snapshot);
+     return send(200,{checkpoint:{id:snapshot.id,round:snapshot.round,phase:snapshot.phase}});
+    }
+    if(url.pathname==='/api/restore'){
+     const snapshot=await load(body.checkpoint);if(snapshot.checkpoint!==true)throw new Error('请选择有效的手动存档。');
+     const restored={...structuredClone(snapshot),id:randomUUID()};delete restored.checkpoint;await save(restored);
+     return send(200,{state:publicView(restored)});
+    }
+    if(s.checkpoint)throw new Error('手动存档不能直接推进，请先读档。');
     const controller=new AbortController();res.once('close',()=>{if(!res.writableEnded)controller.abort();});const signal=AbortSignal.any([controller.signal,AbortSignal.timeout(90000)]);
     if(url.pathname==='/api/camp-select'){const reply=chooseCampPriority(s,body.target,body.route);await save(s);previews.delete(s.id);return send(200,{state:publicView(s),reply});}
     if(url.pathname==='/api/camp-choice')throw new Error('军营问话已更新，请刷新页面后选择接应路线。');

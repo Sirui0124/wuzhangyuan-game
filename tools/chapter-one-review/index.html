@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第六夜 · 第一章对话审阅</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top"><a class="brand" href="/">逆转五丈原<span>第一章 · 对话审阅</span></a><span class="edition">AI 审阅稿 v3.3</span></header>
+  <main>
+    <div class="chapter"><span>五丈原 · 第六夜</span><div class="tools"><button id="back" class="quiet">上一步</button><button id="restart" class="quiet">从头读</button><button id="notes" class="quiet" aria-expanded="false" aria-controls="drawer">回看对白</button></div></div>
+    <div class="layout">
+      <section id="scene" class="scene" aria-label="当前剧情" tabindex="-1">
+        <div class="eyebrow" id="eyebrow">帐前</div><h1 id="title">正在读取剧情…</h1>
+        <div id="lines" class="lines"></div>
+        <div id="controls" class="controls"></div>
+        <form id="question" hidden>
+          <label id="input-label" for="input">也可以自己问一句</label>
+          <p id="scaffold" class="input-help" hidden></p>
+          <p id="context-hint" class="context-hint" hidden></p>
+          <div class="input-row"><textarea id="input" maxlength="800" rows="3" placeholder="向小甲问一句……"></textarea><button id="submit" type="submit" class="ask">问他</button></div>
+          <div class="input-foot"><span id="ai-status" role="status"></span><button id="cancel" type="button" class="quiet" hidden>取消，保留原话</button></div>
+        </form>
+        <p id="notice" role="status" hidden></p>
+      </section>
+      <aside id="drawer" hidden aria-label="阅读记录"><div class="drawer-head"><h2>回看对白</h2><button id="close" class="quiet">收起</button></div><div id="history"></div></aside>
+    </div>
+    <footer><span id="save-status">独立阅读进度</span><details><summary>审阅说明</summary><p>点击选项顺着故事读；“上一步”可撤回刚才的选择。刷新保留本页进度和输入草稿，“从头读”从小甲重新开始。</p><p>魏延的最终自由对话调用本机已配置的 AI，分别理解发言和生成人物回应。每次最多三轮，读取最近两轮完整问答；说不清可重新组织，不直接判死。取消或连接失败保留原话。</p><p>小甲的提问仍使用本地有限问法识别。本页读取独立 JSON，不读写正式游戏进度。AI 输入和本幕必要上下文会发送到已配置的模型服务。</p><a href="/story.json" target="_blank" rel="noopener">查看本版剧情 JSON</a><p id="node-info"></p></details></footer>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body></html>

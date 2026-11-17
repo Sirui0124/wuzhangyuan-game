@@ -26,9 +26,7 @@ function cleanBackendEnvironment() {
   const basic = /^(PATH|PATHEXT|SYSTEMROOT|WINDIR|COMSPEC|TEMP|TMP|USERPROFILE|HOMEDRIVE|HOMEPATH|APPDATA|LOCALAPPDATA|PROGRAMDATA|PROGRAMFILES|PROGRAMFILES\(X86\)|COMMONPROGRAMFILES|USERNAME|USERDOMAIN|OS|PROCESSOR_ARCHITECTURE|NUMBER_OF_PROCESSORS)$/i;
   for (const [key, value] of Object.entries(process.env)) if (basic.test(key) && value !== undefined) env[key] = value;
   return { ...env, NODE_ENV: 'production', PORT: '0',
-    GAME_SETTINGS_FILE: join(userData, 'settings', '.env'),
-    GAME_SHOP_PRICES_FILE: join(userData, 'phone-economy', 'prices.json'),
-    GAME_PHONE_GUARDS_FILE: join(userData, 'phone-economy', 'guards.json') };
+    GAME_SETTINGS_FILE: join(userData, 'settings', '.env') };
 }
 
 async function startBackend() {
@@ -55,8 +53,12 @@ async function startBackend() {
 }
 
 async function startStaticServer() {
+  // Chapter-one and command-map handlers run here, outside the API child.
+  // They must read the same player configuration and never the development env.
+  for (const key of Object.keys(process.env)) if (/^(?:DEEPSEEK|TTS|VOLC|OPENAI|ARK|DOUBAO|GAME_)/i.test(key)) delete process.env[key];
+  process.env.GAME_SETTINGS_FILE = join(userData, 'settings', '.env');
   const { createStaticServer } = await import(pathToFileURL(join(payload, 'GameStarter/web-demo/serve.mjs')).href);
-  staticServer = createStaticServer({ root: join(payload, 'web'), rescueOptions: { saveDir: join(app.getPath('userData'), 'yiling-rescue', 'saves'), settingsFile: join(app.getPath('userData'), 'settings', '.env') }, onRequest: async (req, res) => {
+  staticServer = createStaticServer({ root: join(payload, 'web'), commandOptions: { directory: join(app.getPath('userData'), 'yiling-command', 'saves') }, rescueOptions: { saveDir: join(app.getPath('userData'), 'yiling-rescue', 'saves'), settingsFile: join(app.getPath('userData'), 'settings', '.env') }, onRequest: async (req, res) => {
     const url = new URL(req.url, webUrl);
     if (req.headers.host !== `127.0.0.1:${staticPort}`) { res.writeHead(403);res.end('Forbidden');return true; }
     if (url.pathname.startsWith('/playtest/') || url.pathname.startsWith('/__local/') || ['/local', '/local/'].includes(url.pathname)) {

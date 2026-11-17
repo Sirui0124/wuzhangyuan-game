@@ -1,0 +1,35 @@
+{
+  "duration": 39.416666666666664,
+  "shots": [
+    {
+      "id": "PREFIX",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.13\\夷陵撤离-PV-v2.13-夜行赴火.mp4",
+      "duration": 23.416666666666668,
+      "timeline_in": 0,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24",
+      "source_in": 0,
+      "timeline_out": 23.416666666666668,
+      "source_sha256": "ed9d2e7db231e08df8ba58a3abd4a317bfa78b7f6613d92a1842a9bfac03d37e"
+    },
+    {
+      "id": "F43_WIDE",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.12\\F43\\source.mp4",
+      "duration": 8,
+      "timeline_in": 23.416666666666668,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24,scale=2560:1440,zoompan=z='1+0.035*on/191':x='(iw-iw/zoom)*0.45':y='(ih-ih/zoom)*0.58':d=1:s=1280x720:fps=24",
+      "source_in": 0,
+      "timeline_out": 31.416666666666668,
+      "source_sha256": "03f3438b50bc3754f2832bd87cbd8ac363b9178f0c1ac7288ab2f465efdbf742"
+    },
+    {
+      "id": "F42_CLOSE",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261117-v2.12\\F42\\source.mp4",
+      "duration": 8,
+      "timeline_in": 31.416666666666668,
+      "filter": "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,setsar=1,fps=24,fade=t=out:st=7.5:d=0.5",
+      "source_in": 0,
+      "timeline_out": 39.41666666666667,
+      "source_sha256": "f4031eb88580331f7f491359ffbaa6a613a80f4e49df7c0ed75e88beb2ae6177"
+    }
+  ]
+}

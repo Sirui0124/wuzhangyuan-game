@@ -670,7 +670,7 @@
           }
         },
         {
-          "next": "JT-MA-GIFT"
+          "next": "JT-MA-END"
         }
       ]
     },
@@ -681,108 +681,9 @@
       "scene": "jieting_masu_tent",
       "speaker": "马谡",
       "text": "先来问明白再办事，这样好。往后有什么拿不准的，就来回报。",
-      "next": "JT-MA-GIFT",
+      "next": "JT-MA-END",
       "source": "doxcnRZEqXKYfRFa0v3HOjMQpoh",
       "sourceText": "马谡：先来问明白再办事，这样好。往后有什么拿不准的，就来回报。"
-    },
-    {
-      "id": "JT-MA-GIFT",
-      "kind": "route",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "",
-      "text": "",
-      "routes": [
-        {
-          "next": "JT-054",
-          "when": {
-            "all": [
-              {
-                "flag": "q1",
-                "value": "ma"
-              },
-              {
-                "gate": "items"
-              }
-            ]
-          }
-        },
-        {
-          "next": "JT-MA-END"
-        }
-      ]
-    },
-    {
-      "id": "JT-054",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "马谡",
-      "text": "方才你说，打败张郃，丞相前面便少一个强敌。我听着倒顺耳。",
-      "next": "JT-055",
-      "source": "doxcn5EIBeYCt3MIXtt1bedF88f",
-      "sourceText": "马谡：方才你说，打败张郃，丞相前面便少一个强敌。我听着倒顺耳。"
-    },
-    {
-      "id": "JT-055",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "旁白",
-      "text": "他拿起案边压图的小木虎，换了块石头压住图角，又把木虎递过来。木虎伏着身子，只有一掌大小，背上已经磨得发亮。",
-      "next": "JT-056",
-      "source": "doxcnupfxcMJmm62lQiyhQt0IEe",
-      "sourceText": "旁白：他拿起案边压图的小木虎，换了块石头压住图角，又把木虎递过来。木虎伏着身子，只有一掌大小，背上已经磨得发亮。"
-    },
-    {
-      "id": "JT-056",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "马谡",
-      "text": "这个拿去玩吧。往后办事，也要像方才说话一样明白。",
-      "next": "JT-057",
-      "source": "doxcnou5ASvkxw1dGpjIXWsLy0b",
-      "sourceText": "马谡：这个拿去玩吧。往后办事，也要像方才说话一样明白。"
-    },
-    {
-      "id": "JT-057",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "我",
-      "text": "谢将军。",
-      "next": "JT-058",
-      "source": "doxcnFavgHY99Vp1M6K9F7ZeGzg",
-      "sourceText": "我：谢将军。"
-    },
-    {
-      "id": "JT-058",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "旁白",
-      "text": "我接过伏虎木雕，小心收进衣里。",
-      "next": "JT-059",
-      "source": "doxcnAqcI3LLQRvPDqb0sAiARbc",
-      "sourceText": "旁白：我接过伏虎木雕，小心收进衣里。",
-      "effects": [
-        {
-          "type": "item",
-          "id": "fuhu-wood-tiger"
-        }
-      ]
-    },
-    {
-      "id": "JT-059",
-      "kind": "line",
-      "act": 1,
-      "scene": "jieting_masu_tent",
-      "speaker": "获得物品",
-      "text": "伏虎木雕（可出售500元）",
-      "next": "JT-MA-END",
-      "source": "doxcnmeJLKuQwcTEYEyR74qo6de",
-      "sourceText": "获得物品：伏虎木雕（可出售500元）"
     },
     {
       "id": "JT-MA-END",
@@ -4131,17 +4032,17 @@
       "options": [
         {
           "id": "JT-O277",
-          "text": "打开手机，结合已知军情筹划。",
+          "text": "结合已知军情，向马谡说明计策。",
           "next": "JT-281",
           "effects": [
             {
               "type": "flag",
               "key": "lureMethod",
-              "value": "phone"
+              "value": "discussion"
             }
           ],
           "when": {
-            "gate": "phone-ai"
+            "gate": "discussion-ai"
           },
           "source": "doxcnbr0BZqz57sjQuy8sUF1vof"
         },
@@ -4179,10 +4080,10 @@
       "act": 3,
       "scene": "jieting_masu_tent",
       "speaker": "旁白",
-      "text": "我退到帐侧，避开来往的军士，打开手机。",
+      "text": "我退到帐侧，将已知军情重新理清。",
       "next": "JT-284",
       "source": "doxcnsiiyuPsWizSnINzcvc8k8b",
-      "sourceText": "旁白：我退到帐侧，避开来往的军士，打开手机。"
+      "sourceText": "我退到帐侧，将已知军情重新理清。"
     },
     {
       "id": "JT-284",
@@ -4319,7 +4220,7 @@
         {
           "next": "JT-303",
           "when": {
-            "gate": "phone-lure-ready"
+            "gate": "discussion-lure-ready"
           }
         },
         {
@@ -5087,50 +4988,6 @@
       "sourceText": "旁白：我扶住一名跌倒的军士，还没站稳，身后的营旗便倒了下来。"
     },
     {
-      "id": "JT-403",
-      "kind": "line",
-      "act": 3,
-      "scene": "jieting_masu_tent",
-      "speaker": "马谡",
-      "text": "把那东西放下！你方才那番解释，和我们亲眼看见的可对不上。",
-      "next": "JT-404",
-      "source": "doxcn6Fz4Y6BGfLXJg6t0MKKQdf",
-      "sourceText": "马谡：把那东西放下！你方才那番解释，和我们亲眼看见的可对不上。"
-    },
-    {
-      "id": "JT-404",
-      "kind": "line",
-      "act": 3,
-      "scene": "jieting_masu_tent",
-      "speaker": "我",
-      "text": "将军，我……",
-      "next": "JT-405",
-      "source": "doxcn9lw0vY9x6KIlorrMHH3B0b",
-      "sourceText": "我：将军，我……"
-    },
-    {
-      "id": "JT-405",
-      "kind": "line",
-      "act": 3,
-      "scene": "jieting_masu_tent",
-      "speaker": "马谡",
-      "text": "不许再碰！来人，拿住他！",
-      "next": "JT-406",
-      "source": "doxcnmBB0CIQn5LVbhG48QUE5Qc",
-      "sourceText": "马谡：不许再碰！来人，拿住他！"
-    },
-    {
-      "id": "JT-406",
-      "kind": "line",
-      "act": 3,
-      "scene": "jieting_masu_tent",
-      "speaker": "旁白",
-      "text": "军士上前扣住我的手腕，把我从帐前带了出去。",
-      "next": "JT-END-ERA-ARREST",
-      "source": "doxcnT2cYndlDHRbybFCNrJSONb",
-      "sourceText": "旁白：军士上前扣住我的手腕，把我从帐前带了出去。"
-    },
-    {
       "id": "JT-410",
       "kind": "line",
       "act": 3,
@@ -5231,21 +5088,6 @@
         {
           "type": "ending",
           "id": "retreat"
-        }
-      ]
-    },
-    {
-      "id": "JT-END-ERA-ARREST",
-      "kind": "ending",
-      "act": 3,
-      "scene": "jieting_battlefield",
-      "speaker": "",
-      "text": "妖孽现世",
-      "ending": "era-arrest",
-      "effects": [
-        {
-          "type": "ending",
-          "id": "era-arrest"
         }
       ]
     },
@@ -5785,13 +5627,6 @@
       "success": false,
       "masuAlive": null,
       "description": "我跟着撤退的队伍离开，身后的街亭越来越远。这一回，终究没能守住。"
-    },
-    {
-      "id": "era-arrest",
-      "title": "妖孽现世",
-      "success": false,
-      "masuAlive": null,
-      "description": "我的解释没能让帐中的人信服。军士上前将我拿住，再没有人听我说街亭的事。"
     },
     {
       "id": "execution",

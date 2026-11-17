@@ -1,0 +1,184 @@
+{
+  "version": "v5",
+  "duration": 62.75,
+  "frames": 1506,
+  "shots": [
+    {
+      "id": "H01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\H01\\source.mp4",
+      "source_in": 0,
+      "source_out": 1.5,
+      "timeline_in": 0,
+      "timeline_out": 1.5,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "只取落手前的悬手；选定开场呼吸单独裁出后重做机器筛查。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "A01R",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\A01R\\source.mp4",
+      "source_in": 2.5,
+      "source_out": 8,
+      "timeline_in": 1.25,
+      "timeline_out": 6.75,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "剔除前2.5秒夸张火球，保留后5.5秒雨中残火渐弱。",
+      "transition_in": [
+        "focus_match",
+        0.25
+      ]
+    },
+    {
+      "id": "A03R",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.5\\R06\\source.mp4",
+      "source_in": 0.5,
+      "source_out": 2.75,
+      "timeline_in": 6.75,
+      "timeline_out": 9.0,
+      "speed": 1,
+      "pre_crop": "crop=1280:720:64:24,",
+      "selection_reason": "本轮A03和修正A03R均出现加火与口型，全部排除。选用已有正确H3 R06的0.5—2.75秒；不沿用其旧审核状态。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "B01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\B01\\source.mp4",
+      "source_in": 0,
+      "source_out": 7,
+      "timeline_in": 8.75,
+      "timeline_out": 15.75,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "完整人物、长刀与远阵；保留真实摄影运动和风中衣料。",
+      "transition_in": [
+        "focus_bridge",
+        0.25
+      ]
+    },
+    {
+      "id": "B03",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\B03\\source.mp4",
+      "source_in": 0,
+      "source_out": 5,
+      "timeline_in": 15.75,
+      "timeline_out": 20.75,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "选完整握柄到手指松开，下一镜承接落地。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "B02",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\B02\\source.mp4",
+      "source_in": 0,
+      "source_out": 2.75,
+      "timeline_in": 20.75,
+      "timeline_out": 23.5,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "原片前段实际落刀可与松手相接，截在后续抬刀前；后段排除。不倒放、不伪造落刀。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "C01K2",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v5\\C01K2\\source.mp4",
+      "source_in": 0,
+      "source_out": 7,
+      "timeline_in": 23.5,
+      "timeline_out": 30.5,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "替换为同机位凝望后叩首，首版新增人物弃用。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "C02",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\C02\\source.mp4",
+      "source_in": 0,
+      "source_out": 8,
+      "timeline_in": 30.5,
+      "timeline_out": 38.5,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "完整低扇到遮眼的连续动作。全片原速，保持监斩反打左下眼线；相机实际有推进，与固定机位原稿的差异记入抽查。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "D01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\D01\\source.mp4",
+      "source_in": 0.25,
+      "source_out": 8.0,
+      "timeline_in": 38.25,
+      "timeline_out": 46.0,
+      "speed": 1,
+      "pre_crop": "crop=768:432:350:30,",
+      "selection_reason": "原全景有落手，改为整幅上半身取景，手不在画幅内。属于正常重新取景，不做局部遮盖，不伪称全景动作符合原稿。",
+      "transition_in": [
+        "dark_occlusion",
+        0.25
+      ]
+    },
+    {
+      "id": "D03R",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\D03R\\source.mp4",
+      "source_in": 0,
+      "source_out": 5,
+      "timeline_in": 46.0,
+      "timeline_out": 51.0,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "实际回片已按联系表核对：手向上收住并持续离纸；保留完整5秒，原D03落手版弃用。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    },
+    {
+      "id": "D02",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\D02\\source.mp4",
+      "source_in": 0,
+      "source_out": 7,
+      "timeline_in": 51.0,
+      "timeline_out": 58.0,
+      "speed": 1,
+      "pre_crop": null,
+      "selection_reason": "保留灯焰收小、熄灭与余烟，以实际灯灭时刻决定最终选片。",
+      "transition_in": [
+        "hard_cut",
+        0
+      ]
+    }
+  ],
+  "title": [
+    57.75,
+    62.75
+  ],
+  "removed": [
+    "A04",
+    "A02",
+    "C03"
+  ],
+  "speed": 1,
+  "freeze_frames": false,
+  "user_review": "待review"
+}

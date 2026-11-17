@@ -2,7 +2,6 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ChapterSession } from '../web-demo/.build/GameStarter/web-demo/src/chapter-session.js';
-import { balance } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/supplies.js';
 import { npcTurn } from './npc-fixture.mjs';
 import { firstWait, firstTransfer, secondAuthorization, secondMilitary, secondComplete } from './dialogue-lines.mjs';
 const content=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.script.json',import.meta.url)));
@@ -233,19 +232,4 @@ test('undo and reload preserve the first answer, unfinished second input and rea
 test('language organization opens only in the real conversation and can revisit reasoning without losing the draft',()=>{
  const session=game();toCanvas(session);assert.equal(session.setThoughtMode('language'),false);assert.equal(session.snapshot().phase,'thoughts');
  const speaking=game();toExpression(speaking);speaking.selectEvidence('R01');speaking.setDraft('禀将军，这是我的措辞。');assert.ok(speaking.setThoughtMode('reasoning'));assert.equal(speaking.snapshot().notesReturn,'expression');assert.ok(speaking.setThoughtMode('language'));assert.equal(speaking.snapshot().phase,'expression');assert.equal(speaking.snapshot().story.draft,'禀将军，这是我的措辞。');assert.deepEqual(speaking.snapshot().story.selected,['R01']);
-});
-
-
-
-test('phone and 50-yuan allowance unlock only at action speech; retry/load never recharge and a new run clears items', async () => {
- const s=game(); firstExpression(s); assert.equal(s.canPrepareSupplies(),false); assert.equal(balance(s.snapshot().supplies),0);
- toCanvas(s); s.connect('C02','C03');  s.connect('R01','C06');s.connect('C06','C07'); 
- assert.equal(balance(s.snapshot().supplies),0); assert.equal(s.canPrepareSupplies(),false);
- assert.ok(s.followPlan()); read(s); assert.equal(balance(s.snapshot().supplies),0); assert.equal(s.canPrepareSupplies(),false);
- const beforeAction=s.serialize(); s.restore(beforeAction); assert.equal(balance(s.snapshot().supplies),0);
- act(s,'intercept-weiyan'); assert.equal(balance(s.snapshot().supplies),5000); assert.equal(s.canPrepareSupplies(),true);
- assert.ok(s.buyItem('batteries')); assert.equal(balance(s.snapshot().supplies),3610);
- s.setDraft(secondAuthorization); await s.confirmExpression(); s.acknowledgeReply(); assert.ok(s.reviseExpression());
- assert.equal(balance(s.snapshot().supplies),3610); s.restore(s.serialize()); assert.equal(balance(s.snapshot().supplies),3610);
- s.restart(); assert.equal(balance(s.snapshot().supplies),0); assert.deepEqual(s.snapshot().supplies.purchases,[]); assert.equal(s.canPrepareSupplies(),false);
 });

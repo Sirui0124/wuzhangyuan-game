@@ -3,18 +3,17 @@ import { portraitStage } from '../../game/portrait-stage';
 import type { JietingSession } from './session';
 import { esc, btn, personName, type Media } from '../../game/view-common';
 import { jietingExpression } from './expression-view';
-import { itemSystemEnabled } from '../../runtime-mode';
+
 import { sceneNames, speakerPortrait, sceneImage } from './presentation';
 import { deploymentAxisHTML } from './deployment-view';
 import { aiGuidanceHTML } from '../../game/ai-guidance';
 
-export type JietingViewState = { busy: boolean; error: string; online: boolean; phone: boolean; changedScene: boolean; readingText?: string; polishing?: boolean; questioning?: boolean; canUndoPolish?: boolean; retryAction?: 'polish' | 'speak' | 'question'; picker?: 'notes' | 'items'; detail?: string; previousBelow?: number };
+export type JietingViewState = { busy: boolean; error: string; online: boolean; changedScene: boolean; readingText?: string; polishing?: boolean; questioning?: boolean; canUndoPolish?: boolean; retryAction?: 'polish' | 'speak' | 'question'; picker?: 'notes' | 'items'; detail?: string; previousBelow?: number };
 export function jietingView(s: JietingSession, media: Media, v: JietingViewState) {
     const n = s.current, feedback = s.feedback;
     const expression = n.kind === 'open' && !feedback;
-    const background = n.scene === 'jieting_masu_tent' && s.state.supplies.worldItems?.acquired.includes('fuhu-wood-tiger')
-        ? media.scenes.jieting_masu_tent_after_gift ?? sceneImage(media, n.scene) : sceneImage(media, n.scene);
-    const hud = `<header class="game-hud dialogue-hud"><div class="dialogue-place"><span>街亭 · ${esc(sceneNames[n.scene])}</span></div><nav>${n.act > 1 ? btn('situation', '军情') : ''}${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
+    const background = sceneImage(media, n.scene);
+    const hud = `<header class="game-hud dialogue-hud"><div class="dialogue-place"><span>街亭 · ${esc(sceneNames[n.scene])}</span></div><nav>${n.act > 1 ? btn('situation', '军情') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
     const speaker = feedback?.speaker ?? n.speaker;
     const portrait = speakerPortrait[speaker] ?? (n.scene === 'jieting_masu_tent' && n.kind !== 'ending' ? 'masu' : n.scene === 'jieting_wangping_camp' && n.kind !== 'ending' ? 'wangping' : '');
     const pair = n.scene === 'jieting_camp' && ['马谡', '王平'].includes(speaker);

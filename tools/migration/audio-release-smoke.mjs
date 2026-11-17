@@ -37,13 +37,11 @@ try {
     for (const chapter of ['grain', 'jieting']) {
         const ctx = await context({ viewport: { width: 667, height: 375 }, isMobile: true, hasTouch: true });
         const page = await ctx.newPage();
-        await page.goto(base + (chapter === 'grain' ? '/?chapter=grain&playtest=item-candlestick' : '/?chapter=jieting'));
+        await page.goto(base + (chapter === 'grain' ? '/?chapter=grain&playtest=open1' : '/?chapter=jieting'));
         await page.waitForFunction(() => activeMusic().length === 1);
         const before = await page.evaluate(() => audioSources.filter(s => s.started && !s.source.loop).length);
-        if (chapter === 'grain') {
-            await page.locator('[data-action=own-tent]').tap(); await page.waitForTimeout(110);
-            await page.locator('[data-action=take-candlestick]').tap();
-        } else await page.locator('.dialogue-text').first().tap();
+        if (chapter === 'grain') { await page.locator('[data-action=records]').tap(); await page.locator('[data-action=close-modal]').tap(); }
+        else await page.locator('.dialogue-text').first().tap();
         await page.waitForTimeout(200);
         const after = await page.evaluate(() => audioSources.filter(s => s.started && !s.source.loop).length);
         assert.ok(after > before, `${chapter} interaction starts a sound`);

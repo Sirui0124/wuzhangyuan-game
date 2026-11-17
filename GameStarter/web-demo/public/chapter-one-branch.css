@@ -1,0 +1,24 @@
+/* Chapter graph reuses the shared dialogue and expression surfaces. */
+.branch-options { display:flex; flex-direction:column; gap:10px; }
+:root[data-ui-theme=xuan] #game-root .branch-scene .branch-preset-options { padding:4px 20px 12px; background:#181613c9; }
+:root[data-ui-theme=xuan] #game-root .branch-scene .branch-preset-options button { display:flex; align-items:center; justify-content:space-between; gap:18px; width:100%; min-height:46px; padding:10px 18px; border:0; border-radius:0; background:#c5af8c12; color:var(--dialogue-ink); font:20px/1.7 var(--serif); text-align:left; cursor:pointer; }
+:root[data-ui-theme=xuan] #game-root .branch-scene .branch-preset-options button:hover { background:#c5af8c24; }
+:root[data-ui-theme=xuan] #game-root .branch-scene .branch-preset-options i { font-style:normal; color:var(--dialogue-muted); }
+:root[data-ui-theme=xuan] #game-root .branch-scene .expression-help { margin:0; color:var(--dialogue-muted); font:16px/1.65 var(--serif); }
+.branch-scene .expression-help summary { cursor:pointer; }
+.branch-scene .expression-help p { margin:8px 0 0; }
+.branch-scene form { margin:0; }
+.branch-scene #branch-input::placeholder { color:#b9b1a3; opacity:.8; }
+#game-root:has(.branch-scene) > .character-identity { display:none; }
+/* Brief discovery feedback; the clue remains available in the shared reference popover. */
+.branch-clue-gained { position:fixed; z-index:8; left:4vw; top:90px; display:flex; align-items:center; gap:18px; padding:12px 22px; color:#e8dfce; background:linear-gradient(90deg,#1c1913e8,#28231bba,transparent); border-left:2px solid #b69a65; pointer-events:none; font:20px/1.6 var(--serif); animation:branch-clue-arrive 4.5s both; }
+.branch-clue-gained small { color:#c1ad89; font-size:16px; }
+@keyframes branch-clue-arrive { 0% { opacity:0; transform:translateY(10px); } 12%,80% { opacity:1; transform:translateY(0); } 100% { opacity:0; transform:translateY(-6px); } }
+@media(prefers-reduced-motion:reduce) { .branch-clue-gained { animation:branch-clue-fade 4.5s both; } }
+@keyframes branch-clue-fade { 0%,80% { opacity:1; } 100% { opacity:0; } }
+.branch-scene[data-phase=explore] .scene-hotspot>i { animation:branch-notice-pulse 2s ease-in-out infinite; }
+.branch-scene[data-reading-notice=true] .scene-image { animation:branch-notice-focus .55s ease-out both; }
+@keyframes branch-notice-pulse { 50% { box-shadow:0 0 0 12px #e0cf9f16,0 0 20px #e0cf9f30; } }
+@keyframes branch-notice-focus { from { opacity:.4; transform:scale(1.025); } to { opacity:1; transform:scale(1); } }
+@media(max-height:500px) { .branch-clue-gained { top:50px; padding:4px 14px; font-size:16px; } .branch-clue-gained small { font-size:14px; } }
+@media(prefers-reduced-motion:reduce) { .branch-scene[data-phase=explore] .scene-hotspot>i,.branch-scene[data-reading-notice=true] .scene-image { animation:none; } }

@@ -41,7 +41,7 @@ try {
     const restored=await inspect();assert.deepEqual(restored.backups,value.backups);
     if(sample.blocked) assert.equal(restored.raw,sample.raw);
     else {
-      const narrative=raw=>{const {personality,...state}=JSON.parse(raw);return state;};
+      const narrative=raw=>JSON.parse(raw);
       assert.deepEqual(narrative(restored.raw),narrative(value.raw));
     }
     checks.push(`${sample.name}: exact source preserved across initialization, controls and reload`);

@@ -7,7 +7,7 @@ import {createStaticServer} from '../../GameStarter/web-demo/serve.mjs';
 const build=resolve(process.env.GAME_BUILD||'GameStarter/web-demo/.build');
 const {JietingSession}=await import(pathToFileURL(resolve(build,'GameStarter/web-demo/src/chapters/chapter-three/session.js')));
 const story=JSON.parse(readFileSync(resolve(build,'story/chapter-three.story.json')));
-const oldThird=new JietingSession(story,undefined,{aiEnabled:false,phoneAllowed:false}).state;
+const oldThird=new JietingSession(story,undefined,{aiEnabled:false}).state;
 const out=resolve('outputs/chapter-restart-20261028');mkdirSync(out,{recursive:true});
 const server=createStaticServer({root:build});await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const browser=await chromium.launch({channel:'chrome',headless:true}),base=`http://127.0.0.1:${server.address().port}`;

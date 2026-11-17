@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bronze" x2=".25" y2="1">
+      <stop stop-color="#b39a6a"/><stop offset=".22" stop-color="#6e5a3d"/>
+      <stop offset=".55" stop-color="#342d22"/><stop offset=".8" stop-color="#88704a"/>
+      <stop offset="1" stop-color="#201b15"/>
+    </linearGradient>
+    <g id="corner" stroke-linejoin="miter">
+      <path d="M3 30V3h27v8H11v19z" fill="url(#bronze)" stroke="#1b1712" stroke-width="2"/>
+      <path d="M5 28V5h23M8 26V8h18" fill="none" stroke="#b59b6a" stroke-width="1" opacity=".75"/>
+      <path d="M13 14h12v11H14v-7h6v3h-3" fill="none" stroke="#967c51" stroke-width="2"/>
+      <circle cx="7" cy="7" r="1.5" fill="#30291c" stroke="#c2a779" stroke-width=".7"/>
+    </g>
+  </defs>
+  <rect x="2" y="2" width="508" height="508" fill="none" stroke="#100e0c" stroke-width="4"/>
+  <rect x="5" y="5" width="502" height="502" fill="none" stroke="url(#bronze)" stroke-width="5"/>
+  <rect x="9" y="9" width="494" height="494" fill="none" stroke="#b5986159" stroke-width="1"/>
+  <rect x="12" y="12" width="488" height="488" fill="none" stroke="#100e0c" stroke-width="3"/>
+  <use href="#corner"/><use href="#corner" transform="translate(512 0) rotate(90)"/>
+  <use href="#corner" transform="translate(512 512) rotate(180)"/>
+  <use href="#corner" transform="translate(0 512) rotate(270)"/>
+</svg>

@@ -1,3 +1,4 @@
+import ts from 'typescript';
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, lstatSync, rmSync } from 'node:fs';
 import { resolve, dirname, relative, sep, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -8,8 +9,7 @@ const slash = value => value.replaceAll('\\', '/');
 const hash = path => createHash('sha256').update(readFileSync(path)).digest('hex');
 const comparisonPages = new Set(['art-review.html', 'modal-suite.html', 'thought-options.html', 'menu-button-options.html']);
 const comparisonModules = new Set(['art-review.js', 'art-review-layout.js', 'modal-suite.js', 'thought-options.js']);
-const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'personality.mjs', 'tts.mjs', 'tts-protocol.mjs', 'package.json'];
-const runtimeRules = ['open-answer-rubric.json', 'open-answer-fixtures.json'];
+const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'tts.mjs', 'tts-protocol.mjs', 'package.json', 'chapter-one-ai.mjs', 'chapter-one-http.mjs'];
 
 export function excludedReason(path) {
     path = slash(path);
@@ -50,7 +50,6 @@ export function validatePayload(gameRoot) {
         'web/story/chapter-two.films.json', 'web/story/chapter-three.story.json', 'web/cinematics.json',
         'web/audio/manifest.json', 'web/art-review/themes.css', 'web/art-review/mindmap.css',
         'GameStarter/server/server.mjs', 'GameStarter/server/package.json', 'GameStarter/web-demo/serve.mjs',
-        'docs/design/personality/open-answer-rubric.json', 'docs/design/personality/open-answer-fixtures.json',
         'node_modules/ws/package.json', 'node_modules/ws/wrapper.mjs', 'node_modules/ws/lib/websocket.js', 'node_modules/ws/LICENSE',
     ];
     const errors = [], checks = { requiredFiles: 0, moduleImports: 0, staticReferences: 0 };
@@ -110,7 +109,21 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
     }
     for (const name of backendFiles) add(resolve(root, 'GameStarter/server', name), `GameStarter/server/${name}`, 'backend');
     for (const name of ['server.mjs', 'ai.mjs', 'package.json', '.build/data.js', '.build/engine.js']) add(resolve(root, 'demos/yiling-rescue', name), `demos/yiling-rescue/${name}`, 'rescue-backend');
-    for (const name of runtimeRules) add(resolve(root, 'docs/design/personality', name), `docs/design/personality/${name}`, 'backend-rules');
+    // The integrated command-map backend must ship without relying on Node's TS loader.
+    const generated = resolve(target, 'compiled-runtime'); mkdirSync(generated, { recursive: true });
+    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'fu-ai.mjs']) {
+        const source = resolve(root, 'demos/yiling-ui-prototype-v1', name);
+        if (name === 'campaign-engine.mjs') {
+            const compiled = resolve(generated, name);
+            writeFileSync(compiled, readFileSync(source, 'utf8').replace('furong-rescue.ts', 'furong-rescue.mjs'));
+            add(compiled, `demos/yiling-ui-prototype-v1/${name}`, 'command-backend');
+        } else add(source, `demos/yiling-ui-prototype-v1/${name}`, 'command-backend');
+    }
+    const designDir = 'docs/design/chapter-four-ai-library-20261117';
+    const ruleFile = resolve(generated, 'furong-rescue.mjs');
+    writeFileSync(ruleFile, ts.transpileModule(readFileSync(resolve(root, designDir, 'furong-rescue.ts'), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 } }).outputText);
+    add(ruleFile, `${designDir}/furong-rescue.mjs`, 'command-rules');
+    add(resolve(root, designDir, 'furong-rescue.design.json'), `${designDir}/furong-rescue.design.json`, 'command-rules');
     add(resolve(root, 'GameStarter/web-demo/serve.mjs'), 'GameStarter/web-demo/serve.mjs', 'static-server');
     for (const source of walk(resolve(root, 'node_modules/ws'))) {
         const name = slash(relative(resolve(root, 'node_modules/ws'), source));

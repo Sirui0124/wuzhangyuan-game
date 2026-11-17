@@ -1,4 +1,3 @@
-import { parseEraAssessment, isEraFailure, eraArrestReply } from '../../phone/era-judgment';
 import { jietingCriteria, jietingReplyLimits, type JietingEvaluationRequest, type JietingJudgment, type JietingCriteria, type JietingAcceptedReason, type JietingSpecial, type JietingDeploymentTask } from './ai-contracts';
 import { argumentSupported, argumentTopics, grantForJudgment } from './persuasion';
 import type { JietingRoundRecord } from './types';
@@ -74,18 +73,11 @@ export function parseJietingJudgment(rawText: string, request: JietingEvaluation
     catch { return fail(); }
     if (raw.version !== 1) fail();
     const out = base(request), c = request.context;
-    const shown = (c.items ?? []).filter(i => i.source === 'phone' && i.available && i.shown && i.observedEffect?.trim());
-    const era = parseEraAssessment(raw.eraAssessment, shown.map(i => i.id), request.input);
-    if (isEraFailure(era)) {
-        return { ...out, special: { kind: 'era-arrest', quote: era.quote, reason: era.reason, itemIds: era.itemIds }, response: eraArrestReply };
-    }
     const offense = explicitAbuse(raw.offense, request.input);
     if (offense) return { ...out, special: offense, response: '军情怎样，你尽管说。可你这番辱骂威胁，岂能当作进言？' };
     if (raw.valid === false) throw new Error('这句话的意思还不明确，请补充想请将军怎样安排。');
     if (raw.valid !== true) fail();
     const current = new Set(c.ownedClues.filter(e => e.current !== false).map(e => e.id));
-    const usableItems = new Set((c.items ?? []).filter(i => i.available && i.shown && i.tested && i.observedEffect?.trim()).map(i => i.id));
-    const consumableItems = new Set((c.items ?? []).filter(i => i.source === 'phone' && usableItems.has(i.id)).map(i => i.id));
     if (!Array.isArray(raw.factualIssues) || raw.factualIssues.length > 8) fail();
     for (const problem of raw.factualIssues) {
         const p = object(problem); const quote = string(p.quote, 1500); string(p.reason, 240);
@@ -97,15 +89,13 @@ export function parseJietingJudgment(rawText: string, request: JietingEvaluation
     const playerTexts = [request.input, ...allowedReasons.map(r => r.text)];
     const checks = object(raw.criteria);
     const accepted: JietingAcceptedReason[] = [];
-    const checkedItems = new Map<string, string[]>();
     for (const key of jietingCriteria) {
         const check = object(checks[key]); const value = boolean(check.value);
         const quote = string(check.quote, 1500, !value), reason = string(check.reason, 240, !value);
-        const evidenceIds = ids(check.evidenceIds, current), itemIds = ids(check.itemIds, usableItems);
+        const evidenceIds = ids(check.evidenceIds, current);
         if (quote && !playerTexts.some(t => t.includes(quote))) fail();
-        if (value && (!quote || !reason || (!evidenceIds.length && !itemIds.length))) fail();
+        if (value && (!quote || !reason || !evidenceIds.length)) fail();
         out.criteria[key] = value;
-        checkedItems.set(key, value ? itemIds : []);
         if (value && out.criteria.factsReliable && evidenceIds.length)
             accepted.push({ text: quote, clueIds: evidenceIds, ...(c.round ? { round: c.round } : {}) });
     }
@@ -165,8 +155,7 @@ export function parseJietingJudgment(rawText: string, request: JietingEvaluation
     }
     const relevant = c.phase === 'reinforcement' ? ['gapEstablished', 'reinforcementUse', 'concernAnswered']
         : c.phase === 'withdrawal' ? ['risk', 'route', 'reception'] : ['motive', 'means', 'reception', 'withdrawal'];
-    out.usedItemIds = out.status === 'final' && ['great', 'small', 'accepted'].includes(out.outcome)
-        ? [...new Set(relevant.flatMap(key => checkedItems.get(key) ?? []).filter(id => consumableItems.has(id)))] : [];
+
     if (!Array.isArray(raw.deploymentTasks) || raw.deploymentTasks.length > 3) fail();
     const tasks: JietingDeploymentTask[] = [];
     for (const value of raw.deploymentTasks) {

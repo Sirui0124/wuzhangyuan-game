@@ -211,7 +211,4 @@
 }
 
 @media(max-width:700px) {
- :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher { position:static;inset:auto;display:inline-flex;flex-direction:row;gap:4px;width:auto;min-height:30px;padding:2px 6px;border-radius:3px;font-size:16px;box-shadow:none; }
- :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher svg { width:14px;height:20px; }
- :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher small { display:none; }
 }

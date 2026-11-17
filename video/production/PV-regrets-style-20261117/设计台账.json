@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-17",
+  "scope": "仅设计，不生成、不改绑定",
+  "units": [
+    {
+      "id": "A01R",
+      "name": "雨中烧损营寨真实残木",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\A01R-风格优化Prompt.md",
+      "prompt状态": "待review",
+      "当前状态": "待生成",
+      "duration": 8,
+      "priority": "必需补拍",
+      "reference_paths": [],
+      "style_reference": "D:\\Projects\\Game\\江山北望-影像风格研究-20261117\\精选抽帧\\C-终章山河\\354.00s.jpg",
+      "style_upload": false,
+      "sha256": "83633834904adfd0d331ad66c8255410042635fd928e643a1bb4234477dfd114",
+      "current_video": null,
+      "source_version": "v4"
+    },
+    {
+      "id": "C01K",
+      "name": "马谡凝望丞相后叩首",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\C01K-风格优化Prompt.md",
+      "prompt状态": "待review",
+      "当前状态": "待生成",
+      "duration": 7,
+      "priority": "必需补拍",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png"
+      ],
+      "style_reference": "D:\\Projects\\Game\\江山北望-影像风格研究-20261117\\精选抽帧\\D-结尾人物\\012.00s.jpg",
+      "style_upload": false,
+      "sha256": "6d5275e7b673497800ffa5c37de4592ce9abd83b0e0f8ed11869050dacfec189",
+      "current_video": null,
+      "source_version": "v4"
+    },
+    {
+      "id": "C02",
+      "name": "监斩·完整举扇",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\C02-风格优化Prompt.md",
+      "prompt状态": "待review",
+      "当前状态": "待生成",
+      "duration": 8,
+      "priority": "条件补拍：现有反打连续性不合格时",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E10-诸葛亮监斩中景.png"
+      ],
+      "style_reference": "D:\\Projects\\Game\\江山北望-影像风格研究-20261117\\精选抽帧\\D-结尾人物\\012.00s.jpg",
+      "style_upload": false,
+      "sha256": "0ab6a39fe8128e07850b8a4580f0ac3f2a101a54832fd045a42aae6431895e74",
+      "current_video": null,
+      "source_version": "v2/v3"
+    },
+    {
+      "id": "D01",
+      "name": "五丈原·帐中地图",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\D01-风格优化Prompt.md",
+      "prompt状态": "待review",
+      "当前状态": "待生成",
+      "duration": 8,
+      "priority": "条件补拍：恢复帐内空间而不暴露落手错误",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "style_reference": "D:\\Projects\\Game\\江山北望-影像风格研究-20261117\\精选抽帧\\C-终章山河\\354.00s.jpg",
+      "style_upload": false,
+      "sha256": "6998f880b44b1c2e2e6cd184799658f8ccc87014f0877f1f0c5dcb9c885220b4",
+      "current_video": null,
+      "source_version": "v2/v3"
+    },
+    {
+      "id": "B02",
+      "name": "刀留泥地·红缨静下",
+      "prompt_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-style-20261117\\B02-风格优化Prompt.md",
+      "prompt状态": "待review",
+      "当前状态": "待生成",
+      "duration": 4,
+      "priority": "条件补拍：既有落刀后结果停留不足时",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E06-关羽落刀.png"
+      ],
+      "style_reference": "D:\\Projects\\Game\\江山北望-影像风格研究-20261117\\精选抽帧\\C-终章山河\\354.00s.jpg",
+      "style_upload": false,
+      "sha256": "dc7cb6eb16fcb74d02d5b09755104dba65784d04ae252c82941933e396b4748b",
+      "current_video": null,
+      "source_version": "v2/v3"
+    }
+  ],
+  "checks": "5份正文回读哈希一致；所有列出图路径存在；未做新视频视听检查"
+}

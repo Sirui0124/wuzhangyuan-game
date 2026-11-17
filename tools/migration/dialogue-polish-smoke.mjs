@@ -24,7 +24,7 @@ try{
     if(!prompt.startsWith('你帮助玩家')&&!prompt.startsWith('核对一段'))return route.fulfill({headers,json:{text:'{}',responseId:'unrelated'}});
     calls++;
     if(hold)await new Promise(r=>release=r);
-    const value=prompt.startsWith('你帮助玩家')?{status:'ok',text:c.input.words+' 请听我把这些依据说清。',evidenceIds:c.input.evidence.map(e=>e.id)}:{facts:true,intent:true,coverage:true,logic:true,items:true,reason:''};
+    const value=prompt.startsWith('你帮助玩家')?{status:'ok',text:c.input.words+' 请听我把这些依据说清。',evidenceIds:c.input.evidence.map(e=>e.id)}:{facts:true,intent:true,coverage:true,logic:true,reason:''};
     try{await route.fulfill({headers,json:{text:JSON.stringify(addDialogueAuditReceipts(value,prompt)),responseId:'polish-fixture'}});}catch{}
     return;
    }
@@ -35,7 +35,7 @@ try{
   const before=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
   await page.locator('[data-action=polish-expression]').click();await page.locator('[data-action=undo-polish]').waitFor();assert.equal(calls,1);
   const after=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
-  for(const field of ['node','chosen','visited','judgments','scores','roundResults','supplies'])assert.deepEqual(after[field],before[field],field);
+  for(const field of ['node','chosen','visited','judgments','scores','roundResults'])assert.deepEqual(after[field],before[field],field);
   assert.equal(await page.locator('#player-expression').inputValue(),c.input.words+' 请听我把这些依据说清。');
   await page.screenshot({path:out+'/'+c.id+'-ui.png'});
   await page.locator('[data-action=undo-polish]').click();assert.equal(await page.locator('#player-expression').inputValue(),c.input.words);

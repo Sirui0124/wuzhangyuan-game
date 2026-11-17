@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ChapterSession } from '../web-demo/.build/GameStarter/web-demo/src/chapter-session.js';
 import { offlineExpressionAgents, offlineWeiyanTurn } from '../web-demo/.build/GameStarter/web-demo/src/offline-expression-agents.js';
-import { balance } from '../web-demo/.build/GameStarter/web-demo/src/phone/supplies.js';
 import { firstTransfer, secondComplete, secondAuthorization, secondMilitary } from './dialogue-lines.mjs';
 const built = path => JSON.parse(readFileSync(new URL(`../web-demo/.build/${path}`, import.meta.url)));
 const script = built('story/chapter-one.script.json'), flow = built('story/chapter-one.flow.json');
@@ -25,9 +24,9 @@ test('offline first chapter completes both rounds and the final report without a
     for (const id of ['ask-guard', 'ask-relay', 'ask-scout']) act(g, id);
     g.beginThinking(); g.connect('C02', 'C03'); g.connect('R01', 'C06');g.connect('C06','C07'); assert.ok(g.followPlan()); read(g); act(g, 'intercept-weiyan');
     for (const id of ['C02', 'C03', 'C06', 'C08']) if (!g.snapshot().story.selected.includes(id)) g.selectEvidence(id);
-    assert.equal(balance(g.snapshot().supplies), 0); assert.equal(g.canPrepareSupplies(), false);
+
     assert.ok(await g.generateExpression()); const restored = game(); restored.restore(g.serialize());
-    assert.equal(restored.snapshot().composition.provenance, 'local'); assert.equal(balance(restored.snapshot().supplies), 0);
+    assert.equal(restored.snapshot().composition.provenance, 'local');
     assert.ok(await restored.confirmExpression()); assert.equal(restored.snapshot().speech.result, 'ok');
     assert.equal(restored.snapshot().story.flags.REPORT_CLOSED, undefined); restored.acknowledgeReply(); read(restored);
     while (restored.snapshot().phase === 'cinematic') { restored.finishCinematic(); read(restored); }
@@ -56,20 +55,6 @@ test('first-round fallback respects the unacquired camp situation', () => {
     assert.equal(offlineWeiyanTurn({ ...input, evidence: input.evidence.filter(e => e.id !== 'T02') }).classification.code, 'R1-RETRY');
 });
 
-test('mode gates phone purchase and attachment, preserves settled records and grants only once', () => {
-    const g = fixture(game());
-    for (const mode of ['offline', 'ai']) {
-        g.setRuntimeMode(mode); assert.equal(g.canPrepareSupplies(), false); assert.equal(g.buyItem('batteries'), false);
-    }
-    g.setRuntimeMode('ai-phone'); assert.equal(g.canPrepareSupplies(), true); assert.equal(balance(g.snapshot().supplies), 5000);
-    assert.ok(g.buyItem('batteries')); assert.ok(g.attachItem('batteries'));
-    g.setRuntimeMode('ai'); assert.deepEqual(g.snapshot().supplies.attached, []); assert.equal(g.attachItem('batteries'), false);
-    const restored = game('offline'); restored.restore(g.serialize());
-    assert.deepEqual(restored.snapshot().supplies.purchases, ['batteries']); assert.equal(restored.canPrepareSupplies(), false);
-    restored.setRuntimeMode('ai-phone'); assert.equal(balance(restored.snapshot().supplies), 3610);
-    assert.equal(restored.snapshot().supplies.rewards.length, 1);
-});
-
 test('switching mode cancels a late judgment and cannot commit an unread result from another mode', async () => {
     let resolve;
     const g = fixture(game('ai', input => new Promise(done => { resolve = () => done(offlineWeiyanTurn(input)); })), 1);
@@ -93,25 +78,24 @@ test('local reference generation retains input literally and cites only selected
 });
 
 
-test('AI connection fallback preserves AI preference without reviving the retired phone', async () => {
+test('AI connection fallback preserves AI preference through connection changes', async () => {
     const modes = await import('../web-demo/.build/GameStarter/web-demo/src/runtime-mode.js');
     const values = new Map(), originalStorage = globalThis.localStorage, originalFetch = globalThis.fetch;
     globalThis.localStorage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
     try {
         modes.setRuntimeConnection(true);
-        assert.equal(modes.readRuntimeMode(), 'ai'); assert.equal(modes.readPhonePreference(), false);
+        assert.equal(modes.readRuntimeMode(), 'ai');
         let requests = 0;
         globalThis.fetch = async url => { assert.match(url, /\/health$/); requests++; return { ok: true, json: async () => ({ configured: false }) }; };
         assert.equal(await modes.initializeRuntimeMode(), 'offline'); assert.equal(requests, 1);
         assert.equal(values.has(modes.RUNTIME_MODE_KEY), false);
         assert.equal(modes.setRuntimeConnection(true), 'ai');
-        modes.saveRuntimeMode('ai'); assert.equal(modes.readPhonePreference(), false);
+        modes.saveRuntimeMode('ai');
         assert.equal(modes.setRuntimeConnection(false), 'offline');
         assert.equal(modes.setRuntimeConnection(true), 'ai');
-        modes.saveItemSystemEnabled(false); modes.saveRuntimeMode('offline'); assert.equal(modes.readPhonePreference(), false);
+        modes.saveRuntimeMode('offline');
         assert.equal(modes.setRuntimeConnection(true), 'offline');
-        modes.saveItemSystemEnabled(true);
-        modes.saveRuntimeMode('ai-phone'); assert.equal(values.get(modes.RUNTIME_MODE_KEY), 'ai'); modes.saveRuntimeMode('offline'); assert.equal(modes.readPhonePreference(), false);
+        modes.saveRuntimeMode('offline');
     } finally { globalThis.fetch = originalFetch; globalThis.localStorage = originalStorage; modes.setRuntimeConnection(true); }
 });
 

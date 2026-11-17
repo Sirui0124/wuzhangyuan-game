@@ -10,9 +10,9 @@ const story=JSON.parse(readFileSync(new URL('../../content/chapters/jieting/chap
 const words='两处都要守，下山还得列阵，等交战再调兵怕是来不及。请另派一队补侧路，正面的兵不撤，进退仍听将军号令。';
 const fixture=()=>createJietingPlaytest(story,'reinforcement',{aiEnabled:true,phoneAllowed:false});
 function raw(s,amount){
-    const input=s.state.draft,criteria=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],itemIds:[],reason:''}]));
-    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])criteria[k]={value:true,quote:input,evidenceIds:['JT-C04','JT-C08'],itemIds:[],reason:'两处岗位与行进列阵时间支持提前增援'};
-    return {version:1,valid:true,factsReliable:true,factualIssues:[],criteria,argument:{topic:'road',quote:input,clueIds:['JT-C04','JT-C08']},reasoning:{linked:true,quote:input,evidenceIds:['JT-C04','JT-C08'],conclusion:'须提前补守侧路'},reinforcementAssessment:{supportedTroops:amount,quote:input,reason:'按本次用兵缺口和安排的完整度评估'},maintain:{value:false,quote:''},deploymentTasks:[{task:'road',quote:input}],acknowledgment:'早些补上侧路，我这里也好留兵等战机。这个办法可以商量。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},eraAssessment:{version:1,severeMismatch:false,explanation:'coherent',itemIds:[],quote:'',reason:'无异常展示'}};
+    const input=s.state.draft,criteria=Object.fromEntries(jietingCriteria.map(k=>[k,{value:false,quote:'',evidenceIds:[],reason:''}]));
+    for(const k of ['gapEstablished','reinforcementUse','concernAnswered'])criteria[k]={value:true,quote:input,evidenceIds:['JT-C04','JT-C08'],reason:'两处岗位与行进列阵时间支持提前增援'};
+    return {version:1,valid:true,factsReliable:true,factualIssues:[],criteria,argument:{topic:'road',quote:input,clueIds:['JT-C04','JT-C08']},reasoning:{linked:true,quote:input,evidenceIds:['JT-C04','JT-C08'],conclusion:'须提前补守侧路'},reinforcementAssessment:{supportedTroops:amount,quote:input,reason:'按本次用兵缺口和安排的完整度评估'},maintain:{value:false,quote:''},deploymentTasks:[{task:'road',quote:input}],acknowledgment:'早些补上侧路，我这里也好留兵等战机。这个办法可以商量。',followup:{needed:false,question:''},offense:{direct:false,target:'none',kind:'none',context:'asserted',quote:'',reason:'正常进言'},};
 }
 const parse=(s,r)=>parseJietingJudgment(JSON.stringify(r),{context:s.getEvaluationContext(),input:s.state.draft,clueIds:[],confirmed:true});
 function until(s,predicate){for(let i=0;i<150&&!predicate();i++)assert.ok(s.advance(),s.current.id);assert.ok(predicate());}
@@ -28,7 +28,7 @@ test('continuous assessments preserve nonstandard integer amounts through order,
 test('the full integer range is accepted, invalid values retry, partial concern caps at 3000, final target caps exact shortfall',()=>{
     for(const n of [0,1,500,2300,3800,4999,5000]){const s=fixture();s.state.draft=words;assert.equal(parse(s,raw(s,n)).reinforcementAssessment.supportedTroops,n);}
     for(const n of [-1,5001,Infinity,2.5]){const s=fixture();s.state.draft=words;assert.throws(()=>parse(s,raw(s,n)),/保留/);}
-    const s=fixture();s.state.draft=words;const r=raw(s,4800);r.criteria.concernAnswered={value:false,quote:'',evidenceIds:[],itemIds:[],reason:''};assert.equal(parse(s,r).reinforcementAssessment.supportedTroops,3000);
+    const s=fixture();s.state.draft=words;const r=raw(s,4800);r.criteria.concernAnswered={value:false,quote:'',evidenceIds:[],reason:''};assert.equal(parse(s,r).reinforcementAssessment.supportedTroops,3000);
     assert.equal(reinforcementGrant({factsReliable:true,gapEstablished:true,reinforcementUse:true,concernAnswered:true},{topic:'road',quote:words,clueIds:[]},[],19583,false,3800).troops,417);
     assert.equal(troopWords(3800),'三千八百');assert.equal(troopWords(1400),'一千四百');assert.equal(troopWords(1010),'一千零一十');assert.equal(troopWords(12),'十二');
 });
