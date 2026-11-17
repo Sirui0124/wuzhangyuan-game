@@ -1,3 +1,4 @@
+import { projectDecision } from '../../narrative/presentation';
 import { acquireWorldItem, sellWorldItem, freshWorldInventory, ownedWorldItems } from '../../inventory/world-items';
 import { itemSystemEnabled } from '../../runtime-mode';
 import { indexStoryGraph } from '../../session/story-graph';
@@ -49,6 +50,7 @@ export class JietingSession {
         }
         return { ...raw, text: text.replaceAll('{below}', this.below.toLocaleString('en-US')).replaceAll('{above}', this.above.toLocaleString('en-US')) };
     }
+    get decision() { return (this.current.kind === 'choice' || this.current.kind === 'open') && !this.feedback ? projectDecision(this.current, this.options) : undefined; }
     get options() { return (this.current.options ?? []).filter(o => !o.when || this.matches(o.when)).map(o => o.id === 'JT-O171' && this.state.roundResults[1]?.source === 'ai' ? { ...o, text: '领队已经报过，各处都照原令分了人，正面和侧路仍得守。另派人护水，就不必抽走已经有差事的队伍。' } : o); }
     get clues() {
         return this.story.clues.filter(c => this.state.clueIds.includes(c.id)).map(c => ({ ...c,

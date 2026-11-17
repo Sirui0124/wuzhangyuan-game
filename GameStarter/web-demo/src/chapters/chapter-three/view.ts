@@ -1,3 +1,4 @@
+import { narrativeChoiceHTML } from '../../game/narrative-choice';
 import { portraitStage } from '../../game/portrait-stage';
 import type { JietingSession } from './session';
 import { esc, btn, personName, type Media } from '../../game/view-common';
@@ -26,7 +27,7 @@ export function jietingView(s: JietingSession, media: Media, v: JietingViewState
     }
     if (expression && v.online) return jietingExpression(s, v, hud, background);
     const choice = !feedback && (n.kind === 'choice' || expression);
-    const body = choice ? `<section class="dialogue-box scout-choice">${n.text ? `<h2 class="dialogue-speaker">${esc(n.text)}</h2>` : ''}${s.options.map(o => `<button data-option="${esc(o.id)}"><span>${esc(o.text)}</span><i>›</i></button>`).join('')}</section>` : `<section class="dialogue-box dialogue-advance" tabindex="0" data-action="next"><span class="dialogue-speaker">${esc(personName(speaker))}</span><span class="dialogue-reading"><span class="dialogue-text" id="spoken-line">${esc(feedback?.text ?? v.readingText ?? n.text)}</span></span></section><p class="dialogue-key-hint">${feedback?.followup ? '继续回答 · 空格' : '点击继续 · 空格'}</p>`;
+    const body = choice ? narrativeChoiceHTML(s.decision!, 'data-option') : `<section class="dialogue-box dialogue-advance" tabindex="0" data-action="next"><span class="dialogue-speaker">${esc(personName(speaker))}</span><span class="dialogue-reading"><span class="dialogue-text" id="spoken-line">${esc(feedback?.text ?? v.readingText ?? n.text)}</span></span></section><p class="dialogue-key-hint">${feedback?.followup ? '继续回答 · 空格' : '点击继续 · 空格'}</p>`;
     const axis = deploymentAxisHTML(s, v.previousBelow);
     const guidance = !v.online && (/^JT-R[1-5]-FIXED$/.test(n.id) || expression) ? aiGuidanceHTML('jieting', false) : '';
     const content = guidance ? body.replace('</section>', guidance + '</section>') : body;

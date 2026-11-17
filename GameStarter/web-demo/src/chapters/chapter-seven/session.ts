@@ -1,3 +1,4 @@
+import { projectDecision } from '../../narrative/presentation';
 import { campaignEvidence, validateCampaign, type CampaignSnapshot } from '../../campaign/results';
 import { indexStoryGraph } from '../../session/story-graph';
 export type PangtongEnding = { id:string; title:string; kind:'investigation'|'complete'; description:string };
@@ -40,6 +41,7 @@ export class PangtongSession {
             savedReflection:e.savedStrong?'不止一处经历证明，有人确实被带回来了。我可以讲出他们的去处，却不能替天下许诺。':'我手中的经历还不完整。但安置处那几个等着出营的人，就在眼前，不需要拿遥远的胜负证明他们值得活。'};
         n.text=n.text.replace(/\{(\w+)\}/g,(_,key:string)=>{if(!(key in replacements)) throw new Error('未解析的剧情字段');return replacements[key];});return n;
     }
+    get decision() { return this.current.kind === 'choice' ? projectDecision(this.current, this.current.options ?? []) : undefined; }
     get ending() {return this.story.endings.find(e=>e.id===this.current.ending);}
     get transcript() {return copy(this.lines);}
     advance(option?:string):boolean {

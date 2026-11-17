@@ -8,7 +8,7 @@ import { parseItemDecision, balance, buySuggestedSupply } from '../web-demo/.bui
 import { GrainSession } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/session.js';
 import { parseJudgment, judgeOpenDialogue } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/open-dialogue.js';
 import { GameApi } from '../web-demo/.build/GameStarter/assets/scripts/GameApi.js';
-import { toggleGrainItem, grainPhone } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/phone.js';
+import { toggleGrainItem } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/legacy-item-attachment.js';
 import { npcTurn } from './npc-fixture.mjs';
 const json = p => JSON.parse(readFileSync(new URL(p, import.meta.url), 'utf8'));
 const content = json('../../content/chapters/wuzhang/chapter-one.script.json'), flow = json('../../content/chapters/wuzhang/chapter-one.flow.json');
@@ -105,7 +105,6 @@ test('chapter two arrests before progression or gift scoring, survives reload an
     const judgment = parseJudgment(JSON.stringify({ eraFailure: era() }), words, rubric, [item.id]);
     assert.ok(s.submit(judgment)); assert.deepEqual(s.scores, scores); assert.equal(s.state.end, null);
     assert.deepEqual(s.state.gifts, []); assert.deepEqual(s.state.supplies.consumed, []);
-    assert.equal(grainPhone(() => s, () => {}).canPrepareSupplies(), false);
     toggleGrainItem(s, item.id); assert.deepEqual(s.state.supplies.attached, [item.id]);
     assert.equal(s.submit(judgment), false); assert.ok(s.advance()); assert.equal(s.state.end, 'era-arrest');
     assert.equal(s.current.id, before.node); assert.equal(s.advance(), false);

@@ -1,27 +1,21 @@
-type Receipt = { root: HTMLElement; text: string; reduced: boolean; origin?: DOMRect; kind: 'clue' | 'item' };
+type Receipt = { root: HTMLElement; text: string; reduced: boolean; origin?: DOMRect };
 const pending: Receipt[] = [];
 let frame = 0, active: Animation | null = null;
 const pulses = new Set<Animation>();
 
-export function clearClueReceipts() {
+export function clearItemReceipts() {
     cancelAnimationFrame(frame); frame = 0; pending.length = 0;
     const previous = active; active = null; previous?.cancel();
     for (const pulse of pulses) pulse.cancel();
     pulses.clear();
-    document.querySelectorAll('.clue-receipt').forEach(node => node.remove());
-    const status = document.querySelector('#clue-receipt-status');
+    document.querySelectorAll('.item-receipt').forEach(node => node.remove());
+    const status = document.querySelector('#item-receipt-status');
     if (status) status.textContent = '';
-}
-
-/** Presentation only: called after a real clue event; never changes story state. */
-export function showClueReceipt(root: HTMLElement, text: string, reduced: boolean, origin?: DOMRect) {
-    pending.push({ root, text, reduced, origin, kind: 'clue' });
-    playNext();
 }
 
 /** The item has already been acquired and saved; animation only acknowledges it. */
 export function showItemReceipt(root: HTMLElement, text: string, reduced: boolean, origin?: DOMRect) {
-    pending.push({ root, text, reduced, origin: origin ?? new DOMRect(innerWidth * .45, innerHeight * .65, 0, 0), kind: 'item' });
+    pending.push({ root, text, reduced, origin: origin ?? new DOMRect(innerWidth * .45, innerHeight * .65, 0, 0) });
     playNext();
 }
 
@@ -29,25 +23,25 @@ function playNext() {
     if (active || frame || !pending.length) return;
     frame = requestAnimationFrame(() => {
         frame = 0;
-        const { root, text, reduced, origin, kind } = pending.shift()!;
-        const selector = kind === 'item' ? '[data-action="bag"]' : '[data-action="notes"]';
+        const { root, text, reduced, origin } = pending.shift()!;
+        const selector = '[data-action="bag"]';
         const destination = root.querySelector<HTMLElement>(selector);
         if (!destination || !destination.getClientRects().length) { playNext(); return; }
         const target = destination.getBoundingClientRect();
         const receipt = document.createElement('div');
-        receipt.className = `clue-receipt${kind === 'item' ? ' item-receipt' : ''}`;
-        receipt.dataset.receiptDestination = kind === 'item' ? 'bag' : 'notes';
+        receipt.className = 'item-receipt';
+        receipt.dataset.receiptDestination = 'bag';
         receipt.setAttribute('aria-hidden', 'true');
         const caption = document.createElement('span');
         caption.textContent = text;
         const mark = document.createElement('small');
-        mark.textContent = kind === 'item' ? '收进物品栏' : '收进思绪';
+        mark.textContent = '收进物品栏';
         receipt.append(caption, mark);
         document.body.append(receipt);
-        let status = document.querySelector<HTMLElement>('#clue-receipt-status');
+        let status = document.querySelector<HTMLElement>('#item-receipt-status');
         if (!status) {
             status = document.createElement('div');
-            status.id = 'clue-receipt-status'; status.className = 'clue-receipt-status';
+            status.id = 'item-receipt-status'; status.className = 'item-receipt-status';
             status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
             document.body.append(status);
         }

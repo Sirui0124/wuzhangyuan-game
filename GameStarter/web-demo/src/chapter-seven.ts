@@ -1,3 +1,4 @@
+import { acceptsChoice } from './narrative/presentation';
 import { captureCampaign } from './campaign/results';
 import { recordChapterHistory } from './chapters/progression';
 import { PangtongSession,type PangtongStory,type PangtongSave } from './chapters/chapter-seven/session';
@@ -44,7 +45,7 @@ async function start(){
     root.addEventListener('click',event=>{
         const el=event.target as HTMLElement,button=el.closest<HTMLElement>('[data-action],[data-option]');
         if(modal&&!el.closest('.game-modal'))return;
-        if(button?.dataset.option){advance(button.dataset.option);return;}
+        if (button?.dataset.option) { if (acceptsChoice(session.decision, button.closest<HTMLElement>('[data-decision]')?.dataset.decision, button.dataset.option)) advance(button.dataset.option); return; }
         const a=button?.dataset.action;
         if(a==='next'){advance();return;}
         if(a==='close-modal'||a==='resume'||a==='cancel'){close();return;}

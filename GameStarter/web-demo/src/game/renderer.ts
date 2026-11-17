@@ -2,7 +2,7 @@ import { createCompositionGuard } from './composition-guard';
 import type { ChapterSession, GameSessionState } from '../chapter-session';
 import type { GameAudio } from '../audio';
 import type { CinematicPlayer, Clip } from '../cinematics';
-import { clearClueReceipts } from '../clue-receipt';
+import { clearItemReceipts } from '../item-receipt';
 import { esc } from './view-common';
 import { createStoryFilms, type StoryFilm } from './story-films';
 import { endingFilmForState, type EndingFilm } from './ending-films';
@@ -62,7 +62,7 @@ export function createGameRenderer(options: RendererOptions) {
         const focusAttribute = active?.closest('.workspace-screen') ? ['data-action'].find(name => active.hasAttribute(name)) : undefined;
         const workspaceFocus = active?.closest('.workspace-screen') ? active.id ? `#${CSS.escape(active.id)}` : focusAttribute ? `[${focusAttribute}="${CSS.escape(active.getAttribute(focusAttribute)!)}"]` : '' : '';
         const caret = active instanceof HTMLTextAreaElement || active instanceof HTMLInputElement ? [active.selectionStart, active.selectionEnd] : null;
-        if (ui.home || ui.previewFilm || ['cinematic', 'death', 'ending', 'map'].includes(state.phase)) clearClueReceipts();
+        if (ui.home || ui.previewFilm || ['cinematic', 'death', 'ending', 'map'].includes(state.phase)) clearItemReceipts();
         // Scene nodes stay mounted between lines, but their modal sibling must be replaced too.
         root.querySelectorAll(':scope > .game-modal-shade').forEach(node => node.remove());
         const previousScroll = root.querySelector<HTMLElement>('.workspace-layout')?.scrollTop ?? 0;

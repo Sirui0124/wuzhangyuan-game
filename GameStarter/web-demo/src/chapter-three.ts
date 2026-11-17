@@ -1,3 +1,4 @@
+import { acceptsChoice } from './narrative/presentation';
 import { createCompositionGuard } from './game/composition-guard';
 import { chapterOnwardHTML } from './game/chapter-onward';
 import { backupSave, protectSave } from './session/save-recovery';
@@ -19,13 +20,12 @@ import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
 import { balance, money, isAvailableSupply, supplyById } from './phone/supplies';
 import { bagHTML } from './inventory/view';
 import { worldItem } from './inventory/world-items';
-import { showItemReceipt, clearClueReceipts } from './clue-receipt';
+import { showItemReceipt, clearItemReceipts } from './item-receipt';
 import { JietingSession, createJietingPlaytest } from './chapters/chapter-three/session';
 import type { JietingStory } from './chapters/chapter-three/types';
 import { judgeJietingDialogue, prepareJietingItem, type JietingItemPreparation } from './chapters/chapter-three/open-dialogue';
 import { jietingView } from './chapters/chapter-three/view';
 import { JietingReading, savedReading, withoutReading } from './chapters/chapter-three/reading';
-import { jietingPhone } from './chapters/chapter-three/phone';
 import { createCharacterModule } from './characters/module';
 import { chapterThreeCharacters } from './chapters/chapter-three/characters';
 import { gameModules } from './modules/config';
@@ -154,7 +154,7 @@ async function start() {
     }
     function restart() {
         try { localStorage.setItem(`${key}:before-new`, JSON.stringify(snapshot())); } catch { ui.storageWarning = '当前进度未能备份，请先存档后重试。'; render(); return; }
-        cancel(); clearClueReceipts(); session = create(); personality.restart(); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();
+        cancel(); clearItemReceipts(); session = create(); personality.restart(); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();
     }
     function next(option?: string) {
         if (request || ui.overlay || session.current.kind === 'ending') return;
@@ -240,7 +240,7 @@ async function start() {
     function render() {
         if (composition.defer()) return;
         if (pause?.render()) return;
-        if (session.current.kind === 'ending') clearClueReceipts();
+        if (session.current.kind === 'ending') clearItemReceipts();
         updateChapterAudio(audio,'jieting',session.current,{silent:session.state.ending==='era-arrest'||session.state.ending==='execution'});
         const changedScene = lastScene !== session.current.scene; lastScene = session.current.scene;
         const previousBelow = lastBelow; lastBelow = session.below;
@@ -279,13 +279,13 @@ async function start() {
         if (!b) { if (!ui.overlay && !request && target.closest('.game-scene') && !target.closest('button,a,input,textarea,.game-hud,[role=dialog]') && !window.getSelection()?.toString()) next(); return; }
         if (b instanceof HTMLButtonElement && b.disabled) return;
         if (b.dataset.action && !['next', 'speak'].includes(b.dataset.action)) audio.action(b.dataset.action);
-        if (b.dataset.option) { next(b.dataset.option); return; }
+        if (b.dataset.option) { if (acceptsChoice(session.decision, b.closest<HTMLElement>('[data-decision]')?.dataset.decision, b.dataset.option)) next(b.dataset.option); return; }
         if (b.dataset.storeSlot) {
             const id = b.dataset.storeSlot;
             try { if (localStorage.getItem(`${key}:slot:${id}`) && ui.slotOverwrite !== id) { ui.slotOverwrite = id; render(); return; } localStorage.setItem(`${key}:slot:${id}`, JSON.stringify({ ...snapshot(), savedAt: Date.now() })); ui.slotOverwrite = ''; ui.notice = '已存档。'; ui.storageWarning = ''; } catch { ui.storageWarning = '暂时无法写入存档，当前进度保留。'; } render(); return;
         }
         if (b.dataset.loadSlot) {
-            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); pause.dismiss(); clearClueReceipts(); session = restored; personality.attach(value); trackedEnding = ''; reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; persist(); render(); personality.resume(); }
+            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); pause.dismiss(); clearItemReceipts(); session = restored; personality.attach(value); trackedEnding = ''; reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; persist(); render(); personality.resume(); }
             catch { ui.storageWarning = '这份存档暂不可读，当前进度和原存档已保留。'; render(); } return;
         }
         switch (b.dataset.action) {
@@ -299,7 +299,7 @@ async function start() {
             case 'revise-item-test': preparation = null; preparationNotice = ''; render(); root.querySelector<HTMLTextAreaElement>('#item-preparation')?.focus(); break;
             case 'cancel-item-test': cancel(); preparationNotice = '已停止等待，操作说明已保留。'; render(); break;
             case 'confirm-item-test': if (preparation && session.confirmItemPreparation(preparation)) { persist(); preparation = null; ui.overlay = 'items'; render(); } else { preparationNotice = '物品或军情已有变化，请重新试用。'; render(); } break;
-            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) { personality.prune({ choices: [...session.state.chosen], inputs: personalityInputs().prefixes }); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; clearClueReceipts(); persist(); render(); personality.resume(); } break;
+            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) { personality.prune({ choices: [...session.state.chosen], inputs: personalityInputs().prefixes }); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; clearItemReceipts(); persist(); render(); personality.resume(); } break;
             case 'notes-list': ui.overlay = ''; evidenceDetail = ''; render(); break;
             case 'close-evidence-detail': evidenceDetail = ''; render(); break;
             case 'records': case 'save': case 'situation': cancel(); ui.overlay = b.dataset.action; render(); break;

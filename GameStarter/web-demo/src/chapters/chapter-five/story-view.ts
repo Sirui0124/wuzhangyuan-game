@@ -1,6 +1,7 @@
+import { narrativeChoiceHTML } from '../../game/narrative-choice';
 import { esc } from '../../game/view-common';
 import type { JingzhouSession } from './session';
-import { opening, aftermath, replies, ending } from './narrative';
+import { opening, aftermath, ending } from './narrative';
 
 /** Uses the same scene, dialogue and ordinary-choice markup as chapters one to three. */
 export function storyView(session: JingzhouSession, state: { background: string; notice: string; isolated?: boolean }) {
@@ -16,7 +17,7 @@ export function storyView(session: JingzhouSession, state: { background: string;
     }
     const action = intro && page === opening.length - 1 ? 'begin' : 'story-next';
     const body = choosing
-        ? `<section class="dialogue-box scout-choice"><h2 class="dialogue-speaker">${esc(line.text)}</h2>${replies(score).map(r => `<button data-jz="story-reply" data-reply="${r.id}"><span>${esc(r.text)}</span><i aria-hidden="true">›</i></button>`).join('')}</section>`
+        ? narrativeChoiceHTML(session.decision!, 'data-reply')
         : `<section class="dialogue-box dialogue-advance" data-jz="${action}" tabindex="0"><span class="dialogue-speaker">${esc(line.speaker)}</span><span class="dialogue-reading"><span class="dialogue-text" id="spoken-line">${esc(line.text)}</span></span></section>`;
     return `<main class="game-scene jz-narrative" data-stage="${intro ? 'intro' : 'aftermath'}" data-phase="${choosing ? 'choice' : 'dialogue'}">${scenery}${hud}${!intro && page === 0 ? `<p class="jz-score-line" role="status">6 条军报，判断正确 ${score} 条</p>` : ''}<div class="jz-story-content">${body}${notice}</div>${choosing ? '' : `<p class="dialogue-key-hint">${action === 'begin' ? '点击开始问报' : '点击继续 · 空格'}</p>`}</main>`;
 }

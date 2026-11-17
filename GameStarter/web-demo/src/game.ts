@@ -38,7 +38,7 @@ import { GameAudio } from './audio';
 import { CinematicPlayer, type Clip } from './cinematics';
 import { freshCollection, parseCollection, unlockEnding, type EndingCatalog } from './endings';
 import { openEndingAlbum } from './ending-album';
-import { clearClueReceipts, showItemReceipt } from './clue-receipt';
+import { clearItemReceipts, showItemReceipt } from './item-receipt';
 const thoughtRevealDuration = 1600;
 
 
@@ -181,7 +181,7 @@ function load(key = GAME_SAVE_KEY) {
     dialogueVoice.stop();
     const raw = stored(key); if (!raw) { toast('这里还没有留下进度。'); return; }
     let loaded = false;
-    try { ui.restoring = true; const { personality: _record, ...story } = JSON.parse(raw); game.restore(JSON.stringify(story)); personality.attach(JSON.parse(raw), { tutorial: game.snapshot().round === 1 }); personalityOriginal = ''; clearClueReceipts(); ui.inventoryKind = 'clues'; ui.notesShown = false; ui.storageWarning = ''; ui.home = false; ui.overlay = ''; ui.filmKey = ''; ui.noteOpen = ''; ui.revealAt = 0; ui.renderedWorkspace = ''; clearTimeout(ui.revealTimer); loaded = true; }
+    try { ui.restoring = true; const { personality: _record, ...story } = JSON.parse(raw); game.restore(JSON.stringify(story)); personality.attach(JSON.parse(raw), { tutorial: game.snapshot().round === 1 }); personalityOriginal = ''; clearItemReceipts(); ui.inventoryKind = 'clues'; ui.notesShown = false; ui.storageWarning = ''; ui.home = false; ui.overlay = ''; ui.filmKey = ''; ui.noteOpen = ''; ui.revealAt = 0; ui.renderedWorkspace = ''; clearTimeout(ui.revealTimer); loaded = true; }
     catch { ui.storageWarning = '这份存档与当前内容暂不兼容，原记录已保留。'; }
     finally { ui.restoring = false; if (loaded) { pauseMenu.dismiss(); cinema.resetPlayback(); persist(); } render(); }
 }
@@ -197,7 +197,7 @@ function newGame(resetChapters = false) {
     }
     pauseMenu.dismiss(); cinema.resetPlayback();
     dialogueVoice.stop();
-    clearClueReceipts();
+    clearItemReceipts();
     personality.restart({ tutorial: true }); personalityOriginal = '';
     ui.inventoryKind = 'clues';
     ui.home = false; ui.menuMap = false; ui.overlay = ''; ui.notesShown = false; ui.revealAt = 0; clearTimeout(ui.revealTimer); ui.noteOpen = ''; ui.filmKey = ''; ui.notice = ''; ui.storageWarning = ''; game.restart();

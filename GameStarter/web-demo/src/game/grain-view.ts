@@ -1,3 +1,4 @@
+import { narrativeChoiceHTML } from './narrative-choice';
 import { expressionHeadingHTML, expressionPaperHTML } from './expression-view';
 import { portraitStage } from './portrait-stage';
 import { esc, btn, personName, type Media } from './view-common';
@@ -28,6 +29,6 @@ export function grainView(s: GrainSession, media: Media, v: {notes:boolean;items
     const speaker=n.kind==='open'?'苟安':personName(n.speaker);
     const line=n.kind==='open'?j?.reply:n.text;
     const tentEntry=s.canVisitOwnTent()?`<nav class="scene-routes">${btn('own-tent','看看自己的军帐')}</nav>`:'';
-    const body=n.kind==='choice'?`<section class="dialogue-box scout-choice"><h2 class="dialogue-speaker">${esc(n.text)}</h2>${n.options!.map(o=>`<button data-option="${o.id}"><span>${esc(o.text)}</span><i>›</i></button>`).join('')}</section>`:`<section class="dialogue-box dialogue-advance" tabindex="0" data-action="next"><span class="dialogue-speaker">${esc(speaker)}</span><span class="dialogue-reading"><span class="dialogue-text"><span id="spoken-line">${esc(line)}</span></span></span></section>${reply?`<nav class="grain-reply-actions">${btn('revise','重新组织')}${btn('next','继续交谈 →')}</nav>`:''}${n.kind==='finish'?`<nav class="scene-routes">${btn('onward','继续往前 →','ending-primary')}${btn('menu','返回开始页')}${btn('restart','重新开始')}</nav>`:reply?'':'<p class="dialogue-key-hint">点击屏幕继续 · 空格</p>'}`;
+    const body=n.kind==='choice'?narrativeChoiceHTML(s.decision!, 'data-option'):`<section class="dialogue-box dialogue-advance" tabindex="0" data-action="next"><span class="dialogue-speaker">${esc(speaker)}</span><span class="dialogue-reading"><span class="dialogue-text"><span id="spoken-line">${esc(line)}</span></span></span></section>${reply?`<nav class="grain-reply-actions">${btn('revise','重新组织')}${btn('next','继续交谈 →')}</nav>`:''}${n.kind==='finish'?`<nav class="scene-routes">${btn('onward','继续往前 →','ending-primary')}${btn('menu','返回开始页')}${btn('restart','重新开始')}</nav>`:reply?'':'<p class="dialogue-key-hint">点击屏幕继续 · 空格</p>'}`;
     return `<main class="game-scene ${n.cameraHold||reply?'grain-camera-hold':''} ${reply?'grain-reply':''} ${v.notes?'workspace-screen inventory-open':''}" data-phase="dialogue"><div class="scene-image" style="background-image:url('${bg}')"></div><div class="scene-shade"></div>${hud}${speaker==='苟安'&&!n.image&&!reply?portraitStage(`<img class="character-art" data-character="gouan" src="${media.characters.gouan}" alt="苟安">`):''}${body}${tentEntry}</main>`;
 }

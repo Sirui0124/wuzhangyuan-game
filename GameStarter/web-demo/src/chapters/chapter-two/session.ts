@@ -1,3 +1,4 @@
+import { projectDecision } from '../../narrative/presentation';
 import { acquireWorldItem, sellWorldItem, freshWorldInventory } from '../../inventory/world-items';
 import { itemSystemEnabled } from '../../runtime-mode';
 import { indexStoryGraph } from '../../session/story-graph';
@@ -81,6 +82,7 @@ export class GrainSession {
     get clues() {
         return [...new Map(this.state.visited.flatMap(id => this.nodes.get(id)?.clues ?? []).map(c => [c.id, c])).values()];
     }
+    get decision() { return this.current.kind === 'choice' ? projectDecision(this.current, this.current.options ?? []) : undefined; }
     get scores() { return this.calculateScores(); }
     get dialogueResponseContext() { return { baseScores: this.calculateScores(this.current.id, false), giftAlreadyAccepted: this.state.gifts.length > 0 }; }
     private calculateScores(excludeJudgment?: string, includeGifts = true) {

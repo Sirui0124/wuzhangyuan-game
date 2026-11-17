@@ -1,3 +1,4 @@
+import { acceptsChoice } from './narrative/presentation';
 import { recordChapterHistory } from './chapters/progression';
 import { esc } from './game/view-common';
 import { frameModal } from './game-ui-panels';
@@ -156,7 +157,7 @@ async function start() {
         else if (action === 'restart-confirm') restart();
         else if (action === 'begin') commit({ type: 'begin' });
         else if (action === 'story-next') commit({ type: 'narrate', stage: session.phase === 'intro' ? 'intro' : 'aftermath' });
-        else if (action === 'story-reply') commit({ type: 'reply', reply: el.dataset.reply as Reply });
+        else if (action === 'story-reply' && acceptsChoice(session.decision, el.closest<HTMLElement>('[data-decision]')?.dataset.decision, el.dataset.reply ?? '')) commit({ type: 'reply', reply: el.dataset.reply as Reply });
         else if (action === 'settle') commit({ type: 'settle' });
         else if (action === 'map') location.assign('/?view=chapters');
         else if (action === 'suggest') {

@@ -1,3 +1,4 @@
+import { acceptsChoice } from './narrative/presentation';
 import { createCompositionGuard } from './game/composition-guard';
 import { chapterOnwardHTML } from './game/chapter-onward';
 import { recordAchievements } from './achievements/storage';
@@ -14,7 +15,7 @@ import { GameAudio, type AudioBus } from './audio';
 import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
 import { saveRuntimeMode, readPhonePreference, setRuntimeConnection, itemSystemEnabled } from './runtime-mode';
 import { bagHTML } from './inventory/view';
-import { readRuntimeMode, phoneEnabled, aiEnabled } from './runtime-mode';
+import { readRuntimeMode, aiEnabled } from './runtime-mode';
 import { fixedSpeeches, fixedJudgment } from './chapters/chapter-two/film-dialogue';
 import { GrainSession, type GrainStory } from './chapters/chapter-two/session';
 import { CinematicPlayer, type Clip } from './cinematics';
@@ -30,7 +31,7 @@ import { gameModules } from './modules/config';
 import { createEvaluationModule } from './modules/evaluation';
 import { balance, money, supplyById } from './phone/supplies';
 import { frameModal, recordsPanelHTML, savePanelHTML } from './game-ui-panels';
-import { showItemReceipt } from './clue-receipt';
+import { showItemReceipt } from './item-receipt';
 import { worldItem } from './inventory/world-items';
 import { grainHasCompleted, GRAIN_SAVE_KEY, GRAIN_COMPLETED_KEY } from './chapters/chapter-two/navigation';
 import { createPersonalityTracker } from './personality/module';
@@ -40,7 +41,7 @@ import { updateChapterAudio } from './chapter-audio';
 
 const filmStyles=document.createElement('link');filmStyles.rel='stylesheet';filmStyles.href='/grain-films.css';document.head.append(filmStyles);
 const materialStyles=document.createElement('link');materialStyles.rel='stylesheet';materialStyles.href='/evidence-material.css';document.head.append(materialStyles);
-let phoneAvailable = phoneEnabled(readRuntimeMode());
+
 const playtest=new URLSearchParams(location.search).get('playtest')==='open1';
 const tentPlaytest=new URLSearchParams(location.search).get('playtest')==='item-candlestick';
 const personalityPlaytest=new URLSearchParams(location.search).get('playtest')==='personality';
@@ -75,7 +76,7 @@ async function start(){
     const seedPersonalityDemo=personalityPlaytest&&!saved&&!!personalityFixture;
     if(seedPersonalityDemo)saved=personalityFixture!.state;
     const narrativeOnly=(value:unknown)=>{if(!value||typeof value!=='object')return value;const {personality:_personality,...narrative}=value as Record<string,unknown>;return narrative;};
-    const createSession=(value?:unknown)=>{const s=new GrainSession(story,narrativeOnly(value),rubric,phoneAvailable);if(playtest&&s.current.id===story.start)for(let i=0;i<story.nodes.length&&s.current.kind!=='open';i++)if(!s.advance(s.current.options?.[0]?.id))break;if(phoneAvailable)s.unlockPhone();else if(!s.eraFailure)s.state.supplies.attached=[];return s;};
+    const createSession=(value?:unknown)=>{const s=new GrainSession(story,narrativeOnly(value),rubric,false);if(playtest&&s.current.id===story.start)for(let i=0;i<story.nodes.length&&s.current.kind!=='open';i++)if(!s.advance(s.current.options?.[0]?.id))break;if(!s.eraFailure)s.state.supplies.attached=[];return s;};
     let session:GrainSession;
     try{session=createSession(saved);}catch{recoveryPending=true;protectOriginal();saved=undefined;session=createSession();}
     let request:AbortController|null=null,requestDiagnostic:string|undefined,editing=false,error=initialError,detail='';
@@ -165,9 +166,9 @@ async function start(){
         const nextMode=readRuntimeMode(),nextItems=itemSystemEnabled();
         if(nextMode===activeMode&&nextItems===itemsAvailable)return;
         activeMode=nextMode;itemsAvailable=nextItems;
-        cancel(); evaluation.cancel(); phoneAvailable=phoneEnabled(readRuntimeMode());
-        session.phoneAllowed=phoneAvailable;
-        if(!phoneAvailable)session.state.supplies.attached=[];
+        cancel(); evaluation.cancel();
+        session.phoneAllowed=false;
+        session.state.supplies.attached=[];
         session.unlockPhone();
         ui.notesShown=false; ui.inventoryKind='clues'; detail='';
         personality.resume();persist(); render();
@@ -176,7 +177,7 @@ async function start(){
     function next(option?:string){
         if(ui.overlay||ui.notesShown||request)return;
         const before=new Set(session.clues.map(c=>c.id)),node=session.current.id;
-        if(session.advance(option)){if(option)personality.choice(option,node);editing=false;if(phoneAvailable)session.unlockPhone();persist();render();audio.play('dialogue_next');}
+        if(session.advance(option)){if(option)personality.choice(option,node);editing=false;persist();render();audio.play('dialogue_next');}
     }
     let polishing=false, previousPolish:{node:string;run:number;before:string;after:string}|null=null;
     const canUndoPolish=()=>!!previousPolish&&previousPolish.node===session.current.id&&previousPolish.run===session.state.run&&previousPolish.after===session.state.draft;
@@ -248,7 +249,7 @@ async function start(){
         const replyFrame=root.querySelector<HTMLCanvasElement>('.grain-reply-frame');
         player.dispose(false,true);root.dataset.node=session.current.id;
         if(session.current.kind==='video'&&!ui.overlay){const clip=[...movies.chapterPreview,...movies.chapterTwo].find(c=>c.id===session.current.clip);if(!clip)throw new Error('影像缺失');player.mount(root,session.current.id,[clip],'chapter-two',()=>next());dialogueCamera.transitionToFilm(replyFrame,root.querySelector('video'));return;}
-        root.innerHTML=grainView(session,media,{notes:ui.notesShown,items:ui.inventoryKind==='items',editing,busy:!!request,error,phoneEnabled:phoneAvailable,polishing,canUndoPolish:canUndoPolish(),detail});
+        root.innerHTML=grainView(session,media,{notes:ui.notesShown,items:ui.inventoryKind==='items',editing,busy:!!request,error,polishing,canUndoPolish:canUndoPolish(),detail});
         dialogueCamera.mountReply(root,session.current.id);
         if(session.current.kind==='open'&&!session.eraFailure&&!ui.overlay&&!aiEnabled(readRuntimeMode())){
             const round=session.current.round??'O1';
@@ -275,7 +276,7 @@ async function start(){
         if(b instanceof HTMLButtonElement&&b.disabled)return;
         if(b.dataset.action&&!['next','speak'].includes(b.dataset.action))audio.action(b.dataset.action);
         if(b.dataset.fixedSpeech!==undefined){fixedSpeak(Number(b.dataset.fixedSpeech));return;}
-        if(b.dataset.option){next(b.dataset.option);return;}
+        if (b.dataset.option) { if (acceptsChoice(session.decision, b.closest<HTMLElement>('[data-decision]')?.dataset.decision, b.dataset.option)) next(b.dataset.option); return; }
         if(b.dataset.storeSlot){if(recoveryPending)return;const id=b.dataset.storeSlot;try{if(localStorage.getItem(key+':slot:'+id)&&ui.slotOverwrite!==id){ui.slotOverwrite=id;render();return;}localStorage.setItem(key+':slot:'+id,JSON.stringify({...snapshot(),savedAt:Date.now()}));ui.slotOverwrite='';ui.storageWarning='';ui.notice='已保存到手动存档 '+id+'。';}catch{ui.storageWarning='暂时无法写入存档，当前进度仍保留。';}render();return;}
         if(b.dataset.loadSlot||b.dataset.loadBackup||b.dataset.action==='load-auto'){try{const value=localStorage.getItem(b.dataset.loadBackup??(b.dataset.action==='load-auto'?key:key+':slot:'+b.dataset.loadSlot));if(value){const saved=JSON.parse(value);if(!saved||typeof saved!=='object'||Array.isArray(saved))throw new Error('incompatible');const restored=createSession(saved);allowReplacement();recoveryPending=false;cancel();evaluation.cancel();pauseMenu.dismiss();player.resetPlayback();delete root.dataset.node;session=restored;personality.attach(saved);reconcileRestoredPersonality(saved);editing=false;ui.overlay='';ui.notesShown=false;ui.slotOverwrite='';ui.storageWarning='';ui.notice='';persist();render();}}catch{ui.storageWarning=recoveryPending&&!recoveryKey?'旧进度备份尚未完成，原自动存档仍保留。请返回重试备份。':'这份存档暂不可读，当前进度和原存档已保留。';render();}return;}
         switch(b.dataset.action){

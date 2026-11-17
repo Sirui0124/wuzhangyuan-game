@@ -91,10 +91,10 @@ try{
     await layout(page,'online-1440');await shot(page,'online-1440');
     await page.setViewportSize({width:1366,height:768});await layout(page,'online-1366');await shot(page,'online-1366');
     await page.setViewportSize({width:390,height:844});await layout(page,'online-390');await shot(page,'online-390');
-    await page.locator('[data-action=clue-items]').click();await page.locator('[data-select="JT-C01"]').waitFor();
-    await page.locator('[data-detail="JT-C01"]').first().click();assert.match(await page.locator('.thought-detail-popover').innerText(),/营寨须扎在要道上/);
+    assert.equal(await page.locator('[data-action=clue-items],[data-select],.thought-detail-popover').count(),0);
+    await page.locator('#player-expression').fill('军令已经说明，先守住要道。');
     assert.deepEqual(await state(page),{below:5000,above:20000,proposed:0,remaining:5,stage:'idle'});
-    report.checks.push('online and 390px layout, existing command clue expanded only from its new heard source, evidence inspection does not change deployment');
+    report.checks.push('online and 390px layout keeps expression usable without retired clue UI; drafting does not change deployment');
     await g.context.close();assert.deepEqual(report.errors,[]);
     writeFileSync(resolve(output,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
 }catch(error){report.errors.push(error.message);await page?.screenshot({path:resolve(output,'failure.png')}).catch(()=>{});writeFileSync(resolve(output,'report.json'),JSON.stringify(report,null,2));throw error;}

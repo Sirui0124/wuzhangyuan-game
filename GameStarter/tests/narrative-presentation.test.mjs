@@ -57,3 +57,46 @@ test('asynchronous rendering waits for Chinese composition and coalesces pending
     assert.equal(renders, 0, 'the final input event gets the rest of the task');
     await Promise.resolve(); assert.equal(renders, 1); assert.equal(guard.defer(), false);
 });
+
+import { projectDecision, acceptsChoice } from '../web-demo/.build/GameStarter/web-demo/src/narrative/presentation.js';
+import { GrainSession } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/session.js';
+import { JietingSession } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-three/session.js';
+
+test('shared projection strips executable fields and rejects a prior node even when option IDs repeat', () => {
+    const option = { id: 'same', text: '继续', next: 'secret', effects: [{ flag: true }] };
+    const first = projectDecision({ id: 'first', text: '甲' }, [option]);
+    assert.deepEqual(first.choices, [{ id: 'same', text: '继续' }]);
+    first.choices[0].text = 'changed';
+    assert.equal(option.text, '继续');
+    const second = projectDecision({ id: 'second', text: '乙' }, [option]);
+    assert.equal(acceptsChoice(second, first.id, 'same'), false);
+    assert.equal(acceptsChoice(second, second.id, 'same'), true);
+    assert.equal(acceptsChoice(undefined, second.id, 'same'), false);
+});
+
+test('second chapter projects original choices and leaves scoring and branch execution in its runner', () => {
+    const story = { version: 'test', start: 'pick', nodes: [
+        { id: 'pick', kind: 'choice', speaker: '我', text: '选择', options: [{ id: 'yes', text: '答应', next: 'done', delta: [1, 0, 0] }] },
+        { id: 'done', kind: 'finish', speaker: '', text: '结束' },
+    ] };
+    const s = new GrainSession(story, undefined, undefined, false);
+    const before = JSON.stringify(s.state), decision = s.decision;
+    assert.equal(JSON.stringify(s.state), before);
+    assert.equal(s.advance('invented'), false);
+    assert.ok(acceptsChoice(decision, 'pick', 'yes'));
+    assert.equal(s.advance('yes'), true);
+    assert.equal(s.decision, undefined);
+    assert.deepEqual(s.state.chosen, ['yes']);
+});
+
+test('third chapter projection uses actual filtered options and never exposes route effects', () => {
+    const story = json('../../content/chapters/jieting/chapter-three.story.json');
+    const s = new JietingSession(story, undefined, { aiEnabled: false, phoneAllowed: false });
+    for (let i = 0; i < 100 && !s.decision; i++) assert.ok(s.advance());
+    assert.ok(s.decision);
+    const before = JSON.stringify(s.snapshot());
+    assert.deepEqual(s.decision.choices.map(o => o.id), s.options.map(o => o.id));
+    assert.ok(s.decision.choices.every(o => !('next' in o) && !('effects' in o) && !('when' in o)));
+    assert.equal(JSON.stringify(s.snapshot()), before);
+    assert.equal(s.advance('invented'), false);
+});

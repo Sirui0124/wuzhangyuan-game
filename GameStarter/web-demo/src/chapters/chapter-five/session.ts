@@ -1,4 +1,5 @@
-import { opening, outcome, type Reply } from './narrative';
+import { projectDecision, availableChoice } from '../../narrative/presentation';
+import { opening, aftermath, replies, outcome, type Reply } from './narrative';
 export const dimensions = [
     { id: 'time', label: '时间', question: '事情是什么时候发生的？' },
     { id: 'source', label: '消息来源', question: '这消息是从哪里来的？' },
@@ -54,6 +55,7 @@ export class JingzhouSession {
             for (const a of s.actions) if (!this.apply(a)) throw new Error('存档中的追问或判断记录无效，原记录仍保留。');
         }
     }
+    get decision() { return this.finished && this.aftermathPage === 1 ? projectDecision({ id: 'jingzhou:aftermath:1', text: aftermath(this.result?.judged ?? 0, this.reply)[1].text }, replies(this.result?.judged ?? 0)) : undefined; }
     get phase() { return !this.started ? 'intro' : this.finished ? 'result' : this.current ? 'interview' : this.pending.length ? 'resolve' : 'selection'; }
     get current() { return this.order.find(id => this.entries[id].verdict === null); }
     get pending() { return this.order.filter(id => this.entries[id].verdict === 'pending'); }
@@ -75,7 +77,7 @@ export class JingzhouSession {
             this.actions.push(copy(action)); return true;
         }
         if (action.type === 'reply') {
-            if (!this.finished || this.aftermathPage !== 1 || !['stay', 'people'].includes(action.reply)) return false;
+            if (!this.decision || !availableChoice(this.decision, action.reply)) return false;
             this.reply = action.reply; this.aftermathPage = 2; this.actions.push(copy(action)); return true;
         }
         if (this.finished) return false;
