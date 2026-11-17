@@ -1,4 +1,3 @@
-import { phoneLauncherHTML } from '../../../phone/launcher-view';
 import { portraitStage } from '../../../game/portrait-stage';
 import { worldItems } from '../../../inventory/world-items';
 import { itemSystemEnabled } from '../../../runtime-mode';
@@ -16,10 +15,9 @@ import { tentSceneHTML } from './tent-visit';
 export function createSceneViews(game: ChapterSession, flow: ChapterFlow, media: Media, ui: GameUIState, voiceEnabled: () => boolean) {
     const portrait = createPortrait(media);
     function hud(state: GameSessionState, light = false) {
-        const supplies = game.canPrepareSupplies() ? phoneLauncherHTML(state.phase === 'expression' ? '准备佐证' : '采购已解锁') : '';
-        if (light && state.phase !== 'expression' && state.notesPurpose !== 'P2') return `<header class="game-hud light-hud thought-hud"><div class="game-mark">思绪</div><nav aria-label="思绪菜单">${supplies}${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('notes', '收起 ⌃')}${btn('pause', '菜单')}</nav></header>`;
-        if (['dialogue', 'reply', 'choice', 'thought-prompt', 'spoken', 'expression'].includes(state.phase) || state.notesPurpose === 'P2') return `<header class="game-hud dialogue-hud"><div class="dialogue-place"><span>${esc(game.scene.title)}</span><small>${state.round === 1 ? '第六夜' : '再临第六夜'}</small></div><nav aria-label="游戏菜单">${btn('notes', '思绪', '', !state.story.collected.length || state.phase === 'thought-prompt')}${supplies}${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
-        return `<header class="game-hud ${light ? 'light-hud' : ''}"><div class="game-mark"><span class="chapter-seal">壹</span><div>逆转五丈原<small>五丈原 · ${state.round === 1 ? '第六夜' : '再临第六夜'}</small></div></div><nav aria-label="游戏菜单">${btn('notes', `思绪 <small>${state.story.collected.length || ''}</small>`, '', !state.story.collected.length)}${supplies}${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
+        if (light && state.phase !== 'expression' && state.notesPurpose !== 'P2') return `<header class="game-hud light-hud thought-hud"><div class="game-mark">思绪</div><nav aria-label="思绪菜单">${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('pause', '菜单')}</nav></header>`;
+        if (['dialogue', 'reply', 'choice', 'thought-prompt', 'spoken', 'expression'].includes(state.phase) || state.notesPurpose === 'P2') return `<header class="game-hud dialogue-hud"><div class="dialogue-place"><span>${esc(game.scene.title)}</span><small>${state.round === 1 ? '第六夜' : '再临第六夜'}</small></div><nav aria-label="游戏菜单">${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
+        return `<header class="game-hud ${light ? 'light-hud' : ''}"><div class="game-mark"><span class="chapter-seal">壹</span><div>逆转五丈原<small>五丈原 · ${state.round === 1 ? '第六夜' : '再临第六夜'}</small></div></div><nav aria-label="游戏菜单">${itemSystemEnabled() ? btn('bag', '物品') : ''}${btn('records', '记录')}${btn('save', '存档')}${btn('pause', '菜单')}</nav></header>`;
     }
     function sceneHTML(state: GameSessionState) {
         if (state.phase === 'tent') return tentSceneHTML(state, media, hud({ ...state, phase: 'dialogue' }));

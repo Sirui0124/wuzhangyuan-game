@@ -4,7 +4,8 @@ import { resolve } from 'node:path';
 import { dialogueFixtures } from '../../tools/ai/dialogue-fixtures.mjs';
 import { freshReview, commitRow, currentClueSources } from '../web-demo/.build/GameStarter/web-demo/src/thought-canvas-model.js';
 import { jiangDutyMigration } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/jiang-duty-migration.js';
-import { inventoryHTML } from '../web-demo/.build/GameStarter/web-demo/src/thought-workspace-view.js';
+import { chapterOneDecision } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/narrative-decision.js';
+import { narrativeChoiceHTML } from '../web-demo/.build/GameStarter/web-demo/src/game/narrative-choice.js';
 const f = await dialogueFixtures(resolve('GameStarter/web-demo/.build'));
 
 test('乙的完整职责对白解锁 C07，通传详情按时补充，不能授本人应允', () => {
@@ -20,15 +21,15 @@ test('乙的完整职责对白解锁 C07，通传详情按时补充，不能授�
   assert.equal(story.flags.JIANG_AUTH_GRANTED, undefined);
 });
 
-test('第二问缺任一依据不能通过；两条选齐才出结论，结论不在可选线索中', async () => {
+test('旧图关系仍校验完整依据，当前展示为剧情选择且不提前授予应允', async () => {
   for (const first of ['C06', 'C07']) {
     const s = await f.thoughts(); s.think(); s.continueThought();
     s.placeThought(first); assert.equal(s.think(), null);
     s.placeThought(first === 'C06' ? 'C07' : 'C06'); assert.equal(s.think(), 'R02');
     assert.equal(s.snapshot().story.flags.JIANG_AUTH_GRANTED, undefined);
-    const html = inventoryHTML(s.snapshot(), s.graph(), {inventoryOpen:true, source:()=>'', reduced:true, revealAt:0, detail:''});
-    assert.match(html, /data-inventory-item="C07"/);
-    assert.doesNotMatch(html, /data-inventory-item="R02"/);
+    const html = narrativeChoiceHTML(chapterOneDecision(s.snapshot()));
+    assert.match(html, /data-narrative-choice="continue-story"/);
+    assert.doesNotMatch(html, /data-inventory-item/);
     assert.ok(s.followPlan()); f.read(s); assert.ok(s.collected.includes('C08'));
   }
 });

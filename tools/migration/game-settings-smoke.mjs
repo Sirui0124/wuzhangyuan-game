@@ -38,7 +38,7 @@ try{
  assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-item-system-enabled-v1')),'0');
  assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-runtime-mode-v1')),'ai');
  await page.locator('#game-item-system-enabled').check();
- assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-runtime-mode-v1')),'ai-phone');
+ assert.equal(await page.evaluate(()=>localStorage.getItem('wuzhang-runtime-mode-v1')),'ai');
  await page.locator('#api-model').fill('edited-model');await page.locator('[data-action=save-api]').click();await page.getByText('配置已保存。',{exact:true}).waitFor();assert.equal(saves,1);assert.equal(fixture.model,'edited-model');assert.equal(fixture.apiKey,'fixture-only-key');
  await page.locator('#api-model').fill('connection-model');await page.locator('[data-action=test-api]').click();
  await page.getByText('配置已保存，正在测试模型连接……',{exact:true}).waitFor();

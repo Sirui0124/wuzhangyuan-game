@@ -8,7 +8,7 @@ const slash = value => value.replaceAll('\\', '/');
 const hash = path => createHash('sha256').update(readFileSync(path)).digest('hex');
 const comparisonPages = new Set(['art-review.html', 'modal-suite.html', 'thought-options.html', 'menu-button-options.html']);
 const comparisonModules = new Set(['art-review.js', 'art-review-layout.js', 'modal-suite.js', 'thought-options.js']);
-const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'personality.mjs', 'phone-economy.mjs', 'phone-guard.mjs', 'shop-pricing.mjs', 'shop-search.mjs', 'shopping.mjs', 'tts.mjs', 'tts-protocol.mjs', 'package.json', 'config/shop-pricing.json'];
+const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'personality.mjs', 'tts.mjs', 'tts-protocol.mjs', 'package.json'];
 const runtimeRules = ['open-answer-rubric.json', 'open-answer-fixtures.json'];
 
 export function excludedReason(path) {

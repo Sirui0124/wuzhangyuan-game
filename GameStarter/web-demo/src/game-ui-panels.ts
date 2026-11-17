@@ -57,7 +57,7 @@ export function settingsPanelHTML(props: SettingsPanelProps): string {
       <section class="settings-section"><h2>游戏模式</h2>
         <label class="toggle-row" for="game-ai-enabled"><span>启用 AI</span><input id="game-ai-enabled" class="motion-switch" type="checkbox"${props.runtimeMode && props.runtimeMode !== 'offline' ? ' checked' : ''}></label>
         ${apiSettingsHTML(props)}
-        <div class="toggle-row"><div class="setting-label"><label for="game-item-system-enabled">手机与物品</label>${help('开启后可获取和使用物品；AI 可用时，手机会在剧情解锁后开放。关闭后保留已有物品与余额。', '手机与物品', 'item-system-description')}</div><input id="game-item-system-enabled" class="motion-switch" type="checkbox" aria-describedby="item-system-description"${itemsEnabled ? ' checked' : ''}></div>
+        <div class="toggle-row"><div class="setting-label"><label for="game-item-system-enabled">物品</label>${help('开启后可获取和查看剧情物品；关闭后保留已有物品记录。', '物品', 'item-system-description')}</div><input id="game-item-system-enabled" class="motion-switch" type="checkbox" aria-describedby="item-system-description"${itemsEnabled ? ' checked' : ''}></div>
       </section>
       <section class="settings-section"><h2>声音与阅读</h2>${ranges}
         <div class="toggle-row"><div class="setting-label"><label for="ai-voice-enabled">AI语音</label>${help('开启后朗读我与魏延的交谈；关闭后保留文字对白，点击继续。', 'AI语音', 'ai-voice-description')}</div><input id="ai-voice-enabled" class="motion-switch" type="checkbox" aria-describedby="ai-voice-description"${props.aiVoiceEnabled ? ' checked' : ''}${props.runtimeMode === 'offline' ? ' disabled' : ''}></div>

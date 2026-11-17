@@ -7,7 +7,7 @@ import { checkExpressionAudit } from '../web-demo/.build/GameStarter/web-demo/sr
 import { compactWeiyanFacts, JIANG_CONFIRMED_CONSENT_FACT } from '../web-demo/.build/GameStarter/web-demo/src/weiyan-facts.js';
 import { createWeiyanJudge } from '../web-demo/.build/GameStarter/web-demo/src/weiyan-judgment.js';
 import { buildExpressionInput, expressionListenerTurn } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/expression-context.js';
-import { createWorkspaceViews } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/views/workspace.js';
+import { createStoryViews } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/views/story.js';
 import { esc } from '../web-demo/.build/GameStarter/web-demo/src/game/view-common.js';
 import { currentClueSources, clueSources, inferenceRules } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/thought-canvas-model.js';
 
@@ -98,12 +98,12 @@ test('first listener turn is the actual displayed Wei Yan line even before any A
     assert.equal(expressionListenerTurn(state, id => rows.get(id)), expected);
     assert.deepEqual(input.brief.conversation.listenerTurn, { speaker: '魏延', text: expected });
     const ui = { notesShown: false, noteOpen: '', revealAt: 0, reduced: true, notice: '', storageWarning: '' };
-    const view = createWorkspaceViews(session, content, { characters: {}, scenes: {} }, ui, id => id, () => '');
-    assert.ok(view.canvasHTML(state).includes(`“${esc(expected)}”`));
+    const view = createStoryViews(session, { characters: {}, scenes: {} }, ui, () => '');
+    assert.ok(view.storyHTML(state).includes(`“${esc(expected)}”`));
     const retry = { ...state, lastFeedback: '眼下这份军报，你要交给谁？' };
     const retried = buildExpressionInput(contextFor(session, retry));
     assert.equal(retried.brief.conversation.listenerTurn.text, retry.lastFeedback);
-    assert.ok(view.canvasHTML(retry).includes(`“${esc(retry.lastFeedback)}”`));
+    assert.ok(view.storyHTML(retry).includes(`“${esc(retry.lastFeedback)}”`));
 });
 
 test('acquired but unselected material and previous-round history do not enter the writer brief', async () => {

@@ -1,3 +1,5 @@
+import { chapterOneDecision } from './narrative-decision';
+import { availableChoice } from '../../narrative/presentation';
 import type { ChapterFlow, ChapterPhase, ChapterScene, FlowSection, FlowTarget } from '../../../../../content/schema/chapter-session';
 import { freshThoughtWorkspace } from './thought-workspace';
 import { commitRow, derive, inferenceRules, validAuthorization, type ChapterReview, type StoryRow } from './thought-canvas-model';
@@ -209,6 +211,38 @@ export class ChapterOneSession {
                 this.state.end = this.state.supplies.agreement?.route ?? 'safe';
             }
         }
+    }
+    /** Narrative actions keep factual guards; the retired canvas no longer grants progress. */
+    private establishNarrativePlan(): boolean {
+        const rule = inferenceRules.find(value => value.id === 'R02')!;
+        if (this.state.round !== 2 || !rule.requires.every(id => this.collected.includes(id))
+            || !(rule.requiresStory ?? []).every(id => this.state.story.completed.includes(id))) return false;
+        for (const id of rule.requires.slice(1)) {
+            const edge: [string, string] = [rule.requires[0], id];
+            if (!this.state.story.edges.some(old => old.includes(edge[0]) && old.includes(edge[1]))) this.state.story.edges.push(edge);
+        }
+        const known = this.graph();
+        this.state.story.flags.Q1_DONE = !!known.R01;
+        this.state.story.flags.Q2_DONE = !!known.R02;
+        this.state.story.seen = [...new Set([...this.state.story.seen, ...Object.keys(known)])];
+        return !!known.R02;
+    }
+    continueStory(): boolean {
+        if (!['thought-prompt', 'thoughts'].includes(this.state.phase)
+            || !availableChoice(chapterOneDecision(this.state), 'continue-story') || !this.establishNarrativePlan()) return false;
+        this.state.notesReturn = null;
+        this.state.phase = 'explore';
+        this.state.scene = 'camp_gate';
+        return this.act('meet-jiang');
+    }
+    returnToStory(): boolean {
+        if (!['thought-prompt', 'thoughts'].includes(this.state.phase)) return false;
+        this.establishNarrativePlan();
+        const previous = this.state.notesReturn;
+        this.state.phase = previous && !['thoughts', 'thought-prompt'].includes(previous) ? previous : 'explore';
+        this.state.notesReturn = null;
+        this.emit();
+        return true;
     }
     beginThinking(): boolean {
         if (this.state.phase !== 'thought-prompt') return false;
@@ -579,6 +613,7 @@ export class ChapterOneSession {
         });
         this.cancelSpeech(false);
         this.state = restored;
+        if (this.state.phase === 'explore') this.establishNarrativePlan();
         this.applyMode((restored.runtimeMode ?? 'ai-phone') !== this.mode);
         this.emit();
     }

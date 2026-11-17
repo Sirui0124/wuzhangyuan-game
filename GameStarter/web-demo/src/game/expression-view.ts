@@ -12,7 +12,7 @@ export function expressionPaperHTML(view: {
     revealing?: boolean; elapsed?: number; maxLength?: number; placeholder?: string;
 }) {
     return `<div class="expression-paper${view.revealing ? ' is-revealing' : ''}" style="--reveal-elapsed:-${Math.max(0, view.elapsed ?? 0)}ms">
-        <div class="expression-input-block" data-expression-bundle>${view.evidence}${view.composer ?? ''}</div>
+        ${view.composer ? `<div class="expression-input-block">${view.composer}</div>` : ''}
         <section class="expression-result ${view.ready === false ? 'is-pending' : 'is-ready'}" data-expression-result>
             <header><label for="player-expression" class="outcome-title" data-expression-output>准备说的话</label></header>
             <div class="expression-writing-wash"><textarea id="player-expression" ${view.maxLength === 0 ? '' : `maxlength="${view.maxLength ?? 1500}"`} aria-label="准备说的话"${view.placeholder ? ` placeholder="${esc(view.placeholder)}"` : ''}${view.busy ? ' disabled' : ''}>${esc(view.draft)}</textarea></div>
@@ -20,6 +20,6 @@ export function expressionPaperHTML(view: {
         </section>
         <div class="polish-actions">${view.polishActions}</div>${view.help ?? ''}
         <footer class="expression-actions">${view.confirmActions}</footer>${aiGuidanceHTML('expression')}
-        <div class="thought-inspection-slot expression-inspection-slot" aria-label="查阅表达依据">${view.inspection ?? ''}</div>
+
     </div>`;
 }

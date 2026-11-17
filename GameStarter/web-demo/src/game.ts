@@ -12,7 +12,6 @@ import { tentEnding } from './chapters/chapter-one/tent-visit';
 import { supplyById } from './chapters/chapter-one/supplies';
 import { supplyEndings } from './chapters/chapter-one/supply-endings';
 import { eraEnding } from './game/era-ending';
-import { createPhoneModule } from './phone/module';
 import { createCharacterModule } from './characters/module';
 import { chapterOneCharacters } from './chapters/chapter-one/characters';
 import { gameModules } from './modules/config';
@@ -21,13 +20,12 @@ import { createDialogueVoice } from './game/dialogue-voice';
 import { bindGameInputEvents } from './game/input-events';
 import { createGameUIState } from './game/ui-state';
 import { createSceneViews } from './chapters/chapter-one/views/scene';
-import { createWorkspaceViews } from './chapters/chapter-one/views/workspace';
+import { createStoryViews } from './chapters/chapter-one/views/story';
 import { createNavigationViews } from './chapters/chapter-one/views/navigation';
 import { createSettingsController } from './game/settings';
 import { needsInitialAiSetup } from './game/ai-guidance';
 import { createGameModals } from './game/modals';
 import { createGameRenderer } from './game/renderer';
-import { bindThoughtDrag } from './game/thought-drag';
 import type { Media } from './game/view-common';
 import { offlineExpressionAgents } from './offline-expression-agents';
 import { readRuntimeMode, initializeRuntimeMode, setRuntimeConnection, saveRuntimeMode, aiEnabled, phoneEnabled, itemSystemEnabled, type RuntimeMode } from './runtime-mode';
@@ -40,12 +38,8 @@ import { GameAudio } from './audio';
 import { CinematicPlayer, type Clip } from './cinematics';
 import { freshCollection, parseCollection, unlockEnding, type EndingCatalog } from './endings';
 import { openEndingAlbum } from './ending-album';
-import { clearClueReceipts, showClueReceipt, showItemReceipt } from './clue-receipt';
-import { thoughtLabels } from './thought-workspace';
-import { drawThoughtCurves } from './thought-curves';
-import { createThoughtDetail } from './thought-detail';
-import { createThoughtInventory } from './thought-inventory';
-import { thoughtRevealDuration } from './thought-workspace-view';
+import { clearClueReceipts, showItemReceipt } from './clue-receipt';
+const thoughtRevealDuration = 1600;
 
 
 const requestedPlaytest = new URLSearchParams(location.search).get('playtest');
@@ -90,21 +84,15 @@ function archiveCollection() {
 }
 const slotKey = (slot: string) => `${GAME_SAVE_KEY}:slot:${slot}`;
 const label = (id: string) => script.clues.find(c => c.id === id)?.summary ?? inferenceRules.find(rule => rule.id === id)?.summary ?? id;
-const shortLabels = thoughtLabels;
 const dialogueVoice = createDialogueVoice(game, text => toast(text), () => !ui.home && !ui.overlay && !ui.previewFilm && !root.querySelector('video,[data-story-film]') && !document.querySelector('dialog[open],.ending-album-host'));
 const sceneViews = createSceneViews(game, flow, media, ui, dialogueVoice.isEnabled);
-const workspaceViews = createWorkspaceViews(game, script, media, ui, label, sceneViews.hud);
+const workspaceViews = createStoryViews(game, media, ui, sceneViews.hud);
 const navigationViews = createNavigationViews(game, media, movies, stored, () => !!collection.unlocked.safe || supplyEndings.some(ending => !!collection.unlocked[ending.id]), () => ({ catalog, collection: archiveCollection(), warning: collectionWarning }), () => grainHasCompleted(grainStory, stored(GRAIN_SAVE_KEY), stored(GRAIN_COMPLETED_KEY)));
-const { sourceHTML, thoughtView, pickerHTML } = workspaceViews;
-const thoughtDetail = createThoughtDetail(root, id => id.startsWith('item:') ? supplyById(id.slice(5), game.snapshot().supplies)?.name ?? '物品' : shortLabels[id] ?? label(id), id => sourceHTML(id, game.snapshot()), id => id.startsWith('item:') ? '物品详情' : '原话与依据');
-const thoughtInventory = createThoughtInventory(root, () => thoughtDetail.position(), () => {
-    if (ui.renderAfterComposition) { ui.renderAfterComposition = false; render(); }
-});
 const settings = createSettingsController(root, api, audio, ui, () => render(), dialogueVoice, { get: () => mode, set: setRuntimeMode, connected: value => applyRuntimeMode(setRuntimeConnection(value)) });
 const { openSettings, saveApiSettings } = settings;
 const modals = createGameModals(game, flow, media, ui, stored, slotKey, settings.settingsHTML, GAME_SAVE_KEY);
 const pauseMenu = createPauseMenu(root, ui, { personality, render: () => render(), settings: settings.settingsHTML, saves: modals.saveHTML, restart: newGame, suspend: () => { audio.setMusicPaused(true); dialogueVoice.stop(); }, home: () => { dialogueVoice.stop(); game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; settings.close(); render(); } });
-const { render, revealDialogue } = createGameRenderer({ root, game, ui, audio, cinema, movies, thoughtDetail, paused: () => pauseMenu.render(),
+const { render, revealDialogue } = createGameRenderer({ root, game, ui, audio, cinema, movies, paused: () => pauseMenu.render(),
     presented: () => {
         people.sync(chapterOneCharacters(game, !ui.home && !ui.previewFilm && !ui.overlay));
         // After DOM reconciliation, including closing settings and restoring a saved reply.
@@ -114,15 +102,12 @@ const { render, revealDialogue } = createGameRenderer({ root, game, ui, audio, c
             else dialogueVoice.sync();
         });
     },
-    thoughtInventory, views: { ...sceneViews, ...workspaceViews, ...navigationViews, ...modals } });
-const shopping = createPhoneModule(root, game, ui, render, persist);
+    views: { ...sceneViews, ...workspaceViews, ...navigationViews, ...modals } });
 document.addEventListener('visibilitychange', () => { if (!document.hidden) dialogueVoice.sync(); });
 document.addEventListener('close', () => dialogueVoice.sync(), true);
 window.addEventListener('storage', event => { if (event.key === 'wuzhang-ai-voice-enabled' || event.key === null) dialogueVoice.sync(); });
-shopping.setEnabled(phoneEnabled(mode));
 window.addEventListener('pagehide', event => {
-    evaluation.cancel(); writing.cancel(); shopping.invalidate();
-    if (!event.persisted) { personality.dispose(); people.dispose(); shopping.dispose(); evaluation.dispose(); writing.dispose(); }
+    evaluation.cancel(); writing.cancel(); if (!event.persisted) { personality.dispose(); people.dispose(); evaluation.dispose(); writing.dispose(); }
 });
 
 function setRuntimeMode(next: RuntimeMode) {
@@ -132,12 +117,11 @@ function setRuntimeMode(next: RuntimeMode) {
 }
 function applyRuntimeMode(next: RuntimeMode) {
     if (next === mode) return;
-    shopping.invalidate(); evaluation.cancel(); writing.cancel(); dialogueVoice.stop();
-    ui.inventoryKind = 'clues'; ui.notesShown = false; thoughtDetail.close();
+    evaluation.cancel(); writing.cancel(); dialogueVoice.stop();
+    ui.inventoryKind = 'clues'; ui.notesShown = false;
     mode = next;
     game.setRuntimeMode(next);
-    shopping.setEnabled(phoneEnabled(mode));
-    shopping.restore(); persist();
+    persist();
     personality.resume();
 }
 function narrativeSnapshot() { return JSON.stringify({ ...JSON.parse(game.serialize()), personality: personality.snapshot() }); }
@@ -162,13 +146,10 @@ function unlock(id: string) {
 }
 let previousGenerationStatus = game.snapshot().composition.status;
 game.onChange(event => {
-    shopping.sessionChanged();
-    const clueOrigin = event.type === 'clue' ? root.querySelector('.dialogue-box')?.getBoundingClientRect() : undefined;
     const itemOrigin = event.type === 'item' ? root.querySelector('[data-action="pick-up-cup"],.dialogue-box')?.getBoundingClientRect() : undefined;
     if (['line', 'section', 'cinematic', 'graph'].includes(event.type)) ui.notice = '';
     if (event.type === 'item' && event.id) ui.notice = '';
     if (event.type === 'ending' && event.id) unlock(event.id);
-    if (event.type === 'clue' && !ui.restoring) { audio.play('evidence_gain'); ui.notice = ''; }
     if (event.type === 'graph') audio.play('paper_turn');
     // Speech service status belongs beside the pending speech, never in a floating story reply.
     if (event.type === 'speech') {
@@ -191,7 +172,6 @@ game.onChange(event => {
     }
     previousGenerationStatus = generationStatus;
     if (!ui.restoring) render();
-    if (event.type === 'clue' && event.id && !ui.restoring && !ui.home) showClueReceipt(root, shortLabels[event.id] ?? label(event.id), ui.reduced, clueOrigin);
     if (event.type === 'item' && event.id && !ui.restoring && !ui.home) {
         const item = worldItem(event.id);
         if (item) { audio.play('evidence_gain'); showItemReceipt(root, item.name, ui.reduced, itemOrigin); }
@@ -201,9 +181,9 @@ function load(key = GAME_SAVE_KEY) {
     dialogueVoice.stop();
     const raw = stored(key); if (!raw) { toast('这里还没有留下进度。'); return; }
     let loaded = false;
-    try { ui.restoring = true; const { personality: _record, ...story } = JSON.parse(raw); game.restore(JSON.stringify(story)); personality.attach(JSON.parse(raw), { tutorial: game.snapshot().round === 1 }); personalityOriginal = ''; clearClueReceipts(); thoughtInventory.reset(); ui.inventoryKind = 'clues'; ui.notesShown = false; ui.storageWarning = ''; ui.home = false; ui.overlay = ''; ui.filmKey = ''; ui.noteOpen = ''; ui.revealAt = 0; ui.renderedWorkspace = ''; clearTimeout(ui.revealTimer); loaded = true; }
+    try { ui.restoring = true; const { personality: _record, ...story } = JSON.parse(raw); game.restore(JSON.stringify(story)); personality.attach(JSON.parse(raw), { tutorial: game.snapshot().round === 1 }); personalityOriginal = ''; clearClueReceipts(); ui.inventoryKind = 'clues'; ui.notesShown = false; ui.storageWarning = ''; ui.home = false; ui.overlay = ''; ui.filmKey = ''; ui.noteOpen = ''; ui.revealAt = 0; ui.renderedWorkspace = ''; clearTimeout(ui.revealTimer); loaded = true; }
     catch { ui.storageWarning = '这份存档与当前内容暂不兼容，原记录已保留。'; }
-    finally { ui.restoring = false; if (loaded) { pauseMenu.dismiss(); cinema.resetPlayback(); shopping.restore(); persist(); } render(); }
+    finally { ui.restoring = false; if (loaded) { pauseMenu.dismiss(); cinema.resetPlayback(); persist(); } render(); }
 }
 function newGame(resetChapters = false) {
     const raw = stored();
@@ -216,10 +196,8 @@ function newGame(resetChapters = false) {
         catch { ui.storageWarning = '暂时无法备份并重置章节进度，请稍后重试。'; ui.overlay = 'save'; render(); return; }
     }
     pauseMenu.dismiss(); cinema.resetPlayback();
-    shopping.reset();
     dialogueVoice.stop();
     clearClueReceipts();
-    thoughtInventory.reset();
     personality.restart({ tutorial: true }); personalityOriginal = '';
     ui.inventoryKind = 'clues';
     ui.home = false; ui.menuMap = false; ui.overlay = ''; ui.notesShown = false; ui.revealAt = 0; clearTimeout(ui.revealTimer); ui.noteOpen = ''; ui.filmKey = ''; ui.notice = ''; ui.storageWarning = ''; game.restart();
@@ -237,60 +215,10 @@ function reviseExpression() {
     const editor = root.querySelector<HTMLTextAreaElement>('#player-expression');
     editor?.focus({ preventScroll: true }); editor?.scrollIntoView({ block: 'nearest' });
 }
-function setInventoryOpen(open: boolean, anchor?: HTMLElement) {
-    ui.notesShown = open;
-    const host = root.querySelector<HTMLElement>('.workspace-screen');
-    if (!host) { render(); return; }
-    host.classList.toggle('inventory-open', open);
-    const toggle = host.querySelector<HTMLElement>('.inventory-tab');
-    toggle?.setAttribute('aria-expanded', String(open));
-    const hint = toggle?.querySelector('small');
-    if (hint) hint.textContent = open ? '收起 ‹' : '展开 ›';
-    const speechAdd = host.querySelector<HTMLElement>('.speech-add');
-    if (speechAdd) {
-        speechAdd.setAttribute('aria-expanded', String(open && ui.inventoryKind === 'clues'));
-        speechAdd.textContent = '＋ 添加线索';
-    }
-    host.querySelector('.speech-add-item')?.setAttribute('aria-expanded', String(open && ui.inventoryKind === 'items'));
-    if (!open) {
-        thoughtDetail.close();
-        const inventory = host.querySelector<HTMLElement>('.thought-inventory');
-        const focusInside = !!inventory?.contains(document.activeElement);
-        const scroll = inventory?.querySelector('.inventory-scroll');
-        if (scroll) ui.inventoryScroll = scroll.scrollTop;
-        inventory?.remove();
-        if (focusInside) ((ui.inventoryKind === 'items' ? host.querySelector<HTMLElement>('.speech-add-item') : speechAdd) ?? host.querySelector<HTMLElement>('.is-current-page [data-action="open-inventory"],.inventory-tab'))?.focus({ preventScroll: true });
-    } else if (!host.querySelector('.thought-inventory')) {
-        const state = game.snapshot(), template = document.createElement('template');
-        template.innerHTML = pickerHTML(state);
-        const inventory = template.content.querySelector('.thought-inventory');
-        if (inventory) host.append(inventory);
-        thoughtInventory.mount(anchor);
-        const scroll = host.querySelector('.inventory-scroll');
-        if (scroll) scroll.scrollTop = ui.inventoryScroll;
-    } else if (open && anchor) thoughtInventory.mount(anchor);
-    drawThoughtCurves(root, game.snapshot(), thoughtView());
-    if (host.classList.contains('expression-workspace')) requestAnimationFrame(() => {
-        if (!host.isConnected || ui.notesShown !== open) return;
-        (open ? host.querySelector('.expression-inspection-slot') : speechAdd)?.scrollIntoView({ block: 'nearest' });
-    });
-}
-function togglePicker(kind: 'clues' | 'items', trigger: HTMLElement) {
-    const close = ui.notesShown && ui.inventoryKind === kind;
-    setInventoryOpen(false);
-    if (ui.inventoryKind !== kind) { thoughtInventory.reset(); ui.inventoryScroll = 0; }
-    ui.inventoryKind = kind;
-    if (!close) setInventoryOpen(true, trigger);
-}
-function readThought(id: string, trigger: HTMLElement) {
-    // Keep historical clues in their visible page instead of jumping to the latest.
-    // Insert or move only the inspection pair so all canvas nodes stay mounted.
-    thoughtDetail.open(id, trigger);
-}
 root.addEventListener('click', event => {
-    const target = (event.target as HTMLElement).closest<HTMLElement>('button,[data-edge]'); if (!target) return;
+    const target = (event.target as HTMLElement).closest<HTMLElement>('button'); if (!target) return;
     if (ui.overlay && !target.closest('.game-modal')) return;
-    const action = target.dataset.action, state = game.snapshot();
+    const action = target.dataset.narrativeChoice ?? target.dataset.action, state = game.snapshot();
     if (target.dataset.tent) {
         const action = target.dataset.tent;
         if (game.tentAction(action)) {
@@ -301,24 +229,12 @@ root.addEventListener('click', event => {
         return;
     }
     // A double click finishing the last line must not also choose the newly shown option.
-    if (action === 'begin-thinking' && event.detail > 1) { event.preventDefault(); return; }
+    if (['continue-story', 'return-to-story'].includes(action ?? '') && event.detail > 1) { event.preventDefault(); return; }
     if (target.dataset.sceneAction) { const result = game.actionState(target.dataset.sceneAction); if (result.enabled) game.act(target.dataset.sceneAction); else toast(result.reason); return; }
     if (target.dataset.move) { game.move(target.dataset.move as ChapterScene); return; }
-    if (target.dataset.inventoryItem) { readThought(target.dataset.inventoryItem, target); return; }
-    if (target.dataset.readNote) { audio.play('paper_turn'); readThought(target.dataset.readNote, target); return; }
-    if (target.dataset.placeEvidence) { placeEvidence(target.dataset.placeEvidence); return; }
-    if (target.dataset.removeThought) { game.removeThought(target.dataset.removeThought); root.querySelector<HTMLElement>('[data-thought-drop]')?.focus({ preventScroll: true }); return; }
-    if (target.dataset.buyItem) { game.buyItem(target.dataset.buyItem); return; }
-    if (target.dataset.attachItem) { game.attachItem(target.dataset.attachItem); return; }
     if (action === 'pick-up-cup') { game.pickUpCup(); return; }
     if (action === 'bag' && itemSystemEnabled()) { ui.overlay = 'items'; render(); return; }
-    if (action === 'items' && game.phoneEnabled() && state.phase === 'expression' && state.round === 2 && !state.speech) {
-        togglePicker('items', target); return;
-    }
-    if (action === 'clue-items') { togglePicker('clues', target); return; }
-    if (action === 'supplies' && game.canPrepareSupplies()) { game.cancelGeneration(false); setInventoryOpen(false); ui.overlay = 'supplies'; render(); return; }
     if (target.dataset.scoutChoice) { game.chooseScout(target.dataset.scoutChoice as 'a' | 'b'); personality.choice(target.dataset.scoutChoice === 'a' ? 'A-23' : 'A-23B', undefined, state.round); persist(); return; }
-    if (target.dataset.use) { game.selectEvidence(target.dataset.use); return; }
     if (target.dataset.storeSlot) {
         if (ui.home) return; // The menu has no live session to save.
         const slot = target.dataset.storeSlot, key = slotKey(slot);
@@ -332,36 +248,9 @@ root.addEventListener('click', event => {
     if (action === 'replay-first') newGame();
     if (action === 'continue' || action === 'load-auto') load();
     if (action === 'next') next();
-    if (action === 'begin-thinking') {
-        ui.notesShown = false; ui.noteOpen = ''; ui.revealAt = 0;
-        ui.unfoldThoughts = !ui.reduced;
-        if (!game.beginThinking()) ui.unfoldThoughts = false;
-    }
     if (action === 'menu') { dialogueVoice.stop(); game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; ui.overlay = ''; render(); }
-    if (action === 'notes') { if (state.phase === 'thoughts' || state.phase === 'expression') { if (state.phase === 'expression') game.openNotes(); else game.closeNotes(); } else game.openNotes(); }
-    if (action === 'close-notes') game.closeNotes();
-    if (action === 'fold-note') { ui.noteOpen = ''; render(); }
-    if (action === 'notes-list') setInventoryOpen(!ui.notesShown, target);
-    if (action === 'open-inventory') { if (ui.inventoryKind !== 'clues') { setInventoryOpen(false); thoughtInventory.reset(); ui.inventoryKind = 'clues'; } setInventoryOpen(true, target); }
-    if (action === 'clear-inventory-search') thoughtInventory.clear();
-    if (action === 'continue-thought') { setInventoryOpen(false); ui.revealAt = 0; game.continueThought(); }
-    if (action === 'think') {
-        setInventoryOpen(false);
-        clearTimeout(ui.revealTimer); ui.revealAt = ui.reduced ? 0 : Date.now();
-        if (!game.think()) ui.revealAt = 0;
-        else {
-            requestAnimationFrame(() => {
-                const canvas = root.querySelector<HTMLElement>('.workspace-layout');
-                canvas?.scrollTo({ top: canvas.scrollHeight, behavior: ui.reduced ? 'instant' : 'smooth' });
-            });
-            if (!ui.reduced) ui.revealTimer = window.setTimeout(() => { render(); }, thoughtRevealDuration + 20);
-        }
-    }
-    if (action === 'thought-tail') { const canvas = root.querySelector<HTMLElement>('.workspace-layout'); canvas?.scrollTo({ top: canvas.scrollHeight, behavior: ui.reduced ? 'instant' : 'smooth' }); }
-    if (action === 'thought-history') { const canvas = root.querySelector<HTMLElement>('.workspace-layout'); canvas?.scrollTo({ top: 0, behavior: ui.reduced ? 'instant' : 'smooth' }); }
-    if (action === 'reasoning-mode' || action === 'language-mode') { setInventoryOpen(false); thoughtInventory.reset(); ui.inventoryKind = 'clues'; ui.revealAt = 0; game.setThoughtMode(action === 'reasoning-mode' ? 'reasoning' : 'language'); }
-    if (action === 'revise-thought') { ui.revealAt = 0; game.reviseThought(); root.querySelector('[data-thought-tail]')?.scrollIntoView({ block: 'nearest' }); }
-    if (action === 'follow-plan') { ui.revealAt = 0; ui.noteOpen = ''; ui.notesShown = false; game.followPlan(); }
+    if (action === 'continue-story') { game.continueStory(); return; }
+    if (action === 'return-to-story') { game.returnToStory(); return; }
     if (action === 'generate-expression') { personalityOriginal = game.snapshot().story.draft.trim() || game.snapshot().composition.focus.trim(); void game.generateExpression(); }
     if (action === 'restore-previous-draft') { ui.revealAt = 0; game.restorePreviousDraft(); root.querySelector<HTMLTextAreaElement>('#player-expression')?.focus(); }
     if (action === 'confirm-focus' && game.snapshot().phase === 'expression') {
@@ -391,14 +280,7 @@ root.addEventListener('click', event => {
     if (action === 'save-api' || action === 'test-api') void saveApiSettings(action === 'test-api');
     if (action === 'close-modal') { ui.overlay = ''; settings.close(); ui.slotOverwrite = ''; render(); }
 });
-function placeEvidence(id: string) {
-    const state = game.snapshot(), purpose = state.phase === 'expression' || state.notesPurpose === 'P2';
-    const okay = purpose ? !state.story.selected.includes(id) && game.selectEvidence(id) : game.placeThought(id);
-    if (okay) { audio.play('paper_turn'); toast(`已放入：${shortLabels[id] ?? label(id)}`); }
-}
-
-bindGameInputEvents({ root, game, ui, audio, settings, thoughtDetail, thoughtView, persist, render, setInventoryOpen, reviseExpression, next });
-bindThoughtDrag(root, id => shortLabels[id] ?? label(id), placeEvidence);
+bindGameInputEvents({ root, game, ui, audio, settings, persist, render, reviseExpression, next });
 if (suppliesPlaytest && stored()) {
     load();
     if (!ui.home && game.canPrepareSupplies()) ui.overlay = 'supplies';
@@ -408,7 +290,6 @@ if (suppliesPlaytest && stored()) {
     ui.restoring = true;
     game.restore(JSON.stringify(fixture));
     personality.attach(fixture, { tutorial: fixture.round === 1 });
-    shopping.restore();
     ui.restoring = false;
     ui.home = false;
     if (suppliesPlaytest && game.canPrepareSupplies()) ui.overlay = 'supplies';

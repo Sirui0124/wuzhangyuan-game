@@ -12,4 +12,4 @@ Cocos 主场景 `assets/scenes/Main.scene` 尚未接入完整玩法。浏览器�
 
 旧版 macOS 打包脚本及 `package:mac` 命令已退出维护。Windows 安装版沿用网页游戏，发布启动器与 NSIS 构建配置位于 [packaging/windows](packaging/windows/README.md)，使用独立的预编译资源和用户数据目录；玩家不需要安装 Node、TypeScript 或 Cocos。安装器生成、安装后启动及卸载结果分别记录在每次发布报告中。
 
-物品栏独立于手机：当前可获得姜维头巾、营地酒杯和第二章自己军帐里的蜡烛台；手机解锁后可按 ¥20/¥5/¥10 出售。无手机仍可拿取和查看。范围与验证见[物品系统说明](../docs/design/WORLD-ITEMS-20261025.md)。
+物品栏保留姜维头巾、营地酒杯和第二章蜡烛台等剧情物品。手机、购物与出售入口已移除；旧存档数据继续保留。当前改动见[剧情与选择架构记录](../docs/architecture/ITERATION-20261117.md)。

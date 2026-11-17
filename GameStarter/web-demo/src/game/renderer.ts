@@ -1,11 +1,8 @@
+import { createCompositionGuard } from './composition-guard';
 import type { ChapterSession, GameSessionState } from '../chapter-session';
 import type { GameAudio } from '../audio';
 import type { CinematicPlayer, Clip } from '../cinematics';
 import { clearClueReceipts } from '../clue-receipt';
-import { drawThoughtCurves } from '../thought-curves';
-import type { createThoughtDetail } from '../thought-detail';
-import type { createThoughtInventory } from '../thought-inventory';
-import type { ThoughtView } from '../thought-workspace-view';
 import { esc } from './view-common';
 import { createStoryFilms, type StoryFilm } from './story-films';
 import { endingFilmForState, type EndingFilm } from './ending-films';
@@ -16,25 +13,21 @@ type Views = {
     menu(): string;
     mapHTML(): string;
     endingHTML(state: GameSessionState): string;
-    canvasHTML(state: GameSessionState): string;
+    storyHTML(state: GameSessionState): string;
     modalHTML(state: GameSessionState): string;
-    thoughtView(state?: GameSessionState): ThoughtView;
 };
 type RendererOptions = {
     paused?(): boolean;
     presented?(): void;
     root: HTMLElement; game: ChapterSession; ui: GameUIState; audio: GameAudio;
     cinema: CinematicPlayer; movies: Record<string, Clip[]>; views: Views;
-    thoughtDetail: ReturnType<typeof createThoughtDetail>;
-    thoughtInventory: ReturnType<typeof createThoughtInventory>;
 };
 /** Owns DOM reconciliation, focus, scroll, typewriter and cinematic mounting. */
 export function createGameRenderer(options: RendererOptions) {
-    const { root, game, ui, audio, cinema, movies, thoughtDetail, thoughtInventory } = options;
-    const { sceneHTML, menu, mapHTML, endingHTML, canvasHTML, modalHTML, thoughtView } = options.views;
-    const workspaceScroll: Record<string, number> = {};
+    const { root, game, ui, audio, cinema, movies } = options;
+    const { sceneHTML, menu, mapHTML, endingHTML, storyHTML, modalHTML } = options.views;
+    const composition = createCompositionGuard(root, render);
     const storyFilms = createStoryFilms(root, game, cinema, (movies.chapterDialogue ?? []) as StoryFilm[], () => render());
-    const canvasResize = new ResizeObserver(() => drawThoughtCurves(root, game.snapshot(), thoughtView()));
     function renderScene(state: GameSessionState) {
         const current = root.querySelector<HTMLElement>('.game-scene');
         if (!current || current.dataset.scene !== state.scene) { root.innerHTML = sceneHTML(state); return; }
@@ -49,14 +42,12 @@ export function createGameRenderer(options: RendererOptions) {
         current.dataset.phase = state.phase; current.replaceChildren(...children);
     }
     function render() {
+        if (composition.defer()) return;
         try { renderContent(); } finally { options.presented?.(); }
     }
     function renderContent() {
         if (options.paused?.()) return;
-        // A reveal timer or asynchronous status update must not replace a live IME input.
-        if (thoughtInventory.isComposing()) { ui.renderAfterComposition = true; return; }
-        const detailState = thoughtDetail.snapshot();
-        thoughtDetail.close();
+        // The composition guard above keeps asynchronous updates out of a live IME session.
         const state = game.snapshot(); clearInterval(ui.typeTimer);
         const endingFilms = (movies.chapterEndings ?? []) as EndingFilm[];
         const endingKey = (film: EndingFilm) => `ending:${state.story.run}:${state.round}:${film.id}${film.still ? ':still' : ''}`;
@@ -67,24 +58,16 @@ export function createGameRenderer(options: RendererOptions) {
         const previousPhase = root.querySelector<HTMLElement>('main[data-phase]')?.dataset.phase;
         const dialogueFocused = document.activeElement?.matches('.dialogue-advance');
         const active = document.activeElement as HTMLElement | null;
-        const phoneScroll = root.querySelector('.phone-content')?.scrollTop ?? 0;
-        const phoneFocus = active?.closest('.phone-panel') && active.id ? active.id : '';
         const speechFocus = active?.closest('.speech-box') ? active.dataset.action : undefined;
-        const focusAttribute = active?.closest('.workspace-screen') ? ['data-read-note', 'data-inventory-item', 'data-action', 'data-place-evidence', 'data-remove-thought', 'data-use', 'data-attach-item'].find(name => active.hasAttribute(name)) : undefined;
+        const focusAttribute = active?.closest('.workspace-screen') ? ['data-action'].find(name => active.hasAttribute(name)) : undefined;
         const workspaceFocus = active?.closest('.workspace-screen') ? active.id ? `#${CSS.escape(active.id)}` : focusAttribute ? `[${focusAttribute}="${CSS.escape(active.getAttribute(focusAttribute)!)}"]` : '' : '';
-        const inventoryFocus = active?.closest('.inventory-entry')?.querySelector<HTMLElement>('[data-inventory-item]')?.dataset.inventoryItem;
         const caret = active instanceof HTMLTextAreaElement || active instanceof HTMLInputElement ? [active.selectionStart, active.selectionEnd] : null;
         if (ui.home || ui.previewFilm || ['cinematic', 'death', 'ending', 'map'].includes(state.phase)) clearClueReceipts();
         // Scene nodes stay mounted between lines, but their modal sibling must be replaced too.
         root.querySelectorAll(':scope > .game-modal-shade').forEach(node => node.remove());
-        const previousCanvas = root.querySelector<HTMLElement>('.workspace-layout');
-        if (previousCanvas && ui.renderedWorkspace) workspaceScroll[ui.renderedWorkspace] = previousCanvas.scrollTop;
-        const previousInventory = root.querySelector<HTMLElement>('.inventory-scroll');
-        if (previousInventory) ui.inventoryScroll = previousInventory.scrollTop;
+        const previousScroll = root.querySelector<HTMLElement>('.workspace-layout')?.scrollTop ?? 0;
         document.documentElement.dataset.reduced = String(ui.reduced);
-        const noteMode = ['thoughts', 'expression'].includes(state.phase) && !ui.home;
-        const unfoldThoughts = ui.unfoldThoughts && noteMode && state.phase === 'thoughts';
-        ui.unfoldThoughts = false;
+        const storyMode = ['thought-prompt', 'thoughts', 'expression'].includes(state.phase) && !ui.home;
         if (ui.home) { cinema.dispose(); ui.filmKey = ''; audio.setMusicPaused(false); audio.setMusic('home'); root.innerHTML = ui.menuMap ? mapHTML() : menu(); }
         else if (ui.previewFilm || state.phase === 'cinematic') {
             const cinematic = game.currentCinematic(), clips = ui.previewFilm ? (ui.previewFilm === 'grain' ? movies.chapterPreview ?? [] : (movies.chapterScenes ?? []).filter(clip => clip.id === ui.previewFilm)) : (movies[cinematic!.group] ?? []).filter(clip => !cinematic!.clipIds || cinematic!.clipIds.includes(clip.id));
@@ -121,28 +104,13 @@ export function createGameRenderer(options: RendererOptions) {
                 }
             }
             else if (state.phase === 'map') root.innerHTML = mapHTML();
-            else if (noteMode) root.innerHTML = canvasHTML(state);
+            else if (storyMode) root.innerHTML = storyHTML(state);
             else renderScene(state);
         }
         if (ui.overlay) root.insertAdjacentHTML('beforeend', modalHTML(state));
-        const phoneContent = root.querySelector('.phone-content'); if (phoneContent) phoneContent.scrollTop = phoneScroll;
         if (ui.home && ui.storageWarning) root.querySelector('main')?.insertAdjacentHTML('beforeend', `<p class="menu-warning" role="status">${esc(ui.storageWarning)}</p>`);
-        canvasResize.disconnect();
-        if (noteMode) {
-            if (unfoldThoughts) root.querySelector('.workspace-screen')?.classList.add('is-unfolding');
-            const nextWorkspace = `${state.story.run}:${state.phase === 'expression' || state.notesPurpose === 'P2' ? 'language' : 'reasoning'}`;
-            const entering = !previousCanvas || nextWorkspace !== ui.renderedWorkspace;
-            ui.renderedWorkspace = nextWorkspace;
-            thoughtInventory.mount(entering ? root.querySelector<HTMLElement>('.is-current-page') ?? undefined : undefined);
-            const canvas = root.querySelector<HTMLElement>('.workspace-layout');
-            if (canvas) canvas.scrollTop = entering && nextWorkspace.endsWith(':reasoning') ? canvas.scrollHeight : workspaceScroll[ui.renderedWorkspace] ?? 0;
-            const inventory = root.querySelector<HTMLElement>('.inventory-scroll');
-            if (inventory) inventory.scrollTop = ui.inventoryScroll;
-            if (!entering && !ui.overlay && ui.notesShown && detailState) thoughtDetail.restore(detailState);
-            requestAnimationFrame(() => drawThoughtCurves(root, game.snapshot(), thoughtView()));
-            const curveHost = root.querySelector('.expression-layout,.reasoning-timeline');
-            if (curveHost) canvasResize.observe(curveHost);
-        }
+        const workspace = root.querySelector<HTMLElement>('.workspace-layout');
+        if (workspace && state.phase === previousPhase) workspace.scrollTop = previousScroll;
         const row = state.phase === 'reply' ? game.currentReply() : game.row(), target = root.querySelector<HTMLElement>('#spoken-line');
         if (row && target) {
             const lineId = `${state.story.run}:${state.phase}:${row.id}:${state.phase === 'reply' ? state.story.history.length : ''}:${row.text}`;
@@ -153,19 +121,16 @@ export function createGameRenderer(options: RendererOptions) {
             }
         }
         if (ui.overlay) {
-            const input = phoneFocus ? root.querySelector<HTMLTextAreaElement>(`#${CSS.escape(phoneFocus)}`) : null;
-            (input ?? root.querySelector<HTMLElement>('.game-modal button'))?.focus({ preventScroll: true });
-            if (input && caret && caret[0] !== null && caret[1] !== null) input.setSelectionRange(caret[0], caret[1]);
+            root.querySelector<HTMLElement>('.game-modal button')?.focus({ preventScroll: true });
         }
-        else if (state.phase === 'thought-prompt') root.querySelector<HTMLElement>('[data-action=begin-thinking]')?.focus({ preventScroll: true });
-        else if (noteMode && previousPhase === 'thought-prompt') root.querySelector<HTMLElement>('.is-current-page [data-action=open-inventory]')?.focus({ preventScroll: true });
+        else if (state.phase === 'thought-prompt') root.querySelector<HTMLElement>('[data-action=continue-story]')?.focus({ preventScroll: true });
         else if (dialogueFocused || state.phase === 'reply' || (state.phase === 'dialogue' && previousPhase === 'spoken')) root.querySelector<HTMLElement>('.dialogue-advance')?.focus({ preventScroll: true });
         else if (state.phase === 'spoken') {
             const saved = speechFocus ? root.querySelector<HTMLElement>(`.speech-box [data-action="${speechFocus}"]`) : null;
             (saved ?? root.querySelector<HTMLElement>('.speech-box button') ?? root.querySelector<HTMLElement>('.speech-box'))?.focus({ preventScroll: true });
         }
-        else if (noteMode && workspaceFocus) {
-            const replacement = root.querySelector<HTMLElement>(workspaceFocus) ?? (inventoryFocus ? root.querySelector<HTMLElement>(`[data-inventory-item="${CSS.escape(inventoryFocus)}"]`) : null);
+        else if (storyMode && workspaceFocus) {
+            const replacement = root.querySelector<HTMLElement>(workspaceFocus);
             replacement?.focus({ preventScroll: true });
             if ((replacement instanceof HTMLTextAreaElement || replacement instanceof HTMLInputElement) && caret && caret[0] !== null && caret[1] !== null) replacement.setSelectionRange(caret[0], caret[1]);
         }
@@ -179,7 +144,5 @@ export function createGameRenderer(options: RendererOptions) {
         if (ui.typed || !target) return false;
         ui.typed = true; clearInterval(ui.typeTimer); target.textContent = ui.lineText; return true;
     }
-    window.addEventListener('resize', () => drawThoughtCurves(root, game.snapshot(), thoughtView()));
-    document.fonts.ready.then(() => drawThoughtCurves(root, game.snapshot(), thoughtView()));
     return { render, revealDialogue };
 }

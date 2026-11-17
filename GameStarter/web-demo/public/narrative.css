@@ -1,0 +1,20 @@
+/* Shared conversation presentation after retirement of evidence and phone panels. */
+html #game-root .expression-workspace .expression-paper { display: flex !important; flex-direction: column; gap: 14px; width: 100% !important; margin: 0 !important; padding: 22px; background: #f2ead9; border: 1px solid #aa9375; border-radius: 6px; color: #29251f !important; }
+html #game-root .expression-workspace .expression-result { width: 100% !important; min-width: 0; max-width: none !important; margin: 0 !important; grid-column: auto; position: static; }
+html #game-root .expression-workspace .expression-actions, html #game-root .expression-workspace .polish-actions { display: flex !important; flex-wrap: wrap; gap: 10px; margin: 0 !important; width: 100% !important; }
+html #game-root .expression-workspace .expression-actions { justify-content: flex-end !important; }
+html #game-root .expression-workspace .polish-actions { justify-content: flex-start !important; }
+html #game-root .expression-workspace #player-expression { width: 100% !important; min-height: 160px; background: #fffaf0 !important; color: #29251f !important; border: 1px solid #ab977a; padding: 16px; box-sizing: border-box; }
+html #game-root .expression-workspace .outcome-title, html #game-root .expression-workspace .expression-status, html #game-root .expression-workspace .ai-guidance { color: #29251f !important; }
+.expression-workspace .expression-layout { display: block; max-width: 960px; margin: 0 auto; }
+.narrative-expression { min-height: 100dvh; position: relative; overflow: auto; }
+.narrative-expression > .workspace-layout { display: block; width: min(960px, calc(100% - 48px)); margin: 100px auto 40px; }
+.narrative-expression .expression-center { width: 100% !important; max-width: none !important; }
+.narrative-expression .expression-heading { position: relative; }
+.narrative-choice button { white-space: normal; }
+@media (max-height: 500px) { .narrative-expression > .workspace-layout { margin-top: 68px; } }
+
+html #game-root .expression-workspace .expression-paper { --mind-ink: #29251f; --mind-muted: #655b4a; box-sizing: border-box; }
+html #game-root .expression-workspace .expression-result { padding: 0 !important; background: none !important; border: 0 !important; }
+html #game-root .expression-workspace .outcome-title::before { display: none !important; }
+html #game-root .expression-workspace .expression-status { color: #655b4a !important; }

@@ -8,7 +8,6 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { modelRequest, modelText, callModel } from './model-transport.mjs';
 import { readProfiles, selectProfile, saveTemporaryProfile, profilesFileFor } from './model-profiles.mjs';
-import { callShoppingModel } from './shopping.mjs';
 const primary = { baseUrl: 'https://primary.example/v1', model: 'primary', apiKey: 'fake-primary-key' };
 const second = { baseUrl: 'https://secondary.example/v1/messages', model: 'deepseek-v4-flash', apiKey: 'fake-secondary-key' };
 const profile = until => ({ version: 1, activeId: 'config2', activeUntil: until, profiles: { primary, config2: second } });
@@ -27,7 +26,7 @@ test('Messages preserves rules, maps images and auth, filters thinking, rejects 
   assert.throws(() => modelRequest(second, { text: 'hi', temperature: 2 }));
   let captured;
   t.mock.method(globalThis, 'fetch', async (url, options) => { captured = { url, options, body: JSON.parse(options.body) }; return new Response(JSON.stringify(result)); });
-  assert.equal(await callShoppingModel(second, { system: '独立定价规则', user: '{"item":"笔"}' }, new AbortController().signal), '最终文字');
+  assert.equal((await callModel(second, { system: '独立定价规则', text: '{"item":"笔"}' }, new AbortController().signal)).text, '最终文字');
   assert.equal(captured.body.system, '独立定价规则'); assert.equal(captured.body.messages[0].content, '{"item":"笔"}');
   const alternate = modelRequest({ ...second, systemBaseUrl: 'https://secondary.example/v1/chat/completions' }, { text: '商品规格', system: '定价规则' });
   assert.equal(alternate.messagesProtocol, false); assert.deepEqual(alternate.payload.messages.map(m => m.role), ['system', 'user']);

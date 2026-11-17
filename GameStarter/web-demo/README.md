@@ -1,5 +1,7 @@
 # 五丈原网页游戏
 
+2026-11-17：线索列表、推理画布和手机系统已移除，改为剧情与选择；旧存档兼容及新展示边界见[本轮架构记录](../../docs/architecture/ITERATION-20261117.md)。
+
 从工作区根目录运行 `npm ci`、`npm run open`，或双击 `启动游戏.cmd`。固定入口为 http://127.0.0.1:8812/ ，本地服务状态页为 `/local/`。`npm start` 在前台运行同一服务；AI 代理监听 8787。安装与迁移见[根 README](../../README.md)。
 
 物品获取直达试玩（每次打开或刷新回到获取前，使用独立存档）：
@@ -21,7 +23,7 @@
 - `src/game.ts`：当前入口的依赖装配、生命周期与用户动作。
 - `src/game/`：渲染、设置、模态、输入、拖放、界面状态。
 - `src/chapters/catalog.ts`：关卡目录。
-- `src/characters/`：只读人物志、小传与出场节点表；两章各自提供进度适配器。`src/phone/module.ts` 管理手机挂载／卸载；`src/modules/evaluation.ts` 提供可替换、可取消的评估接口，部署开关在 `src/modules/config.ts`。节点清单与待审文案见[人物志说明](../../docs/design/CHARACTER-DOSSIER-20261025.md)。
+- `src/characters/`：只读人物志、小传与出场节点表；两章各自提供进度适配器。手机及线索操作界面已退役；`src/modules/evaluation.ts` 提供可替换、可取消的评估接口，部署开关在 `src/modules/config.ts`。节点清单与待审文案见[人物志说明](../../docs/design/CHARACTER-DOSSIER-20261025.md)。
 - `src/chapter-two.ts` / `src/chapters/chapter-two/`：第二章最新影片贯通试玩，入口为 `/?chapter=grain`，包含两轮表达与五类结局。无 AI 模式使用可见固定发言；原第一轮专项入口 `?chapter=grain&playtest=open1` 保留。分支与影片仍待用户试玩审核，接入记录见 [第二章影片接入](../../docs/video/CHAPTER-TWO-FILM-INTEGRATION-20261025.md)。
 - `src/chapter-three.ts` / `src/chapters/chapter-three/`：第三章街亭，入口为 `/?chapter=jieting`。独立正文、12条线索、最多五轮连续进言与8个结局；AI接通时自由交谈，关闭时使用预写选项。线索和结局条件见[街亭解锁说明](../../docs/design/CHAPTER-THREE-UNLOCKS-20261026.md)。
 - `src/chapters/chapter-one/`：第一章推进、推理、表达、存档恢复、内容校验及专有视图。其他章节不能导入这里的状态与实现。

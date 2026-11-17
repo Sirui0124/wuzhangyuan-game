@@ -2,27 +2,21 @@ import { readPhonePreference } from '../runtime-mode';
 import { hasExpressionMaterial } from '../expression-contract';
 import type { ChapterSession } from '../chapter-session';
 import type { GameAudio, AudioBus } from '../audio';
-import { drawThoughtCurves, highlightThoughtCurves } from '../thought-curves';
-import type { createThoughtDetail } from '../thought-detail';
-import type { ThoughtView } from '../thought-workspace-view';
 import type { GameUIState } from './ui-state';
 import { bindDialogueScreenInput } from './dialogue-screen-input';
 
 type InputOptions = {
     root: HTMLElement; game: ChapterSession; ui: GameUIState; audio: GameAudio;
     settings: { setDetails(open: boolean): void; setVoiceEnabled(enabled: boolean): void; setRuntime(ai: boolean, phone: boolean): void; setItemSystem(enabled: boolean): void };
-    thoughtDetail: ReturnType<typeof createThoughtDetail>;
-    thoughtView(): ThoughtView;
     persist(): void;
     render(): void;
-    setInventoryOpen(open: boolean): void;
     reviseExpression(): void;
     next(): void;
 };
 /** Input updates preserve IME text, draft persistence and keyboard focus semantics. */
 export function bindGameInputEvents(options: InputOptions) {
-    const { root, game, ui, audio, settings, thoughtDetail, thoughtView,
-        persist, render, setInventoryOpen, reviseExpression, next } = options;
+    const { root, game, ui, audio, settings,
+        persist, render, reviseExpression, next } = options;
     const readingAction = () => {
         if (ui.home || ui.overlay || document.querySelector('.ending-album-host')) return;
         if (root.querySelector('[data-story-film]')) {
@@ -36,9 +30,6 @@ export function bindGameInputEvents(options: InputOptions) {
         if (state.phase === 'spoken' && state.speech?.status === 'ready') return () => game.acknowledgeReply();
     };
     bindDialogueScreenInput(root, readingAction);
-    root.addEventListener('pointerover', event => highlightThoughtCurves(root, event.target));
-    root.addEventListener('focusin', event => highlightThoughtCurves(root, event.target));
-    root.addEventListener('pointerleave', () => highlightThoughtCurves(root, document.activeElement));
     root.addEventListener('toggle', event => { const target = event.target as HTMLDetailsElement; if (target.id === 'api-settings') settings.setDetails(target.open); }, true);
     root.addEventListener('input', event => {
         const target = event.target as HTMLInputElement;
@@ -53,7 +44,6 @@ export function bindGameInputEvents(options: InputOptions) {
             const speak = root.querySelector<HTMLButtonElement>('[data-action=speak]'); if (speak) speak.disabled = true;
             const result = root.querySelector('[data-expression-result]'); result?.classList.remove('is-ready'); result?.classList.add('is-pending');
             const status = root.querySelector('.expression-status'); if (status) status.textContent = '';
-            drawThoughtCurves(root, game.snapshot(), thoughtView());
         }
         if (target.id === 'player-expression') {
             root.querySelector('.expression-paper')?.classList.remove('is-revealing');
@@ -64,11 +54,9 @@ export function bindGameInputEvents(options: InputOptions) {
             const status = root.querySelector('.expression-status'); if (status) status.textContent = '';
             const polish = root.querySelector<HTMLButtonElement>('[data-action=generate-expression]'); if (polish) { polish.disabled = !hasExpressionMaterial(game.snapshot().story.selected.length, game.snapshot().supplies.attached.length, game.snapshot().story.draft.trim() || game.snapshot().composition.focus); polish.textContent = game.aiEnabled() ? '润色表达' : '整理参考句'; }
             root.querySelector('[data-action=cancel-generation]')?.remove();
-            drawThoughtCurves(root, game.snapshot(), thoughtView());
         }
         if (target.dataset.volume) { audio.setVolume(target.dataset.volume as AudioBus, Number(target.value)); target.style.setProperty('--range', `${target.value}%`); const output = target.nextElementSibling; if (output) output.textContent = target.value + '%'; }
         if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked, readPhonePreference());
-        if (target.id === 'game-phone-enabled') settings.setRuntime(game.aiEnabled(), target.checked);
         if (target.id === 'game-item-system-enabled') settings.setItemSystem(target.checked);
         if (target.id === 'ai-voice-enabled') settings.setVoiceEnabled(target.checked);
     });
@@ -84,7 +72,7 @@ export function bindGameInputEvents(options: InputOptions) {
             else if (!event.shiftKey && focused === last) { event.preventDefault(); first?.focus(); }
             return;
         }
-        if (event.key === 'Escape') { event.preventDefault(); if (ui.overlay) { if (ui.overlay === 'settings') root.querySelector<HTMLElement>('[data-action=close-modal]')?.click(); else { ui.overlay = ''; render(); } } else if (thoughtDetail.close(true)) return; else if (ui.noteOpen) { ui.noteOpen = ''; render(); } else if (ui.notesShown) setInventoryOpen(false); else if (game.snapshot().phase === 'thoughts') game.closeNotes(); return; }
+        if (event.key === 'Escape') { event.preventDefault(); if (ui.overlay) { if (ui.overlay === 'settings') root.querySelector<HTMLElement>('[data-action=close-modal]')?.click(); else { ui.overlay = ''; render(); } } else if (['thoughts', 'thought-prompt'].includes(game.snapshot().phase)) game.returnToStory(); return; }
         if ((event.target as HTMLElement).matches('input,textarea,button,summary,a')) return;
         const advance = readingAction();
         if (advance && [' ', 'Enter'].includes(event.key)) {

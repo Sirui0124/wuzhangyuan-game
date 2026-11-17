@@ -2,7 +2,6 @@
 import { gameModules } from './modules/config';
 export type RuntimeMode = 'offline' | 'ai' | 'ai-phone';
 export const RUNTIME_MODE_KEY = 'wuzhang-runtime-mode-v1';
-const PHONE_PREFERENCE_KEY = 'wuzhang-phone-enabled-v1';
 export const ITEM_SYSTEM_KEY = 'wuzhang-item-system-enabled-v1';
 export function itemSystemEnabled(): boolean {
     try { return localStorage.getItem(ITEM_SYSTEM_KEY) !== '0'; } catch { return true; }
@@ -16,19 +15,19 @@ export const phoneEnabled = (mode: RuntimeMode) => itemSystemEnabled() && gameMo
 let connected = true;
 let initialization: Promise<RuntimeMode> | undefined;
 export function readRuntimePreference(): RuntimeMode {
-    try { const value = localStorage.getItem(RUNTIME_MODE_KEY); return isRuntimeMode(value) ? value : 'ai-phone'; }
-    catch { return 'ai-phone'; }
+    try { const value = localStorage.getItem(RUNTIME_MODE_KEY); return value === 'offline' ? 'offline' : 'ai'; }
+    catch { return 'ai'; }
 }
-export function readPhonePreference(): boolean { return itemSystemEnabled(); }
+/** Compatibility accessor: the application no longer mounts a phone. */
+export function readPhonePreference(): boolean { return false; }
 export function readRuntimeMode(): RuntimeMode {
     if (!gameModules.aiEvaluation || !connected || readRuntimePreference() === 'offline') return 'offline';
-    return gameModules.phone && itemSystemEnabled() ? 'ai-phone' : 'ai';
+    return 'ai';
 }
 export function setRuntimeConnection(value: boolean): RuntimeMode { connected = value; return readRuntimeMode(); }
 export function saveRuntimeMode(mode: RuntimeMode) {
     try {
-        localStorage.setItem(RUNTIME_MODE_KEY, mode);
-        if (mode !== 'offline') localStorage.setItem(PHONE_PREFERENCE_KEY, mode === 'ai-phone' ? '1' : '0');
+        localStorage.setItem(RUNTIME_MODE_KEY, mode === 'ai-phone' ? 'ai' : mode);
         return true;
     } catch { return false; }
 }

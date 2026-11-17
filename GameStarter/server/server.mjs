@@ -7,9 +7,6 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseEnv } from 'node:util';
 import { randomUUID } from 'node:crypto';
-import { shopFor, callShoppingModel } from './shopping.mjs';
-import { defaultPriceBook } from './shop-pricing.mjs';
-import { defaultPhoneEconomy } from './phone-economy.mjs';
 import { evaluatePersonality, validatePersonalityRequest, excludedPersonality } from './personality.mjs';
 
 const settingsFile = resolve(process.env.GAME_SETTINGS_FILE || resolve(dirname(fileURLToPath(import.meta.url)), '.env'));
@@ -94,24 +91,19 @@ const server = http.createServer(async (req, res) => {
   try { selected = selectProfile(config, await readProfiles(settingsFile)); }
   catch { send(503, { error: '本机模型配置档案无法读取，请检查保存的配置。' }); return; }
   const current = selected.config;
-  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), shopping: true, phoneEconomyVersion: 1, profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
+  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), shopping: false, profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
   if (voiceSettingsRequest && req.method === 'GET') {
     const values = { ...process.env, ...parseEnv(await readSettingsFile()) };
     send(200, { configured: Boolean(values.TTS_API_KEY), player: values.TTS_PLAYER_VOICE || '', weiyan: values.TTS_WEIYAN_VOICE || '', resource: values.TTS_RESOURCE_ID || 'seed-tts-2.0' }); return;
   }
   if (settingsRequest && req.method === 'GET') { send(200, current); return; }
-  const phoneRequest = ['/api/game/shop', '/api/game/shop/confirm', '/api/game/phone/guard'].includes(req.url);
   const personalityRequest = req.url === '/api/game/personality';
-  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url) && !phoneRequest && !personalityRequest) { send(404, { error: '接口不存在' }); return; }
+  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url) && !personalityRequest) { send(404, { error: '接口不存在' }); return; }
   if (personalityRequest) res.setHeader('Cache-Control', 'no-store');
-  if (phoneRequest) {
-    res.setHeader('Cache-Control', 'no-store');
-    if (!localSettingsRequest(req)) { send(403, { error: '手机仅允许本机访问' }); return; }
-  }
   if (settingsRequest && req.headers['content-type']?.split(';')[0].trim().toLowerCase() !== 'application/json') { send(415, { error: '设置需要使用 JSON 提交' }); return; }
   try {
     let body = ''; let bytes = 0;
-    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : phoneRequest ? 65536 : personalityRequest ? 131072 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
+    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : personalityRequest ? 131072 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
     let data;
     try { data = JSON.parse(body); } catch { send(400, { error: '无效 JSON' }); return; }
     if (voiceSettingsRequest) {
@@ -126,24 +118,6 @@ const server = http.createServer(async (req, res) => {
       try { if (selected.profile === 'config2') await saveTemporaryProfile(settingsFile, next, selected.expiresAt); else await persistSettings(next); } catch { send(500, { error: '无法保存本机 API 设置，请检查配置目录权限' }); return; }
       send(200, { ok: true }); return;
     }
-    if (req.url === '/api/game/phone/guard') {
-      try { send(200, await defaultPhoneEconomy.check(data?.requestId, data?.query, (await defaultPriceBook.getConfig()).penaltyFen)); }
-      catch (error) { send(error.status || 503, { error: error.status ? error.message : '暂时无法检查这条消息，请重试。' }); }
-      return;
-    }
-    if (req.url === '/api/game/shop/confirm') {
-      if (typeof data?.offerId !== 'string' || !/^shop-[0-9a-f-]{36}$/i.test(data.offerId)) { send(400, { error: '无效的商品报价' }); return; }
-      try {
-        const product = await defaultPriceBook.getOffer(data.offerId);
-        if (!product) { send(409, { error: '这份报价已失效，请重新询价。' }); return; }
-        send(200, { product });
-      } catch { send(503, { error: '暂时无法核对报价，请稍后重试。' }); }
-      return;
-    }
-    if (req.url === '/api/game/shop') {
-      try { await defaultPhoneEconomy.authorize(data?.guardRequestId, data?.query); }
-      catch (error) { send(error.status || 503, { error: error.status ? error.message : '暂时无法核对这条采购请求，请重试。' }); return; }
-    }
     if (personalityRequest) {
       const request = validatePersonalityRequest(data), excluded = excludedPersonality(request);
       if (excluded) { send(200, excluded); return; }
@@ -157,16 +131,6 @@ const server = http.createServer(async (req, res) => {
       return;
     }
     if (!current.apiKey) { send(503, { error: '请先在游戏设置中填写 API 密钥' }); return; }
-    if (req.url === '/api/game/shop') {
-      if (!data || typeof data.query !== 'string' || !data.query.trim() || data.query.length > 600 || !Number.isSafeInteger(data.budget) || data.budget < 0) { send(400, { error: '请填写600字以内的采购需求和有效预算' }); return; }
-      const controller = new AbortController(), disconnect = () => { if (!res.writableEnded) controller.abort(); };
-      res.once('close', disconnect);
-      const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(75000)]);
-      try { send(200, await shopFor(data, { signal, model: (text, callSignal) => callShoppingModel(current, text, callSignal) })); }
-      catch (error) { if (!controller.signal.aborted) send(signal.aborted ? 504 : 502, { error: signal.aborted ? '采购查询超时，需求已保留，请重试。' : '暂未取得完整采购建议，需求已保留，请重试。' }); }
-      finally { res.removeListener('close', disconnect); }
-      return;
-    }
     if (!data || typeof data !== 'object' || typeof data.text !== 'string' || !data.text.trim() || (data.images !== undefined && (!Array.isArray(data.images) || data.images.length > 8 || data.images.some(x => typeof x !== 'string' || !/^(https:\/\/|data:image\/)/.test(x)))) || (data.previousResponseId !== undefined && typeof data.previousResponseId !== 'string')) {
       send(400, { error: '需要非空 text；images 可传最多 8 个 HTTPS 图片地址或图片 data URL' }); return;
     }

@@ -5,7 +5,7 @@ import type { GameUIState } from '../../../game/ui-state';
 import { esc, btn, type Media } from '../../../game/view-common';
 import type { EndingCatalog, EndingCollection } from '../../../endings';
 import type { Clip } from '../../../cinematics';
-import { supplyEndingHTML } from './supplies';
+import { supplyEndingHTML } from './legacy-ending';
 import { tentEndingHTML } from './tent-visit';
 import { eraEndingHTML } from '../../../game/era-ending';
 import { achievementCardHTML } from '../../../achievement-card';

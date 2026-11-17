@@ -6,7 +6,6 @@ import { GAME_SAVE_KEY, type ChapterSession, type GameSessionState } from '../ch
 import { savePanelHTML, recordsPanelHTML, newGamePanelHTML, frameModal, type SaveSlotProps } from '../game-ui-panels';
 import { esc, personName, type Media } from './view-common';
 import type { GameUIState } from './ui-state';
-import { suppliesHTML, phoneComposerHTML } from '../chapters/chapter-one/views/supplies';
 import { supplyById, balance, money } from '../chapters/chapter-one/supplies';
 
 export function createGameModals(game: ChapterSession, flow: ChapterFlow, media: Media, ui: GameUIState,
@@ -27,11 +26,6 @@ export function createGameModals(game: ChapterSession, flow: ChapterFlow, media:
             + (ui.storageWarning || ui.notice ? `<p role="status">${esc(ui.storageWarning || ui.notice)}</p>` : '');
     }
     function modalHTML(state: GameSessionState) {
-        if (ui.overlay === 'supplies' && game.canPrepareSupplies()) return `<div class="game-modal-shade phone-shade"><section class="game-modal phone-panel" data-page="supplies" role="dialog" aria-modal="true" aria-labelledby="game-panel-title">
-          <header class="phone-header"><span class="phone-assistant-mark" aria-hidden="true">伴</span><h1 id="game-panel-title">我的系统</h1><div class="phone-wallet" aria-label="可用资金"><strong>¥${money(balance(state.supplies))}</strong></div><button data-action="close-modal" aria-label="收起手机">×</button></header>
-          <div class="phone-content">${suppliesHTML(game, state, ui.shopping)}</div>
-          ${phoneComposerHTML(game, ui.shopping)}
-          </section></div>`;
         if (ui.overlay === 'onward') return chapterOnwardHTML('wuzhang', state.end ?? '');
         if (ui.overlay === 'items') return frameModal('物品栏', bagHTML(state.supplies), 'items');
         if (ui.overlay === 'settings') return frameModal('设置', settingsHTML(), 'settings');

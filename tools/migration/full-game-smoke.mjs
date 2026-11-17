@@ -1,11 +1,18 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import { resolve } from 'node:path';
-import { mkdirSync,writeFileSync } from 'node:fs';
+import { mkdirSync,writeFileSync,existsSync,readFileSync } from 'node:fs';
 import { createStaticServer } from '../../GameStarter/web-demo/serve.mjs';
 const relayFirst=process.env.CH1_RELAY_FIRST==='1';
 const output=resolve(process.env.SMOKE_OUTPUT ?? (relayFirst?'outputs/ch1-relay-first-20261023':'outputs/ch1-six-clues-20261025/browser'));mkdirSync(output,{recursive:true});
-const server=createStaticServer({root:resolve(process.argv[2] ?? 'GameStarter/web-demo/.build')});await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
+const draft=process.env.NARRATIVE_DRAFT ? resolve(process.env.NARRATIVE_DRAFT) : '';
+const server=createStaticServer({root:resolve(process.argv[2] ?? 'GameStarter/web-demo/.build'), onRequest: draft ? (req,res)=>{
+ const path=new URL(req.url,'http://localhost').pathname;
+ const local=path==='/' ? resolve(draft,'GameStarter/web-demo/public/index.html') : path==='/narrative.css' ? resolve(draft,'GameStarter/web-demo/public/narrative.css') : path.endsWith('.js')&&path.startsWith('/GameStarter/') ? resolve(draft,'GameStarter/web-demo/.build',path.slice(1)) : '';
+ if(!local)return false;
+ if(!existsSync(local)){res.writeHead(404);res.end();return true;}
+ res.setHeader('Content-Type',path==='/'?'text/html; charset=utf-8':path.endsWith('.css')?'text/css; charset=utf-8':'text/javascript; charset=utf-8');res.end(readFileSync(local));return true;
+}:undefined});await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
 const base=`http://127.0.0.1:${server.address().port}`;
 const browser=await chromium.launch({headless:true,channel:'chrome'});
 const page=await browser.newPage({viewport:{width:1600,height:1000},reducedMotion:'reduce'});
@@ -33,12 +40,11 @@ const click=async action=>{
   if(action==='reply')await page.waitForFunction(()=>{const current=JSON.parse(localStorage.getItem('wuzhang-chapter-session-v1'));return current?.phase==='spoken'&&current.speech?.status==='ready';});
   return page.locator('.game-scene').click({position:{x:24,y:(page.viewportSize()?.height??600)*.4}});
  }
- return page.locator(`[data-action="${action}"]:visible`).first().click();
+ return page.locator(`[data-action="${action}"]:visible,[data-narrative-choice="${action}"]:visible`).first().click();
 };
 const errors=[],missing=[],checks=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()===404)missing.push(r.url());});
 const read=async()=>{let i=0;while((await state())?.phase==='dialogue'&&i++<160)await click('next');assert.ok(i<160);};
 const act=async(id,scene)=>{if((await state()).scene!==scene)await page.locator(`[data-move="${scene}"]`).click();await page.locator(`[data-scene-action="${id}"]`).click();await read();};
-const focus=async id=>{if(!await page.locator('#thought-inventory').count())await click((await state()).phase==='expression'?'clue-items':'open-inventory');await page.locator(`[data-inventory-item="${id}"]`).click();await page.locator(`[data-place-evidence="${id}"]`).click();await click('notes-list');};
 const firstWords='营门尚未突破，眼下不必强闯。今夜帐内有禁令，不能进入。军情交给我，我现在替您转呈，绝不耽误。';
 const secondWords='伯约亲口答应在帐外接报。往日敌军闻号即退，今夜不退，还随我军调动换向，可能在试探。请现在随我到帐外，当面交给伯约，不必入帐。';
 let modelMode='clarify';
@@ -71,20 +77,19 @@ try{
  await page.reload();await click('continue');assert.equal((await state()).phase,'explore');
  await page.locator('[data-move="report_post"]').click();assert.equal(await page.locator('[data-scene-action="ask-scout"]').count(),0);
  await act(...interviews[1]);await act('ask-scout','report_post');
- assert.equal((await state()).phase,'thought-prompt');await click('begin-thinking');
- checks.push(`${relayFirst?'乙→甲':'甲→乙'}: both available first, single interview save reload, scout gated until both complete`);
- assert.equal((await state()).phase,'thoughts');assert.equal((await state()).story.collected.length,5);await page.screenshot({path:resolve(output,'05-thoughts-q1.png')});
- await click('open-inventory');await page.locator('[data-inventory-item=C02]').click();assert.match(await page.locator('.thought-detail-content').innerText(),/咱们营里号角一响，他们就退了。/);await click('notes-list');
- await click('think');assert.equal((await state()).thinking.history.at(-1).outputs[0].id,'R01');assert.equal((await state()).story.flags.Q1_DONE,true);
- await click('continue-thought');await focus('C06');await focus('C07');await click('think');assert.equal((await state()).story.flags.JIANG_AUTH_GRANTED,undefined);
- await click('thought-history');await click('thought-tail');assert.equal((await state()).story.flags.Q2_DONE,true);
- await page.screenshot({path:resolve(output,'06-thoughts-q2.png')});checks.push('Played clues, source expansion, placement plus Think, explicit continuation and history review without fabricated authority');
- await click('close-notes');await click('save');await page.locator('[data-store-slot="1"]').click();await click('close-modal');const savedEdges=(await state()).story.edges;
- await click('notes');await click('thought-history');await click('close-notes');await click('save');await page.locator('[data-load-slot="1"]').click();await click('notes');
- assert.deepEqual((await state()).story.edges,savedEdges);assert.equal((await state()).story.flags.JIANG_AUTH_GRANTED,undefined);checks.push('Manual save restores actual clues, graph and the new workspace');
- await click('follow-plan');await read();assert.equal((await state()).story.flags.JIANG_AUTH_GRANTED,true);assert.equal((await state()).story.flags.COMPANION_PRESENT,true);
+ assert.equal((await state()).phase,'thought-prompt');
+ assert.equal(await page.locator('.thought-inventory,.reasoning-timeline,.phone-panel,[data-action=notes],[data-action=supplies]').count(),0);
+ await page.screenshot({path:resolve(output,'05-story-choice.png')});
+ assert.equal((await state()).story.flags.JIANG_AUTH_GRANTED,undefined);
+ await click('save');await page.locator('[data-store-slot="1"]').click();await click('close-modal');
+ await click('return-to-story');assert.equal((await state()).phase,'explore');
+ await click('save');await page.locator('[data-load-slot="1"]').click();
+ assert.equal((await state()).phase,'thought-prompt');
+ await click('continue-story');await read();
+ assert.equal((await state()).story.flags.JIANG_AUTH_GRANTED,true);assert.equal((await state()).story.flags.COMPANION_PRESENT,true);
+ checks.push('Both interviews and factual guards retained; narrative choice replaces canvas; manual save/load restores the decision without fabricated authority');
  await act('intercept-weiyan','report_post');assert.equal((await state()).phase,'expression');
- await focus('R01');await focus('C08');await page.locator('#player-expression').fill(secondWords);await page.screenshot({path:resolve(output,'07-expression.png')});assert.ok(await page.locator('#player-expression').inputValue());
+ await page.locator('#player-expression').fill(secondWords);await page.screenshot({path:resolve(output,'07-expression.png')});assert.ok(await page.locator('#player-expression').inputValue());
  const edgeCount=(await state()).story.edges.length;
  modelMode='delay';
  await page.locator('#player-expression').fill('我想用自己的话说明，先请将军听我说。');await click('speak');await click('cancel-speech');assert.equal((await state()).speech.status,'cancelled');assert.equal((await state()).story.flags.PERSUADED,undefined);await click('revise');

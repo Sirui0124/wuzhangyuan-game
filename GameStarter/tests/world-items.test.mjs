@@ -12,7 +12,7 @@ const reach = (s,id) => { for(let i=0;i<100 && s.current.id!==id;i++) assert.ok(
 const copy = x => JSON.parse(JSON.stringify(x));
 const modes = await import('../web-demo/.build/GameStarter/web-demo/src/runtime-mode.js');
 
-test('combined switch blocks acquisition and phone and restores both when enabled', async () => {
+test('item switch controls acquisition without reviving the retired phone', async () => {
     const old = globalThis.localStorage, values = new Map();
     globalThis.localStorage = { getItem: key => values.get(key) ?? null, setItem: (key,value) => values.set(key,value) };
     try {
@@ -29,7 +29,7 @@ test('combined switch blocks acquisition and phone and restores both when enable
         assert.equal(modes.phoneEnabled('ai'),false);assert.ok(cup.pickUpCup());assert.ok(tent.takeCandlestick());
         gift.restore(checkpoint);f.read(gift);assert.ok(gift.snapshot().supplies.worldItems.acquired.includes('jiang-headscarf'));
         modes.saveItemSystemEnabled(false);modes.saveItemSystemEnabled(true);
-        assert.equal(modes.readPhonePreference(),true);assert.equal(modes.readRuntimeMode(),'ai-phone');
+        assert.equal(modes.readPhonePreference(),false);assert.equal(modes.readRuntimeMode(),'ai');
     } finally { globalThis.localStorage=old; }
 });
 

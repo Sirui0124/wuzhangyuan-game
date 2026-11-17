@@ -1,9 +1,9 @@
+import { createCompositionGuard } from './game/composition-guard';
 import { chapterOnwardHTML } from './game/chapter-onward';
 import { backupSave, protectSave } from './session/save-recovery';
 import { recordAchievements } from './achievements/storage';
 import { recordChapterHistory } from './chapters/progression';
 import { jietingAchievementIds } from './chapters/chapter-three/achievements';
-import { createThoughtInventory } from './thought-inventory';
 import { polishDialogue } from './dialogue-polish';
 import { jietingPolishInput } from './chapters/chapter-three/polish';
 import { GameApi } from '../../assets/scripts/GameApi';
@@ -16,12 +16,10 @@ import { frameModal, recordsPanelHTML, savePanelHTML } from './game-ui-panels';
 import { readRuntimeMode, aiEnabled, phoneEnabled, itemSystemEnabled, saveRuntimeMode, readPhonePreference, setRuntimeConnection } from './runtime-mode';
 import { generateOpeningQuestion } from './chapters/chapter-three/opening-question';
 import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
-import { createPhoneModule } from './phone/module';
-import { suppliesHTML, phoneComposerHTML } from './phone/view';
 import { balance, money, isAvailableSupply, supplyById } from './phone/supplies';
 import { bagHTML } from './inventory/view';
 import { worldItem } from './inventory/world-items';
-import { showClueReceipt, showItemReceipt, clearClueReceipts } from './clue-receipt';
+import { showItemReceipt, clearClueReceipts } from './clue-receipt';
 import { JietingSession, createJietingPlaytest } from './chapters/chapter-three/session';
 import type { JietingStory } from './chapters/chapter-three/types';
 import { judgeJietingDialogue, prepareJietingItem, type JietingItemPreparation } from './chapters/chapter-three/open-dialogue';
@@ -87,10 +85,10 @@ async function start() {
     let session: JietingSession;
     try { session = isolated ? createJietingPlaytest(story, playtest, mode()) : create(saved); if (!isolated) reading.restore(savedReading(saved)); }
     catch { session = create(); preserveOriginal(); saved = undefined; }
+    const composition = createCompositionGuard(root, render);
     const ui = createGameUIState(); ui.home = false;
     const audio = new GameAudio();
     let evidenceDetail = '';
-    const inventory = createThoughtInventory(root, () => {}, () => {});
     let request: AbortController | null = null, generation = 0, lastScene = '', trackedEnding = '', lastBelow = session.below;
     let personality: Awaited<ReturnType<typeof createPersonalityTracker>>;
     let preparingItem = '', preparationWords = '', preparation: JietingItemPreparation | null = null, preparationNotice = '';
@@ -135,19 +133,16 @@ async function start() {
     };
     personality = await createPersonalityTracker('jieting', { enabled: () => mode().aiEnabled, onSettled: () => persist() });
     if (restarting) personality.restart(); else personality.attach(saved);
-    const host = jietingPhone(() => session, persist, () => mode().phoneAllowed, () => !!request);
-    const shopping = createPhoneModule(root, host, ui, render, persist);
-    shopping.setEnabled(mode().phoneAllowed);
     const settings = createSettingsController(root, new GameApi(), audio, ui, render, { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled }, {
         get: readRuntimeMode, set: m => { saveRuntimeMode(m); applyMode(); }, connected: c => { setRuntimeConnection(c); applyMode(); },
     });
     const pause = createPauseMenu(root, ui, { render, settings: settings.settingsHTML, home, saves: saveHTML, restart, personality,
-        suspend: () => { cancel(); audio.setMusicPaused(true); shopping.cancel(false); } });
-    function home() { cancel(); shopping.cancel(false); persist(); location.href = '/'; }
+        suspend: () => { cancel(); audio.setMusicPaused(true); } });
+    function home() { cancel(); persist(); location.href = '/'; }
     function applyMode() {
-        cancel(); questionAttempts.clear(); shopping.invalidate(); session.setMode(mode());
+        cancel(); questionAttempts.clear(); session.setMode(mode());
         if (!mode().phoneAllowed) session.state.supplies.attached = [];
-        shopping.setEnabled(mode().phoneAllowed); shopping.restore(); persist(); render();
+        persist(); render();
         personality.resume();
     }
     function saveHTML() {
@@ -159,7 +154,7 @@ async function start() {
     }
     function restart() {
         try { localStorage.setItem(`${key}:before-new`, JSON.stringify(snapshot())); } catch { ui.storageWarning = '当前进度未能备份，请先存档后重试。'; render(); return; }
-        cancel(); shopping.reset(); clearClueReceipts(); session = create(); personality.restart(); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; shopping.restore(); persist(); render();
+        cancel(); clearClueReceipts(); session = create(); personality.restart(); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; lastScene = ''; persist(); render();
     }
     function next(option?: string) {
         if (request || ui.overlay || session.current.kind === 'ending') return;
@@ -167,8 +162,7 @@ async function start() {
         const clues = new Set(session.clues.map(c => c.id)), items = new Set(session.state.supplies.worldItems?.acquired ?? []), previousNode = session.current;
         if (!session.advance(option)) return;
         if (option && previousNode.kind === 'choice') personality.choice(option, previousNode.id, previousNode.round);
-        error = ''; shopping.sessionChanged(); persist(); render(); audio.play('dialogue_next');
-        for (const c of session.clues) if (!clues.has(c.id)) { showClueReceipt(root, c.title, ui.reduced); audio.play('evidence_gain'); }
+        error = ''; persist(); render(); audio.play('dialogue_next');
         for (const id of session.state.supplies.worldItems?.acquired ?? []) if (!items.has(id)) { showItemReceipt(root, worldItem(id)!.name, ui.reduced); audio.play('evidence_gain'); }
     }
     let polishing=false, previousPolish:{node:string;run:number;before:string;after:string}|null=null;
@@ -243,11 +237,8 @@ async function start() {
         } catch (e) { if (!controller.signal.aborted && seq === generation) preparationNotice = e instanceof Error ? e.message : '试用没有完成，说明已保留。'; }
         finally { if (request === controller) { request = null; render(); } }
     }
-    function cluesHTML() {
-        const canSelect = session.current.kind === 'open' && !session.feedback && mode().aiEnabled;
-        return `<div class="jieting-clue-list">${session.clues.length ? session.clues.map(c => `<article class="jieting-clue"><header><h2>${esc(c.title)}</h2>${canSelect ? `<button data-select="${esc(c.id)}" aria-pressed="${session.state.selected.includes(c.id)}">${session.state.selected.includes(c.id) ? '已添入 · 收回' : '添入发言'}</button>` : ''}</header><p>${esc(c.text)}</p>${c.current === false ? '<p>这条军情已有变化，请以最新回报为准。</p>' : ''}<details><summary>回看原话</summary>${c.sources.map(source => `<blockquote>${esc(source.speaker)}：${esc(source.text)}</blockquote>`).join('')}</details></article>`).join('') : '<p>还没有收录线索。听完军情或查看现场后，会记在这里。</p>'}</div>`;
-    }
     function render() {
+        if (composition.defer()) return;
         if (pause?.render()) return;
         if (session.current.kind === 'ending') clearClueReceipts();
         updateChapterAudio(audio,'jieting',session.current,{silent:session.state.ending==='era-arrest'||session.state.ending==='execution'});
@@ -258,14 +249,7 @@ async function start() {
         const expression = session.current.kind === 'open' && !session.feedback && mode().aiEnabled;
         const picker = expression && (ui.overlay === 'notes' || (ui.overlay === 'items' && mode().phoneAllowed)) ? ui.overlay : undefined;
         root.innerHTML = jietingView(session, media, { busy: !!request, error, polishing, questioning, canUndoPolish:canUndoPolish(), retryAction, online: mode().aiEnabled, phone: mode().phoneAllowed, changedScene, readingText: page.text, picker, detail: evidenceDetail, previousBelow });
-        inventory.mount();
-        if (ui.overlay === 'supplies' && host.canPrepareSupplies()) root.insertAdjacentHTML('beforeend', `<div class="game-modal-shade phone-shade"><section class="game-modal phone-panel" data-page="supplies" role="dialog" aria-modal="true"><header class="phone-header"><span class="phone-assistant-mark">伴</span><h1>我的系统</h1><div class="phone-wallet"><strong>¥${money(balance(session.state.supplies))}</strong></div><button data-action="close-modal" aria-label="收起手机">×</button></header><div class="phone-content">${suppliesHTML(host, host.snapshot(), ui.shopping)}</div>${phoneComposerHTML(host, ui.shopping)}</section></div>`);
-        if (ui.overlay === 'notes' && !expression) root.insertAdjacentHTML('beforeend', frameModal('已知线索', cluesHTML(), 'history'));
         if (ui.overlay === 'bag') root.insertAdjacentHTML('beforeend', frameModal('物品栏', bagHTML(session.state.supplies), 'items'));
-        if (ui.overlay === 'items' && !expression) {
-            const items = session.state.supplies.purchases.filter(id => isAvailableSupply(id, session.state.supplies));
-            root.insertAdjacentHTML('beforeend', frameModal('用于这次交谈的物品', items.length ? items.map(id => { const item = supplyById(id, session.state.supplies)!; const tested = session.getEvaluationContext().items?.find(i => i.id === id)?.tested; return `<article class="jieting-clue"><header><h2>${esc(item.name)}</h2><button data-attach-item="${esc(id)}" aria-pressed="${session.state.supplies.attached.includes(id)}">${session.state.supplies.attached.includes(id) ? '撤下' : '附上'}</button></header><p>${esc(item.ability)}</p><p>${esc(item.boundary)}</p><button data-prepare-item="${esc(id)}">${tested ? '再次试用' : '在帐侧试用'}</button>${tested ? '<span> 已试用</span>' : ''}</article>`; }).join('') : '<p>还没有可用于这次交谈的已购物品。</p>', 'items'));
-        }
         if (ui.overlay === 'prepare-item') {
             const item = supplyById(preparingItem, session.state.supplies);
             const body = `<section class="jieting-item-test"><h2>${esc(item?.name)}</h2><p>${esc(item?.ability)}</p><p>${esc(item?.boundary)}</p><label for="item-preparation">你准备怎样试用？</label><textarea id="item-preparation" maxlength="1500" ${request || preparation?.status === 'ready' ? 'disabled' : ''}>${esc(preparationWords)}</textarea>${preparation?.status === 'ready' ? `<p>${esc(preparation.effect)}</p><button class="folio-button" data-action="confirm-item-test">记下试用结果</button><button data-action="revise-item-test">修改试用办法</button>` : `<button class="folio-button" data-action="test-item" ${request || !preparationWords.trim() ? 'disabled' : ''}>${request ? '正在试用……' : '开始试用'}</button>`}<p role="status">${esc(preparationNotice)}</p>${request ? '<button data-action="cancel-item-test">停止等待</button>' : ''}</section>`;
@@ -287,7 +271,6 @@ async function start() {
         if (t.dataset.volume) { audio.setVolume(t.dataset.volume as AudioBus, Number(t.value)); if (t.nextElementSibling) t.nextElementSibling.textContent = t.value + '%'; }
         if (t.id === 'ai-voice-enabled') settings.setVoiceEnabled(t.checked);
         if (t.id === 'game-ai-enabled') settings.setRuntime(t.checked, readPhonePreference());
-        if (t.id === 'game-phone-enabled') settings.setRuntime(mode().aiEnabled, t.checked);
         if (t.id === 'game-item-system-enabled') settings.setItemSystem(t.checked);
     });
     root.addEventListener('toggle', e => { if ((e.target as HTMLElement).id === 'api-settings') settings.setDetails((e.target as HTMLDetailsElement).open); }, true);
@@ -295,30 +278,14 @@ async function start() {
         const target = e.target as HTMLElement, b = target.closest<HTMLElement>('[data-detail],[data-action],[data-option],[data-select],[data-attach-item],[data-prepare-item],[data-store-slot],[data-load-slot]');
         if (!b) { if (!ui.overlay && !request && target.closest('.game-scene') && !target.closest('button,a,input,textarea,.game-hud,[role=dialog]') && !window.getSelection()?.toString()) next(); return; }
         if (b instanceof HTMLButtonElement && b.disabled) return;
-        if (b.dataset.select || b.dataset.attachItem) audio.action('toggle-evidence');
-        else if (b.dataset.action && !['next', 'speak'].includes(b.dataset.action)) audio.action(b.dataset.action);
-        if (b.dataset.detail && session.current.kind === 'open' && !session.feedback) {
-            const kind = session.clues.some(c => c.id === b.dataset.detail) ? 'notes' : 'items';
-            if (kind === 'items' && !mode().phoneAllowed) return;
-            if (ui.overlay !== kind) inventory.reset();
-            evidenceDetail = b.dataset.detail; ui.overlay = kind; render(); return;
-        }
-        if (b.dataset.prepareItem && !request && mode().phoneAllowed) { preparingItem = b.dataset.prepareItem; preparationWords = ''; preparation = null; preparationNotice = ''; ui.overlay = 'prepare-item'; render(); return; }
+        if (b.dataset.action && !['next', 'speak'].includes(b.dataset.action)) audio.action(b.dataset.action);
         if (b.dataset.option) { next(b.dataset.option); return; }
-        if (b.dataset.select) {
-            const id = b.dataset.select;
-            if (!request && session.current.kind === 'open' && !session.feedback && session.clues.some(c => c.id === id)) { session.state.selected = session.state.selected.includes(id) ? session.state.selected.filter(c => c !== id) : [...session.state.selected, id]; persist(); render(); } return;
-        }
-        if (b.dataset.attachItem) {
-            const id = b.dataset.attachItem, s = session.state.supplies;
-            if (!request && mode().phoneAllowed && session.current.kind === 'open' && !session.feedback && isAvailableSupply(id, s)) { if (s.attached.includes(id)) s.attached = s.attached.filter(i => i !== id); else if (s.attached.length < 2) s.attached.push(id); persist(); render(); } return;
-        }
         if (b.dataset.storeSlot) {
             const id = b.dataset.storeSlot;
             try { if (localStorage.getItem(`${key}:slot:${id}`) && ui.slotOverwrite !== id) { ui.slotOverwrite = id; render(); return; } localStorage.setItem(`${key}:slot:${id}`, JSON.stringify({ ...snapshot(), savedAt: Date.now() })); ui.slotOverwrite = ''; ui.notice = '已存档。'; ui.storageWarning = ''; } catch { ui.storageWarning = '暂时无法写入存档，当前进度保留。'; } render(); return;
         }
         if (b.dataset.loadSlot) {
-            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); shopping.invalidate(); pause.dismiss(); clearClueReceipts(); session = restored; personality.attach(value); trackedEnding = ''; reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; shopping.restore(); persist(); render(); personality.resume(); }
+            try { const raw = localStorage.getItem(`${key}:slot:${b.dataset.loadSlot}`); if (!raw) return; const value = JSON.parse(raw); if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error(); const restored = create(value); cancel(); pause.dismiss(); clearClueReceipts(); session = restored; personality.attach(value); trackedEnding = ''; reading.restore(savedReading(value)); ui.overlay = ''; error = ''; lastScene = ''; persist(); render(); personality.resume(); }
             catch { ui.storageWarning = '这份存档暂不可读，当前进度和原存档已保留。'; render(); } return;
         }
         switch (b.dataset.action) {
@@ -332,16 +299,11 @@ async function start() {
             case 'revise-item-test': preparation = null; preparationNotice = ''; render(); root.querySelector<HTMLTextAreaElement>('#item-preparation')?.focus(); break;
             case 'cancel-item-test': cancel(); preparationNotice = '已停止等待，操作说明已保留。'; render(); break;
             case 'confirm-item-test': if (preparation && session.confirmItemPreparation(preparation)) { persist(); preparation = null; ui.overlay = 'items'; render(); } else { preparationNotice = '物品或军情已有变化，请重新试用。'; render(); } break;
-            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) { personality.prune({ choices: [...session.state.chosen], inputs: personalityInputs().prefixes }); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; shopping.restore(); clearClueReceipts(); persist(); render(); personality.resume(); } break;
-            case 'clue-items': inventory.reset(); evidenceDetail = ''; ui.overlay = ui.overlay === 'notes' ? '' : 'notes'; render(); break;
+            case 'retry': cancel(); questionAttempts.clear(); if (session.retry()) { personality.prune({ choices: [...session.state.chosen], inputs: personalityInputs().prefixes }); trackedEnding = ''; reading.restore(); ui.overlay = ''; error = ''; clearClueReceipts(); persist(); render(); personality.resume(); } break;
             case 'notes-list': ui.overlay = ''; evidenceDetail = ''; render(); break;
             case 'close-evidence-detail': evidenceDetail = ''; render(); break;
-            case 'clear-inventory-search': inventory.clear(); break;
-            case 'notes': inventory.reset(); evidenceDetail = ''; cancel(); ui.overlay = 'notes'; render(); break;
             case 'records': case 'save': case 'situation': cancel(); ui.overlay = b.dataset.action; render(); break;
-            case 'supplies': if (host.canPrepareSupplies()) { ui.overlay = 'supplies'; render(); } break;
             case 'bag': if (itemSystemEnabled()) { cancel(); ui.overlay = 'bag'; render(); } break;
-            case 'attach-items': if (mode().phoneAllowed) { inventory.reset(); evidenceDetail = ''; ui.overlay = ui.overlay === 'items' ? '' : 'items'; render(); } break;
             case 'close-modal': if (ui.overlay === 'prepare-item') cancel(); ui.overlay = ''; render(); break;
             case 'settings': case 'configure-ai': settings.openSettings(b.dataset.action === 'configure-ai'); break;
             case 'save-api': case 'test-api': void settings.saveApiSettings(b.dataset.action === 'test-api'); break;
@@ -357,7 +319,7 @@ async function start() {
         if (e.key === 'Escape' && ui.overlay) { cancel(); ui.overlay = ''; render(); }
         else if (e.code === 'Space' && !ui.overlay && !(e.target as HTMLElement).closest('input,textarea,button,a,summary')) { e.preventDefault(); next(); }
     });
-    window.addEventListener('pagehide', () => { cancel(); shopping.dispose(); people.dispose(); personality.dispose(); persist(); });
-    shopping.restore(); persist(); render(); personality.resume();
+    window.addEventListener('pagehide', () => { cancel(); people.dispose(); personality.dispose(); persist(); });
+    persist(); render(); personality.resume();
 }
 void start().catch(e => { root.innerHTML = `<main class="game-scene"><section class="dialogue-box"><p>${esc(e instanceof Error ? e.message : '第三章未能载入。')}</p><a href="/">返回开始页</a></section></main>`; });

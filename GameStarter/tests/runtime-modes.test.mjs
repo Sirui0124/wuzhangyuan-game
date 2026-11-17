@@ -93,25 +93,25 @@ test('local reference generation retains input literally and cites only selected
 });
 
 
-test('combined phone and item preference survives AI connection fallback and migrates the old phone opt-out', async () => {
+test('AI connection fallback preserves AI preference without reviving the retired phone', async () => {
     const modes = await import('../web-demo/.build/GameStarter/web-demo/src/runtime-mode.js');
     const values = new Map(), originalStorage = globalThis.localStorage, originalFetch = globalThis.fetch;
     globalThis.localStorage = { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) };
     try {
         modes.setRuntimeConnection(true);
-        assert.equal(modes.readRuntimeMode(), 'ai-phone'); assert.equal(modes.readPhonePreference(), true);
+        assert.equal(modes.readRuntimeMode(), 'ai'); assert.equal(modes.readPhonePreference(), false);
         let requests = 0;
         globalThis.fetch = async url => { assert.match(url, /\/health$/); requests++; return { ok: true, json: async () => ({ configured: false }) }; };
         assert.equal(await modes.initializeRuntimeMode(), 'offline'); assert.equal(requests, 1);
         assert.equal(values.has(modes.RUNTIME_MODE_KEY), false);
-        assert.equal(modes.setRuntimeConnection(true), 'ai-phone');
-        modes.saveRuntimeMode('ai'); assert.equal(modes.readPhonePreference(), true);
+        assert.equal(modes.setRuntimeConnection(true), 'ai');
+        modes.saveRuntimeMode('ai'); assert.equal(modes.readPhonePreference(), false);
         assert.equal(modes.setRuntimeConnection(false), 'offline');
-        assert.equal(modes.setRuntimeConnection(true), 'ai-phone');
+        assert.equal(modes.setRuntimeConnection(true), 'ai');
         modes.saveItemSystemEnabled(false); modes.saveRuntimeMode('offline'); assert.equal(modes.readPhonePreference(), false);
         assert.equal(modes.setRuntimeConnection(true), 'offline');
         modes.saveItemSystemEnabled(true);
-        modes.saveRuntimeMode('ai-phone'); modes.saveRuntimeMode('offline'); assert.equal(modes.readPhonePreference(), true);
+        modes.saveRuntimeMode('ai-phone'); assert.equal(values.get(modes.RUNTIME_MODE_KEY), 'ai'); modes.saveRuntimeMode('offline'); assert.equal(modes.readPhonePreference(), false);
     } finally { globalThis.fetch = originalFetch; globalThis.localStorage = originalStorage; modes.setRuntimeConnection(true); }
 });
 

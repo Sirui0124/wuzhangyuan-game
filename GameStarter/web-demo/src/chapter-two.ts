@@ -1,3 +1,4 @@
+import { createCompositionGuard } from './game/composition-guard';
 import { chapterOnwardHTML } from './game/chapter-onward';
 import { recordAchievements } from './achievements/storage';
 import { recordChapterHistory } from './chapters/progression';
@@ -19,21 +20,17 @@ import { GrainSession, type GrainStory } from './chapters/chapter-two/session';
 import { CinematicPlayer, type Clip } from './cinematics';
 import { judgeOpenDialogue, type Rubric } from './chapters/chapter-two/open-dialogue';
 import { beginDialogueDiagnostic, recordDialogueDiagnostic } from './chapters/chapter-two/dialogue-diagnostics';
-import { grainPhone, toggleGrainItem } from './chapters/chapter-two/phone';
 import { grainView } from './game/grain-view';
 import { createGrainDialogueCamera } from './game/grain-dialogue-camera';
 import { esc, type Media } from './game/view-common';
 import { createGameUIState } from './game/ui-state';
-import { createPhoneModule } from './phone/module';
 import { createCharacterModule } from './characters/module';
 import { chapterTwoCharacters } from './chapters/chapter-two/characters';
 import { gameModules } from './modules/config';
 import { createEvaluationModule } from './modules/evaluation';
-import { suppliesHTML, phoneComposerHTML } from './phone/view';
 import { balance, money, supplyById } from './phone/supplies';
 import { frameModal, recordsPanelHTML, savePanelHTML } from './game-ui-panels';
-import { createThoughtInventory } from './thought-inventory';
-import { showClueReceipt, showItemReceipt } from './clue-receipt';
+import { showItemReceipt } from './clue-receipt';
 import { worldItem } from './inventory/world-items';
 import { grainHasCompleted, GRAIN_SAVE_KEY, GRAIN_COMPLETED_KEY } from './chapters/chapter-two/navigation';
 import { createPersonalityTracker } from './personality/module';
@@ -88,6 +85,7 @@ async function start(){
         }
         if(session.current.id!=='CH2-LY02-ACT01')throw new Error('军帐物品试玩节点暂不可用。');
     }
+    const composition = createCompositionGuard(root, render);
     const ui=createGameUIState();ui.home=false;if(recoveryPending)ui.overlay='save-recovery';
     const people=createCharacterModule({root,portraits:media.characters,enabled:gameModules.characters});
     const evaluation=createEvaluationModule<Parameters<typeof judgeOpenDialogue>,Awaited<ReturnType<typeof judgeOpenDialogue>>>({enabled:()=>aiEnabled(readRuntimeMode()),online:([input,rules,evidence,_signal,items,said,diagnostic],signal)=>judgeOpenDialogue(input,rules,evidence,signal,items,said,diagnostic)});
@@ -118,8 +116,6 @@ async function start(){
         personality.prune({choices:[...session.state.chosen,...fixed],inputs:Object.values(session.state.judgments).map(j=>j.input)});
     }
     reconcileRestoredPersonality(saved);
-    const host=grainPhone(()=>session,persist,()=>phoneAvailable),shopping=createPhoneModule(root,host,ui,render,persist);
-    shopping.setEnabled(phoneAvailable);
     const audio = new GameAudio();
     const settings = createSettingsController(root, new GameApi(), audio, ui, () => render(), { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled }, {
         get: readRuntimeMode,
@@ -128,7 +124,7 @@ async function start(){
     });
     const pauseMenu = createPauseMenu(root, ui, { render: () => render(), settings: settings.settingsHTML,
         suspend: () => { audio.setMusicPaused(true); cancel(); evaluation.cancel(); },
-        home: () => { cancel(); shopping.cancel(false); persist(); location.href='/'; },
+        home: () => { cancel(); persist(); location.href='/'; },
         saves: saveHTML, restart: restartChapter, personality,
     });
     function saveHTML() {
@@ -149,9 +145,9 @@ async function start(){
     function restartChapter() {
         try { const raw=recoveryPending?originalRaw!:JSON.stringify(snapshot());allowReplacement();localStorage.setItem(key+':before-new',raw); }
         catch { ui.storageWarning='暂时无法备份当前进度，请先存档后重试。';ui.overlay='save';render();return; }
-        recoveryPending=false;cancel();evaluation.cancel();shopping.reset();player.resetPlayback();delete root.dataset.node;
+        recoveryPending=false;cancel();evaluation.cancel();player.resetPlayback();delete root.dataset.node;
         session=createSession();personality.restart();editing=false;error='';ui.overlay='';ui.notesShown=false;ui.slotOverwrite='';ui.notice='';ui.storageWarning='';
-        shopping.restore();persist();render();
+        persist();render();
     }
     root.addEventListener('toggle', event => { const target = event.target as HTMLElement; if (target.id === 'api-settings') settings.setDetails((target as HTMLDetailsElement).open); }, true);
     root.addEventListener('input', event => {
@@ -159,32 +155,28 @@ async function start(){
         if (target.dataset.volume) { audio.setVolume(target.dataset.volume as AudioBus, Number(target.value)); if(target.nextElementSibling) target.nextElementSibling.textContent=target.value+'%'; }
         if (target.id === 'ai-voice-enabled') settings.setVoiceEnabled(target.checked);
         if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked,readPhonePreference());
-        if (target.id === 'game-phone-enabled') settings.setRuntime(aiEnabled(readRuntimeMode()),target.checked);
         if (target.id === 'game-item-system-enabled') settings.setItemSystem(target.checked);
     });
-    const inventory=createThoughtInventory(root,()=>{},()=>{});
     const dialogueCamera=createGrainDialogueCamera();
-    const closePicker=()=>{ui.notesShown=false;ui.inventoryKind='clues';inventory.reset();};
+    const closePicker=()=>{ui.notesShown=false;ui.inventoryKind='clues';};
     const cancel=()=>{if(request)recordDialogueDiagnostic(requestDiagnostic,'cancelled');request?.abort();request=null;requestDiagnostic=undefined;polishing=false;};
     let activeMode=readRuntimeMode(),itemsAvailable=itemSystemEnabled();
     function applyMode(){
         const nextMode=readRuntimeMode(),nextItems=itemSystemEnabled();
         if(nextMode===activeMode&&nextItems===itemsAvailable)return;
         activeMode=nextMode;itemsAvailable=nextItems;
-        cancel(); evaluation.cancel(); shopping.invalidate();
-        phoneAvailable=phoneEnabled(readRuntimeMode());
+        cancel(); evaluation.cancel(); phoneAvailable=phoneEnabled(readRuntimeMode());
         session.phoneAllowed=phoneAvailable;
         if(!phoneAvailable)session.state.supplies.attached=[];
         session.unlockPhone();
-        shopping.setEnabled(phoneAvailable); shopping.restore();
         ui.notesShown=false; ui.inventoryKind='clues'; detail='';
         personality.resume();persist(); render();
     }
-    window.addEventListener('pagehide',event=>{cancel();evaluation.cancel();shopping.invalidate();if(!event.persisted){people.dispose();shopping.dispose();evaluation.dispose();personality.dispose();}});
+    window.addEventListener('pagehide',event=>{cancel();evaluation.cancel();if(!event.persisted){people.dispose();evaluation.dispose();personality.dispose();}});
     function next(option?:string){
         if(ui.overlay||ui.notesShown||request)return;
         const before=new Set(session.clues.map(c=>c.id)),node=session.current.id;
-        if(session.advance(option)){if(option)personality.choice(option,node);editing=false;if(phoneAvailable)session.unlockPhone();shopping.restore();persist();render();audio.play('dialogue_next');for(const c of session.clues)if(!before.has(c.id)){showClueReceipt(root,c.title,ui.reduced);audio.play('evidence_gain');}}
+        if(session.advance(option)){if(option)personality.choice(option,node);editing=false;if(phoneAvailable)session.unlockPhone();persist();render();audio.play('dialogue_next');}
     }
     let polishing=false, previousPolish:{node:string;run:number;before:string;after:string}|null=null;
     const canUndoPolish=()=>!!previousPolish&&previousPolish.node===session.current.id&&previousPolish.run===session.state.run&&previousPolish.after===session.state.draft;
@@ -237,6 +229,7 @@ async function start(){
         else render();
     }
     function render(){
+        if (composition.defer()) return;
         try{renderContent();}finally{
             people.sync({...chapterTwoCharacters(session),visible:!ui.overlay});
             const node=session.current;
@@ -262,7 +255,6 @@ async function start(){
             const paper=root.querySelector('.expression-paper');
             if(paper)paper.innerHTML=`<section class="grain-fixed-speech">${fixedSpeeches[round].map((s,i)=>`<button data-fixed-speech="${i}">${esc(s.text)}</button>`).join('')}</section>${aiGuidanceHTML('grain',false)}`;
         }
-        if(ui.overlay==='supplies'&&host.canPrepareSupplies())root.insertAdjacentHTML('beforeend',`<div class="game-modal-shade phone-shade"><section class="game-modal phone-panel" data-page="supplies" role="dialog" aria-modal="true"><header class="phone-header"><span class="phone-assistant-mark">伴</span><h1>我的系统</h1><div class="phone-wallet"><strong>¥${money(balance(session.state.supplies))}</strong></div><button data-action="close-modal" aria-label="收起手机">×</button></header><div class="phone-content">${suppliesHTML(host,host.snapshot(),ui.shopping)}</div>${phoneComposerHTML(host,ui.shopping)}</section></div>`);
         if(ui.overlay==='bag')root.insertAdjacentHTML('beforeend',frameModal('物品栏',bagHTML(session.state.supplies),'items'));
         if(ui.overlay==='tent-items'&&session.canVisitOwnTent())root.insertAdjacentHTML('beforeend',frameModal('自己的军帐',session.state.supplies.worldItems?.acquired.includes('tent-candlestick')?'<p>案上的蜡烛台已收进物品栏。</p>':'<p>临行前，我回到自己的军帐。案上放着一只蜡烛台。</p><button class="folio-button" data-action="take-candlestick">拿起蜡烛台</button>','items'));
         if(ui.overlay==='onward'&&session.current.kind==='finish'&&!session.eraFailure)root.insertAdjacentHTML('beforeend',chapterOnwardHTML('grain',session.current.ending??''));
@@ -273,12 +265,6 @@ async function start(){
             const message=!readable?'暂时无法读取本机进度。自动保存已暂停，请重试读取。':recoveryKey?'上次进度暂时无法恢复，原记录已另存备份。可以读取手动存档，或从本章开头重新开始。':'上次进度暂时无法恢复，备份还没有保存成功。原自动存档仍保留，请先重试备份。';
             root.insertAdjacentHTML('beforeend',frameModal('保留旧进度',`<p role="status">${message}</p>${readable?'<button class="folio-button" data-action="save">查看存档</button>':''}${!recoveryKey?'<button class="folio-button" data-action="retry-save-recovery">重试</button>':''}${recoveryKey?'<button class="folio-button" data-action="restart-recovered">从本章开头开始</button>':''}<a href="/">返回开始页</a>`,'saves'));
         }
-        if(ui.overlay==='detail'){
-            const item=detail.startsWith('item:')?supplyById(detail.slice(5),session.state.supplies):undefined,c=session.clues.find(c=>c.id===detail);
-            const html=item?`<h2>${esc(item.name)}</h2><p>购入价 ¥${money(item.price)}</p><p>${esc(item.ability)}</p><p>${esc(item.boundary)}</p>`:c?`<h2>${esc(c.title)}</h2>${(c.sources??[]).map(f=>`<blockquote>${esc(f.speaker)}：${esc(f.text)}</blockquote>`).join('')}`:'';
-            root.insertAdjacentHTML('beforeend',frameModal(item?'物品详情':'原话与依据',html,'history'));
-        }
-        inventory.mount();
     }
     root.addEventListener('input',e=>{const t=e.target as HTMLTextAreaElement;if(t.id==='letter-draft'){session.state.letterDraft=t.value;persist();}if(t.id==='player-expression'){session.state.draft=t.value;session.state.selectedAt=session.current.id;persist();const note=root.querySelector('.grain-selection-note');if(note)note.textContent='所选线索供这次写话参考，可按 × 收回。';const b=root.querySelector<HTMLButtonElement>('[data-action=speak]');if(b)b.disabled=!t.value.trim();const polishButton=root.querySelector<HTMLButtonElement>('[data-action=polish-expression]');if(polishButton)polishButton.disabled=!!request||(!t.value.trim()&&!session.state.selected.length&&!session.state.supplies.attached.length);const undo=root.querySelector<HTMLButtonElement>('[data-action=undo-polish]');if(undo)undo.hidden=!canUndoPolish();}});
     root.addEventListener('click',e=>{
@@ -287,14 +273,11 @@ async function start(){
         if(!b)return;
         e.preventDefault(); // The shared reading surface must not consume this UI action a second time.
         if(b instanceof HTMLButtonElement&&b.disabled)return;
-        if(b.dataset.select||b.dataset.attachItem)audio.action('toggle-evidence');
-        else if(b.dataset.action&&!['next','speak'].includes(b.dataset.action))audio.action(b.dataset.action);
+        if(b.dataset.action&&!['next','speak'].includes(b.dataset.action))audio.action(b.dataset.action);
         if(b.dataset.fixedSpeech!==undefined){fixedSpeak(Number(b.dataset.fixedSpeech));return;}
         if(b.dataset.option){next(b.dataset.option);return;}
-        if(b.dataset.select||b.dataset.attachItem){cancel();const id=b.dataset.select??'item:'+b.dataset.attachItem;if(id.startsWith('item:')&&phoneAvailable)toggleGrainItem(session,id.slice(5));else if(session.clues.some(c=>c.id===id)){session.state.selected=session.state.selected.includes(id)?session.state.selected.filter(c=>c!==id):[...session.state.selected,id];session.state.selectedAt=session.current.id;}persist();render();return;}
-        if(b.dataset.detail){cancel();detail=b.dataset.detail;if(root.querySelector('.expression-workspace')){ui.overlay='';ui.notesShown=true;ui.inventoryKind=detail.startsWith('item:')?'items':'clues';}else ui.overlay='detail';render();return;}
         if(b.dataset.storeSlot){if(recoveryPending)return;const id=b.dataset.storeSlot;try{if(localStorage.getItem(key+':slot:'+id)&&ui.slotOverwrite!==id){ui.slotOverwrite=id;render();return;}localStorage.setItem(key+':slot:'+id,JSON.stringify({...snapshot(),savedAt:Date.now()}));ui.slotOverwrite='';ui.storageWarning='';ui.notice='已保存到手动存档 '+id+'。';}catch{ui.storageWarning='暂时无法写入存档，当前进度仍保留。';}render();return;}
-        if(b.dataset.loadSlot||b.dataset.loadBackup||b.dataset.action==='load-auto'){try{const value=localStorage.getItem(b.dataset.loadBackup??(b.dataset.action==='load-auto'?key:key+':slot:'+b.dataset.loadSlot));if(value){const saved=JSON.parse(value);if(!saved||typeof saved!=='object'||Array.isArray(saved))throw new Error('incompatible');const restored=createSession(saved);allowReplacement();recoveryPending=false;cancel();evaluation.cancel();shopping.cancel(false);pauseMenu.dismiss();player.resetPlayback();delete root.dataset.node;session=restored;personality.attach(saved);reconcileRestoredPersonality(saved);editing=false;ui.overlay='';ui.notesShown=false;ui.slotOverwrite='';ui.storageWarning='';ui.notice='';shopping.restore();persist();render();}}catch{ui.storageWarning=recoveryPending&&!recoveryKey?'旧进度备份尚未完成，原自动存档仍保留。请返回重试备份。':'这份存档暂不可读，当前进度和原存档已保留。';render();}return;}
+        if(b.dataset.loadSlot||b.dataset.loadBackup||b.dataset.action==='load-auto'){try{const value=localStorage.getItem(b.dataset.loadBackup??(b.dataset.action==='load-auto'?key:key+':slot:'+b.dataset.loadSlot));if(value){const saved=JSON.parse(value);if(!saved||typeof saved!=='object'||Array.isArray(saved))throw new Error('incompatible');const restored=createSession(saved);allowReplacement();recoveryPending=false;cancel();evaluation.cancel();pauseMenu.dismiss();player.resetPlayback();delete root.dataset.node;session=restored;personality.attach(saved);reconcileRestoredPersonality(saved);editing=false;ui.overlay='';ui.notesShown=false;ui.slotOverwrite='';ui.storageWarning='';ui.notice='';persist();render();}}catch{ui.storageWarning=recoveryPending&&!recoveryKey?'旧进度备份尚未完成，原自动存档仍保留。请返回重试备份。':'这份存档暂不可读，当前进度和原存档已保留。';render();}return;}
         switch(b.dataset.action){
             case 'retry-save-recovery':if(typeof originalRaw!=='string'){location.reload();return;}protectOriginal();render();break;
             case 'restart-recovered':restartChapter();break;
@@ -316,13 +299,9 @@ async function start(){
             case 'revise':if(session.eraFailure||session.state.end)break;closePicker();editing=true;error='';render();break;
             case 'keep':closePicker();editing=false;render();break;
             case 'close-evidence-detail':detail='';render();break;
-            case 'notes':case 'notes-list':cancel();ui.notesShown=!ui.notesShown;ui.inventoryKind='clues';detail='';inventory.reset();render();break;
-            case 'clue-items':case 'items':cancel();ui.notesShown=true;ui.inventoryKind=b.dataset.action==='items'?'items':'clues';detail='';inventory.reset();render();break;
-            case 'supplies':if(!host.canPrepareSupplies())break;case 'records':case 'save':cancel();ui.overlay=b.dataset.action;render();break;
             case 'close-modal':ui.overlay=recoveryPending?'save-recovery':'';render();break;
-            case 'clear-inventory-search':inventory.clear();break;
             case 'onward':if(session.current.kind==='finish'&&!session.eraFailure){ui.overlay='onward';render();}break;
-            case 'menu':cancel();shopping.cancel(false);persist();location.href='/';break;
+            case 'menu':cancel();persist();location.href='/';break;
             case 'restart':pauseMenu.open();ui.overlay='restart-chapter';render();break;
         }
     });
@@ -347,7 +326,7 @@ async function start(){
         const advance = readingAction();
         if(advance && [' ', 'Enter'].includes(e.key)) { e.preventDefault(); if(!e.repeat) advance(); }
     });
-    shopping.restore();persist();render();
+    persist();render();
     if(personalityPlaytest&&new URLSearchParams(location.search).get('view')==='personality'){
         pauseMenu.open();ui.overlay='personality';render();
     }

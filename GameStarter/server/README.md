@@ -27,28 +27,8 @@
 
 验证命令：`node --test server/server.test.mjs`。测试使用隔离的临时配置和模拟模型服务，不读取或覆盖真实密钥。
 
-## 自然语言采购
+## 已退役的手机接口（2026-11-17）
 
-前端每条新消息先调用 `POST /api/game/phone/guard`，提交 `{requestId,query}`；普通消息得到 `{blocked:false}`，明确干扰系统的消息得到后台固定惩罚收据。请求ID先随当前关卡存档保存，关闭或取消UI不取消已经发出的检查，刷新按相同ID恢复检查以防漏扣或重复扣款。
+手机、购物、核价及预检模块已移除。`POST /api/game/shop`、`POST /api/game/shop/confirm`、`POST /api/game/phone/guard` 返回 404；`/health` 的 `shopping` 为 false。旧存档兼容数据不启用这些接口。上面的配置2采购说明仅为 2026-10-25 历史记录，不代表当前开放功能。
 
-购物预检通过后，`POST /api/game/shop` 接收 `{query,budget,guardRequestId,history?}`；guardRequestId必须对应完全相同原话的正常收据，否则409。query最多600字，支持普通换行与制表符；budget为整数分的虚拟余额。复用已配置的模型理解商品名、目的或拟说对白，生成1至3项实体商品建议。第一步仅识别中性规格、数量、配件和用途，不生成或采信价格；规划输出即使夹带 `estimatedYuan`、价格或报价链接，也不会成为价源。全过程不创建现实订单、不扣游戏资金。
-
-点击购买时，前端先调用 `POST /api/game/shop/confirm`，只提交 `{offerId}`；后台返回已保存完整快照，忽略客户端附带金额或商品字段。快照不存在返回409并提示重新询价；前端核对ID、名称、价格与规格后才使用后台快照进行本关结算。
-
-返回 `{message, products}`。每次推荐生成新的 `shop-UUID` 报价ID；每项含名称规格、整数分价格、能力、限制、推荐原因、报价类型、来源原文、检索状态及日期。新增 `specification` 为规范规格对象，`priceKey` 为规格SHA256，`pricingVersion` 为1。后台同时持久化完整报价快照，购买路由可用 `defaultPriceBook.getOffer(id)` 取得权威记录，不接受浏览器传来的价格。旧三项仅保留旧存档兼容，动态商品没有类别白名单；剧情路由仍限制在已经实现的后续类型。请求可附 `history`（最多8条user/assistant文本，各1200字符）以理解追问，不把聊天当作已购事实。
-
-### 独立定价与固定报价
-
-`shop-pricing.mjs` 接收严格校验的 `specification`：规范品名、品牌、型号、客观规格、数量、单位和套装配件；拒绝价格、网址与指令字段。检索关键词由后台根据规格构造，不使用玩家或首轮模型提供的查询字符串/价格链接。独立报价模型仅接收规格和检索摘要；独立常识估价模型仅接收规格。二者都通过真正的 `system` / `user` 角色隔离规则和不可信数据，不接收玩家query、budget、history或why。
-
-公开报价必须匹配实际摘要原文、人民币金额和模型核验的型号数量；未查到或未核实则另调常识定价模型，明确为 `estimate`。第一个有效结果按规范规格键写入工作区 `.cache/phone-economy/prices.json`，后续相同规范规格直接复用，不随预算、对话或模型再次回答改价。不同型号、数量、颜色和配件不会共用同一键；名称规范化由识别模型完成，不能保证所有任意同义名称都能归入同键。
-
-后台配置 `config/shop-pricing.json` 固定定义 `penaltyFen:5000` 和可选 `fixedPrices`。固定项格式为 `{specification,priceFen,note?}`，note最多160字，只对尚未存入价本的新规格生效；其 `priceKind:'configured'`、空来源、`searchState:'not-needed'`，说明明确为后台游戏价而非市场报价。已有持久报价优先，不暗改已发报价。玩家输入不能编辑该配置。
-
-价本按同规格合并并发定价，写入队列和原子替换避免不同商品/报价互相覆盖。取消单个等待者不打断其他有效请求；全部取消、无效估价或落盘失败不会写入不完整报价。价格与报价记录仅保存在后台本地文件，不是远端账户系统。
-
-测试或独立实例可指定 `GAME_SHOP_PRICES_FILE` 与 `GAME_SHOP_PRICING_CONFIG`，或使用 `createPriceBook({path,configPath})`。程序API为 `priceFor(specification,{model,search,signal})`、`saveOffers(products,signal)`、`getOffer(id)` 和 `getConfig()`；`getOffer` 不存在时返回null。模块测试命令：`node --test GameStarter/server/shopping.test.mjs GameStarter/server/shop-pricing.test.mjs`，均使用隔离临时价本，不读取玩家数据。
-
-采购接口限制本机访问，75秒总超时；客户端取消会中止模型与检索。搜索只请求固定搜索服务，不抓取模型或玩家提供的网址；摘要视作不可信数据，报价原文须确实出现在检索结果并含匹配金额。检索来源链接由服务端和前端共同过滤。
-
-根目录运行 `npm run test:api` 验证隔离服务端测试；`node tools/ai/shopping-live-browser.mjs` 会实际调用已配置模型和网络搜索，以独立浏览器存档验证完整流程（消耗正常模型调用额度）。后端代码更新后须重启本地游戏服务。
+根目录运行 `npm run test:api` 验证隔离服务端测试；后端更新后须重启本地游戏服务。

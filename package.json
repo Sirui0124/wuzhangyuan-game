@@ -25,7 +25,7 @@
     "validate:story": "npm --prefix GameStarter run validate:story",
     "audit:migration": "python3 tools/migration/audit.py",
     "test:game": "node --test GameStarter/tests/*.test.mjs",
-    "test:thoughts": "node tools/migration/thought-workspace-smoke.mjs",
+    "test:narrative-ui": "node GameStarter/tests/narrative-ui.browser.mjs",
     "test:smoke": "node tools/migration/full-game-smoke.mjs",
     "test:release": "node --test GameStarter/tests/chapter-two-save-recovery.test.mjs GameStarter/tests/audio-lifecycle.test.mjs",
     "test:modes": "node tools/migration/runtime-modes-smoke.mjs",

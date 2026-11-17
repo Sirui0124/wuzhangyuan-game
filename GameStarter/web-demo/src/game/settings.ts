@@ -40,7 +40,7 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
         let saved = false;
         try {
             await api.settings(initialApiSettings); saved = true; runtime.connected(Boolean(initialApiSettings.apiKey.trim()));
-            if (enableOnSave && initialApiSettings.apiKey.trim()) runtime.set(itemSystemEnabled() ? 'ai-phone' : 'ai');
+            if (enableOnSave && initialApiSettings.apiKey.trim()) runtime.set('ai');
             if (testConnection) {
                 apiStatus = '配置已保存，正在测试模型连接……'; render();
                 const started = performance.now();
@@ -54,13 +54,13 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
     return { settingsHTML, openSettings, saveApiSettings,
         setRuntime(ai: boolean, _phone: boolean) {
             captureApiFields();
-            runtime.set(!ai ? 'offline' : itemSystemEnabled() ? 'ai-phone' : 'ai');
+            runtime.set(!ai ? 'offline' : 'ai');
             render();
         },
         setItemSystem(enabled: boolean) {
             captureApiFields();
             if (!saveItemSystemEnabled(enabled)) { ui.storageWarning = '系统设置暂未保存，请重试。'; render(); return; }
-            runtime.set(readRuntimePreference() === 'offline' ? 'offline' : enabled ? 'ai-phone' : 'ai');
+            runtime.set(readRuntimePreference() === 'offline' ? 'offline' : 'ai');
             render();
         },
         setVoiceEnabled(enabled: boolean) { voice.setEnabled(enabled); },
