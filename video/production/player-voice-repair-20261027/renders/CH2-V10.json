@@ -1,0 +1,239 @@
+{
+  "id": "CH2-V10",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V10-4d6adcdc1b-20261025.mp4",
+  "oldSha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+  "oldSubtitles": "/video/subtitles/CH2-V10-4d6adcdc1b-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V10-a894e734.mp4",
+  "sha256": "c9d11b659266c288e01f77b5ae76a4a231e012bd591739c7ba0241eaa26f10c9",
+  "bytes": 15631299,
+  "duration": 45.75,
+  "containerDuration": 45.75,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 1098,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V10",
+    "src": "/video/current/PV27-CH2-V10-a894e734.mp4",
+    "title": "第一封信后的交谈",
+    "subtitles": "/video/subtitles/PV27-CH2-V10-a894e734.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY03-004",
+      "node": "CH2-LY03-004",
+      "text": "你们先前议的是什么？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-004.wav",
+      "oldCorrelation": 0.9999814036709034,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-004-v1.wav",
+      "newVoiceSha256": "b148c40b5cf0c30e1d1530dce51e35097f79e0d97ba7c5c06b7eab1f319ea5d3",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.28,
+        2.42
+      ],
+      "insertAt": 0.28,
+      "voiceSeconds": 2.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0788565874099731,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY03-011",
+      "node": "CH2-LY03-011",
+      "text": "你想讨回公道，为什么一定要停北伐？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-011.wav",
+      "oldCorrelation": 0.8748665118735289,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-011-v1.wav",
+      "newVoiceSha256": "552be4a02f5fb04021201c63eb252793e25cdb032957ed82f8cc06834a29ee0c",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        21.275000000000002,
+        24.955
+      ],
+      "insertAt": 21.275000000000002,
+      "voiceSeconds": 3.58,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8785274028778076,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY03-014",
+      "node": "CH2-LY03-014",
+      "text": "如果还是没人肯查呢？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-014.wav",
+      "oldCorrelation": 0.9999870885358085,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-014-v1.wav",
+      "newVoiceSha256": "81a5cb243ac784c9d6bc1371375273368d137758cf206af62a911a0b82f8bf31",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        33.18,
+        35.400000000000006
+      ],
+      "insertAt": 33.18,
+      "voiceSeconds": 2.2,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0837454795837402,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY03-016",
+      "node": "CH2-LY03-016",
+      "text": "你就信得过魏国？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-016.wav",
+      "oldCorrelation": 0.999993487101732,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-016-v1.wav",
+      "newVoiceSha256": "3b2dce55f0c029e477081da191383f553f67e18d55ac985c28b90418ddf44ebc",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        38.89,
+        41.050000000000004
+      ],
+      "insertAt": 38.89,
+      "voiceSeconds": 2.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9617166519165039,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.52,
+      "end": 2.19,
+      "text": "你们先前议的是什么？"
+    },
+    {
+      "start": 2.82,
+      "end": 6.22,
+      "text": "迟粮的事，究竟要不要往上说"
+    },
+    {
+      "start": 8.34,
+      "end": 10.98,
+      "text": "我不想一直背着“饮酒误军”这几个字"
+    },
+    {
+      "start": 16.24,
+      "end": 20.94,
+      "text": "我想把事情揭开，让这回北伐先停下来"
+    },
+    {
+      "start": 21.515000000000004,
+      "end": 24.865000000000002,
+      "text": "你想讨回公道，为什么一定要停北伐？"
+    },
+    {
+      "start": 25.0,
+      "end": 28.4,
+      "text": "这回把粮送到了，下一回呢？"
+    },
+    {
+      "start": 28.4,
+      "end": 32.2,
+      "text": "难道换个人挨打，粮就自己长出来了？"
+    },
+    {
+      "start": 33.54,
+      "end": 35.29,
+      "text": "如果还是没人肯查呢？"
+    },
+    {
+      "start": 35.52,
+      "end": 37.58,
+      "text": "那我就换个肯听的地方"
+    },
+    {
+      "start": 39.09,
+      "end": 40.6,
+      "text": "你就信得过魏国？"
+    },
+    {
+      "start": 41.24,
+      "end": 45.32,
+      "text": "我也没底。你想让我留下，就给我指条路"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

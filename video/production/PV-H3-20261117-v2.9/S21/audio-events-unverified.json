@@ -1,0 +1,61 @@
+{
+  "source_sha256": "dafcb95c1a27656efa6ffb3cac868cf0c3df5e11d714d05ef6e670d64d48c31a",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Gasp",
+          "p": 0.3464
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1002
+        },
+        {
+          "label": "Snort",
+          "p": 0.0491
+        },
+        {
+          "label": "Wheeze",
+          "p": 0.0306
+        },
+        {
+          "label": "Speech",
+          "p": 0.0292
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0137
+        },
+        {
+          "label": "Throat clearing",
+          "p": 0.0133
+        },
+        {
+          "label": "Music",
+          "p": 0.0111
+        },
+        {
+          "label": "Breathing",
+          "p": 0.007
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0051
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0051
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0041
+        }
+      ],
+      "music": 0.0111
+    }
+  ]
+}

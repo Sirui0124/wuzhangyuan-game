@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Sigh",
+          "p": 0.6977
+        },
+        {
+          "label": "Speech",
+          "p": 0.5668
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0465
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0286
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0165
+        },
+        {
+          "label": "Silence",
+          "p": 0.0112
+        },
+        {
+          "label": "Music",
+          "p": 0.0093
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.009
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0061
+        },
+        {
+          "label": "Fire",
+          "p": 0.0055
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.0043
+        },
+        {
+          "label": "Snort",
+          "p": 0.0031
+        }
+      ],
+      "music": 0.0093
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Silence",
+          "p": 0.3044
+        },
+        {
+          "label": "Music",
+          "p": 0.0724
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0473
+        },
+        {
+          "label": "Speech",
+          "p": 0.0241
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0151
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0146
+        },
+        {
+          "label": "Ringtone",
+          "p": 0.0131
+        },
+        {
+          "label": "Slap, smack",
+          "p": 0.01
+        },
+        {
+          "label": "Static",
+          "p": 0.0089
+        },
+        {
+          "label": "Television",
+          "p": 0.0084
+        },
+        {
+          "label": "Chink, clink",
+          "p": 0.0083
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0082
+        }
+      ],
+      "music": 0.0724
+    }
+  ]
+}

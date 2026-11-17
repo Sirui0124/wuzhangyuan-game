@@ -1,0 +1,5095 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-10-26",
+  "status": "runtime-integrated-browser-20261027",
+  "axes": {
+    "A": "谋定→敢行",
+    "B": "直陈→周旋",
+    "C": "守则→权变",
+    "D": "大局→情义"
+  },
+  "chapter": "jieting",
+  "sources": [
+    {
+      "path": "content/chapters/jieting/chapter-three.story.json",
+      "sha256": "9a7be62fa7f4abf8bbb22335ea5fc5a1c9a087cbd8d13f75d25c23a4ec32f769"
+    },
+    {
+      "path": "content/chapters/jieting/chapter-three.unlocks.json",
+      "sha256": "23add37870146dc9f8da3a8fda6f48c7f582c3cfdfb45e732f4d23f48395e87d"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-three/session.ts",
+      "sha256": "70aa5433e33b45e44292c10426d9ab6af270e60f635b1c5f7d1f48681d8e23ac"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-three/rules.ts",
+      "sha256": "246a7464d083ffe1489864230811ff19c001d924b553ea2f6a9e850a327f7c3d"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-three/view.ts",
+      "sha256": "5f14196ef46b44db1a72e10e213e06c3b7ca3c91743c1404f6773a0dac55c77d"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapter-three.ts",
+      "sha256": "401bbfe92f2d8715170c5517a370dbf925122724a5313a031a3eca7002a6cccb"
+    }
+  ],
+  "summary": {
+    "storyNodes": 352,
+    "choiceNodes": 25,
+    "choiceOptions": 62,
+    "openQuestionNodes": 5,
+    "automaticRouteNodes": 36,
+    "forcedLineNodes": 278,
+    "endingNodes": 8,
+    "choiceNodesWithSomeNonzeroScore": 17,
+    "scoredOptionConfigurations": 34,
+    "excludedOptionConfigurations": 28
+  },
+  "choices": [
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-Q1",
+      "kind": "ordinary-dialogue",
+      "act": 1,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-014",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "读完 JT-008 至 JT-014 的守路与求胜争论。",
+      "slot": "CH3.q1",
+      "options": [
+        {
+          "id": "JT-O016",
+          "text": "我觉得王将军说得在理。丞相交代的这条路，总得先守住。",
+          "next": "JT-017",
+          "when": null,
+          "source": "doxcn1ymgxaQrrwUjVlE0R0NuGd",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "q1",
+              "value": "wang"
+            }
+          ],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              -1,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：先稳住守路任务；C：以丞相交代的既定任务为选择依据。",
+            "axisEvidence": {
+              "A": {
+                "quote": "这条路，总得先守住",
+                "meaning": "A：先稳住守路任务"
+              },
+              "B": null,
+              "C": {
+                "quote": "丞相交代的这条路",
+                "meaning": "C：以丞相交代的既定任务为选择依据。"
+              },
+              "D": null
+            },
+            "slot": "CH3.q1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O018",
+          "text": "若能在这里打败张郃，丞相前面就能少一个强敌。马将军想的也有道理。",
+          "next": "JT-019",
+          "when": null,
+          "source": "doxcn0DzX7fpmLAYhyceF3dYi6f",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "q1",
+              "value": "ma"
+            }
+          ],
+          "personality": {
+            "directions": [
+              1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：把主动破敌的机会放在当前防守争论的前面；不是因支持马谡自动加分。",
+            "axisEvidence": {
+              "A": {
+                "quote": "若能在这里打败张郃",
+                "meaning": "A：把主动破敌的机会放在当前防守争论的前面"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.q1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O020",
+          "text": "两位将军说的都有道理。不过魏军到底到了哪里，还没听探马说。先问明白，再商量怎么打吧。",
+          "next": "JT-021",
+          "when": null,
+          "source": "doxcnw0oO1kzFZgeSvKXTM13ISc",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "q1",
+              "value": "scout"
+            }
+          ],
+          "personality": {
+            "directions": [
+              -1,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：先补足尚未确认的敌情再作战；B：先承认双方理由，再提出可共同接受的下一步。",
+            "axisEvidence": {
+              "A": {
+                "quote": "先问明白，再商量怎么打吧",
+                "meaning": "A：先补足尚未确认的敌情再作战"
+              },
+              "B": {
+                "quote": "两位将军说的都有道理。不过",
+                "meaning": "B：先承认双方理由，再提出可共同接受的下一步。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.q1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-Q2",
+      "kind": "visit-order",
+      "act": 1,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-028",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "完成 Q1，随后三处都必须访问；本题只决定先去哪里。",
+      "slot": "CH3.visit-order",
+      "notes": "现有 w/m/r +1 是章节机制分，不映射人格；先找谁不等于支持谁。",
+      "options": [
+        {
+          "id": "JT-O029",
+          "text": "先去找王平，问问山下该怎么守。",
+          "next": "JT-033",
+          "when": null,
+          "source": "doxcnkatiX7t9BIjesCab6QFl1e",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "firstVisit",
+              "value": "wang"
+            },
+            {
+              "type": "score",
+              "id": "q2",
+              "delta": {
+                "w": 1
+              }
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O030",
+          "text": "先去找马谡，听听他打算怎么打这一仗。",
+          "next": "JT-043",
+          "when": null,
+          "source": "doxcnoWSJOTDfreoD7JbBS9HHuc",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "firstVisit",
+              "value": "ma"
+            },
+            {
+              "type": "score",
+              "id": "q2",
+              "delta": {
+                "m": 1
+              }
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O031",
+          "text": "先去营后，问问搬营和探路的人。",
+          "next": "JT-061",
+          "when": null,
+          "source": "doxcnlbsCKsrF1PA1ii86aZ5E1f",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "firstVisit",
+              "value": "camp"
+            },
+            {
+              "type": "score",
+              "id": "q2",
+              "delta": {
+                "r": 1
+              }
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-VISIT-REMAINING",
+      "kind": "visit-order",
+      "act": 1,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-VISIT-HUB",
+          "via": "route",
+          "when": null
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "三处尚未全部访问；只显示未访问地点。",
+      "slot": "CH3.visit-order",
+      "notes": "若只剩一个选项就是强制完成，不记人格；另外两处最终也必须访问。",
+      "options": [
+        {
+          "id": "visit-wang",
+          "text": "去找王平，把山下的事问明白。",
+          "next": "JT-033",
+          "when": {
+            "not": {
+              "visitedPlace": "wang"
+            }
+          },
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "visit-ma",
+          "text": "去见马谡，问明白他的打算。",
+          "next": "JT-043",
+          "when": {
+            "not": {
+              "visitedPlace": "ma"
+            }
+          },
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "visit-camp",
+          "text": "去营后看看，再听听军报。",
+          "next": "JT-061",
+          "when": {
+            "not": {
+              "visitedPlace": "camp"
+            }
+          },
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只决定三处必访地点的顺序，不根据对象、章节信任加分或最后剩余选项推人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.visit-order",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-Q3",
+      "kind": "ordinary-action",
+      "act": 1,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-084",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "三处均已访问，JT-084 明示可先送已确认军情，也可等位置核准后一次送齐。",
+      "slot": "CH3.report-timing",
+      "options": [
+        {
+          "id": "JT-O085",
+          "text": "我先去回报，免得两位将军也听了传言。位置问准了，再补送过去。",
+          "next": "JT-086",
+          "when": null,
+          "source": "doxcngFJGTmephQngGz2Ke2k5hX",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：愿意在部分位置尚未核准时先传递已确认部分，再补送细节；仍属如实报告，不记不严谨。",
+            "axisEvidence": {
+              "A": {
+                "quote": "我先去回报，免得两位将军也听了传言。位置问准了，再补送过去。",
+                "meaning": "A：愿意在部分位置尚未核准时先传递已确认部分，再补送细节"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.report-timing",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O093",
+          "text": "我留下帮他认准位置。两位将军问的都写明白，再一起送过去。",
+          "next": "JT-094",
+          "when": null,
+          "source": "doxcnWLw4lZZLAqrpV22TdGxbUf",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：选择核准位置、把双方所需内容备齐后一次送报。",
+            "axisEvidence": {
+              "A": {
+                "quote": "我留下帮他认准位置。两位将军问的都写明白，再一起送过去。",
+                "meaning": "A：选择核准位置、把双方所需内容备齐后一次送报。"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.report-timing",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-Q4",
+      "kind": "ordinary-dialogue",
+      "act": 1,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-106",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "Q3 两条分支汇合后，讨论守路与山上留兵。",
+      "slot": "CH3.q4",
+      "options": [
+        {
+          "id": "JT-O107",
+          "text": "还是先让王将军把路守稳吧。山上的水也得从下面送，路若丢了，上面这些人都难办。",
+          "next": "JT-108",
+          "when": null,
+          "source": "doxcnad7kMcNR9I9qAnYiLV4IUb",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：先稳住道路与补水条件，再保留后续行动。",
+            "axisEvidence": {
+              "A": {
+                "quote": "还是先让王将军把路守稳吧",
+                "meaning": "A：先稳住道路与补水条件，再保留后续行动。"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.q4",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O109",
+          "text": "山上也该留一支兵。真有了机会，总得有人跟着马将军打下去。",
+          "next": "JT-110",
+          "when": null,
+          "source": "doxcn0vjHhEKeMGecVcKribTPBh",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：主动留出抓住战机的兵力。",
+            "axisEvidence": {
+              "A": {
+                "quote": "真有了机会，总得有人跟着马将军打下去",
+                "meaning": "A：主动留出抓住战机的兵力。"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.q4",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O111",
+          "text": "不如先把山下两处各要多少人说清，再看看山上能留多少。这样两位将军也好商量。",
+          "next": "JT-112",
+          "when": null,
+          "source": "doxcn48IfCy5hwGQ1nfXTDavQGe",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "A：先明确各处兵力需求再定留兵；B：通过可共同讨论的具体分配，协调两位将军的争执。",
+            "axisEvidence": {
+              "A": {
+                "quote": "先把山下两处各要多少人说清",
+                "meaning": "A：先明确各处兵力需求再定留兵"
+              },
+              "B": {
+                "quote": "这样两位将军也好商量",
+                "meaning": "B：通过可共同讨论的具体分配，协调两位将军的争执。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.q4",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R1-FIXED",
+      "kind": "fixed-persuasion",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-130",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，JT-R1-MODE 经 JT-130 进入；本轮结果尚未产生。",
+      "slot": "CH3.open.reinforcement.1",
+      "options": [
+        {
+          "id": "JT-O131",
+          "text": "王将军得同时守着正面和侧路，两边都缺人。请将军再拨些兵下去。",
+          "next": "JT-135",
+          "when": null,
+          "source": "doxcnSf1kLta7FI2lxtXnK9XuWd",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接指出缺口并提出请求；不以最终调兵数定强弱。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "两边都缺人。请将军再拨些兵下去。",
+                "meaning": "B：直接指出缺口并提出请求"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O132",
+          "text": "游骑已经在找侧路了。等下面告急再派人，下山、列阵都要工夫。先把路守住，将军留在山上的兵才有出击的机会。",
+          "next": "JT-R1-GREAT",
+          "when": null,
+          "source": "doxcnS2E0ZOCWMBBSPDlqVN4u3g",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 1,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：把增兵解释为帮助对方实现原有出击目标，回应其顾虑。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "先把路守住，将军留在山上的兵才有出击的机会。",
+                "meaning": "B：把增兵解释为帮助对方实现原有出击目标，回应其顾虑。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O133",
+          "text": "既然还没冲阵，就先照原令。我把回话带给王将军，有新的军情再来报。",
+          "next": "JT-147",
+          "when": null,
+          "source": "doxcnfXKpMClpsBuCucGtOEO4bf",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 1,
+              "outcome": "none"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              -1,
+              null
+            ],
+            "weight": 1,
+            "reason": "C：有继续争取增兵的选项时，明确选择先照原令。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": {
+                "quote": "就先照原令",
+                "meaning": "C：有继续争取增兵的选项时，明确选择先照原令。"
+              },
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.1",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R1-FOLLOW",
+      "kind": "fixed-persuasion-followup",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-135",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，第一轮选择 JT-O131 后，经 JT-135 追问。",
+      "slot": "CH3.open.reinforcement.1",
+      "options": [
+        {
+          "id": "JT-O136",
+          "text": "怕的就是赶不及。人得从山上走下去，再列好阵；要是侧路先让魏军过去了，后来再到的人也不好挡。",
+          "next": "JT-R1-GREAT",
+          "when": null,
+          "source": "doxcniP2fZOjIgEYWDNu7ukdRMe",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 1,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.1",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O137",
+          "text": "我眼下能说准的，就是两处都缺人。到时能否赶上，我还不敢说。",
+          "next": "JT-R1-SMALL",
+          "when": null,
+          "source": "doxcnxDOIAGGTdy2oPfsEnFoh9g",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 1,
+              "outcome": "small"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.1",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R2-FIXED",
+      "kind": "fixed-persuasion",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-165",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，尚无已到营护水队；JT-R2-MODE 经 JT-165 进入。",
+      "slot": "CH3.open.reinforcement.2",
+      "options": [
+        {
+          "id": "JT-O166",
+          "text": "取水的人已经被敌箭逼回来了，山上的用水又都靠下面。请将军派些兵，把这条路护住。",
+          "next": "JT-170",
+          "when": null,
+          "source": "doxcnSUszoi4JmXcY39LK7TdPxe",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接提出当前要补的保护任务。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "请将军派些兵，把这条路护住。",
+                "meaning": "B：直接提出当前要补的保护任务。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O167",
+          "text": "水还在，人却过不去。下面的兵正守着两条路，再抽一队，原来守的地方就顾不上了。请另派人护水，也好让山上的弟兄喝上水。",
+          "next": "JT-R2-GREAT",
+          "when": null,
+          "source": "doxcnUdcUhVqAKq0LzUNvAqd6te",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接提出新增护水请求；理由更完整不增加人格权重。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "请另派人护水",
+                "meaning": "B：直接提出新增护水请求"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O168",
+          "text": "先请王将军从现有的人里调配。我把回令带去，看看他如何安排。",
+          "next": "JT-182",
+          "when": null,
+          "source": "doxcnwuDGHXjzUiLojMzve197NO",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "none"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R2-SAFE-FIXED",
+      "kind": "fixed-persuasion",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-R2-SAFE-MODE",
+          "via": "route",
+          "when": null
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，已有已到营且承担 water 的队伍；JT-R2-SAFE-MODE 进入。普通 R2 与 SAFE R2 互斥。",
+      "slot": "CH3.open.reinforcement.2",
+      "options": [
+        {
+          "id": "r2-safe-small",
+          "text": "护水的人已经到位，正面和侧路还得有人守。请将军再派些兵。",
+          "next": "JT-R2-SAFE-QUESTION",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接提出补兵请求。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "请将军再派些兵。",
+                "meaning": "B：直接提出补兵请求。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "r2-safe-great",
+          "text": "先前派去的人正在护水，不能再抽回来。正面和侧路仍得同时看住，请另派兵补守路的人手。",
+          "next": "JT-R2-GREAT",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接提出补兵请求，与简短版本同权。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "请另派兵补守路的人手。",
+                "meaning": "B：直接提出补兵请求，与简短版本同权。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "r2-safe-none",
+          "text": "先照现有安排守着，我把回话送到王将军那里。",
+          "next": "JT-182",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "none"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              -1,
+              null
+            ],
+            "weight": 1,
+            "reason": "C：在可以继续提出增兵的情况下明确维持现有安排。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": {
+                "quote": "先照现有安排守着",
+                "meaning": "C：在可以继续提出增兵的情况下明确维持现有安排。"
+              },
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R2-SAFE-FOLLOW",
+      "kind": "fixed-persuasion-followup",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-R2-SAFE-QUESTION",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，第二轮护水已完成分支选 r2-safe-small 后追问。",
+      "slot": "CH3.open.reinforcement.2",
+      "options": [
+        {
+          "id": "r2-safe-follow-great",
+          "text": "护水得有人一路往返，正面和侧路也都有人盯着。三处不能靠同一队人来回跑，请另派一队补守路的缺口。",
+          "next": "JT-R2-GREAT",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "r2-safe-follow-small",
+          "text": "三处都要人，这一点我能说准。该怎样分才够，我还没想清楚。",
+          "next": "JT-R2-SMALL",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "small"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R2-FOLLOW",
+      "kind": "fixed-persuasion-followup",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-170",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，第二轮普通分支选 JT-O166 后，经 JT-170 追问。",
+      "slot": "CH3.open.reinforcement.2",
+      "options": [
+        {
+          "id": "JT-O171",
+          "text": "领队已经报过，现有的兵都分在正面和侧路，两处都不能撤。另派人护水，就不必让他们来回补缺。",
+          "next": "JT-R2-GREAT",
+          "when": null,
+          "source": "doxcn1rG10QaigNOxenM5LwBIIg",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O172",
+          "text": "怎么分兵更合适，我还没想明白。我只怕取水的人再遭箭，请将军先派些人护着他们。",
+          "next": "JT-R2-SMALL",
+          "when": null,
+          "source": "doxcn1qS9xZCa1myHPiVidYq7Zd",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 2,
+              "outcome": "small"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.2",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R3-FIXED",
+      "kind": "fixed-persuasion",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-196",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，JT-R3-MODE 经 JT-196 进入。",
+      "slot": "CH3.open.reinforcement.3",
+      "options": [
+        {
+          "id": "JT-O197",
+          "text": "敌军一直没来，山道眼下还通。请先派人下去接应，后面的队伍要走，也有人护着。",
+          "next": "JT-201",
+          "when": null,
+          "source": "doxcn0OhyyzndaOtOeZzEe0O6Ib",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接提出撤下接应队的请求。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "请先派人下去接应",
+                "meaning": "B：直接提出撤下接应队的请求。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.3",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O198",
+          "text": "前后两报都没见攻山，再等未必等得到。趁山道还通，先让人下去接应，站稳以后仍听将军的令。兵换个地方，也还有出击的机会。",
+          "next": "JT-R3-GREAT",
+          "when": null,
+          "source": "doxcn5T8wdp72hu1Xq6ZMfUPbVu",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 3,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：承接马谡的指挥权和求胜目标，为改变驻兵安排提供台阶。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "站稳以后仍听将军的令。兵换个地方，也还有出击的机会。",
+                "meaning": "B：承接马谡的指挥权和求胜目标，为改变驻兵安排提供台阶。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.3",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O199",
+          "text": "既然将军还想等一等，就先照原令。我去把回话带给王将军，让他知道山上的打算。",
+          "next": "JT-213",
+          "when": null,
+          "source": "doxcn2rzBOaO13Sb5hczxPYhdWf",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 3,
+              "outcome": "none"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              -1,
+              null
+            ],
+            "weight": 1,
+            "reason": "C：对方仍想等待时明确选择维持原令；不给失败或零调兵额外人格分。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": {
+                "quote": "就先照原令",
+                "meaning": "C：对方仍想等待时明确选择维持原令"
+              },
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.3",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-R3-FOLLOW",
+      "kind": "fixed-persuasion-followup",
+      "act": 2,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-201",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，第三轮选择 JT-O197 后，经 JT-201 追问。",
+      "slot": "CH3.open.reinforcement.3",
+      "options": [
+        {
+          "id": "JT-O202",
+          "text": "下去的人仍听将军的令，王将军也已说过坡脚能接队伍。先把下面稳住，再看敌军往哪儿动，未必要等他们来攻这座山。",
+          "next": "JT-R3-GREAT",
+          "when": null,
+          "source": "doxcnGMSkT8Yu41UXhkOjVajqve",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 3,
+              "outcome": "great"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：回应丧失指挥与战机的顾虑；不是因为这是大成功答案。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "下去的人仍听将军的令",
+                "meaning": "B：回应丧失指挥与战机的顾虑"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.3",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O203",
+          "text": "王将军刚回报，山道还通，坡脚也能接人。至于下去以后怎样破敌，我还没有想明白。",
+          "next": "JT-R3-SMALL",
+          "when": null,
+          "source": "doxcnb3NwBboHbTfcUgqk7jEVcc",
+          "existingGameplayEffects": [
+            {
+              "type": "round-result",
+              "round": 3,
+              "outcome": "small"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只补充军情、承认信息边界或解答兵力问题；不按答案完整度和调兵大小计人格。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.reinforcement.3",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-ROUTE-CHOICE",
+      "kind": "major-strategy",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-ROUTE-GATE",
+          "via": "route",
+          "when": {
+            "gate": "lure-entry"
+          }
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "第三轮结束且 below >= 10000，JT-ROUTE-GATE 才进入本题。",
+      "slot": "CH3.final-strategy",
+      "notes": "below < 10000 时走 JT-225 → JT-226 → JT-231，玩家没有诱敌选项，四轴全为 null；不得补记选择下山或保守。",
+      "options": [
+        {
+          "id": "JT-O228",
+          "text": "请马谡下山，与王平合兵守住街亭。",
+          "next": "JT-231",
+          "when": null,
+          "source": "doxcnxIiK8nPRrBaJ0N6iE1qWnf",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：在诱敌路线真实可选时，主动选择先合兵守住街亭。",
+            "axisEvidence": {
+              "A": {
+                "quote": "下山，与王平合兵守住街亭",
+                "meaning": "A：在诱敌路线真实可选时，主动选择先合兵守住街亭。"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "onlyIf": "本次到达 JT-ROUTE-CHOICE 且两项都可选；不是 JT-225 强制入口",
+            "lifecycle": "作为尚未执行的战略方向；事前主动改道替换，执行后保留真实行动证据"
+          }
+        },
+        {
+          "id": "JT-O229",
+          "text": "设法引敌进攻，寻找破敌的机会。",
+          "next": "JT-274",
+          "when": {
+            "gate": "lure-entry"
+          },
+          "source": "doxcn3ZGDM5gzIS9zNOcpv25Fkd",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：在可以合兵守备时，选择承担诱敌方案的额外不确定性以寻找破敌机会。",
+            "axisEvidence": {
+              "A": {
+                "quote": "设法引敌进攻，寻找破敌的机会",
+                "meaning": "A：在可以合兵守备时，选择承担诱敌方案的额外不确定性以寻找破敌机会。"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "onlyIf": "JT-ROUTE-CHOICE 的诱敌选项真实显示",
+            "lifecycle": "仅计一次战略选择；最终确认不再加分"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-WITHDRAW-FIXED",
+      "kind": "fixed-persuasion",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-WITHDRAW-MODE",
+          "via": "route",
+          "when": null
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，进入下山进言；AI 开启会被 session.applyModeToOpen 转至 JT-OPEN-WITHDRAW。",
+      "slot": "CH3.open.withdrawal",
+      "options": [
+        {
+          "id": "JT-O232",
+          "text": "魏军一直沿着道路和水路逼近，再等下去，连下山的路都可能被他们截住。",
+          "next": "JT-234",
+          "when": null,
+          "source": "doxcnVNxOJneOX6qJe5DZO3eoYd",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：直接指出继续等待的风险。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "再等下去，连下山的路都可能被他们截住。",
+                "meaning": "B：直接指出继续等待的风险。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O233",
+          "text": "山下的人已经列阵，接应也还在。将军此时下去，正好带着他们一起守。",
+          "next": "JT-234",
+          "when": null,
+          "source": "doxcnXEdRsrMXdWxOSIQOCN7Kph",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "B：把下山解释成继续发挥统帅作用，为改变决定提供台阶。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "将军此时下去，正好带着他们一起守。",
+                "meaning": "B：把下山解释成继续发挥统帅作用，为改变决定提供台阶。"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-WITHDRAW-REPLY",
+      "kind": "fixed-persuasion-followup",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-234",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 关闭，固定下山进言后马谡提出接应疑问。",
+      "slot": "CH3.open.withdrawal",
+      "options": [
+        {
+          "id": "withdraw-facts",
+          "text": "山道还通着，王将军在坡脚接应。魏军一直压着道路和水路，请趁现在依次下山。",
+          "next": "JT-WITHDRAW-VERIFY",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "withdraw-ask",
+          "text": "请传令军士当面把通路和接应回报清楚。",
+          "next": "JT-237",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "withdraw-wait",
+          "text": "眼下仍请将军候着，我再想想办法。",
+          "next": "JT-391",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "暂缓下山只进入明确风险警告；若随后仍留山，统一在 JT-O393 记一次。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-WITHDRAW-RETRY",
+      "kind": "retry-or-risk-intent",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-245",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "开放下山进言被要求补充后，经 JT-245 进入。",
+      "slot": "CH3.open.withdrawal",
+      "options": [
+        {
+          "id": "withdraw-retry",
+          "text": "补充已知的通路与接应，再去进言。",
+          "next": "JT-WITHDRAW-MODE",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "withdraw-recheck",
+          "text": "请传令军士当面回报。",
+          "next": "JT-237",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "withdraw-stay",
+          "text": "先留在山上，等一等。",
+          "next": "JT-391",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "暂缓下山只进入明确风险警告；若随后仍留山，统一在 JT-O393 记一次。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.open.withdrawal",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-LAST-TASK",
+      "kind": "major-arrangement",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-248",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-255",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-267",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-GUARD-CONFIRM",
+          "optionId": "guard-adjust",
+          "when": null
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "马谡已在 JT-242 实际下令下山，JT-248 给出最后安排机会。",
+      "slot": "CH3.last-task",
+      "notes": "三个选项均显示；早下山须 m >= 4，否则 JT-255 返回；额外接应须 w >= 4 且 r >= 5，否则 JT-266/267 返回。实际 early 与 rearReception 互斥。只计玩家所选话语/安排意图，不因 NPC 接受或拒绝改变分值。",
+      "options": [
+        {
+          "id": "JT-O249",
+          "text": "将军，请随中队下山。到了阵中，山上山下的事也好一起指挥。",
+          "next": "JT-EARLY-GATE",
+          "when": null,
+          "source": "doxcn2HW5btBWf2LD3SVc4CcL9e",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "B：通过让马谡继续统一指挥的理由，争取他改变断后的安排；原句没有明说舍大局救私交，因此 D 不填。",
+            "axisEvidence": {
+              "A": null,
+              "B": {
+                "quote": "到了阵中，山上山下的事也好一起指挥。",
+                "meaning": "B：通过让马谡继续统一指挥的理由，争取他改变断后的安排"
+              },
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.last-task",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "recordAs": "争取马谡随中队下山；只有实际 early 为 true 才能在结果文案写劝动/做到",
+            "onGateRefusal": "保留这次尝试原话；不因拒绝加减人格。后续若仅能照常传令，该被迫收束不自动写反向分",
+            "replacementRule": "本节点主动调整为另一可行安排时，覆盖旧安排记录；单纯执行确认不覆盖"
+          }
+        },
+        {
+          "id": "JT-O250",
+          "text": "我去坡脚问清最后一队从哪里进阵，再请人把回话送上来。",
+          "next": "JT-REAR-GATE",
+          "when": null,
+          "source": "doxcnb9933k6cgeWnq33KsBTbyc",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：在随队即可离开的情况下，主动补齐最后一队的入阵位置与回报闭环；不把后续接应是否获准当人格。",
+            "axisEvidence": {
+              "A": {
+                "quote": "问清最后一队从哪里进阵，再请人把回话送上来。",
+                "meaning": "A：在随队即可离开的情况下，主动补齐最后一队的入阵位置与回报闭环"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.last-task",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "recordAs": "主动确认末队接应；只有 actual rearReception 为 true 才写已完成额外接应",
+            "onGateRefusal": "保留提出安排的原话；拒绝与返回本题不另计分",
+            "replacementRule": "主动改为另一安排覆盖旧值；因不可用而退回标准传令不写保守/冷漠分"
+          }
+        },
+        {
+          "id": "JT-O251",
+          "text": "随队下山，照常传令。",
+          "next": "JT-GUARD-WARNING",
+          "when": null,
+          "source": "doxcnDHnqaKr7Huu2WC3cajvXoe",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lastTask",
+              "value": "normal"
+            },
+            {
+              "type": "flag",
+              "key": "early",
+              "value": false
+            },
+            {
+              "type": "flag",
+              "key": "rearReception",
+              "value": false
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "照常完成传令职责不代表自私或缺少谋划；此前不可行安排造成回退也不记反向分。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.last-task",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-GUARD-CONFIRM",
+      "kind": "confirm-or-adjust",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-269",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-270",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-271",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "最后安排后已收到 JT-269/270/271 中当前风险说明。",
+      "slot": "CH3.last-task",
+      "notes": "guard-go 只执行当前安排；guard-adjust 返回调整，不另记谨慎或勇敢。",
+      "options": [
+        {
+          "id": "guard-go",
+          "text": "按当前安排继续撤离。",
+          "next": "JT-GUARD-RESULT",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "withdrawalExecuted",
+              "value": true
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.last-task",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "guard-adjust",
+          "text": "先调整最后一队的安排。",
+          "next": "JT-LAST-TASK",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.last-task",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-LURE-METHOD",
+      "kind": "method-or-cancel",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-276",
+          "via": "next"
+        },
+        {
+          "nodeId": "JT-LURE-RETRY",
+          "optionId": "lure-revise",
+          "when": null
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "主动选择诱敌路线，或计策被退回；手机选项还需 aiEnabled && phoneAllowed && itemSystemEnabled。",
+      "slot": "CH3.lure-method",
+      "notes": "工具选择、预写方案与购买能力不作为人格。固定疑兵计没有绕过军令或责任边界，不能仅因计策新颖/欺敌就记 C 权变。",
+      "options": [
+        {
+          "id": "JT-O277",
+          "text": "打开手机，结合已知军情筹划。",
+          "next": "JT-281",
+          "when": {
+            "gate": "phone-ai"
+          },
+          "source": "doxcnbr0BZqz57sjQuy8sUF1vof",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lureMethod",
+              "value": "phone"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "手机/预写方案属于工具与表达模式选择；固定疑兵计仍经正式授权，不能仅因欺敌而记为绕规。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.lure-method",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O278",
+          "text": "采用固定疑兵计。",
+          "next": "JT-292",
+          "when": null,
+          "source": "doxcnH2VfnBbsrqXx4Fz4Q0gk9c",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lureMethod",
+              "value": "fixed"
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "手机/预写方案属于工具与表达模式选择；固定疑兵计仍经正式授权，不能仅因欺敌而记为绕规。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.lure-method",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O279",
+          "text": "收起计策，改劝马谡下山。",
+          "next": "JT-231",
+          "when": null,
+          "source": "doxcn79XqLPy2Nix6apbH7l2mZb",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lurePlanReady",
+              "value": false
+            }
+          ],
+          "personality": {
+            "directions": [
+              -2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：尚未执行时，主动放下诱敌、改求合兵守备；只替换原战略记录，不能与先前诱敌分叠加。",
+            "axisEvidence": {
+              "A": {
+                "quote": "收起计策，改劝马谡下山。",
+                "meaning": "A：尚未执行时，主动放下诱敌、改求合兵守备"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "onlyIf": "诱敌在当前仍实际可继续，或玩家明确自愿在可修改方案中退出；若因资格/功能门槛只剩取消，四轴 null、weight 0",
+            "operation": "replace-not-add",
+            "clearPendingSlots": [
+              "CH3.open.lure"
+            ],
+            "neverErase": "诱敌已经执行后的真实信号选择或风险行为；JT-318/319 的失败后自动改道不是本项"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-LURE-RETRY",
+      "kind": "retry-or-cancel",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-300",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "计策完整性或执行资格不足，经 JT-300 返回。",
+      "slot": "CH3.final-strategy",
+      "notes": "重想只是重试。主动改劝下山可替换此前尚未执行的战略方向；资格不足强制退出时不记谋定。",
+      "options": [
+        {
+          "id": "lure-revise",
+          "text": "重新考虑计策。",
+          "next": "JT-LURE-METHOD",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "lure-guard",
+          "text": "放下计策，改劝马谡下山。",
+          "next": "JT-231",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：尚未执行时，主动放下诱敌、改求合兵守备；只替换原战略记录，不能与先前诱敌分叠加。",
+            "axisEvidence": {
+              "A": {
+                "quote": "放下计策，改劝马谡下山。",
+                "meaning": "A：尚未执行时，主动放下诱敌、改求合兵守备"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "onlyIf": "诱敌在当前仍实际可继续，或玩家明确自愿在可修改方案中退出；若因资格/功能门槛只剩取消，四轴 null、weight 0",
+            "operation": "replace-not-add",
+            "clearPendingSlots": [
+              "CH3.open.lure"
+            ],
+            "neverErase": "诱敌已经执行后的真实信号选择或风险行为；JT-318/319 的失败后自动改道不是本项"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-LURE-CONFIRM",
+      "kind": "confirm-or-cancel",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-304",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "JT-303 已授权，JT-304 已收到接应回令；执行选项还须 lure-execution-ready。",
+      "slot": "CH3.final-strategy",
+      "notes": "确认执行不重复计路线或方案；事前取消只替换未执行的战略方向。若执行按钮被门槛过滤，只剩取消，不计保守。",
+      "options": [
+        {
+          "id": "JT-O305",
+          "text": "依核准的计策布置。",
+          "next": "JT-LURE-AWAIT-REPORT",
+          "when": {
+            "gate": "lure-execution-ready"
+          },
+          "source": "doxcneQuIm3XVrtcy2fQYy84Tze",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lureExecuted",
+              "value": true
+            }
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "本项只是流程、重试或确认；没有独立人格取舍。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O306",
+          "text": "事前收起计策，改劝下山。",
+          "next": "JT-231",
+          "when": null,
+          "source": "doxcn2EVQVTuacHsseAv9Nt5Yqd",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lurePlanReady",
+              "value": false
+            }
+          ],
+          "personality": {
+            "directions": [
+              -2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：尚未执行时，主动放下诱敌、改求合兵守备；只替换原战略记录，不能与先前诱敌分叠加。",
+            "axisEvidence": {
+              "A": {
+                "quote": "事前收起计策，改劝下山。",
+                "meaning": "A：尚未执行时，主动放下诱敌、改求合兵守备"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.final-strategy",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意",
+            "onlyIf": "诱敌在当前仍实际可继续，或玩家明确自愿在可修改方案中退出；若因资格/功能门槛只剩取消，四轴 null、weight 0",
+            "operation": "replace-not-add",
+            "clearPendingSlots": [
+              "CH3.open.lure"
+            ],
+            "neverErase": "诱敌已经执行后的真实信号选择或风险行为；JT-318/319 的失败后自动改道不是本项"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-LURE-SIGNAL",
+      "kind": "major-execution",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-LURE-SIGNAL-WARNING",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "佯退队已经出营，JT-LURE-SIGNAL-WARNING 明确要求等回旗并说明提前出击风险。",
+      "slot": "CH3.lure-signal",
+      "options": [
+        {
+          "id": "lure-wait-signal",
+          "text": "等王平的回旗，再传出击。",
+          "next": "JT-LURE-SIGNAL-READY",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              -1,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：愿意等接应就绪的信号再动；C：明示遵守刚刚交代的协同行动程序。",
+            "axisEvidence": {
+              "A": {
+                "quote": "等王平的回旗",
+                "meaning": "A：愿意等接应就绪的信号再动"
+              },
+              "B": null,
+              "C": {
+                "quote": "再传出击",
+                "meaning": "C：明示遵守刚刚交代的协同行动程序。"
+              },
+              "D": null
+            },
+            "slot": "CH3.lure-signal",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "lure-rush-signal",
+          "text": "怕敌军跑了，抢先传出击。",
+          "next": "JT-LURE-PREMATURE",
+          "when": null,
+          "source": null,
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "lurePrematureSignal",
+              "value": true
+            }
+          ],
+          "personality": {
+            "directions": [
+              2,
+              null,
+              1,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：已知接应未完成与暴露风险，仍为抓战机抢先行动；C：主动越过明确的回旗后出击程序。",
+            "axisEvidence": {
+              "A": {
+                "quote": "怕敌军跑了，抢先传出击。",
+                "meaning": "A：已知接应未完成与暴露风险，仍为抓战机抢先行动"
+              },
+              "B": null,
+              "C": {
+                "quote": "抢先传出击",
+                "meaning": "C：主动越过明确的回旗后出击程序。"
+              },
+              "D": null
+            },
+            "slot": "CH3.lure-signal",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-RETREAT-CHOICE",
+      "kind": "major-risk-choice",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-371",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "守备失败、王平下令撤退，JT-371 明确说明此时折返肯定赶不上。",
+      "slot": "CH3.retreat-rescue",
+      "options": [
+        {
+          "id": "JT-O372",
+          "text": "随队撤走。",
+          "next": "JT-375",
+          "when": null,
+          "source": "doxcnSDNxybm2BxP5VX6u7wf9Of",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：收到折返肯定赶不上的警告后选择随队撤离；不能把自保直接记为大局，也不能说冷漠。",
+            "axisEvidence": {
+              "A": {
+                "quote": "随队撤走。",
+                "meaning": "A：收到折返肯定赶不上的警告后选择随队撤离"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.retreat-rescue",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        },
+        {
+          "id": "JT-O373",
+          "text": "明知赶不上，仍折回去救落后的伤兵。",
+          "next": "JT-382",
+          "when": null,
+          "source": "doxcnLkOISB6Ayh9OJMlBUBl5hc",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              2,
+              null,
+              null,
+              2
+            ],
+            "weight": 2,
+            "reason": "A：明知可能无法归队仍冒险折返；D：为眼前落后的伤兵承担个人代价。",
+            "axisEvidence": {
+              "A": {
+                "quote": "明知赶不上，仍折回去",
+                "meaning": "A：明知可能无法归队仍冒险折返"
+              },
+              "B": null,
+              "C": null,
+              "D": {
+                "quote": "救落后的伤兵",
+                "meaning": "D：为眼前落后的伤兵承担个人代价。"
+              }
+            },
+            "slot": "CH3.retreat-rescue",
+            "replacePrevious": true,
+            "commitOn": "session.advance(optionId) 接受玩家当前选择时；不等待 NPC 是否同意"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-STAY-CONFIRM",
+      "kind": "risk-confirm-or-cancel",
+      "act": 3,
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "incoming": [
+        {
+          "nodeId": "JT-391",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "玩家曾暂缓下山，JT-391 再次明确敌骑将截断退路。",
+      "slot": "CH3.stay-risk",
+      "notes": "本题是首次风险知情后的实际留山承诺；之前 wait/stay 按钮仅打开警告，不能双计。",
+      "options": [
+        {
+          "id": "JT-O392",
+          "text": "补充依据，重新争取下山，或回到先前准备。",
+          "next": "JT-WITHDRAW-MODE",
+          "when": null,
+          "source": "doxcnpRe4m19p0ZE0kNt6MVECrf",
+          "existingGameplayEffects": [],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "撤销暂缓并返回补充依据，是重试入口；不把为了补答案而重试记为谋定。",
+            "axisEvidence": {
+              "A": null,
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.stay-risk",
+            "replacePrevious": true,
+            "commitOn": "无人格证据；只保留流程记录"
+          }
+        },
+        {
+          "id": "JT-O393",
+          "text": "仍留山上，继续等。",
+          "next": "JT-395",
+          "when": null,
+          "source": "doxcnSW9W8efaUFB4KzBOyCb9Te",
+          "existingGameplayEffects": [
+            {
+              "type": "flag",
+              "key": "stayConfirmed",
+              "value": true
+            }
+          ],
+          "personality": {
+            "directions": [
+              2,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "A：已明确退路即将被截，仍承担留山的风险；敢行衡量风险承受，不等于身体行动多。没有表达守令或人情承诺，因此 C/D 不填。",
+            "axisEvidence": {
+              "A": {
+                "quote": "仍留山上，继续等。",
+                "meaning": "A：已明确退路即将被截，仍承担留山的风险"
+              },
+              "B": null,
+              "C": null,
+              "D": null
+            },
+            "slot": "CH3.stay-risk",
+            "replacePrevious": true,
+            "commitOn": "选择 JT-O393 时仅记一次；JT-395 实际断路与结局不追加",
+            "contextEvidence": {
+              "A": {
+                "nodeId": "JT-391",
+                "quote": "再留山上，连下去的路都要被他们截住了！"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-OPEN-R1",
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "phase": "reinforcement",
+      "round": 1,
+      "act": 2,
+      "prompt": "你方才在山下看见什么？把需要添兵的地方说给我听。",
+      "next": "JT-R1-RESULT",
+      "incoming": [
+        {
+          "nodeId": "JT-R1-MODE",
+          "via": "route",
+          "when": {
+            "gate": "ai"
+          }
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 开启；进入本轮，结果尚未锁定。R2 是否已有护水只改变已知情境，不能改变人格基准。",
+      "personality": {
+        "slot": "CH3.open.reinforcement.1",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "session.submit(j) 已接受当前确认输入后保存证据；最终采用该节点最新有效确认发言，不根据 NPC 反应加分",
+        "constraints": [
+          "空白、取消、未确认草稿不评分。",
+          "必要追问不另开人格槽，也不累加次数。",
+          "结局事件只引用已有行为证据。",
+          "输入包含明确辱骂/威胁时不把毒性当直率；仅具体取舍符合四轴定义的部分可评分。",
+          "信息缺失、造错军情或答案不完整不推成敢行/权变。"
+        ]
+      }
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-OPEN-R2",
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "phase": "reinforcement",
+      "round": 2,
+      "act": 2,
+      "prompt": "前一趟的回报我看过了。如今山下已有{below}人，你这回想怎样安排？",
+      "next": "JT-R2-RESULT",
+      "incoming": [
+        {
+          "nodeId": "JT-R2-MODE",
+          "via": "route",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "nodeId": "JT-R2-SAFE-MODE",
+          "via": "route",
+          "when": {
+            "gate": "ai"
+          }
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 开启；进入本轮，结果尚未锁定。R2 是否已有护水只改变已知情境，不能改变人格基准。",
+      "personality": {
+        "slot": "CH3.open.reinforcement.2",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "session.submit(j) 已接受当前确认输入后保存证据；最终采用该节点最新有效确认发言，不根据 NPC 反应加分",
+        "constraints": [
+          "空白、取消、未确认草稿不评分。",
+          "必要追问不另开人格槽，也不累加次数。",
+          "结局事件只引用已有行为证据。",
+          "输入包含明确辱骂/威胁时不把毒性当直率；仅具体取舍符合四轴定义的部分可评分。",
+          "信息缺失、造错军情或答案不完整不推成敢行/权变。"
+        ]
+      }
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-OPEN-R3",
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "phase": "reinforcement",
+      "round": 3,
+      "act": 2,
+      "prompt": "如今山下已有{below}人，张郃却一直不肯攻山。前面的安排怎样接着用，你还有什么话要说？",
+      "next": "JT-R3-RESULT",
+      "incoming": [
+        {
+          "nodeId": "JT-R3-MODE",
+          "via": "route",
+          "when": {
+            "gate": "ai"
+          }
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 开启；进入本轮，结果尚未锁定。R2 是否已有护水只改变已知情境，不能改变人格基准。",
+      "personality": {
+        "slot": "CH3.open.reinforcement.3",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "session.submit(j) 已接受当前确认输入后保存证据；最终采用该节点最新有效确认发言，不根据 NPC 反应加分",
+        "constraints": [
+          "空白、取消、未确认草稿不评分。",
+          "必要追问不另开人格槽，也不累加次数。",
+          "结局事件只引用已有行为证据。",
+          "输入包含明确辱骂/威胁时不把毒性当直率；仅具体取舍符合四轴定义的部分可评分。",
+          "信息缺失、造错军情或答案不完整不推成敢行/权变。"
+        ]
+      }
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-OPEN-WITHDRAW",
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "phase": "withdrawal",
+      "round": null,
+      "act": 3,
+      "prompt": "我可以下去，可这么多人挤在山道上，敌军趁机来攻，谁挡在前面？",
+      "next": "JT-WITHDRAW-VERIFY",
+      "incoming": [
+        {
+          "nodeId": "JT-WITHDRAW-MODE",
+          "via": "route",
+          "when": {
+            "gate": "ai"
+          }
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI 开启，进入下山进言。可能来自主动守备，也可能来自兵力不足或诱敌失败后的强制路线。",
+      "personality": {
+        "slot": "CH3.open.withdrawal",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "session.submit(j) 已接受当前确认输入后保存证据；最终采用该节点最新有效确认发言，不根据 NPC 反应加分",
+        "constraints": [
+          "空白、取消、未确认草稿不评分。",
+          "必要追问不另开人格槽，也不累加次数。",
+          "结局事件只引用已有行为证据。",
+          "输入包含明确辱骂/威胁时不把毒性当直率；仅具体取舍符合四轴定义的部分可评分。",
+          "信息缺失、造错军情或答案不完整不推成敢行/权变。",
+          "若下山路线由 below < 10000 或诱敌失败自动导入，不能从问题目标反推 A 谋定。只评分玩家自写的额外取舍。"
+        ]
+      }
+    },
+    {
+      "chapter": "jieting",
+      "nodeId": "JT-OPEN-LURE",
+      "source": "content/chapters/jieting/chapter-three.story.json",
+      "phase": "lure",
+      "round": null,
+      "act": 3,
+      "prompt": "张郃凭什么信，你先说。还有派出去的人怎么回来，咱们什么时候动手，都得想好。",
+      "next": "JT-LURE-PLAN-GATE",
+      "incoming": [
+        {
+          "nodeId": "JT-284",
+          "via": "next"
+        }
+      ],
+      "tutorial": false,
+      "preconditions": "AI/手机/物品系统开启，选 JT-O277 后进入；诱敌路线真实开放。",
+      "personality": {
+        "slot": "CH3.open.lure",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "session.submit(j) 已接受当前确认输入后保存证据；最终采用该节点最新有效确认发言，不根据 NPC 反应加分",
+        "constraints": [
+          "空白、取消、未确认草稿不评分。",
+          "必要追问不另开人格槽，也不累加次数。",
+          "结局事件只引用已有行为证据。",
+          "输入包含明确辱骂/威胁时不把毒性当直率；仅具体取舍符合四轴定义的部分可评分。",
+          "信息缺失、造错军情或答案不完整不推成敢行/权变。",
+          "选择诱敌的 A 已在战略槽记录；仅复述我要诱敌不再计 A。",
+          "计划要素完整、欺敌技巧和现代物品使用都不自动记 C。",
+          "若计策未执行前被玩家取消，其仅为准备阶段的方案槽从当前行动结果移除；确认执行不再加分。"
+        ]
+      }
+    }
+  ],
+  "openRubric": {
+    "axisOrder": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "scales": {
+      "direction": "-2 强烈左向；-1 明确左向；0 明示均衡；+1 明确右向；+2 强烈右向；null 无证据。不能把未提到记成 0。",
+      "weight": "普通明确表达 1；关键开放题 2；没有可靠自主行为证据 0。实际贡献为 direction * weight。"
+    },
+    "axes": {
+      "A": {
+        "left": "谋定",
+        "right": "敢行",
+        "negative": "明确先做必要准备或降低风险再行动。",
+        "positive": "明知仍有不确定性或风险，仍选择立即行动。",
+        "notEvidence": [
+          "说对线索",
+          "漏线索",
+          "读得快慢",
+          "AI接受/拒绝",
+          "泛泛说去查查"
+        ]
+      },
+      "B": {
+        "left": "直陈",
+        "right": "周旋",
+        "negative": "直接提出当前分歧、要求或边界。",
+        "positive": "明确先理解顾虑、给予台阶、寻共同办法以促成改变。",
+        "notEvidence": [
+          "敬语多",
+          "句子长",
+          "辱骂本身",
+          "只问一个普通事实问题"
+        ]
+      },
+      "C": {
+        "left": "守则",
+        "right": "权变",
+        "negative": "目标与程序冲突时仍明确坚持真实责任、授权与正式处置。",
+        "positive": "明确提出例外、绕开程序、隐瞒或改变规则边界。",
+        "notEvidence": [
+          "新颖计策但未改规则",
+          "用手机",
+          "买物品",
+          "算对账",
+          "固定疑兵计本身",
+          "合法军令允许的战术欺敌",
+          "买了先进工具后由 AI 补齐方案"
+        ]
+      },
+      "D": {
+        "left": "大局",
+        "right": "情义",
+        "negative": "已明确存在具体人情或承诺代价，仍优先共同任务或公共责任。",
+        "positive": "已明确整体风险，仍为具体的人、恩义或承诺承担取舍。",
+        "notEvidence": [
+          "一句关心",
+          "提到救命之恩但未取舍",
+          "保护村民自动等于私恩",
+          "自保自动等于大局",
+          "正常履行传令职责",
+          "保护军队补水自动视为私人情义"
+        ]
+      }
+    },
+    "proof": "每个非null方向必须引用当前确认发言中的连续原句并解释其取舍；未提不给负分；不能从NPC答应或结局成功反推。",
+    "multipleAxes": "开放回答可在确有独立原句依据时涉及四轴，但不因一条含糊语句同时推满四轴。",
+    "replacement": "同一开放节点首次回答及必要追问合成一份最新证据，每轴最多一条；追问若只补事实，不重复加分；明确修正取舍时覆盖旧方向。重开该节点或切到预写选项，覆盖同一 slot，不能两套都算。",
+    "axisEvidenceRequired": true,
+    "extractionContract": {
+      "evidence": {
+        "axis": "A|B|C|D",
+        "direction": "-2|-1|0|1|2|null",
+        "quote": "当前有效确认发言中的连续原句",
+        "reason": "具体的取舍和代价",
+        "source": "self-authored|fixed-option|assistant-copied|mixed|unknown"
+      },
+      "confidenceThreshold": 0.8,
+      "unknown": "null",
+      "strongDirection": "±2 仅在明示放弃另一端且知悉具体代价时使用，不能由强烈语气、长短、专业术语判定",
+      "assistantText": "纯粘贴手机生成方案不能由文风推 B；能定位玩家亲自确认的明确价值取舍时才提取；无法识别来源的文风不给分",
+      "neverUse": [
+        "criteria 是否全部为 true",
+        "outcome great/small/none/accepted/revise",
+        "调兵 5000/3000/0",
+        "AI 认定的回答质量",
+        "使用了几条线索",
+        "是否买物品/钱花多少",
+        "NPC 信任值",
+        "游戏结局成败"
+      ]
+    }
+  },
+  "automaticRoutes": [
+    {
+      "nodeId": "JT-WANG-FIRST",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-041",
+          "when": {
+            "flag": "firstVisit",
+            "value": "wang"
+          }
+        },
+        {
+          "next": "JT-WANG-END"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-WANG-END",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-VISIT-HUB"
+        }
+      ],
+      "effects": [
+        {
+          "type": "visit",
+          "place": "wang"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-MA-FIRST",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-052",
+          "when": {
+            "flag": "firstVisit",
+            "value": "ma"
+          }
+        },
+        {
+          "next": "JT-MA-GIFT"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-MA-GIFT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-054",
+          "when": {
+            "all": [
+              {
+                "flag": "q1",
+                "value": "ma"
+              },
+              {
+                "gate": "items"
+              }
+            ]
+          }
+        },
+        {
+          "next": "JT-MA-END"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-MA-END",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-VISIT-HUB"
+        }
+      ],
+      "effects": [
+        {
+          "type": "visit",
+          "place": "ma"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-SCOUT-HEARD",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-066",
+          "when": {
+            "flag": "q1",
+            "value": "scout"
+          }
+        },
+        {
+          "next": "JT-068"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-CAMP-END",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-VISIT-HUB"
+        }
+      ],
+      "effects": [
+        {
+          "type": "visit",
+          "place": "camp"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-VISIT-HUB",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-079",
+          "when": {
+            "gate": "all-visits"
+          }
+        },
+        {
+          "next": "JT-VISIT-REMAINING"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-ACT2",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-123"
+        }
+      ],
+      "effects": [
+        {
+          "type": "checkpoint",
+          "name": "act2"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R1-MODE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-OPEN-R1",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "next": "JT-130"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R1-RESULT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-R1-GREAT",
+          "when": {
+            "gate": "r1-great"
+          }
+        },
+        {
+          "next": "JT-R1-SMALL",
+          "when": {
+            "gate": "r1-small"
+          }
+        },
+        {
+          "next": "JT-143"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R1-GREAT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-139"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R1-SMALL",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-141"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-REPORT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-WATER-PROTECTED",
+          "when": {
+            "gate": "water-protected"
+          }
+        },
+        {
+          "next": "JT-153"
+        }
+      ],
+      "effects": [
+        {
+          "type": "checkpoint",
+          "name": "round-2"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-USE-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-159",
+          "when": {
+            "gate": "r1-reinforced"
+          }
+        },
+        {
+          "next": "JT-161"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-PREPARE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-R2-SAFE-MODE",
+          "when": {
+            "gate": "water-protected"
+          }
+        },
+        {
+          "next": "JT-163"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-MODE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-OPEN-R2",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "next": "JT-165"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-SAFE-MODE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-OPEN-R2",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "next": "JT-R2-SAFE-FIXED"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-RESULT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-R2-GREAT",
+          "when": {
+            "gate": "r2-great"
+          }
+        },
+        {
+          "next": "JT-R2-SMALL",
+          "when": {
+            "gate": "r2-small"
+          }
+        },
+        {
+          "next": "JT-178"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-GREAT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-174"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R2-SMALL",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-176"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R3-MODE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-OPEN-R3",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "next": "JT-196"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R3-RESULT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-R3-GREAT",
+          "when": {
+            "gate": "r3-great"
+          }
+        },
+        {
+          "next": "JT-R3-SMALL",
+          "when": {
+            "gate": "r3-small"
+          }
+        },
+        {
+          "next": "JT-209"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R3-GREAT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-205"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-R3-SMALL",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-207"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-ACT3",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-221"
+        }
+      ],
+      "effects": [
+        {
+          "type": "checkpoint",
+          "name": "act3"
+        }
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-ROUTE-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-ROUTE-CHOICE",
+          "when": {
+            "gate": "lure-entry"
+          }
+        },
+        {
+          "next": "JT-225"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-WITHDRAW-MODE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-OPEN-WITHDRAW",
+          "when": {
+            "gate": "ai"
+          }
+        },
+        {
+          "next": "JT-WITHDRAW-FIXED"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-WITHDRAW-VERIFY",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-241",
+          "when": {
+            "gate": "ma-trust3"
+          }
+        },
+        {
+          "next": "JT-237"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-EARLY-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-253",
+          "when": {
+            "gate": "early-eligible"
+          }
+        },
+        {
+          "next": "JT-255"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-REAR-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-258",
+          "when": {
+            "gate": "rear-eligible"
+          }
+        },
+        {
+          "next": "JT-266"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-GUARD-WARNING",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-269",
+          "when": {
+            "gate": "guard-fails"
+          }
+        },
+        {
+          "next": "JT-270",
+          "when": {
+            "gate": "guard-rear-unsafe"
+          }
+        },
+        {
+          "next": "JT-271"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-GUARD-RESULT",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-368",
+          "when": {
+            "gate": "guard-fails"
+          }
+        },
+        {
+          "next": "JT-HOLD-ALIVE-GATE",
+          "when": {
+            "gate": "guard-masu-alive"
+          }
+        },
+        {
+          "next": "JT-338"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-HOLD-ALIVE-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-322",
+          "when": {
+            "flag": "early",
+            "value": true
+          }
+        },
+        {
+          "next": "JT-324"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-FIXED-LURE-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-297",
+          "when": {
+            "gate": "fixed-lure-eligible"
+          }
+        },
+        {
+          "next": "JT-300"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "nodeId": "JT-LURE-PLAN-GATE",
+      "kind": "route",
+      "routes": [
+        {
+          "next": "JT-303",
+          "when": {
+            "gate": "phone-lure-ready"
+          }
+        },
+        {
+          "next": "JT-300"
+        }
+      ],
+      "effects": [],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "session.resolveRoutes 按已有状态自动选择，玩家不能点击这些分支。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    }
+  ],
+  "forcedFlow": {
+    "default": "全部 278 个 line 节点都是逐句前进，不是独立选择；其中玩家固定台词也不能额外计分。",
+    "notableNodes": [
+      {
+        "nodeId": "JT-225",
+        "text": "王将军说，守路、护水的人都抽不开，实在腾不出手配合诱敌。眼下只求先把山上的人接下去。",
+        "next": "JT-226",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-226",
+        "text": "将军，下面已经顾不过来了。请您下山，与王将军合兵吧。",
+        "next": "JT-231",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-054",
+        "text": "方才你说，打败张郃，丞相前面便少一个强敌。我听着倒顺耳。",
+        "next": "JT-055",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-055",
+        "text": "他拿起案边压图的小木虎，换了块石头压住图角，又把木虎递过来。木虎伏着身子，只有一掌大小，背上已经磨得发亮。",
+        "next": "JT-056",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-056",
+        "text": "这个拿去玩吧。往后办事，也要像方才说话一样明白。",
+        "next": "JT-057",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-057",
+        "text": "谢将军。",
+        "next": "JT-058",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-058",
+        "text": "我接过伏虎木雕，小心收进衣里。",
+        "next": "JT-059",
+        "effects": [
+          {
+            "type": "item",
+            "id": "fuhu-wood-tiger"
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-059",
+        "text": "伏虎木雕（可出售500元）",
+        "next": "JT-MA-END",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-139",
+        "text": "若让他们先从侧路过去，留在山上的人也使不上力。再拨五千给子均，叫他把两处守住，有军情便来报我。",
+        "next": "JT-149",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 1
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-141",
+        "text": "分守两处，是单薄了些。先拨三千下去，看看能不能稳住；余下的人，我还要留着用。",
+        "next": "JT-149",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 1
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-174",
+        "text": "山上的人也不能没水喝。再下五千，交给子均护住取水的路，原来守路的兵不要撤。",
+        "next": "JT-184",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 2
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-176",
+        "text": "先拨三千护水，不能让营里没水喝。你到了下面，把新旧两队各去哪里问清楚，再回来报我。",
+        "next": "JT-184",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 2
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-205",
+        "text": "他们不肯来，我也不能把兵一直搁在这里。再下五千，先把接应安排好。何时出击，仍听我的令。",
+        "next": "JT-215",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 3
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-207",
+        "text": "先下三千，给后面的队伍留条路。余部仍在这里候命，我再看看敌军的动静。",
+        "next": "JT-215",
+        "effects": [
+          {
+            "type": "round-order",
+            "round": 3
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-239",
+        "text": "禀将军，山道还通着，王将军也已安排接应。我刚从下面回来，方才所报属实。",
+        "next": "JT-241",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "withdrawalVerified",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-242",
+        "text": "传令，各部依次下山，听王平在坡脚接应。我留在后队，等前面走开了再动。",
+        "next": "JT-243",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "withdrawalAuthorized",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-253",
+        "text": "也好，后队交给押队军士。我带旗随中队下去，你们依令跟上，不许争抢道路。",
+        "next": "JT-GUARD-WARNING",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "lastTask",
+            "value": "early"
+          },
+          {
+            "type": "flag",
+            "key": "early",
+            "value": true
+          },
+          {
+            "type": "flag",
+            "key": "rearReception",
+            "value": false
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-264",
+        "text": "话已经送到，山上也应下了。最后一队下来，就朝这面旗走。",
+        "next": "JT-GUARD-WARNING",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "lastTask",
+            "value": "rear"
+          },
+          {
+            "type": "flag",
+            "key": "rearReception",
+            "value": true
+          },
+          {
+            "type": "flag",
+            "key": "early",
+            "value": false
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-298",
+        "text": "我将领队请进帐中。马谡指着图，逐一交代退到哪里、何时出击；领队听完，复述了一遍军令。",
+        "next": "JT-303",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "lurePlanReady",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-303",
+        "text": "依此办理。你随领队去，到了外头听他的令，不许自己作主。",
+        "next": "JT-304",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "lureAuthorized",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-304",
+        "text": "王将军那边已经安排好了，回令也送到了。就照方才议定的办。",
+        "next": "JT-LURE-CONFIRM",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "lureReceptionConfirmed",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-318",
+        "text": "传令军士赶去收人，等佯退的队伍收齐，才来复命。",
+        "next": "JT-319",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "failedLure",
+            "value": true
+          },
+          {
+            "type": "flag",
+            "key": "lureExecuted",
+            "value": false
+          },
+          {
+            "type": "flag",
+            "key": "lurePlanReady",
+            "value": false
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-319",
+        "text": "山下又传来告急声，军士收起营具，随队转入守备下撤。",
+        "next": "JT-231",
+        "effects": [],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      },
+      {
+        "nodeId": "JT-395",
+        "text": "山道被截了，前面的队伍退回来了！",
+        "next": "JT-396",
+        "effects": [
+          {
+            "type": "flag",
+            "key": "mountainRoadClosed",
+            "value": true
+          }
+        ],
+        "personality": {
+          "directions": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "weight": 0,
+          "reason": "固定对白、NPC回应或实际执行来源，只作已有选择的事实印证，不单独加分。",
+          "axisEvidence": {
+            "A": null,
+            "B": null,
+            "C": null,
+            "D": null
+          },
+          "commitOn": "无人格证据；只保留流程记录"
+        }
+      }
+    ]
+  },
+  "endings": [
+    {
+      "id": "hold-both",
+      "title": "街亭守住，马谡生还",
+      "success": true,
+      "masuAlive": true,
+      "description": "马谡活着下了山，王平也守住了道路。这一回，街亭和人都留下了。",
+      "nodeId": "JT-END-HOLD-BOTH",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "hold-masu-dies",
+      "title": "街亭守住，马谡战死",
+      "success": true,
+      "masuAlive": false,
+      "description": "山下的阵线撑到了最后，马谡却没能从后队回来。街亭守住了，营中少了一个人。",
+      "nodeId": "JT-END-HOLD-MASU-DIES",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "great-victory",
+      "title": "街亭大捷",
+      "success": true,
+      "masuAlive": true,
+      "description": "山上的鼓声与山下的回旗相应，魏军终于退去。将士们卸下兵器，营里又升起了炊烟。",
+      "nodeId": "JT-END-GREAT-VICTORY",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "retreat",
+      "title": "失守后撤退",
+      "success": false,
+      "masuAlive": null,
+      "description": "我跟着撤退的队伍离开，身后的街亭越来越远。这一回，终究没能守住。",
+      "nodeId": "JT-END-RETREAT",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "era-arrest",
+      "title": "妖孽现世",
+      "success": false,
+      "masuAlive": null,
+      "description": "我的解释没能让帐中的人信服。军士上前将我拿住，再没有人听我说街亭的事。",
+      "nodeId": "JT-END-ERA-ARREST",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "execution",
+      "title": "军前斩首",
+      "success": false,
+      "masuAlive": null,
+      "description": "话说出口，已收不回来了。军士将我押出帐外，这一程到此为止。",
+      "nodeId": "JT-END-EXECUTION",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "mountain-trapped",
+      "title": "困死孤山",
+      "success": false,
+      "masuAlive": null,
+      "description": "等到终于想下山，退路已经断了。孤零零的山营里，再也等不到接应。",
+      "nodeId": "JT-END-MOUNTAIN-TRAPPED",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    },
+    {
+      "id": "rear-sacrifice",
+      "title": "断后无归",
+      "success": false,
+      "masuAlive": null,
+      "description": "我转身跑回了后队。前方撤退的脚步声渐渐远去，这一次，我没能再追上他们。",
+      "nodeId": "JT-END-REAR-SACRIFICE",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "结局是行为和能力共同导致的结果，不能反向推人格；仅展示当前有效选择证据。",
+        "axisEvidence": {
+          "A": null,
+          "B": null,
+          "C": null,
+          "D": null
+        },
+        "commitOn": "无人格证据；只保留流程记录"
+      }
+    }
+  ],
+  "otherInputs": [
+    {
+      "id": "ui:speak",
+      "text": "确认说出 ↗",
+      "kind": "submit",
+      "score": 0,
+      "rule": "只提交对应 open 节点的同一份证据，不另加确认分。"
+    },
+    {
+      "id": "ui:cancel-speech",
+      "text": "停止等待",
+      "kind": "cancel-request",
+      "score": 0,
+      "rule": "网络等待与草稿操作，不算改变立场。"
+    },
+    {
+      "id": "ui:fixed-mode",
+      "text": "改用预写选项",
+      "kind": "mode",
+      "score": 0,
+      "rule": "网络/模式选择不计人格。该轮开放与固定答复共用 slot。"
+    },
+    {
+      "id": "ui:retry",
+      "text": "回到这次抉择前 ↶",
+      "kind": "revive",
+      "score": 0,
+      "rule": "失败结局显示；恢复实际 checkpoint。只保留回退前历史死亡快照，当前人格删除被回退的后续证据。"
+    },
+    {
+      "id": "ui:restart",
+      "text": "重玩第三章",
+      "kind": "restart",
+      "score": 0,
+      "rule": "创建新章 run，立即清空第三章旧人格贡献；第 1、2 章最新有效记录保留。"
+    },
+    {
+      "id": "ui:restart-confirm",
+      "text": "确认重玩",
+      "kind": "confirm-restart",
+      "score": 0,
+      "rule": "同上；不因反复重玩累计人格。"
+    },
+    {
+      "id": "ui:load-slot",
+      "kind": "load",
+      "score": 0,
+      "rule": "按实际读档版本重建当前人格；不能保留读档位置之后的旧分。"
+    },
+    {
+      "id": "ui:situation",
+      "text": "军情",
+      "kind": "view-status",
+      "score": 0,
+      "rule": "当前页面只显示山上/山下兵力、两位将军信任、严谨度；查军情、查看次数与对错不计人格。"
+    },
+    {
+      "id": "ui:notes",
+      "text": "线索",
+      "kind": "read-evidence",
+      "score": 0,
+      "rule": "查看原话、添入/撤下线索，不凭正确线索与解题能力推人格。"
+    },
+    {
+      "id": "ui:item-preparation",
+      "text": "你准备怎样试用？",
+      "kind": "technical-open-input",
+      "score": 0,
+      "rule": "已有真实开放输入，但用途为验证物品操作与效果，非人格问答；试用正确与否、花费、是否买工具均不评分。"
+    },
+    {
+      "id": "ui:item-test-actions",
+      "text": [
+        "开始试用",
+        "记下试用结果",
+        "修改试用办法",
+        "停止等待"
+      ],
+      "kind": "technical-confirm-cancel",
+      "score": 0
+    },
+    {
+      "id": "ui:attach-items",
+      "text": [
+        "附上",
+        "撤下"
+      ],
+      "kind": "tool-context",
+      "score": 0
+    },
+    {
+      "id": "ui:phone-compose",
+      "kind": "assistant-open-input",
+      "score": 0,
+      "rule": "手机助手咨询和购物需求不直接人格评分；只有进入马谡进言的玩家有效确认取舍可作证据。"
+    },
+    {
+      "id": "ui:onward",
+      "text": "继续前行 →",
+      "kind": "navigation",
+      "score": 0
+    },
+    {
+      "id": "ui:records",
+      "text": "回看这一程",
+      "kind": "history",
+      "score": 0
+    }
+  ],
+  "flowConstraints": [
+    "每个 choice 组选项互斥，但可经重试/调整回到同一节点。必须以当前 run 的最新有效语义槽为准，不按 chosen 数组长度累计。",
+    "w/m/r 是章节机制分，不与 A/B/C/D 相加。线索答对、调兵大小、AI评价、解锁资格不构成人格。",
+    "fixed-persuasion 与同轮 open 共用语义槽；追问仅补事实时保留已有表达证据，不创建新分。",
+    "手机计划和固定计划互斥；手机不可用不算更守则/保守。",
+    "末队 early 与 rearReception 按实际最后安排互斥；NPC拒绝不能说成玩家没有情义。",
+    "最终行动确认、后继固定对白、播放/切换画面与结局均不重复计分。",
+    "below < 10000 直接强制走下山进言，无路线人格分；其他门槛造成无法继续诱敌亦不自动给负 A。",
+    "诱敌失败后 JT-318/319 自动转下山，不覆盖已发生的战略冒险与抢先信号证据。",
+    "因资格不足、网络不可用或只剩一个可选项而执行 fallback，保存可选集与不可用原因，禁止把强制收束当自主保守。"
+  ],
+  "storageDesignNotes": {
+    "chapterKey": "jieting",
+    "activeRecord": "latestChapterPersonality[jieting] = {runId,revision,eventsBySlot,current4d,sourceVersion}",
+    "newChapterRun": "重玩第三章立刻清其旧人格记录，不等待通关才替换；重新做出的选择才重新累计。",
+    "checkpointRetry": "先将死亡或失败事件快照写入 history，再恢复 checkpoint；当前人格同步恢复该 checkpoint 的证据，并删除回退后的证据。",
+    "deathArchive": "history 中保存 endingId、runId、checkpoint、有效选择及当时人格快照供回看；history 从不参与 current4d。失败但未死亡可标 failure，不能误写已死。",
+    "currentRuntimeLimit": "现有 persist 只按 ending.id 保存首次时间，并保留剧情存档/备份；尚未实现本文件的人格槽、逐次死亡快照或人格版本回退。本次只交设计配置。"
+  },
+  "designRisks": [
+    "数值为待整体角色分布校准的建议，不声称心理学量表有效。",
+    "第三章现有普通选项主要提供 A/B，C 取舍较少，D 只有少数明确救人风险。不得为了凑四轴而从通关质量、工具或正常职责硬推。",
+    "本文件按当前代码 w>=4 的接应/诱敌门槛记录；与旧设计中的 w>=3 不同。",
+    "没有把军前斩首自动映射敢行/直陈，也没有把妖孽现世自动映射权变。",
+    "实际开放语义计分需单独人格提取与引用核验，不能复用现有 AI 通关评分。"
+  ]
+}

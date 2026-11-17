@@ -1,0 +1,62 @@
+{
+  "id": "V16C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-5ca60103d4.mp4",
+  "sha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+  "videoFrames": 384,
+  "videoSeconds": 16.0,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V16C",
+    "parts": [
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-player-936e79f9b0.mp4",
+        "range": [
+          0,
+          5.791666666666667
+        ]
+      },
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-response-56b3801c74.mp4",
+        "range": [
+          0,
+          10.291666666666666
+        ]
+      }
+    ],
+    "audioMode": "parts",
+    "sourceNodes": [
+      "CH2-LY04-Q1C",
+      "CH2-LY04-Q1FB0"
+    ],
+    "comment": "free raw recut with whole-frame close shot; all visible paper writing excluded, no cards, no boxes"
+  },
+  "sourceParts": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-player-936e79f9b0.mp4",
+      "range": [
+        0,
+        5.791666666666667
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-player-936e79f9b0.mp4",
+      "sourceSha256": "c7031d86680de553eef96ba15fb363e8b66a2e7c86534299c105adf156022178"
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-response-56b3801c74.mp4",
+      "range": [
+        0,
+        10.291666666666666
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-response-56b3801c74.mp4",
+      "sourceSha256": "11505976431e1f7bc71fb8bf5e1f70aa5cad4f49961cfdefdf243b5df53f8fc6"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

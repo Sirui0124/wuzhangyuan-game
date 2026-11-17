@@ -1,0 +1,85 @@
+{
+  "id": "CH2-V39",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V39-7456a80ac4-20261025.mp4",
+  "oldSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+  "oldSubtitles": "/video/subtitles/CH2-V39-7456a80ac4-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V39-39836415.mp4",
+  "sha256": "5a6b9e9e5809553c77d7c98a34b3cfd94bd1a9ca41484a5fd1dec10da90050dd",
+  "bytes": 6901956,
+  "duration": 10.208333333333334,
+  "containerDuration": 10.208333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 245,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V39",
+    "src": "/video/current/PV27-CH2-V39-39836415.mp4",
+    "title": "晚交案的共同收件",
+    "subtitles": "/video/subtitles/PV27-CH2-V39-39836415.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY12A-001",
+      "node": "CH2-LY12A-001",
+      "text": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-001.wav",
+      "oldCorrelation": 0.9999833929034859,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-001-v1.wav",
+      "newVoiceSha256": "95c7e0f9046fe9a97e1867eed655b01aacd870b79ad85455f94f7a08e6f80be2",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.31000000000000005,
+        5.95
+      ],
+      "insertAt": 0.31000000000000005,
+      "voiceSeconds": 5.5,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9437685608863831,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.55,
+      "end": 4.700000000000001,
+      "text": "这些是我拿到的材料。查到的、他亲口说的"
+    },
+    {
+      "start": 4.989999999999999,
+      "end": 5.74,
+      "text": "都在里面"
+    },
+    {
+      "start": 6.12,
+      "end": 10.2,
+      "text": "收下了。缺多少粮，各人做过什么，会分别查清"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

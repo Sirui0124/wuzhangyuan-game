@@ -1,0 +1,34 @@
+{
+  "userRequests": [
+    "第二章审片不保留浮层/说明卡；E1可从旧片约第8秒开始",
+    "一起回头压到1分钟，苟安表现快乐",
+    "魏地广人众拆成独立可复用视频，当前不改游戏分支"
+  ],
+  "E1": {
+    "targetSeconds": 60,
+    "frames": 1440,
+    "fps": 24,
+    "newVideoJobs": [
+      "E1-CLERK-NOCARD-V2",
+      "E1-GOUAN-HAPPY-V2"
+    ],
+    "newTTS": 0,
+    "changes": [
+      "旧开头7.79秒删除",
+      "原文字卡替换军吏实拍表演",
+      "原凝重的苟安回望镜头改为明显笑意",
+      "归途旁白末句移到两人推车，完整使用既有声音",
+      "原生字幕与前景脸通过局部重新构图去除"
+    ]
+  },
+  "epilogue": {
+    "state": "candidate-delivered",
+    "duration": 15,
+    "sha256": "ce067491fc135c66ee0bb6041982ec77660b5da3fc5af9ba0d36a0f950eb50b6",
+    "existingVoiceLines": 3,
+    "newTTS": 0
+  },
+  "reviewMethod": "完整解码与视频轨覆盖；全时段3fps抽帧，未声称实时动态观看或逐字听审",
+  "gameIntegrated": false,
+  "userApproved": false
+}

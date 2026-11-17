@@ -1,0 +1,248 @@
+{
+  "id": "V41L",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+  "sha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+  "oldSHA": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+  "oldDuration": 35.264,
+  "duration": 26.208333,
+  "removedSeconds": 9.055667000000003,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+    "containerDuration": 26.208333,
+    "videoFrames": 629,
+    "firstPTS": 0.0,
+    "lastPTS": 26.166666666666668,
+    "videoEnd": 26.208333333333336,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 26.208,
+    "audioDecodedSamples": 1257984,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          34,
+          112
+        ]
+      ],
+      "node": "CH2-E4-LATE-001",
+      "audio": "original-whitelist-window",
+      "audioStart": 1.42,
+      "delay": 0,
+      "reason": "李严参与线索第一分句",
+      "timelineRange": [
+        0,
+        3.25
+      ]
+    },
+    {
+      "pictures": [
+        [
+          122,
+          192
+        ]
+      ],
+      "node": "CH2-E4-LATE-001",
+      "audio": "original-whitelist-window",
+      "audioStart": 5.08,
+      "delay": 0,
+      "reason": "材料里已有线索，缩停顿",
+      "timelineRange": [
+        3.25,
+        6.166666666666666
+      ]
+    },
+    {
+      "pictures": [
+        [
+          232,
+          316
+        ]
+      ],
+      "node": "CH2-E4-LATE-001",
+      "audio": "original-whitelist-window",
+      "audioStart": 9.65,
+      "delay": 0,
+      "reason": "细节尚不能对上",
+      "timelineRange": [
+        6.166666666666666,
+        9.666666666666666
+      ]
+    },
+    {
+      "pictures": [
+        [
+          332,
+          418
+        ]
+      ],
+      "node": "CH2-E4-LATE-001",
+      "audio": "original-whitelist-window",
+      "audioStart": 13.82,
+      "delay": 0,
+      "reason": "不能照结论认定",
+      "timelineRange": [
+        9.666666666666666,
+        13.25
+      ]
+    },
+    {
+      "pictures": [
+        [
+          478,
+          592
+        ]
+      ],
+      "node": "CH2-E4-LATE-002",
+      "audio": "seed-audio1-reference",
+      "audioStart": 19.9,
+      "delay": 0.125,
+      "reason": "句尾边界不稳的一句用冻结同军吏参考补齐，实际上传Seed-Audio1.0；连续案头手部近景承载军吏画外续答，避免新声音对应旧口型",
+      "crop": [
+        0,
+        360,
+        640,
+        360
+      ],
+      "timelineRange": [
+        13.25,
+        18.0
+      ]
+    },
+    {
+      "pictures": [
+        [
+          648,
+          845
+        ]
+      ],
+      "node": "CH2-E4-LATE-003",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.2,
+      "reason": "完整晚支撑不足心声，闭口低头归卷动作",
+      "timelineRange": [
+        18.0,
+        26.208333333333336
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-E4-LATE-001",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "sourceRange": [
+        1.42,
+        4.67
+      ],
+      "timelineRange": [
+        0,
+        3.25
+      ],
+      "samples": 156000
+    },
+    {
+      "node": "CH2-E4-LATE-001",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "sourceRange": [
+        5.08,
+        7.996666666666666
+      ],
+      "timelineRange": [
+        3.25,
+        6.166666666666666
+      ],
+      "samples": 140000
+    },
+    {
+      "node": "CH2-E4-LATE-001",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "sourceRange": [
+        9.65,
+        13.15
+      ],
+      "timelineRange": [
+        6.166666666666666,
+        9.666666666666666
+      ],
+      "samples": 168000
+    },
+    {
+      "node": "CH2-E4-LATE-001",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "sourceRange": [
+        13.82,
+        17.403333333333332
+      ],
+      "timelineRange": [
+        9.666666666666666,
+        13.25
+      ],
+      "samples": 172000
+    },
+    {
+      "node": "CH2-E4-LATE-002",
+      "mode": "seed-audio1-actual-uploaded-role-reference",
+      "source": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G6/user-review-batch2/CH2-E4-LATE-002-R1-seed-audio1-reference.wav",
+      "sourceSha256": "2daaebe44a7113d3b5a6b9b4cfb3be9f503ca7fc053d70b805b10eff1607c432",
+      "sourceRange": [
+        0,
+        4.5
+      ],
+      "timelineRange": [
+        13.375,
+        17.875
+      ],
+      "samples": 216000
+    },
+    {
+      "node": "CH2-E4-LATE-003",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E4-LATE-003.wav",
+      "sourceSha256": "769c5467325a55b0e8554aba9ec6d1cca0efabedbe72643a8f124e77e97a3750",
+      "sourceRange": [
+        0,
+        7.40875
+      ],
+      "timelineRange": [
+        18.2,
+        25.60875
+      ],
+      "samples": 355620
+    }
+  ],
+  "mixPeakBefore": 0.6757521629333496,
+  "mixScale": 1,
+  "newVideoRequests": 0,
+  "newAudioRequests": 1,
+  "newVoiceState": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\CH2-E4-LATE-002-R1-seed-audio-state.json",
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-E4-LATE-001",
+    "CH2-E4-LATE-002",
+    "CH2-E4-LATE-003"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

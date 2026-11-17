@@ -1,0 +1,212 @@
+{
+  "updatedUtc": "2026-10-25T06:25:47.832571+00:00",
+  "exactSourceTextMatch": true,
+  "previouslyAcquiredOrderChecked": true,
+  "noInventedNumbers": true,
+  "noNewConfessionOrSignatureAction": true,
+  "layers": [
+    {
+      "clip": "V15-02",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D01"
+      ],
+      "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V15-03",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D02"
+      ],
+      "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V15-04",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D03"
+      ],
+      "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V18-02",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D04"
+      ],
+      "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V18-04",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D05"
+      ],
+      "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V18-06",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY04-D06"
+      ],
+      "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+      "firstVisibleSeconds": 2.8,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V20-03",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY06-015"
+      ],
+      "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V20-06",
+      "type": "current-source-acquisition",
+      "sourceNodes": [
+        "CH2-LY06-018"
+      ],
+      "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+      "firstVisibleSeconds": 2,
+      "authority": "冻结稿当前文书正文；没有添加数值",
+      "integration": "仅在本镜实际操作及准确正文展示后授予此节点，前序不能提前读；不新增朗读"
+    },
+    {
+      "clip": "V16C-02",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D01",
+        "CH2-LY04-D02"
+      ],
+      "texts": [
+        "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+        "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。"
+      ],
+      "firstVisibleSeconds": 2.1,
+      "integration": "只回看已取得正文，不授新证物、不得把口头反馈变新书面证据"
+    },
+    {
+      "clip": "V20-05",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY06-015"
+      ],
+      "texts": [
+        "本村追加粮尚未征齐，实收不足，无法按原数交付。"
+      ],
+      "firstVisibleSeconds": 0,
+      "integration": "只回看已取得正文，不授新证物、不得把口头反馈变新书面证据"
+    },
+    {
+      "clip": "V20-07",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY06-018"
+      ],
+      "texts": [
+        "报告送达、苟安签认：均在本批交接记录所列当日。"
+      ],
+      "firstVisibleSeconds": 4.25,
+      "integration": "旧材料回看；V20-07受杖前时间来自019的当下口述，V20-08当天未补足来自021的当下口述，不能从旧D04重新授予当天仓账证据"
+    },
+    {
+      "clip": "V20-08",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D04"
+      ],
+      "texts": [
+        "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。"
+      ],
+      "firstVisibleSeconds": 3.3,
+      "integration": "旧材料回看；V20-07受杖前时间来自019的当下口述，V20-08当天未补足来自021的当下口述，不能从旧D04重新授予当天仓账证据"
+    },
+    {
+      "clip": "V16A-01",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D01",
+        "CH2-LY04-D02"
+      ],
+      "texts": [
+        "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+        "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。"
+      ],
+      "firstVisibleSeconds": 2.1,
+      "integration": "只回看该入口之前已经取得的正文；不新增文书、不提前显示下一问题答案"
+    },
+    {
+      "clip": "V16C-01",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D01",
+        "CH2-LY04-D02"
+      ],
+      "texts": [
+        "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+        "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。"
+      ],
+      "firstVisibleSeconds": 2.1,
+      "integration": "只回看该入口之前已经取得的正文；不新增文书、不提前显示下一问题答案"
+    },
+    {
+      "clip": "V18-05",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D05"
+      ],
+      "texts": [
+        "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。"
+      ],
+      "firstVisibleSeconds": 1.2,
+      "integration": "只回看该入口之前已经取得的正文；不新增文书、不提前显示下一问题答案"
+    },
+    {
+      "clip": "V19A-01",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D06"
+      ],
+      "texts": [
+        "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。"
+      ],
+      "firstVisibleSeconds": 1.2,
+      "integration": "只回看该入口之前已经取得的正文；不新增文书、不提前显示下一问题答案"
+    },
+    {
+      "clip": "V19B-01",
+      "type": "previously-acquired-revisit",
+      "sourceNodes": [
+        "CH2-LY04-D06"
+      ],
+      "texts": [
+        "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。"
+      ],
+      "firstVisibleSeconds": 1.2,
+      "integration": "只回看该入口之前已经取得的正文；不新增文书、不提前显示下一问题答案"
+    }
+  ],
+  "userApproved": false
+}

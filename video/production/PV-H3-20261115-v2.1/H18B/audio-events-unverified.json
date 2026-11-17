@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Sigh",
+          "p": 0.7695
+        },
+        {
+          "label": "Speech",
+          "p": 0.3996
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0766
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0606
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0215
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0081
+        },
+        {
+          "label": "Hiccup",
+          "p": 0.0076
+        },
+        {
+          "label": "Music",
+          "p": 0.0064
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0057
+        },
+        {
+          "label": "Snort",
+          "p": 0.0051
+        },
+        {
+          "label": "Breathing",
+          "p": 0.005
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0036
+        }
+      ],
+      "music": 0.0064
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Gasp",
+          "p": 0.2791
+        },
+        {
+          "label": "Sigh",
+          "p": 0.2516
+        },
+        {
+          "label": "Speech",
+          "p": 0.1494
+        },
+        {
+          "label": "Throat clearing",
+          "p": 0.0378
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0298
+        },
+        {
+          "label": "Music",
+          "p": 0.026
+        },
+        {
+          "label": "Snort",
+          "p": 0.0235
+        },
+        {
+          "label": "Wail, moan",
+          "p": 0.0184
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0182
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0153
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0086
+        },
+        {
+          "label": "Groan",
+          "p": 0.0085
+        }
+      ],
+      "music": 0.026
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "model": "MiniMax-H3",
+  "duration": 11,
+  "resolution": "768P",
+  "ratio": "16:9",
+  "content": [
+    {
+      "type": "text",
+      "text": "Create a realistic Chinese historical live-action movie scene. 16:9 full frame, restrained low saturation, natural skin, soft firelight, detailed dark canvas and worn iron armour. The camera is the visitor's eyes: no visitor body, shoulder, face, reflection or permanent spear in foreground. Not an over-the-shoulder shot. Audio: ONLY speak the Chinese sentences inside quotation marks below. Never read any directions, names, identifiers, labels or English text. No subtitles, no text, no music. Other sounds: wind, canvas, clothes and steps synchronized to the scene. Keep the same face, costume, camp location and screen direction between shots. All unquoted text is silent direction.\nPicture 1: 姜维, 从现片8.25秒提取，锁年轻姜维脸、高束发、蓝灰衣袍和麻白领；不复制左侧魏延及此图站位.\nPicture 2: 甲, 只锁甲的中年宽脸、黑布包髻、短须与旧铁札甲，不复制背景及画风.\nPicture 3: 中军帐, 只锁中军大帐、闭帘、门侧火盆、右侧告示、土路及木栏的空间；时段按分镜.\n0-7.7 seconds. 我问是否现在便去；姜维先闭口听，再回答自己就在原地等，答完留在原位。 第一视角65mm中近景，同前条眼线与服装。\nWhile the on-screen listener keeps his lips CLOSED, the unseen visitor says in a young adult male voice: \"将军现在便去？\". The voice comes from behind the camera.\nOnly the on-screen 姜维 speaks to the unseen visitor: \"我就在这里等他。你把话传到。\". Other people stay silent with closed lips.\n\n7.7-11 seconds. 亲兵从右侧往我身旁迈半步，说完愿随行；姜维在后景留守。 转视线向亲兵，保持姜维仍在后景，没说话的人闭嘴。\nOnly the on-screen 亲兵 speaks to the unseen visitor: \"我随你同去。\". Other people stay silent with closed lips.\n\nFinish every quoted sentence in order. End with 0.4 seconds of quiet. Do not add any spoken words."
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "local_path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/core/姜维.png"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "local_path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/core/甲.png"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "local_path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/core/中军帐.png"
+      },
+      "role": "reference_image"
+    }
+  ]
+}

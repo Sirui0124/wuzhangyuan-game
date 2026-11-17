@@ -1,0 +1,18 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {fresh,confirm,preview,step,pending,clone,restore,project,policies} from '../.build/engine.js';
+const c=(route,n,extra={})=>({route,action:'rescue',count:n,countMode:'set',goal:'all',supplies:false,waitFor:'now',...extra});
+const send=(s,cs,text='测试原话')=>confirm(s,cs,s.revision,text);
+function acknowledge(s){for(const route of new Set(pending(s).map(a=>a.route)))send(s,[c(route,null,{action:'continue',countMode:'keep'})],'继续按原来的兵力接后队。');}
+function run(spec){const s=fresh();send(s,spec);while(!s.world.ended){acknowledge(s);step(s);}return s;}
+test('自动分工仍有4回合花物资与5回合省物资的取舍',()=>{const fast=run([c('fu',500),c('feng',1000,{supplies:true}),c('sha',1000,{supplies:true})]),cheap=run([c('fu',500),c('feng',1000),c('sha',1000)]);assert.equal(fast.world.turn-1,4);assert.equal(fast.world.stock,1);assert.equal(cheap.world.turn-1,5);assert.equal(cheap.world.stock,3);for(const s of [fast,cheap]){assert.equal(Object.keys(s.world.saved).length,4);assert.equal(s.world.camp,2500);}});
+test('新军情在真实发生后出现，询问不推进，确认继续才能推进',()=>{const s=fresh();send(s,[c('fu',500),c('feng',1000),c('sha',1000)]);step(s);assert.equal(pending(s).length,0);step(s);assert.equal(s.world.saved['张南'],2);assert.equal(s.world.saved['沙摩柯'],2);assert.ok(pending(s).some(a=>a.route==='feng'));assert.ok(pending(s).some(a=>a.route==='sha'));assert.throws(()=>step(s),/新的军情/);const before=JSON.stringify(s);project(s);assert.equal(JSON.stringify(s),before);acknowledge(s);step(s);assert.equal(s.world.turn,4);});
+test('常规原部与守口由部队安排，玩家无需传入底层参数',()=>{const s=fresh();const p=preview(s,[c('feng',500)]);assert.equal(p.commands[0].count,500);assert.equal(s.world.camp,2500);send(s,[c('feng',500)]);step(s);assert.equal(s.world.fronts.feng.policy.native,true);assert.equal(s.world.fronts.feng.work[1],500);});
+test('300人产生部分工作，不因不足500作废',()=>{const s=fresh();send(s,[c('fu',300)]);step(s);assert.equal(s.world.fronts.fu.work[0],300);});
+test('所有路线整体校验，超支不部分派遣或解除事件',()=>{const s=fresh(),before=JSON.stringify(s);assert.throws(()=>send(s,[c('fu',1500),c('sha',1500)]),/待命/);assert.equal(JSON.stringify(s),before);});
+test('增援加到原驻兵，部分撤回保留剩余队伍',()=>{const s=fresh();send(s,[c('sha',500)]);step(s);send(s,[c('sha',300,{countMode:'add'})]);step(s);assert.equal(s.world.fronts.sha.men,800);send(s,[c('sha',200,{countMode:'remove'})]);acknowledge(s);step(s);assert.equal(s.world.fronts.sha.men,600);assert.equal(s.world.camp,1900);});
+test('本回合归营的兵不能提前用于别路',()=>{const s=fresh();send(s,[c('fu',1000),c('sha',1500)]);step(s);acknowledge(s);step(s);assert.equal(s.world.camp,0);assert.throws(()=>send(s,[c('feng',500)]),/待命只有0/);});
+test('坚守只稳住现场，不推进；继续接应可恢复任务',()=>{const s=fresh();send(s,[c('fu',500,{action:'hold'})]);step(s);assert.equal(s.world.fronts.fu.work[0],0);send(s,[c('fu',null,{action:'continue',countMode:'keep'})]);step(s);assert.equal(s.world.fronts.fu.work[0],500);});
+test('沙摩柯先走且继续接部众，与只接首领后收队不同',()=>{const a=run([c('sha',1000)]),b=run([c('sha',1000,{goal:'leader'})]);assert.equal(a.world.fronts.sha.out[1],true);assert.equal(b.world.fronts.sha.out[1],false);assert.ok(b.world.saved['沙摩柯']);assert.equal(b.world.fronts.sha.result,'partial');});
+test('确认绑定军情版本，旧草案不能覆盖新命令',()=>{const s=fresh(),rev=s.revision;send(s,[c('fu',500)]);assert.throws(()=>confirm(s,[c('sha',500)],rev,'旧原话'),/已经变化/);});
+test('存档保留待回令、输入军令和随机状态，旧版本不误读',()=>{const s=fresh();send(s,[c('sha',1000)]);step(s);step(s);const saved=restore(JSON.stringify(s));assert.deepEqual(saved,s);assert.equal(restore(JSON.stringify({...s,version:1})),null);});
+test('询问与预测从不消耗军需或改变随机数',()=>{const s=fresh(),before=clone(s);preview(s,[c('fu',500)]);project(s);assert.deepEqual(s,before);});

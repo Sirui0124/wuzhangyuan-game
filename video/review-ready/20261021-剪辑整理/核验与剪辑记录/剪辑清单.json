@@ -1,0 +1,180 @@
+[
+  {
+    "id": "01",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\01-夜营借寿-20261021011141.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\01-夜营借寿-画面定稿.mp4",
+    "duration": 13.07,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留完整点灯与人物动作，转为浏览器兼容H264，不截原声。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "2f76577733170431d011aeb87b35e7350446efe00dec93d7749bfd9f3e488e04"
+  },
+  {
+    "id": "02",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\02-军情奔马与赶赴主帐-20261021011158.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\02-军情奔马与赶赴主帐-画面定稿.mp4",
+    "duration": 11.08,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留军情、下马与赶帐；接03待新生成，不拼成伪完整开篇。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "8046a33ba23f86ee2faa9417016bbfb71ed8bff27cf5d9d083e9f37e121ae497"
+  },
+  {
+    "id": "04",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\04-手机揭示暂停叹气-20261021010747.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\04-手机揭示暂停叹气-画面定稿.mp4",
+    "duration": 5.06,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留完整手机揭示和叹气；跨片手机摆位尚需与现代段统一。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "6fc119afe557aa25b5f6654f52795b4ae1c73bc364e568f1e2663213cfd462fc"
+  },
+  {
+    "id": "05",
+    "status": "重剪待声审",
+    "source": "video\\raw\\new1021\\05-时代遗憾快蒙太奇-20261021011114.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\02-重剪待声审\\05-时代遗憾快蒙太奇-原声重剪待审.mp4",
+    "duration": 7.08,
+    "sourceIntervals": [
+      [
+        0,
+        0.75
+      ],
+      [
+        1.875,
+        2.625
+      ],
+      [
+        2.625,
+        4.125
+      ],
+      [
+        4.4166666667,
+        5.0416666667
+      ],
+      [
+        5.0416666667,
+        7.0416666667
+      ]
+    ],
+    "audio": "video\\in-progress\\generation-current-20261018\\当前五条视频生成包\\02-PR01B-时代遗憾多场景回忆-7.5秒\\声音\\hero-opening-original.wav",
+    "note": "通勤与键盘缩短，同学活动后接行情和工位；末段工位停留轻慢放至约3.46秒，画面不倒回，保留完整原心声。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "a790f5192fcbe69892f2cf0166231787b7c48cb81c280c48d41e4f332b0af6fd"
+  },
+  {
+    "id": "06",
+    "status": "重剪待声审",
+    "source": "video\\raw\\new1021\\06-拿起手机播放与许愿-20261021011122.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\02-重剪待声审\\06-拿起手机播放与许愿-去错误界面待审.mp4",
+    "duration": 8.07,
+    "sourceIntervals": [
+      [
+        0,
+        2.75
+      ],
+      [
+        6.75,
+        12.0833333333
+      ]
+    ],
+    "audio": "source AV trimmed together",
+    "note": "删除2.75—6.75秒多余操作与录制式界面，保留6.75秒后持机、许愿及完整源尾；删除区声音未做语义听辨，须听验后转定稿。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "93da5d44cd7af458704f786d9249c69389370eb91ae801de4acae5af0b2a45e7"
+  },
+  {
+    "id": "09",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\09-七日期满主灯未灭-20261021011207.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\09-七日期满主灯未灭-画面定稿.mp4",
+    "duration": 20.0833333333,
+    "sourceIntervals": [
+      [
+        0,
+        18.5833333333
+      ],
+      [
+        3.25,
+        4.75
+      ]
+    ],
+    "audio": "full original audio, no editorial cuts; only last picture replaced",
+    "note": "末1.5秒改为本条现有燃灯实拍，完成主灯未灭收尾。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "273941de8eb75b59dadc22362170b1009852d7440bab5c9ca723adf638af34f4"
+  },
+  {
+    "id": "10",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\10-战机未改半月再借寿-20261021011111.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\10-战机未改半月再借寿-画面定稿.mp4",
+    "duration": 13.07,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留完整旁白与病中动作，不按波形静音误删句间停顿。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "2fdc758cd9ddfb59c0cbb50063262a63a09bddcfc32a446c6c34104fc44f8421"
+  },
+  {
+    "id": "11",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\11-姜维叹战机主角回应-20261021011249.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\11-姜维叹战机主角回应-画面定稿.mp4",
+    "duration": 20.09,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留两句姜维感叹与主角回应的完整音轨，不强行压缩对白。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "7c7ab2b65326440fbc624433c413da3a0badc8c309f74b9ee69ab446a4317599"
+  },
+  {
+    "id": "12",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\12-蜀道运粮-20261021011111.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\12-蜀道运粮-画面定稿.mp4",
+    "duration": 8.58,
+    "sourceIntervals": [
+      [
+        0,
+        3
+      ],
+      [
+        5.5,
+        11.0833333333
+      ]
+    ],
+    "audio": "source AV trimmed together",
+    "note": "删除3—5.5秒车轮跨石近景，避免可疑接触；保留远景、负重推车和第一视角扶车。未含13救援。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "a7ccade4777407d7e71daa7c44cbdd77d060797c71086cb1cb49293111ebd65d"
+  },
+  {
+    "id": "14",
+    "status": "画面剪辑定稿",
+    "source": "video\\raw\\new1021\\14-入帐探望认出苟安-20261021011100.mp4",
+    "output": "video\\review-ready\\20261021-剪辑整理\\01-画面剪辑定稿\\14-入帐探望认出苟安-画面定稿.mp4",
+    "duration": 11.08,
+    "sourceIntervals": "full source, no editorial truncation",
+    "audio": "full source audio preserved",
+    "note": "保留进帐—看清脸—认人的完整动作及原声尾部。",
+    "fullDecodePassed": true,
+    "subjectiveAudioReview": false,
+    "sha256": "44644967592e841ff88dab3a3de4f0ca3267fcb75fada44de79be1567edee168"
+  }
+]

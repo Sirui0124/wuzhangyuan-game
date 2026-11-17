@@ -1,0 +1,27 @@
+{
+  "id": "V21-10",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v5\\V21-10-paper-interior-repaired.mp4",
+  "sha256": "5664cda10b269393008d032789b8a5d53e83e4eea3d6e2423a925c625dd3bfcf",
+  "estimatedDuration": 8.416666666666666,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V21-10-visualcrop.mp4",
+      "sha256": "378a8be96d5a596e38f7e41697a913edbd2c992f0451ec4665558ef4eb30f948",
+      "sourceTime": [
+        0,
+        8.416666666666666
+      ],
+      "playbackRate": 1
+    }
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "fullSourceLinesPreserved": true,
+  "paperInteriorRepair": {
+    "method": "仅随纸色局部失焦，保留纸边、手部和整张脸，未作强裁脸",
+    "maxFrameAreaFraction": 0.02583984375,
+    "gaussianSigma": 6
+  },
+  "repairReason": "尾段案上模型纸面不作为可读假证据，未恢复后段拿信靠灯动作。"
+}

@@ -1,0 +1,318 @@
+{
+  "id": "V40",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+  "sha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+  "oldSHA": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+  "oldDuration": 55.296,
+  "duration": 23.291667,
+  "removedSeconds": 32.004333,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+    "containerDuration": 23.291667,
+    "videoFrames": 559,
+    "firstPTS": 0.0,
+    "lastPTS": 23.25,
+    "videoEnd": 23.291666666666668,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 23.291,
+    "audioDecodedSamples": 1117968,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          0,
+          26
+        ]
+      ],
+      "node": null,
+      "audio": "silence-essential-action",
+      "audioStart": null,
+      "delay": 0,
+      "reason": "短暂交代查办中的伤帐；不念演出说明",
+      "timelineRange": [
+        0,
+        1.0833333333333333
+      ]
+    },
+    {
+      "pictures": [
+        [
+          151,
+          200
+        ]
+      ],
+      "node": "CH2-LY12A-005",
+      "audio": "original-whitelist-window",
+      "audioStart": 6.3,
+      "delay": 0,
+      "reason": "苟安主动担责前半",
+      "timelineRange": [
+        1.0833333333333333,
+        3.125
+      ]
+    },
+    {
+      "pictures": [
+        [
+          239,
+          276
+        ]
+      ],
+      "node": "CH2-LY12A-005",
+      "audio": "original-whitelist-window",
+      "audioStart": 9.95,
+      "delay": 0,
+      "reason": "苟安承担问责后半，缩掉过长停顿",
+      "timelineRange": [
+        3.125,
+        4.666666666666667
+      ]
+    },
+    {
+      "pictures": [
+        [
+          288,
+          390
+        ]
+      ],
+      "node": "CH2-LY12A-006",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.15,
+      "reason": "我要求查李严，苟安闭口反应",
+      "timelineRange": [
+        4.666666666666667,
+        8.916666666666668
+      ]
+    },
+    {
+      "pictures": [
+        [
+          480,
+          501
+        ]
+      ],
+      "node": null,
+      "audio": "silence-essential-action",
+      "audioStart": null,
+      "delay": 0,
+      "reason": "正式处置另时传来，用无字卷束短转场，不念007演出说明",
+      "timelineRange": [
+        8.916666666666668,
+        9.791666666666668
+      ]
+    },
+    {
+      "pictures": [
+        [
+          684,
+          759
+        ]
+      ],
+      "node": "CH2-LY12A-008",
+      "audio": "original-whitelist-window",
+      "audioStart": 28.52,
+      "delay": 0,
+      "reason": "李严革职/交官印真实原句",
+      "timelineRange": [
+        9.791666666666668,
+        12.916666666666668
+      ]
+    },
+    {
+      "pictures": [
+        [
+          759,
+          762
+        ],
+        [
+          897,
+          981
+        ]
+      ],
+      "node": "CH2-LY12A-009",
+      "audio": "original-whitelist-window",
+      "audioStart": 37.25,
+      "delay": 0,
+      "reason": "实际军法死讯先于空铺；删除苟安死讯等标签段；前镜连续尾部3帧承接死讯起音，再切已坐定镜头，删掉孤立入座闪镜；原句音轨完整不动",
+      "timelineRange": [
+        12.916666666666668,
+        16.541666666666668
+      ]
+    },
+    {
+      "pictures": [
+        [
+          988,
+          1058
+        ],
+        [
+          1164,
+          1256
+        ]
+      ],
+      "node": null,
+      "audio": "silence-essential-action",
+      "audioStart": null,
+      "delay": 0,
+      "reason": "死亡报告后才空铺/空粮车；三句心声完整放入",
+      "timelineRange": [
+        16.541666666666668,
+        23.291666666666668
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-LY12A-005",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "sourceRange": [
+        6.3,
+        8.341666666666667
+      ],
+      "timelineRange": [
+        1.0833333333333333,
+        3.125
+      ],
+      "samples": 98000
+    },
+    {
+      "node": "CH2-LY12A-005",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "sourceRange": [
+        9.95,
+        11.491666666666665
+      ],
+      "timelineRange": [
+        3.125,
+        4.666666666666667
+      ],
+      "samples": 74000
+    },
+    {
+      "node": "CH2-LY12A-006",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-006.wav",
+      "sourceSha256": "86272be461834b1de460aa997d3906e2e6bf211f3cdf7457ae2760a239175567",
+      "sourceRange": [
+        0,
+        3.8012916666666667
+      ],
+      "timelineRange": [
+        4.816666666666667,
+        8.617958333333334
+      ],
+      "samples": 182462
+    },
+    {
+      "node": "CH2-LY12A-008",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "sourceRange": [
+        28.52,
+        31.645
+      ],
+      "timelineRange": [
+        9.791666666666668,
+        12.916666666666668
+      ],
+      "samples": 150000
+    },
+    {
+      "node": "CH2-LY12A-009",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "sourceRange": [
+        37.25,
+        40.875
+      ],
+      "timelineRange": [
+        12.916666666666668,
+        16.541666666666668
+      ],
+      "samples": 174000
+    },
+    {
+      "node": "CH2-LY12A-011",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-011.wav",
+      "sourceSha256": "4abcc3756aeb385566af15daff2bed20cfdd84a6ef306bcd7c5b0ef747537108",
+      "sourceRange": [
+        0,
+        1.3950416666666667
+      ],
+      "timelineRange": [
+        16.89166666666667,
+        18.286708333333337
+      ],
+      "samples": 66962
+    },
+    {
+      "node": "CH2-LY12A-012",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-012.wav",
+      "sourceSha256": "a1360953c1a58559b6c11c60c935a0d68ddf6d6bedf3deea217e55a886cf95bb",
+      "sourceRange": [
+        0,
+        1.5733333333333333
+      ],
+      "timelineRange": [
+        18.691666666666666,
+        20.265
+      ],
+      "samples": 75520
+    },
+    {
+      "node": "CH2-LY12A-013",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-013.wav",
+      "sourceSha256": "8e1df73fc3057b88a2011bfada38993d4b7c98411b0d1c8b1d8488b972f4e5d0",
+      "sourceRange": [
+        0,
+        1.1764166666666667
+      ],
+      "timelineRange": [
+        21.44166666666667,
+        22.618083333333338
+      ],
+      "samples": 56468
+    }
+  ],
+  "mixPeakBefore": 1.0008100271224976,
+  "mixScale": 0.9392391907809547,
+  "newVideoRequests": 0,
+  "newAudioRequests": 0,
+  "newVoiceState": null,
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-LY12A-005",
+    "CH2-LY12A-006",
+    "CH2-LY12A-008",
+    "CH2-LY12A-009",
+    "CH2-LY12A-011",
+    "CH2-LY12A-012",
+    "CH2-LY12A-013"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

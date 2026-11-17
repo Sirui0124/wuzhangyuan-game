@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.9545
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1331
+        },
+        {
+          "label": "Snort",
+          "p": 0.1105
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0827
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0403
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0344
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0251
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0238
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0148
+        },
+        {
+          "label": "Snake",
+          "p": 0.0125
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0074
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.0067
+        }
+      ],
+      "music": 0.0054
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.658
+        },
+        {
+          "label": "Snort",
+          "p": 0.1048
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0821
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.042
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0389
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0327
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.0276
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0225
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0168
+        },
+        {
+          "label": "Music",
+          "p": 0.0135
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0114
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0085
+        }
+      ],
+      "music": 0.0135
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "V22-01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v3\\V22-01-shared-repaired.mp4",
+  "sha256": "717b09daedf34e3446075f05750e53c636230d401f36445ca868e9cb21cd366d",
+  "estimatedDuration": 6,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\picture-repair\\reuse-sources\\G1-L01-9a0c513b31.mp4",
+      "sha256": "9a0c513b3124245265c6ec67785d4cbbc4f634959523579ad6d134181bae38a3",
+      "sourceTime": [
+        0,
+        6
+      ],
+      "playbackRate": 1,
+      "reuseRole": "仅复用同一人物视觉表演，不导入原节点剧情或声音"
+    }
+  ],
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "noAdditionalSlowdown": true,
+  "existingCentralVoice": {
+    "node": "CH2-LY05-002",
+    "text": "所以，你让我查了半天，到头来还是要退兵？",
+    "speaker": "视频（LI03，我）",
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY05-002.wav",
+    "duration": 4.597583333333334,
+    "sha256": "26f3ac55a75358a5382f33b3075df8a9ea53f71f80ec304488ca1a473736bd3e",
+    "ready": true,
+    "source": "central_tts"
+  },
+  "audioIssues": [
+    "复用既有中央玩家音轨，未新增TTS；逐字听审、音色与混音待统一。"
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "previousAdoptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V22-01-16x9.mp4",
+  "previousCandidates": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V22-01-repaired.mp4",
+      "sha256": "8b2711c7ecebd55c4006aa0e2a791982353ec2cea42cac5fdbe5765fe8f3a3b1",
+      "reviewState": "rejected-local-draft"
+    }
+  ]
+}

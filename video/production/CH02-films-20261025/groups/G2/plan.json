@@ -1,0 +1,2038 @@
+{
+  "group": "G2",
+  "version": 1,
+  "source_sha256": "efa748de1a8a576f3b3a33326c9483c2f23d6368c9080f9235538a5ab2737973",
+  "sourceFrozen": "dialogue rev7 / logic rev11",
+  "status": "分镜已制定；运行状态与制作候选见status.json和delivery.json",
+  "clips": [
+    {
+      "id": "V13-01",
+      "parent": "V13",
+      "name": "仓中核凭据、获准查账",
+      "duration": 8,
+      "kind": "observation",
+      "sourceLines": [],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "由玩家眼睛沿仓门内侧向案头走两步。管事在案旁闭口等候，零散粮袋与通道保持现实规模，不是满仓。我走稳后视线落到案头，本队凭据仍在手外，下一片才放上。全程无对白无旁白。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "持真实本队凭据到仓",
+      "nextBoundary": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V13-02",
+      "parent": "V13",
+      "name": "仓中核凭据、获准查账",
+      "duration": 7,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-001",
+          "speaker": "我",
+          "text": "我来领取本队这批粮的交接材料。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "我已走到仓门内的核验案前，右手将真实本队凭据放在近侧桌面；管事看凭据再看摄影机，始终闭嘴听。结束时凭据平放，手退下。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "持真实本队凭据到仓",
+      "nextBoundary": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+        "duration": 2.5969583333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "32e16de691e80f723bda186620d53a0d171f85554b0621ed83d233371f493a01"
+      },
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V13-03",
+      "parent": "V13",
+      "name": "仓中核凭据、获准查账",
+      "duration": 6,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-002",
+          "speaker": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "管事在同一案边低头比对凭据上的经手印记，再抬眼向我开口；说完侧身让开通往仓吏案头的路。凭据不变成新物件。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "持真实本队凭据到仓",
+      "nextBoundary": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V13-04",
+      "parent": "V13",
+      "name": "仓中核凭据、获准查账",
+      "duration": 8,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-003",
+          "speaker": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_clerk",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "我沿刚才让出的通道来到仓吏案前。仓吏先将本批账牍取到桌上，开口说明边界，另一捆其他队账牍仍捆好放远处，不打开。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "持真实本队凭据到仓",
+      "nextBoundary": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "仓吏",
+          "role": "warehouse_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "use": "仓吏固定窄长脸、黑帽、稀山羊须与深灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V14-01",
+      "parent": "V14",
+      "name": "粮运画卷",
+      "duration": 10,
+      "kind": "map",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "我在仓案前低头，双手从卷轴外缘把一张浅麻白粮运图摊开，实物展开后双手退出。卷上只有淡山形、河道与留白，不生成人物、关系符号、数字或任何文字。摄影机稳看五个后期位置：地方应征、实际征收、入仓、调拨发出、粮队领取；只示关系不出现缺额答案。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "获准查本批后",
+      "nextBoundary": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "status": "planned_waiting_central_references",
+      "part": "forward",
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V14-02",
+      "parent": "V14",
+      "name": "粮运画卷",
+      "duration": 10,
+      "kind": "map",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "延续已经完全摊开的同一粮运图，卷边及桌面物件位置不变。摄影机轻向图的领取端落低，再稳定。图面仅淡地形留白，无文字无箭头；后期沿粮队领取、调拨发出、入仓、实际征收、地方应征顺序回看，不泄露缺额结论。全程无对白。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "获准查本批后",
+      "nextBoundary": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "status": "planned_waiting_central_references",
+      "part": "reverse",
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V15-01",
+      "parent": "V15",
+      "name": "倒查起点与三份账页",
+      "duration": 11,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-F01",
+          "speaker": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_clerk",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "我低头看刚获准查阅的一批账牍，右手仅把近侧一片木牍转正；远侧仓吏闭口。镜头沿凭据与交付账之间自然移动，没有仓内藏粮的画面。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V14结束",
+      "nextBoundary": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-F01.wav",
+        "duration": 5.983291666666666,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "7a21eed2fedd5266c0b52f1764bf2d02c7d00498c268d3da0d30e7e162370484"
+      },
+      "references": [
+        {
+          "id": "仓吏",
+          "role": "warehouse_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "use": "仓吏固定窄长脸、黑帽、稀山羊须与深灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V15-02",
+      "parent": "V15",
+      "name": "倒查起点与三份账页",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D01",
+          "speaker": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "本批签收木牍已放近侧，右手扶住下缘，镜头俯看经手印记、分栏和空白文字区。两秒后手退出，保持6秒安静观察。木牍内容由后期准确叠加，模型不造字。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V14结束",
+      "nextBoundary": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V15-03",
+      "parent": "V15",
+      "name": "倒查起点与三份账页",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D02",
+          "speaker": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "左边保留上一片签收木牍，仓吏单手把同批出仓交付木牍放在右边，物体完整接触桌面后手退出。镜头观察两片的同批印记与分栏，保持6秒。不可出现足额实粮或贪污实锤。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V14结束",
+      "nextBoundary": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V15-04",
+      "parent": "V15",
+      "name": "倒查起点与三份账页",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "前两份账牍不换形，右手把本队行程册展在最下方，与交付木牍分开；镜头从已签收处落向行程册的损耗栏。落稳后安静观察6秒。不让模型写可读字，不新增人声。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V14结束",
+      "nextBoundary": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V16A-01",
+      "parent": "V16A",
+      "name": "核交接选项",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "speaker": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "保持仓案和并排交接账，摄影机略抬到管事闭口倾听的脸；随后视线回到两片账牍，右手只指向两处经手印记，不画答案箭头。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N2选A",
+      "nextBoundary": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1A.wav",
+        "duration": 5.172541666666667,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "7c3ee61540d9d789ca70d082e5a60a02f7467054720440da5e589a985e583604"
+      },
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V16B-01",
+      "parent": "V16B",
+      "name": "去问损耗与认罪",
+      "duration": 7,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY07-W01",
+          "speaker": "我（选项）",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "gouan",
+        "injury_tent"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "已按选项回到原伤帐榻前，坐姿眼高看同一苟安，他保持中央图伤势和衣物，闭口听我询问；不补念按钮，不移动伤处。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N2选B",
+      "nextBoundary": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-W01.wav",
+        "duration": 3.793875,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "961d2b7c33605cfc03b83efbf33bfe8bb964c63d9e9c386edc3c687eee6f2dcc"
+      },
+      "references": [
+        {
+          "id": "苟安",
+          "role": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "唯一苟安脸、年龄、黑巾发髻短须与灰麻衣；伤势按原伤帐，不复制中性胸像姿势"
+        },
+        {
+          "id": "伤帐",
+          "role": "injury_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "原伤帐木榻、帐柱、悬甲与侧光空间，参考图无人物不意味着场面无人"
+        }
+      ]
+    },
+    {
+      "id": "V16B-02",
+      "parent": "V16B",
+      "name": "去问损耗与认罪",
+      "duration": 7,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY07-W02",
+          "speaker": "苟安",
+          "text": "好，这笔罪，我认。你报上去吧，别再查了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "gouan",
+        "injury_tent"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "延续同一伤帐位置，苟安看向我，轻收下颌后开口认罪，说到末句把视线压低。仅嘴唇与小幅呼吸运动，伤势不变化，不站起来。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N2选B",
+      "nextBoundary": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "苟安",
+          "role": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "唯一苟安脸、年龄、黑巾发髻短须与灰麻衣；伤势按原伤帐，不复制中性胸像姿势"
+        },
+        {
+          "id": "伤帐",
+          "role": "injury_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "原伤帐木榻、帐柱、悬甲与侧光空间，参考图无人物不意味着场面无人"
+        }
+      ],
+      "actualReferences": [
+        {
+          "id": "现片苟安卧榻",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\source-frames\\gouan-talk.png",
+          "role": "first_frame",
+          "use": "现片原脸、原灰麻衣、半趴木榻及帐柱悬甲；唯一首帧，不混reference_image"
+        }
+      ]
+    },
+    {
+      "id": "V16C-01",
+      "parent": "V16C",
+      "name": "先行归责与纠正",
+      "duration": 8,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "speaker": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "仍在仓案，管事看向摄影机，听我的判断时嘴闭合，末尾视线落回出仓账；不切到苟安，不出现受罚回忆。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N2选C",
+      "nextBoundary": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+        "duration": 4.589708333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "d95543e4c3d5ba05b9bb7a5331c2d3781418ba86b6499ce40cd9a60c7cc87891"
+      },
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V16C-02",
+      "parent": "V16C",
+      "name": "先行归责与纠正",
+      "duration": 10,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "speaker": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "grain_manager",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "管事先看已经摆出的交付账，再抬眼提出反问；说到再对对时手掌停在两份账的旁边，不遮住证物，不用手指穿过木牍。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N2选C",
+      "nextBoundary": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮队管事",
+          "role": "grain_manager",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "use": "粮队管事固定脸和灰褐衣褐巾，不复制身份照胸像构图"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V17-01",
+      "parent": "V17",
+      "name": "共同交付核对",
+      "duration": 12,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "frontline_receiver",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "前线接收人在同一仓案对面，将本队签收与出仓交付两份木牍并排，落稳后先看我再开口。说到路上损耗时只短看独立行程册，结束保留三份账。中性承接A/C或B明确返回，不暗示已选A。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V16A/C或B后明确继续返回仓中",
+      "nextBoundary": [
+        "V18"
+      ],
+      "endEvent": "保留B+1，不补成A+2",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "前线接收人",
+          "role": "frontline_receiver",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+          "use": "前线接收人固定无须脸、黑头带与小皮护肩"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V18-01",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_clerk",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "摄影机从已核对的交付账缓慢移向仓吏另取出的本批入仓账，手只稳住木牍边缘；仓吏闭口听。仓内粮袋零散正常放置，不出现隐蔽满仓。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-T01.wav",
+        "duration": 4.773708333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "a548830951aea0dfe93d762d487e310f77027e945e5691f3644a5566daf6b450"
+      },
+      "references": [
+        {
+          "id": "仓吏",
+          "role": "warehouse_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "use": "仓吏固定窄长脸、黑帽、稀山羊须与深灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V18-02",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D04",
+          "speaker": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "入仓账平置在近侧旧木案，上一批交付木牍保留在边缘，右手依次指向实际入仓与对应发出分栏，动作完成后退下，留6秒核看。木牍文字区留白由后期叠加。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V18-03",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 8,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-W01",
+          "speaker": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "摄影机从刚核过的入仓账抬眼向仓中经手人发问，对方闭口听完才将视线转向本批地方实收账，不得替我说话。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-W01.wav",
+        "duration": 4.598416666666667,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "9ccb14dd2a7e363bab59bfd28335c8381fc03611bfd4b26aded969ad07673f31"
+      },
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V18-04",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D05",
+          "speaker": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "入仓账仍在左侧，经手人把地方实收账完整摆在右侧，手退出。两份同批经手印记落在同一视线高度，镜头安静观察6秒。精确文字后期叠加，不出现新的粮食数量。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V18-05",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 6,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-C01",
+          "speaker": "我",
+          "text": "收到的粮对上了。原定要交多少？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "视线从并排实收和入仓账略抬向地方经手人，他闭口听我的问题，结束低头看即将展开的应征账，不提前回答。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-C01.wav",
+        "duration": 3.397666666666667,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "83b48a44fa42dfae87f227a62604ff626aa94398e5415149c6249168e0ed1fae"
+      },
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V18-06",
+      "parent": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "地方经手人将本批应征账平放在近侧，右手只指过应征、实收、欠交三栏留白区域，不书写、不改数。手退出后镜头安静观察6秒，只在本取得时点后期出现准确文字。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V17结束",
+      "nextBoundary": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V19A-01",
+      "parent": "V19A",
+      "name": "缺额判断A",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "speaker": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "仓案上的应征与实收账保持，摄影机略抬向地方经手人。他闭口听我错误判断，微皱眉但不提前说话；没有扣粮或满仓的画面。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N3选A",
+      "nextBoundary": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4A.wav",
+        "duration": 5.810833333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "72bb4e44e2af46ea5dd6cbbe3d595e81b82731d910d4f8881253ae6bcd6cc8ab"
+      },
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V19A-02",
+      "parent": "V19A",
+      "name": "缺额判断A",
+      "duration": 10,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "speaker": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "地方经手人先低头看应征栏，再抬眼反问我；说到粮在哪儿时手仍放在桌沿，不指向虚构藏粮。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N3选A",
+      "nextBoundary": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V19B-01",
+      "parent": "V19B",
+      "name": "缺额判断B",
+      "duration": 10,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "speaker": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "摄影机低头从应征账移向实收和交付记录，再抬眼向地方经手人说话。他闭口听，末尾仅轻点头，不新增催征公文或承诺。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N3选B",
+      "nextBoundary": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4B.wav",
+        "duration": 6.585333333333334,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "016f4ce844311ea973695dd71f60897250d0b93d1bc19b967a015d6ff1314a19"
+      },
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V19C-01",
+      "parent": "V19C",
+      "name": "缺额判断C",
+      "duration": 7,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "speaker": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "摄影机看桌上本批账后向地方经手人说话；他闭口听完，不抢答，不提早取出缺额报告。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N3选C",
+      "nextBoundary": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4C.wav",
+        "duration": 3.5669583333333335,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "ae185944ab319591845b97e2a512c5eb33314e5c8a3b1d4633e01e6d8b69da53"
+      },
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V19C-02",
+      "parent": "V19C",
+      "name": "缺额判断C",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "speaker": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "地方经手人向我回应，说到交付入仓记录时将已经展示过的木牍归到近侧，放稳后撤手，不另造新证据。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "UI-N3选C",
+      "nextBoundary": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        }
+      ]
+    },
+    {
+      "id": "V20-01",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "local_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "同一地方经手人立在仓案对面，向我解释既有调度决定；他看一眼本批应征账，再回看我，口型只说本句。不切李严镜头，不演未发生的催征。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "地方经手人",
+          "role": "local_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "use": "地方经手人固定微灰短须圆脸、旧褐帽与浅土麻衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-02",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-014",
+          "speaker": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "视线沿桌面转到仓中经手人，他从案侧取出一份旧纸缺额报告，平置后开口说明。纸不穿模，印记和同批标识仅作图案，文字留白待后期。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-03",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-015",
+          "speaker": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "缺额报告完整平放，摄影机俯看，手仅压住下缘随后退出，保持6秒观察。正文区域留白，由后期在此取得时点准确叠加；不读正文，不提前展示签认与送达结论。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-04",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 6,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-016",
+          "speaker": "我",
+          "text": "这份确认是谁写的？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "摄影机从缺额报告下方确认区域抬眼问仓中经手人；对方嘴闭合，只把眼神从纸转向我，不能提前开口。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "voice": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY06-016.wav",
+        "duration": 2.376708333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "4e6ed6b62c3ee2b4b1d9e12748751ede07ffc48cb9dbadf12205f7553f0f8835"
+      },
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-05",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 7,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-017",
+          "speaker": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "仓中经手人回应我，先看报告确认区域，再看我，动作克制；不插入苟安过去签字的伪亲见回忆，不额外证明。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-06",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 10,
+      "kind": "document",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-018",
+          "speaker": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "经手人把同批送达记录放在缺额报告旁，接触桌面后手退出，镜头观察同日的对照位置6秒。模型不造可读文字，准确正文仅此时后期叠加。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-07",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 8,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-019",
+          "speaker": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_handler",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "仓中经手人对着我说本句，手掌靠近已经摆出的回执和仓账，停在纸外不遮字。无受杖场面、无新增签字场面。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "仓中经手人",
+          "role": "warehouse_handler",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "use": "仓中经手人固定年轻无须脸、厚眉、灰巾与青灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    },
+    {
+      "id": "V20-08",
+      "parent": "V20",
+      "name": "调度决定与受杖前签认",
+      "duration": 9,
+      "kind": "dialogue",
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-021",
+          "speaker": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "referenceRoles": [
+        "warehouse_clerk",
+        "warehouse",
+        "desk"
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "摄影机转向同一仓吏，他指一下当天本批仓账的留白缺额栏，再抬眼向我说话；最后手退下，留下缺额报告、回执和当天仓账并排，接玩家确认界面，不自动回伤帐。",
+          "camera": "第一视角眼高或自然俯看，35至50mm正常透视，小幅有动机运动；动作落稳和句末留气口后硬切，末0.7秒稳定。"
+        }
+      ],
+      "entry": "V19A/B/C结束",
+      "nextBoundary": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "status": "planned_waiting_central_references",
+      "part": null,
+      "references": [
+        {
+          "id": "仓吏",
+          "role": "warehouse_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "use": "仓吏固定窄长脸、黑帽、稀山羊须与深灰衣"
+        },
+        {
+          "id": "粮仓",
+          "role": "warehouse",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "use": "粮棚通道、右侧仓案、少量封口麻袋和天光；不把粮袋多少当作证据"
+        },
+        {
+          "id": "查粮案头",
+          "role": "desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "use": "同一仓案旧木与细木牍、麻纸材质；文字面留白，数量位置由本镜动作决定"
+        }
+      ]
+    }
+  ],
+  "parents": [
+    {
+      "id": "V13",
+      "name": "仓中核凭据、获准查账",
+      "entry": "持真实本队凭据到仓",
+      "next": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "children": [
+        "V13-01",
+        "V13-02",
+        "V13-03",
+        "V13-04"
+      ]
+    },
+    {
+      "id": "V14",
+      "name": "粮运画卷",
+      "entry": "获准查本批后",
+      "next": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "children": [
+        "V14-01",
+        "V14-02"
+      ]
+    },
+    {
+      "id": "V15",
+      "name": "倒查起点与三份账页",
+      "entry": "V14结束",
+      "next": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "children": [
+        "V15-01",
+        "V15-02",
+        "V15-03",
+        "V15-04"
+      ]
+    },
+    {
+      "id": "V16A",
+      "name": "核交接选项",
+      "entry": "UI-N2选A",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16A-01"
+      ]
+    },
+    {
+      "id": "V16B",
+      "name": "去问损耗与认罪",
+      "entry": "UI-N2选B",
+      "next": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16B-01",
+        "V16B-02"
+      ]
+    },
+    {
+      "id": "V16C",
+      "name": "先行归责与纠正",
+      "entry": "UI-N2选C",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16C-01",
+        "V16C-02"
+      ]
+    },
+    {
+      "id": "V17",
+      "name": "共同交付核对",
+      "entry": "V16A/C或B后明确继续返回仓中",
+      "next": [
+        "V18"
+      ],
+      "endEvent": "保留B+1，不补成A+2",
+      "children": [
+        "V17-01"
+      ]
+    },
+    {
+      "id": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "entry": "V17结束",
+      "next": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "children": [
+        "V18-01",
+        "V18-02",
+        "V18-03",
+        "V18-04",
+        "V18-05",
+        "V18-06"
+      ]
+    },
+    {
+      "id": "V19A",
+      "name": "缺额判断A",
+      "entry": "UI-N3选A",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19A-01",
+        "V19A-02"
+      ]
+    },
+    {
+      "id": "V19B",
+      "name": "缺额判断B",
+      "entry": "UI-N3选B",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19B-01"
+      ]
+    },
+    {
+      "id": "V19C",
+      "name": "缺额判断C",
+      "entry": "UI-N3选C",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19C-01",
+        "V19C-02"
+      ]
+    },
+    {
+      "id": "V20",
+      "name": "调度决定与受杖前签认",
+      "entry": "V19A/B/C结束",
+      "next": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "children": [
+        "V20-01",
+        "V20-02",
+        "V20-03",
+        "V20-04",
+        "V20-05",
+        "V20-06",
+        "V20-07",
+        "V20-08"
+      ]
+    }
+  ],
+  "requestCount": 35,
+  "totalCandidateSeconds": 309,
+  "review": "制作自查不等于用户通过"
+}

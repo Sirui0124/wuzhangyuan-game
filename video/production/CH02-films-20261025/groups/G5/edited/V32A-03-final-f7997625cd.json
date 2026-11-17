@@ -1,0 +1,35 @@
+{
+  "id": "V32A-03",
+  "sourceId": "V32A-03-C2",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-03-C2.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-03-final-f7997625cd.mp4",
+  "postVoice": [],
+  "textLayers": [],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "loop": false,
+    "sourceRecipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-03-C2.json"
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "保留原句完整8秒音轨，面部回应后接本场案面观察；两段各使用一次，无短循环",
+    "重新合成版待整V动态复核；原声未逐字听审"
+  ],
+  "audioIssues": [
+    "生成了原句前额外人声，待统一声音阶段处理"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 9.06,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-03-final-f7997625cd.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:09.06, start: 0.000000, bitrate: 2769 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2618 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 172 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

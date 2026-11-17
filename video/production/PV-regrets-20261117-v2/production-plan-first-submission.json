@@ -1,0 +1,208 @@
+{
+  "version": "v2",
+  "date": "2026-11-17",
+  "authorization": "用户2026-11-17明确要求：增加电影大片感转场，使用此处MiniMax H3 API生成并合并。授权首次提交各镜，未知POST不得自动重投。",
+  "requested_seconds": 85,
+  "planned_selected_seconds": 71,
+  "planned_title_seconds": 5,
+  "planned_transition_overlap_seconds": 1,
+  "target_seconds": 75,
+  "units": [
+    {
+      "id": "H01",
+      "name": "灯前悬手·开场",
+      "duration": 5,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "prompt": "5秒单镜头。参考图锁定同一诸葛亮、黑冠黑袍、木案地图和画面右侧唯一桌灯。构图改为桌边近景：画面左侧是右手悬在地图上方两厘米的指尖，右侧是仍燃烧的同一油灯；背景只留原夜帐。人物脸不必入镜。固定50mm自然透视，手指轻微向纸面接近但始终不触纸，灯焰只轻偏一次，保持燃烧。手的关节、比例、地图和灯器不变。纸无清晰可读的生成文字。声音：一口浅呼吸、细微纸响、帐外轻风。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "D01"
+    },
+    {
+      "id": "A01",
+      "name": "谷地·雨幕压火",
+      "duration": 8,
+      "edit_duration": 7,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261116-v1\\references\\A01-谷地火场实际首帧.png"
+      ],
+      "prompt": "8秒单镜头，16:9真人历史电影影像。严格保持参考图的真实谷地、黑木架、营道与坍塌帐架的大小和位置。相机在地面略高处，35mm自然广角，只横移约30厘米，前景焦木产生轻微视差，中景营道和远山仍可辨。开头就有雨，雨幕从较远谷地向中景加密；暴露处原有的小火舌被雨逐步压低，遮蔽处只剩少量低火。湿木表面逐渐变黑发亮，水流沿原有坡向汇入营道，灰烟薄而不遮满画面。空间规模来自三层真实纵深。只保留参考中的营地，不新增整齐军阵、人物或城池。不让火势反弹，不出现爆炸、火墙、巨浪或岩浆，不模拟太阳突然升起。没有人声、对白、旁白或字幕。声音只有连续雨、远处火和近处水流；完全无音乐、无低音铺底。 摄影机横移只用于真实前中远层视差，最后1秒稳定，不甩镜；雨压火过程持续可见，近处焦木仍清晰。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "A01"
+    },
+    {
+      "id": "A04",
+      "name": "营道·雨水到达木架",
+      "duration": 5,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261116-v1\\references\\A01-谷地火场实际首帧.png"
+      ],
+      "prompt": "5秒连续单镜头，以参考图同一谷地火场为场景，不重画成另一座山。中景取原营道与一处燃烧木架，保留近处黑木、中间道路、后方原坡地。相机沿道路平稳前进约30厘米。细雨沿同一斜向落下，浅水沿现有坡向流过脚下泥土，碰到木架底部，暴露处的小火舌受到雨水压低，最后只剩低火与湿木。木架不倒塌，不出现人或冲锋，不出现大水冠、爆炸、巨浪和浓雾。声音只有较近雨声、细流水和渐弱火声。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "A01"
+    },
+    {
+      "id": "A02",
+      "name": "余炭·最后一点红",
+      "duration": 4,
+      "edit_duration": 3,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261116-v1\\references\\A02-余炭实际首帧.png"
+      ],
+      "prompt": "4秒连续的真实湿炭近景，16:9。以参考图为准确地面和木头布局。50mm正常透视固定低机位，泥土、木炭裂纹与细水同时清楚。开头只保留木炭裂缝中的一点暗红，没有高火苗。细密雨点落下形成小水纹，薄水流沿木头纹理流动，局部暗红在约两秒内缓慢变暗，只有极薄的蒸汽。最后一秒仍看见黑炭和流水。整块木头不移动，不变形，不突然凭空消失。没有大水滴、碗形水冠、爆炸或大团白烟；不增加新火、不逆转火势。画面没有人物、文字或字幕。声音只有真实小雨、细水和很轻的湿木嘶声；无人声、无对白、无旁白、无音乐。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "A02"
+    },
+    {
+      "id": "A03",
+      "name": "雨中诸葛亮·无言",
+      "duration": 5,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.5\\references\\R05-诸葛亮雨营反应.png"
+      ],
+      "prompt": "5秒安静的真人电影人物反应，16:9。完整保留参考图中同一演员、冠帽、湿衣、胡须、低位羽扇及已经烧毁的泥地营地。相机固定在半身中近景，人物在画面右侧，始终低眼看画面左下的地面，嘴唇始终闭合。只发生一次轻微眨眼和自然鼻息，肩背随呼吸略沉。右手与羽扇保持参考图位置，不抬扇、不挥扇、不抬头看天、不转身。雨滴顺冠缘、胡须和羽毛落下，后方湿帆布轻动。保持真实人物尺度与中性阴雨天光，不增加山崖、巨大山谷、火海或任何新人物。背景只有湿黑木架和坍塌帆布，不新增火苗。声音仅为持续雨声、一口轻鼻息和湿布料；无人说话，无旁白、无音乐、无字幕。 最后半秒保持眼线和羽扇位置，前景雨滴可轻微失焦，人物不能跟随相机转头。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "A03"
+    },
+    {
+      "id": "B01",
+      "name": "关羽·一人与远阵",
+      "duration": 7,
+      "edit_duration": 6,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E05-关羽持刀.png"
+      ],
+      "prompt": "7秒真人历史电影全身景，16:9。精确保留参考图中的关羽演员、绿巾、旧衣甲、左侧站位、长柄刀完整形制和远处湿地军列。40到50mm正常透视，相机在低于胸口的高度缓慢横移约40厘米，仅让近处芦苇产生轻微视差。人物和整把竖立长刀始终可读，远军始终保持在原有地平线处。关羽先站稳，随后眼睛自然落向持刀的手，手仍握住刀柄，刀保持原位；只留一次呼吸。衣摆、巾带与芦苇受到同向风。不开口，不表演痛哭，不跪倒，不挥刀，不让武器变短或消失。相机不环绕，不俯冲，不增加城楼或密集冲锋兵。不加新伤口或死亡动作。只留开阔风声、衣甲轻擦、掌心与木柄摩擦，远处极弱脚步；没有对白、旁白、音乐或字幕。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "B01"
+    },
+    {
+      "id": "B03",
+      "name": "握刀之手·松开",
+      "duration": 5,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E05-关羽持刀.png"
+      ],
+      "prompt": "5秒连续真人电影手部近景。参考图只用于同一关羽、原衣袖和完整原长刀的身份与材质。相机取握住原刀柄的手与一段竖直刀柄，衣甲占画面左侧，远处湿地柔和失焦。准确起始状态是手指握紧刀柄；手背、五指和刀柄接触清楚。先保持半秒，随后食指、中指、无名指逐渐松开，掌心离开木柄，刀柄在重力作用下只向原落地方向倾斜少许，镜头在完整坠地前结束。不演握回，不新增第二只手，不换刀，不变成短刀，不展示死亡。50mm固定机位，风吹同一方向衣袖。声音为风、木柄与掌心轻擦、衣甲摩擦，无撞地声。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "B01"
+    },
+    {
+      "id": "B02",
+      "name": "刀留泥地·红缨静下",
+      "duration": 6,
+      "edit_duration": 5,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E06-关羽落刀.png"
+      ],
+      "prompt": "6秒真人电影地面结果镜头，16:9。参考图是已经落地的最终状态，完整保留同一长柄刀、刀刃、红缨、湿泥与远阵。不要再做一次从空中落刀。50mm低机位，相机仅向前移动约15厘米，整条长柄仍可辨。开头红缨末端轻轻贴下湿地，小水纹扩散；随后刀完全静止，只有芦苇、远处雾和极轻的衣料边缘受风移动。长刀始终有真实重量，不弹跳，不融入地面，不变成短刀；不新增人体、血迹或新人物。自然夕照只保留在局部反光，不给全画面加橙色滤镜。声音只有风、轻微水纹与一次很轻的纤维触地；无人声、无对白、无旁白、无音乐或字幕。 刀刃位于右下形成向右下倾斜的弧形轮廓，保留原参考图的完整形制；后期与刑场低刀做形状接切，镜内禁止变刀、变场或出现刑场人物。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "B02"
+    },
+    {
+      "id": "C01",
+      "name": "刑场·右上凝望",
+      "duration": 6,
+      "edit_duration": 5,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png"
+      ],
+      "prompt": "Animate this exact photograph as a six-second restrained live-action shot, 16:9. Preserve the exact FOUR existing people and the original framing: the cropped executioner in the far LEFT foreground with his lowered diagonal dao, the bound kneeling man at CENTER, and the TWO distant spear guards behind. The right foreground remains EMPTY BARE EARTH throughout. Camera is locked with identical framing and scale. The kneeling man maintains the reference head angle and upward-right eye direction; his lips remain closed. One slight blink and a quiet nasal breath, with tiny cloth movement. The executioner waits motionless; his hand and lowered blade remain in their original positions. Distant flags move gently in the same breeze. Preserve every face, rope, hand, weapon, outfit, tent and fence. No entering people, no foreground additions, no head turn, no camera movement, no cuts, no text. Sound consists only of quiet nasal breathing, coarse cloth and camp wind. No words, no voice, no singing and no music.\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "C01"
+    },
+    {
+      "id": "C02",
+      "name": "监斩·完整举扇",
+      "duration": 8,
+      "edit_duration": 7,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E10-诸葛亮监斩中景.png"
+      ],
+      "prompt": "8秒连续真人表演，16:9，严格保持参考图监斩台、演员、黑色竖纹冠、蓝灰衣袍、灰褐羽扇与木案。50mm固定中景，案边和低台仍在画面内。人物先保持向画面左下方的目光，嘴闭合；左手稳稳撑在原案边，右手低持原羽扇。三秒后先垂眼，再由肘与前臂带动羽扇缓慢举起，手腕自然转动，使扇面遮住眉眼和鼻梁；最后保留一拍略低的头。扇从起点到终点是同一把，大小、羽根和握柄关系不变；不能凭空长大、穿过脸或胡须，不换手，不抖肩哭喊，不说话，不转身。不出现新的前景人物，不改成雨景，不跨到相反机位。只有同一营地的轻风、衣袖与扇羽摩擦、浅呼吸；无对白、无旁白、无音乐或字幕。 举扇动作持续约三秒，末段扇遮眉眼后保持一秒，保留身体和案桌。不得让羽扇覆盖整块画面或凭空变成帐帘。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "C02"
+    },
+    {
+      "id": "C03",
+      "name": "刑场·仍在等回应",
+      "duration": 5,
+      "edit_duration": 4,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png"
+      ],
+      "prompt": "Animate this exact photograph as a five-second restrained live-action shot, 16:9. Preserve the exact FOUR existing people and the original framing: the cropped executioner in the far LEFT foreground with his lowered diagonal dao, the bound kneeling man at CENTER, and the TWO distant spear guards behind. The right foreground remains EMPTY BARE EARTH throughout. Camera is locked with identical framing and scale. The kneeling man maintains the reference head angle and upward-right eye direction; his lips remain closed. One slight blink and a quiet nasal breath, with tiny cloth movement. The executioner waits motionless; his hand and lowered blade remain in their original positions. Distant flags move gently in the same breeze. Preserve every face, rope, hand, weapon, outfit, tent and fence. No entering people, no foreground additions, no head turn, no camera movement, no cuts, no text. Sound consists only of quiet nasal breathing, coarse cloth and camp wind. No words, no voice, no singing and no music. This is a NEW restrained reaction performance in the same exact framing: keep the upward-right gaze; at about two seconds the kneeling man takes one small breath, his chest settles, then he blinks once and continues waiting. No head turn or mouth movement. Do not raise or swing the executioner blade.\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "C01"
+    },
+    {
+      "id": "D01",
+      "name": "五丈原·帐中地图",
+      "duration": 8,
+      "edit_duration": 7,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "prompt": "8秒真人历史电影夜帐镜头，16:9。以参考图锁定同一诸葛亮演员、旧黑袍、黑冠、灰须、帐篷、木案、地图和右侧单盏小油灯。50mm桌边侧面中景，人物在左，地图在下部，右侧油灯与帐门纵深同时可见。相机缓慢向前约15厘米。左手始终握住原羽扇，右手已经悬在地图边缘，指尖只再接近纸面少许便停住，始终不触纸。肩背随一次浅呼吸略沉，动作克制；保持真实手指与关节，不用夸张颤抖。灯保持稳定，帐布在风中轻动，帐外远灯不变成密集军阵。嘴闭合，不写字，不摊开新地图，不抬扇，不增加七星灯阵。声音仅为帐外风、极远脚步、帐布、浅呼吸和衣料，无战报、对白、旁白、音乐或字幕。 相机从桌侧轻微横移20厘米，开头保持帐帘边缘的自然前景，随后看清人物、地图、单盏桌灯与帐门纵深。完整连续动作，不切镜，不揭开新场景。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "D01"
+    },
+    {
+      "id": "D03",
+      "name": "指尖·未能落下",
+      "duration": 6,
+      "edit_duration": 5,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "prompt": "6秒真人电影近景。以参考图锁定同一右手、黑色衣袖、旧地图、木桌和右侧单盏油灯。构图以手与地图为主，灯只在画面右上边缘，仍保持燃烧；左手羽扇留在画外原位置。右手已经悬在地图上方，指尖轻轻接近半厘米又停止，始终与纸面有间隙，不落手、不写字、不指点新位置。手的五指与关节自然，不夸张颤抖。帐外的一阵风先使背景帐布轻动，再令灯焰小幅偏斜但本镜不熄灭。50mm桌高固定机位，脸可不入镜。声音为浅呼吸、衣袖、帐布与轻风，无人说话。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "D01"
+    },
+    {
+      "id": "D02",
+      "name": "灯灭·未竟",
+      "duration": 7,
+      "edit_duration": 6,
+      "depends_on": null,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "prompt": "7秒单盏油灯的真人电影近景，16:9。参考图只约束右侧同一旧金属油灯、灯芯、木案、地图纸质和夜帐环境。固定50mm桌面高度近景，灯在右前方，地图边缘留在左下；后方帐帘轻微失焦。开头灯正常燃烧。背景帐布先受到从帐门进入的一阵轻风而动，随后灯焰沿同一方向倾斜、缩小并熄灭。灭灯后只留灯芯上一缕细烟，桌面受灯光照亮的部分自然变暗，仍保留微弱帐外冷光。灯器和灯芯不移动、不变形；火焰不爆炸、不变大、不复燃，不出现一整圈灯同时熄灭，不显示文字或人影冲入。声音只有帐布轻扑、帐外风和极轻的呼吸尾音；没有对白、旁白、音乐、心跳节奏或低音铺底。 前两秒正常燃烧，第三到第四秒偏斜收小并熄灭，后三秒保持灭灯状态与细烟消散，保留微弱环境冷光。不要重新点燃。\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。",
+      "prompt_status": "待review",
+      "video_status": "待生成",
+      "source_prompt": "D02"
+    }
+  ]
+}

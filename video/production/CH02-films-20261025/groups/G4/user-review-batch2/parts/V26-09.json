@@ -1,0 +1,52 @@
+{
+  "id": "V26-09",
+  "slot": "V26",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V26-09.mp4",
+  "sha256": "56c32465d336cc985f564c4871f5a72d062d6e1724fa7d796e3e0e84b5e1abb3",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V26-09.mp4",
+  "oldSha256": "513bc7fa922563be9a32863bc4216ed0aa7dee9773430580be069c2615c41c0e",
+  "oldDuration": 11.541667,
+  "sourceFrames": [
+    43,
+    276
+  ],
+  "sourceRange": [
+    1.7916666666666667,
+    11.5
+  ],
+  "newDuration": 9.708333333333334,
+  "technical": {
+    "duration": 9.708333,
+    "videoDuration": 9.708333333333334,
+    "frames": 233,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "56c32465d336cc985f564c4871f5a72d062d6e1724fa7d796e3e0e84b5e1abb3",
+    "bytes": 3699443
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-014",
+      "speaker": "军吏",
+      "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-014",
+      "roleControlOnly": "军吏",
+      "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "删合法句前无动作冗余，保留兴复汉室至究竟能撑多久完整句",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

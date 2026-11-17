@@ -1,0 +1,40 @@
+{
+  "layouts": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "mapHeight": 438
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "overflow": false,
+      "mapHeight": 306
+    },
+    {
+      "viewport": [
+        681,
+        688
+      ],
+      "overflow": false,
+      "mapHeight": 274
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "mapHeight": 320
+    }
+  ],
+  "realApiOrders": 1,
+  "clock": "continuous; pause freezes; 4x does not enable rush; typing pauses",
+  "save": "refresh restores time, moving order and unsent words, paused",
+  "errors": []
+}

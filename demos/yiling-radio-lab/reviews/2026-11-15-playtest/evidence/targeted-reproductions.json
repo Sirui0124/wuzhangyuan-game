@@ -1,0 +1,73 @@
+{
+  "reserved": {
+    "camp": 2500,
+    "budget": {
+      "people": 2000,
+      "grain": 2000
+    },
+    "uiAvailable": 500,
+    "reply": "营中可调2500人、5000斤粮；已知脱险尚无。傅肜：接替后阵，接应兵0人、粮0斤。冯习 · 张南：迁旗、清理退路，接应兵0人、粮0斤。沙摩柯：寻找两沟部众，接应兵0人、粮0斤。"
+  },
+  "reorgOverride": {
+    "queuedBefore": {
+      "route": "feng",
+      "action": "reorganize",
+      "count": 800,
+      "countMode": "set",
+      "goal": "all",
+      "grain": 0,
+      "relief": 0,
+      "waitFor": "now"
+    },
+    "queuedAfter": {
+      "route": "feng",
+      "action": "supply",
+      "count": 800,
+      "countMode": "set",
+      "goal": "all",
+      "grain": 600,
+      "relief": 0,
+      "waitFor": "now"
+    },
+    "workBefore": [
+      250,
+      500,
+      0
+    ],
+    "workAfter": [
+      500,
+      500,
+      0
+    ],
+    "conflict": {
+      "route": "feng",
+      "kind": "crowd",
+      "baseMen": 800,
+      "helpers": 0,
+      "grain": 0,
+      "needGrain": 400,
+      "resolved": false
+    },
+    "report": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮400斤，队中余600斤。"
+  },
+  "hungryReports": [
+    {
+      "turn": 4,
+      "raw": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮300斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。",
+      "risk": 25,
+      "jobs": [
+        "300人引导岔口，500人护送，完成250/1000"
+      ],
+      "brief": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。"
+    },
+    {
+      "turn": 5,
+      "raw": "张南与前队已脱险，冯习仍在收后队。 本轮用粮150斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。",
+      "risk": 25,
+      "jobs": [
+        "300人引导岔口，500人护送，完成250/1000"
+      ],
+      "brief": "张南与前队已脱险，冯习仍在收后队。"
+    }
+  ]
+}

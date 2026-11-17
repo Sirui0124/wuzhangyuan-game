@@ -1,0 +1,70 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V37",
+  "src": "/video/current/CH2-V37-774d79f97b-20261025.mp4",
+  "title": "一起回头的归途",
+  "subtitles": "/video/subtitles/CH2-V37-774d79f97b-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V37-774d79f97b-20261025.mp4",
+  "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+  "duration": 29.86675,
+  "cues": [
+    {
+      "start": 1.08,
+      "end": 3.46,
+      "text": "他被免了队长，留下做粮兵"
+    },
+    {
+      "start": 4.24,
+      "end": 8.76,
+      "text": "人活着，可这趟北伐，还是得退"
+    },
+    {
+      "start": 16.5,
+      "end": 18.74,
+      "text": "别光看着，搭把手！"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY12B-018",
+      "node": "CH2-LY12B-018",
+      "text": "他被免了队长，留下做粮兵。",
+      "speaker": "视频（LI06B2，我（心声））",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-018.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "c0dabeac27a7bbac4804ce08bbf1bc4216c92e7efefb5de69192d0447179dc37",
+      "duration": 2.77475,
+      "speechRange": [
+        0.34,
+        2.52
+      ],
+      "correlation": 0.9098419735117577,
+      "insertAt": 1.0212,
+      "speechStart": 1.36125,
+      "speechEnd": 3.54125
+    },
+    {
+      "id": "CH2-LY12B-019",
+      "node": "CH2-LY12B-019",
+      "text": "人活着，可这趟北伐，还是得退。",
+      "speaker": "视频（LI06B2，我（心声））",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-019.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "a2fc3059a965f061672f0827a9cad3898f2a4a6b9658074a40a905a91151e016",
+      "duration": 4.99525,
+      "speechRange": [
+        0.28,
+        4.56
+      ],
+      "correlation": 0.886851429955929,
+      "insertAt": 4.1952,
+      "speechStart": 4.47525,
+      "speechEnd": 8.75525
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

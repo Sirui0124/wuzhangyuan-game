@@ -1,0 +1,9 @@
+<!doctype html><meta charset="utf-8"><title>V32A07 单点修复复核</title>
+<style>body{background:#171b1a;color:#ddd;font:18px sans-serif;margin:24px}video{width:95%;max-height:75vh}button{font:inherit;padding:10px}</style>
+<h1>V32A07 单点本地修复</h1><p>实际横划、提笔、下方署名、笔离纸。准确撤回句为后期字层；无新增付费。</p>
+<button onclick="v.src='edited/sources/V32A-07-C8-follow-brush.mp4';done.textContent=''">原生动作局部C8</button>
+<button onclick="v.src='edited/sources/V32A-07-C10-follow-clause.mp4';done.textContent=''">准确条款配准C10</button><br>
+<button onclick="v.src='edited/sources/V32A-07-C12-follow-clause-safe.mp4';done.textContent=''">准确条款安全区C12</button><br>
+<video id="v" controls src="edited/sources/V32A-07-C8-follow-brush.mp4"></video>
+<p><button onclick="v.currentTime=0;v.play()">从头播放</button></p><p id="clock"></p><p id="done"></p>
+<script>const v=document.getElementById('v');v.ontimeupdate=()=>{clock.textContent=v.currentTime.toFixed(2)+' / '+v.duration.toFixed(2)+'秒'};v.onended=()=>{done.textContent='本片已从头播放至尾；未逐字听审，用户待review'};</script>

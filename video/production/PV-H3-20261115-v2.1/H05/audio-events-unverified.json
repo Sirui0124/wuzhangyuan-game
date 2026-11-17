@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Sigh",
+          "p": 0.1596
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.1196
+        },
+        {
+          "label": "Whack, thwack",
+          "p": 0.0243
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0197
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0156
+        },
+        {
+          "label": "Horse",
+          "p": 0.0143
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0135
+        },
+        {
+          "label": "Music",
+          "p": 0.0132
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.0125
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0119
+        },
+        {
+          "label": "Whip",
+          "p": 0.0105
+        },
+        {
+          "label": "Speech",
+          "p": 0.0096
+        }
+      ],
+      "music": 0.0132
+    }
+  ]
+}

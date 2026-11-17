@@ -1,0 +1,123 @@
+{
+  "id": "CH2-V08B",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V08B-10b75e1dc5-20261025.mp4",
+  "oldSha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+  "oldSubtitles": "/video/subtitles/CH2-V08B-10b75e1dc5-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V08B-4cb6e984.mp4",
+  "sha256": "626e294ed5a9df444b02f449ece72586f41e85b7d0aa40ed78ab8166bc13994e",
+  "bytes": 4394138,
+  "duration": 12.5,
+  "containerDuration": 12.5,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 300,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V08B",
+    "src": "/video/current/PV27-CH2-V08B-4cb6e984.mp4",
+    "title": "关心伤势分支",
+    "subtitles": "/video/subtitles/PV27-CH2-V08B-4cb6e984.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY02-B01",
+      "node": "CH2-LY02-B01",
+      "text": "我还是怕你太难过",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+      "oldCorrelation": 0.9701837803028586,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-B01-v1.wav",
+      "newVoiceSha256": "a9e9b23a903526032f6f7d2d6d1f673dc2c384682d270529f12b17d80b8875de",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.36125000000000007,
+        2.52
+      ],
+      "insertAt": 0.36125000000000007,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.014054775238037,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY02-B02",
+      "node": "CH2-LY02-B02",
+      "text": "毕竟也不容易",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+      "oldCorrelation": 0.9885107184329548,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-B02-v1.wav",
+      "newVoiceSha256": "81196d86a0f5824ba102b87ba07b0fb72caccf150b00558f0e4d9ed7524c4804",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        2.6342499999999998,
+        4.43425
+      ],
+      "insertAt": 2.6342499999999998,
+      "voiceSeconds": 1.7,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.2391918897628784,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.6412500000000001,
+      "end": 2.1512499999999997,
+      "text": "我还是怕你太难过"
+    },
+    {
+      "start": 3.1542499999999998,
+      "end": 4.34425,
+      "text": "毕竟也不容易"
+    },
+    {
+      "start": 6.32,
+      "end": 12.24,
+      "text": "伤总能养好。可这口气，没那么容易过去"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

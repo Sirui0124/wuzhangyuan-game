@@ -1,0 +1,97 @@
+{
+  "id": "C1-B-04",
+  "expected": "天亮了。你握着长矛的手慢慢松开。",
+  "sha256": "db8b0c266a113379610a202357ce2d51c9b3fa06a2ae69fb415ed28660fe9245",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-04-v1.wav",
+  "recognized": "天亮了你握着长毛的手慢慢松开",
+  "similarity": 0.9285714285714286,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.8,
+      "text": "天亮了",
+      "noSpeechProbability": 0.015860779210925102,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.34,
+          "text": "天"
+        },
+        {
+          "start": 0.34,
+          "end": 0.52,
+          "text": "亮"
+        },
+        {
+          "start": 0.52,
+          "end": 0.8,
+          "text": "了"
+        }
+      ]
+    },
+    {
+      "start": 1.7400000000000007,
+      "end": 3.84,
+      "text": "你握着长毛的手慢慢松开",
+      "noSpeechProbability": 0.015860779210925102,
+      "words": [
+        {
+          "start": 1.7400000000000007,
+          "end": 2.14,
+          "text": "你"
+        },
+        {
+          "start": 2.14,
+          "end": 2.28,
+          "text": "握"
+        },
+        {
+          "start": 2.28,
+          "end": 2.42,
+          "text": "着"
+        },
+        {
+          "start": 2.42,
+          "end": 2.62,
+          "text": "长"
+        },
+        {
+          "start": 2.62,
+          "end": 2.78,
+          "text": "毛"
+        },
+        {
+          "start": 2.78,
+          "end": 2.9,
+          "text": "的"
+        },
+        {
+          "start": 2.9,
+          "end": 3.08,
+          "text": "手"
+        },
+        {
+          "start": 3.08,
+          "end": 3.28,
+          "text": "慢慢"
+        },
+        {
+          "start": 3.28,
+          "end": 3.6,
+          "text": "松"
+        },
+        {
+          "start": 3.6,
+          "end": 3.84,
+          "text": "开"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

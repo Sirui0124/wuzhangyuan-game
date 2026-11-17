@@ -1,0 +1,56 @@
+{
+  "id": "V21-09",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V21-09-repaired.mp4",
+  "sha256": "d1c3291ad204214d126b9d18b01e01da2e50f5eecc0d1865f9203d58644554a1",
+  "estimatedDuration": 6.0,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V21-09-raw.mp4",
+      "sha256": "65f3ec6e685c3cf56967f3fbe3becd75198f89fa3320a54bd5bd8b5a2aea2d53",
+      "sourceTime": [
+        0,
+        2.1
+      ],
+      "crop": [
+        0,
+        6,
+        1344,
+        756
+      ],
+      "playbackRate": 1
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V21-09-raw.mp4",
+      "sha256": "65f3ec6e685c3cf56967f3fbe3becd75198f89fa3320a54bd5bd8b5a2aea2d53",
+      "sourceTime": [
+        2.1,
+        6.0
+      ],
+      "crop": [
+        400,
+        436,
+        576,
+        324
+      ],
+      "playbackRate": 1
+    }
+  ],
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "existingCentralVoice": {
+    "node": "CH2-LY07-016",
+    "text": "那天在崖边救我，你也算过我会替你做这些？",
+    "speaker": "我",
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-016.wav",
+    "duration": 4.2058333333333335,
+    "sha256": "cbc3c169e8f22edfa3415c7dd05c2d7709209648622e913a3e187dec2469b5d8",
+    "ready": true,
+    "source": "central_tts"
+  },
+  "audioIssues": [
+    "复用既有中央玩家音轨，无新增TTS；音色、逐字听审及环境混音仍待统一阶段"
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "previousAdoptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V21-09-16x9.mp4"
+}

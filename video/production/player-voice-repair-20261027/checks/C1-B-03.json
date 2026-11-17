@@ -1,0 +1,59 @@
+{
+  "id": "C1-B-03",
+  "expected": "帐内又传来咳嗽。",
+  "sha256": "4dd53e17d61212a26aff98475799c3676d39d76a78b575f8d370cc20110b3356",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-03-v1.wav",
+  "recognized": "仗内有传来咳嗽",
+  "similarity": 0.7142857142857143,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.5,
+      "text": "仗内有传来咳嗽",
+      "noSpeechProbability": 0.04416609928011894,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.62,
+          "text": "仗"
+        },
+        {
+          "start": 0.62,
+          "end": 0.76,
+          "text": "内"
+        },
+        {
+          "start": 0.76,
+          "end": 0.86,
+          "text": "有"
+        },
+        {
+          "start": 0.86,
+          "end": 1.02,
+          "text": "传"
+        },
+        {
+          "start": 1.02,
+          "end": 1.14,
+          "text": "来"
+        },
+        {
+          "start": 1.14,
+          "end": 1.34,
+          "text": "咳"
+        },
+        {
+          "start": 1.34,
+          "end": 1.5,
+          "text": "嗽"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

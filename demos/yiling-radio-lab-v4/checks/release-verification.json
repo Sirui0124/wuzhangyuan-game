@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-17",
+  "scope": "standalone v4 only; user review pending; official chapter 4 unchanged by this implementation",
+  "health": {
+    "demo": "yiling-radio-lab-v4",
+    "version": 4
+  },
+  "buildAndTests": {
+    "command": "npm test --prefix demos/yiling-radio-lab-v4",
+    "passed": 15,
+    "failed": 0
+  },
+  "liveApiCases": {
+    "passed": 9,
+    "failed": 0
+  },
+  "browserFullGame": {
+    "apiOrders": 2,
+    "returnedGenerals": 4,
+    "returnedObjectiveGroups": 5,
+    "losses": 14,
+    "errors": []
+  },
+  "interaction": {
+    "layouts": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "overflow": false,
+        "mapHeight": 438
+      },
+      {
+        "viewport": [
+          1280,
+          720
+        ],
+        "overflow": false,
+        "mapHeight": 306
+      },
+      {
+        "viewport": [
+          681,
+          688
+        ],
+        "overflow": false,
+        "mapHeight": 274
+      },
+      {
+        "viewport": [
+          390,
+          844
+        ],
+        "overflow": false,
+        "mapHeight": 320
+      }
+    ],
+    "realApiOrders": 1,
+    "clock": "continuous; pause freezes; 4x does not enable rush; typing pauses",
+    "save": "refresh restores time, moving order and unsent words, paused",
+    "errors": []
+  },
+  "v3Preservation": {
+    "baselineFiles": 30,
+    "changed": [],
+    "preserved": true
+  },
+  "sourceHashes": {
+    "src\\engine.ts": "83563805ea316193e77858408577e8efbfbcd87e577c627150155dae586b0d18",
+    "src\\app.ts": "e2036a3c3d6e590e9b10cde2c7f1b513ae894f1c4571d062f9d318d925d95555",
+    "ai.mjs": "a9c9cb0bd1fcccae536d4ff439a9b3ef7a7bc86ed29abcfd278261c0d14c7e12",
+    "public\\style.css": "ceb43df344bb5b96b08148cc92728389f7cd5fc8c503a69a812ce35efb9e27ef",
+    "server.mjs": "23669dd8c4d0e3229671221b7f666c3c583367ff754a798887b66f57cac16845"
+  },
+  "limitations": [
+    "No human approval implied",
+    "Three-model 15-game report applies to v3, not v4",
+    "Original formulas and scenario constants not fully recovered",
+    "No full recreation of original unit types, ammunition, organization or medical evacuation"
+  ]
+}

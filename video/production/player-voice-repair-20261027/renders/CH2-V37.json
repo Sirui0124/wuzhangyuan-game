@@ -1,0 +1,123 @@
+{
+  "id": "CH2-V37",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V37-774d79f97b-20261025.mp4",
+  "oldSha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+  "oldSubtitles": "/video/subtitles/CH2-V37-774d79f97b-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V37-7b280920.mp4",
+  "sha256": "63c938829fee053e218a50eb0bc7017d82f78380c044adabd89a0b68a57f6071",
+  "bytes": 22768684,
+  "duration": 29.833333333333332,
+  "containerDuration": 29.833333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 716,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V37",
+    "src": "/video/current/PV27-CH2-V37-7b280920.mp4",
+    "title": "一起回头的归途",
+    "subtitles": "/video/subtitles/PV27-CH2-V37-7b280920.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY12B-018",
+      "node": "CH2-LY12B-018",
+      "text": "他被免了队长，留下做粮兵。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-018.wav",
+      "oldCorrelation": 0.9098419735117577,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-018-v1.wav",
+      "newVoiceSha256": "6a99e33431ec8f1f1c400beea5860fbb2dd8ff0f2a788f2161bb491e4c57f398",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        1.14125,
+        4.2
+      ],
+      "insertAt": 1.14125,
+      "voiceSeconds": 3.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1098111867904663,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY12B-019",
+      "node": "CH2-LY12B-019",
+      "text": "人活着，可这趟北伐，还是得退。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-019.wav",
+      "oldCorrelation": 0.886851429955929,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-019-v1.wav",
+      "newVoiceSha256": "e1fcd0cbb457247aaa7a5e2519165bc93a0ed318cad47dfdf974e56064893db0",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        4.25525,
+        9.45525
+      ],
+      "insertAt": 4.25525,
+      "voiceSeconds": 5.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0309553146362305,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 1.30125,
+      "end": 4.171250000000001,
+      "text": "他被免了队长，留下做粮兵"
+    },
+    {
+      "start": 4.5752500000000005,
+      "end": 9.36525,
+      "text": "人活着，可这趟北伐，还是得退"
+    },
+    {
+      "start": 16.5,
+      "end": 18.74,
+      "text": "别光看着，搭把手！"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

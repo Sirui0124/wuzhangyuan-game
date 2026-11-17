@@ -1,0 +1,108 @@
+{
+  "id": "V32R-01",
+  "expected": "你说得容易。我现在不能把命押在这个办法上。",
+  "postVoiceText": null,
+  "actual": "你说的容易我现在不能把命押在这个办法上",
+  "similarity": 0.9473684210526315,
+  "segments": [
+    {
+      "start": 1.94,
+      "end": 3.04,
+      "text": "你说的容易",
+      "words": [
+        {
+          "start": 1.94,
+          "end": 2.52,
+          "word": "你说",
+          "probability": 0.6900843381881714
+        },
+        {
+          "start": 2.52,
+          "end": 2.72,
+          "word": "的",
+          "probability": 0.7818683981895447
+        },
+        {
+          "start": 2.72,
+          "end": 3.04,
+          "word": "容易",
+          "probability": 0.9598491191864014
+        }
+      ]
+    },
+    {
+      "start": 5.0,
+      "end": 7.62,
+      "text": "我现在不能把命押在这个办法上",
+      "words": [
+        {
+          "start": 5.0,
+          "end": 5.46,
+          "word": "我",
+          "probability": 0.9584741592407227
+        },
+        {
+          "start": 5.46,
+          "end": 5.64,
+          "word": "现在",
+          "probability": 0.9985696077346802
+        },
+        {
+          "start": 5.64,
+          "end": 5.96,
+          "word": "不能",
+          "probability": 0.9969387054443359
+        },
+        {
+          "start": 5.96,
+          "end": 6.2,
+          "word": "把",
+          "probability": 0.9985647797584534
+        },
+        {
+          "start": 6.2,
+          "end": 6.38,
+          "word": "命",
+          "probability": 0.9984874725341797
+        },
+        {
+          "start": 6.38,
+          "end": 6.62,
+          "word": "押",
+          "probability": 0.799615204334259
+        },
+        {
+          "start": 6.62,
+          "end": 6.76,
+          "word": "在",
+          "probability": 0.9966928958892822
+        },
+        {
+          "start": 6.76,
+          "end": 6.94,
+          "word": "这个",
+          "probability": 0.9968358874320984
+        },
+        {
+          "start": 6.94,
+          "end": 7.16,
+          "word": "办",
+          "probability": 0.981607973575592
+        },
+        {
+          "start": 7.16,
+          "end": 7.38,
+          "word": "法",
+          "probability": 0.9998101592063904
+        },
+        {
+          "start": 7.38,
+          "end": 7.62,
+          "word": "上",
+          "probability": 0.9986028075218201
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

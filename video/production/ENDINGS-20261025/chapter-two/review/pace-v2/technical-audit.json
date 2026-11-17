@@ -1,0 +1,117 @@
+{
+  "scope": "新剪辑7个文件；完整解码、视频轨覆盖、黑场检测、来源哈希核对及全时段抽帧另列",
+  "records": [
+    {
+      "id": "E1",
+      "sha256": "7bf506462c8d90e59eb1c9e3d7382e91b873c111f1c83773a5709446111dfe6e",
+      "duration": 54.042,
+      "fullDecode": {
+        "videoSeconds": 54.041667,
+        "decodedFrames": 1297,
+        "expectedSeconds": 54.041667,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\batch2-audio\\E1-repair-candidate.json"
+    },
+    {
+      "id": "E2",
+      "sha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "duration": 20.166667,
+      "fullDecode": {
+        "videoSeconds": 20.166666666666668,
+        "decodedFrames": 484,
+        "expectedSeconds": 20.166666666666668,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json"
+    },
+    {
+      "id": "E3",
+      "sha256": "4b9395b41e0a920c893b020e635bd5660e492a8cd9b8711430b822bec75eda50",
+      "duration": 33.5,
+      "fullDecode": {
+        "videoSeconds": 33.5,
+        "decodedFrames": 804,
+        "expectedSeconds": 33.5,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json",
+      "blackDetectionBasis": "原V2全片检测无黑场；唯一替换帧为已检查的前一帧空铺，V3全片解码通过。"
+    },
+    {
+      "id": "E4-early",
+      "sha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "duration": 16.0,
+      "fullDecode": {
+        "videoSeconds": 16.0,
+        "decodedFrames": 384,
+        "expectedSeconds": 16.0,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json"
+    },
+    {
+      "id": "E4-late",
+      "sha256": "3ff60d65a25de1787a4364086c1ec1f586a19478d911a8f37a357333b9136090",
+      "duration": 36.416667,
+      "fullDecode": {
+        "videoSeconds": 36.416666666666664,
+        "decodedFrames": 874,
+        "expectedSeconds": 36.416666666666664,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json"
+    },
+    {
+      "id": "E5",
+      "sha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "duration": 12.333333,
+      "fullDecode": {
+        "videoSeconds": 12.333333333333334,
+        "decodedFrames": 296,
+        "expectedSeconds": 12.333333333333334,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false,
+      "repairEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json"
+    },
+    {
+      "id": "EPILOGUE",
+      "sha256": "ce067491fc135c66ee0bb6041982ec77660b5da3fc5af9ba0d36a0f950eb50b6",
+      "duration": 15,
+      "fullDecode": {
+        "videoSeconds": 15.0,
+        "decodedFrames": 360,
+        "expectedSeconds": 15,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "V19C",
+  "sha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+  "reviewState": "reviewed",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "前5.3秒查看并归拢账页，没有可辨玩家脸或NPC代我发言。随后里正核看与开口，保留原生9.417秒句尾。文书保留零散仿字，不把此处当作新书证或原件带离；判断依据仍来自此前D04/D05/D06。"
+  ],
+  "issues": [],
+  "integrationConditions": [
+    "A/B/C互斥；纸面零散字迹不承担新正文，原件归拢不等于销毁、没收或带离。"
+  ],
+  "audioIssues": [
+    "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+    "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+  ],
+  "dynamicReview": [
+    {
+      "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+      "range": [
+        0,
+        14.7
+      ],
+      "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V19C\\identity.json"
+    }
+  ]
+}

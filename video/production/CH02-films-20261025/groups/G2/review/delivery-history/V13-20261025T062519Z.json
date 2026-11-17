@@ -1,0 +1,174 @@
+{
+  "delivery": {
+    "id": "V13",
+    "name": "仓中核凭据、获准查账",
+    "entry": "持真实本队凭据到仓",
+    "next": [
+      "V14"
+    ],
+    "endEvent": "实际核验及获准查本批",
+    "children": [
+      "V13-01",
+      "V13-02",
+      "V13-03",
+      "V13-04"
+    ],
+    "subclips": [
+      "V13-01",
+      "V13-02",
+      "V13-03",
+      "V13-04"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V13-仓中核凭据、获准查账-画面候选-b87e658b.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "9cffc7e63f5853a85777dc83bc46427f7c514764f302d718ba60ef666a67f31a",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V13-仓中核凭据、获准查账-R4.mp4",
+    "technical": {
+      "duration": 26.03,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "9cffc7e63f5853a85777dc83bc46427f7c514764f302d718ba60ef666a67f31a"
+    },
+    "visualReview": [
+      {
+        "id": "V13-01",
+        "observation": "0–5.8秒入仓与落凭据可用；5.8秒后木牍转纸的异常动作裁去。",
+        "review": "动态观察4.54和8秒，辅以0.5秒全序列：裁5.8–8秒木牍展开至纸页的异常转换；保留入仓与凭据落案，观察片无台词",
+        "audioIssue": "ASR提示非授权人声，未听审；保留画面，不重拍",
+        "version": "-R4",
+        "trimEnd": 5.8
+      },
+      {
+        "id": "V13-02",
+        "observation": "0–7秒手把凭据置案、退手，手指与接触正常；文字不作可读证据。",
+        "review": "手把凭据置案动作可保留；0.5秒序列与浏览器自然速度静音播放已检查，见具体观察记录。",
+        "audioIssue": "原轨额外声音，固定玩家WAV已留存，统一配音阶段处理"
+      },
+      {
+        "id": "V13-03",
+        "observation": "0–6.58秒管事开口、并排木牍与翻看；近景取放没有明显穿透。",
+        "review": "动态播放观察0.06、2.98、6.58秒，辅以0.5秒序列：管事开口、并排核木牍、手部桌面接触可用；生成木牍内页文字不作证据",
+        "audioIssue": "ASR显示原句以外内容，未听审，不重拍"
+      },
+      {
+        "id": "V13-04",
+        "observation": "0–7.2秒取账与一轮翻页；7.2秒后再次翻页半途尾部裁去。",
+        "review": "动态播放0.19、4.71、8秒及0.5秒全序列：7.2秒处趁翻页已落稳收尾，裁7.2–8秒再次翻页的半途结尾；保留取账与原句所需时长",
+        "audioIssue": "ASR显示额外词与错词，统一配音阶段处理",
+        "version": "-R4",
+        "trimEnd": 7.2
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V13-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "中地可组权地乐馆,根据性YES的IN有紧急IC密地托材势牛派。游问的贪集受传受制办方。",
+        "expected": ""
+      },
+      {
+        "id": "V13-01",
+        "type": "ASR提示非授权人声，未听审；保留画面，不重拍"
+      },
+      {
+        "id": "V13-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "收稿餐有意证就成办。我来领取本对这批粮的交接材料。今时你全二维习课题。",
+        "expected": ""
+      },
+      {
+        "id": "V13-02",
+        "type": "原轨额外声音，固定玩家WAV已留存，统一配音阶段处理"
+      },
+      {
+        "id": "V13-03",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "转塔制动地油关事 金斯戴老 评据队讯的失算 我陪你问仓利 评据队的上我陪你问仓利",
+        "expected": "凭据对得上，我陪你问仓吏。"
+      },
+      {
+        "id": "V13-03",
+        "type": "ASR显示原句以外内容，未听审，不重拍"
+      },
+      {
+        "id": "V13-04",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "一片月四年,这批连的收发账可以查。其他队的账先别动。全剂肉合菜顿病零饭之间。",
+        "expected": "这批粮的收发账可以查。其他队的账，先别动。"
+      },
+      {
+        "id": "V13-04",
+        "type": "ASR显示额外词与错词，统一配音阶段处理"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "b87e658b28d5d01d36f46b900ee2717a4adba68ec2f0dca4a21110b2a6fd9ce4"
+  },
+  "usability": {
+    "id": "V13",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V13-仓中核凭据、获准查账-画面候选-b87e658b.mp4",
+    "sha256": "9cffc7e63f5853a85777dc83bc46427f7c514764f302d718ba60ef666a67f31a",
+    "reviewState": "pending",
+    "pictureUsability": null,
+    "issues": [],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V13-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "中地可组权地乐馆,根据性YES的IN有紧急IC密地托材势牛派。游问的贪集受传受制办方。",
+        "expected": ""
+      },
+      {
+        "id": "V13-01",
+        "type": "ASR提示非授权人声，未听审；保留画面，不重拍"
+      },
+      {
+        "id": "V13-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "收稿餐有意证就成办。我来领取本对这批粮的交接材料。今时你全二维习课题。",
+        "expected": ""
+      },
+      {
+        "id": "V13-02",
+        "type": "原轨额外声音，固定玩家WAV已留存，统一配音阶段处理"
+      },
+      {
+        "id": "V13-03",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "转塔制动地油关事 金斯戴老 评据队讯的失算 我陪你问仓利 评据队的上我陪你问仓利",
+        "expected": "凭据对得上，我陪你问仓吏。"
+      },
+      {
+        "id": "V13-03",
+        "type": "ASR显示原句以外内容，未听审，不重拍"
+      },
+      {
+        "id": "V13-04",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "一片月四年,这批连的收发账可以查。其他队的账先别动。全剂肉合菜顿病零饭之间。",
+        "expected": "这批粮的收发账可以查。其他队的账，先别动。"
+      },
+      {
+        "id": "V13-04",
+        "type": "ASR显示额外词与错词，统一配音阶段处理"
+      }
+    ],
+    "userApproved": false
+  }
+}

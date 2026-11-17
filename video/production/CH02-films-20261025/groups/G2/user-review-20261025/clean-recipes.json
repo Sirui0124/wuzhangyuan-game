@@ -1,0 +1,1241 @@
+{
+  "clips": [
+    {
+      "id": "V16A",
+      "parts": [
+        {
+          "source": "V16A-01",
+          "range": [
+            0,
+            1.75
+          ]
+        },
+        {
+          "source": "V18-03",
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            8.5
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1A.wav",
+        "offset": 0.35,
+        "policy": "reused existing correct fixed player voice; no new TTS"
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q1A"
+      ],
+      "comment": "remove list/card and poor box blur; closed listener then already acquired closed rolls; player exact existing WAV"
+    },
+    {
+      "id": "V16C-player",
+      "parts": [
+        {
+          "source": "V16A-01",
+          "range": [
+            0,
+            1.75
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            10.1
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+        "offset": 0.35,
+        "policy": "reused existing correct fixed player voice; no new TTS"
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q1C"
+      ],
+      "comment": "remove every card/box and wrong visible speaking owner"
+    },
+    {
+      "id": "V15-intro",
+      "parts": [
+        {
+          "source": "V15-01",
+          "range": [
+            0,
+            3.5
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            10.1
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-F01.wav",
+        "offset": 0.35,
+        "policy": "reused existing correct fixed player voice; no new TTS"
+      },
+      "sourceNodes": [
+        "CH2-LY04-F01"
+      ],
+      "comment": "remove old middle blur; exact existing player WAV"
+    },
+    {
+      "id": "V16C-response",
+      "parts": [
+        {
+          "source": "V16C-01",
+          "range": [
+            4,
+            5.45
+          ],
+          "crop": [
+            210,
+            0,
+            900,
+            506
+          ]
+        },
+        {
+          "source": "V18-03",
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            5.5,
+            10.1
+          ]
+        },
+        {
+          "source": "V14-02",
+          "range": [
+            0,
+            1.8
+          ]
+        },
+        {
+          "source": "V13-04",
+          "range": [
+            0,
+            0.55
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V16C-02-raw.mp4",
+        "start": 0,
+        "end": 10.125
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q1FB0"
+      ],
+      "comment": "native reply retained; no cards/boxes, original fake writing cut away; listener same manager then existing record handling"
+    },
+    {
+      "id": "V16C",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-player-936e79f9b0.mp4",
+          "range": [
+            0,
+            5.791666666666667
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-response-56b3801c74.mp4",
+          "range": [
+            0,
+            10.291666666666666
+          ]
+        }
+      ],
+      "audioMode": "parts",
+      "sourceNodes": [
+        "CH2-LY04-Q1C",
+        "CH2-LY04-Q1FB0"
+      ],
+      "comment": "free raw recut with whole-frame close shot; all visible paper writing excluded, no cards, no boxes"
+    },
+    {
+      "id": "V19B",
+      "parts": [
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            10.1
+          ]
+        },
+        {
+          "source": "V18-03",
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "source": "V14-02",
+          "range": [
+            0,
+            1.7
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4B.wav",
+        "offset": 0.35,
+        "policy": "reuse original fixed player WAV only"
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q4B"
+      ],
+      "comment": "already acquired closed material only; no fake page text, no visible NPC speaking player sentence"
+    },
+    {
+      "id": "V19A-response",
+      "parts": [
+        {
+          "source": "V19A-02",
+          "range": [
+            0,
+            1.8
+          ],
+          "crop": [
+            140,
+            0,
+            1060,
+            596
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            10.1
+          ]
+        },
+        {
+          "source": "V18-03",
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "source": "V14-02",
+          "range": [
+            0,
+            1.8
+          ]
+        },
+        {
+          "source": "V13-04",
+          "range": [
+            0,
+            0.55
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-02-raw.mp4",
+        "start": 0,
+        "end": 10.125
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q4FB0"
+      ],
+      "comment": "remove invented written evidence; native reply retained over true already acquired roll actions, no new documents"
+    },
+    {
+      "id": "V18-T01",
+      "parts": [
+        {
+          "source": "V18-03",
+          "range": [
+            0,
+            2
+          ]
+        },
+        {
+          "source": "V14-02",
+          "range": [
+            0,
+            1.7
+          ]
+        },
+        {
+          "source": "V15-02",
+          "range": [
+            6,
+            7.7
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-T01.wav",
+        "offset": 0.35,
+        "policy": "reuse original correct fixed player WAV"
+      },
+      "sourceNodes": [
+        "CH2-LY04-T01"
+      ],
+      "comment": "existing player line; clean rolls and environment, no new acquisition"
+    },
+    {
+      "id": "V18-D05",
+      "parts": [
+        {
+          "source": "V18-04",
+          "range": [
+            0,
+            1.9
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D05"
+      ],
+      "comment": "original actual closed-roll handoff, before camera cuts to pseudo-writing; exact body preserved in external source map only"
+    },
+    {
+      "id": "V20-017",
+      "parts": [
+        {
+          "source": "V20-08",
+          "range": [
+            0,
+            0.4
+          ]
+        },
+        {
+          "source": "V20-05",
+          "range": [
+            3.95,
+            7.291667
+          ]
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-05-raw.mp4",
+        "start": 3.8,
+        "end": 7.291667,
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY06-017"
+      ],
+      "comment": "remove gibberish first rendition, keep actual correct repeated native sentence and face; no report card"
+    },
+    {
+      "id": "V15-D01",
+      "parts": [
+        {
+          "range": [
+            0,
+            1.45
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-DOC-ABC-R1.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D01"
+      ]
+    },
+    {
+      "id": "V15-D02",
+      "parts": [
+        {
+          "range": [
+            0,
+            2.8
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D02"
+      ]
+    },
+    {
+      "id": "V15-D03",
+      "parts": [
+        {
+          "range": [
+            5.55,
+            7.65
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D03"
+      ]
+    },
+    {
+      "id": "V15",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-intro-1ba30677e7.mp4",
+          "range": [
+            0,
+            7.541666666666667
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-D01-3860166ebd.mp4",
+          "range": [
+            0,
+            1.4166666666666667
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-D02-cc62b7c3da.mp4",
+          "range": [
+            0,
+            2.7916666666666665
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-D03-82d021eadd.mp4",
+          "range": [
+            0,
+            2.0416666666666665
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-F01",
+        "CH2-LY04-D01",
+        "CH2-LY04-D02",
+        "CH2-LY04-D03"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V15-intro",
+        "V15-D01",
+        "V15-D02",
+        "V15-D03"
+      ]
+    },
+    {
+      "id": "V18-D04",
+      "parts": [
+        {
+          "range": [
+            0,
+            2.8
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D04"
+      ]
+    },
+    {
+      "id": "V18-W01",
+      "parts": [
+        {
+          "range": [
+            2.8,
+            5.15
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        },
+        {
+          "range": [
+            0,
+            2.8
+          ],
+          "source": "V15-01"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-W01.wav",
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY04-W01"
+      ]
+    },
+    {
+      "id": "V18-C01",
+      "parts": [
+        {
+          "range": [
+            2.8,
+            3.5
+          ],
+          "source": "V15-01"
+        },
+        {
+          "range": [
+            0,
+            1.5
+          ],
+          "source": "V14-02"
+        },
+        {
+          "range": [
+            7.8,
+            9.6
+          ],
+          "source": "V15-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-C01.wav",
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY04-C01"
+      ]
+    },
+    {
+      "id": "V18-D06",
+      "parts": [
+        {
+          "range": [
+            5.55,
+            7.65
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-D06"
+      ]
+    },
+    {
+      "id": "V18",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-T01-9479868de4.mp4",
+          "range": [
+            0,
+            5.291666666666667
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-D04-c75164d438.mp4",
+          "range": [
+            0,
+            2.7916666666666665
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-W01-e2acf9fe3f.mp4",
+          "range": [
+            0,
+            5.083333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-D05-a97828a8d3.mp4",
+          "range": [
+            0,
+            1.875
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-C01-398b7273fe.mp4",
+          "range": [
+            0,
+            3.8333333333333335
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-D06-707a5553af.mp4",
+          "range": [
+            0,
+            2.0416666666666665
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-T01",
+        "CH2-LY04-D04",
+        "CH2-LY04-W01",
+        "CH2-LY04-D05",
+        "CH2-LY04-C01",
+        "CH2-LY04-D06"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V18-T01",
+        "V18-D04",
+        "V18-W01",
+        "V18-D05",
+        "V18-C01",
+        "V18-D06"
+      ]
+    },
+    {
+      "id": "V20-C04",
+      "parts": [
+        {
+          "range": [
+            4.8,
+            9.416667
+          ],
+          "source": "V20-01"
+        },
+        {
+          "range": [
+            0,
+            0.55
+          ],
+          "source": "V14-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V20-01-seed-audio1-reference.wav",
+        "start": 0,
+        "end": 5.1
+      },
+      "sourceNodes": [
+        "CH2-LY04-C04"
+      ]
+    },
+    {
+      "id": "V20-015",
+      "parts": [
+        {
+          "range": [
+            0,
+            2.8
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY06-015"
+      ]
+    },
+    {
+      "id": "V20-016",
+      "parts": [
+        {
+          "range": [
+            0,
+            2
+          ],
+          "source": "V18-03"
+        },
+        {
+          "range": [
+            9.0,
+            10.1
+          ],
+          "source": "V15-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY06-016.wav",
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY06-016"
+      ]
+    },
+    {
+      "id": "V20-018",
+      "parts": [
+        {
+          "range": [
+            5.55,
+            7.65
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY06-018"
+      ]
+    },
+    {
+      "id": "V20-019",
+      "parts": [
+        {
+          "range": [
+            2.65,
+            4.25
+          ],
+          "source": "V20-07",
+          "crop": [
+            690,
+            80,
+            650,
+            366
+          ]
+        },
+        {
+          "range": [
+            7.1,
+            10.1
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-07-raw.mp4",
+        "start": 3.0,
+        "end": 7.15,
+        "offset": 0.35
+      },
+      "sourceNodes": [
+        "CH2-LY06-019"
+      ]
+    },
+    {
+      "id": "V20-021",
+      "parts": [
+        {
+          "range": [
+            0,
+            2.6
+          ],
+          "source": "V20-08"
+        },
+        {
+          "range": [
+            5.4,
+            10.1
+          ],
+          "source": "V15-02"
+        },
+        {
+          "range": [
+            0,
+            0.4
+          ],
+          "source": "V18-03"
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+        "start": 0,
+        "end": 7.5
+      },
+      "sourceNodes": [
+        "CH2-LY06-021"
+      ]
+    },
+    {
+      "id": "V14",
+      "parts": [
+        {
+          "range": [
+            0,
+            15.1
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V14-FLOW-R2.mp4"
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-004"
+      ],
+      "comment": "Wordless process illustration: five forward stages and actual right-to-left finger trace. Empty voice whitelist; all generated native audio removed."
+    },
+    {
+      "id": "V20-014015",
+      "parts": [
+        {
+          "range": [
+            1.8,
+            5.3
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4"
+        },
+        {
+          "range": [
+            6.7,
+            9.25
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4"
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-02-raw.mp4",
+        "start": 3.45,
+        "end": 9.35,
+        "offset": 0.1
+      },
+      "sourceNodes": [
+        "CH2-LY06-014",
+        "CH2-LY06-015"
+      ],
+      "comment": "Remove original3.45s silent lead too. Continuous handoff6.7–9.25 includes recipient grip8.7 and both donor hands opening clear at9.041667–9.208333. Stop before red frames9.291667/9.458333/9.625 and later regrip/written front. Exact body remains separate game integration after end; no duplicate grant."
+    },
+    {
+      "id": "V20",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-C04-0f23592ba4.mp4",
+          "range": [
+            0,
+            5.083333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-014015-5ba6bbf736.mp4",
+          "range": [
+            0,
+            5.958333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-016-cf0d5abfdf.mp4",
+          "range": [
+            0,
+            3.0416666666666665
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-017-b024b51a1c.mp4",
+          "range": [
+            0,
+            3.6666666666666665
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-018-cae820c0fa.mp4",
+          "range": [
+            0,
+            2.0416666666666665
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-019-d8108288f2.mp4",
+          "range": [
+            0,
+            4.5
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-021-6afdd94812.mp4",
+          "range": [
+            0,
+            7.625
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-C04",
+        "CH2-LY06-014",
+        "CH2-LY06-015",
+        "CH2-LY06-016",
+        "CH2-LY06-017",
+        "CH2-LY06-018",
+        "CH2-LY06-019",
+        "CH2-LY06-021"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V20-C04",
+        "V20-014015",
+        "V20-016",
+        "V20-017",
+        "V20-018",
+        "V20-019",
+        "V20-021"
+      ]
+    },
+    {
+      "id": "V13-entry",
+      "parts": [
+        {
+          "range": [
+            0,
+            1.4
+          ],
+          "source": "V13-01",
+          "crop": [
+            100,
+            0,
+            1000,
+            562
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": []
+    },
+    {
+      "id": "V13-player",
+      "parts": [
+        {
+          "range": [
+            0,
+            4.1
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V13-VOUCHER-R1.mp4"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+        "offset": 0.15
+      },
+      "sourceNodes": [
+        "CH2-LY04-001"
+      ]
+    },
+    {
+      "id": "V13-manager",
+      "parts": [
+        {
+          "range": [
+            0,
+            0.85
+          ],
+          "source": "V13-03",
+          "crop": [
+            0,
+            0,
+            650,
+            366
+          ]
+        },
+        {
+          "range": [
+            0,
+            1.2
+          ],
+          "source": "V13-04"
+        },
+        {
+          "range": [
+            3.3,
+            5.3
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-03-seed-audio1-reference.wav",
+        "start": 0,
+        "end": 4
+      },
+      "sourceNodes": [
+        "CH2-LY04-002"
+      ]
+    },
+    {
+      "id": "V13-clerk",
+      "parts": [
+        {
+          "range": [
+            0.3,
+            2.3
+          ],
+          "source": "V20-08"
+        },
+        {
+          "range": [
+            6,
+            10.1
+          ],
+          "source": "V15-02"
+        },
+        {
+          "range": [
+            0,
+            0.4
+          ],
+          "source": "V18-03"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-04-seed-audio1-reference.wav",
+        "start": 0,
+        "end": 6
+      },
+      "sourceNodes": [
+        "CH2-LY04-003"
+      ],
+      "comment": "0.4s natural next movement preserves complete generated final word atWAV5.96 and breathing tail after parent frame rounding; no hold or loop"
+    },
+    {
+      "id": "V13",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-entry-2692bd34ab.mp4",
+          "range": [
+            0,
+            1.375
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-player-c629368fdd.mp4",
+          "range": [
+            0,
+            4.083333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-manager-f2e6805a25.mp4",
+          "range": [
+            0,
+            3.9583333333333335
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-clerk-90a80a9307.mp4",
+          "range": [
+            0,
+            6.416666666666667
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-001",
+        "CH2-LY04-002",
+        "CH2-LY04-003"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V13-entry",
+        "V13-player",
+        "V13-manager",
+        "V13-clerk"
+      ]
+    },
+    {
+      "id": "V17",
+      "parts": [
+        {
+          "range": [
+            0,
+            0.75
+          ],
+          "source": "V17-01"
+        },
+        {
+          "range": [
+            0,
+            1.8
+          ],
+          "source": "V18-03"
+        },
+        {
+          "range": [
+            6,
+            9.4
+          ],
+          "source": "V15-02"
+        },
+        {
+          "range": [
+            5,
+            6.2
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-DOC-ABC-R1.mp4"
+        },
+        {
+          "range": [
+            0,
+            0.65
+          ],
+          "source": "V14-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V17-01-seed-audio1-reference.wav",
+        "start": 0,
+        "end": 7.6
+      },
+      "sourceNodes": [
+        "CH2-LY04-F02"
+      ],
+      "comment": "New correct Seed-Audio1.0 reference-upload voice; 7.6-second voiced action cut, no old-duration padding"
+    },
+    {
+      "id": "V19C-player",
+      "parts": [
+        {
+          "range": [
+            6,
+            10.1
+          ],
+          "source": "V15-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4C.wav",
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q4C"
+      ]
+    },
+    {
+      "id": "V19C-response",
+      "parts": [
+        {
+          "range": [
+            0,
+            1.0
+          ],
+          "source": "V14-02"
+        },
+        {
+          "range": [
+            7,
+            10.1
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        },
+        {
+          "range": [
+            7.15,
+            9.416667
+          ],
+          "source": "V19C-02"
+        },
+        {
+          "range": [
+            1.0,
+            1.4
+          ],
+          "source": "V14-02"
+        }
+      ],
+      "audio": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-02-raw.mp4",
+        "start": 3.2,
+        "end": 9.416667,
+        "offset": 0.1
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q4FB1"
+      ],
+      "comment": "Natural0.4s warehouse continuation after face retains entire selected canonical native-audio range plus tail after parent frame rounding"
+    },
+    {
+      "id": "V19C",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-player-cd0d1f84c1.mp4",
+          "range": [
+            0,
+            4.083333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-response-e52ea9992c.mp4",
+          "range": [
+            0,
+            6.625
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-Q4C",
+        "CH2-LY04-Q4FB1"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V19C-player",
+        "V19C-response"
+      ]
+    },
+    {
+      "id": "V19A-player",
+      "parts": [
+        {
+          "range": [
+            1,
+            4.25
+          ],
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+        },
+        {
+          "range": [
+            0,
+            1.4
+          ],
+          "source": "V14-02"
+        },
+        {
+          "range": [
+            0,
+            1
+          ],
+          "source": "V13-04"
+        },
+        {
+          "range": [
+            9.4,
+            10.1
+          ],
+          "source": "V15-02"
+        }
+      ],
+      "audio": {
+        "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4A.wav",
+        "offset": 0.25
+      },
+      "sourceNodes": [
+        "CH2-LY04-Q4A"
+      ]
+    },
+    {
+      "id": "V19A",
+      "parts": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19A-player-35dd390dd4.mp4",
+          "range": [
+            0,
+            6.208333333333333
+          ]
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19A-response-7e624cc366.mp4",
+          "range": [
+            0,
+            10.166666666666666
+          ]
+        }
+      ],
+      "audio": null,
+      "sourceNodes": [
+        "CH2-LY04-Q4A",
+        "CH2-LY04-Q4FB0"
+      ],
+      "audioMode": "parts",
+      "childIds": [
+        "V19A-player",
+        "V19A-response"
+      ]
+    }
+  ]
+}

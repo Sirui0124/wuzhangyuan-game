@@ -1,0 +1,52 @@
+{
+  "id": "V28A-01",
+  "slot": "V28A",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V28A-01.mp4",
+  "sha256": "7650e3f04004de877fd20124248d9586b41d651f2bc8d87d482be7a6dd863a25",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\picture-v2\\V28A-01.mp4",
+  "oldSha256": "b039ebefcaf6a2a6a419c8099c56ba9d556921d2d8618c9617f0e3e25bc343c1",
+  "oldDuration": 6.25,
+  "sourceFrames": [
+    0,
+    126
+  ],
+  "sourceRange": [
+    0.0,
+    5.25
+  ],
+  "newDuration": 5.25,
+  "technical": {
+    "duration": 5.25,
+    "videoDuration": 5.25,
+    "frames": 126,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "7650e3f04004de877fd20124248d9586b41d651f2bc8d87d482be7a6dd863a25",
+    "bytes": 2106969
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-QA",
+      "speaker": "我（普通选项）",
+      "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-QA",
+      "roleControlOnly": "我（普通选项）",
+      "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+      "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

@@ -1,0 +1,9 @@
+from pathlib import Path
+import json,hashlib
+O=Path(__file__).resolve().parent;R=O/'user-review-batch2';read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
+S=read(R/'reviewed-version-snapshot.json');D=read(O/'delivery.json');W=read(O.parents[1]/'reviews/user-20261025-batch2/spoken-whitelist.json');wm={x['id']:x for x in W['clips']}
+rows=[]
+for x in S['clips']:
+ rows.append(dict(id=x['id'],userComment=x['note'],oldFile=x['file'],oldSha256=x['sha256'],oldDuration=x['duration'],observedOldPictureApproval=x['approved'],approvalBoundToOldSha=True,spokenWhitelist=wm[x['id']]['spokenWhitelist'],neverReadStageOrDocumentText=wm[x['id']]['neverReadStageOrDocumentText'],entry=wm[x['id']]['entry'],endEvent=wm[x['id']]['endEvent'],asrEvidence=str(R/(x['id']+'-old-asr.json')),reviewState='repair-in-progress',newFile=None,newSha256=None,listeningReview='pending; no audio-capable tool, ASR only locates text',newUserApproved=False))
+U=dict(group='G3',reviewPolicy='20261025-batch2-clean-speech-and-duration',status='in-progress',source=str(O.parents[1]/'reviews/user-20261025-batch2/comments-and-versions.json'),sourceSha256=S['sourceSha256'],clips=rows,originalBrowserCommentsUntouched=True,originalBrowserApprovalsUntouched=True,unknownRequests=[dict(id='CH2-LY09-P02',state=str(R/'audio/CH2-LY09-P02-state.json'),status='unknown-no-repost',noRetry=True)],unresolved=['V25计划句Seed-Audio1.0请求结果未知，不重投、不在缺句时替换旧通过版本','新候选仍待实际听审与用户审核'])
+(O/'user-review-batch2.json').write_text(json.dumps(U,ensure_ascii=False,indent=2),encoding='utf-8');D['userReviewBatch2Status']='in-progress';D['userReviewBatch2Report']=str(O/'user-review-batch2.json');D['pictureAcceptanceStatus']='batch2-speech-and-duration-repair-in-progress';D['unresolved']=U['unresolved'];(O/'delivery.json').write_text(json.dumps(D,ensure_ascii=False,indent=2),encoding='utf-8');print('Batch2 live status and old-version user approvals recorded.')

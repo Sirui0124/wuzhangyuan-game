@@ -1,0 +1,4 @@
+/** Both pickers use the same search, list, selection and inline preview layout. */
+export function inventoryPanelHTML(kind: '线索' | '物品', rows: string, empty: string, readOnly = false) {
+    return `<aside class="thought-inventory" id="thought-inventory" data-inventory-kind="${kind}" aria-label="${readOnly ? '查阅' : '搜索并选择'}${kind}"><header><label class="inventory-search-field" for="inventory-search"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="8" r="5.5"/><path d="m12 12 5 5"/></svg><input id="inventory-search" data-inventory-search type="search" placeholder="搜索${kind}" aria-label="搜索${kind}" autocomplete="off" spellcheck="false"><button data-action="clear-inventory-search" aria-label="清空搜索" hidden>×</button></label><button data-action="notes-list" aria-label="收起线索物品栏">×</button></header><div class="inventory-scroll">${rows}<p data-inventory-empty role="status" hidden>${empty}</p></div></aside>`;
+}

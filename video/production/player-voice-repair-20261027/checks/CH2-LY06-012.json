@@ -1,0 +1,124 @@
+{
+  "id": "CH2-LY06-012",
+  "expected": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+  "sha256": "7d22ceef33aed8c1bd425102f81f6151c2a05efc2ec3a85c1b85d561bab20088",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY06-012-v1.wav",
+  "recognized": "原来 帐上没有收起的树 眼前是这些人最后的口粮",
+  "similarity": 0.8571428571428571,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.12,
+      "text": "原来 帐上没有收起的树 眼前是这些人最后的口粮",
+      "noSpeechProbability": 0.003184808185324073,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.58,
+          "text": "原"
+        },
+        {
+          "start": 0.58,
+          "end": 0.84,
+          "text": "来"
+        },
+        {
+          "start": 1.52,
+          "end": 1.7,
+          "text": " 帐"
+        },
+        {
+          "start": 1.7,
+          "end": 1.86,
+          "text": "上"
+        },
+        {
+          "start": 1.86,
+          "end": 2.02,
+          "text": "没有"
+        },
+        {
+          "start": 2.02,
+          "end": 2.24,
+          "text": "收"
+        },
+        {
+          "start": 2.24,
+          "end": 2.4,
+          "text": "起"
+        },
+        {
+          "start": 2.4,
+          "end": 2.52,
+          "text": "的"
+        },
+        {
+          "start": 2.52,
+          "end": 2.78,
+          "text": "树"
+        },
+        {
+          "start": 3.52,
+          "end": 3.72,
+          "text": " 眼"
+        },
+        {
+          "start": 3.72,
+          "end": 3.88,
+          "text": "前"
+        },
+        {
+          "start": 3.88,
+          "end": 4.02,
+          "text": "是"
+        },
+        {
+          "start": 4.02,
+          "end": 4.16,
+          "text": "这"
+        },
+        {
+          "start": 4.16,
+          "end": 4.28,
+          "text": "些"
+        },
+        {
+          "start": 4.28,
+          "end": 4.4,
+          "text": "人"
+        },
+        {
+          "start": 4.4,
+          "end": 4.56,
+          "text": "最"
+        },
+        {
+          "start": 4.56,
+          "end": 4.72,
+          "text": "后"
+        },
+        {
+          "start": 4.72,
+          "end": 4.8,
+          "text": "的"
+        },
+        {
+          "start": 4.8,
+          "end": 4.96,
+          "text": "口"
+        },
+        {
+          "start": 4.96,
+          "end": 5.12,
+          "text": "粮"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

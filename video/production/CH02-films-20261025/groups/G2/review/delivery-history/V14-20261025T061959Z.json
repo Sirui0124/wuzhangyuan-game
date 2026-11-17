@@ -1,0 +1,131 @@
+{
+  "delivery": {
+    "id": "V14",
+    "name": "粮运画卷",
+    "entry": "获准查本批后",
+    "next": [
+      "V15"
+    ],
+    "endEvent": "无新增剧情状态",
+    "children": [
+      "V14-01",
+      "V14-02"
+    ],
+    "subclips": [
+      "V14-01",
+      "V14-02"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V14-粮运画卷-画面候选-dfc012be.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "46b9a51ab39eb0c123115239f4be87047272b4cb0c986fe9a162b09e19bcbbbe",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V14-粮运画卷-R5.mp4",
+    "technical": {
+      "duration": 14.02,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "46b9a51ab39eb0c123115239f4be87047272b4cb0c986fe9a162b09e19bcbbbe"
+    },
+    "visualReview": [
+      {
+        "id": "V14-01",
+        "observation": "直接解码首帧复核，最终1.25秒起为双手卷轴；0.9秒切点不足，R3/R4停用。展开动作保留，4秒起覆盖重复伪字与缺字。",
+        "version": "-R5",
+        "trimStart": 1.25,
+        "trimEnd": 10.0,
+        "review": "实际无-ss首解码帧复查证明0.9秒切点仍残留异常；改为1.25秒，直接原片trim1.25首解码帧已为双手卷轴。显式trim/setpts归零，展开动作保留，raw4秒后准确流程示意覆盖伪文字。R3/R4保留为停用版本",
+        "audioIssue": "原轨非授权人声，仅标记"
+      },
+      {
+        "id": "V14-02",
+        "observation": "0–4.8秒重复入仓/展开裁去；保留后段同类卷面并以准确五阶段流程示意回看。",
+        "version": "-R4",
+        "trimStart": 4.8,
+        "trimEnd": 10.0,
+        "review": "0.5秒序列与浏览器自然速度静音播放已检查：裁0–4.8秒重复入仓与再次展开，保留停稳粮图，以准确五阶段流程示意沿领取处回看。",
+        "audioIssue": "原轨非授权人声，仅标记"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V14-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "熊田月娃试着再设计的称号,狗鹅冻吸冲20时开引批茶馋。紧执行以获得本梯茶的设计,弹开博多安家带的梯茶。",
+        "expected": ""
+      },
+      {
+        "id": "V14-01",
+        "type": "原轨非授权人声，仅标记"
+      },
+      {
+        "id": "V14-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "CNN老本作订照。靳远员中远拆分租镇是更重座赛。靳远组织以贪吃致位。中坚帝国的金士迪大陆悬眠亲服。",
+        "expected": ""
+      },
+      {
+        "id": "V14-02",
+        "type": "原轨非授权人声，仅标记"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "dfc012beebbbeb4a0febb74891d5f711ad345de7023cb04b375fd51caab91d8f"
+  },
+  "usability": {
+    "id": "V14",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V14-粮运画卷-画面候选-dfc012be.mp4",
+    "sha256": "46b9a51ab39eb0c123115239f4be87047272b4cb0c986fe9a162b09e19bcbbbe",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "time": [
+          0,
+          3.15
+        ],
+        "type": "readable-model-map-label",
+        "description": "只复核当前R5：准确图示出现前有模型假字，且半透明图示后底字仍有轮廓；真实首帧1.25秒切点已正确。",
+        "repair": "保持R5首帧切点，原图面去可读，准确五阶段层改完整不透底"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V14-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "熊田月娃试着再设计的称号,狗鹅冻吸冲20时开引批茶馋。紧执行以获得本梯茶的设计,弹开博多安家带的梯茶。",
+        "expected": ""
+      },
+      {
+        "id": "V14-01",
+        "type": "原轨非授权人声，仅标记"
+      },
+      {
+        "id": "V14-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "CNN老本作订照。靳远员中远拆分租镇是更重座赛。靳远组织以贪吃致位。中坚帝国的金士迪大陆悬眠亲服。",
+        "expected": ""
+      },
+      {
+        "id": "V14-02",
+        "type": "原轨非授权人声，仅标记"
+      }
+    ],
+    "userApproved": false
+  }
+}

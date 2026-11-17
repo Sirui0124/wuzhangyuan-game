@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Sound effect",
+          "p": 0.0548
+        },
+        {
+          "label": "Flap",
+          "p": 0.0538
+        },
+        {
+          "label": "Stomach rumble",
+          "p": 0.0447
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0361
+        },
+        {
+          "label": "White noise",
+          "p": 0.0316
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0301
+        },
+        {
+          "label": "Rattle",
+          "p": 0.0271
+        },
+        {
+          "label": "Speech",
+          "p": 0.0233
+        },
+        {
+          "label": "Animal",
+          "p": 0.0192
+        },
+        {
+          "label": "Car",
+          "p": 0.0191
+        },
+        {
+          "label": "Music",
+          "p": 0.0187
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.015
+        }
+      ],
+      "music": 0.0187
+    }
+  ]
+}

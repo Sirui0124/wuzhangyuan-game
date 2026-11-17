@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-06",
+  "passed": true,
+  "scope": "Independent viewer for generated scene refinements based on Blender layout; not formal game playthrough",
+  "layoutDataUnchanged": true,
+  "pixelIdenticalGeometry": false,
+  "results": [
+    {
+      "camera": "camp",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    },
+    {
+      "camera": "river",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    },
+    {
+      "camera": "east",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    },
+    {
+      "camera": "south",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    },
+    {
+      "camera": "imperial",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    },
+    {
+      "camera": "overview",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "originalComparison": true
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Six native generated images, minimum 1600x900, near 16:9",
+    "Six original-version comparisons",
+    "Four route filters",
+    "Landmark navigation",
+    "Labels toggle",
+    "Arrow keys and C comparison",
+    "Fullscreen",
+    "390px no horizontal overflow"
+  ],
+  "userVisualApproval": false
+}

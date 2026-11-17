@@ -1,0 +1,285 @@
+{
+  "note": "按实际子视频帧长累加；合成AAC/concat时间基可有少于一帧偏差，接入线索需取实际正文切入后而非此近似边界",
+  "clips": [
+    {
+      "parent": "V13",
+      "child": "V13-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 5.792,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4",
+      "sha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19"
+    },
+    {
+      "parent": "V13",
+      "child": "V13-02",
+      "parentStartApproxSeconds": 5.792,
+      "actualChildVideoSeconds": 3.292,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-02.mp4",
+      "sha256": "917c160ddd2ca6829f43db37ebab733b4ed0cdc0ca1b27351587574fd4ead70d"
+    },
+    {
+      "parent": "V13",
+      "child": "V13-03",
+      "parentStartApproxSeconds": 9.083,
+      "actualChildVideoSeconds": 6.542,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V13-03.mp4",
+      "sha256": "e7691d2f292f74e1b3844a31c3d2cf7e1d9bb4c86b60ca342a526b986a2f5410"
+    },
+    {
+      "parent": "V13",
+      "child": "V13-04",
+      "parentStartApproxSeconds": 15.625,
+      "actualChildVideoSeconds": 7.167,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V13-04.mp4",
+      "sha256": "1775602146bd0170da7329f32756d4bf20ab6b8afa4653b2004a038b75bba143"
+    },
+    {
+      "parent": "V14",
+      "child": "V14-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 8.75,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-01.mp4",
+      "sha256": "ff12e5f2bf98aa1013253943fd4cee3c6a61ca8a2c736b03b1ee24368765cad3"
+    },
+    {
+      "parent": "V14",
+      "child": "V14-02",
+      "parentStartApproxSeconds": 8.75,
+      "actualChildVideoSeconds": 5.208,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-02.mp4",
+      "sha256": "04f3db7da886ab5c1e03d38757e58e2edc44e843c062c4922d364294df79b78d"
+    },
+    {
+      "parent": "V15",
+      "child": "V15-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 10.958,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-01.mp4",
+      "sha256": "a10137c2a6040f42e5354407b4e4c7c8c756fe8ac7c88477dab041aa81777365"
+    },
+    {
+      "parent": "V15",
+      "child": "V15-02",
+      "parentStartApproxSeconds": 10.958,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.mp4",
+      "sha256": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263"
+    },
+    {
+      "parent": "V15",
+      "child": "V15-03",
+      "parentStartApproxSeconds": 20.958,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.mp4",
+      "sha256": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed"
+    },
+    {
+      "parent": "V15",
+      "child": "V15-04",
+      "parentStartApproxSeconds": 30.958,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4",
+      "sha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b"
+    },
+    {
+      "parent": "V16A",
+      "child": "V16A-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 9.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.mp4",
+      "sha256": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58"
+    },
+    {
+      "parent": "V16B",
+      "child": "V16B-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 4.75,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V16B-01.mp4",
+      "sha256": "6d20ea2cf6a2942261eab77220cda15d2a631929e5531d761a35e4c2605540c5"
+    },
+    {
+      "parent": "V16B",
+      "child": "V16B-02",
+      "parentStartApproxSeconds": 4.75,
+      "actualChildVideoSeconds": 7.25,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16B-02.mp4",
+      "sha256": "5110d6de401d76b286e9b63a20cb39360fe6e826dbbbfd6a53a085b90448583c"
+    },
+    {
+      "parent": "V16C",
+      "child": "V16C-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 8.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.mp4",
+      "sha256": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d"
+    },
+    {
+      "parent": "V16C",
+      "child": "V16C-02",
+      "parentStartApproxSeconds": 8.0,
+      "actualChildVideoSeconds": 10.125,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16C-02.mp4",
+      "sha256": "865fdd58ece52c40aad0233776bb3892f1b2a33cffaf457bf2ad071d2940bec8"
+    },
+    {
+      "parent": "V17",
+      "child": "V17-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 12.208,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V17-01.mp4",
+      "sha256": "8271c53363aca26836e314c2e097a7d9c7e6f547a54c51c6471e618483170143"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 8.958,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-01.mp4",
+      "sha256": "89042d1f7aa9a1130272587fa51e974e6358416b1e403c59d1bfa0b8dfc03fa2"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-02",
+      "parentStartApproxSeconds": 8.958,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.mp4",
+      "sha256": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-03",
+      "parentStartApproxSeconds": 18.958,
+      "actualChildVideoSeconds": 7.958,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-03.mp4",
+      "sha256": "a49a297acd79a9ca0e1f22eff13ca886c196248314304ac2611cdc33fee62bef"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-04",
+      "parentStartApproxSeconds": 26.917,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4",
+      "sha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-05",
+      "parentStartApproxSeconds": 36.917,
+      "actualChildVideoSeconds": 6.583,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4",
+      "sha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602"
+    },
+    {
+      "parent": "V18",
+      "child": "V18-06",
+      "parentStartApproxSeconds": 43.5,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.mp4",
+      "sha256": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b"
+    },
+    {
+      "parent": "V19A",
+      "child": "V19A-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 9.417,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.mp4",
+      "sha256": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725"
+    },
+    {
+      "parent": "V19A",
+      "child": "V19A-02",
+      "parentStartApproxSeconds": 9.417,
+      "actualChildVideoSeconds": 10.083,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19A-02.mp4",
+      "sha256": "5369e59de12185c5bdf3ead05c05ab3c224fd7d99bc9a794a5a39d3c3a2ec372"
+    },
+    {
+      "parent": "V19B",
+      "child": "V19B-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4",
+      "sha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a"
+    },
+    {
+      "parent": "V19C",
+      "child": "V19C-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 5.208,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V19C-01.mp4",
+      "sha256": "4ef05861bda8d106fdb68357f2711091fcb44a388520cbf7d2b2e7a69e1338fc"
+    },
+    {
+      "parent": "V19C",
+      "child": "V19C-02",
+      "parentStartApproxSeconds": 5.208,
+      "actualChildVideoSeconds": 9.375,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19C-02.mp4",
+      "sha256": "581609f74902306feab921c89fbce976b41e2583c8665ed5bc9888900d5149c6"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-01",
+      "parentStartApproxSeconds": 0,
+      "actualChildVideoSeconds": 9.375,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-01.mp4",
+      "sha256": "a43dc645684f19cf377348c2ea36bb370b93b7bbb50abaa90ab3f8db77930893"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-02",
+      "parentStartApproxSeconds": 9.375,
+      "actualChildVideoSeconds": 9.375,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-02.mp4",
+      "sha256": "12d2152667943381b37a53f99ca769efa71749c6e725ed251f8e9b9a9de30e7f"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-03",
+      "parentStartApproxSeconds": 18.75,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.mp4",
+      "sha256": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-04",
+      "parentStartApproxSeconds": 28.75,
+      "actualChildVideoSeconds": 4.667,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-04.mp4",
+      "sha256": "4a19d79563944aa7237def41b43b7168b4de6390751c5f4c74bcc4b73d6cde08"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-05",
+      "parentStartApproxSeconds": 33.417,
+      "actualChildVideoSeconds": 7.292,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-05.mp4",
+      "sha256": "26285272e18d17d731bc6c952807fb165e8d847c5481a67ace416d16fcfca5a7"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-06",
+      "parentStartApproxSeconds": 40.708,
+      "actualChildVideoSeconds": 10.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.mp4",
+      "sha256": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-07",
+      "parentStartApproxSeconds": 50.708,
+      "actualChildVideoSeconds": 8.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.mp4",
+      "sha256": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9"
+    },
+    {
+      "parent": "V20",
+      "child": "V20-08",
+      "parentStartApproxSeconds": 58.708,
+      "actualChildVideoSeconds": 9.0,
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-08.mp4",
+      "sha256": "6b6e4eb982feba7d64e77e336840782f3aa99856504a4602cf52deddb957427f"
+    }
+  ]
+}

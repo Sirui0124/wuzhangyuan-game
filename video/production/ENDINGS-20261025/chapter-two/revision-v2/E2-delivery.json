@@ -1,0 +1,290 @@
+{
+  "id": "E2",
+  "title": "救下眼前的人",
+  "description": "个人补报已经收下，苟安留营候查；其他责任仍待查明。",
+  "slots": [
+    "V38"
+  ],
+  "entryPrerequisite": "Q假且UI-E2-FILE已确认；苟安停手署名已发生；V38承载个人补报核收和留营候查。",
+  "artifactType": "fixed-route-review-compilation",
+  "executesGameState": false,
+  "userApproved": false,
+  "gameIntegrated": false,
+  "audioReview": "采用G6登记的纯台词短版及已核来源；实际逐字听审仍pending",
+  "status": "registered-short-version-awaiting-user-review",
+  "sources": [
+    {
+      "slot": "V38",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+      "sourceSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "frames": 484,
+      "start": 0.0,
+      "end": 20.166666666666668,
+      "duration": 20.166666666666668,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              132
+            ]
+          ],
+          "node": "CH2-E2-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "实际交材料；NPC闭口听",
+          "timelineRange": [
+            0,
+            5.5
+          ]
+        },
+        {
+          "pictures": [
+            [
+              335,
+              424
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.94,
+          "delay": 0,
+          "reason": "只保留材料收到/停手补报已记下，前端标签截至真实材料原句",
+          "timelineRange": [
+            5.5,
+            9.208333333333334
+          ]
+        },
+        {
+          "pictures": [
+            [
+              514,
+              621
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 21.4,
+          "delay": 0,
+          "reason": "保留留营受查、李严仍待核，删前后空余",
+          "timelineRange": [
+            9.208333333333334,
+            13.666666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              629,
+              785
+            ]
+          ],
+          "node": "CH2-E2-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "苟安仍活着的闭口反应；完整心声",
+          "timelineRange": [
+            13.666666666666668,
+            20.166666666666668
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "停手署名和材料提交实际发生后接入；只得到留营受查、李严一节待核的阶段结论",
+        "苟安末段仍在伤帐，没有换成死亡或空铺",
+        "我的画外对白/心声由玩家WAV承担；军吏只承担核收及阶段结论原句"
+      ]
+    }
+  ],
+  "sourceAudioNotes": [
+    {
+      "slot": "V38",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    }
+  ],
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人-纯台词短版-V4.mp4",
+  "sha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+  "duration": 20.166667,
+  "decode": "passed",
+  "sourceSignature": "ee6e155f32ef312a9fc2762a6c58798352bcc5d6c14e17f785062c22a78f7691",
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E2-overview-0.jpg",
+  "visualReview": "已查看全时段有序抽帧及拼接切点，非连续全片观看",
+  "sourceDuration": 20.166667,
+  "videoCoverage": {
+    "videoSeconds": 20.166666666666668,
+    "decodedFrames": 484,
+    "expectedSeconds": 20.166666666666668,
+    "passed": true
+  },
+  "previousVersion": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人.mp4",
+    "sha256": "aafcb83c59cbb9d1b6f31e8aa5bddb1478be5337f18da0a4214bcc492f902a7a",
+    "duration": 34.2
+  },
+  "adoptionMethod": "byte-identical-source-copy",
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\visual-review.json",
+  "overviewSheets": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E2-overview-0.jpg"
+  ],
+  "integrationConditions": [
+    "停手署名和材料提交实际发生后接入；只得到留营受查、李严一节待核的阶段结论",
+    "苟安末段仍在伤帐，没有换成死亡或空铺",
+    "我的画外对白/心声由玩家WAV承担；军吏只承担核收及阶段结论原句"
+  ],
+  "editDecisionList": [
+    {
+      "slot": "V38",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+      "sourceSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "frames": 484,
+      "start": 0.0,
+      "end": 20.166666666666668,
+      "duration": 20.166666666666668,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              132
+            ]
+          ],
+          "node": "CH2-E2-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "实际交材料；NPC闭口听",
+          "timelineRange": [
+            0,
+            5.5
+          ]
+        },
+        {
+          "pictures": [
+            [
+              335,
+              424
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.94,
+          "delay": 0,
+          "reason": "只保留材料收到/停手补报已记下，前端标签截至真实材料原句",
+          "timelineRange": [
+            5.5,
+            9.208333333333334
+          ]
+        },
+        {
+          "pictures": [
+            [
+              514,
+              621
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 21.4,
+          "delay": 0,
+          "reason": "保留留营受查、李严仍待核，删前后空余",
+          "timelineRange": [
+            9.208333333333334,
+            13.666666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              629,
+              785
+            ]
+          ],
+          "node": "CH2-E2-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "苟安仍活着的闭口反应；完整心声",
+          "timelineRange": [
+            13.666666666666668,
+            20.166666666666668
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "停手署名和材料提交实际发生后接入；只得到留营受查、李严一节待核的阶段结论",
+        "苟安末段仍在伤帐，没有换成死亡或空铺",
+        "我的画外对白/心声由玩家WAV承担；军吏只承担核收及阶段结论原句"
+      ]
+    }
+  ],
+  "previousRevision": {
+    "id": "E2",
+    "title": "救下眼前的人",
+    "description": "个人补报已经收下，苟安留营候查；其他责任仍待查明。",
+    "slots": [
+      "V38"
+    ],
+    "entryPrerequisite": "Q假且UI-E2-FILE已确认；苟安停手署名已发生；V38承载个人补报核收和留营候查。",
+    "artifactType": "fixed-route-review-compilation",
+    "executesGameState": false,
+    "userApproved": false,
+    "gameIntegrated": false,
+    "audioReview": "原组既有AAC音频逐包保留；未逐字听审，无新增TTS",
+    "status": "review-candidate",
+    "sources": [
+      {
+        "slot": "V38",
+        "owner": "G6",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+        "sha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+        "duration": 34.197,
+        "start": 0.0,
+        "end": 34.197
+      }
+    ],
+    "sourceAudioNotes": [
+      "语音错乱/说话人待统一，未逐字听审；不据此重拍",
+      "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音",
+      "未逐字听审，暂不因音频重拍",
+      "采用既有中央原句心声；仍未逐字听审，不声称声音通过"
+    ],
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人-去元文书R3.mp4",
+    "sha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+    "duration": 34.197,
+    "decode": "passed",
+    "sourceSignature": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-user-repair-R3\\full-scan-0.jpg",
+    "visualReview": "去元文书R3：全时段/关键动作有序抽帧与切点逐帧已复核，待用户审阅；非连续人工观看",
+    "sourceDuration": 34.197,
+    "videoCoverage": {
+      "videoSeconds": 34.125,
+      "decodedFrames": 819,
+      "expectedSeconds": 34.197,
+      "passed": true
+    },
+    "joinFrames": [],
+    "previousVersion": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人.mp4",
+      "sha256": "aafcb83c59cbb9d1b6f31e8aa5bddb1478be5337f18da0a4214bcc492f902a7a",
+      "duration": 34.2
+    },
+    "adoptionMethod": "binary-copy-of-single-source-no-reencode",
+    "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-user-repair-R3\\review.json",
+    "overviewSheets": [
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-user-repair-R3\\full-scan-0.jpg",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-user-repair-R3\\full-scan-1.jpg"
+    ],
+    "integrationConditions": [
+      "仅在停手署名已发生、个人材料提交被确认后接入；结论是留营候查，李严一节尚须核查",
+      "保留末镜睁眼到低头的连续反应，不仅截取闭眼末帧；不得套用E3死亡说明",
+      "我的CH2-E2-001现有4.183秒画外对白放在前段闭口听者/材料动作内，后段军吏发声画面只承载军吏回复；末镜心声不可由NPC口型承接"
+    ]
+  },
+  "postProcessing": {
+    "type": "registered-G6-batch2-short-source-integration",
+    "newGeneration": false
+  },
+  "joinFrames": []
+}

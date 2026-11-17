@@ -1,0 +1,148 @@
+{
+  "id": "CH2-V26",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V26-5b7f33da7c-20261025.mp4",
+  "oldSha256": "5b7f33da7cc67f4feaef75785c587ab121d112bc4c6b33a7702ad79d038f0e19",
+  "oldSubtitles": "/video/subtitles/CH2-V26-5b7f33da7c-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V26-e638871b.mp4",
+  "sha256": "5a61a48dfd27ed9e72462a3ccc7d02c34ae81dea4dacebfb3a0928145cf4e37f",
+  "bytes": 19032712,
+  "duration": 45.458333333333336,
+  "containerDuration": 45.458333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 1091,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V26",
+    "src": "/video/current/PV27-CH2-V26-e638871b.mp4",
+    "title": "返营交差与军情说明",
+    "subtitles": "/video/subtitles/PV27-CH2-V26-e638871b.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY09-006",
+      "node": "CH2-LY09-006",
+      "text": "我先回去交差，把实收和欠缺的粮数报清楚。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-006.wav",
+      "oldCorrelation": 0.9652024720389248,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-006-v1.wav",
+      "newVoiceSha256": "efb14d0470df8879f39a93f6c5f06149efde083ebb4bc6286554ee91d795728e",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.46125000000000005,
+        5.36125
+      ],
+      "insertAt": 0.46125000000000005,
+      "voiceSeconds": 4.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8643279075622559,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY09-010",
+      "node": "CH2-LY09-010",
+      "text": "那我们退了，他们也还会继续准备？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-010.wav",
+      "oldCorrelation": 0.9660581050860338,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-010-v1.wav",
+      "newVoiceSha256": "4c7fceae21a80ce9e00a06fffadbe16557fa24a8368a0c367901c50a0795b1fb",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        15.58325,
+        19.02325
+      ],
+      "insertAt": 15.58325,
+      "voiceSeconds": 3.28,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8916333913803101,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.66125,
+      "end": 5.17125,
+      "text": "我先回去交差，把实收和欠缺的粮数报清楚"
+    },
+    {
+      "start": 9.66,
+      "end": 13.2,
+      "text": "缺额、民食和种粮的情况，一并列明"
+    },
+    {
+      "start": 15.66325,
+      "end": 18.85325,
+      "text": "那我们退了，他们也还会继续准备？"
+    },
+    {
+      "start": 19.28,
+      "end": 24.06,
+      "text": "眼下看到的是这些。来年谁强谁弱，还说不准"
+    },
+    {
+      "start": 24.06,
+      "end": 28.98,
+      "text": "丞相看过这批粮情，答的是此次粮乏，当退"
+    },
+    {
+      "start": 28.98,
+      "end": 35.5,
+      "text": "他担心休兵这段日子，魏军修田积粮，将来更难打"
+    },
+    {
+      "start": 36.26,
+      "end": 41.0,
+      "text": "兴复汉室是他许下的诺言。他也担心"
+    },
+    {
+      "start": 41.66,
+      "end": 45.32,
+      "text": "蜀汉守着这一隅，究竟能撑多久"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

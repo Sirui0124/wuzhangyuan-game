@@ -1,0 +1,42 @@
+{
+  "handoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\V36-ENDINGS-handoff-edl.json",
+  "handoffSHA": "4ef49be56d462d484d1f53297b98e7d11af4790d8e52c1f615c27724edfb3d9b",
+  "verifiedSources": [
+    {
+      "role": "oldParent",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sha256": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e"
+    },
+    {
+      "role": "newParent",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V36-clean-speech-08ede9bf82.mp4",
+      "sha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575"
+    },
+    {
+      "role": "source02",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-02-final-30f94a3f01.mp4",
+      "sha256": "a1debd5b217c93d821a3ef43dab7928220631c06dbddc0f4bba60094c1cce326"
+    },
+    {
+      "role": "source06",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-06-final-53ddf10e06.mp4",
+      "sha256": "923089f9581e7f3e5685ddd35efe66f00486af7a07f6bdbb4820dfb933bd32b4"
+    }
+  ],
+  "currentE1": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-54秒-V3.mp4",
+    "sha256": "7bf506462c8d90e59eb1c9e3d7382e91b873c111f1c83773a5709446111dfe6e",
+    "duration": 54.042
+  },
+  "comparison": {
+    "source02": "已删原0–5.75秒，误读原2.93–4.67秒全部删除；保留约0.26秒合法起音余量。交接5.98秒为近似子源映射，不机械改剪。",
+    "source06": "原片第1011至1098帧对应完整3.6667秒退军令动作，已清除此段音轨；与交接整段无台词规则一致。",
+    "otherV36Ranges": "未用整段V36替换E1：军吏新镜、已有清洁构图、快乐苟安和末心声继续沿用结局自有剪辑。"
+  },
+  "mediaModified": false,
+  "newGeneration": false,
+  "newASR": false,
+  "audioListening": false,
+  "userApproved": false,
+  "checkedEpoch": 1792919470.3913906
+}

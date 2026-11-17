@@ -1,0 +1,85 @@
+{
+  "id": "CH2-V16C",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V16C-ff9dda9365-20261025.mp4",
+  "oldSha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+  "oldSubtitles": "/video/subtitles/CH2-V16C-ff9dda9365-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V16C-8432cd1f.mp4",
+  "sha256": "8877755d43c586f68470664f06e376c4a5711c97aad8deba7c69e72dfa59c4bd",
+  "bytes": 11226228,
+  "duration": 16.0,
+  "containerDuration": 16.0,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 384,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V16C",
+    "src": "/video/current/PV27-CH2-V16C-8432cd1f.mp4",
+    "title": "先行归责与纠正",
+    "subtitles": "/video/subtitles/PV27-CH2-V16C-8432cd1f.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY04-Q1C",
+      "node": "CH2-LY04-Q1C",
+      "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+      "oldCorrelation": 0.9993911364978403,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1C-v1.wav",
+      "newVoiceSha256": "25d9e1aec30923e782943be29be34178df883b085a036815b2f6b94969f6968c",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.45000000000000007,
+        5.21
+      ],
+      "insertAt": 0.45000000000000007,
+      "voiceSeconds": 4.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0032442808151245,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.65,
+      "end": 5.16,
+      "text": "苟安认过饮酒误事，这笔缺粮先记在他头上"
+    },
+    {
+      "start": 9.49,
+      "end": 12.75,
+      "text": "领粮时就缺的那部分，你也算到他头上了？"
+    },
+    {
+      "start": 14.07,
+      "end": 15.41,
+      "text": "再对对交付记录"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

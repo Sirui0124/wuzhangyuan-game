@@ -1,0 +1,70 @@
+{
+  "id": "V07",
+  "name": "带记录回伤帐",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V07-用户指定静音-R1.mp4",
+  "duration": 10.0,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-GO-GOUAN实际选择去找",
+  "next": [
+    "UI-N1"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V07-user-repair-r1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V07-用户指定静音-R1.mp4",
+      "slotStart": 0,
+      "slotEnd": 10.0,
+      "sourceTrim": [
+        0,
+        10.0
+      ],
+      "audioMode": "user-requested-repair",
+      "review": {
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-free1.html",
+        "actualDynamicReview": true,
+        "visualReview": "浏览器播放至ended，结合关键帧核对画面；听审未完成",
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮用户返修：本地浏览器实际完整播放到ended，未见黑屏、文字卡或可见方框层。",
+  "audioIssues": [
+    "新预置TTS音频未采用；本条仅历史正确原声复用或按用户静音/删除。",
+    "制作核对不替代用户重新审核。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V07-带记录回伤帐.mp4",
+  "previousSha256": "125c24ccdbec027bc0926add3fe7615c20a96f21c849592f50a995883f8efede",
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "前3s音频乱码，音频删掉静音就行。\n",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V07-带记录回伤帐.mp4",
+    "oldSha256": "125c24ccdbec027bc0926add3fe7615c20a96f21c849592f50a995883f8efede",
+    "oldInterval": [
+      0,
+      3
+    ],
+    "repairs": [
+      {
+        "treatment": "前3秒只静音，视频码流与其他声音保持。",
+        "oldRange": [
+          0,
+          3
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V07-用户指定静音-R1.mp4",
+        "newSha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed"
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\old-assembly\\V07-125c24ccdbec.json"
+}

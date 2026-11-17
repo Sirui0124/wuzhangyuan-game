@@ -1,0 +1,74 @@
+{
+  "id": "V11T",
+  "name": "定制①回应T",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11T-定制①回应T.mp4",
+  "duration": 11.57,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+  "next": [
+    "V12"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V11T-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11T-01-normalized.mp4",
+      "slotStart": 0,
+      "slotEnd": 11.55,
+      "sourceTrim": [
+        0,
+        11.55
+      ],
+      "audioMode": "npc-native",
+      "review": {
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11T-01-raw.mp4",
+        "sourceSha256": "90a4086a31cbc839c50cdce39c4096d6ad65893ea0b249b1c8563f5ec9a0adf9",
+        "visualReview": "制作自查可用，待G1采用/用户review",
+        "actualDynamicReview": true,
+        "reviewedBy": "G3 full1x muted playback +3fps sequence; SHA reverified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-template-assist-review.json",
+        "findings": [
+          {
+            "time": [
+              0,
+              11.542
+            ],
+            "issue": "同一日间伤帐与人物，前倾和微推近自然；自然开口回应，无额外人脸、物件、伪字幕或站立离榻。"
+          }
+        ],
+        "audioIssues": [
+          "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+        ],
+        "sourceLines": [
+          {
+            "node": "CH2-O1-RT",
+            "speaker": "苟安（定制回应）",
+            "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+            "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+          }
+        ],
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11T-01-normalized.mp4",
+        "sourceIntervals": [
+          [
+            0,
+            11.54
+          ]
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "06290b99be7769177ef89c6827984da4f21aea181c2cbef9318f3f8f6c01daa9",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ]
+}

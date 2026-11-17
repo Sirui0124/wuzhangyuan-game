@@ -1,0 +1,223 @@
+{
+  "id": "CH2-LY07-BAD3",
+  "expected": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+  "sha256": "6f7b9b6e3a86f49acca375f407dba91ae472eed9b51083e0da058029fbf4cc6d",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD3-v1.wav",
+  "recognized": "他一认罪我就停了茶他借我报出了确凉的实情他和李延究竟商量过什么我始终没问出来",
+  "similarity": 0.8947368421052632,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.24,
+      "text": "他一认罪我就停了茶",
+      "noSpeechProbability": 0.024795858189463615,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.56,
+          "text": "他"
+        },
+        {
+          "start": 0.56,
+          "end": 0.72,
+          "text": "一"
+        },
+        {
+          "start": 0.72,
+          "end": 0.86,
+          "text": "认"
+        },
+        {
+          "start": 0.86,
+          "end": 1.12,
+          "text": "罪"
+        },
+        {
+          "start": 1.12,
+          "end": 1.72,
+          "text": "我就"
+        },
+        {
+          "start": 1.72,
+          "end": 1.92,
+          "text": "停"
+        },
+        {
+          "start": 1.92,
+          "end": 2.04,
+          "text": "了"
+        },
+        {
+          "start": 2.04,
+          "end": 2.24,
+          "text": "茶"
+        }
+      ]
+    },
+    {
+      "start": 2.78,
+      "end": 4.6,
+      "text": "他借我报出了确凉的实情",
+      "noSpeechProbability": 0.024795858189463615,
+      "words": [
+        {
+          "start": 2.78,
+          "end": 3.1,
+          "text": "他"
+        },
+        {
+          "start": 3.1,
+          "end": 3.26,
+          "text": "借"
+        },
+        {
+          "start": 3.26,
+          "end": 3.36,
+          "text": "我"
+        },
+        {
+          "start": 3.36,
+          "end": 3.52,
+          "text": "报"
+        },
+        {
+          "start": 3.52,
+          "end": 3.68,
+          "text": "出"
+        },
+        {
+          "start": 3.68,
+          "end": 3.78,
+          "text": "了"
+        },
+        {
+          "start": 3.78,
+          "end": 3.94,
+          "text": "确"
+        },
+        {
+          "start": 3.94,
+          "end": 4.08,
+          "text": "凉"
+        },
+        {
+          "start": 4.08,
+          "end": 4.18,
+          "text": "的"
+        },
+        {
+          "start": 4.18,
+          "end": 4.34,
+          "text": "实"
+        },
+        {
+          "start": 4.34,
+          "end": 4.6,
+          "text": "情"
+        }
+      ]
+    },
+    {
+      "start": 5.34,
+      "end": 7.0,
+      "text": "他和李延究竟商量过什么",
+      "noSpeechProbability": 0.024795858189463615,
+      "words": [
+        {
+          "start": 5.34,
+          "end": 5.66,
+          "text": "他"
+        },
+        {
+          "start": 5.66,
+          "end": 5.8,
+          "text": "和"
+        },
+        {
+          "start": 5.8,
+          "end": 5.96,
+          "text": "李"
+        },
+        {
+          "start": 5.96,
+          "end": 6.06,
+          "text": "延"
+        },
+        {
+          "start": 6.06,
+          "end": 6.24,
+          "text": "究"
+        },
+        {
+          "start": 6.24,
+          "end": 6.4,
+          "text": "竟"
+        },
+        {
+          "start": 6.4,
+          "end": 6.54,
+          "text": "商"
+        },
+        {
+          "start": 6.54,
+          "end": 6.66,
+          "text": "量"
+        },
+        {
+          "start": 6.66,
+          "end": 6.78,
+          "text": "过"
+        },
+        {
+          "start": 6.78,
+          "end": 7.0,
+          "text": "什么"
+        }
+      ]
+    },
+    {
+      "start": 7.62,
+      "end": 8.7,
+      "text": "我始终没问出来",
+      "noSpeechProbability": 0.024795858189463615,
+      "words": [
+        {
+          "start": 7.62,
+          "end": 7.94,
+          "text": "我"
+        },
+        {
+          "start": 7.94,
+          "end": 8.06,
+          "text": "始"
+        },
+        {
+          "start": 8.06,
+          "end": 8.2,
+          "text": "终"
+        },
+        {
+          "start": 8.2,
+          "end": 8.34,
+          "text": "没"
+        },
+        {
+          "start": 8.34,
+          "end": 8.5,
+          "text": "问"
+        },
+        {
+          "start": 8.5,
+          "end": 8.7,
+          "text": "出来"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

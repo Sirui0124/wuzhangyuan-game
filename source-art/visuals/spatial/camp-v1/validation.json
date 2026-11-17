@@ -1,0 +1,148 @@
+{
+  "browser": "Chrome via Playwright, headless",
+  "localFileLoaded": true,
+  "geometry": [
+    {
+      "file": "camp-exterior.obj",
+      "vertices": 4812,
+      "triangles": 8512,
+      "indicesValid": true
+    },
+    {
+      "file": "main-tent-ritual.obj",
+      "vertices": 3694,
+      "triangles": 6538,
+      "indicesValid": true
+    },
+    {
+      "file": "main-tent-council.obj",
+      "vertices": 3566,
+      "triangles": 6330,
+      "indicesValid": true
+    }
+  ],
+  "lamps": {
+    "large": 7,
+    "small": 49,
+    "main": 1,
+    "deskAuxiliary": 1
+  },
+  "corridor": {
+    "widthMeters": 1.2,
+    "minimumFixedObstacleClearanceMeters": 0.642,
+    "scope": "fixed lamp footprints and desk; no animated body/camera sweep"
+  },
+  "screenshots": [
+    {
+      "camera": "overview",
+      "visibleObjects": 457,
+      "mode": "explore",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "SC03",
+      "visibleObjects": 452,
+      "mode": "explore",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "guard",
+      "visibleObjects": 452,
+      "mode": "explore",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "report",
+      "visibleObjects": 452,
+      "mode": "explore",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "jiang",
+      "visibleObjects": 452,
+      "mode": "explore",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "interior",
+      "visibleObjects": 432,
+      "mode": "ritual",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "ritual",
+      "visibleObjects": 443,
+      "mode": "ritual",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "council",
+      "visibleObjects": 431,
+      "mode": "council",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "judgment",
+      "visibleObjects": 442,
+      "mode": "judgment",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    },
+    {
+      "camera": "ending",
+      "visibleObjects": 432,
+      "mode": "ending",
+      "glError": 0,
+      "canvas": [
+        1356,
+        710
+      ]
+    }
+  ],
+  "cutawayTogglePassed": true,
+  "errors": [],
+  "remoteRequests": [],
+  "mobileHorizontalOverflow": false,
+  "notValidated": [
+    "Blender/Cocos import",
+    "photometric lighting",
+    "character animation or costume",
+    "historical reconstruction",
+    "full video frame-by-frame continuity"
+  ]
+}

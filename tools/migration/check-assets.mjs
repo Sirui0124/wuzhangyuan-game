@@ -3,9 +3,19 @@ import { resolve, dirname, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
+import { checkSubtitles } from '../video/subtitles.mjs';
+import { validateMedia } from '../video/media.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const build = resolve(root, 'GameStarter/web-demo/.build');
+const build = resolve(root, process.env.GAME_BUILD || 'GameStarter/web-demo/.build');
 const errors = []; let checks = 0;
+const subtitleAudit = checkSubtitles();
+const subtitleCatalog = JSON.parse(readFileSync(resolve(root, 'video/subtitles/catalog.json')));
+assert.deepEqual(readdirSync(resolve(build, 'video/subtitles')).filter(name => name.endsWith('.vtt')).sort(),
+  subtitleAudit.subtitlePaths.map(url => url.split('/').at(-1)).sort(), 'Published subtitles must match the active film list');
+for (const entry of subtitleCatalog.entries) {
+  const path = resolve(build, '.' + entry.subtitles);
+  assert.equal(createHash('sha256').update(readFileSync(path)).digest('hex'), entry.subtitleSha256, `Built subtitle hash: ${entry.subtitles}`);
+}
 function exactFile(path) {
   const rel = relative(root, path);
   if (rel.startsWith('..') || !existsSync(path)) { errors.push(`Missing/outside: ${rel}`); return; }
@@ -19,11 +29,31 @@ function exactFile(path) {
 }
 function urlFile(url) {
   if (!url || /^(?:https?:|data:|#)/.test(url)) return;
-  exactFile(resolve(build, '.' + decodeURIComponent(url.split(/[?#]/)[0])));
+  const pathname = decodeURIComponent(url.split(/[?#]/)[0]);
+  exactFile(resolve(build, '.' + (pathname.endsWith('/') ? pathname + 'index.html' : pathname)));
 }
 const sourceVisuals = JSON.parse(readFileSync(resolve(root,'GameStarter/web-demo/visual-assets.json')));
 for (const type of ['characters','scenes','cinematics','ui']) for (const file of Object.values(sourceVisuals[type])) exactFile(resolve(root,'GameStarter/web-demo',sourceVisuals.sourceRoot,file));
+// Named expression aliases belong to one person; independent people may not share art.
+const personForArt = new Map();
+for (const [person, expressions] of Object.entries(sourceVisuals.characterExpressions ?? {})) {
+  personForArt.set(person, person);
+  for (const id of Object.values(expressions)) personForArt.set(id, person);
+}
+const characterHashes = new Map();
+for (const [id, file] of Object.entries(sourceVisuals.characters)) {
+  const person = personForArt.get(id) ?? id;
+  const path = resolve(root,'GameStarter/web-demo',sourceVisuals.sourceRoot,file);
+  if (!existsSync(path)) continue;
+  const hash = createHash('sha256').update(readFileSync(path)).digest('hex');
+  const previous = characterHashes.get(hash);
+  assert.ok(!previous || previous.person === person, `Independent characters share a portrait: ${previous?.id} / ${id}`);
+  characterHashes.set(hash, { id, person });
+}
 const manifest = JSON.parse(readFileSync(resolve(root,'GameStarter/web-demo/public/video/media-manifest.json')));
+validateMedia(JSON.parse(readFileSync(resolve(root,'GameStarter/web-demo/public/cinematics.json'))), manifest, resolve(root,'GameStarter/web-demo'));
+assert.deepEqual(readdirSync(resolve(build, 'video/current')).filter(name => name.endsWith('.mp4')).sort(),
+  manifest.clips.map(clip => clip.url.split('/').at(-1)).sort(), 'Published videos must match the active film list exactly');
 for (const clip of manifest.clips) {
   const source = resolve(root,'GameStarter/web-demo',clip.source);
   exactFile(source); urlFile(clip.url);

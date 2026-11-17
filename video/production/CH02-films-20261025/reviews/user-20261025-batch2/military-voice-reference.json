@@ -1,0 +1,65 @@
+{
+  "id": "military-clerk-fixed-reference-20261025-batch2",
+  "status": "frozen-for-corresponding-role-reference-generation-listening-pending",
+  "createdAt": "2026-10-25T17:00:50+08:00",
+  "role": "军吏",
+  "allowedRoleScope": [
+    "G4收件与军情同军吏",
+    "G5共同收件/归途同军吏",
+    "G6收件/结局同军吏"
+  ],
+  "excludedRoles": [
+    "李严",
+    "粮队管事",
+    "苟安",
+    "玩家我"
+  ],
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\audio-reference\\military-clerk-V26-06-2p85-7p95.wav",
+  "sha256": "6e32aed521b581bab84fea0a3aca93d6f90526656aabb0b25d4c2e2d22ebd6ad",
+  "sampleRate": 48000,
+  "channels": 1,
+  "duration": 5.1,
+  "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-06-16x9.mp4",
+  "sourceSha256": "7a1987b157516cddcf73f651405a85a148b94e10a4132dbfd58f56a2de4839df",
+  "sourceRange": [
+    2.85,
+    7.95
+  ],
+  "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+  "speakerEvidence": {
+    "sourcePlan": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\plan.json",
+    "clip": "V26-06",
+    "sourceNode": "CH2-LY09-011",
+    "speaker": "军吏",
+    "voiceAndLipOwner": "该军吏画内原句，案后同一人物发言，非我画外，非其他角色；冻结原句及原ASR均对应此片",
+    "asrEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\V26-06\\asr.json",
+    "asrSegments": [
+      [
+        2.96,
+        4.64,
+        "眼下看到的是这些"
+      ],
+      [
+        5.2,
+        6.68,
+        "来年谁强谁弱"
+      ],
+      [
+        6.68,
+        7.78,
+        "还说不准"
+      ]
+    ]
+  },
+  "generationContract": {
+    "model": "seed-audio-1.0",
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+    "referenceField": "references[0].audio_data",
+    "referenceBytes": "actual WAV base64",
+    "speakerFieldForbidden": true,
+    "noClone": true,
+    "referenceFileOnlyNotANewSynthesis": true
+  },
+  "listeningReview": "pending: tool cannot hear audio; role/source and ASR/text verified, no timbre/BGM approval claimed",
+  "userApproved": false
+}

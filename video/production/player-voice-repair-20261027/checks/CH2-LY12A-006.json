@@ -1,0 +1,117 @@
+{
+  "id": "CH2-LY12A-006",
+  "expected": "李严知情的事也写在材料里，该查就得查。",
+  "sha256": "78f1b59e14be4d7205f2fd86f905900f88d357c9749814e86b5afe8fe248ceca",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-006-v1.wav",
+  "recognized": "李言之情的史也写在材料里该查就得查",
+  "similarity": 0.8235294117647058,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.24,
+      "text": "李言之情的史也写在材料里",
+      "noSpeechProbability": 0.1421949863433838,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.62,
+          "text": "李"
+        },
+        {
+          "start": 0.62,
+          "end": 0.74,
+          "text": "言"
+        },
+        {
+          "start": 0.74,
+          "end": 0.9,
+          "text": "之"
+        },
+        {
+          "start": 0.9,
+          "end": 1.08,
+          "text": "情"
+        },
+        {
+          "start": 1.08,
+          "end": 1.2,
+          "text": "的"
+        },
+        {
+          "start": 1.2,
+          "end": 1.36,
+          "text": "史"
+        },
+        {
+          "start": 1.36,
+          "end": 1.46,
+          "text": "也"
+        },
+        {
+          "start": 1.46,
+          "end": 1.6,
+          "text": "写"
+        },
+        {
+          "start": 1.6,
+          "end": 1.74,
+          "text": "在"
+        },
+        {
+          "start": 1.74,
+          "end": 1.9,
+          "text": "材"
+        },
+        {
+          "start": 1.9,
+          "end": 2.06,
+          "text": "料"
+        },
+        {
+          "start": 2.06,
+          "end": 2.24,
+          "text": "里"
+        }
+      ]
+    },
+    {
+      "start": 2.9399999999999995,
+      "end": 3.88,
+      "text": "该查就得查",
+      "noSpeechProbability": 0.1421949863433838,
+      "words": [
+        {
+          "start": 2.9399999999999995,
+          "end": 3.26,
+          "text": "该"
+        },
+        {
+          "start": 3.26,
+          "end": 3.44,
+          "text": "查"
+        },
+        {
+          "start": 3.44,
+          "end": 3.6,
+          "text": "就"
+        },
+        {
+          "start": 3.6,
+          "end": 3.7,
+          "text": "得"
+        },
+        {
+          "start": 3.7,
+          "end": 3.88,
+          "text": "查"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

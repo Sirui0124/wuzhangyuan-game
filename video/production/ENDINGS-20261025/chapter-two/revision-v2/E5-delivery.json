@@ -1,0 +1,215 @@
+{
+  "id": "E5",
+  "title": "还是走上了险路",
+  "description": "先实际让路放行，再推进时间，交代赴魏与谣言回营的后果。",
+  "slots": [
+    "V43"
+  ],
+  "entryPrerequisite": "UI-RELEASE已确认；V43先实际放行，再叙述后果。",
+  "artifactType": "fixed-route-review-compilation",
+  "executesGameState": false,
+  "userApproved": false,
+  "gameIntegrated": false,
+  "audioReview": "采用G6登记的纯台词短版及已核来源；实际逐字听审仍pending",
+  "status": "registered-short-version-awaiting-user-review",
+  "sources": [
+    {
+      "slot": "V43",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+      "sourceSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "frames": 296,
+      "start": 0.0,
+      "end": 12.333333333333334,
+      "duration": 12.333333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              2,
+              62
+            ],
+            [
+              150,
+              226
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "保留回身/离开实行动作，删中间重复步行，原污染声音去除；不以静音填旧长片",
+          "timelineRange": [
+            0,
+            5.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              228,
+              288
+            ],
+            [
+              384,
+              484
+            ]
+          ],
+          "node": "CH2-E5-002",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "放行后另时营地与兵士反应，明确后来，禁止兵士代说旁白",
+          "timelineRange": [
+            5.666666666666667,
+            12.333333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际放行的回身与离开动作先发生，之后才旁白后来赴魏及谣言传回",
+        "没有新增谣言内容或正式查办结果",
+        "纯放行动作保留5.667秒并去掉污染原声；有实际动作推进，不静止填满旧9.42秒"
+      ]
+    }
+  ],
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E5-还是走上了险路-纯台词短版-V4.mp4",
+  "sha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+  "duration": 12.333333,
+  "decode": "passed",
+  "sourceSignature": "74fc17e99a1ebae2bf49515545bf831fb75bba56dd869ca99a58e1ae76d5165f",
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E5-overview-0.jpg",
+  "visualReview": "已查看全时段有序抽帧及拼接切点，非连续全片观看",
+  "sourceDuration": 12.333333,
+  "sourceAudioNotes": [
+    {
+      "slot": "V43",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    }
+  ],
+  "videoCoverage": {
+    "videoSeconds": 12.333333333333334,
+    "decodedFrames": 296,
+    "expectedSeconds": 12.333333333333334,
+    "passed": true
+  },
+  "editDecisionList": [
+    {
+      "slot": "V43",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+      "sourceSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "frames": 296,
+      "start": 0.0,
+      "end": 12.333333333333334,
+      "duration": 12.333333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              2,
+              62
+            ],
+            [
+              150,
+              226
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "保留回身/离开实行动作，删中间重复步行，原污染声音去除；不以静音填旧长片",
+          "timelineRange": [
+            0,
+            5.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              228,
+              288
+            ],
+            [
+              384,
+              484
+            ]
+          ],
+          "node": "CH2-E5-002",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "放行后另时营地与兵士反应，明确后来，禁止兵士代说旁白",
+          "timelineRange": [
+            5.666666666666667,
+            12.333333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际放行的回身与离开动作先发生，之后才旁白后来赴魏及谣言传回",
+        "没有新增谣言内容或正式查办结果",
+        "纯放行动作保留5.667秒并去掉污染原声；有实际动作推进，不静止填满旧9.42秒"
+      ]
+    }
+  ],
+  "previousRevision": {
+    "id": "E5",
+    "title": "还是走上了险路",
+    "description": "先实际让路放行，再推进时间，交代赴魏与谣言回营的后果。",
+    "slots": [
+      "V43"
+    ],
+    "entryPrerequisite": "UI-RELEASE已确认；V43先实际放行，再叙述后果。",
+    "artifactType": "fixed-route-review-compilation",
+    "executesGameState": false,
+    "userApproved": false,
+    "gameIntegrated": false,
+    "audioReview": "未逐字听审；保留现有采用版本声音",
+    "status": "review-candidate",
+    "sources": [
+      {
+        "slot": "V43",
+        "owner": "G6",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+        "sha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+        "duration": 21.024,
+        "start": 0.0,
+        "end": 21.024
+      }
+    ],
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E5-还是走上了险路.mp4",
+    "sha256": "1e0c7b2fff10fda6cb04561941e7cdec1fe5f1808a9ce0ff4ae2003df7281808",
+    "duration": 21.02,
+    "decode": "passed",
+    "sourceSignature": "1f5e88e70673a0b42e8fc2b05d7caa18f13d699953797202ae82cf54fd18d04f",
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E5-overview.jpg",
+    "visualReview": "原组检查继承；本合成待连接点复核",
+    "sourceDuration": 21.024,
+    "joinFrames": [],
+    "sourceAudioNotes": [
+      "纯动作原声未听审",
+      "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+    ],
+    "videoCoverage": {
+      "videoSeconds": 21.0,
+      "decodedFrames": 504,
+      "expectedSeconds": 21.02,
+      "passed": true
+    }
+  },
+  "overviewSheets": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E5-overview-0.jpg"
+  ],
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\visual-review.json",
+  "adoptionMethod": "byte-identical-source-copy",
+  "postProcessing": {
+    "type": "registered-G6-batch2-short-source-integration",
+    "newGeneration": false
+  },
+  "joinFrames": [],
+  "integrationConditions": [
+    "实际放行的回身与离开动作先发生，之后才旁白后来赴魏及谣言传回",
+    "没有新增谣言内容或正式查办结果",
+    "纯放行动作保留5.667秒并去掉污染原声；有实际动作推进，不静止填满旧9.42秒"
+  ]
+}

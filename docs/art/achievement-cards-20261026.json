@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-26",
+  "status": "implemented-awaiting-user-review",
+  "approvedDirection": "水墨画签卡，独立卡片，多卡收藏区，长标题按语义换行",
+  "confirmedTitle": "隔帐有耳，帐后有刀",
+  "copySources": [
+    "content/chapters/wuzhang/chapter-one.flow.json#endings",
+    "GameStarter/web-demo/src/chapters/chapter-one/supply-endings.ts",
+    "GameStarter/web-demo/src/chapters/chapter-one/tent-visit.ts#tentEnding",
+    "GameStarter/web-demo/src/game/era-ending.ts#eraEnding"
+  ],
+  "renderer": "GameStarter/web-demo/src/achievement-card.ts",
+  "assetDirectory": "GameStarter/web-demo/public/ui/achievements",
+  "imageGeneration": "source-art/visuals/runtime/ui/achievements-20261026/generation.json",
+  "clickBehavior": "打开同一成就的卡面、原定稿说明、提示及达成记录；可翻阅已解锁成就，Escape或返回按钮关闭并恢复焦点。不会自动播放影片、重开关卡或写入成就。",
+  "verification": "outputs/achievement-cards-20261026/verification.json",
+  "screenshots": ["outputs/achievement-cards-20261026/map-1440.png", "outputs/achievement-cards-20261026/detail-tent.png", "outputs/achievement-cards-20261026/collection.png"],
+  "limits": "浏览器构建与独立存档检查通过；新增插画仍待用户实审；不代表Cocos原生应用验收。"
+}

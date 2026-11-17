@@ -1,0 +1,794 @@
+{
+  "group": "G2",
+  "status": "12 current candidates repaired and technically/visually reviewed; modified versions require user review",
+  "supersedesProductionAcceptance": true,
+  "sourceReview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549",
+  "updatedUtc": "2026-10-25T08:48:01.698640+00:00",
+  "clips": [
+    {
+      "id": "V13",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+      "oldSha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "userComment": "语音全是乱码，请重新生成语音",
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-7204845056.mp4",
+      "newSha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V13",
+          "sha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a"
+        },
+        {
+          "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V13",
+          "sha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+          "event": "ended",
+          "start": 0,
+          "end": 15.666667,
+          "duration": 15.666667,
+          "time": "2026-10-25T09:48:42.736Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          22.91
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度",
+        "最终服务末字5.960秒与父片trim交叉核查后，免费追加0.4秒自然手部动作，保留整句与尾气；不新增声音或模型请求。"
+      ]
+    },
+    {
+      "id": "V14",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+      "oldSha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "userComment": "背后的语音全是乱码",
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V14-731b41a283.mp4",
+      "newSha256": "eb1dd8584e771bad564aee46e2a8bfa9277fa62a9bd1f1bada863d8ba803d416",
+      "evidence": [
+        {
+          "method": "directly inspected current complete 0.5-second sequence; natural playback separately logged",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V14",
+          "sha256": "eb1dd8584e771bad564aee46e2a8bfa9277fa62a9bd1f1bada863d8ba803d416"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V14",
+          "sha256": "eb1dd8584e771bad564aee46e2a8bfa9277fa62a9bd1f1bada863d8ba803d416",
+          "event": "ended",
+          "start": 0,
+          "end": 15.041667,
+          "duration": 15.041667,
+          "time": "2026-10-25T09:35:08.166Z"
+        }
+      ],
+      "unresolved": [
+        "修改版待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          14.0
+        ]
+      ],
+      "repairs": [
+        "用15秒新画卷替换已撤回4.125秒缺流程片，保留完整五环节和倒查",
+        "全片无字，无角色、导演或工作说明发声；不将绘画的动作当本批取证事实"
+      ]
+    },
+    {
+      "id": "V15",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+      "oldSha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "userComment": "为什么中间有一个模糊层啊？请你移除掉模糊层。10s以后语音都是乱码",
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-ad4e8faa28.mp4",
+      "newSha256": "00b508ecd990a07224a309e7a124d225061ea64619f221d3ded9275ddde963f1",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; natural playback logged separately",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V15",
+          "sha256": "00b508ecd990a07224a309e7a124d225061ea64619f221d3ded9275ddde963f1"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V15",
+          "sha256": "00b508ecd990a07224a309e7a124d225061ea64619f221d3ded9275ddde963f1",
+          "event": "ended",
+          "start": 0,
+          "end": 13.625,
+          "duration": 13.625,
+          "time": "2026-10-25T09:27:44.972Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          41.05
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度"
+      ]
+    },
+    {
+      "id": "V16A",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+      "oldSha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "userComment": "语音是乱码。视频质量不行。不应该把字幕列在屏幕上",
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16A-f65489a535.mp4",
+      "newSha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+      "evidence": [
+        {
+          "method": "directly inspected every 0.5-second sample from SHA-bound current sequence; browser natural playback is logged separately",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V16A",
+          "sha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+          "event": "ended",
+          "start": 0,
+          "end": 6.125,
+          "duration": 6.125,
+          "time": "2026-10-25T08:13:48.175Z"
+        }
+      ],
+      "unresolved": [
+        "修改版待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          9.04
+        ]
+      ],
+      "repairs": [
+        "撤旧D01/D02字幕式并列正文",
+        "去旧模糊层，换未叠层原始反应/卷束动作",
+        "去除原片脏人声，只复用既有玩家原句WAV，0.35秒后入声"
+      ]
+    },
+    {
+      "id": "V16B",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+      "oldSha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "userComment": null,
+      "oldPictureApproved": true,
+      "status": "preserved-user-approved-picture-swept",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+      "newSha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "evidence": [
+        {
+          "method": "current SHA equality + entire half-second sequence directly inspected this round + natural 1x current-SHA ended",
+          "sequence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V16B\\sequence-01.jpg"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V16B-preserved",
+          "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+          "event": "ended",
+          "start": 0,
+          "end": 12.117,
+          "duration": 12.117,
+          "time": "2026-10-25T08:14:24.964Z"
+        }
+      ],
+      "unresolved": [],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          12.12
+        ]
+      ],
+      "repairs": [
+        "不重导，保留已通过具体画面版本与原通过记录"
+      ]
+    },
+    {
+      "id": "V16C",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+      "oldSha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "userComment": "视频不行，不应该有文字",
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-5ca60103d4.mp4",
+      "newSha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+      "evidence": [
+        {
+          "method": "directly inspected all 0.5-second samples",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V16C",
+          "sha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V16C",
+          "sha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+          "event": "ended",
+          "start": 0,
+          "end": 16,
+          "duration": 16,
+          "time": "2026-10-25T09:04:28.641Z"
+        }
+      ],
+      "unresolved": [
+        "待用户重新审核音画"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          18.17
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文卡和模糊遮挡层；用未叠层原始画面重新剪辑",
+        "仅保留白名单玩家原句及原始管事反问"
+      ]
+    },
+    {
+      "id": "V17",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+      "oldSha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V17-6e3d180245.mp4",
+      "newSha256": "03b8a1ea022a0f601ef9478c5fb9a003d05575cb862cb0a28882254db8f5405b",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; natural playback logged separately",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V17",
+          "sha256": "03b8a1ea022a0f601ef9478c5fb9a003d05575cb862cb0a28882254db8f5405b"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V17",
+          "sha256": "03b8a1ea022a0f601ef9478c5fb9a003d05575cb862cb0a28882254db8f5405b",
+          "event": "ended",
+          "start": 0,
+          "end": 7.666667,
+          "duration": 7.666667,
+          "time": "2026-10-25T09:28:15.501Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          12.27
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度"
+      ]
+    },
+    {
+      "id": "V18",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+      "oldSha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-bf693534c5.mp4",
+      "newSha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; natural playback logged separately",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V18",
+          "sha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V18",
+          "sha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f",
+          "event": "ended",
+          "start": 0,
+          "end": 20.666667,
+          "duration": 20.666667,
+          "time": "2026-10-25T09:28:36.595Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          53.63
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度"
+      ]
+    },
+    {
+      "id": "V19A",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A-92eaf5912b.mp4",
+      "oldSha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19A-345979a9a8.mp4",
+      "newSha256": "382ac795e12035184ae1c0a3a62ae2bd60e83e0463a3ed0a33fb180e543470af",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; natural playback logged separately",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V19A",
+          "sha256": "382ac795e12035184ae1c0a3a62ae2bd60e83e0463a3ed0a33fb180e543470af"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V19A",
+          "sha256": "382ac795e12035184ae1c0a3a62ae2bd60e83e0463a3ed0a33fb180e543470af",
+          "event": "ended",
+          "start": 0,
+          "end": 16.291667,
+          "duration": 16.291667,
+          "time": "2026-10-25T09:28:53.062Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          19.54
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度"
+      ]
+    },
+    {
+      "id": "V19B",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+      "oldSha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19B-fef1c14bab.mp4",
+      "newSha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064",
+      "evidence": [
+        {
+          "method": "directly inspected all 0.5-second samples",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V19B",
+          "sha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V19B",
+          "sha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064",
+          "event": "ended",
+          "start": 0,
+          "end": 7.708333,
+          "duration": 7.708333,
+          "time": "2026-10-25T09:04:00.492Z"
+        }
+      ],
+      "unresolved": [
+        "待用户重新审核音画"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          10.04
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文卡和模糊遮挡层；用未叠层原始画面重新剪辑",
+        "仅保留白名单玩家原句"
+      ]
+    },
+    {
+      "id": "V19C",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C-85920cb12a.mp4",
+      "oldSha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-be8a84b107.mp4",
+      "newSha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V19C",
+          "sha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0"
+        },
+        {
+          "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V19C",
+          "sha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0",
+          "event": "ended",
+          "start": 0,
+          "end": 10.625,
+          "duration": 10.625,
+          "time": "2026-10-25T09:48:53.554Z"
+        }
+      ],
+      "unresolved": [
+        "修改版本待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          14.7
+        ]
+      ],
+      "repairs": [
+        "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+        "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度",
+        "保留完整所选原句音源区间，末尾加0.4秒未用仓中自然续镜作尾气，不定格或循环。"
+      ]
+    },
+    {
+      "id": "V20",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+      "oldSha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "userComment": null,
+      "oldPictureApproved": false,
+      "status": "repaired-new-user-review-required",
+      "globalSweep": {
+        "workDocumentCards": "none-in-current-file",
+        "visibleBoxMasks": "none-in-current-file",
+        "newMisleadingPropText": "no misleading readable text found in reviewed sequence"
+      },
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-b78ca236de.mp4",
+      "newSha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301",
+      "evidence": [
+        {
+          "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V20",
+          "sha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301"
+        },
+        {
+          "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+        },
+        {
+          "method": "exact original handoff-frame inspection",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\operator-release-precise.jpg",
+          "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+          "sourceSha256": "41e4435693d4ff028bdccb1dcaa5e7f8d0f521ae66ca77a44ac754a36f39b762",
+          "sourceTimes": [
+            8.875,
+            8.958333,
+            9.041667,
+            9.083333,
+            9.166667,
+            9.208333
+          ]
+        },
+        {
+          "method": "natural 1x playback; ended event proves completion only, not actual listening",
+          "id": "UR-V20",
+          "sha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301",
+          "event": "ended",
+          "start": 0,
+          "end": 31.625,
+          "duration": 31.625,
+          "time": "2026-10-25T09:43:09.017Z"
+        }
+      ],
+      "unresolved": [
+        "修改版待用户重新审核"
+      ],
+      "userApproved": false,
+      "repairPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "sourceOldRanges": [
+        [
+          0,
+          67.84
+        ]
+      ],
+      "repairs": [
+        "首句采用真实角色参考Seed-Audio1.0；其他合法原句复用原声并剪元字段",
+        "移除报告、送达正文卡及遮挡；用新报告接触和木牍实物动作短接",
+        "剪错误前缀、重复句、额外闭嘴等，连带压缩音画与停顿",
+        "014原声起始3.45秒非对白停顿连同冗余画面删去，原句保留；追加的R1后段不用，未再付费生成。"
+      ]
+    }
+  ],
+  "audioDispatchAudit": {
+    "historicalIncidentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\QUARANTINED-SEED-AUDIO-PENDING-LISTENING.json",
+    "batch2Release": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-adoption-release.json",
+    "correctModel": "seed-audio-1.0",
+    "successfulReferenceUploadOutputs": 4,
+    "adoptedAsPendingListeningCandidates": 4,
+    "newCallsInBatch2": 2,
+    "newPresetTTSCalls": 0,
+    "wrongPresetTTSAdopted": 0,
+    "unknownAudioOutcomes": 0,
+    "deferredStateWritten": false,
+    "humanListeningComplete": false,
+    "userVoiceApproved": false
+  },
+  "videoJobs": [
+    {
+      "id": "UR-DOC-ABC-R1",
+      "status": "succeeded",
+      "task_id": "task_3eORGC1xhCdLPzbT8N0ofEshgWKnHpiQ",
+      "request_sha256": "e433304f37cf0628964f4f2825c1b17d83489b55bcc4962199ca965e1bb763ee",
+      "idempotency_key": "g2-user-repair-897c534098b643b8964240200d246969",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-DOC-ABC-R1.request.json",
+      "dispatchEpoch": 1792915130.5531118,
+      "lastPollEpoch": 1792916055.877166,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:14:18Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/d168a025c57b2f3fe7924e230e507e6e0f2ab21491682fe3290d116c4c4ddb52.mp4"
+    },
+    {
+      "id": "UR-LEDGER-DE-R1",
+      "status": "succeeded",
+      "task_id": "task_7hZPE13EaTy8PGsX0ThaTI2WHm8IjB9O",
+      "request_sha256": "07c4249e127531e4c814d4ccfd910461ca50b46ac71d589405b96fd56c91a080",
+      "idempotency_key": "g2-user-repair-1d2f09e7295447979f6b41a90675fceb",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R1.request.json",
+      "dispatchEpoch": 1792916452.9812093,
+      "lastPollEpoch": 1792917151.5227325,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:32:34Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/e80cddb495521c4f5890307e065528ebad78938f46ad9468afa6a959822459f7.mp4"
+    },
+    {
+      "id": "UR-LEDGER-DE-R2",
+      "status": "succeeded",
+      "task_id": "task_g5ZWRBdpXbR8PlJkjwSbruALzEPhSseT",
+      "request_sha256": "85507a2dc0a14ac36562ada783e73eb5bd9aa13cb5203303f1fb4f4d4b864b57",
+      "idempotency_key": "g2-user-repair-389c5a34cc0b43838f6f3aabb5fb522a",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R2.request.json",
+      "dispatchEpoch": 1792917822.099347,
+      "lastPollEpoch": 1792918585.7281132,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:56:28Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/3b7dd2a760b2a1770cf5500034360b553f4b34d17122b3491ef3601b6d5b8055.mp4"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R1",
+      "status": "succeeded",
+      "task_id": "task_oANgnANKAPMGKG279CEfQ0BSsbiVijSz",
+      "request_sha256": "1b9518c1ad316d318e22aa3bcebe1b95def2c7ae2a9b82dd5325610986f726da",
+      "idempotency_key": "g2-user-repair-75b37b4e18e648aba7cb07bdfe47e7cf",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R1.request.json",
+      "dispatchEpoch": 1792916458.2339182,
+      "lastPollEpoch": 1792917154.9307635,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:32:37Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/e66c50f8b566e70ab5aeb584b3a437f6abe6703f99c9bb3472dedcf92d3c5406.mp4"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R2",
+      "status": "succeeded",
+      "task_id": "task_XWx1XHg9c1OaWTGyJK4YTae3ZsBPAtIN",
+      "request_sha256": "f7282118924b0501c2b33b94a16553c4d84f360dbc9ab4eefaea879d30f19614",
+      "idempotency_key": "g2-user-repair-db77d312b6a543aba2546d7d0038e386",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R2.request.json",
+      "dispatchEpoch": 1792917832.4741564,
+      "lastPollEpoch": 1792918366.2089875,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:52:48Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/209c85c7ee3492d49e659b6984acd02c226981d99d929ca7b19a6d5c2af3ba1d.mp4"
+    },
+    {
+      "id": "UR-V13-VOUCHER-R1",
+      "status": "succeeded",
+      "task_id": "task_xJ8ktJ6DSMiKdszyXeDAPAelZilx9ykP",
+      "request_sha256": "50d9cb6590f5feba8c98e70042f45cdf40e3ebb40e4d45f5af8afd0be1241aa1",
+      "idempotency_key": "g2-user-repair-4fbaa53a872541a8a391189fca115acf",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V13-VOUCHER-R1.request.json",
+      "dispatchEpoch": 1792918775.617493,
+      "lastPollEpoch": 1792919177.622565,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:06:19Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/2822b1472b8b87fd389194f37d9c9b77f673696bdcd8161b6541720f7dade8bc.mp4"
+    },
+    {
+      "id": "UR-V14-FLOW-R1",
+      "status": "succeeded",
+      "task_id": "task_Byl2kNehOMmCNYwCrGMA7b5yomCTAzjJ",
+      "request_sha256": "c128f7c73d1e26a9b6813075674f181a638da0067db3060251d322f5a26163ac",
+      "idempotency_key": "g2-user-repair-d1cd6ebe01aa4062ba338256b5b9870a",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R1.request.json",
+      "dispatchEpoch": 1792917515.244035,
+      "lastPollEpoch": 1792918589.7345161,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:56:33Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/614c177015a3facd83de176e83d725afc1dde8e8cec38ce307f3d0cb36a1115b.mp4"
+    },
+    {
+      "id": "UR-V14-FLOW-R2",
+      "status": "succeeded",
+      "task_id": "task_BMBpJigA76CDzEYHdMDt7bH3WnA7Byt9",
+      "request_sha256": "8e355931b6c6a3c4b2b95171e854b9025f190c4d77f100ccbce0e3bd3b2f4d9e",
+      "idempotency_key": "g2-user-repair-507d32ea35864f7497ee9c285c736deb",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R2.request.json",
+      "dispatchEpoch": 1792918726.6181943,
+      "lastPollEpoch": 1792920579.3075073,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:29:42Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/5a45d7743f98e3b2cff873e68a1c4ac6ee628e89b2207d73dc945cfcbb402a69.mp4"
+    },
+    {
+      "id": "UR-V20-OPERATOR-R1",
+      "status": "succeeded",
+      "task_id": "task_UnSAcpl5CvsNqJf0JIYncYMznolccAlx",
+      "request_sha256": "c70e6ce532cf28128e24590c7dcc5faba59415cf5a97ea602f3da68683c65169",
+      "idempotency_key": "g2-user-repair-5e0b42ac45974b9d90934665d6856e76",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V20-OPERATOR-R1.request.json",
+      "dispatchEpoch": 1792918834.4788845,
+      "lastPollEpoch": 1792919479.4698803,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:11:21Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/a9225834b8162f5f91e024accf83d3d93bd12b993ceeee4b571facff451b1c74.mp4"
+    }
+  ],
+  "rejectedGeneratedDrafts": [
+    {
+      "id": "UR-LEDGER-DE-R1",
+      "sha256": "7f9e79460f3f3f4bdc5a71d8ad38b5a9ba25fff05485dbd859ee94b25aa3be0a",
+      "reason": "Fake front labels and writing; no full segment adopted"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R1",
+      "sha256": "875ca0dcfde85f694f433f0c846908ee94ab1b4a358606881307dd35ce2ce0e5",
+      "reason": "Fake readable paragraphs; no adoption"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R2",
+      "sha256": "30b656b230718b01f517dd27bfac28528c43739d7a0214d6d39f362e4313a13e",
+      "reason": "Visible labels and print-through text; entire source not used in final current parents"
+    },
+    {
+      "id": "UR-V14-FLOW-R1",
+      "sha256": "b9d145a2f0d0836013307e29eb6de4b5aa63160eaffe4bd17f7f8d1109e0cc93",
+      "reason": "Missing clear military receipt and backward trace; replaced by finalR2"
+    }
+  ],
+  "audioDispatchAuditHistory": [
+    {
+      "newTTSRequests": 0,
+      "inFlightTTS": 0,
+      "newTTSFiles": 0,
+      "newPreset2AudioMixedIntoCandidates": false,
+      "isolatedPreset2NewFiles": [],
+      "historicalCorrectPlayerWavs": "reuse-only; unchanged",
+      "requiredNewVoiceModel": "doubao audio model 1.0 with uploaded reference audio; await coordinator-confirmed interface",
+      "instructionSupersedes": "no seed-tts-2.0 or any preset-speaker substitutions",
+      "updatedUtc": "2026-10-25T08:04:02.709960+00:00",
+      "correctModelReferenceAudioStates": [
+        {
+          "id": "V13-03-seed-audio-state.json",
+          "status": "succeeded",
+          "requestId": "682dbb3a-418a-4235-aa0e-2d215c2689b2",
+          "sha256": "4cd014d93f76cebb34950568f6215995df5958c54aedff5dc418bf7bc7621918",
+          "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-03-seed-audio1-reference.wav",
+          "quarantinedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\quarantined\\V13-03-seed-audio1-reference.wav"
+        },
+        {
+          "id": "V13-04-seed-audio-state.json",
+          "status": "succeeded",
+          "requestId": "37a18feb-f0c3-43d9-9d9d-a71237e7b93d",
+          "sha256": "efd15242c9e958460ebd6b2ea5023a3de7534ca3d145d4d40804f26911223d1b",
+          "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-04-seed-audio1-reference.wav",
+          "quarantinedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\quarantined\\V13-04-seed-audio1-reference.wav"
+        }
+      ],
+      "referenceAudioQuarantined": true,
+      "referenceAudioAdopted": false,
+      "correctModelSeedAudioRequestCount": 2,
+      "correctModelSeedAudioSuccessCount": 2,
+      "newCallsAllowed": false
+    }
+  ],
+  "audioBoundaryAudit": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json",
+  "currentFilesValidation": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\final-current-validation.json",
+  "newUserApproval": false,
+  "gamePresentationImplemented": false
+}

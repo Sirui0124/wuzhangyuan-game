@@ -1,0 +1,44 @@
+{
+  "id": "V21-04",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v3\\V21-04-shared-repaired.mp4",
+  "sha256": "4a0567c88fe7ce15f7e6722cba34d2708a4371f5ce5f387adc93cd3afcee3bba",
+  "estimatedDuration": 6,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\picture-repair\\reuse-sources\\G1-L01-9a0c513b31.mp4",
+      "sha256": "9a0c513b3124245265c6ec67785d4cbbc4f634959523579ad6d134181bae38a3",
+      "sourceTime": [
+        0,
+        6
+      ],
+      "playbackRate": 1,
+      "reuseRole": "仅复用同一人物视觉表演，不导入原节点剧情或声音"
+    }
+  ],
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "noAdditionalSlowdown": true,
+  "existingCentralVoice": {
+    "node": "CH2-LY07-010",
+    "text": "李丰劝你和李严停手。你们究竟安排了什么？",
+    "speaker": "我",
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-010.wav",
+    "duration": 4.601541666666667,
+    "sha256": "90156d5bc656eac59f1a50d48c594eb6b1c3106310a9c44b8dfaa81e77a10007",
+    "ready": true,
+    "source": "central_tts"
+  },
+  "audioIssues": [
+    "复用既有中央玩家音轨，未新增TTS；逐字听审、音色与混音待统一。"
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "previousAdoptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V21-04-16x9.mp4",
+  "previousCandidates": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V21-04-repaired.mp4",
+      "sha256": "332d9dbb227117d7eb42c9786e7086fb24da839144a8af9859c9fe2ccc331850",
+      "reviewState": "rejected-local-draft"
+    }
+  ]
+}

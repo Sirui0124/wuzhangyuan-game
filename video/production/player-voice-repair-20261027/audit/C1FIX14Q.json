@@ -1,0 +1,45 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1FIX14Q",
+  "src": "/video/current/C1FIX14Q-20261025.mp4",
+  "title": "请亲兵通传",
+  "rows": [
+    "J03"
+  ],
+  "afterPlayback": "advance",
+  "subtitles": "/video/subtitles/C1FIX14Q-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1FIX14Q-20261025.mp4",
+  "sha256": "fd36ed1ed8354a3e26d3552dbdadc32f85c3c888813278b5b74ddb62673eaf2b",
+  "duration": 4.01075,
+  "cues": [
+    {
+      "start": 0.21,
+      "end": 3.03,
+      "text": "营前有急报，请替我通传姜将军"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-J03",
+      "node": "J03",
+      "text": "营前有急报，请替我通传姜将军。",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\J03.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "fa1b78c9bdeaf5068e79f72d3af2b4e82d7ff318ad426ad6e6eb3d91424f6736",
+      "duration": 2.99025,
+      "speechRange": [
+        0.28,
+        2.78
+      ],
+      "correlation": 0.9717233110781012,
+      "insertAt": 0.2945,
+      "speechStart": 0.5745,
+      "speechEnd": 3.0745
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

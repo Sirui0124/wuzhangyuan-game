@@ -1,0 +1,1110 @@
+{
+  "group": "G2",
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "sourceSnapshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+  "audioListeningReview": "pending; tools cannot hear; ASR/subtitles/playback ended are technical evidence only",
+  "newPresetTTSCalls": 0,
+  "originalFilesAndCommentsPreserved": true,
+  "gameModified": false,
+  "clips": [
+    {
+      "id": "V13",
+      "userComment": "语音全是乱码，请重新生成语音",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V13-d3e1ecdffc.mp4?v=1792909228477044000",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+        "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+        "duration": 22.875
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-7204845056.mp4",
+        "sha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+        "duration": 15.666666666666666
+      },
+      "durationChange": -7.208333333333334,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-001",
+          "roleControlOnly": "我",
+          "text": "我来领取本队这批粮的交接材料。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-002",
+          "roleControlOnly": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY04-003",
+          "roleControlOnly": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V13-01..04 native audio",
+          "range": "all",
+          "reason": "User reported all garbled; observation is silent, fixed player WAV reused, two exact missing NPC lines replaced with Seed-Audio1.0 reference uploads"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-001",
+          "range": [
+            1.3333333333333333,
+            5.375
+          ],
+          "sourceClip": "V13-player"
+        },
+        {
+          "node": "CH2-LY04-002",
+          "range": [
+            5.375,
+            9.291666666666666
+          ],
+          "sourceClip": "V13-manager"
+        },
+        {
+          "node": "CH2-LY04-003",
+          "range": [
+            9.291666666666666,
+            15.666666666666666
+          ],
+          "sourceClip": "V13-clerk"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V14",
+      "userComment": "背后的语音全是乱码",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/user-review-20261025/candidates/V14-e4411beb30.mp4?v=1792915807152618500",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V14-e4411beb30.mp4",
+        "sha256": "9a3ef0d7af9cc6dc0a000303922f460b6bebb2051ad428c87dc543d21e97cd9a",
+        "duration": 4.125
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V14-731b41a283.mp4",
+        "sha256": "eb1dd8584e771bad564aee46e2a8bfa9277fa62a9bd1f1bada863d8ba803d416",
+        "duration": 15.041666666666666
+      },
+      "durationChange": 10.916666666666666,
+      "spokenWhitelist": [],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY04-004",
+          "roleControlOnly": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "old map native audio",
+          "range": "all",
+          "reason": "No spoken whitelist. All workflow text/labels are neverRead; forward five-stage flow and reverse trace must stay visible"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-004",
+          "range": [
+            0,
+            15.041666666666666
+          ],
+          "sourceClip": "V14"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V15",
+      "userComment": "为什么中间有一个模糊层啊？请你移除掉模糊层。10s以后语音都是乱码",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V15-9f5b4100fd.mp4?v=1792908934870244800",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+        "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+        "duration": 41.041666666666664
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V15-ad4e8faa28.mp4",
+        "sha256": "00b508ecd990a07224a309e7a124d225061ea64619f221d3ded9275ddde963f1",
+        "duration": 13.625
+      },
+      "durationChange": -27.416666666666664,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-F01",
+          "roleControlOnly": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY04-D01",
+          "roleControlOnly": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D02",
+          "roleControlOnly": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "roleControlOnly": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V15-02..04 native audio",
+          "range": "all",
+          "reason": "Document bodies are neverRead, including user-reported post10s metadata; delete audio and long document-card holds, retain three acquisition actions"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-F01",
+          "range": [
+            0,
+            7.5
+          ],
+          "sourceClip": "V15-intro"
+        },
+        {
+          "node": "CH2-LY04-D01",
+          "range": [
+            7.5,
+            8.875
+          ],
+          "sourceClip": "V15-D01"
+        },
+        {
+          "node": "CH2-LY04-D02",
+          "range": [
+            8.875,
+            11.625
+          ],
+          "sourceClip": "V15-D02"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "range": [
+            11.625,
+            13.625
+          ],
+          "sourceClip": "V15-D03"
+        }
+      ],
+      "unresolved": [
+        "Exact nonspoken evidence body retained in mapping; gamePresentationImplemented=false; integration owner must provide separate accurate information display",
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V16A",
+      "userComment": "语音是乱码。视频质量不行。不应该把字幕列在屏幕上",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/user-review-20261025/candidates/V16A-f65489a535.mp4?v=1792915816553928200",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16A-f65489a535.mp4",
+        "sha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+        "duration": 6.125
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16A-f65489a535.mp4",
+        "sha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+        "duration": 6.125
+      },
+      "durationChange": 0.0,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "roleControlOnly": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V16A-01 native audio",
+          "range": "all",
+          "reason": "Use exact existing player WAV only; source cards/masks removed in clean candidate"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "range": [
+            0,
+            6.125
+          ],
+          "sourceClip": "V16A"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V16B",
+      "userComment": "",
+      "oldUserApproved": true,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V16B-06d787a7de.mp4?v=1792908652533017100",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+        "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+        "duration": 12.041666666666666
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+        "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+        "duration": 12.041666666666666
+      },
+      "durationChange": 0.0,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY07-W01",
+          "roleControlOnly": "我（选项）",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-W02",
+          "roleControlOnly": "苟安",
+          "text": "好，这笔罪，我认。你报上去吧，别再查了。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [],
+      "repairsStatus": "preserved-specific-user-approved-file",
+      "newUserApproved": false,
+      "preservedOldApproval": true,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY07-W01",
+          "range": [
+            0,
+            4.75
+          ],
+          "sourceClip": "V16B-01"
+        },
+        {
+          "node": "CH2-LY07-W02",
+          "range": [
+            4.75,
+            12.041666666666666
+          ],
+          "sourceClip": "V16B-02"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "V16C",
+      "userComment": "视频不行，不应该有文字",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V16C-f2ce928d3b.mp4?v=1792908960276660300",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+        "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+        "duration": 18.166666666666668
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16C-5ca60103d4.mp4",
+        "sha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+        "duration": 16.0
+      },
+      "durationChange": -2.166666666666668,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "roleControlOnly": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "roleControlOnly": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V16C-01 native audio",
+          "range": "all",
+          "reason": "Use exact existing player WAV; retain canonical manager response only"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "range": [
+            0,
+            5.75
+          ],
+          "sourceClip": "V16C-player"
+        },
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "range": [
+            5.75,
+            16.0
+          ],
+          "sourceClip": "V16C-response"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V17",
+      "userComment": "音频乱码，屏幕遮挡。重新生成。",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V17-151abbb450.mp4?v=1792909501776399100",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+        "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+        "duration": 12.25
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V17-6e3d180245.mp4",
+        "sha256": "03b8a1ea022a0f601ef9478c5fb9a003d05575cb862cb0a28882254db8f5405b",
+        "duration": 7.666666666666667
+      },
+      "durationChange": -4.583333333333333,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-F02",
+          "roleControlOnly": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V17-01 native audio",
+          "range": [
+            0,
+            2.25
+          ],
+          "reason": "ASR located unauthorized role-prefix around1.46–2.12"
+        },
+        {
+          "source": "V17-01 native audio",
+          "range": [
+            10,
+            12.5
+          ],
+          "reason": "ASR located extra words after canonical sentence; replaced complete line with correct reference model, reduced duration"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-F02",
+          "range": [
+            0,
+            7.666666666666667
+          ],
+          "sourceClip": "V17"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V18",
+      "userComment": "屏幕方块透明遮挡，应该去掉。音频乱码。19s出现字幕不应该。整套应该重新生成\n",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V18-c00f9cabcb.mp4?v=1792909050620414700",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+        "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+        "duration": 53.625
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-bf693534c5.mp4",
+        "sha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f",
+        "duration": 20.666666666666668
+      },
+      "durationChange": -32.95833333333333,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-T01",
+          "roleControlOnly": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-W01",
+          "roleControlOnly": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-C01",
+          "roleControlOnly": "我",
+          "text": "收到的粮对上了。原定要交多少？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY04-D04",
+          "roleControlOnly": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D05",
+          "roleControlOnly": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "roleControlOnly": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V18-02/04/06 document native audio",
+          "range": "all",
+          "reason": "neverRead document/control fields; no new narrator. Three exact player WAVs retained, new brief handoffs replace card holds"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-T01",
+          "range": [
+            0,
+            5.25
+          ],
+          "sourceClip": "V18-T01"
+        },
+        {
+          "node": "CH2-LY04-D04",
+          "range": [
+            5.25,
+            8.0
+          ],
+          "sourceClip": "V18-D04"
+        },
+        {
+          "node": "CH2-LY04-W01",
+          "range": [
+            8.0,
+            13.041666666666668
+          ],
+          "sourceClip": "V18-W01"
+        },
+        {
+          "node": "CH2-LY04-D05",
+          "range": [
+            13.041666666666668,
+            14.875000000000002
+          ],
+          "sourceClip": "V18-D05"
+        },
+        {
+          "node": "CH2-LY04-C01",
+          "range": [
+            14.875000000000002,
+            18.666666666666668
+          ],
+          "sourceClip": "V18-C01"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "range": [
+            18.666666666666668,
+            20.666666666666668
+          ],
+          "sourceClip": "V18-D06"
+        }
+      ],
+      "unresolved": [
+        "Exact nonspoken evidence body retained in mapping; gamePresentationImplemented=false; integration owner must provide separate accurate information display",
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V19A",
+      "userComment": "不应该出现汉字字幕。一大块虚化。重新生成。",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V19A-92eaf5912b.mp4?v=1792909077008530900",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A-92eaf5912b.mp4",
+        "sha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+        "duration": 19.541666666666668
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19A-345979a9a8.mp4",
+        "sha256": "382ac795e12035184ae1c0a3a62ae2bd60e83e0463a3ed0a33fb180e543470af",
+        "duration": 16.291666666666668
+      },
+      "durationChange": -3.25,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "roleControlOnly": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "roleControlOnly": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V19A-01 native audio",
+          "range": "all",
+          "reason": "Exact existing player WAV reused; no new accusation evidence. Native operator response kept only canonical range0–10.125"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "range": [
+            0,
+            6.166666666666667
+          ],
+          "sourceClip": "V19A-player"
+        },
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "range": [
+            6.166666666666667,
+            16.291666666666668
+          ],
+          "sourceClip": "V19A-response"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V19B",
+      "userComment": "文字块模糊了，有文字，都不应该——重新生成\n",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V19B-c36aabc8d5.mp4?v=1792909084869578800",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+        "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+        "duration": 10.041666666666666
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19B-fef1c14bab.mp4",
+        "sha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064",
+        "duration": 7.708333333333333
+      },
+      "durationChange": -2.333333333333333,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "roleControlOnly": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V19B-01 native audio",
+          "range": "all",
+          "reason": "Exact existing player WAV reused; all cards/masks removed"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "range": [
+            0,
+            7.708333333333333
+          ],
+          "sourceClip": "V19B"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V19C",
+      "userComment": "模糊块需要去掉。语\n",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V19C-85920cb12a.mp4?v=1792909102342947100",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C-85920cb12a.mp4",
+        "sha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+        "duration": 14.666666666666666
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-be8a84b107.mp4",
+        "sha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0",
+        "duration": 10.625
+      },
+      "durationChange": -4.041666666666666,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "roleControlOnly": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "roleControlOnly": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V19C-02 native audio",
+          "range": [
+            0,
+            3.2
+          ],
+          "reason": "Unauthorized beginning removed; canonical response3.2–9.416667 retained, silent lead removed too"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "range": [
+            0,
+            4.041666666666667
+          ],
+          "sourceClip": "V19C-player"
+        },
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "range": [
+            4.041666666666667,
+            10.625
+          ],
+          "sourceClip": "V19C-response"
+        }
+      ],
+      "unresolved": [
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    },
+    {
+      "id": "V20",
+      "userComment": "文字款模糊了。——全部去掉。7s之前是语音乱码，调用语音模型补。后续28s之后开始字幕且音频乱码，重新生成、还有模糊块\n",
+      "oldUserApproved": false,
+      "reviewedVersion": {
+        "url": "/groups/G2/assembled/picture-review-final/V20-439cda5b63.mp4?v=1792909175244583100",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+        "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+        "duration": 67.83333333333333
+      },
+      "newVersion": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-b78ca236de.mp4",
+        "sha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301",
+        "duration": 31.625
+      },
+      "durationChange": -36.20833333333333,
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY04-C04",
+          "roleControlOnly": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-014",
+          "roleControlOnly": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-016",
+          "roleControlOnly": "我",
+          "text": "这份确认是谁写的？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY06-017",
+          "roleControlOnly": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-019",
+          "roleControlOnly": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-021",
+          "roleControlOnly": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY06-015",
+          "roleControlOnly": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY06-018",
+          "roleControlOnly": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "misreadOrGarbledCuts": [
+        {
+          "source": "V20-01 native audio",
+          "range": "all",
+          "reason": "User requested model replacement for initial garble; correct Seed-Audio1.0 reference upload used for complete C04 original sentence"
+        },
+        {
+          "source": "V20-03/06 native audio",
+          "range": "all",
+          "reason": "Report and receipt bodies neverRead; keep true handoffs and separate exact game-body dependency"
+        },
+        {
+          "source": "V20-05 native audio",
+          "range": [
+            0,
+            3.8
+          ],
+          "reason": "Wrong prefix and duplicate first rendition removed; correct second rendition3.8–7.291667 reused"
+        },
+        {
+          "source": "V20-07 native audio",
+          "range": [
+            0,
+            3
+          ],
+          "reason": "Unauthorized prefix removed; canonical3.0–7.15 reused"
+        },
+        {
+          "source": "V20-07 native audio",
+          "range": [
+            7.15,
+            8.5
+          ],
+          "reason": "Unauthorized closing word removed"
+        },
+        {
+          "source": "V20-08 native audio",
+          "range": [
+            7.5,
+            9.5
+          ],
+          "reason": "Extra ending after canonical sentence removed; no28s+ subtitle/card carryover"
+        }
+      ],
+      "repairsStatus": "candidate-published-awaiting-user-review",
+      "newUserApproved": false,
+      "preservedOldApproval": false,
+      "currentShaVisualReviewed": true,
+      "actualNodeSpans": [
+        {
+          "node": "CH2-LY04-C04",
+          "range": [
+            0,
+            5.041666666666667
+          ],
+          "sourceClip": "V20-C04"
+        },
+        {
+          "node": "CH2-LY06-014",
+          "range": [
+            5.041666666666667,
+            10.958333333333334
+          ],
+          "sourceClip": "V20-014015"
+        },
+        {
+          "node": "CH2-LY06-015",
+          "range": [
+            10.608333333333334,
+            10.958333333333334
+          ],
+          "sourceClip": "V20-014015"
+        },
+        {
+          "node": "CH2-LY06-016",
+          "range": [
+            10.958333333333334,
+            13.958333333333334
+          ],
+          "sourceClip": "V20-016"
+        },
+        {
+          "node": "CH2-LY06-017",
+          "range": [
+            13.958333333333334,
+            17.583333333333336
+          ],
+          "sourceClip": "V20-017"
+        },
+        {
+          "node": "CH2-LY06-018",
+          "range": [
+            17.583333333333336,
+            19.583333333333336
+          ],
+          "sourceClip": "V20-018"
+        },
+        {
+          "node": "CH2-LY06-019",
+          "range": [
+            19.583333333333336,
+            24.041666666666668
+          ],
+          "sourceClip": "V20-019"
+        },
+        {
+          "node": "CH2-LY06-021",
+          "range": [
+            24.041666666666668,
+            31.625
+          ],
+          "sourceClip": "V20-021"
+        }
+      ],
+      "unresolved": [
+        "Exact nonspoken evidence body retained in mapping; gamePresentationImplemented=false; integration owner must provide separate accurate information display",
+        "Modified candidate needs user review; subjective listening and voice approval pending"
+      ]
+    }
+  ],
+  "videoJobs": [
+    {
+      "id": "UR-DOC-ABC-R1",
+      "status": "succeeded",
+      "task_id": "task_3eORGC1xhCdLPzbT8N0ofEshgWKnHpiQ",
+      "request_sha256": "e433304f37cf0628964f4f2825c1b17d83489b55bcc4962199ca965e1bb763ee",
+      "idempotency_key": "g2-user-repair-897c534098b643b8964240200d246969",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-DOC-ABC-R1.request.json",
+      "dispatchEpoch": 1792915130.5531118,
+      "lastPollEpoch": 1792916055.877166,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:14:18Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/d168a025c57b2f3fe7924e230e507e6e0f2ab21491682fe3290d116c4c4ddb52.mp4"
+    },
+    {
+      "id": "UR-LEDGER-DE-R1",
+      "status": "succeeded",
+      "task_id": "task_7hZPE13EaTy8PGsX0ThaTI2WHm8IjB9O",
+      "request_sha256": "07c4249e127531e4c814d4ccfd910461ca50b46ac71d589405b96fd56c91a080",
+      "idempotency_key": "g2-user-repair-1d2f09e7295447979f6b41a90675fceb",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R1.request.json",
+      "dispatchEpoch": 1792916452.9812093,
+      "lastPollEpoch": 1792917151.5227325,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:32:34Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/e80cddb495521c4f5890307e065528ebad78938f46ad9468afa6a959822459f7.mp4"
+    },
+    {
+      "id": "UR-LEDGER-DE-R2",
+      "status": "succeeded",
+      "task_id": "task_g5ZWRBdpXbR8PlJkjwSbruALzEPhSseT",
+      "request_sha256": "85507a2dc0a14ac36562ada783e73eb5bd9aa13cb5203303f1fb4f4d4b864b57",
+      "idempotency_key": "g2-user-repair-389c5a34cc0b43838f6f3aabb5fb522a",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R2.request.json",
+      "dispatchEpoch": 1792917822.099347,
+      "lastPollEpoch": 1792918585.7281132,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:56:28Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/3b7dd2a760b2a1770cf5500034360b553f4b34d17122b3491ef3601b6d5b8055.mp4"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R1",
+      "status": "succeeded",
+      "task_id": "task_oANgnANKAPMGKG279CEfQ0BSsbiVijSz",
+      "request_sha256": "1b9518c1ad316d318e22aa3bcebe1b95def2c7ae2a9b82dd5325610986f726da",
+      "idempotency_key": "g2-user-repair-75b37b4e18e648aba7cb07bdfe47e7cf",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R1.request.json",
+      "dispatchEpoch": 1792916458.2339182,
+      "lastPollEpoch": 1792917154.9307635,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:32:37Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/e66c50f8b566e70ab5aeb584b3a437f6abe6703f99c9bb3472dedcf92d3c5406.mp4"
+    },
+    {
+      "id": "UR-REPORT-RECEIPT-R2",
+      "status": "succeeded",
+      "task_id": "task_XWx1XHg9c1OaWTGyJK4YTae3ZsBPAtIN",
+      "request_sha256": "f7282118924b0501c2b33b94a16553c4d84f360dbc9ab4eefaea879d30f19614",
+      "idempotency_key": "g2-user-repair-db77d312b6a543aba2546d7d0038e386",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R2.request.json",
+      "dispatchEpoch": 1792917832.4741564,
+      "lastPollEpoch": 1792918366.2089875,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:52:48Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/209c85c7ee3492d49e659b6984acd02c226981d99d929ca7b19a6d5c2af3ba1d.mp4"
+    },
+    {
+      "id": "UR-V13-VOUCHER-R1",
+      "status": "succeeded",
+      "task_id": "task_xJ8ktJ6DSMiKdszyXeDAPAelZilx9ykP",
+      "request_sha256": "50d9cb6590f5feba8c98e70042f45cdf40e3ebb40e4d45f5af8afd0be1241aa1",
+      "idempotency_key": "g2-user-repair-4fbaa53a872541a8a391189fca115acf",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V13-VOUCHER-R1.request.json",
+      "dispatchEpoch": 1792918775.617493,
+      "lastPollEpoch": 1792919177.622565,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:06:19Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/2822b1472b8b87fd389194f37d9c9b77f673696bdcd8161b6541720f7dade8bc.mp4"
+    },
+    {
+      "id": "UR-V14-FLOW-R1",
+      "status": "succeeded",
+      "task_id": "task_Byl2kNehOMmCNYwCrGMA7b5yomCTAzjJ",
+      "request_sha256": "c128f7c73d1e26a9b6813075674f181a638da0067db3060251d322f5a26163ac",
+      "idempotency_key": "g2-user-repair-d1cd6ebe01aa4062ba338256b5b9870a",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R1.request.json",
+      "dispatchEpoch": 1792917515.244035,
+      "lastPollEpoch": 1792918589.7345161,
+      "progress": 1,
+      "updated_utc": "2026-10-25T08:56:33Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/614c177015a3facd83de176e83d725afc1dde8e8cec38ce307f3d0cb36a1115b.mp4"
+    },
+    {
+      "id": "UR-V14-FLOW-R2",
+      "status": "succeeded",
+      "task_id": "task_BMBpJigA76CDzEYHdMDt7bH3WnA7Byt9",
+      "request_sha256": "8e355931b6c6a3c4b2b95171e854b9025f190c4d77f100ccbce0e3bd3b2f4d9e",
+      "idempotency_key": "g2-user-repair-507d32ea35864f7497ee9c285c736deb",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R2.request.json",
+      "dispatchEpoch": 1792918726.6181943,
+      "lastPollEpoch": 1792920579.3075073,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:29:42Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/5a45d7743f98e3b2cff873e68a1c4ac6ee628e89b2207d73dc945cfcbb402a69.mp4"
+    },
+    {
+      "id": "UR-V20-OPERATOR-R1",
+      "status": "succeeded",
+      "task_id": "task_UnSAcpl5CvsNqJf0JIYncYMznolccAlx",
+      "request_sha256": "c70e6ce532cf28128e24590c7dcc5faba59415cf5a97ea602f3da68683c65169",
+      "idempotency_key": "g2-user-repair-5e0b42ac45974b9d90934665d6856e76",
+      "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V20-OPERATOR-R1.request.json",
+      "dispatchEpoch": 1792918834.4788845,
+      "lastPollEpoch": 1792919479.4698803,
+      "progress": 1,
+      "updated_utc": "2026-10-25T09:11:21Z",
+      "result_url": "https://h3-gz-public-1483601991.cos.ap-guangzhou.myqcloud.com/outputs/a9225834b8162f5f91e024accf83d3d93bd12b993ceeee4b571facff451b1c74.mp4"
+    }
+  ],
+  "generatedAudio": [
+    {
+      "id": "V13-03",
+      "sha256": "4cd014d93f76cebb34950568f6215995df5958c54aedff5dc418bf7bc7621918",
+      "model": "seed-audio-1.0",
+      "referenceUploaded": true,
+      "userVoiceApproved": false
+    },
+    {
+      "id": "V13-04",
+      "sha256": "efd15242c9e958460ebd6b2ea5023a3de7534ca3d145d4d40804f26911223d1b",
+      "model": "seed-audio-1.0",
+      "referenceUploaded": true,
+      "userVoiceApproved": false
+    },
+    {
+      "id": "V17-01",
+      "sha256": "81df46b8b3bda0c1a5cf75cc2fa8a8c68e496f955ae4768cdcfc321ccd44a16b",
+      "model": "seed-audio-1.0",
+      "referenceUploaded": true,
+      "userVoiceApproved": false
+    },
+    {
+      "id": "V20-01",
+      "sha256": "268435b73ca6bd4988ad4ed948927be19f85f62f932b1596da9e6cf280049b8d",
+      "model": "seed-audio-1.0",
+      "referenceUploaded": true,
+      "userVoiceApproved": false
+    }
+  ],
+  "status": "12 production candidates visually and technically reviewed; modified versions await user review",
+  "currentFilesValidation": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\final-current-validation.json",
+  "audioBoundaryAudit": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json",
+  "audioBoundaryCheckedSpokenSegments": 22,
+  "minimumTailSeconds": 0.1133333333333324,
+  "sourceMap": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\source-realization.json",
+  "gamePresentationImplemented": false
+}

@@ -1,0 +1,132 @@
+{
+  "id": "V29-06",
+  "expected": "案子一交，就正式查办。换个说法也撤不回来。",
+  "postVoiceText": null,
+  "actual": "案子一交就正式查办换个说法也撤不回来",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 1.3,
+      "end": 4.24,
+      "text": "案子一交就正式查办",
+      "words": [
+        {
+          "start": 1.3,
+          "end": 1.86,
+          "word": "案",
+          "probability": 0.8278511166572571
+        },
+        {
+          "start": 1.86,
+          "end": 2.08,
+          "word": "子",
+          "probability": 0.9990463852882385
+        },
+        {
+          "start": 2.08,
+          "end": 2.26,
+          "word": "一",
+          "probability": 0.9596590399742126
+        },
+        {
+          "start": 2.26,
+          "end": 2.54,
+          "word": "交",
+          "probability": 0.8086938261985779
+        },
+        {
+          "start": 2.54,
+          "end": 3.44,
+          "word": "就",
+          "probability": 0.610082745552063
+        },
+        {
+          "start": 3.44,
+          "end": 3.64,
+          "word": "正",
+          "probability": 0.9975717663764954
+        },
+        {
+          "start": 3.64,
+          "end": 3.82,
+          "word": "式",
+          "probability": 0.8650280833244324
+        },
+        {
+          "start": 3.82,
+          "end": 4.04,
+          "word": "查",
+          "probability": 0.9669554233551025
+        },
+        {
+          "start": 4.04,
+          "end": 4.24,
+          "word": "办",
+          "probability": 0.7657536268234253
+        }
+      ]
+    },
+    {
+      "start": 5.72,
+      "end": 7.6,
+      "text": "换个说法也撤不回来",
+      "words": [
+        {
+          "start": 5.72,
+          "end": 6.12,
+          "word": "换",
+          "probability": 0.9728419482707977
+        },
+        {
+          "start": 6.12,
+          "end": 6.28,
+          "word": "个",
+          "probability": 0.9979713559150696
+        },
+        {
+          "start": 6.28,
+          "end": 6.42,
+          "word": "说",
+          "probability": 0.9910218119621277
+        },
+        {
+          "start": 6.42,
+          "end": 6.66,
+          "word": "法",
+          "probability": 0.999944806098938
+        },
+        {
+          "start": 6.66,
+          "end": 6.94,
+          "word": "也",
+          "probability": 0.9890856146812439
+        },
+        {
+          "start": 6.94,
+          "end": 7.12,
+          "word": "撤",
+          "probability": 0.9876022040843964
+        },
+        {
+          "start": 7.12,
+          "end": 7.28,
+          "word": "不",
+          "probability": 0.9809269905090332
+        },
+        {
+          "start": 7.28,
+          "end": 7.42,
+          "word": "回",
+          "probability": 0.9941326975822449
+        },
+        {
+          "start": 7.42,
+          "end": 7.6,
+          "word": "来",
+          "probability": 0.9995647072792053
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

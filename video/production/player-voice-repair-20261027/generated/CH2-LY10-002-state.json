@@ -1,0 +1,257 @@
+{
+  "id": "CH2-LY10-002",
+  "node": "CH2-LY10-002",
+  "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+  "kind": "regular-dialogue",
+  "targetSeconds": 7.82,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "2abb5f6e-1368-4ca2-be27-a3748a0f63a5",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:19:51.921Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。唯一允许发声的原句：“有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约7.82秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "bff418b70dce4c1903f1a3f233d15792154e507e87bb274a1e7ee6a8a4bbc945",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027191952A127EB881D18A762A9FC",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-002-v1.wav",
+  "sha256": "744d584cc7e8e8d6924ddde47f6fe600b6509825003451060163df942f227732",
+  "duration": 7.8,
+  "originalDuration": 7.8,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2760,
+        "start_time": 0,
+        "text": "有人瞒了粮情，还商量过借魏散谣。",
+        "words": [
+          {
+            "end_time": 80,
+            "start_time": 0,
+            "text": "有"
+          },
+          {
+            "end_time": 200,
+            "start_time": 80,
+            "text": "人"
+          },
+          {
+            "end_time": 320,
+            "start_time": 240,
+            "text": "瞒"
+          },
+          {
+            "end_time": 560,
+            "start_time": 440,
+            "text": "了"
+          },
+          {
+            "end_time": 720,
+            "start_time": 640,
+            "text": "粮"
+          },
+          {
+            "end_time": 960,
+            "start_time": 880,
+            "text": "情"
+          },
+          {
+            "end_time": 960,
+            "start_time": 960,
+            "text": "，"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1280,
+            "text": "还"
+          },
+          {
+            "end_time": 1640,
+            "start_time": 1440,
+            "text": "商"
+          },
+          {
+            "end_time": 1760,
+            "start_time": 1640,
+            "text": "量"
+          },
+          {
+            "end_time": 1960,
+            "start_time": 1760,
+            "text": "过"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 2040,
+            "text": "借"
+          },
+          {
+            "end_time": 2320,
+            "start_time": 2240,
+            "text": "魏"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2480,
+            "text": "散"
+          },
+          {
+            "end_time": 2760,
+            "start_time": 2720,
+            "text": "谣"
+          },
+          {
+            "end_time": 2760,
+            "start_time": 2760,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 7760,
+        "start_time": 3520,
+        "text": "散谣尚未动手，现在停下，把实情补报上来，行吗？",
+        "words": [
+          {
+            "end_time": 3600,
+            "start_time": 3520,
+            "text": "散"
+          },
+          {
+            "end_time": 3760,
+            "start_time": 3720,
+            "text": "谣"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3880,
+            "text": "尚"
+          },
+          {
+            "end_time": 4160,
+            "start_time": 4080,
+            "text": "未"
+          },
+          {
+            "end_time": 4440,
+            "start_time": 4240,
+            "text": "动"
+          },
+          {
+            "end_time": 4640,
+            "start_time": 4440,
+            "text": "手"
+          },
+          {
+            "end_time": 4640,
+            "start_time": 4640,
+            "text": "，"
+          },
+          {
+            "end_time": 4960,
+            "start_time": 4800,
+            "text": "现"
+          },
+          {
+            "end_time": 5080,
+            "start_time": 4960,
+            "text": "在"
+          },
+          {
+            "end_time": 5320,
+            "start_time": 5080,
+            "text": "停"
+          },
+          {
+            "end_time": 5680,
+            "start_time": 5360,
+            "text": "下"
+          },
+          {
+            "end_time": 5680,
+            "start_time": 5680,
+            "text": "，"
+          },
+          {
+            "end_time": 5880,
+            "start_time": 5680,
+            "text": "把"
+          },
+          {
+            "end_time": 6040,
+            "start_time": 6000,
+            "text": "实"
+          },
+          {
+            "end_time": 6280,
+            "start_time": 6200,
+            "text": "情"
+          },
+          {
+            "end_time": 6480,
+            "start_time": 6440,
+            "text": "补"
+          },
+          {
+            "end_time": 6680,
+            "start_time": 6600,
+            "text": "报"
+          },
+          {
+            "end_time": 6920,
+            "start_time": 6760,
+            "text": "上"
+          },
+          {
+            "end_time": 7160,
+            "start_time": 6920,
+            "text": "来"
+          },
+          {
+            "end_time": 7160,
+            "start_time": 7160,
+            "text": "，"
+          },
+          {
+            "end_time": 7600,
+            "start_time": 7440,
+            "text": "行"
+          },
+          {
+            "end_time": 7760,
+            "start_time": 7600,
+            "text": "吗"
+          },
+          {
+            "end_time": 7760,
+            "start_time": 7760,
+            "text": "？"
+          }
+        ]
+      }
+    ],
+    "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:20:26.892Z"
+}

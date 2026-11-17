@@ -1,0 +1,378 @@
+/* Reuse the first three chapters' live dialogue-ink.css; only adapt demo placement. */
+:root{--ink:#e8e1d3;--muted:#b9b1a3;--gold:#cdb38b;--panel:#24211c;--bg:#171714}
+#game-root{min-height:100dvh}#game-root header{background:#191a16}#game-root .reinforcement-note{background:#23231c;color:#b9b1a3}#game-root .scene-navigation{background:#1b1d18}#game-root .scene-navigation button.active{color:#dbc3a0}
+/* Supporting rescue numbers and army orders use the existing military folio material. */
+:root #game-root .chapter-folio{background:#24231d url('/ui/folio-cover-neutral-v1.png') center/100% 100%;border:0;border-radius:0;box-shadow:0 24px 80px #0008;padding:16px 24px 20px;color:#e8e1d3}
+:root #game-root .chapter-folio::backdrop{background:#14161080;backdrop-filter:none}
+:root #game-root .chapter-folio .sheet-top{background:#21211be8;border-bottom:1px solid #b39c6e44;padding:8px 12px}
+:root #game-root .chapter-folio :is(.route-summary,.detail-tabs,.conversation,.order-pane,.result-panel,.ending){background:#191914cf}
+:root #game-root .chapter-folio .detail-tabs{border-color:#b39c6e44}
+:root[data-ui-theme=xuan] #game-root .chapter-folio.game-scene .dialogue-box{position:relative;left:auto;right:auto;bottom:auto;width:100%;max-height:none;padding:20px 22px;margin:0;overflow:visible}
+:root #game-root .chapter-folio .dialogue-box:before{inset:0;opacity:.35}
+:root #game-root .chapter-folio :is(.conversation-title,.question-area,.facts){border-color:#b39c6e33;background:none}
+:root #game-root .chapter-folio .conversation-title{padding:0 0 10px}
+:root #game-root .chapter-folio .conversation-title .dialogue-speaker{margin:5px 0 0}
+:root #game-root .chapter-folio .chat-log{padding:14px 0;max-height:28dvh}
+:root #game-root .chapter-folio .chat-line>span{color:#cbb393}
+:root #game-root .chapter-folio .chat-line.user{border-color:#8c795e}
+:root #game-root .chapter-folio .latest-report{background:#aa916d0d;padding:10px 0;border-color:#b39c6e33}
+:root #game-root .chapter-folio .question-area{padding:14px 0 0}
+:root #game-root .chapter-folio .hints button{border:0;border-radius:0;background:#c5af8c12;color:#ded0bc;font:18px/1.7 KaiTi,STKaiti,serif;clip-path:polygon(0 5%,25% 0,70% 4%,100% 0,99% 95%,60% 100%,23% 96%,0 100%)}
+:root #game-root .chapter-folio :is(textarea,input){border-radius:0;border-color:#b39c6e55;background:#12140fc2;font-family:KaiTi,STKaiti,serif;color:#e8e1d3}
+:root #game-root .chapter-folio :is(.primary,.order-done){background:#874938;color:#f4e5cd;border:1px solid #c18d6e55;border-radius:3px 6px 3px 5px;font:18px/1.5 KaiTi,STKaiti,serif}
+:root #game-root .chapter-folio .stepper button{border-radius:2px;background:none}
+/* Painted terrain replaces the rectangular tactical grid entirely. */
+#game-root .stage .rescue-map{background:#383b2e;isolation:isolate}
+.map-art{filter:saturate(.58) brightness(.9);position:absolute;inset:0;width:100%;height:100%;object-fit:fill;z-index:-2;pointer-events:none;user-select:none}
+#game-root .stage .rescue-map:after{inset:0;z-index:-1;box-shadow:none;background:linear-gradient(180deg,#141e1899,transparent 22%,transparent 80%,#101a16b3)}
+#game-root .stage .map-heading{top:4%}#game-root .stage .map-heading h2{color:#eaddbb;text-shadow:0 2px 7px #0c1714,0 0 20px #17231d}
+#game-root .stage .map-heading .eyebrow,#game-root .stage .map-heading>span{color:#d7cfb7;text-shadow:0 1px 6px #111c16}
+#game-root .stage .map-stop{width:25%;max-width:270px}
+#game-root .stage .place-label{color:#e1d4b8;text-shadow:0 1px 4px #101a12,0 0 10px #101a12;letter-spacing:2px}
+#game-root .stage .map-card,#game-root .stage .map-card.selected,#game-root .stage .map-card:hover{border:0;border-radius:0;box-shadow:none;background:none}
+#game-root .stage .map-card{isolation:isolate}
+#game-root .stage .map-card:before{content:'';position:absolute;inset:-12px -26px -14px;z-index:-1;background:radial-gradient(ellipse 50% 50% at 50% 50%,#101b16ed 0%,#101b16e6 50%,#101b16c4 68%,#101b1657 84%,transparent 100%);opacity:.92;pointer-events:none;transition:opacity .18s ease}
+#game-root .stage .map-card.selected:before,#game-root .stage .map-card:hover:before,#game-root .stage .map-card:focus-visible:before{opacity:1}
+#game-root .stage .map-card-title b{color:#fff0d2;text-shadow:0 2px 4px #07100b;font-family:KaiTi,STKaiti,serif}
+#game-root .stage .map-time{color:#f5e7cc;text-shadow:0 1px 4px #101a12}
+#game-root .stage .map-stop.unknown{opacity:.65}
+#game-root .stage .map-card.failed{opacity:.82}
+#game-root .stage>.dispatch{background:linear-gradient(90deg,transparent,#171d17bd 25%);padding:10px 16px 10px 35px}
+#game-root .stage>.dispatch button{border-radius:2px;background:#874938;color:#f4e5cd;border-color:#c18d6e55;font-family:KaiTi,STKaiti,serif;clip-path:polygon(1% 5%,25% 0,70% 4%,100% 0,99% 95%,60% 100%,23% 96%,0 100%)}
+@media(max-width:600px){
+ :root #game-root .chapter-folio{padding:12px 14px}
+ #game-root .stage .map-stop{width:31%}
+ #game-root .stage>.dispatch{padding:8px 6px;background:#171d1799}
+}
+@media(max-height:520px) and (min-width:601px){
+}
+
+.map-viewport{position:absolute;inset:0;overflow:auto;scrollbar-width:thin;scrollbar-color:#b8a07566 #171b1633;overscroll-behavior:contain}.map-pan-hint{display:none;position:absolute;bottom:84px;left:5%;font:14px/1.6 KaiTi,serif;color:#ded0b0;text-shadow:0 1px 5px #10150e;pointer-events:none;z-index:3}
+@media(max-width:920px){#game-root .map-viewport .rescue-map{min-width:1067px;height:600px;min-height:100%}#game-root .stage .map-stop{width:25%;max-width:240px}#game-root .map-pan-hint{display:block}.map-art{object-fit:fill}}
+
+
+.map-viewport{cursor:grab;user-select:none}.map-viewport.dragging{cursor:grabbing}.map-viewport button{cursor:pointer}
+
+/* Only the native-dialog shell is demo-specific. Reading/choice composition,
+   portrait staging and the ink backdrop come from the shared chapter styles. */
+:root[data-ui-theme=xuan] #game-root .scene-dialog.game-scene.chapter-dialogue{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;border-radius:0;box-shadow:none;overflow:hidden;color:var(--dialogue-ink)}
+:root #game-root .chapter-dialogue::backdrop{background:transparent;backdrop-filter:none}
+#game-root:has(.chapter-dialogue[open]) #app{visibility:hidden}
+:root #game-root .chapter-dialogue :is(.scene-image,.scene-shade){position:absolute;inset:0;pointer-events:none}
+:root #game-root .chapter-dialogue .scene-image{background-position:center;background-size:cover}
+:root #game-root .chapter-dialogue .portrait-stage{position:absolute;pointer-events:none}
+:root #game-root .chapter-dialogue .character-art{display:block;width:100%;height:100%;user-select:none}
+:root #game-root .chapter-dialogue .sheet-top{position:absolute;top:24px;left:4vw;right:4vw;padding:0;border:0;background:none;z-index:5;justify-content:flex-end}
+:root #game-root .chapter-dialogue .sheet-top>span{display:none}
+:root #game-root .chapter-dialogue .sheet-top>button{padding:7px 0;border:0;background:none;color:var(--dialogue-muted);font:16px/1.6 var(--serif)}
+:root #game-root .chapter-dialogue .dialogue-box{overflow:visible}
+:root #game-root .chapter-dialogue .dialogue-box::before{filter:brightness(.45);opacity:.9}
+:root #game-root .chapter-dialogue .dialogue-reading{overflow:visible;max-height:none}
+:root[data-ui-theme=xuan] #game-root .chapter-dialogue .scout-choice button{font-size:24px;line-height:1.8;margin:0;width:auto;min-width:0}
+:root #game-root .chapter-dialogue .error{position:absolute;top:70px;left:15vw;right:15vw;z-index:6}
+:root #game-root .chapter-dialogue .sheet-working{position:absolute;top:70px;right:4vw;z-index:6}
+@media(max-width:650px){
+ :root[data-ui-theme=xuan] #game-root .chapter-dialogue .dialogue-box::before{inset:0}
+}
+@media(max-height:520px){
+ :root[data-ui-theme=xuan] #game-root .chapter-dialogue .dialogue-box{left:6vw;right:6vw;width:auto;bottom:30px;padding:12px 18px;max-height:calc(100dvh - 96px)}
+ :root[data-ui-theme=xuan] #game-root .chapter-dialogue .dialogue-box::before{inset:0}
+ :root #game-root .chapter-dialogue .sheet-top{top:8px}
+ :root #game-root .chapter-dialogue .dialogue-key-hint{bottom:5px}
+}
+
+/* Route briefing: compact controls and a scrollable conversation history. */
+:root #game-root .scene-dialog.chapter-folio.route-sheet{inset:0;margin:auto;width:88vw;max-width:none;max-height:90dvh;padding:14px 24px;box-sizing:border-box;overflow-x:hidden;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#9e8b6b66 transparent}
+:root #game-root .route-sheet .sheet-top{padding:4px 0 10px;background:#24231d;position:relative}
+:root #game-root .route-sheet .sheet-top>span{font-size:16px;letter-spacing:1px}
+:root #game-root .route-sheet .sheet-top button{font-size:18px}
+:root #game-root .route-sheet .route-summary{display:flex;align-items:center;gap:24px;padding:14px 16px}
+:root #game-root .route-sheet .route-summary>div{flex:0 1 24%;min-width:150px}
+:root #game-root .route-sheet .route-summary h2{font:30px/1.3 var(--serif);letter-spacing:1px;margin:4px 0}
+:root #game-root .route-sheet .route-summary .eyebrow{font-size:16px;letter-spacing:1px}
+:root #game-root .route-sheet .route-summary dl{flex:1;gap:16px;grid-template-columns:repeat(4,minmax(0,1fr))}
+:root #game-root .route-sheet .route-summary dt{font-size:17px;margin-bottom:4px;letter-spacing:0}
+:root #game-root .route-sheet .route-summary dd{font-size:26px;line-height:1.3}
+:root #game-root .route-sheet .route-summary dd small{font-size:16px}
+:root #game-root .route-sheet .detail-tabs{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:10px 16px;border:0}
+:root #game-root .route-sheet .detail-tabs button{border:1px solid #b39c6e66;background:#b39c6e0d;padding:11px 16px;text-align:center;color:#d8ceba;font:22px/1.5 var(--serif);border-radius:2px}
+:root #game-root .route-sheet .detail-tabs button.active{border-color:#d2b18a;background:#79634955;color:#fff0d8;box-shadow:inset 0 -2px #d2b18a}
+:root #game-root .route-sheet .detail-tabs button.order-entry{border-color:#bd8064;background:#874938;color:#f4e5cd}
+:root #game-root .route-sheet .detail-tabs button small{font-size:18px;margin-left:10px}
+:root #game-root .route-sheet .route-conversation{margin:0;padding:12px 16px 16px;border:0}
+:root #game-root .route-sheet .conversation-title{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:0 0 10px}
+:root #game-root .route-sheet .conversation-title .dialogue-speaker{font-size:22px;margin:0}
+:root #game-root .route-sheet .question-count{font-size:17px;color:#b9b1a3;margin-left:auto}
+:root #game-root .route-sheet .conversation-title button{font-size:18px;padding:5px 12px}
+:root #game-root .route-sheet .chat-log{padding:12px 0;min-height:0;max-height:none;overflow:visible}
+:root[data-ui-theme=xuan][data-art-style][data-art-font] #game-root .route-sheet .dialogue-text{font:24px/1.65 var(--serif);min-height:0;margin:0;overflow-wrap:anywhere}
+:root #game-root .route-sheet .facts{padding:8px 0;border-top:1px solid #b39c6e33}
+:root #game-root .route-sheet .facts summary{font-size:18px}
+:root #game-root .route-sheet .facts p{font-size:22px;line-height:1.6;margin:8px 0}
+:root #game-root .route-sheet .question-area{padding:10px 0 0}
+:root #game-root .route-sheet .hints{margin:0 0 8px}
+:root #game-root .route-sheet .hints button{font-size:22px;padding:4px 12px}
+:root #game-root .route-sheet #chat-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center}
+:root #game-root .route-sheet #question{min-width:0;width:100%;height:52px;padding:8px 12px;font:24px/1.4 var(--serif);box-sizing:border-box}
+:root #game-root .route-sheet #question::placeholder{font-size:22px;color:#b9b1a3}
+:root #game-root .route-sheet #chat-form button{min-height:52px;padding:8px 24px;font-size:22px}
+:root #game-root .route-sheet .talk-to-order{display:block;margin:12px 0 0 auto;padding:10px 24px;font-size:22px}
+:root #game-root .route-sheet .question-limit{font-size:18px;color:#d8c49e;margin:8px 0 0}
+:root #game-root .route-sheet .order-pane{padding:12px 16px 16px}
+:root #game-root .route-sheet .order-top{align-items:center;margin:0 0 10px}
+:root #game-root .route-sheet .order-top h3{font-size:24px;margin:0}
+:root #game-root .route-sheet .stepper input{font-size:26px}
+:root #game-root .route-sheet .order-pane textarea{font:24px/1.6 var(--serif);min-height:140px;padding:12px}
+:root #game-root .route-sheet .order-pane :is(.preset,.order-done){font-size:22px;padding:9px 18px}
+:root #game-root .route-sheet .order-pane .quiet{font-size:18px;line-height:1.6;margin:10px 0}
+#game-root .stage .map-required{font:16px/1.5 KaiTi,serif;color:#f1ddba;text-shadow:0 1px 5px #121812;margin-top:4px}
+#game-root .stage .marker-draft{display:block;font:15px/1.5 KaiTi,serif;color:#e4c795;margin-top:3px}
+#game-root .stage .map-card{padding-top:4px;padding-bottom:6px}
+#game-root .stage .place-label{margin-bottom:4px}
+#game-root .stage .map-time{margin-top:4px}
+#game-root .stage .route-beacon{margin-bottom:6px}
+#game-root .map-viewport .rescue-map{min-width:1280px;min-height:720px;height:100%}
+/* Place each route on the painted terrain, without compressing it into rows. */
+#game-root .stage .map-viewport .map-stop{top:var(--y);width:20%;max-width:248px}
+#game-root .stage .map-viewport .map-stop.unknown{width:110px}
+#game-root .stage .map-card:before{inset:-8px -18px -12px}
+@media(max-width:1279px){#game-root .map-pan-hint{display:block}}
+@media(max-width:900px){
+ :root #game-root .route-sheet .route-summary{display:block}
+ :root #game-root .route-sheet .route-summary>div{display:flex;align-items:center;gap:14px;margin-bottom:10px}
+ :root #game-root .route-sheet .route-summary dl{gap:10px}
+}
+@media(max-width:600px){
+ :root #game-root .scene-dialog.chapter-folio.route-sheet{width:92vw;max-height:94dvh;padding:10px 12px}
+ :root #game-root .route-sheet .route-summary{padding:10px 4px}
+ :root #game-root .route-sheet .route-summary dl{grid-template-columns:1fr 1fr}
+ :root #game-root .route-sheet .detail-tabs{padding:8px 0;gap:8px}
+ :root #game-root .route-sheet .detail-tabs button{padding:9px 6px;font-size:20px}
+ :root #game-root .route-sheet .route-conversation,:root #game-root .route-sheet .order-pane{padding:10px 4px}
+ :root #game-root .route-sheet #chat-form{gap:8px}
+ :root #game-root .route-sheet #chat-form button{padding:8px 12px}
+ :root #game-root .route-sheet .order-top{flex-wrap:wrap;gap:10px}
+ #game-root .stage .map-required{font-size:15px}
+ #game-root .stage .marker-draft{font-size:14px}
+}
+
+
+/* Keep the briefing tall; reserve the middle for the conversation. */
+:root #game-root .scene-dialog.chapter-folio.route-sheet{height:88dvh;max-height:88dvh;padding:10px 22px}
+:root #game-root .scene-dialog.chapter-folio.route-sheet[open]{display:flex;flex-direction:column}
+:root #game-root .route-sheet>:not(.route-conversation){flex-shrink:0}
+:root #game-root .route-sheet .sheet-top{padding:0 0 4px}
+:root #game-root .route-sheet .sheet-top button{padding:3px 6px}
+:root #game-root .route-sheet .route-summary{padding:7px 12px;gap:18px}
+:root #game-root .route-sheet .route-summary h2{font-size:26px;margin:0}
+:root #game-root .route-sheet .route-summary dl{margin:0;gap:12px}
+:root #game-root .route-sheet .route-summary dt{font-size:16px;margin-bottom:1px}
+:root #game-root .route-sheet .route-summary dd{font-size:24px;margin:0}
+:root #game-root .route-sheet .detail-tabs{padding:4px 12px 8px;gap:10px}
+:root #game-root .route-sheet .detail-tabs button{padding:5px 12px;line-height:1.35}
+:root #game-root .route-sheet .route-conversation{flex:1;min-height:0;display:flex;flex-direction:column;padding:4px 12px 8px;gap:6px;overflow:hidden}
+:root #game-root .route-sheet .conversation-title{padding:0 0 4px;gap:8px;flex-shrink:0}
+:root #game-root .route-sheet .conversation-title .dialogue-speaker{font-size:20px}
+:root #game-root .route-sheet .conversation-title .dialogue-speaker::before{display:none}
+:root #game-root .route-sheet .conversation-title button{padding:3px 10px}
+:root #game-root .route-sheet .chat-log{flex:1;min-height:90px;max-height:none;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a78e6577 transparent;padding:8px 10px 10px;display:flex;flex-direction:column;gap:12px;background:#0d0e0c44;border:1px solid #b39c6e22;border-radius:4px}
+:root #game-root .route-sheet .message{flex-shrink:0;align-self:flex-start;max-width:86%;min-width:0;padding:9px 16px 12px;background:#292a23e8;border:1px solid #a9947040;border-radius:2px 13px 13px 13px;box-shadow:0 2px 8px #0002}
+:root #game-root .route-sheet .message-mine{align-self:flex-end;background:#544434c9;border-color:#bd9c6d55;border-radius:13px 2px 13px 13px}
+:root #game-root .route-sheet .message-speaker{display:block;font:17px/1.4 var(--serif);color:#c5af88;margin-bottom:3px}
+:root #game-root .route-sheet .message-mine .message-speaker{text-align:right;color:#e6c799}
+:root #game-root .route-sheet .message .dialogue-text{white-space:pre-wrap}
+:root #game-root .route-sheet .chat-round{flex-shrink:0;align-self:center;font:15px/1.4 var(--serif);color:#b4a68e;padding:2px 14px}
+:root #game-root .route-sheet .facts{flex-shrink:0;padding:4px 0;max-height:15dvh;overflow:auto}
+:root #game-root .route-sheet .question-area{flex-shrink:0;padding:4px 0 0}
+:root #game-root .route-sheet .hints{margin:0 0 4px}
+:root #game-root .route-sheet .hints button{font-size:20px;padding:2px 10px}
+:root #game-root .route-sheet .talk-to-order{margin:6px 0 0 auto;padding:5px 18px;font-size:20px}
+:root #game-root .route-sheet .question-limit{margin:4px 0 0}
+@media(max-width:900px){
+ :root #game-root .route-sheet .route-summary>div{margin-bottom:4px}
+}
+@media(max-width:600px){
+ :root #game-root .scene-dialog.chapter-folio.route-sheet{padding:8px 12px}
+ :root #game-root .route-sheet .route-summary{padding:4px 0}
+ :root #game-root .route-sheet .route-summary dl{gap:4px 10px}
+ :root #game-root .route-sheet .route-summary dd{font-size:22px}
+ :root #game-root .route-sheet .detail-tabs{padding:4px 0}
+ :root #game-root .route-sheet .detail-tabs button{padding:5px 6px;font-size:20px}
+ :root #game-root .route-sheet .route-conversation{padding:4px 0}
+ :root #game-root .route-sheet .message{max-width:96%;padding:8px 10px}
+ :root #game-root .route-sheet .chat-log{padding:6px}
+}
+@media(max-height:560px){
+ :root #game-root .route-sheet .route-conversation{flex:1 0 300px;min-height:300px}
+}
+
+/* Known intelligence lives above the conversation as a separate overlay. */
+#modal:has(.intel-window){--serif:KaiTi,"STKaiti","Kaiti SC",serif;width:min(86vw,880px);max-width:calc(100vw - 24px);max-height:82dvh;padding:24px 28px;box-sizing:border-box;border:1px solid #b39c6e99;background:#24251eed;box-shadow:0 18px 80px #0009;overflow:auto;scrollbar-width:thin}
+.intel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid #b39c6e44}
+.intel-heading .eyebrow{font:18px/1.5 var(--serif);letter-spacing:1px;color:#cdbb98}
+.intel-heading h2{font:30px/1.4 var(--serif);margin:4px 0 0}
+.intel-heading>button{font:18px/1.5 var(--serif);padding:4px 8px;background:none;border:0;white-space:nowrap}
+.intel-list{margin:10px 0 16px;padding:0 0 0 1.5em;font:24px/1.7 var(--serif);color:#eee3cf}
+.intel-list li{padding:12px 0 12px 8px;overflow-wrap:anywhere}
+.intel-list li+li{border-top:1px solid #b39c6e22}
+.intel-list li::marker{color:#c7aa77}
+.intel-conclusion{font:24px/1.7 var(--serif);border-top:1px solid #b39c6e44;padding-top:14px}
+.intel-agreed{font:20px/1.5 var(--serif);color:#cbd6a5}
+.intel-actions{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap;padding-top:8px}
+.intel-actions button{font:22px/1.4 var(--serif);padding:8px 16px}
+@media(max-width:600px){#modal:has(.intel-window){width:92vw;padding:18px}.intel-heading h2{font-size:26px}.intel-list{padding-left:1.2em}}
+
+/* The existing intel folio hosts the shared clue selector, scoped to this route. */
+#modal .thought-clue-window{--mind-ink:#eee3cf;--mind-muted:#c5b391;color:var(--mind-ink)}
+#modal .thought-clue-window .intel-heading h2{font-size:26px;line-height:1.5}
+#modal .thought-pick-hint{display:flex;justify-content:space-between;gap:12px;font:20px/1.6 var(--serif);color:#cdbb98;margin:16px 0 8px}
+#modal .route-clue-list{max-height:46dvh;overflow:auto;scrollbar-width:thin}
+#modal .thought-clue-window .inventory-entry{border-bottom:1px solid #b39c6e33;padding:12px 0;gap:14px}
+#modal .thought-clue-window .inventory-row{background:none;border:0;border-radius:0;color:#eee3cf;text-align:left;cursor:pointer}
+#modal .thought-clue-window .inventory-place{border:1px solid #b39c6e66;background:none;color:#e7c691;border-radius:50%;width:36px;height:36px}
+#modal .thought-clue-window .inventory-entry.is-placed{background:linear-gradient(90deg,#b39c6e18,transparent)}
+#modal .thought-clue-window .inventory-place[aria-pressed=true]{background:#b39c6e22;color:#f5dfb6;border-color:#ccb07c}
+#modal .thought-clue-window .inventory-place:disabled{opacity:.35}
+#modal .thought-clue-window #thought-error{font:20px/1.6 var(--serif);margin:12px 0}
+@media(max-width:600px){#modal .thought-clue-window .intel-heading h2{font-size:24px}#modal .thought-pick-hint{flex-wrap:wrap}}
+
+:root #game-root .route-sheet .order-save-footer{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:12px}
+:root #game-root .route-sheet .order-save-state{font:20px/1.5 var(--serif);color:#d8bd96}
+:root #game-root .route-sheet .order-save-state.is-arranged{color:#d3dfb9}
+:root #game-root .route-sheet .order-save-state.is-arranged::before{content:'✓ ';color:#c2d79b}
+:root #game-root .route-sheet .order-save-footer .order-done{margin-left:auto}
+
+/* A single ink-and-gold masthead keeps supplies beside the army count. */
+#game-root .campaign-header{position:relative;z-index:6;display:grid;grid-template-columns:220px minmax(240px,1fr) 340px 146px;grid-template-areas:"brand scenes reserve tools" "brand clock supply tools";gap:3px 24px;padding:14px 32px 16px;align-items:center;background:radial-gradient(ellipse at 10% 0,#5b4d322b,transparent 60%),linear-gradient(110deg,#24251e,#181d18 65%,#25271e);border:0;box-shadow:0 6px 20px #07100a40}
+#game-root .campaign-header:after{content:'';position:absolute;bottom:0;left:24px;right:24px;height:1px;background:linear-gradient(90deg,transparent,#bba07077 20%,#bba07044 80%,transparent);pointer-events:none}
+#game-root .campaign-header .brand{grid-area:brand;margin:0;min-width:0;width:auto;gap:15px}
+#game-root .campaign-header .brand h1{font:30px/1.4 KaiTi,STKaiti,serif;letter-spacing:3px;white-space:nowrap;color:#ecdcbb}
+#game-root .campaign-header .brand .eyebrow{font:12px/1.7 KaiTi,STKaiti,serif;letter-spacing:3px;color:#b6a88e}
+#game-root .campaign-header .seal{font:30px/1.3 KaiTi,STKaiti,serif;color:#ead1b6;background:#783f30;padding:7px 5px;border:1px solid #b48c6555;outline:1px solid #b48c6533;outline-offset:3px;transform:rotate(-4deg)}
+#game-root .campaign-header .scene-navigation{grid-area:scenes;width:auto;height:auto;margin:0;padding:0;gap:16px;background:none;justify-content:center}
+#game-root .campaign-header .scene-navigation button{min-width:0;padding:5px 12px 8px;gap:8px;background:none;border:0;border-radius:0}
+#game-root .campaign-header .scene-navigation button>span{font:27px/1.4 KaiTi,STKaiti,serif;letter-spacing:4px}
+#game-root .campaign-header .scene-navigation small{font:12px/1.4 KaiTi,STKaiti,serif;letter-spacing:0}
+#game-root .campaign-header .clock{grid-area:clock;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:12px;min-width:0;white-space:nowrap}
+#game-root .campaign-header .clock b{font:18px/1.5 KaiTi,STKaiti,serif;color:#d9c7a7}
+#game-root .campaign-header .clock span{font:14px/1.5 KaiTi,STKaiti,serif;color:#b6ac98}
+#game-root .campaign-header .reserve{grid-area:reserve;flex-direction:row;align-items:baseline;justify-content:center;gap:16px;border:0;padding:0}
+#game-root .campaign-header .reserve>span{font:15px/1.4 KaiTi,STKaiti,serif;letter-spacing:2px;color:#c8b797}
+#game-root .campaign-header .reserve b{font:34px/1.2 KaiTi,STKaiti,serif;color:#efdbad;font-variant-numeric:tabular-nums}
+#game-root .campaign-header .reserve small{font:16px KaiTi,STKaiti,serif;margin-left:8px}
+#game-root .campaign-header .reinforcement-note{grid-area:supply;display:flex;flex-direction:column;gap:2px;padding:0;border:0;background:none;color:#9e9988;position:static;font:12px/1.6 KaiTi,STKaiti,serif;white-space:nowrap}
+#game-root .campaign-header .reinforcement-note b{font:14px/1.5 KaiTi,STKaiti,serif;color:#cdbb97}
+#game-root .campaign-header .header-tools{grid-area:tools;display:flex;flex-wrap:wrap;align-content:center;justify-content:flex-end;gap:2px 5px;width:auto;margin:0;padding-left:14px;border-left:1px solid #af956330}
+#game-root .campaign-header .header-tools button{font:16px/1.5 KaiTi,STKaiti,serif;padding:4px 5px;border:0;border-radius:0;background:none;color:#bcb29e}
+#game-root .campaign-header .header-tools button:hover{color:#f1dcaf;background:#c5aa7520}
+#game-root .campaign-header .round-notices{position:static;padding:0;border:0;background:none;border-radius:0;box-shadow:none;max-width:none;inset:auto}
+#game-root .campaign-header .round-notices summary{font:14px/1.5 KaiTi,STKaiti,serif;color:#c6b58e;padding:4px 5px;list-style:none}
+#game-root .campaign-header .round-notices summary::-webkit-details-marker{display:none}
+#game-root .campaign-header .round-notices summary span{margin-left:4px;color:#efd8a2}
+#game-root .campaign-header .arrival-popover{position:absolute;right:16px;top:100%;width:300px;max-width:calc(100vw - 32px);padding:12px 18px;background:#20251ef5;border:1px solid #a38c5d77;box-shadow:0 12px 30px #0007}
+#game-root .campaign-header .arrival-popover p{font:17px/1.7 KaiTi,STKaiti,serif;color:#e4d8bc;margin:0}
+#game-root #app>.stage{height:calc(100dvh - 118px);flex:1;min-height:520px}
+@media(max-width:1150px){
+ #game-root .campaign-header{grid-template-columns:190px minmax(210px,1fr) 310px;grid-template-areas:"brand scenes reserve" "tools clock supply";gap:6px 14px;padding:12px 20px}
+ #game-root .campaign-header .brand h1{font-size:26px}
+ #game-root .campaign-header .header-tools{justify-content:flex-start;border:0;padding:0}
+ #game-root .campaign-header .scene-navigation small{display:none}
+ #game-root .campaign-header .clock{gap:7px}
+}
+@media(max-width:760px){
+ #game-root .campaign-header{grid-template-columns:1fr 1fr;grid-template-areas:"brand reserve" "scenes clock" "supply supply" "tools tools";gap:7px 10px;padding:12px 16px}
+ #game-root .campaign-header .reserve{justify-content:flex-end;gap:8px}
+ #game-root .campaign-header .reinforcement-note{align-items:center;white-space:normal;text-align:center}
+ #game-root .campaign-header .reinforcement-note>span{font-size:12px;max-width:none}
+ #game-root .campaign-header .reinforcement-note b{font-size:14px}
+ #game-root .campaign-header .scene-navigation{justify-content:flex-start;gap:6px}
+ #game-root .campaign-header .scene-navigation button{padding:3px 7px 6px}
+ #game-root .campaign-header .scene-navigation button>span{font-size:24px;letter-spacing:2px}
+ #game-root .campaign-header .clock{flex-direction:column;align-items:flex-end;gap:0}
+ #game-root .campaign-header .clock b{font-size:17px}
+ #game-root .campaign-header .clock span{font-size:12px}
+ #game-root .campaign-header .brand{gap:10px}
+ #game-root .campaign-header .brand h1{font-size:23px;letter-spacing:1px}
+ #game-root .campaign-header .brand .eyebrow{font-size:11px;letter-spacing:1px}
+ #game-root .campaign-header .seal{font-size:24px;padding:5px 3px}
+ #game-root .campaign-header .reserve b{font-size:29px}
+ #game-root .campaign-header .reserve>span{font-size:13px;letter-spacing:0}
+ #game-root .campaign-header .header-tools{gap:0 10px;justify-content:center}
+ #game-root .campaign-header .header-tools button{font-size:15px;padding:3px}
+ #game-root .campaign-header .arrival-popover{right:16px;left:auto}
+ #game-root #app>.stage{height:calc(100dvh - 180px)}
+}
+/* Dispatch review and reports share the chapter folio, with a fixed action row. */
+#modal:has(.command-review){width:min(90vw,1080px);max-width:calc(100vw - 24px);height:min(86dvh,820px);max-height:92dvh;padding:24px 30px;border:0;border-radius:0;background:#24231d url('/ui/folio-cover-neutral-v1.png') center/100% 100%;box-shadow:0 24px 80px #0009;overflow:hidden}
+#modal:has(.command-review)::backdrop{background:#0d140fb3;backdrop-filter:blur(2px)}
+:root #game-root .chapter-folio[open]:has(.result-panel){inset:0;margin:auto;width:min(90vw,1180px);height:88dvh;max-height:92dvh;display:flex;flex-direction:column;overflow:hidden;padding:18px 26px}
+:root #game-root .chapter-folio:has(.result-panel) .sheet-top{flex:none;padding:3px 10px 8px}
+#game-root .military-page{--military-size:21px;--military-small:16px;--military-title:30px;--military-number:30px;font-family:KaiTi,STKaiti,serif;color:#e8dfcc;min-height:0;display:flex;flex-direction:column;background:#191b16cf}
+#modal .command-review{height:100%;padding:18px 24px 12px}
+:root #game-root .chapter-folio .result-panel{flex:1;min-height:0;padding:12px 22px 8px;margin:0}
+#game-root .military-page .dispatch-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;flex:none;margin:0 0 14px}
+#game-root .military-page h2{font:var(--military-title)/1.35 KaiTi,STKaiti,serif;color:#edddba;letter-spacing:3px;margin:4px 0 0}
+#game-root .military-page .eyebrow{font:14px/1.5 KaiTi,STKaiti,serif;color:#b7a98e;letter-spacing:2px}
+#game-root .military-page .review-close{align-self:flex-start;background:none;border:0;padding:0 6px;font:26px/1.4 KaiTi,serif;color:#c6b591}
+#game-root .military-page .dispatch-totals{display:flex;align-items:center;gap:36px;margin:0;padding:12px 0 16px;border-bottom:1px solid #b49b653d;flex:none}
+#game-root .result-panel .dispatch-totals{border:0;padding:0;gap:28px}
+#game-root .military-page .dispatch-totals dt{font:var(--military-small)/1.5 KaiTi,serif;color:#bcae92}
+#game-root .military-page .dispatch-totals dd{font:var(--military-number)/1.35 KaiTi,serif;color:#e9cca0;margin:2px 0 0;font-variant-numeric:tabular-nums}
+#game-root .military-page .dispatch-totals small{font:var(--military-small)/1.5 KaiTi,serif;margin-left:8px;color:#c3b599}
+#game-root .military-page .dispatch-timing{margin-left:auto;color:#b5a88f;font:var(--military-small)/1.6 KaiTi,serif;text-align:right}
+#game-root .military-page .military-scroll{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9e8b6266 transparent;padding-right:10px;overflow-wrap:anywhere}
+#game-root .military-page .preview-entry{padding:18px 0;border:0;border-bottom:1px solid #b49b6533}
+#game-root .military-page .order-entry-heading{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+#game-root .military-page h3{font:22px/1.5 KaiTi,serif;color:#edddba;margin:0}
+#game-root .military-page .order-sequence{font:16px/1.5 KaiTi,serif;color:#a38d67;border-right:1px solid #b49b6544;padding-right:14px}
+#game-root .military-page .order-troops{margin-left:auto;white-space:nowrap;color:#e3c38d;font:20px/1.5 KaiTi,serif}
+#game-root .military-page .order-copy,#game-root .military-page .report-prose,#game-root .military-page .empty-orders{font:var(--military-size)/1.75 KaiTi,STKaiti,serif;margin:0;padding:0;white-space:pre-wrap;color:#e5dece}
+#game-root .military-page .report-prose{margin:2px 0 20px}
+#game-root .military-page .empty-orders{padding:20px 0}
+#game-root .military-page .order-assessment{display:flex;gap:12px 24px;align-items:baseline;flex-wrap:wrap;margin-top:12px;font:var(--military-small)/1.6 KaiTi,serif}
+#game-root .military-page .estimate{color:#d9bd8b;margin:0}
+#game-root .military-page .order-assessment details{flex:1;min-width:120px;color:#bcb29f}
+#game-root .military-page .order-assessment summary{cursor:pointer}
+#game-root .military-page .order-assessment p{font:var(--military-small)/1.6 KaiTi,serif;margin:8px 0 0}
+#game-root .military-page .military-footer{flex:none;display:flex;align-items:center;justify-content:flex-end;gap:18px;padding:14px 0 0;margin:0;border-top:1px solid #b49b6544;background:none;text-align:left}
+#game-root .military-page .military-footer p{margin:0 auto 0 0;font:var(--military-small)/1.6 KaiTi,serif;color:#c0b298;max-width:48%}
+#game-root .military-page .modal-actions{display:flex;gap:12px;margin:0;flex-wrap:nowrap}
+#game-root .military-page .military-footer button{font:20px/1.5 KaiTi,serif;border:1px solid #b49b6544;border-radius:2px;padding:9px 22px;background:none;color:#d9c9ad;white-space:nowrap}
+#game-root .military-page .military-footer .primary{background:#874938;color:#f3e3c8;border-color:#c08d6866;font-weight:400}
+#game-root .military-page .military-footer button:hover{filter:brightness(1.15)}
+#game-root .military-page .military-footer span{display:inline;margin:0}
+#game-root .military-page .result-list article{padding:14px 0;border-top:1px solid #b49b653d}
+#game-root .military-page .report-route-heading{align-items:center}
+#game-root .military-page .tag{font:14px/1.5 KaiTi,serif;background:#b49b6510;border:1px solid #b49b653d;color:#cdbb99;padding:2px 9px;white-space:nowrap}
+#game-root .military-page .tag.status-saved{color:#c0d2b1;border-color:#8a9c6f66}
+#game-root .military-page .tag.status-failed{color:#d69e8a;border-color:#aa796866}
+#game-root .military-page .report-numbers{justify-content:flex-start;gap:24px;margin:8px 0;font:var(--military-small)/1.5 KaiTi,serif;color:#cbbd9e}
+#game-root .military-page .report-numbers i{font-style:normal;color:#908575}
+#game-root .military-page .report-outcome{font:var(--military-small)/1.7 KaiTi,serif;color:#c1b8a5;margin:0}
+@media(max-width:1000px),(max-height:760px){
+ #game-root .military-page{--military-size:18px;--military-small:15px;--military-title:26px;--military-number:26px}
+ #game-root .military-page h3{font-size:20px}
+ #game-root .military-page .dispatch-heading{margin-bottom:10px}
+ #game-root .military-page .preview-entry{padding:13px 0}
+ #game-root .military-page .military-footer button{font-size:18px;padding:7px 17px}
+ #game-root .military-page .report-prose{margin-bottom:14px}
+}
+@media(max-width:560px),(max-height:500px){
+ #modal:has(.command-review){width:94vw;height:90dvh;max-height:94dvh;padding:12px}
+ :root #game-root .chapter-folio:has(.result-panel){width:94vw;height:92dvh;max-height:94dvh;padding:10px 12px}
+ #modal .command-review,:root #game-root .chapter-folio .result-panel{padding:10px 12px}
+ #game-root .military-page{--military-size:17px;--military-small:14px;--military-title:23px;--military-number:24px}
+ #game-root .military-page .dispatch-totals{gap:18px;padding:8px 0 10px}
+ #game-root .result-panel .dispatch-heading{flex-wrap:wrap;gap:6px}
+ #game-root .result-panel .dispatch-totals{padding:0;gap:20px}
+ #game-root .military-page .dispatch-timing{font-size:13px}
+ #game-root .military-page .order-entry-heading{gap:9px}
+ #game-root .military-page .order-sequence{padding-right:9px}
+ #game-root .military-page h3,#game-root .military-page .order-troops{font-size:18px}
+ #game-root .military-page .military-footer{gap:8px;flex-wrap:wrap;padding-top:8px}
+ #game-root .military-page .military-footer p{max-width:none;width:100%;font-size:13px}
+ #game-root .military-page .military-footer button{font-size:16px;padding:6px 12px}
+ #game-root .military-page .modal-actions{gap:8px;margin-left:auto}
+ #game-root .military-page .eyebrow{font-size:12px}
+ #game-root .military-page .review-close{font-size:22px}
+}

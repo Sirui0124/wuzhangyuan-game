@@ -1,0 +1,19 @@
+{
+  "source_sha256": "f405fb050d64f5292bd8319c9c422d6edea2672658f7e76d8cf36024d2c7335e",
+  "method": "faster-whisper-base CPU int8; no expected script injected; VAD; automatic language",
+  "language": "zh",
+  "language_probability": 0.9996923208236694,
+  "expected_lines": [],
+  "segments": [
+    {
+      "in": 9.71,
+      "out": 11.71,
+      "text": "暂暖一针收藏了",
+      "no_speech_probability": 0.0011127031175419688,
+      "logprob": -0.6817470703806195
+    }
+  ],
+  "rms_dbfs": -22.764589309692383,
+  "peak_dbfs": -7.210331439971924,
+  "notice": "Machine locator only; not a transcript approval or proof of no music; inspect actual audio and lip/action timing."
+}

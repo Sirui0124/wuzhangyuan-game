@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wuzhangyuan.local/testing/step.schema.json",
+  "title": "steps.jsonl 单条可观察操作日志",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "role_id",
+    "step",
+    "observed_at_utc",
+    "visible_facts",
+    "before_evidence_refs",
+    "action",
+    "result",
+    "after_evidence_refs",
+    "brief_reason",
+    "wait_classification"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "role_id": {
+      "type": "string",
+      "pattern": "^C(?:00[1-9]|0[1-9][0-9]|100)$"
+    },
+    "step": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "observed_at_utc": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "description": "null 表示未采集该真实时刻；禁止估算或事后补造。字符串仍须符合 date-time 格式。"
+    },
+    "visible_facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "before_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "target",
+        "input",
+        "attempted_at_utc"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "observe",
+            "click",
+            "type",
+            "scroll",
+            "key",
+            "wait_for_ui",
+            "exit"
+          ]
+        },
+        "target": {
+          "type": "string"
+        },
+        "input": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attempted_at_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome",
+        "visible_result",
+        "observed_at_utc"
+      ],
+      "properties": {
+        "outcome": {
+          "enum": [
+            "observed",
+            "succeeded",
+            "failed",
+            "denied",
+            "pending",
+            "uncertain"
+          ]
+        },
+        "visible_result": {
+          "type": "string"
+        },
+        "observed_at_utc": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "null 表示未采集该真实时刻；禁止估算或事后补造。字符串仍须符合 date-time 格式。"
+        }
+      }
+    },
+    "after_evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "brief_reason": {
+      "type": "string",
+      "maxLength": 300,
+      "description": "简短行动理由；不得记录私有思维链。"
+    },
+    "wait_classification": {
+      "enum": [
+        "none",
+        "game_loading",
+        "model_wait",
+        "tool_wait",
+        "unknown"
+      ]
+    }
+  }
+}

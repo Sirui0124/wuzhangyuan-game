@@ -1,0 +1,240 @@
+{
+  "role": "苟安",
+  "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\gouan-reference-user-approved-V10-14p4-17p6.wav",
+  "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+  "referenceRole": "用户确认V10 12–28秒内苟安声音",
+  "id": "V25-05-clean-lines",
+  "node": "CH2-LY09-P05",
+  "nodes": [
+    "CH2-LY09-P05",
+    "CH2-LY09-001"
+  ],
+  "text": "眼下还没有赴魏，也没有把谣言传出去。只要把军召回来，先让这些人活过这一回。",
+  "targetSeconds": 9,
+  "reason": "原声无关或重复人声，未找到合法原句；仅补同一说话人连续必要原句，无标签或说明",
+  "status": "succeeded",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "text_prompt": "仅采用@音频1中成年男性的音色，克制自然的普通话，吐字清楚，不复述参考原句。只朗读引号内唯一原句：“眼下还没有赴魏，也没有把谣言传出去。只要把军召回来，先让这些人活过这一回。”其余文字都是控制说明，绝不朗读姓名、某某说、角色标签、旁白、画外、编号、导演说明或其他词。总长约9秒，开始留0.2秒气口，句末安静。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "requestId": "d1e6088d-0209-4bc7-9901-2069f1e43291",
+  "bodySha256": "4465f7901ee605499677777ae3bee04c484a2f759ab00ff9d8cb5a7a3e8bef0c",
+  "referenceUploadField": "references[0].audio_data",
+  "referenceBytes": 307278,
+  "noClone": true,
+  "noPresetSpeaker": true,
+  "userApproved": false,
+  "authorization": "20261025-batch2 explicitly allows necessary missing lines; no listening gate as execution blocker",
+  "httpStatus": 200,
+  "logId": "202610251706593BC96E62A831D54A0258",
+  "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G3/user-review-batch2/audio/V25-05-clean-lines-seed-audio1.wav",
+  "sha256": "62cfd66ecd1f084bbbbfca4edb7cca6e64c3ae14633701d1020b7398e91a3d53",
+  "duration": 9,
+  "originalDuration": 9,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4960,
+        "start_time": 1840,
+        "text": "眼下还没有赴魏，也没有把谣言传出去。",
+        "words": [
+          {
+            "end_time": 2080,
+            "start_time": 1840,
+            "text": "眼"
+          },
+          {
+            "end_time": 2360,
+            "start_time": 2080,
+            "text": "下"
+          },
+          {
+            "end_time": 2480,
+            "start_time": 2360,
+            "text": "还"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2480,
+            "text": "没"
+          },
+          {
+            "end_time": 2640,
+            "start_time": 2560,
+            "text": "有"
+          },
+          {
+            "end_time": 2800,
+            "start_time": 2760,
+            "text": "赴"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 3000,
+            "text": "魏"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 3040,
+            "text": "，"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3360,
+            "text": "也"
+          },
+          {
+            "end_time": 3600,
+            "start_time": 3480,
+            "text": "没"
+          },
+          {
+            "end_time": 3640,
+            "start_time": 3600,
+            "text": "有"
+          },
+          {
+            "end_time": 3760,
+            "start_time": 3640,
+            "text": "把"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3880,
+            "text": "谣"
+          },
+          {
+            "end_time": 4200,
+            "start_time": 4040,
+            "text": "言"
+          },
+          {
+            "end_time": 4600,
+            "start_time": 4400,
+            "text": "传"
+          },
+          {
+            "end_time": 4760,
+            "start_time": 4600,
+            "text": "出"
+          },
+          {
+            "end_time": 4960,
+            "start_time": 4760,
+            "text": "去"
+          },
+          {
+            "end_time": 4960,
+            "start_time": 4960,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 8960,
+        "start_time": 5640,
+        "text": "只要把军召回来，先让这些人活过这一回。",
+        "words": [
+          {
+            "end_time": 5800,
+            "start_time": 5640,
+            "text": "只"
+          },
+          {
+            "end_time": 5880,
+            "start_time": 5800,
+            "text": "要"
+          },
+          {
+            "end_time": 6040,
+            "start_time": 5880,
+            "text": "把"
+          },
+          {
+            "end_time": 6280,
+            "start_time": 6120,
+            "text": "军"
+          },
+          {
+            "end_time": 6600,
+            "start_time": 6520,
+            "text": "召"
+          },
+          {
+            "end_time": 6880,
+            "start_time": 6720,
+            "text": "回"
+          },
+          {
+            "end_time": 7080,
+            "start_time": 6880,
+            "text": "来"
+          },
+          {
+            "end_time": 7080,
+            "start_time": 7080,
+            "text": "，"
+          },
+          {
+            "end_time": 7520,
+            "start_time": 7280,
+            "text": "先"
+          },
+          {
+            "end_time": 7720,
+            "start_time": 7520,
+            "text": "让"
+          },
+          {
+            "end_time": 7800,
+            "start_time": 7720,
+            "text": "这"
+          },
+          {
+            "end_time": 7920,
+            "start_time": 7800,
+            "text": "些"
+          },
+          {
+            "end_time": 8120,
+            "start_time": 7920,
+            "text": "人"
+          },
+          {
+            "end_time": 8320,
+            "start_time": 8120,
+            "text": "活"
+          },
+          {
+            "end_time": 8520,
+            "start_time": 8320,
+            "text": "过"
+          },
+          {
+            "end_time": 8680,
+            "start_time": 8520,
+            "text": "这"
+          },
+          {
+            "end_time": 8840,
+            "start_time": 8680,
+            "text": "一"
+          },
+          {
+            "end_time": 8960,
+            "start_time": 8840,
+            "text": "回"
+          },
+          {
+            "end_time": 8960,
+            "start_time": 8960,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "眼下还没有赴魏，也没有把谣言传出去。只要把军召回来，先让这些人活过这一回。"
+  },
+  "referenceUploaded": true,
+  "referenceAcceptedInRequest": true,
+  "listeningReview": "pending; tool does not support hearing, provider subtitle and ASR are not listening approval"
+}

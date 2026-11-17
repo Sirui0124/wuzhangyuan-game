@@ -1,0 +1,225 @@
+{
+  "id": "V17-01",
+  "node": "CH2-LY04-F02",
+  "role": "前线接收人",
+  "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+  "targetSeconds": 10,
+  "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V17-01-role-reference.wav",
+  "referenceSha256": "c19661dac8057f1f6a04980b230a5318720c456c7a9bc7cc37a438d3b2d58ce1",
+  "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V17-01-raw.mp4",
+  "referenceSourceSha256": "7f0596593965fee3b5799e6ee24c639641d60f5b5029b9299e1608b5bb2f4257",
+  "referenceRange": [
+    2.46,
+    7.8
+  ],
+  "referenceRoleDeclaredInFrozenPlan": "前线接收人",
+  "listeningReview": "not-heard; subtitles and ASR cannot replace actual listening",
+  "model": "seed-audio-1.0",
+  "noClone": true,
+  "noPresetSpeaker": true,
+  "status": "succeeded",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "0f594410-2326-454b-b8ef-24312e8931ae",
+  "text_prompt": "只采用@音频1中成年男性的音色，不复述参考原句。用克制、自然、不夸张的普通话陈述，仅朗读引号内唯一原话：“出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。”其他所有文字都是控制说明，不得朗读姓名、角色标签、某某说、旁白、画外、编号或导演说明，不新增词句。总长约10秒，开头留0.25秒后说话，句末安静。没有BGM、背景音乐、配乐、吟唱、环境声或音效，只有这一句干净人声。",
+  "bodySha256": "3ab916c4e1fed7297d40519e07a1c66fdcc45d51a8bee899a9b9cdb9d784e758",
+  "referenceUploadField": "references[0].audio_data",
+  "referenceUploaded": true,
+  "noStandardTTS": true,
+  "userApproved": false,
+  "httpStatus": 200,
+  "logId": "20261025165426FB17D99F9D1A1AF173AD",
+  "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V17-01-seed-audio1-reference.wav",
+  "sha256": "81df46b8b3bda0c1a5cf75cc2fa8a8c68e496f955ae4768cdcfc321ccd44a16b",
+  "duration": 10,
+  "originalDuration": 10,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2680,
+        "start_time": 320,
+        "text": "出仓数和本队签收数对得上。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 320,
+            "text": "出"
+          },
+          {
+            "end_time": 720,
+            "start_time": 640,
+            "text": "仓"
+          },
+          {
+            "end_time": 1000,
+            "start_time": 880,
+            "text": "数"
+          },
+          {
+            "end_time": 1120,
+            "start_time": 1000,
+            "text": "和"
+          },
+          {
+            "end_time": 1280,
+            "start_time": 1120,
+            "text": "本"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1280,
+            "text": "队"
+          },
+          {
+            "end_time": 1560,
+            "start_time": 1520,
+            "text": "签"
+          },
+          {
+            "end_time": 1840,
+            "start_time": 1680,
+            "text": "收"
+          },
+          {
+            "end_time": 1960,
+            "start_time": 1880,
+            "text": "数"
+          },
+          {
+            "end_time": 2240,
+            "start_time": 2040,
+            "text": "对"
+          },
+          {
+            "end_time": 2400,
+            "start_time": 2240,
+            "text": "得"
+          },
+          {
+            "end_time": 2680,
+            "start_time": 2400,
+            "text": "上"
+          },
+          {
+            "end_time": 2680,
+            "start_time": 2680,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 7000,
+        "start_time": 3000,
+        "text": "路上损耗另有登记，领粮时的缺口还得往前查。",
+        "words": [
+          {
+            "end_time": 3200,
+            "start_time": 3000,
+            "text": "路"
+          },
+          {
+            "end_time": 3360,
+            "start_time": 3200,
+            "text": "上"
+          },
+          {
+            "end_time": 3520,
+            "start_time": 3400,
+            "text": "损"
+          },
+          {
+            "end_time": 3760,
+            "start_time": 3640,
+            "text": "耗"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3840,
+            "text": "另"
+          },
+          {
+            "end_time": 4160,
+            "start_time": 4000,
+            "text": "有"
+          },
+          {
+            "end_time": 4360,
+            "start_time": 4160,
+            "text": "登"
+          },
+          {
+            "end_time": 4480,
+            "start_time": 4360,
+            "text": "记"
+          },
+          {
+            "end_time": 4480,
+            "start_time": 4480,
+            "text": "，"
+          },
+          {
+            "end_time": 5000,
+            "start_time": 4800,
+            "text": "领"
+          },
+          {
+            "end_time": 5200,
+            "start_time": 5040,
+            "text": "粮"
+          },
+          {
+            "end_time": 5440,
+            "start_time": 5280,
+            "text": "时"
+          },
+          {
+            "end_time": 5600,
+            "start_time": 5440,
+            "text": "的"
+          },
+          {
+            "end_time": 5720,
+            "start_time": 5600,
+            "text": "缺"
+          },
+          {
+            "end_time": 6040,
+            "start_time": 5800,
+            "text": "口"
+          },
+          {
+            "end_time": 6240,
+            "start_time": 6080,
+            "text": "还"
+          },
+          {
+            "end_time": 6320,
+            "start_time": 6240,
+            "text": "得"
+          },
+          {
+            "end_time": 6520,
+            "start_time": 6320,
+            "text": "往"
+          },
+          {
+            "end_time": 6640,
+            "start_time": 6520,
+            "text": "前"
+          },
+          {
+            "end_time": 7000,
+            "start_time": 6720,
+            "text": "查"
+          },
+          {
+            "end_time": 7000,
+            "start_time": 7000,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+  },
+  "referenceAcceptedInRequest": true
+}

@@ -1,0 +1,119 @@
+{
+  "version": "v2-work-edit",
+  "shots": [
+    {
+      "id": "H01",
+      "edit_duration": 1.5,
+      "source_in": 0,
+      "selection_reason": "只取落手前的悬手；选定开场呼吸单独裁出后重做机器筛查。",
+      "audio_source_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-regrets-20261117-v2\\H01\\opening-audio.wav",
+      "audio_in": 0
+    },
+    {
+      "id": "A04",
+      "edit_duration": 5,
+      "source_in": 0,
+      "selection_reason": "原请求雨压火失败，改作雨灭之前仍在燃烧的火场建立镜头，不宣称此条已完成雨灭。"
+    },
+    {
+      "id": "A01",
+      "edit_duration": 8,
+      "source_in": 0,
+      "selection_reason": "前景焦木横移揭开谷地纵深，随后接余炭明确雨灭结果。"
+    },
+    {
+      "id": "A02",
+      "edit_duration": 3.25,
+      "source_in": 0.75,
+      "selection_reason": "取实际火焰逐步收小到暗炭的过程，保留末段。"
+    },
+    {
+      "id": "A03R",
+      "edit_duration": 2.25,
+      "source_in": 0.5,
+      "selection_reason": "本轮A03和修正A03R均出现加火与口型，全部排除。选用已有正确H3 R06的0.5—2.75秒；不沿用其旧审核状态。",
+      "source_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.5\\R06\\source.mp4",
+      "pre_crop": "crop=1280:720:64:24,",
+      "exclude_native_audio": true
+    },
+    {
+      "id": "B01",
+      "edit_duration": 7,
+      "source_in": 0,
+      "selection_reason": "完整人物、长刀与远阵；保留真实摄影运动和风中衣料。"
+    },
+    {
+      "id": "B03",
+      "edit_duration": 5,
+      "source_in": 0,
+      "selection_reason": "选完整握柄到手指松开，下一镜承接落地。"
+    },
+    {
+      "id": "B02",
+      "edit_duration": 2.75,
+      "source_in": 0,
+      "selection_reason": "原片前段实际落刀可与松手相接，截在后续抬刀前；后段排除。不倒放、不伪造落刀。"
+    },
+    {
+      "id": "C01",
+      "edit_duration": 1.5,
+      "source_in": 0,
+      "selection_reason": "E07原构图，保留左侧刀斧手和马谡右上眼线，截去后段较明显嘴部活动。"
+    },
+    {
+      "id": "C02",
+      "edit_duration": 8,
+      "source_in": 0,
+      "selection_reason": "完整低扇到遮眼的连续动作。全片原速，保持监斩反打左下眼线；相机实际有推进，与固定机位原稿的差异记入抽查。"
+    },
+    {
+      "id": "C03",
+      "edit_duration": 1.5,
+      "source_in": 0,
+      "selection_reason": "独立新表演的前段反应，截去2秒后的疑似发声口型；不复用C01画面。"
+    },
+    {
+      "id": "D01",
+      "edit_duration": 7.75,
+      "source_in": 0.25,
+      "selection_reason": "原全景有落手，改为整幅上半身取景，手不在画幅内。属于正常重新取景，不做局部遮盖，不伪称全景动作符合原稿。",
+      "pre_crop": "crop=768:432:350:30,"
+    },
+    {
+      "id": "D03R",
+      "edit_duration": 5,
+      "source_in": 0,
+      "selection_reason": "实际回片已按联系表核对：手向上收住并持续离纸；保留完整5秒，原D03落手版弃用。"
+    },
+    {
+      "id": "D02",
+      "edit_duration": 7,
+      "source_in": 0,
+      "selection_reason": "保留灯焰收小、熄灭与余烟，以实际灯灭时刻决定最终选片。"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "A04",
+      "kind": "light_match",
+      "duration": 0.25
+    },
+    {
+      "id": "B01",
+      "kind": "focus_bridge",
+      "duration": 0.25
+    },
+    {
+      "id": "D01",
+      "kind": "dark_occlusion",
+      "duration": 0.25
+    },
+    {
+      "id": "TITLE",
+      "kind": "lamp_to_black",
+      "duration": 0.25
+    }
+  ],
+  "user_review": "待review",
+  "note": "原速，不重复、不定格；整体取景裁切记录在各镜，音轨风险另记录。实际动作可用性仍需结合回片与抽查。"
+}

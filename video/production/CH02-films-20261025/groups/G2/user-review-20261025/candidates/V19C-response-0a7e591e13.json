@@ -1,0 +1,98 @@
+{
+  "id": "V19C-response",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-response-0a7e591e13.mp4",
+  "sha256": "3f3d5edf77eb2270a4feede4809c0c7691dba1671aa73df1c8d8b18f8e1b64eb",
+  "videoFrames": 223,
+  "videoSeconds": 9.291666666666666,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V19C-response",
+    "parts": [
+      {
+        "source": "V15-02",
+        "range": [
+          6,
+          10.1
+        ]
+      },
+      {
+        "source": "V18-03",
+        "range": [
+          0,
+          2
+        ]
+      },
+      {
+        "source": "V14-02",
+        "range": [
+          0,
+          1.05
+        ]
+      },
+      {
+        "source": "V19C-02",
+        "range": [
+          7.15,
+          9.416667
+        ]
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-02-raw.mp4",
+      "start": 3.2,
+      "end": 9.416667,
+      "offset": 3.2
+    },
+    "sourceNodes": [
+      "CH2-LY04-Q4FB1"
+    ],
+    "comment": "free silence of non-whitelist prefix; final native face remains at its own reply timing; only existing correct words retained; not heard"
+  },
+  "sourceParts": [
+    {
+      "source": "V15-02",
+      "range": [
+        6,
+        10.1
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-02-raw.mp4",
+      "sourceSha256": "9bd88c3885737dcb269b7ae02c99361a85063d5371f47d3387998e9b53873f2a"
+    },
+    {
+      "source": "V18-03",
+      "range": [
+        0,
+        2
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-03-raw.mp4",
+      "sourceSha256": "c29fb33875bb74c4852555b2264f657d4b3e0b650d19f60f949b430b3ac43920"
+    },
+    {
+      "source": "V14-02",
+      "range": [
+        0,
+        1.05
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-02-raw.mp4",
+      "sourceSha256": "b690dffb6ae69d28f3f91410a1bb70322ececd45052c92921ec1f8863f883feb"
+    },
+    {
+      "source": "V19C-02",
+      "range": [
+        7.15,
+        9.416667
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-02-raw.mp4",
+      "sourceSha256": "4a886a277d084dd77fd6e123b0d460fab92bd4e534d7cc673f272a6aa9cdf3fb"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

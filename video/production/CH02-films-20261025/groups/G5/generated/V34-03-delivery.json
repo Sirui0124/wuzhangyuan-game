@@ -1,0 +1,36 @@
+{
+  "id": "V34-03",
+  "slot": "V34",
+  "task_id": "task_lbUPI0FdugqhNfu8MR8gRU73bdLBhTky",
+  "raw": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V34-03-raw.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V34-03-16x9.mp4",
+  "input": {
+    "size": [
+      1344,
+      768
+    ],
+    "duration": 12.25,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V34-03-raw.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf62.12.102\n  Duration: 00:00:12.25, start: 0.000000, bitrate: 2800 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1344x768, 2664 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 32000 Hz, stereo, fltp, 129 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "output": {
+    "size": [
+      1344,
+      756
+    ],
+    "duration": 12.26,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V34-03-16x9.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:12.26, start: 0.000000, bitrate: 4678 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1344x756 [SAR 1:1 DAR 16:9], 4478 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "sha256": "42b918c2385b9f4f0de0feeac28924bd4ee425a1afd6200714936c31ce9f6649",
+  "crop": [
+    0,
+    6,
+    1344,
+    756
+  ],
+  "decode": "passed",
+  "visualReview": "pending",
+  "audioReview": "未逐字听审",
+  "userReview": "待review"
+}

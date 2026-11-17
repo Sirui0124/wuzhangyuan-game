@@ -1,0 +1,1542 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "luofengpo",
+  "contentVersion": "pangtong-20261028-v1",
+  "title": "第七章 · 庞统",
+  "start": "PT-OPEN-1",
+  "designNote": "本章为本作架空改编。死亡动机、陈简、假死、同行与改写历史均属虚构；按2026-10-28本聊天用户确认的路线制作，待试玩审核。六处主调查选择（2/4/6关键）、固定说服选项、三种调查失败与四种完整结局。第六章未实现时结果明确缺失，不阻止终章。",
+  "nodes": [
+    {
+      "id": "PT-OPEN-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "雒城外，军营。帐前的白马甩了一下尾巴，马背上还没有人。远处有人喊军师，我循声望去，只看见一道钻入帐中的灰绿衣角。",
+      "next": "PT-OPEN-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-OPEN-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我（心声）",
+      "text": "庞统还活着。这一次，我来得及见到他。",
+      "next": "PT-OPEN-3",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-OPEN-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "别站在路中间。新拨来的书佐，是你吧？我叫陈简，先跟着我核一遍文书。封好的不能拆，案上的誊本可以看。",
+      "next": "PT-OPEN-4",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-OPEN-4",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "陈简把一份誊本推到面前。庞统的姓名下面，已经写着“阵亡”。日期空着，“遇害”二字被一道墨线划去了。",
+      "next": "PT-OPEN-5",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-OPEN-5",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我",
+      "text": "军师方才还在帐里。你写的这是什么？",
+      "next": "PT-OPEN-6",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-OPEN-6",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "先放下。那是备稿，没送出去。",
+      "next": "PT-Q1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-Q1",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我",
+      "portrait": "chenjian",
+      "text": "我先问清哪一处？",
+      "options": [
+        {
+          "id": "when",
+          "text": "这份文书什么时候送？",
+          "next": "PT-Q1A-1"
+        },
+        {
+          "id": "word",
+          "text": "“遇害”是谁改的？",
+          "next": "PT-Q1B-1"
+        },
+        {
+          "id": "order",
+          "text": "是谁让你准备的？",
+          "next": "PT-Q1C-1"
+        }
+      ],
+      "question": 1
+    },
+    {
+      "id": "PT-Q1A-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "等确报。人没回来，不算确报；路上听见的，也不算。没有核实，我不填日期。",
+      "next": "PT-COMMON1-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-Q1B-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "“遇害”是我写的，军师划掉了。他说战场上生死未定，不许先替人安一个罪名。",
+      "next": "PT-COMMON1-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-Q1C-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "有人交了原稿，我照着誊。原稿入了内帐，我不敢只凭记性跟你攀扯姓名。你要查，就核交稿簿。",
+      "next": "PT-COMMON1-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COMMON1-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "我把送件簿与誊本摆在一起。文书没有发出，收件人是刘备。“遇害”由陈简添上，后来被庞统划去。至于最先交来的原稿，仍在内帐。",
+      "next": "PT-COMMON1-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COMMON1-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "还有件事，你迟早会听说。军师自己的马惊过，主公便把这匹白马让给他骑。",
+      "next": "PT-COMMON1-3",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COMMON1-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我",
+      "text": "信交给主公，马也是主公的……",
+      "next": "PT-COMMON1-4",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COMMON1-4",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "你可想清楚再开口。把疑心写进告状的文书里，就不是闲谈了。",
+      "next": "PT-Q2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-Q2",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我",
+      "portrait": "chenjian",
+      "text": "下一步怎么办？",
+      "options": [
+        {
+          "id": "trace",
+          "text": "先核交稿经过，收信的人未必是授意的人。",
+          "next": "PT-TRACE-1"
+        },
+        {
+          "id": "accuse",
+          "text": "以死讯和换马为据，向军中告发刘备。",
+          "next": "PT-FAIL-ACCUSE-1"
+        },
+        {
+          "id": "dismiss",
+          "text": "主公不至于留下这种把柄，不查了，把信送走。",
+          "next": "PT-FAIL-DISMISS-1"
+        }
+      ],
+      "question": 2,
+      "checkpoint": true
+    },
+    {
+      "id": "PT-FAIL-ACCUSE-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "我把两件事写在同一份告状文书里，却答不出谁下了令、何时交稿。军吏收走文书，命人带我离开文书帐。",
+      "next": "PT-FAIL-ACCUSE-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-FAIL-ACCUSE-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "你要查的是经过。如今先把罪名写了，我再说什么，都像是在替谁开脱。",
+      "next": "PT-END-INV2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-FAIL-DISMISS-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "我催陈简把文书收好，不再追问。他合上送件簿，转身进了内帐。等出营号声响起，我才发现自己从未查清这份备稿究竟想做什么。",
+      "next": "PT-END-INV2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-END-INV2",
+      "kind": "ending",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "",
+      "text": "",
+      "ending": "investigation-recipient",
+      "portrait": "",
+      "retry": "PT-Q2"
+    },
+    {
+      "id": "PT-TRACE-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "交稿簿记下了时辰：孔明来信之后，军师帐中送出一份原稿，请陈简誊录。刘备只是收件人；换马时，随从听见的是主公劝军师仔细。案边另压着前哨的回报：落凤坡路窄，两侧林密，尚未排清伏兵；军师仍打算由此进兵。",
+      "next": "PT-TRACE-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-TRACE-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "送孔明来信的人还在。有人说，军师读完不大高兴，嫌孔明怕他独占功劳。那是旁人的转述，我没亲耳听见。",
+      "next": "PT-Q3",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-Q3",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "我",
+      "portrait": "chenjian",
+      "text": "这封来信，我怎样查？",
+      "options": [
+        {
+          "id": "letter",
+          "text": "看完整来信，不只听一句转述。",
+          "next": "PT-LETTER-1"
+        },
+        {
+          "id": "courier",
+          "text": "请送信的人说清送达经过。",
+          "next": "PT-COURIER-1"
+        },
+        {
+          "id": "ask-pang",
+          "text": "当面问庞统为何把来信理解成争功。",
+          "next": "PT-ASKPANG-1"
+        }
+      ],
+      "question": 3
+    },
+    {
+      "id": "PT-LETTER-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "我随陈简到内帐核阅来信。信中劝他谨慎，没有让他走哪条路，也没有命他冒险。所谓“怕人争功”，并不是信里的话。",
+      "next": "PT-PANG-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COURIER-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "来人交代得很清楚：原信一路封着，交到军师手上才拆。让军师慎行的话有，指使他走险路的话没有。",
+      "next": "PT-COURIER-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-COURIER-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "陈简带我去核原信。送信人的说法与全文相符，“争功”是后来附上的解释。",
+      "next": "PT-PANG-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-ASKPANG-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "陈简领我进内帐。庞统听见“争功”二字，把来信推到案边，让我从头看。",
+      "next": "PT-ASKPANG-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-ASKPANG-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "孔明劝我慎行，没有叫我送命。至于我当时怎么想，那是我的气话，不能拿来作他的罪证。",
+      "next": "PT-PANG-1",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-PANG-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "庞统没有收回信。我读完，把它压在死讯誊本旁边。原稿也找到了，字迹和修改处都对得上。",
+      "next": "PT-PANG-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-PANG-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "原稿是我交出去的。陈简没有替谁隐瞒，你也不必再绕着他问。",
+      "next": "PT-PANG-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-PANG-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "为什么？",
+      "next": "PT-PANG-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-PANG-4",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "出征的人预备后事，并不稀奇。你既查到这里，想问的应当不止是谁写的。",
+      "next": "PT-Q4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q4",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我怎样问下去？",
+      "options": [
+        {
+          "id": "suicide",
+          "text": "既然是你写的，你早就决定求死。",
+          "next": "PT-Q4WRONG-1"
+        },
+        {
+          "id": "routine",
+          "text": "只是预备后事，是我多虑了。",
+          "next": "PT-Q4WRONG-1"
+        },
+        {
+          "id": "living",
+          "text": "若你能活着回来，希望这封信怎么办？",
+          "next": "PT-MOTIVE-1"
+        }
+      ],
+      "question": 4,
+      "checkpoint": true
+    },
+    {
+      "id": "PT-Q4WRONG-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "预备一份后事，就一定是求死？换个说法，说将领都会预备，就一定没别的打算？你把两头都说尽了，倒不必听我答。",
+      "next": "PT-Q4-REPAIR",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q4-REPAIR",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "他还在等我回答。",
+      "options": [
+        {
+          "id": "repair",
+          "text": "我还没查明缘由。若能活着回来，你希望这封信怎么办？",
+          "next": "PT-MOTIVE-1"
+        },
+        {
+          "id": "insist",
+          "text": "原稿已经说明一切，不必再问。",
+          "next": "PT-FAIL-MOTIVE-1"
+        }
+      ]
+    },
+    {
+      "id": "PT-FAIL-MOTIVE-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "那你拿着你的结论走吧。",
+      "next": "PT-FAIL-MOTIVE-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FAIL-MOTIVE-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "他把原信合起来。我知道是谁交了稿，却仍不知道这封死讯为什么非写不可。",
+      "next": "PT-END-INV4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-END-INV4",
+      "kind": "ending",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "",
+      "text": "",
+      "ending": "investigation-motive",
+      "portrait": "",
+      "retry": "PT-Q4"
+    },
+    {
+      "id": "PT-MOTIVE-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "我若回来，自然用不上。可主公还在犹疑。益州是我劝他取的，人也折损了这么多，他若此时回头……",
+      "next": "PT-MOTIVE-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-MOTIVE-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "你想让他看见你的死讯，就不能回头。",
+      "next": "PT-MOTIVE-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-MOTIVE-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "我活着，要一遍遍劝他负人。我若死在这里，他便多了一件不能放下的事。",
+      "next": "PT-MOTIVE-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-MOTIVE-4",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "可先来夺城的是我们。",
+      "next": "PT-MOTIVE-5",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-MOTIVE-5",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "是。这句话洗不掉。人心却未必照着道理走。我知道，所以才叫陈简把“遇害”划了。",
+      "next": "PT-MOTIVE-6",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-MOTIVE-6",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "陈简",
+      "text": "我改那两个字，是想让弟兄们知道为什么还要打。我同乡已经死在这里，总不能到头来只说一句，本不该来。",
+      "next": "PT-Q5",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q5",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我想追问他们什么？",
+      "options": [
+        {
+          "id": "alive",
+          "text": "你活着继续劝，究竟哪里不够？",
+          "next": "PT-Q5A-1"
+        },
+        {
+          "id": "sunk",
+          "text": "如果退兵，死去的人就真的白死了吗？",
+          "next": "PT-Q5B-1"
+        },
+        {
+          "id": "revenge",
+          "text": "“遇害”送出去，会找谁报仇？",
+          "next": "PT-Q5C-1"
+        }
+      ],
+      "question": 5
+    },
+    {
+      "id": "PT-Q5A-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "活着的人可以再劝，也可能再被驳回。死讯不能叫主公一定打赢，却能叫他难以停手。你要问我，我怕的是哪一种，我也不能说全是为了他。",
+      "next": "PT-FAMILY-1",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q5B-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "我知道人活不过来。只是走了这么远，我还没学会怎样跟那些留下的人说，我们或许该回去了。",
+      "next": "PT-FAMILY-1",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q5C-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "陈简",
+      "text": "自然是……",
+      "next": "PT-Q5C-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q5C-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "他没把话说完。帐外有人在核降兵家属的名册，那几个名字与城里的守军同乡同姓。",
+      "next": "PT-Q5C-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q5C-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "所以我改了。可我改得了这一份，未必改得了以后每个人的说法。",
+      "next": "PT-FAMILY-1",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FAMILY-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "安置处的门还关着。几户降兵家属已经获准离开，出营名册与接应回执却尚未对上。一个孩子抱着包袱，问母亲今天能不能走。",
+      "next": "PT-FAMILY-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-FAMILY-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_gate",
+      "speaker": "陈简",
+      "text": "军师说过，不许拿他们泄愤。可有这句话，还得核人、交接。接应处在等最后一份名册。",
+      "next": "PT-FAMILY-3",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-FAMILY-3",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_gate",
+      "speaker": "我",
+      "text": "把名字核清。我送过去，拿回他们已经接到人的回信。",
+      "next": "PT-FAMILY-4",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-FAMILY-4",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "陈简重新摊开名册。这一次，他把“奉令放行”下面的接手人姓名也填上了。事情可以交给具体的人去办，不必等军师的生死。先一批出营的母子已由接应人领走，剩下几户也有了明确去处。",
+      "next": "PT-RETURN-1",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-RETURN-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "你查了一圈，现在还觉得是主公或孔明要害我？",
+      "next": "PT-RETURN-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETURN-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "不。但也不能只用一句预备后事，把你的打算带过去。",
+      "next": "PT-Q6",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-Q6",
+      "kind": "choice",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我把查到的缘由说给他听。",
+      "options": [
+        {
+          "id": "duty",
+          "text": "你只是预备后事，愿意替主公挡下危险。",
+          "next": "PT-FAIL-TRUTH-1"
+        },
+        {
+          "id": "truth",
+          "text": "你想让主公背上替你完成大业的责任；你自己也不愿承认，这条路可能该停了。",
+          "next": "PT-TRUTH-1"
+        },
+        {
+          "id": "rival",
+          "text": "你想用死亡证明自己胜过孔明，让主公永远记得你。",
+          "next": "PT-FAIL-TRUTH-1"
+        }
+      ],
+      "question": 6,
+      "checkpoint": true
+    },
+    {
+      "id": "PT-FAIL-TRUTH-1",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "若只为这些，我何必在意这封信会让主公怎样继续？你查到字是谁写的，却把它要做的事漏了。",
+      "next": "PT-FAIL-TRUTH-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FAIL-TRUTH-2",
+      "kind": "line",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "我没有把这些事连起来。庞统起身准备出营，谈话就此中断。",
+      "next": "PT-END-INV6",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-END-INV6",
+      "kind": "ending",
+      "act": 1,
+      "scene": "luocheng_tent",
+      "speaker": "",
+      "text": "",
+      "ending": "investigation-truth",
+      "portrait": "",
+      "retry": "PT-Q6"
+    },
+    {
+      "id": "PT-TRUTH-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "……你说中了我不愿说的那一半。可听明白，不等于你替我找到了别的路。",
+      "next": "PT-TRUTH-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-TRUTH-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "我见过一些比今天更晚的事。你可以不信，但先听我讲完。",
+      "next": "PT-TRUTH-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-TRUTH-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "我把随我回溯的手机放在案上，屏幕上重新亮起五丈原的灯火。庞统伸手靠近，光便越过我的指尖，停在他的掌边。他收回手，那道光也退了回去。",
+      "next": "PT-TRUTH-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-TRUTH-4",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我（心声）",
+      "text": "这一回，我不用它替我猜答案。此前经历过什么，就说什么。",
+      "next": "PT-S0",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-S0",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我从哪一件事说起？",
+      "options": [
+        {
+          "id": "loss",
+          "text": "把后来没能救回的人，以及战争留下的代价告诉他。",
+          "next": "PT-LOSS-1"
+        },
+        {
+          "id": "hope",
+          "text": "把这一程真正救回的人告诉他。",
+          "next": "PT-HOPE-1"
+        },
+        {
+          "id": "feign",
+          "text": "若你放不下进兵，有没有办法留下死讯，却保住性命？",
+          "next": "PT-FEIGN-1"
+        }
+      ],
+      "checkpoint": true
+    },
+    {
+      "id": "PT-LOSS-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "{lossText}",
+      "next": "PT-LOSS-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-LOSS-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "你看见的那些事，我没有看见。可后来每个人的决定，也都是我替他们作的吗？",
+      "next": "PT-LOSS-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-LOSS-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我（心声）",
+      "text": "{lossReflection}",
+      "next": "PT-LOSS-CHOICE",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-LOSS-CHOICE",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我怎样回应？",
+      "options": [
+        {
+          "id": "blame",
+          "text": "没有你的死，他们就不会走到那一步。你必须认下这些后果。",
+          "next": "PT-DEATH-1"
+        },
+        {
+          "id": "release",
+          "text": "不能全算在你身上。但你眼下正想用自己的死，让主公更难停手。",
+          "next": "PT-RETREAT-1"
+        },
+        {
+          "id": "compromise",
+          "text": "你若仍放不下进兵，就让信留下，人离开。",
+          "next": "PT-FEIGN-1"
+        }
+      ]
+    },
+    {
+      "id": "PT-HOPE-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "{savedText}",
+      "next": "PT-HOPE-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-HOPE-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "救下一些人，总是好的。可我若跟你走，天下又能怎样？",
+      "next": "PT-HOPE-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-HOPE-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我（心声）",
+      "text": "{savedReflection}",
+      "next": "PT-HOPE-CHOICE",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-HOPE-CHOICE",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我能向他许诺什么？",
+      "options": [
+        {
+          "id": "modest",
+          "text": "我不能保证天下怎样。但有人已经活下来了，你可以跟我去试另一条路。",
+          "next": "PT-FUTURE-1"
+        },
+        {
+          "id": "perfect",
+          "text": "只要你和孔明都在，后来的天下一定会更好。",
+          "next": "PT-PROMISE-1"
+        },
+        {
+          "id": "leave",
+          "text": "我不敢许诺后世。你可以先活下来，离开眼前这场仗。",
+          "next": "PT-RETREAT-1"
+        }
+      ]
+    },
+    {
+      "id": "PT-PROMISE-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "你在怪我把一条路当成非走不可，如今又要我和孔明替你保证天下。若我们也做不到呢？",
+      "next": "PT-PROMISE-CHOICE",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-PROMISE-CHOICE",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "这句话，我还可以收回来。",
+      "options": [
+        {
+          "id": "withdraw",
+          "text": "我说过头了。你们可以去看、去学，能帮到谁，再一起想办法。",
+          "next": "PT-FUTURE-1"
+        },
+        {
+          "id": "insist",
+          "text": "你们必须做到，否则我这一程就白走了。",
+          "next": "PT-DEATH-1"
+        },
+        {
+          "id": "feign",
+          "text": "先不谈后世。我们把眼前的死局解开。",
+          "next": "PT-FEIGN-1"
+        }
+      ]
+    },
+    {
+      "id": "PT-RETREAT-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "若不再打，我拿什么跟主公交代？那些已死的人呢？",
+      "next": "PT-RETREAT-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "告诉他你现在的判断。你可以承认不愿再走下去，不必先证明自己这一生都错了。",
+      "next": "PT-RETREAT-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "我劝他走到这里，又先退开。他未必肯原谅我。",
+      "next": "PT-RETREAT-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-4",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "我也不能替他答应。但这个回答，你活着才听得到。",
+      "next": "PT-RETREAT-5",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-5",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "庞统望着日期空白的文书，良久，把它翻了过去。",
+      "next": "PT-RETREAT-6",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-6",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "那就不要替我编一个战死的名声。我去见主公。你和陈简把家属的交接办完，军务我亲自交。",
+      "next": "PT-RETREAT-CONFIRM",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-RETREAT-CONFIRM",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "他准备亲自说明退出。",
+      "options": [
+        {
+          "id": "confirm",
+          "text": "陪他去见刘备，承担真实退出的后果。",
+          "next": "PT-RETREAT-END-1"
+        },
+        {
+          "id": "back",
+          "text": "先等一等，我们再谈另一种办法。",
+          "next": "PT-S0"
+        }
+      ]
+    },
+    {
+      "id": "PT-RETREAT-END-1",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "刘备听完，没有当场挽留。庞统交出手中的军务，撤回死讯。临走前，陈简送来回执：名册上的几户人，接应处都已收到。",
+      "next": "PT-RETREAT-END-2",
+      "portrait": ""
+    },
+    {
+      "id": "PT-RETREAT-END-2",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "在这条改写后的岁月里，刘备未能顺利取得益州，最终退回荆州。关羽、张飞还在等他。三人也曾再谋进取，后来谈得越来越少。",
+      "next": "PT-RETREAT-END-3",
+      "portrait": ""
+    },
+    {
+      "id": "PT-RETREAT-END-3",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "又过了许多年。他们各自越过了原本的死期，却在一两年间相继病逝。割据仍延续了一段时间，直到国力更强的魏完成统一。",
+      "next": "PT-RETREAT-END-4",
+      "portrait": ""
+    },
+    {
+      "id": "PT-RETREAT-END-4",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "山中，庞统修好漏雨的屋顶，又把炉上的水添满。天下没有照他年轻时想的那样走，他也终于不再日日问自己，这一生是否算赢。",
+      "next": "PT-END-RETREAT",
+      "portrait": ""
+    },
+    {
+      "id": "PT-END-RETREAT",
+      "kind": "ending",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "",
+      "text": "",
+      "ending": "retreat",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FEIGN-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "你要我活着，却让主公当我已经死了。往后他们拿我的名字做什么，我连开口的资格也没有。",
+      "next": "PT-FEIGN-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FEIGN-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "是。这个办法保得住人，收不回死讯。你得自己选。",
+      "next": "PT-FEIGN-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FEIGN-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "陈简",
+      "text": "军师不死，文书便是假的。我愿意送人走，可不愿再替你们编谁杀了谁。",
+      "next": "PT-FEIGN-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FEIGN-4",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "不写遇害，不添敌军的罪名，不让随行的人陪葬。先把那几户人交出去。我换下衣物，从接应用的侧路离营。",
+      "next": "PT-FEIGN-5",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FEIGN-5",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "陈简核过退路与交接的人。他仍不赞成这件事，却答应不让更多人被卷进来。呈报只有一份，由他亲手递送。",
+      "next": "PT-FEIGN-CONFIRM",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FEIGN-CONFIRM",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "这封死讯一旦送出，就不能保证它只起想要的作用。",
+      "options": [
+        {
+          "id": "confirm",
+          "text": "按约定安排假死与秘密离营。",
+          "next": "PT-FEIGN-END-1"
+        },
+        {
+          "id": "back",
+          "text": "不送这封假死讯，回去重新谈。",
+          "next": "PT-S0"
+        }
+      ]
+    },
+    {
+      "id": "PT-FEIGN-END-1",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "文书送到刘备手中时，庞统已经脱下旧衣，离开军营。没有找到遗体的疑问，渐渐淹没在继续进兵的号令里。",
+      "next": "PT-FEIGN-END-2",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FEIGN-END-2",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "刘备仍攻取益州。后来的大事，大体沿着我熟悉的方向发生。已交接的家属平安离去，这件事没有被死讯夺走。",
+      "next": "PT-FEIGN-END-3",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FEIGN-END-3",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "旁白",
+      "text": "多年后，一个行客在庞统面前谈起凤雏之死，说得比当年的呈报还详尽。庞统听了半晌，把热水递给他，没有纠正。",
+      "next": "PT-FEIGN-END-4",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FEIGN-END-4",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "我（心声）",
+      "text": "他活过了原本的死期，却得一辈子听别人讲述自己的死。",
+      "next": "PT-END-FEIGN",
+      "portrait": ""
+    },
+    {
+      "id": "PT-END-FEIGN",
+      "kind": "ending",
+      "act": 3,
+      "scene": "pangtong_retreat",
+      "speaker": "",
+      "text": "",
+      "ending": "feign",
+      "portrait": ""
+    },
+    {
+      "id": "PT-DEATH-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "你拿后来所有人的命压我，却不能证明他们只有这一条路。我不能因为你替我算完了一生，就照着你的结论活。",
+      "next": "PT-DEATH-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-DEATH-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "我是不想再看见有人死。",
+      "next": "PT-DEATH-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-DEATH-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "我知道。可你如今也听不见别的回答了。",
+      "next": "PT-DEATH-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-DEATH-4",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "我把查明的险路再说了一遍，也把可用的退路留给他。庞统仍决定随军出营。他知道危险，仍把希望押在自己的判断上。",
+      "next": "PT-DEATH-ACT",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-DEATH-ACT",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "出营号声已经响起。",
+      "options": [
+        {
+          "id": "family",
+          "text": "去安置处完成交接，把眼前能带走的人送出去。",
+          "next": "PT-DEATH-END-1"
+        },
+        {
+          "id": "last",
+          "text": "再到营门追劝一次，把交接交给陈简。",
+          "next": "PT-DEATH-LAST-1"
+        }
+      ]
+    },
+    {
+      "id": "PT-DEATH-LAST-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "我追到营门，又说了一遍那条退路。庞统勒马听完，没有回头。陈简拿着补齐的名册从侧门离开，去办我们已经答应的事。",
+      "next": "PT-DEATH-END-1",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-DEATH-END-1",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "庞统没能回来。确报送到时，陈简才在那份文书上填了日期。此前查明的危险成了战场上的事实，却没有因此变成一场值得的死亡。",
+      "next": "PT-DEATH-END-2",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-DEATH-END-2",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "我仍写阵亡。军师说过，不许添罪名。",
+      "next": "PT-DEATH-END-3",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-DEATH-END-3",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "旁白",
+      "text": "死讯坚定了进兵的意志，却没有让夺城变得容易。“替军师报仇”的声音越来越响，他留下的约束却未必有人听。",
+      "next": "PT-DEATH-END-4",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-DEATH-END-4",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "陈简",
+      "text": "另一份回信也到了。那几户人都接到了，一个不少。",
+      "next": "PT-DEATH-END-5",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-DEATH-END-5",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "我（心声）",
+      "text": "我没能劝住他，也不能再说什么都没改变。这些人活着，不是为了证明我们谁赢了那场争论。",
+      "next": "PT-END-DEATH",
+      "portrait": "chenjian"
+    },
+    {
+      "id": "PT-END-DEATH",
+      "kind": "ending",
+      "act": 3,
+      "scene": "luocheng_archive",
+      "speaker": "",
+      "text": "",
+      "ending": "sacrifice",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FUTURE-1",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "去到那里，我能做什么？",
+      "next": "PT-FUTURE-2",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-2",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "我不知道你能做到多少。你得先了解他们的难处，也得学许多从没见过的东西。我只是不想再让一封死讯替你过完这一生。",
+      "next": "PT-FUTURE-3",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-3",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "庞统",
+      "text": "孔明呢？",
+      "next": "PT-FUTURE-4",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-4",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "text": "我先带你去见他。他还有军务要交代，也得自己愿意走。",
+      "next": "PT-FUTURE-5",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-5",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "旁白",
+      "text": "庞统把原稿交还陈简，让他注明作废。他没有替刘备许诺撤军，只亲自交代自己的退出、军务与家属安置。",
+      "next": "PT-FUTURE-6",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-6",
+      "kind": "line",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "陈简",
+      "text": "我不懂你们要去哪。这里已经答应的事，办完再走。",
+      "next": "PT-FUTURE-CONFIRM",
+      "portrait": "pangtong"
+    },
+    {
+      "id": "PT-FUTURE-CONFIRM",
+      "kind": "choice",
+      "act": 2,
+      "scene": "luocheng_tent",
+      "speaker": "我",
+      "portrait": "pangtong",
+      "text": "我与庞统确认同行。",
+      "options": [
+        {
+          "id": "confirm",
+          "text": "完成交接，带他去见诸葛亮，再一起回到后世。",
+          "next": "PT-FUTURE-END-1"
+        },
+        {
+          "id": "back",
+          "text": "我还不能替他决定，先把话说清楚。",
+          "next": "PT-S0"
+        }
+      ]
+    },
+    {
+      "id": "PT-FUTURE-END-1",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "接应的回执送回，军务也有了接手的人。庞统主动伸出手，触到归途的光。这次我没有拉他，是他自己走了过来。",
+      "next": "PT-FUTURE-END-2",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FUTURE-END-2",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "五丈原，灯仍亮着。诸葛亮看见庞统，久久没有开口。随后问的，却是外面军情怎样、退军安排交给了谁。",
+      "next": "PT-FUTURE-END-3",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FUTURE-END-3",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_gate",
+      "speaker": "诸葛亮",
+      "text": "我想去看。但有些事，不能因我想走，就留给旁人猜。",
+      "next": "PT-FUTURE-END-4",
+      "portrait": ""
+    },
+    {
+      "id": "PT-FUTURE-END-4",
+      "kind": "line",
+      "act": 3,
+      "scene": "luocheng_gate",
+      "speaker": "旁白",
+      "text": "军务与退军安排交代妥当，诸葛亮才收起案上的笔。他病势未愈，庞统扶着他。归途的光将我们带向一个他们从未见过的早晨。",
+      "next": "PT-MODERN-1",
+      "portrait": ""
+    },
+    {
+      "id": "PT-MODERN-1",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "旁白",
+      "text": "现代。诸葛亮先接受了治疗与休养。庞统也发现，听得懂一句话，并不等于懂得这个时代怎样运转。我们花了很长时间学习。",
+      "next": "PT-MODERN-2",
+      "portrait": ""
+    },
+    {
+      "id": "PT-MODERN-2",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "旁白",
+      "text": "后来，一场暴雨过后，我们来到临时安置处。有人在找失散的家人，登记的人手不够。庞统坐下核对去向，诸葛亮把重复的名字逐项问清。",
+      "next": "PT-MODERN-3",
+      "portrait": ""
+    },
+    {
+      "id": "PT-MODERN-3",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "庞统",
+      "text": "这个名字有两处记录。先别说他失踪，去问问后面那辆车。",
+      "next": "PT-MODERN-4",
+      "portrait": ""
+    },
+    {
+      "id": "PT-MODERN-4",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "旁白",
+      "text": "车门打开，一个老人被搀下来。等待的人迎了上去。庞统把笔搁下，看着他们走进屋里。",
+      "next": "PT-MODERN-5",
+      "portrait": ""
+    },
+    {
+      "id": "PT-MODERN-5",
+      "kind": "line",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "我（心声）",
+      "text": "没有人知道这一次能改变多少。至少今天，有一个人等到了。",
+      "next": "PT-END-FUTURE",
+      "portrait": ""
+    },
+    {
+      "id": "PT-END-FUTURE",
+      "kind": "ending",
+      "act": 3,
+      "scene": "pangtong_future",
+      "speaker": "",
+      "text": "",
+      "ending": "future",
+      "portrait": ""
+    }
+  ],
+  "endings": [
+    {
+      "id": "investigation-recipient",
+      "title": "疑心先成了定论",
+      "kind": "investigation",
+      "description": "收件人与换马都不足以证明授意。回到刚才，查清交稿经过。"
+    },
+    {
+      "id": "investigation-motive",
+      "title": "查到了原稿，没查到缘由",
+      "kind": "investigation",
+      "description": "准备后事不等于主动求死，也不能据此排除另一层打算。"
+    },
+    {
+      "id": "investigation-truth",
+      "title": "那封信仍未读懂",
+      "kind": "investigation",
+      "description": "是谁写的已经查清；他希望死讯让别人做什么，才是尚缺的一步。"
+    },
+    {
+      "id": "retreat",
+      "title": "山中有归人",
+      "kind": "complete",
+      "description": "庞统撤回死讯，退出战局。大业未成，这一条岁月里，仍有人多活了几年。"
+    },
+    {
+      "id": "sacrifice",
+      "title": "死讯未能回答的事",
+      "kind": "complete",
+      "description": "庞统仍然牺牲，没有换来期待的局面。另一份回执留下了获救者的名字。"
+    },
+    {
+      "id": "feign",
+      "title": "无名者听旧事",
+      "kind": "complete",
+      "description": "人离开了，死讯仍在流传。他保住了性命，也失去了公开解释自己的资格。"
+    },
+    {
+      "id": "future",
+      "title": "还有人等着回来",
+      "kind": "complete",
+      "description": "庞统与诸葛亮来到后世。从重新学习，到参与一次具体的救援，他们开始了未曾设想的生活。"
+    }
+  ]
+}

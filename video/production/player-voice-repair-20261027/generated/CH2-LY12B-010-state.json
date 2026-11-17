@@ -1,0 +1,175 @@
+{
+  "id": "CH2-LY12B-010",
+  "node": "CH2-LY12B-010",
+  "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 4.74,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "c6da691c-93fe-4413-a7ae-bb5549c48091",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:18:59.736Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。唯一允许发声的原句：“请将两人的补充说明、原信和查粮材料一同登记收件。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约4.74秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "c8898ae92c784f66b5613b6436a4c5dcf5f444d591c660d42eb22b3b39ce91c6",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "2026102719185954EBEF09CE450ECDA174",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-010-v1.wav",
+  "sha256": "3c709e8d7bf324458c354ef8b7296203d003ffa14bd8d40f05e79fd4422fa850",
+  "duration": 4.68,
+  "originalDuration": 4.68,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4640,
+        "start_time": 480,
+        "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+        "words": [
+          {
+            "end_time": 720,
+            "start_time": 480,
+            "text": "请"
+          },
+          {
+            "end_time": 960,
+            "start_time": 720,
+            "text": "将"
+          },
+          {
+            "end_time": 1120,
+            "start_time": 960,
+            "text": "两"
+          },
+          {
+            "end_time": 1200,
+            "start_time": 1120,
+            "text": "人"
+          },
+          {
+            "end_time": 1320,
+            "start_time": 1200,
+            "text": "的"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1320,
+            "text": "补"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1440,
+            "text": "充"
+          },
+          {
+            "end_time": 1800,
+            "start_time": 1600,
+            "text": "说"
+          },
+          {
+            "end_time": 2000,
+            "start_time": 1800,
+            "text": "明"
+          },
+          {
+            "end_time": 2000,
+            "start_time": 2000,
+            "text": "、"
+          },
+          {
+            "end_time": 2280,
+            "start_time": 2240,
+            "text": "原"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2440,
+            "text": "信"
+          },
+          {
+            "end_time": 2880,
+            "start_time": 2720,
+            "text": "和"
+          },
+          {
+            "end_time": 3000,
+            "start_time": 2960,
+            "text": "查"
+          },
+          {
+            "end_time": 3240,
+            "start_time": 3200,
+            "text": "粮"
+          },
+          {
+            "end_time": 3520,
+            "start_time": 3360,
+            "text": "材"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3520,
+            "text": "料"
+          },
+          {
+            "end_time": 3920,
+            "start_time": 3760,
+            "text": "一"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 3920,
+            "text": "同"
+          },
+          {
+            "end_time": 4280,
+            "start_time": 4120,
+            "text": "登"
+          },
+          {
+            "end_time": 4360,
+            "start_time": 4280,
+            "text": "记"
+          },
+          {
+            "end_time": 4520,
+            "start_time": 4440,
+            "text": "收"
+          },
+          {
+            "end_time": 4640,
+            "start_time": 4520,
+            "text": "件"
+          },
+          {
+            "end_time": 4640,
+            "start_time": 4640,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "请将两人的补充说明、原信和查粮材料一同登记收件。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:19:27.553Z"
+}

@@ -1,0 +1,27 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "type": "text",
+      "text": "生成一条5秒历史战争真人电影镜头，横向16:9，MiniMax-H3，768P。真实演员、实物衣甲与自然受力，50mm正常透视，适当景深。自然中性色温，无整体黄偏，火光只局部照暖；保持参考里的时段、气候和角色身份。\r\n\r\n参考图1使用上一条实际生成末帧作为当前状态；其后图片按下面动作说明分别控制身份、材质或结束动作。所有图片通过reference_image传入，文字分工不是严格首尾帧锁定。\r\n\r\n参考图1是关羽持刀松手的实际末帧，只锁前一刻动作；参考图2是完整长柄青龙刀落地的目标几何与夕照湿地，不是要求开头已经躺地。低机位近景，关羽身体在画外，长柄刀从松手后的倾斜状态受重力倒向泥地，长柄端及刀刃先后接触地面，微弹一次即停，红缨稍晚落下。保持完整长木柄和刀形，不变成短刀，不分裂、不悬浮、不穿地。前2秒完成倒地，2至3秒余震消退，3至5秒风吹缨的极小余动供选择，无新的主动动作。\r\n\r\n无音频，禁止生成对白、旁白、音乐、音效或其他声音；提示中台词仅规定可见说话口型，不将角色名和导演说明做成画面文字。无字幕、无可读说明卡、无工作文档、无水印、无黑边、无分屏。不开头淡入、不结尾淡出、不冻结，保持真实连续动作。禁止油画、游戏CG、概念插画、塑料皮肤、过度HDR、人物变脸、身体融合和兵器漂移。"
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/b7e673a61336cbfbbedbda7ff5967166b12de53295a22a32b56c4fee56b27ec3.jpg"
+      }
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/36dd6ec32117a0141477ef15a60e026de2c2940f81a5cb9a186fe5d618a3141a.jpg"
+      }
+    }
+  ],
+  "resolution": "768P",
+  "duration": 5,
+  "ratio": "16:9"
+}

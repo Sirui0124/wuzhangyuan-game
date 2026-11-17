@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.9128
+        },
+        {
+          "label": "Speech",
+          "p": 0.8858
+        },
+        {
+          "label": "Television",
+          "p": 0.3123
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0505
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0309
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0225
+        },
+        {
+          "label": "Spray",
+          "p": 0.0215
+        },
+        {
+          "label": "Tender music",
+          "p": 0.0208
+        },
+        {
+          "label": "Theme music",
+          "p": 0.0171
+        },
+        {
+          "label": "Animal",
+          "p": 0.015
+        },
+        {
+          "label": "Background music",
+          "p": 0.0122
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0115
+        }
+      ],
+      "music": 0.9128
+    }
+  ]
+}

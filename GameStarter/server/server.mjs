@@ -1,9 +1,16 @@
 import http from 'node:http';
+import { handleTts } from './tts.mjs';
+import { callModel, isMessagesEndpoint } from './model-transport.mjs';
+import { readProfiles, selectProfile, saveTemporaryProfile } from './model-profiles.mjs';
 import { readFile, writeFile, mkdir, rename, unlink } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parseEnv } from 'node:util';
 import { randomUUID } from 'node:crypto';
+import { shopFor, callShoppingModel } from './shopping.mjs';
+import { defaultPriceBook } from './shop-pricing.mjs';
+import { defaultPhoneEconomy } from './phone-economy.mjs';
+import { evaluatePersonality, validatePersonalityRequest, excludedPersonality } from './personality.mjs';
 
 const settingsFile = resolve(process.env.GAME_SETTINGS_FILE || resolve(dirname(fileURLToPath(import.meta.url)), '.env'));
 const readSettingsFile = async () => { try { return await readFile(settingsFile, 'utf8'); } catch (error) { if (error.code === 'ENOENT') return ''; throw error; } };
@@ -12,12 +19,7 @@ let config = {
   apiKey: stored.DEEPSEEK_API_KEY ?? process.env.DEEPSEEK_API_KEY ?? '',
   baseUrl: stored.DEEPSEEK_BASE_URL ?? process.env.DEEPSEEK_BASE_URL ?? 'https://api.deepseek.com',
   model: stored.DEEPSEEK_MODEL ?? process.env.DEEPSEEK_MODEL ?? 'deepseek-flash',
-};
-const endpointFor = (baseUrl) => {
-  const url = new URL(baseUrl);
-  const path = url.pathname.replace(/\/+$/, '');
-  url.pathname = path.endsWith('/chat/completions') ? path : `${path}/chat/completions`;
-  return url.href;
+  ...(stored.DEEPSEEK_SYSTEM_BASE_URL ? { systemBaseUrl: stored.DEEPSEEK_SYSTEM_BASE_URL } : {}),
 };
 const envValue = (value) => {
   // Check round-trip rather than interpreting a credential as shell syntax.
@@ -26,20 +28,28 @@ const envValue = (value) => {
   }
   throw new Error('配置包含无法保存的字符');
 };
-const validateSettings = (data) => {
+const validateSettings = (data, previous = {}) => {
   if (!data || typeof data !== 'object' || ['apiKey', 'baseUrl', 'model'].some(k => typeof data[k] !== 'string' || !data[k].trim() || /[\r\n\0]/.test(data[k]) || data[k].length > 4096)) throw new Error('请填写服务网址、模型和 API 密钥');
   const next = Object.fromEntries(['apiKey', 'baseUrl', 'model'].map(k => [k, data[k].trim()]));
   let url; try { url = new URL(next.baseUrl); } catch { throw new Error('服务网址需要是有效的 HTTP 或 HTTPS 地址'); }
   if (!['http:', 'https:'].includes(url.protocol) || !url.hostname || url.username || url.password || url.hash) throw new Error('服务网址需要是有效的 HTTP 或 HTTPS 地址');
   next.baseUrl = url.href.replace(/\/$/, '');
+  const systemBaseUrl = data.systemBaseUrl ?? (next.baseUrl === previous.baseUrl ? previous.systemBaseUrl : undefined);
+  if (systemBaseUrl) {
+    const alternate = new URL(systemBaseUrl);
+    if (alternate.origin !== url.origin || alternate.username || alternate.password || alternate.hash) throw new Error('系统规则接口必须属于同一服务');
+    next.systemBaseUrl = alternate.href.replace(/\/$/, '');
+  }
   Object.values(next).forEach(envValue);
   return next;
 };
 let saveQueue = Promise.resolve();
-const persistSettings = (next) => {
+const persistSettings = (next, extra = {}) => {
   const operation = saveQueue.then(async () => {
     const entries = parseEnv(await readSettingsFile());
     Object.assign(entries, { DEEPSEEK_API_KEY: next.apiKey, DEEPSEEK_BASE_URL: next.baseUrl, DEEPSEEK_MODEL: next.model });
+    if (next.systemBaseUrl || entries.DEEPSEEK_SYSTEM_BASE_URL) entries.DEEPSEEK_SYSTEM_BASE_URL = next.systemBaseUrl ?? '';
+    Object.assign(entries, extra);
     const contents = Object.entries(entries).map(([k, v]) => `${k}=${envValue(v)}`).join('\n') + '\n';
     const temporary = `${settingsFile}.${randomUUID()}.tmp`;
     await mkdir(dirname(settingsFile), { recursive: true });
@@ -69,53 +79,113 @@ const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   const send = (status, body) => { if (res.destroyed || res.writableEnded) return; res.writeHead(status, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(body)); };
-  const settingsRequest = req.url === '/api/game/settings';
+  const voiceSettingsRequest = req.url === '/api/game/tts/settings';
+  const settingsRequest = req.url === '/api/game/settings' || voiceSettingsRequest;
   if (settingsRequest) {
     res.setHeader('Cache-Control', 'no-store');
     if (!localSettingsRequest(req)) { send(403, { error: '设置仅允许本机访问' }); return; }
   }
   if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
-  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: config.model, thinking: 'disabled', configured: Boolean(config.apiKey) }); return; }
-  if (settingsRequest && req.method === 'GET') { send(200, config); return; }
-  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings'].includes(req.url)) { send(404, { error: '接口不存在' }); return; }
+  if (req.url === '/api/game/tts') {
+    if (!localSettingsRequest(req)) { send(403, { error: '语音仅允许本机访问' }); return; }
+    await handleTts(req, res, { ...process.env, ...parseEnv(await readSettingsFile()) }); return;
+  }
+  let selected;
+  try { selected = selectProfile(config, await readProfiles(settingsFile)); }
+  catch { send(503, { error: '本机模型配置档案无法读取，请检查保存的配置。' }); return; }
+  const current = selected.config;
+  if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), shopping: true, phoneEconomyVersion: 1, profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
+  if (voiceSettingsRequest && req.method === 'GET') {
+    const values = { ...process.env, ...parseEnv(await readSettingsFile()) };
+    send(200, { configured: Boolean(values.TTS_API_KEY), player: values.TTS_PLAYER_VOICE || '', weiyan: values.TTS_WEIYAN_VOICE || '', resource: values.TTS_RESOURCE_ID || 'seed-tts-2.0' }); return;
+  }
+  if (settingsRequest && req.method === 'GET') { send(200, current); return; }
+  const phoneRequest = ['/api/game/shop', '/api/game/shop/confirm', '/api/game/phone/guard'].includes(req.url);
+  const personalityRequest = req.url === '/api/game/personality';
+  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url) && !phoneRequest && !personalityRequest) { send(404, { error: '接口不存在' }); return; }
+  if (personalityRequest) res.setHeader('Cache-Control', 'no-store');
+  if (phoneRequest) {
+    res.setHeader('Cache-Control', 'no-store');
+    if (!localSettingsRequest(req)) { send(403, { error: '手机仅允许本机访问' }); return; }
+  }
   if (settingsRequest && req.headers['content-type']?.split(';')[0].trim().toLowerCase() !== 'application/json') { send(415, { error: '设置需要使用 JSON 提交' }); return; }
   try {
     let body = ''; let bytes = 0;
-    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
+    for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : phoneRequest ? 65536 : personalityRequest ? 131072 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
     let data;
     try { data = JSON.parse(body); } catch { send(400, { error: '无效 JSON' }); return; }
+    if (voiceSettingsRequest) {
+      if (!data || ['apiKey', 'player', 'weiyan', 'resource'].some(k => typeof data[k] !== 'string' || data[k].length > 4096 || /[\r\n\0]/.test(data[k])) || !data.player.trim() || !data.weiyan.trim() || !['seed-tts-2.0', 'seed-icl-2.0'].includes(data.resource)) { send(400, { error: '请填写有效的音色 ID 和资源类型' }); return; }
+      const extra = { TTS_PLAYER_VOICE: data.player.trim(), TTS_WEIYAN_VOICE: data.weiyan.trim(), TTS_RESOURCE_ID: data.resource };
+      if (data.apiKey.trim()) extra.TTS_API_KEY = data.apiKey.trim();
+      await persistSettings(config, extra); send(200, { ok: true }); return;
+    }
     if (settingsRequest) {
       let next;
-      try { next = validateSettings(data); } catch (error) { send(400, { error: error.message }); return; }
-      try { await persistSettings(next); } catch { send(500, { error: '无法保存本机 API 设置，请检查配置目录权限' }); return; }
+      try { next = validateSettings(data, current); } catch (error) { send(400, { error: error.message }); return; }
+      try { if (selected.profile === 'config2') await saveTemporaryProfile(settingsFile, next, selected.expiresAt); else await persistSettings(next); } catch { send(500, { error: '无法保存本机 API 设置，请检查配置目录权限' }); return; }
       send(200, { ok: true }); return;
     }
-    const current = config;
+    if (req.url === '/api/game/phone/guard') {
+      try { send(200, await defaultPhoneEconomy.check(data?.requestId, data?.query, (await defaultPriceBook.getConfig()).penaltyFen)); }
+      catch (error) { send(error.status || 503, { error: error.status ? error.message : '暂时无法检查这条消息，请重试。' }); }
+      return;
+    }
+    if (req.url === '/api/game/shop/confirm') {
+      if (typeof data?.offerId !== 'string' || !/^shop-[0-9a-f-]{36}$/i.test(data.offerId)) { send(400, { error: '无效的商品报价' }); return; }
+      try {
+        const product = await defaultPriceBook.getOffer(data.offerId);
+        if (!product) { send(409, { error: '这份报价已失效，请重新询价。' }); return; }
+        send(200, { product });
+      } catch { send(503, { error: '暂时无法核对报价，请稍后重试。' }); }
+      return;
+    }
+    if (req.url === '/api/game/shop') {
+      try { await defaultPhoneEconomy.authorize(data?.guardRequestId, data?.query); }
+      catch (error) { send(error.status || 503, { error: error.status ? error.message : '暂时无法核对这条采购请求，请重试。' }); return; }
+    }
+    if (personalityRequest) {
+      const request = validatePersonalityRequest(data), excluded = excludedPersonality(request);
+      if (excluded) { send(200, excluded); return; }
+      if (!current.apiKey) { send(503, { error: '人格评估尚未配置 AI，原话已保留。' }); return; }
+      const controller = new AbortController(), disconnect = () => { if (!res.writableEnded) controller.abort(); };
+      res.once('close', disconnect);
+      const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45000)]);
+      try { send(200, await evaluatePersonality(request, { signal, model: (input, callSignal) => callModel(current, input, callSignal) })); }
+      catch (error) { if (!controller.signal.aborted) send(signal.aborted ? 504 : error.status || 502, { error: signal.aborted ? '人格评估超时，原话已保留。' : '人格依据未核对完整，暂不计分。' }); }
+      finally { res.removeListener('close', disconnect); }
+      return;
+    }
     if (!current.apiKey) { send(503, { error: '请先在游戏设置中填写 API 密钥' }); return; }
-    if (typeof data.text !== 'string' || !data.text.trim() || (data.images !== undefined && (!Array.isArray(data.images) || data.images.length > 8 || data.images.some(x => typeof x !== 'string' || !/^(https:\/\/|data:image\/)/.test(x)))) || (data.previousResponseId !== undefined && typeof data.previousResponseId !== 'string')) {
+    if (req.url === '/api/game/shop') {
+      if (!data || typeof data.query !== 'string' || !data.query.trim() || data.query.length > 600 || !Number.isSafeInteger(data.budget) || data.budget < 0) { send(400, { error: '请填写600字以内的采购需求和有效预算' }); return; }
+      const controller = new AbortController(), disconnect = () => { if (!res.writableEnded) controller.abort(); };
+      res.once('close', disconnect);
+      const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(75000)]);
+      try { send(200, await shopFor(data, { signal, model: (text, callSignal) => callShoppingModel(current, text, callSignal) })); }
+      catch (error) { if (!controller.signal.aborted) send(signal.aborted ? 504 : 502, { error: signal.aborted ? '采购查询超时，需求已保留，请重试。' : '暂未取得完整采购建议，需求已保留，请重试。' }); }
+      finally { res.removeListener('close', disconnect); }
+      return;
+    }
+    if (!data || typeof data !== 'object' || typeof data.text !== 'string' || !data.text.trim() || (data.images !== undefined && (!Array.isArray(data.images) || data.images.length > 8 || data.images.some(x => typeof x !== 'string' || !/^(https:\/\/|data:image\/)/.test(x)))) || (data.previousResponseId !== undefined && typeof data.previousResponseId !== 'string')) {
       send(400, { error: '需要非空 text；images 可传最多 8 个 HTTPS 图片地址或图片 data URL' }); return;
+    }
+    if (data.temperature !== undefined && (typeof data.temperature !== 'number' || !Number.isFinite(data.temperature) || data.temperature < 0 || data.temperature > 2)) {
+      send(400, { error: 'temperature 需要是 0 到 2 之间的有限数值' }); return;
     }
     // Each game call carries its complete current context; do not silently drop a history request.
     if (data.previousResponseId) { send(400, { error: '当前接口不支持 previousResponseId，请在 text 中提供本次所需上下文' }); return; }
-    const content = data.images?.length
-      ? [...data.images.map(url => ({ type: 'image_url', image_url: { url } })), { type: 'text', text: data.text }]
-      : data.text;
-    const payload = { model: current.model, thinking: { type: 'disabled' }, stream: false, messages: [{ role: 'user', content }] };
     const controller = new AbortController();
     const disconnect = () => { if (!res.writableEnded) controller.abort(); };
     res.once('close', disconnect);
     // Cancel provider work as soon as the page cancels or times out.
     const signal = AbortSignal.any([controller.signal, AbortSignal.timeout(45000)]);
-    let upstream;
-    try { upstream = await fetch(endpointFor(current.baseUrl), { method: 'POST', headers: { Authorization: `Bearer ${current.apiKey}`, 'Content-Type': 'application/json' }, body: JSON.stringify(payload), signal }); }
-    catch (error) { res.removeListener('close', disconnect); throw error; }
-    if (!upstream.ok) { await upstream.body?.cancel(); send(upstream.status, { error: `模型接口请求失败（HTTP ${upstream.status}）` }); return; }
-    const result = await upstream.json();
-    res.removeListener('close', disconnect);
-    const choice = result.choices?.[0];
-    const text = choice?.message?.content;
-    if (typeof text !== 'string' || !text.trim() || choice.finish_reason !== 'stop') { send(502, { error: '模型未返回完整文字回复' }); return; }
-    send(200, { text, responseId: result.id, usage: result.usage });
-  } catch (error) { send(error.name === 'TimeoutError' ? 504 : 502, { error: error.name === 'TimeoutError' ? '模型请求超时，请重试' : '模型连接失败，请检查代理和网络' }); }
+    try {
+      const result = await callModel(current, { text: data.text, images: data.images, temperature: data.temperature }, signal);
+      send(200, result);
+    } finally { res.removeListener('close', disconnect); }
+  } catch (error) { send(error.status || (error.name === 'TimeoutError' ? 504 : 502), { error: error.status ? error.message : error.name === 'TimeoutError' ? '模型请求超时，请重试' : '模型连接失败，请检查代理和网络' }); }
 });
-server.listen(port, '127.0.0.1', () => console.log(`Game API: http://127.0.0.1:${port}`));
+// The desktop launcher uses port 0 and owns this server's lifecycle.
+export const gameServer = server;
+server.listen(port, '127.0.0.1', () => console.log(`Game API: http://127.0.0.1:${server.address().port}`));

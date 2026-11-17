@@ -1,0 +1,30 @@
+{
+  "method": "faster-whisper-small, zh, no script prompt, word timestamps; locator only",
+  "segments": [
+    {
+      "in": 3.28,
+      "out": 4.08,
+      "text": "拉住我",
+      "words": [
+        {
+          "word": "拉",
+          "in": 3.28,
+          "out": 3.74,
+          "p": 0.9850072264671326
+        },
+        {
+          "word": "住",
+          "in": 3.74,
+          "out": 3.9,
+          "p": 0.9825277924537659
+        },
+        {
+          "word": "我",
+          "in": 3.9,
+          "out": 4.08,
+          "p": 0.9977656602859497
+        }
+      ]
+    }
+  ]
+}

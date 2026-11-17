@@ -1,0 +1,277 @@
+{
+  "source_sha256": "766f1377f90743e1579f0ae3076a4e55bd9a05004bbb9712c45537ef9d3f3acf",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8498
+        },
+        {
+          "label": "Fire",
+          "p": 0.0833
+        },
+        {
+          "label": "Sigh",
+          "p": 0.039
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0277
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0273
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0262
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0183
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.015
+        },
+        {
+          "label": "Crack",
+          "p": 0.0143
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0133
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0122
+        },
+        {
+          "label": "Music",
+          "p": 0.0104
+        }
+      ],
+      "music": 0.0104
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.581
+        },
+        {
+          "label": "Scratch",
+          "p": 0.1084
+        },
+        {
+          "label": "Music",
+          "p": 0.0402
+        },
+        {
+          "label": "Scratching (performance technique)",
+          "p": 0.0392
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0375
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0233
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.02
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0146
+        },
+        {
+          "label": "Animal",
+          "p": 0.0132
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0126
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0122
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0122
+        }
+      ],
+      "music": 0.0402
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.4756
+        },
+        {
+          "label": "Fire",
+          "p": 0.0652
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0501
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0305
+        },
+        {
+          "label": "Sizzle",
+          "p": 0.0241
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0191
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0165
+        },
+        {
+          "label": "Frying (food)",
+          "p": 0.0136
+        },
+        {
+          "label": "Rain",
+          "p": 0.012
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0118
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0114
+        },
+        {
+          "label": "Static",
+          "p": 0.0105
+        }
+      ],
+      "music": 0.0076
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Rain",
+          "p": 0.4338
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.3948
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.1429
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.072
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0635
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0615
+        },
+        {
+          "label": "White noise",
+          "p": 0.0327
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0282
+        },
+        {
+          "label": "Fire",
+          "p": 0.0209
+        },
+        {
+          "label": "Music",
+          "p": 0.0121
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0117
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0116
+        }
+      ],
+      "music": 0.0121
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Rain",
+          "p": 0.7972
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.6145
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.5868
+        },
+        {
+          "label": "Thunder",
+          "p": 0.5305
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.3896
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0079
+        },
+        {
+          "label": "Wind",
+          "p": 0.0052
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0038
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0036
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0032
+        },
+        {
+          "label": "Fire",
+          "p": 0.0031
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.003
+        }
+      ],
+      "music": 0.0025
+    }
+  ]
+}

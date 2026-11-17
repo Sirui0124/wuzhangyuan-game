@@ -1,0 +1,87 @@
+{
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+      "profile": "High",
+      "codec_type": "video",
+      "codec_time_base": "1/48",
+      "codec_tag_string": "avc1",
+      "codec_tag": "0x31637661",
+      "width": 1280,
+      "height": 720,
+      "coded_width": 1280,
+      "coded_height": 720,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
+      "pix_fmt": "yuv420p",
+      "level": 31,
+      "color_range": "tv",
+      "color_space": "bt709",
+      "color_transfer": "iec61966-2-1",
+      "color_primaries": "bt709",
+      "chroma_location": "left",
+      "refs": 1,
+      "is_avc": "true",
+      "nal_length_size": "4",
+      "r_frame_rate": "24/1",
+      "avg_frame_rate": "24/1",
+      "time_base": "1/12288",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 1327104,
+      "duration": "108.000000",
+      "bit_rate": "5003793",
+      "bits_per_raw_sample": "8",
+      "nb_frames": "2592",
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "encoder": "Lavc60.31.102 libx264"
+      }
+    }
+  ],
+  "format": {
+    "filename": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v1\\开篇PV-H3-v1-108秒-无声动态审阅.mp4",
+    "nb_streams": 1,
+    "nb_programs": 0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+    "format_long_name": "QuickTime / MOV",
+    "start_time": "0.000000",
+    "duration": "108.000000",
+    "size": "67583914",
+    "bit_rate": "5006215",
+    "probe_score": 100,
+    "tags": {
+      "major_brand": "isom",
+      "minor_version": "512",
+      "compatible_brands": "isomiso2avc1mp41",
+      "encoder": "Lavf60.16.100"
+    }
+  },
+  "checks": {
+    "full_decode": "pass",
+    "edit_duration": 108,
+    "actual_duration": 108.0,
+    "user_review": "待review",
+    "audio": "无声工作版，未制作配音和音效",
+    "scaling_note": "原生素材多数1344×768，中心裁为16:9并缩至工作版1280×720；G10去除模型内嵌黑边、G20为面部局部重新构图后放大，见各自reframe-record.json。不宣称原生1080p或更高。",
+    "sha256": "f369c1691fe8a6d429614a214f226abc1a657fd5764185652175ad7d1ca67c00"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "delivery": {
+    "id": "V15",
+    "name": "倒查起点与三份账页",
+    "entry": "V14结束",
+    "next": [
+      "UI-N2"
+    ],
+    "endEvent": "各原件实际展示到相应文字后才取得",
+    "children": [
+      "V15-01",
+      "V15-02",
+      "V15-03",
+      "V15-04"
+    ],
+    "subclips": [
+      "V15-01",
+      "V15-02",
+      "V15-03",
+      "V15-04"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V15-倒查起点与三份账页-画面候选-6c902039.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "41a18076b9e04935e30c0cb1151ae8441d64c5fe4e2a79f3ad769fe5df861859",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V15-倒查起点与三份账页.mp4",
+    "technical": {
+      "duration": 41.11,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "41a18076b9e04935e30c0cb1151ae8441d64c5fe4e2a79f3ad769fe5df861859"
+    },
+    "visualReview": [
+      {
+        "id": "V15-01",
+        "observation": "0–11.5秒移木牍、拿取并排归位；物件接触可用，最后稳定。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V15-02",
+        "observation": "0–10秒近侧经手人拿签收木牍并放归同批，非正面交谈景；本队签收精确内容后期显示，原生字不作为数量证明。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V15-03",
+        "observation": "0–10秒两份同批木牍并排、手撤离并停稳，留足核对观察；自然播放观察2.20/7.51秒。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V15-04",
+        "observation": "0–10秒玩家接行程册、翻开、落案；手与纸没有明显穿透，纸面重复伪字用准确内容区分。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V15-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "即信压门,我能翻把三人无欲扫、速翻,你今许忙还车动静,全群都爱着令服纵的泡妆站。",
+        "expected": ""
+      },
+      {
+        "id": "V15-03",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "现场",
+        "expected": ""
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "6c902039169e93967556257678fb6816f830df33972dcf38a0e189a70e037b41"
+  },
+  "usability": {
+    "id": "V15",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V15-倒查起点与三份账页-画面候选-6c902039.mp4",
+    "sha256": "41a18076b9e04935e30c0cb1151ae8441d64c5fe4e2a79f3ad769fe5df861859",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "readable-fake-document",
+        "time": [
+          11.5,
+          41.11
+        ],
+        "description": "准确内容在底部叠加，原生纸面伪字仍能阅读；仅说明“不当证据”不能消除视觉假证据。",
+        "repair": "在准确字层之前对原生字面局部散焦，保持原件取得动作与正确叠字时点"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V15-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "即信压门,我能翻把三人无欲扫、速翻,你今许忙还车动静,全群都爱着令服纵的泡妆站。",
+        "expected": ""
+      },
+      {
+        "id": "V15-03",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "现场",
+        "expected": ""
+      }
+    ],
+    "userApproved": false
+  }
+}

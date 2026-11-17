@@ -1,0 +1,37 @@
+{
+  "source_sha256": "c8b12201ee3d77ea5e3089909103ec68cf9c5f75d7b8121950230b549c20b10c",
+  "method": "faster-whisper-small, zh, no script prompt, word timestamps; locator only",
+  "segments": [
+    {
+      "in": 3.25,
+      "out": 4.17,
+      "text": "好早的来",
+      "words": [
+        {
+          "word": "好",
+          "in": 3.25,
+          "out": 3.71,
+          "p": 0.6290470361709595
+        },
+        {
+          "word": "早",
+          "in": 3.71,
+          "out": 3.83,
+          "p": 0.32433634996414185
+        },
+        {
+          "word": "的",
+          "in": 3.83,
+          "out": 3.97,
+          "p": 0.36044037342071533
+        },
+        {
+          "word": "来",
+          "in": 3.97,
+          "out": 4.17,
+          "p": 0.8799111247062683
+        }
+      ]
+    }
+  ]
+}

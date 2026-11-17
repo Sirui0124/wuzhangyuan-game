@@ -1,0 +1,25 @@
+{
+  "task": {
+    "created_at": 1792872254,
+    "duration": 9,
+    "error": {
+      "code": "input_storage_failed",
+      "message": "open inline image: operation error S3: GetObject, https response error StatusCode: 404, RequestID: NmFkZDBmM2VfMTA0ZjdiMGJfMjc4MF80NTg3OGM5, HostID: , NoSuchKey: The specified key does not exist."
+    },
+    "id": "task_2qziSfDMWpTabMsL7t5IF8oQiy4n2m4K",
+    "modality": "video",
+    "model": "MiniMax-H3",
+    "progress": 1,
+    "ratio": "16:9",
+    "resolution": "768P",
+    "status": "failed",
+    "task_type": "generation",
+    "updated_at": 1792872254,
+    "usage": {
+      "input_image_count": 1,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "total_seconds": 0
+    }
+  }
+}

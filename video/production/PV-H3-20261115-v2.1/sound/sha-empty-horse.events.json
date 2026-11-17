@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Bang",
+          "p": 0.1204
+        },
+        {
+          "label": "Music",
+          "p": 0.051
+        },
+        {
+          "label": "Speech",
+          "p": 0.0332
+        },
+        {
+          "label": "Burst, pop",
+          "p": 0.0328
+        },
+        {
+          "label": "Smash, crash",
+          "p": 0.0328
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0246
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0231
+        },
+        {
+          "label": "Whack, thwack",
+          "p": 0.0169
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0156
+        },
+        {
+          "label": "Thunk",
+          "p": 0.0088
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0078
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0074
+        }
+      ],
+      "music": 0.051
+    }
+  ]
+}

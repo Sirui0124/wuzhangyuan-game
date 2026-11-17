@@ -1,0 +1,41 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V06",
+  "src": "/video/current/CH2-V06-f75d224722-20261025.mp4",
+  "title": "日期疑点",
+  "subtitles": "/video/subtitles/CH2-V06-f75d224722-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V06-f75d224722-20261025.mp4",
+  "sha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+  "duration": 5.0135,
+  "cues": [
+    {
+      "start": 0.46,
+      "end": 3.78,
+      "text": "他说五月喝的酒，六月初二才领到粮"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-015",
+      "node": "CH2-LY02-015",
+      "text": "他说五月喝的酒，六月初二才领到粮。",
+      "speaker": "我（心声）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "511fdfbcfc521fa25e027496aadb0d7cb89dd77cd2eed9c36c16af6819c43827",
+      "duration": 3.98575,
+      "speechRange": [
+        0.4,
+        3.62
+      ],
+      "correlation": 0.9995792425247336,
+      "insertAt": 0.3,
+      "speechStart": 0.7,
+      "speechEnd": 3.92
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

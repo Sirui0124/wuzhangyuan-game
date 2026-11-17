@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN" data-ui-theme="xuan" data-art-style="film" data-art-font="serif">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>夷陵 · 归路</title><link rel="preload" href="/art/scenes/camp.webp" as="image"><link rel="stylesheet" href="/dialogue-ink.css"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/scene-view.css"></head>
+<body class="scene-playtest"><main id="game-root">
+<div id="camp-interface">
+<header><div class="brand"><span aria-hidden="true">归</span><div><h1>夷陵 · 归路</h1><p class="place-note">刘备御营附近 · 集结营</p></div></div><details id="versions"><summary>试玩设置</summary><div class="version-panel"><p>五支接应队，每队五百人，共用一支船队。</p><button id="new">重新开始这次接应</button><small id="health">正在连接军情…</small><small>刷新恢复当前这局；本机剧情服务重启后需重新开始。</small></div></details></header>
+<div class="command-bar"><div class="stats"><span id="troops">正在清点队伍</span><span id="boats"></span><span id="clock"></span></div><div class="bar"><button id="speed" title="切换行动速度">1×</button><button id="pause" class="primary">继续行动</button></div></div>
+<div class="play-layout">
+<section class="board" aria-label="营地与接应舆图">
+<div class="scene-titlebar"><div><h2 id="view-title">大本营</h2><p id="view-description">集结营中，等候各路军情。</p></div><div class="scene-tools"><button id="toggle-labels" aria-pressed="true">标记</button><button id="fullscreen">全屏</button></div></div>
+<div id="scene-stage" data-view="camp" aria-label="大本营场景">
+<img id="landscape" src="/art/scenes/camp.webp" alt="刘备御营附近集结营，旧木营门与布帐之间留出发令空地" fetchpriority="high">
+<div class="map" id="overview-map" hidden><img src="/art/scenes/overview.webp" alt="长江两岸与御营附近的四路接应总览" loading="lazy"><svg id="map-routes" viewBox="0 0 1000 562.5" preserveAspectRatio="none" aria-hidden="true"></svg><div id="map-labels"></div></div>
+<div id="local-markers" aria-label="场景方向"></div><div id="scene-loading" role="status" hidden>正在看向远处…</div>
+<div id="scene-error" hidden><p>画面暂未载入。</p><button id="retry-scene">重新载入</button></div>
+</div>
+<nav id="view-nav" aria-label="观察方向">
+<button data-view="camp" aria-pressed="true"><img src="/art/scenes/camp-thumb.webp" alt=""><span>大本营</span></button>
+<button data-view="river" aria-pressed="false"><img src="/art/scenes/river-thumb.webp" alt=""><span>江岸渡口</span></button>
+<button data-view="east" aria-pressed="false"><img src="/art/scenes/east-thumb.webp" alt=""><span>东面山路</span></button>
+<button data-view="south" aria-pressed="false"><img src="/art/scenes/south-thumb.webp" alt=""><span>南面林地</span></button>
+<button data-view="imperial" aria-pressed="false"><img src="/art/scenes/imperial-thumb.webp" alt=""><span>御营方向</span></button>
+<button data-view="overview" aria-pressed="false"><img src="/art/scenes/overview-thumb.webp" alt=""><span>接应总览</span></button>
+</nav>
+<div class="board-foot"><span id="situation">正在听取军情…</span><span id="board-note"></span></div>
+</section>
+<aside class="report-dock" aria-label="四路军情"><div class="dock-heading"><h2>传来的军情</h2><p id="report-notice" role="status" aria-live="polite">可先听报，再定安排。</p></div><div id="route-cards"></div>
+<details class="army"><summary>接应队伍 <span>五队 · 每队五百人</span></summary><div id="units" class="units"></div></details>
+</aside></div>
+<p id="status" role="status"></p><p id="message" role="alert"></p>
+<section id="finish" hidden><h2>四路接应的回报</h2><p id="result"></p><details><summary>留下试玩感受</summary><div class="feedback-fields"><label>顺手程度<select id="rating"><option value="">暂不评分</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label><label>趣味<select id="fun"><option value="">暂不评分</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label><label>愿意继续？<select id="continue"><option>不确定</option><option>是</option><option>否</option></select></label><button id="save">保存</button><button id="export">导出本机记录</button></div></details></section>
+</div>
+<div id="event" class="overlay" hidden><section class="event-panel" role="dialog" aria-modal="true" aria-label="营中听报"><div class="event-top"><span id="event-location"></span><span>全场暂停</span><button id="close-event">返回营中</button></div><div id="hero" class="game-scene" data-phase="dialogue"><img id="scene-image" class="scene-image" alt="集结营中听报"><div class="scene-shade"></div><p id="caption"></p><div class="dialogue-box"><div id="speaker" class="dialogue-speaker"></div><div class="dialogue-reading"><p id="spoken" class="dialogue-text"></p></div></div><button id="next">继续 ▷</button></div><div id="event-controls">
+<div id="inquiry" hidden><div id="ask-box"><textarea id="question" rows="2" maxlength="600" aria-label="想问什么" placeholder="想先问清什么？"></textarea><div class="bar"><small id="questions-left"></small><button id="ask">问一问</button></div></div><button id="choices-show" class="primary">看接应办法</button></div><details id="questions-history" hidden><summary>刚才的问答</summary><div id="question-log"></div></details>
+<div id="selection" hidden><p id="shared-notices"></p><div id="options" class="options"></div><button id="return-map" class="quiet">再听听其他军情</button><button id="back-ask" class="quiet">再问一句</button></div><div id="review" hidden><p id="my-line"></p><p id="plan"></p><div class="dispatch-row"><span id="required-units"></span><button id="execute" class="primary">确认调遣</button><button id="revise">换个办法</button></div></div><p id="event-message" role="alert"></p><p id="event-status" role="status"></p>
+</div></section></div></main><script type="module" src="/app.js"></script></body></html>

@@ -1,0 +1,41 @@
+/* Local installed fonts only; no system font binaries are copied or redistributed. */
+@font-face{font-family:WuzhangKai;src:local('KaiTi'),local('楷体'),local('STKaiti'),local('Kaiti SC');font-style:normal;font-weight:400;font-display:swap}
+:root[data-art-font=kai]{--serif:WuzhangKai,'KaiTi','STKaiti','Kaiti SC',SimSun,serif;font-family:var(--serif);font-synthesis:none}
+:root[data-art-font=kai] .note-summary,:root[data-art-font=kai] .inferred-note .note-summary,:root[data-art-font=kai] .thought-center h1,:root[data-art-font=kai] .dialogue-speaker,:root[data-art-font=kai] .scene-hotspot{font-weight:400}
+:root[data-art-font=kai] .dialogue-text{font-size:30px;line-height:1.9;letter-spacing:1px}
+:root[data-art-font=kai] .dialogue-speaker{font-size:24px}
+:root[data-art-font=kai] .scene-heading>span{font-size:33px}
+:root[data-art-font=kai] :is(.note-source,.thought-context,.game-mark small,.game-hud nav,.canvas-tools,.canvas-instruction,.thought-center>p,.expression-selected,.expression-options,.expression-paper>small,.dialogue-foot,.scene-caption,.scene-heading>p){font-family:'Microsoft YaHei','PingFang SC',system-ui,sans-serif}
+.mindmap-review .canvas-viewport{inset:0}
+.mindmap-review .thought-world{width:1600px;height:1000px;transform:none}
+:root[data-art-style] .mindmap-review .thought-note:before{height:16px;top:14px;width:2px;opacity:.65}
+:root[data-art-style] .mindmap-review .note-summary{font-size:29px;line-height:1.55;font-weight:400;text-shadow:none;letter-spacing:.5px}
+:root[data-art-style] .mindmap-review .note-excerpt{font-size:20px;line-height:1.75;margin-top:12px;margin-bottom:12px;max-width:none}
+:root[data-art-style] .mindmap-review .note-source{font-size:12px;line-height:1.8;letter-spacing:1px}
+:root[data-art-style] .mindmap-review .inferred-note .note-summary{font-size:29px;font-weight:400}
+:root[data-art-style] .mindmap-review .inferred-note .note-excerpt{font-size:19px}
+:root[data-art-style] .mindmap-review .thought-lines path{stroke-width:1.45;stroke:var(--art-line);opacity:.78;stroke-linecap:round}
+:root[data-art-style] .mindmap-review .thought-center:not(.expression-center){top:49%;width:600px}
+:root[data-art-style] .mindmap-review .thought-center h1{font-size:36px;font-weight:400;line-height:1.8;letter-spacing:1px}
+:root[data-art-style] .mindmap-review .thought-center>p{font-size:12px}
+:root[data-art-style] .mindmap-review .ink-circle{width:76px;height:76px;background:transparent;color:var(--art-accent);border:1px solid var(--art-accent);outline:0;box-shadow:0 0 0 5px color-mix(in srgb,var(--art-accent) 4%,transparent);font-size:16px;font-weight:400;white-space:nowrap}
+:root[data-art-style] .mindmap-review:after{border-top-width:1px}
+:root[data-art-style] .mindmap-review .paper-atmosphere{opacity:.8}
+:root[data-art-style] .mindmap-review .thought-landscape{opacity:.07}
+:root[data-art-style] .mindmap-review[data-phase=expression] .thought-world{opacity:1;filter:none}
+:root[data-art-style] .mindmap-review .review-support .note-summary{font-size:26px;color:var(--art-body)}
+:root[data-art-style] .mindmap-review .review-support .note-excerpt{font-size:18px;color:var(--art-muted);line-height:1.75}
+:root[data-art-style] .mindmap-review .review-support .note-source{font-size:11px}
+:root[data-art-style] .mindmap-review .review-selected .note-summary{font-size:29px;color:var(--art-reason)}
+:root[data-art-style] .mindmap-review .review-selected[data-node=C08] .note-summary{color:var(--art-ink)}
+:root[data-art-style] .mindmap-review .review-selected .note-excerpt{font-size:20px}
+:root[data-art-style] .mindmap-review .expression-branch{stroke:var(--art-reason);stroke-width:1.6;opacity:.65}
+:root[data-art-style] .mindmap-review .expression-center{left:57%;top:51%;width:450px}
+:root[data-art-style] .mindmap-review .expression-paper textarea{font-size:23px;line-height:1.85;height:270px;min-height:270px;max-height:320px;padding-top:17px;letter-spacing:.3px;border-bottom-color:color-mix(in srgb,var(--art-line) 30%,transparent)}
+:root[data-art-style] .mindmap-review .expression-selected button{font-size:11px}
+:root[data-art-style] .mindmap-review .expression-paper>small{font-size:11px}
+:root[data-art-style] .mindmap-review .expression-options{font-size:11px}
+:root[data-art-style] .mindmap-review .weiyan-presence{right:1.3vw;width:23vw}
+:root[data-art-style] .mindmap-review .weiyan-presence h2{font-size:29px}
+:root[data-art-style] .mindmap-review .weiyan-presence p{font-size:19px}
+:root[data-art-style] .mindmap-review .weiyan-presence .character-art.is-ready{opacity:.38}

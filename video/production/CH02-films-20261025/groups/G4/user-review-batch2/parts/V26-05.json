@@ -1,0 +1,59 @@
+{
+  "id": "V26-05",
+  "slot": "V26",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V26-05.mp4",
+  "sha256": "ece8ea05255e772c1ad77b1cb6eafc8c988b16c1a49854f872b47fc2d8ddf41e",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V26-05.mp4",
+  "oldSha256": "08110b6c7b90b3cd3056b6fb2e44d1bb84f0eb51ecf141b96fa66643cdb48cbe",
+  "oldDuration": 4.46,
+  "sourceFrames": [
+    0,
+    87
+  ],
+  "sourceRange": [
+    0.0,
+    3.625
+  ],
+  "newDuration": 3.625,
+  "technical": {
+    "duration": 3.625,
+    "videoDuration": 3.625,
+    "frames": 87,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "ece8ea05255e772c1ad77b1cb6eafc8c988b16c1a49854f872b47fc2d8ddf41e",
+    "bytes": 1226100
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-010",
+      "speaker": "我",
+      "text": "那我们退了，他们也还会继续准备？",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-010",
+      "roleControlOnly": "我",
+      "text": "那我们退了，他们也还会继续准备？",
+      "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "原来是白名单外杂句且合法玩家问句缺失；复用中央76条中对应纯文本玩家原句，画外我，军吏不代说",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": {
+    "node": "CH2-LY09-010",
+    "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-010.wav",
+    "sha256": "d7b3118ded8199a86ba362ef6c58dea88750087a67a74e3c9a1310db00f59223",
+    "text": "那我们退了，他们也还会继续准备？",
+    "offset": 0.25,
+    "scope": "根明确允许复用的原中央76条纯玩家原音，非隔离的G1错误7条预置NPC音轨"
+  },
+  "listeningReview": "pending, ASR only"
+}

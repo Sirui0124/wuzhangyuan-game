@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Gasp",
+          "p": 0.1955
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.1232
+        },
+        {
+          "label": "Snort",
+          "p": 0.093
+        },
+        {
+          "label": "Speech",
+          "p": 0.0428
+        },
+        {
+          "label": "Throat clearing",
+          "p": 0.03
+        },
+        {
+          "label": "Wheeze",
+          "p": 0.0234
+        },
+        {
+          "label": "Animal",
+          "p": 0.0212
+        },
+        {
+          "label": "Music",
+          "p": 0.0123
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.011
+        },
+        {
+          "label": "Cat",
+          "p": 0.0088
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0087
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0084
+        }
+      ],
+      "music": 0.0123
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {handle,number,validateResult} from '../ai.mjs';import {fresh,confirm,step} from '../.build/engine.js';
+const command=(extra={})=>({route:'fu',action:'rescue',count:500,countMode:'set',goal:'all',grain:0,relief:0,waitFor:'now',numberQuote:'派五百人',grainQuote:'',reliefQuote:'',goalQuote:'',waitQuote:'',reorganizeQuote:'',...extra});
+const result=c=>({kind:'order',reply:'候选',commands:[c],unsupported:[],factsUsed:[]});
+test('中文口语数量和阿拉伯数字',()=>{for(const [s,n] of [['三百五',350],['一千五',1500],['五百',500],['一千零五',1005],['两百',200],['1,200斤',1200]])assert.equal(number(s),n);});
+test('不能将500斤当作500人',()=>assert.throws(()=>validateResult(result(command({numberQuote:'送500斤',count:500})),{text:'送500斤'},fresh(),[]),/斤数不能当人数/));
+test('模型不能无依据送粮、重整或收队目标',()=>{for(const extra of [{grain:300},{action:'reorganize',count:null,countMode:'keep'},{goal:'leader'}])assert.throws(()=>validateResult(result(command(extra)),{text:'派五百人'},fresh(),[]));});
+test('咨询不执行，unsupported整份保留',()=>{assert.throws(()=>validateResult(result(command()),{text:'能不能派五百人？'},fresh(),[]),/咨询/);const r=validateResult({...result(command()),unsupported:['火攻暂不支持']},{text:'派五百人并火攻'},fresh(),[]);assert.equal(r.commands.length,0);});
+test('模型格式失败重试，咨询不会修改状态',async()=>{const state=fresh(),before=JSON.stringify(state);let calls=0;const r=await handle({state,route:'fu',text:'现在有多少兵？'},new AbortController().signal,async()=>({text:++calls===1?'not json':JSON.stringify({kind:'answer',reply:'营中有2500名预备兵。',answerTopic:'overview',answerRoute:'all',compareNumbers:[],factsUsed:[0],commands:[],unsupported:[]})}));assert.equal(calls,2);assert.equal(r.kind,'answer');assert.equal(JSON.stringify(state),before);});
+
+test('否定的人数和补粮不能借引用片段变成发令',()=>{assert.throws(()=>validateResult(result(command()),{text:'不要派五百人'},fresh(),[]),/否定/);});

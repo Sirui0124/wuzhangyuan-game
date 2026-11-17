@@ -1,0 +1,58 @@
+{
+  "updated_at": "2026-11-15T16:25:59.806510",
+  "version": "v2.3",
+  "units": [
+    {
+      "id": "R04",
+      "title": "雨水浸过余炭",
+      "requested_seconds": 5,
+      "status": "unknown_outcome",
+      "task_ids": [],
+      "remote_status": null,
+      "has_source": false,
+      "has_review": false,
+      "prompt_sha256": "bc6b84c9443d9b9280c7da9a1c57b3cdda2d98dd0923b402e299ead69ad48590"
+    },
+    {
+      "id": "M03",
+      "title": "马谡抬眼与压住呼吸",
+      "requested_seconds": 4,
+      "status": "downloaded",
+      "task_ids": [
+        "task_9eGbZ5yJIORkarkqGHjsGQPBnbli8O70"
+      ],
+      "remote_status": "succeeded",
+      "has_source": true,
+      "has_review": false,
+      "prompt_sha256": "5c7a3f74b8c20c59f12da73f1ffc21a5a749f5cd280978ea7de3f931bd8c6b3c"
+    },
+    {
+      "id": "R04R",
+      "title": "雨水浸过余炭-用户授权重提一次",
+      "requested_seconds": 5,
+      "status": "unknown_outcome",
+      "task_ids": [],
+      "remote_status": null,
+      "has_source": false,
+      "has_review": false,
+      "prompt_sha256": "bc6b84c9443d9b9280c7da9a1c57b3cdda2d98dd0923b402e299ead69ad48590"
+    },
+    {
+      "id": "R04RR",
+      "title": "雨水浸过余炭-第二次用户授权重提",
+      "requested_seconds": 5,
+      "status": "downloaded",
+      "task_ids": [
+        "task_jCkh8qA3BwxzRKBIr7TdZ6n503E1wvga"
+      ],
+      "remote_status": "succeeded",
+      "has_source": true,
+      "has_review": false,
+      "prompt_sha256": "bc6b84c9443d9b9280c7da9a1c57b3cdda2d98dd0923b402e299ead69ad48590"
+    }
+  ],
+  "submitted_tasks": 2,
+  "downloaded": 2,
+  "requested_total_seconds": 19,
+  "user_film_review": "pending"
+}

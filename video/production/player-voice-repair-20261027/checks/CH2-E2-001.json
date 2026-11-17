@@ -1,0 +1,137 @@
+{
+  "id": "CH2-E2-001",
+  "expected": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+  "sha256": "eebae82a48254da931f8c97e53dadb476021add7a2325c332b21c4e3c91b70b9",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E2-001-v1.wav",
+  "recognized": "这些是我拿到的材料和狗案的停手说明请一并收下",
+  "similarity": 0.9090909090909091,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.2999999999999997,
+      "end": 2.9,
+      "text": "这些是我拿到的材料和狗案的停手说明",
+      "noSpeechProbability": 0.03375035524368286,
+      "words": [
+        {
+          "start": 0.2999999999999997,
+          "end": 0.58,
+          "text": "这"
+        },
+        {
+          "start": 0.58,
+          "end": 0.68,
+          "text": "些"
+        },
+        {
+          "start": 0.68,
+          "end": 0.86,
+          "text": "是我"
+        },
+        {
+          "start": 0.86,
+          "end": 1.02,
+          "text": "拿"
+        },
+        {
+          "start": 1.02,
+          "end": 1.14,
+          "text": "到"
+        },
+        {
+          "start": 1.14,
+          "end": 1.22,
+          "text": "的"
+        },
+        {
+          "start": 1.22,
+          "end": 1.38,
+          "text": "材"
+        },
+        {
+          "start": 1.38,
+          "end": 1.58,
+          "text": "料"
+        },
+        {
+          "start": 1.58,
+          "end": 1.92,
+          "text": "和"
+        },
+        {
+          "start": 1.92,
+          "end": 2.06,
+          "text": "狗"
+        },
+        {
+          "start": 2.06,
+          "end": 2.18,
+          "text": "案"
+        },
+        {
+          "start": 2.18,
+          "end": 2.28,
+          "text": "的"
+        },
+        {
+          "start": 2.28,
+          "end": 2.42,
+          "text": "停"
+        },
+        {
+          "start": 2.42,
+          "end": 2.56,
+          "text": "手"
+        },
+        {
+          "start": 2.56,
+          "end": 2.68,
+          "text": "说"
+        },
+        {
+          "start": 2.68,
+          "end": 2.9,
+          "text": "明"
+        }
+      ]
+    },
+    {
+      "start": 3.1999999999999997,
+      "end": 4.04,
+      "text": "请一并收下",
+      "noSpeechProbability": 0.03375035524368286,
+      "words": [
+        {
+          "start": 3.1999999999999997,
+          "end": 3.48,
+          "text": "请"
+        },
+        {
+          "start": 3.48,
+          "end": 3.64,
+          "text": "一"
+        },
+        {
+          "start": 3.64,
+          "end": 3.78,
+          "text": "并"
+        },
+        {
+          "start": 3.78,
+          "end": 3.92,
+          "text": "收"
+        },
+        {
+          "start": 3.92,
+          "end": 4.04,
+          "text": "下"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

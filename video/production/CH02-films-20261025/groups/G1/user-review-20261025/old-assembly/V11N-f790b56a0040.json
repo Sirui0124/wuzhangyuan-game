@@ -1,0 +1,66 @@
+{
+  "id": "V11N",
+  "name": "定制①回应N",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11N-定制①回应N.mp4",
+  "duration": 6.61,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+  "next": [
+    "V12"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V11N-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11N-01-reframed.mp4",
+      "slotStart": 0,
+      "slotEnd": 6.59,
+      "sourceTrim": [
+        0,
+        6.59
+      ],
+      "audioMode": "npc-native",
+      "review": {
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11N-01-reframed.mp4",
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11N-01-raw.mp4",
+        "sourceSha256": "849f362d6a7685b1ea5a5f073ce3d9369b40f0598d50f6c48d078f613e4d436b",
+        "sourceIntervals": [
+          [
+            0,
+            6.583333
+          ]
+        ],
+        "crop": {
+          "x": 448,
+          "y": 0,
+          "width": 896,
+          "height": 504,
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11N-crop-check.jpg",
+          "verification": "全时段3fps裁框预检；未替G1输出或批准最终裁片"
+        },
+        "visualReview": "制作自查可用，待用户review",
+        "actualDynamicReview": true,
+        "reviewedBy": "G3完整动态原片+3fps；G1最终裁片1x播放到ended",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-template-assist-review.json",
+        "findings": "全时长保留，脸部近景排除多余碗，末尾闭口；只接V12。",
+        "audioIssues": [
+          "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "f790b56a0040d4bb9b60b1ad490d48617d06f04c756fa234b124012ff4a71bfa",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ]
+}

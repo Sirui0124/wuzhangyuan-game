@@ -1,0 +1,75 @@
+{
+  "id": "CH2-V25-03",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V25-03-2c2de78ebd-20261025.mp4",
+  "oldSha256": "128c692922e0c9d4494caa9babd2821ed76aa56271274629ec10c19011522d30",
+  "oldSubtitles": "/video/subtitles/CH2-V25-03-2c2de78ebd-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V25-03-c0cf4c2d.mp4",
+  "sha256": "ef7448b2f6dc5b12372420a6774dce24b1988ba722501f29053658ae6f0c07ff",
+  "bytes": 649681,
+  "duration": 2.2083333333333335,
+  "containerDuration": 2.208333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 53,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V25-03",
+    "src": "/video/current/PV27-CH2-V25-03-c0cf4c2d.mp4",
+    "title": "未实行计划与风险",
+    "subtitles": "/video/subtitles/PV27-CH2-V25-03-c0cf4c2d.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY09-P03",
+      "node": "CH2-LY09-P03",
+      "text": "李严知道？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-P03.wav",
+      "oldCorrelation": 0.9996149837411925,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-P03-v1.wav",
+      "newVoiceSha256": "53c095e0c7b08ee9592a9251e582eb52851139369b459873ba37102a20e59fed",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.28,
+        2.17875
+      ],
+      "insertAt": 0.28,
+      "voiceSeconds": 1.78,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.111992359161377,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.44000000000000006,
+      "end": 1.4700000000000002,
+      "text": "李严知道？"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

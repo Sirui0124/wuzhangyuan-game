@@ -1,0 +1,27 @@
+/* One collectible design for the map, album and expanded view. All lettering is live text. */
+.collectible-card{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;container-type:inline-size;box-sizing:border-box;width:100%;aspect-ratio:2/3;min-width:0;color:#e9d8b9;background:#151615;clip-path:polygon(5% 0,95% 0,100% 3.33%,100% 96.67%,95% 100%,5% 100%,0 96.67%,0 3.33%);text-align:center;text-shadow:0 2px 4px #0009}
+.collectible-art{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.collectible-card:after{content:'';position:absolute;inset:48% 0 0;z-index:-1;background:linear-gradient(transparent,#111313dd 45%,#111313f5);pointer-events:none}
+.collectible-frame{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;fill:none;stroke:#b89a62;stroke-width:1.3;vector-effect:non-scaling-stroke}
+.collectible-frame path+path{stroke:#92784999;stroke-width:.6}
+.collectible-copy{display:flex;flex-direction:column;align-items:center;padding:18px 8% 9%;min-width:0}
+.collectible-title{display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:2.7em;max-width:100%;margin:0;font-family:WuzhangBrush,KaiTi,'Kaiti SC',serif;font-size:clamp(22px,10cqi,34px);font-weight:400;line-height:1.35;letter-spacing:1px;overflow-wrap:anywhere;text-wrap:balance}
+.collectible-title>span{display:block;max-width:100%}
+.has-long-title .collectible-title{font-size:clamp(18px,8.5cqi,29px);letter-spacing:0}
+.collectible-rule{display:flex;align-items:center;gap:7px;width:88%;margin:9px 0 10px;color:#b89a62;font:12px/1 serif;text-shadow:none}
+.collectible-rule:before,.collectible-rule:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,transparent,#b89a62b3)}
+.collectible-rule:after{transform:scaleX(-1)}
+.collectible-phase{font:clamp(10px,4.3cqi,14px)/1.6 KaiTi,'Kaiti SC',serif;color:#c7bca6;min-height:1.6em;max-width:100%;text-wrap:balance}
+.collectible-blank{background:radial-gradient(ellipse at 50% 30%,#44433a,#151615 70%)}
+.collectible-emblem{position:absolute;inset:12% 17% auto;aspect-ratio:1;color:#b8a16c;filter:drop-shadow(0 2px 2px #0008);pointer-events:none}
+.collectible-emblem svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:square;stroke-linejoin:miter}
+.collectible-emblem .emblem-ring{stroke-width:.6;stroke-dasharray:2 5;opacity:.45}
+.collectible-emblem[data-emblem-chapter=grain]{color:#b69a79}
+.collectible-emblem[data-emblem-chapter=jieting]{color:#a7af91}
+.collectible-card.is-sealed .collectible-emblem{opacity:.38}
+.archive-browse{display:flex;align-items:center;gap:9px;margin:12px 0 0;padding:4px 0;background:none;border:0;color:#cbbb99;font:16px/1.5 KaiTi,'Kaiti SC',serif;cursor:pointer}
+.archive-browse span{font-size:14px;color:#a89d83}
+.collectible-card.is-sealed{filter:saturate(.2);color:#a8a38f}
+.achievement-card,.album-card{outline-offset:4px}
+.achievement-card:focus-visible,.album-card:focus-visible{outline:2px solid #e7ce92!important}
+@media(prefers-reduced-motion:reduce){.collectible-card{transition:none}}

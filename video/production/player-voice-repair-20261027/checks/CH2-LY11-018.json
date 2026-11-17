@@ -1,0 +1,102 @@
+{
+  "id": "CH2-LY11-018",
+  "expected": "我知道。你愿意和我一起把真话送上去吗？",
+  "sha256": "a0d4ece155329d9b6c5aed35ce60297d2e5369635abfafabaae05fdfc03d860b",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-018-v1.wav",
+  "recognized": "我知道你愿意和我一起把真话送上去吗",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.62,
+      "text": "我知道",
+      "noSpeechProbability": 0.0006693017203360796,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.62,
+          "text": "我知道"
+        }
+      ]
+    },
+    {
+      "start": 0.62,
+      "end": 4.08,
+      "text": "你愿意和我一起把真话送上去吗",
+      "noSpeechProbability": 0.0006693017203360796,
+      "words": [
+        {
+          "start": 0.62,
+          "end": 1.2,
+          "text": "你"
+        },
+        {
+          "start": 1.2,
+          "end": 2.08,
+          "text": "愿"
+        },
+        {
+          "start": 2.08,
+          "end": 2.2,
+          "text": "意"
+        },
+        {
+          "start": 2.2,
+          "end": 2.32,
+          "text": "和"
+        },
+        {
+          "start": 2.32,
+          "end": 2.42,
+          "text": "我"
+        },
+        {
+          "start": 2.42,
+          "end": 2.74,
+          "text": "一起"
+        },
+        {
+          "start": 2.74,
+          "end": 3.18,
+          "text": "把"
+        },
+        {
+          "start": 3.18,
+          "end": 3.34,
+          "text": "真"
+        },
+        {
+          "start": 3.34,
+          "end": 3.52,
+          "text": "话"
+        },
+        {
+          "start": 3.52,
+          "end": 3.7,
+          "text": "送"
+        },
+        {
+          "start": 3.7,
+          "end": 3.84,
+          "text": "上"
+        },
+        {
+          "start": 3.84,
+          "end": 3.96,
+          "text": "去"
+        },
+        {
+          "start": 3.96,
+          "end": 4.08,
+          "text": "吗"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

@@ -1,0 +1,96 @@
+{
+  "delivery": {
+    "id": "V19A",
+    "name": "缺额判断A",
+    "entry": "UI-N3选A",
+    "next": [
+      "V20"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V19A-01",
+      "V19A-02"
+    ],
+    "subclips": [
+      "V19A-01",
+      "V19A-02"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19A-缺额判断A-画面候选-38377099.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "64e5458753cc71fb7d4b84d257feeb1d67fee6b9ca0b3530ec5a4cf661698301",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19A-缺额判断A.mp4",
+    "technical": {
+      "duration": 19.05,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "64e5458753cc71fb7d4b84d257feeb1d67fee6b9ca0b3530ec5a4cf661698301"
+    },
+    "visualReview": [
+      {
+        "id": "V19A-01",
+        "observation": "0–9.4秒应征账、翻页、两位仓中NPC核账；无新扣粮画面。嘴动和原玩家句不一致，留统一配音/口型阶段核对，角色视线有轻微偏离",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V19A-02",
+        "observation": "0–10秒地方经手人低头将应征账落案并停稳，手/纸接触无明显穿透；原生字不作额外证据，NPC原句待统一配音",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V19A-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "武作文汉时菜的判断。黎清安,空气人领包取。错地掌,我错就失将士。",
+        "expected": ""
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "38377099ec892ac25166ba34bee4bf0dbaced0271b2cd4b96d5e7a356bc44b55"
+  },
+  "usability": {
+    "id": "V19A",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19A-缺额判断A-画面候选-38377099.mp4",
+    "sha256": "64e5458753cc71fb7d4b84d257feeb1d67fee6b9ca0b3530ec5a4cf661698301",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "wrong-visible-speaker",
+        "subclip": "V19A-01",
+        "time": [
+          4.3,
+          9
+        ],
+        "description": "只有玩家选择句，画面却是两名NPC相互讲话。",
+        "repair": "替换为已取得应征账的第一视角翻看，不改原判断或反馈"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V19A-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "武作文汉时菜的判断。黎清安,空气人领包取。错地掌,我错就失将士。",
+        "expected": ""
+      }
+    ],
+    "userApproved": false
+  }
+}

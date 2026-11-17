@@ -1,0 +1,25 @@
+{
+  "recipe": {
+    "id": "24-entry",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\24-entry.mov",
+    "frames": 364,
+    "duration": 15.166666666666666,
+    "sources": [
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\24-01.mov",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\24-02.mov"
+    ],
+    "sourceHashes": [
+      "44c5cea02a258fc49a8389b508ca68aea22c02e9d15b0dca53f1f72addaa2fb4",
+      "d1d63dfbaa11478d700568efeb36c8b34ea55f5359ec6e7852a866a50c31b33b"
+    ],
+    "fadeFrames": 5,
+    "boundaryNormalization": "按实测xfade输出少一帧同步裁短尾气口音频，不冻结补帧",
+    "nodes": [
+      "CH2-LY08-001",
+      "CH2-LY08-003",
+      "CH2-LY08-004"
+    ],
+    "purpose": "保留苟安口述回忆进入/返回边界，叠化位于句间气口，不读控制说明"
+  },
+  "sha256": "6503bc3e22949be3f933180f52503b36c38b906e1c994664c2a6f27d161c7fee"
+}

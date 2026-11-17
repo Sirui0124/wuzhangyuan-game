@@ -1,0 +1,75 @@
+{
+  "id": "CH2-V03A",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V03A-same-camera-20261025.mp4",
+  "oldSha256": "f1a0850bca5d45cf6daa8628d625477713ff1d98f466d2338444b684a139fb69",
+  "oldSubtitles": "/video/subtitles/CH2-V03A-same-camera-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V03A-6f45d9b9.mp4",
+  "sha256": "67074c3e0b798e443373739effc2876488c88158252582c3d184b98beeb1763e",
+  "bytes": 353546,
+  "duration": 6.666666666666667,
+  "containerDuration": 6.666667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 160,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V03A",
+    "src": "/video/current/PV27-CH2-V03A-6f45d9b9.mp4",
+    "title": "开场说明来意A",
+    "subtitles": "/video/subtitles/PV27-CH2-V03A-6f45d9b9.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY02-003",
+      "node": "CH2-LY02-003",
+      "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-003.wav",
+      "oldCorrelation": 0.9990499742551484,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-003-v1.wav",
+      "newVoiceSha256": "bf5f271acdf67fd029ec1feb917676b81a75fdf9cbcebc4c48c50c531279e341",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.42000000000000004,
+        5.92
+      ],
+      "insertAt": 0.42000000000000004,
+      "voiceSeconds": 5.4,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8667321801185608,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.5800000000000001,
+      "end": 5.8100000000000005,
+      "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

@@ -1,0 +1,70 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1FIX20",
+  "src": "/video/current/C1FIX20-QA-20261025.mp4",
+  "title": "天亮，没有人来收矛",
+  "rows": [
+    "B-03",
+    "B-04"
+  ],
+  "afterPlayback": "advance",
+  "subtitles": "/video/subtitles/C1FIX20-QA-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1FIX20-QA-20261025.mp4",
+  "sha256": "e842986623f68fbb703764465d7abaeec353be7ab926ee15b84fed9f12fc3c05",
+  "duration": 12.01075,
+  "cues": [
+    {
+      "start": 1.03,
+      "end": 2.15,
+      "text": "帐内又传来咳嗽"
+    },
+    {
+      "start": 7.81,
+      "end": 11.19,
+      "text": "天亮了。你握着长矛的手慢慢松开"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-B-03",
+      "node": "B-03",
+      "text": "帐内又传来咳嗽。",
+      "speaker": "我（心声）",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-03.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "52c1f01d2306bd16126486d70ca49d414a14bf9292eea23dfc0b9fbe5a4a787d",
+      "duration": 1.97625,
+      "speechRange": [
+        0.24,
+        1.58
+      ],
+      "correlation": 0.9362115242826066,
+      "insertAt": 0.5955,
+      "speechStart": 0.8355,
+      "speechEnd": 2.1755
+    },
+    {
+      "id": "C1-B-04",
+      "node": "B-04",
+      "text": "天亮了。你握着长矛的手慢慢松开。",
+      "speaker": "我（心声）",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-04.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "b5b997594a6332b0a93c017e618e13c435bc1fdc43179f6bbf4c34a8af8a72bc",
+      "duration": 3.813,
+      "speechRange": [
+        0.48,
+        3.56
+      ],
+      "correlation": 0.7390403381526589,
+      "insertAt": 7.648,
+      "speechStart": 8.128,
+      "speechEnd": 11.208
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

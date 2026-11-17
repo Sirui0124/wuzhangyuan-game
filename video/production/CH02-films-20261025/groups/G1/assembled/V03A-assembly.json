@@ -1,0 +1,88 @@
+{
+  "id": "V03A",
+  "name": "开场说明来意A",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V03A-按B画面配A原句-R1.mp4",
+  "duration": 6.67,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-LIGHT选A",
+  "next": [
+    "V04"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V03A-user-repair-r1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V03A-按B画面配A原句-R1.mp4",
+      "slotStart": 0,
+      "slotEnd": 6.67,
+      "sourceTrim": [
+        0,
+        6.67
+      ],
+      "audioMode": "user-requested-repair",
+      "review": {
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-free1.html",
+        "actualDynamicReview": true,
+        "visualReview": "浏览器播放至ended，结合关键帧核对画面；听审未完成",
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-003",
+      "speaker": "我（选项）",
+      "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-003.wav",
+      "centralSha256": "301b07cc90899be6dae28355bb32048e31a26bf14ad42a38c2024672b070758f",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 5.1635,
+      "slotStart": 0.3,
+      "slotEnd": 5.4635,
+      "subclip": "V03A-user-repair-r1"
+    }
+  ],
+  "sha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮用户返修：本地浏览器实际完整播放到ended，未见黑屏、文字卡或可见方框层。",
+  "audioIssues": [
+    "新预置TTS音频未采用；本条仅历史正确原声复用或按用户静音/删除。",
+    "制作核对不替代用户重新审核。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V03A-开场说明来意A.mp4",
+  "previousSha256": "e25fae255e2ffdb2a45f4c172633cf10a62b5aaf386d065e4edfd659172d5a8b",
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "怎么黑屏了？可以直接用和B一样的视频，替换音频即可。",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V03A-开场说明来意A.mp4",
+    "oldSha256": "e25fae255e2ffdb2a45f4c172633cf10a62b5aaf386d065e4edfd659172d5a8b",
+    "oldInterval": [
+      0,
+      5.85
+    ],
+    "repairs": [
+      {
+        "treatment": "按用户指定复用B画面，完整A既有原句0.3秒起；无B原声，无新TTS。",
+        "oldRange": [
+          0,
+          5.85
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V03A-按B画面配A原句-R1.mp4",
+        "newSha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+        "pictureSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V03B-开场说明来意B_画面修正V2.mp4",
+        "pictureSourceSha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+        "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-003.wav",
+        "audioSha256": "301b07cc90899be6dae28355bb32048e31a26bf14ad42a38c2024672b070758f",
+        "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。"
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\old-assembly\\V03A-e25fae255e2f.json"
+}

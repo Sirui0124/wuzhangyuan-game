@@ -1,0 +1,49 @@
+{
+  "source_sha256": "7934475739de1017105c63a0222cfcbf2fbb587d6cede552ef3effd6e6a599ac",
+  "method": "faster-whisper-base CPU int8; no expected script injected; VAD; automatic language",
+  "language": "zh",
+  "language_probability": 0.9934084415435791,
+  "expected_lines": [
+    "御营败了，速去救驾！"
+  ],
+  "segments": [
+    {
+      "in": 0.75,
+      "out": 2.75,
+      "text": "水鹽 鱼塔",
+      "no_speech_probability": 0.031092453747987747,
+      "logprob": -0.5755482390522957
+    },
+    {
+      "in": 2.75,
+      "out": 4.25,
+      "text": "唯其的",
+      "no_speech_probability": 0.031092453747987747,
+      "logprob": -0.5755482390522957
+    },
+    {
+      "in": 4.25,
+      "out": 6.25,
+      "text": "宿去救驾",
+      "no_speech_probability": 0.031092453747987747,
+      "logprob": -0.5755482390522957
+    },
+    {
+      "in": 6.25,
+      "out": 8.25,
+      "text": "余营拜了 宿去救驾",
+      "no_speech_probability": 0.031092453747987747,
+      "logprob": -0.5755482390522957
+    },
+    {
+      "in": 8.25,
+      "out": 9.25,
+      "text": "宿去救驾",
+      "no_speech_probability": 0.031092453747987747,
+      "logprob": -0.5755482390522957
+    }
+  ],
+  "rms_dbfs": -22.403440475463867,
+  "peak_dbfs": 0.48960837721824646,
+  "notice": "Machine locator only; not a transcript approval or proof of no music; inspect actual audio and lip/action timing."
+}

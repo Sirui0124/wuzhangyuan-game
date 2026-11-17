@@ -1,0 +1,19 @@
+{
+  "entry": {
+    "fromIds": [
+      "V24-01",
+      "V24-02"
+    ],
+    "dissolveSeconds": 0.4
+  },
+  "exit": {
+    "fromId": "V24-06",
+    "reactionSourceId": "V23-03",
+    "reactionTime": [
+      0,
+      2
+    ],
+    "dissolveSeconds": 0.4
+  },
+  "constraint": "李严段落仅为苟安所述回忆，不算我亲见；不跨交互边界、不新增台词"
+}

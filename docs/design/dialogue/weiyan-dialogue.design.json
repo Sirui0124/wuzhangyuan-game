@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 2,
+  "id": "chapter-one-weiyan-dialogue",
+  "title": "第一章｜魏延两轮对话判定设计",
+  "version": "2026-10-26-tutorial-help",
+  "status": "待review",
+  "runtimeEnabled": true,
+  "authoringSource": {
+    "kind": "feishu-document",
+    "url": "https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb",
+    "revision": 174,
+    "syncMode": "用户修改在线稿后要求同步；无自动监控",
+    "editSurface": "两张四列表，每轮三行；用户只修改自然语言内容，JSON由执行者维护。"
+  },
+  "technicalReference": {
+    "url": "https://my.feishu.cn/docx/ZppQd4GicopTRBxeZ6DcIecjnwd",
+    "revision": 14,
+    "audience": "执行者；不是用户日常编辑入口",
+    "status": "开篇为当前精简Prompt与三结果规则，下方旧稿仅作历史。"
+  },
+  "scope": "每轮三种结果：斩首失败、继续解释、答应。已接入游戏，待用户试玩；多个语义原因归入同一结果。",
+  "stages": [
+    {
+      "id": "first",
+      "name": "首轮",
+      "entry": "首轮魏延要求说明如何不误通报。",
+      "outcomes": [
+        {
+          "id": "R1-FAIL-EXECUTION",
+          "kind": "failure_execution",
+          "name": "将我斩首",
+          "matchAny": [
+            {
+              "id": "clearly_off_topic",
+              "meaning": "整段实质内容完全无关；有交报方案而夹一句闲话不算。空输入不提交；短促疑问和任务询问不按无关判死。",
+              "example": "别谈眼前的事了，你现在给我讲怎么做红烧肉。"
+            },
+            {
+              "id": "direct_personal_offense",
+              "meaning": "直接针对魏延的辱骂、羞辱或人身威胁；少敬语、普通质疑、不同意见、引用和否定不自动算冒犯。",
+              "example": "魏延，你这个废物，凭什么管我？"
+            }
+          ],
+          "requires": "玩家本次已确认原话明确命中完全无关或直接冒犯魏延；按当前三分类直接失败，不要求先警告。语义不明确先解释。",
+          "reply": {
+            "intent": "勃然大怒；根据本次无关或冒犯内容润色愤怒回应，然后进入本轮斩首失败。不能编造玩家已假传、拔刀或杀人。",
+            "mode": "ai_polish_within_class",
+            "input": [
+              "已确定结果",
+              "对应intent",
+              "玩家本次确认原话"
+            ],
+            "rules": [
+              "保留愤怒与处置方向，按实际冒犯或无关内容生成部分对白",
+              "不得把同一类结果改成放行、继续解释或另加新条件",
+              "不得编造玩家已经实施的动作",
+              "玩家可见回应使用我或你，不显示内部技术标签"
+            ],
+            "example": "你在说什么，是活腻了吗？",
+            "maxCharacters": 45,
+            "fallback": "定位或角色校验失败时使用对应intent原句，分类不变。"
+          },
+          "next": {
+            "phase": "failure",
+            "endingId": "R1-execution",
+            "title": "斩首",
+            "presentation": "魏延下令，军士上前带走；画面转黑，显示斩首失败结果，不新增血腥画面。",
+            "retry": "回到本轮第一次面对魏延、尚未发言的检查点；保留之前真实取得的线索和授权，清空本轮发言。",
+            "grantEvents": [
+              "本轮处斩失败"
+            ]
+          },
+          "reviewStatus": "待review",
+          "runtimeEnabled": true,
+          "editorial": {
+            "condition": "任一种明确命中：①整段话与当前军情、传报完全无关；②直接辱骂、羞辱或威胁魏延。任务询问、说不完整、意见不同不自动算冒犯。",
+            "response": "勃然大怒。【AI润色】结合我的实际发言：“你在说什么，是活腻了吗？”保留愤怒与处置方向。",
+            "next": "直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试。"
+          },
+          "negativeExamples": [
+            "我饿了，不过急报要紧，我先去报。",
+            "魏将军，闯帐会坏事，请听我说。",
+            "我不是来辱骂将军的。",
+            "帐里为何不能进？军报该交给谁？"
+          ]
+        },
+        {
+          "id": "R1-clarify",
+          "kind": "continue_explaining",
+          "name": "重新解释",
+          "matchAny": [
+            {
+              "id": "entry_restriction",
+              "meaning": "没有表达尊重禁令或不闯帐。"
+            },
+            {
+              "id": "immediate_transfer",
+              "meaning": "只拦人，没有提出由我承担眼下的传报。"
+            },
+            {
+              "id": "unclear_or_correctable",
+              "meaning": "仍在当前交涉语境，但含义不明、误述或方案需要纠正；不新增拒绝通传结局。"
+            }
+          ],
+          "reply": {
+            "intent": "只针对一个当前缺口追问，要求补充或纠正；沿用此前有效发言，不逐项机械盘问。",
+            "example": "帐门不能闯，这军报由谁去传？",
+            "mode": "ai_paraphrase_within_class",
+            "input": [
+              "已确定结果",
+              "对应intent"
+            ],
+            "rules": [
+              "按当前缺口生成简短回应，不增加新通过条件",
+              "例句不是固定口令；保留用户标记的AI润色意图",
+              "不能编造新授权、假传、伤害或已处置军报",
+              "不得将解释次数变成隐藏死亡计数"
+            ],
+            "maxCharacters": 45,
+            "fallback": "定位或角色校验失败时使用对应intent原句，分类不变。"
+          },
+          "next": {
+            "phase": "expression",
+            "grantEvents": [],
+            "preserve": [
+              "原稿",
+              "已有依据",
+              "本轮有效发言",
+              "真实授权与亲兵随行状态"
+            ]
+          },
+          "editorial": {
+            "condition": "首轮只看两点：是否尊重禁令、是否提出由我承担眼下的传报。只拦人而没有传报办法，或主动说了无据军情、虚构授权、明确拖延时才追问。漏问斥候、没说营门情况、没展开不必闯帐的理由，都不单独阻止通过。",
+            "response": "【AI润色】只问真正缺少的一点。例如：“帐门不能闯，这军报由谁去传？”已说明的内容沿用，不反复要求复述军情。",
+            "next": "我补充或改口，保留已说清的内容。连续两次需要解释后，可展开参考说法，编辑或采用后仍须确认说出；不按次数自动通过或判死。"
+          }
+        },
+        {
+          "id": "R1-accept",
+          "kind": "accept",
+          "name": "答应我去传报",
+          "matchAll": [
+            "表达尊重帐前禁令或不闯帐",
+            "提出由我承担眼下传报；我来转达即算，不强求立即等固定字眼",
+            "没有明确冒犯、虚构事实授权或相反的拖延安排"
+          ],
+          "reply": {
+            "mode": "fixed",
+            "text": "好，你即刻转呈，莫误军情。",
+            "source": "保留用户在线首轮表的【固定】标记与原句"
+          },
+          "next": {
+            "phase": "dialogue",
+            "destination": "first-accepted",
+            "grantEvents": [
+              "同意转呈"
+            ],
+            "notGranted": [
+              "FORMAL_REPORT_RECEIVED",
+              "REPORT_CLOSED"
+            ]
+          },
+          "editorial": {
+            "condition": "两点成立即可：①尊重帐前禁令或不闯帐；②提出由我承担眼下的传报，如“我来替您转达”。不要求背出立即、不误军情等字眼。营门军情和不必闯帐的理由可作补充，缺少不扣住首轮；主动虚构的事实仍需纠正。",
+            "response": "【固定】“好，你即刻转呈，莫误军情。”",
+            "next": "我去转呈，继续原有剧情；此时只是答应让我转呈，军报尚未完成交接。"
+          }
+        }
+      ],
+      "outcomeCount": 3
+    },
+    {
+      "id": "authorized",
+      "name": "第二轮",
+      "entry": "姜维真实答应，C08来源完整、亲兵随行。",
+      "outcomes": [
+        {
+          "id": "R2-FAIL-EXECUTION",
+          "kind": "failure_execution",
+          "name": "将我斩首",
+          "matchAny": [
+            {
+              "id": "clearly_off_topic",
+              "meaning": "整段实质内容完全无关；有交报方案而夹一句闲话不算。空输入不提交；短促疑问和任务询问不按无关判死。",
+              "example": "别谈眼前的事了，你现在给我讲怎么做红烧肉。"
+            },
+            {
+              "id": "direct_personal_offense",
+              "meaning": "直接针对魏延的辱骂、羞辱或人身威胁；少敬语、普通质疑、不同意见、引用和否定不自动算冒犯。",
+              "example": "魏延，你这个废物，凭什么管我？"
+            }
+          ],
+          "requires": "玩家本次已确认原话明确命中完全无关或直接冒犯魏延；按当前三分类直接失败，不要求先警告。语义不明确先解释。",
+          "reply": {
+            "intent": "勃然大怒；根据本次无关或冒犯内容润色愤怒回应，然后进入本轮斩首失败。不能编造玩家已假传、拔刀或杀人。",
+            "mode": "ai_polish_within_class",
+            "input": [
+              "已确定结果",
+              "对应intent",
+              "玩家本次确认原话"
+            ],
+            "rules": [
+              "保留愤怒与处置方向，按实际冒犯或无关内容生成部分对白",
+              "不得把同一类结果改成放行、继续解释或另加新条件",
+              "不得编造玩家已经实施的动作",
+              "玩家可见回应使用我或你，不显示内部技术标签"
+            ],
+            "example": "你在说什么，是活腻了吗？",
+            "maxCharacters": 45,
+            "fallback": "定位或角色校验失败时使用对应intent原句，分类不变。"
+          },
+          "next": {
+            "phase": "failure",
+            "endingId": "R2-execution",
+            "title": "斩首",
+            "presentation": "魏延下令，军士上前带走；画面转黑，显示斩首失败结果，不新增血腥画面。",
+            "retry": "回到本轮第一次面对魏延、尚未发言的检查点；保留之前真实取得的线索和授权，清空本轮发言。",
+            "grantEvents": [
+              "本轮处斩失败"
+            ]
+          },
+          "reviewStatus": "待review",
+          "runtimeEnabled": true,
+          "editorial": {
+            "condition": "任一种明确命中：①整段话与当前军情、交报完全无关；②直接辱骂、羞辱或威胁魏延。与首轮同一标准，不因姜维已经答应就免除。",
+            "response": "勃然大怒。【AI润色】结合我的实际发言：“你在说什么，是活腻了吗？”不得编造姜维撤回承诺。",
+            "next": "直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试，保留此前取得的线索和姜维承诺。"
+          },
+          "negativeExamples": [
+            "我饿了，不过急报要紧，我先去报。",
+            "魏将军，闯帐会坏事，请听我说。",
+            "我不是来辱骂将军的。",
+            "帐里为何不能进？军报该交给谁？"
+          ]
+        },
+        {
+          "id": "R2-clarify",
+          "kind": "continue_explaining",
+          "name": "继续解释",
+          "matchAny": [
+            {
+              "id": "actual_authorization",
+              "meaning": "真实授权已取得，但还没向魏延说明姜维本人已答应接报。"
+            },
+            {
+              "id": "enemy_change_reason",
+              "meaning": "缺少今昔敌情对比、随我军换向或可能试探的解释；只问当前缺口。"
+            },
+            {
+              "id": "immediate_handoff",
+              "meaning": "没提出现在在帐外向姜维当面交报。"
+            },
+            {
+              "id": "unclear_or_correctable",
+              "meaning": "含义不明、误述或方案需要纠正；不自动取消既有授权。"
+            }
+          ],
+          "reply": {
+            "intent": "只针对一个当前缺口追问，要求补充或纠正；沿用此前有效发言，不逐项机械盘问。",
+            "example": "这是伯约亲口答应的？把话说清楚。",
+            "mode": "ai_paraphrase_within_class",
+            "input": [
+              "已确定结果",
+              "对应intent"
+            ],
+            "rules": [
+              "按当前缺口生成简短回应，不增加新通过条件",
+              "例句不是固定口令；保留用户标记的AI润色意图",
+              "不能编造新授权、假传、伤害或已处置军报",
+              "不得将解释次数变成隐藏死亡计数"
+            ],
+            "maxCharacters": 45,
+            "fallback": "定位或角色校验失败时使用对应intent原句，分类不变。"
+          },
+          "next": {
+            "phase": "expression",
+            "grantEvents": [],
+            "preserve": [
+              "原稿",
+              "已有依据",
+              "本轮有效发言",
+              "真实授权与亲兵随行状态"
+            ]
+          },
+          "editorial": {
+            "condition": "仍在谈交报，但有缺口：①没说清姜维本人已答应；②没说明今夜敌情变化、可能试探的理由；③没说清现在如何当面交报。误述或含糊可以纠正。",
+            "response": "【AI】只问当前没说清的一点。例如：“这是伯约亲口答应的？”或：“与前几夜相比，今夜变在何处？”已经解释过的不重复问。",
+            "next": "我补充或改口，不用从头重说；保留真实授权、已有线索及有效发言。连续两次需要解释后，可展开符合当前线索的参考说法，采用并确认后继续交谈。"
+          }
+        },
+        {
+          "id": "R2-accept",
+          "kind": "accept",
+          "name": "答应去见姜维",
+          "matchAll": [
+            "真实C08授权有效且已向魏延说明姜维本人答应接报",
+            "已说明今昔敌情对比、随我军换向及可能试探的理由；本轮已说清的部分沿用",
+            "现在在帐外向姜维当面交报",
+            "没有当前明确针对魏延的辱骂、羞辱或威胁"
+          ],
+          "reply": {
+            "mode": "fixed",
+            "text": "带路，我亲自问他。"
+          },
+          "next": {
+            "phase": "dialogue",
+            "destination": "weiyan-cooperation",
+            "grantEvents": [
+              "PERSUADED"
+            ],
+            "notGranted": [
+              "FORMAL_REPORT_RECEIVED",
+              "REPORT_CLOSED"
+            ]
+          },
+          "editorial": {
+            "condition": "三点说清：①姜维已答应接报；②今夜敌情变化及可能试探的理由；③现在去帐外向姜维当面交报。此前已讲清的内容沿用。",
+            "response": "【固定】“带路，我亲自问他。”",
+            "next": "亲兵证实后，魏延跟我去见姜维，由姜维接报处置；不能提前算作军报已处置完毕。"
+          }
+        }
+      ],
+      "outcomeCount": 3
+    }
+  ],
+  "decisionOrder": [
+    "核对前置事实、确认发言及服务有效性；异常不作为剧情结果",
+    "明确命中完全无关或直接冒犯魏延：斩首失败",
+    "本轮通过条件已全部说清：答应",
+    "其他有效交涉：继续解释"
+  ],
+  "recognitionContract": {
+    "itemConductPriority": "2026-10-28用户纠正：物品不得豁免人物处罚。先处理符合双条件的妖异失败，其余实际附物发言均独立核验当前行为。帐前主动点火耍弄、整段戏弄催报的魏延可判off_topic斩首；持物直接威胁或攻击可判offense斩首，不受物品路线或mainlineEligible影响。普通递物、未点燃、许可询问、正当用途、缺配件与失败建议不单独判死；不得按商品名或火字眼判罚。处罚必须引用本次原话。",
+    "replyVoice": "2026-10-26用户反馈：魏延回应禁用莫把、不要把、别把某事当作另一事等对照说教及同义改写，不说核令、具体安排等流程词。按眼前处境短而直接地同意、催促或追问；递酒、声称点燃玩物时先回应酒或玩火，不一律只催军报，不编造喝酒、损伤或成功。不逐条朗读后台判断、责任拆解和流程验收。必要的判断条件继续由程序和模型核验。",
+    "inputs": [
+      "stage：当前轮次",
+      "checks：本轮条件",
+      "facts：已取得证据生成的短事实与状态",
+      "spokenTurns：本轮按时间排序的全部实说",
+      "current：本次确认发言，仅限fatal判断"
+    ],
+    "outputs": [
+      "fatal",
+      "checks",
+      "unsupported"
+    ],
+    "terminalEvidence": [
+      "玩家当前连续逐字原话",
+      "上下文明确支持完全无关或直接冒犯",
+      "排除引用、否定、任务询问和含义不明"
+    ],
+    "decisionOwner": "AI识别语义并引用确认原话；程序核验格式、引用、真实前置事实后按优先级选择三结果和对应intent，管理状态与跳转。",
+    "invalidOrUncertain": "语义不明先解释；空输入不提交；服务异常提供重试，不冒充魏延回应，更不触发斩首。",
+    "intentNotEvent": "根据确认原话分类，不把发言补写成已实施的假传、杀害或军报处置。",
+    "semanticComparison": "第二轮今昔对比按具体变化的语义识别，不把前夜闻号即退、今夜不退设为唯一事例。已说明今夜随我军换向且与前几夜不同，同样可满足对比；只说有变而没有具体变化仍需解释。不同条件允许引用同一段实际发言。",
+    "replyOutputs": [
+      "reply"
+    ],
+    "quoteConflict": "unsupported优先于交叉正向引文；清空冲突check并继续解释。无效结构或来源引文仍是技术异常。"
+  },
+  "boundaries": [
+    "每轮恰好三种；没有拒绝通传的第四种结果",
+    "完全无关按整段实质意思判断，有传报方案夹一句闲话不算",
+    "缺敬语、普通质疑、意见不同、一次误述和任务询问不自动算冒犯",
+    "原话明确无关或直接冒犯时直接斩首；不增加警告前置条件",
+    "首轮军情判断按真实已得内容表达，不强制取得可选营门线索或虚构全新事实",
+    "第二轮沿用有效表达，不要求重复完整背诵；真正缺失才追问",
+    "第二轮失败重试保留姜维承诺与已有线索",
+    "首轮接受后的次日问责死亡仍属于原有剧情，不合并为当前斩首"
+  ],
+  "legacyImplementation": {
+    "newFailureResultsImplemented": true,
+    "oldSchemaArchive": "outputs/weiyan-design-20261023/failure-design/design-before.json",
+    "status": "接入前的历史记录；不作为当前运行状态。",
+    "oldResults": [
+      "ok",
+      "R1-RETRY",
+      "P2-F1",
+      "P2-F2",
+      "P2-F2B",
+      "P2-F3",
+      "P2-F4",
+      "P2-F5"
+    ],
+    "completedWork": [
+      "三结果结构化识别与原话核验",
+      "第一轮新增条件与真实依据核对",
+      "按缺口生成反馈并累积本轮有效表达",
+      "斩首失败页与本轮检查点",
+      "存档、取消、重试和回归验证"
+    ]
+  },
+  "sourceReconciliation": {
+    "baselineRevision": 160,
+    "userDecision": "两轮都改成三种，请充实。",
+    "preserved": [
+      "两轮三分类及行序",
+      "无关或冒犯魏延直接斩首",
+      "首轮军情尚不必闯帐、确实不让进、我立即转呈",
+      "首轮固定接受台词",
+      "AI按缺口追问及按原话润色愤怒回应"
+    ],
+    "removed": [
+      "拒绝通传独立失败结果",
+      "通用失败警告和错误计数"
+    ]
+  },
+  "promptDesign": {
+    "classificationPrompt": "weiyan-prompt.txt",
+    "replyPrompt": "weiyan-reply-prompt.txt",
+    "stageConfig": "weiyan-prompt.stages.json",
+    "thinking": {
+      "type": "disabled"
+    },
+    "pipeline": "语义判断并引用原话→程序三分类→对应短回应",
+    "persona": [
+      "性急",
+      "刚硬",
+      "重军情"
+    ],
+    "maxReplyCharacters": 45,
+    "runtimeIntegrated": true,
+    "validationReport": "outputs/weiyan-runtime-20261023/live-model.json"
+  },
+  "runtime": {
+    "implementation": "GameStarter/web-demo/src/weiyan-judgment.ts",
+    "configuration": "GameStarter/web-demo/src/weiyan-prompt-config.ts",
+    "status": "已实现、自动验证通过，待用户试玩",
+    "judgmentVersion": "weiyan-three-results-20261023-v1",
+    "verification": "outputs/weiyan-runtime-20261023/verification.json"
+  },
+  "assistance": {
+    "afterClarifications": 2,
+    "scope": "魏延首轮与第二轮",
+    "policy": "仅由玩家展开、采用并确认；参考说法核对真实已得事实，不附物品时原句走确定性剧情路径，编辑后仍走当前判定；采用不自动提交，不授予线索或授权。",
+    "status": "待review"
+  }
+}

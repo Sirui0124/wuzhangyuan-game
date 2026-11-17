@@ -1,0 +1,183 @@
+{
+  "id": "CH2-E4-LATE-003",
+  "expected": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+  "sha256": "26a365bebf0dfd36b6ebf8f8dcf17d8a38e2e2d31fbce84b088bf937830481b2",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E4-LATE-003-v1.wav",
+  "recognized": "我知道事情不止她說的那些可擠出查的不清最後壓在案上的還是她的認罪",
+  "similarity": 0.6875,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.04,
+      "text": "我知道事情不止她說的那些",
+      "noSpeechProbability": 0.1587386429309845,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.64,
+          "text": "我知道"
+        },
+        {
+          "start": 0.64,
+          "end": 0.94,
+          "text": "事情"
+        },
+        {
+          "start": 0.94,
+          "end": 1.14,
+          "text": "不"
+        },
+        {
+          "start": 1.14,
+          "end": 1.26,
+          "text": "止"
+        },
+        {
+          "start": 1.26,
+          "end": 1.38,
+          "text": "她"
+        },
+        {
+          "start": 1.38,
+          "end": 1.52,
+          "text": "說"
+        },
+        {
+          "start": 1.52,
+          "end": 1.64,
+          "text": "的"
+        },
+        {
+          "start": 1.64,
+          "end": 1.78,
+          "text": "那"
+        },
+        {
+          "start": 1.78,
+          "end": 2.04,
+          "text": "些"
+        }
+      ]
+    },
+    {
+      "start": 2.88,
+      "end": 4.06,
+      "text": "可擠出查的不清",
+      "noSpeechProbability": 0.1587386429309845,
+      "words": [
+        {
+          "start": 2.88,
+          "end": 3.2,
+          "text": "可"
+        },
+        {
+          "start": 3.2,
+          "end": 3.34,
+          "text": "擠"
+        },
+        {
+          "start": 3.34,
+          "end": 3.48,
+          "text": "出"
+        },
+        {
+          "start": 3.48,
+          "end": 3.64,
+          "text": "查"
+        },
+        {
+          "start": 3.64,
+          "end": 3.72,
+          "text": "的"
+        },
+        {
+          "start": 3.72,
+          "end": 3.86,
+          "text": "不"
+        },
+        {
+          "start": 3.86,
+          "end": 4.06,
+          "text": "清"
+        }
+      ]
+    },
+    {
+      "start": 4.92,
+      "end": 6.2,
+      "text": "最後壓在案上的",
+      "noSpeechProbability": 0.1587386429309845,
+      "words": [
+        {
+          "start": 4.92,
+          "end": 5.24,
+          "text": "最後"
+        },
+        {
+          "start": 5.24,
+          "end": 5.52,
+          "text": "壓"
+        },
+        {
+          "start": 5.52,
+          "end": 5.64,
+          "text": "在"
+        },
+        {
+          "start": 5.64,
+          "end": 5.8,
+          "text": "案"
+        },
+        {
+          "start": 5.8,
+          "end": 6.0,
+          "text": "上"
+        },
+        {
+          "start": 6.0,
+          "end": 6.2,
+          "text": "的"
+        }
+      ]
+    },
+    {
+      "start": 6.66,
+      "end": 7.66,
+      "text": "還是她的認罪",
+      "noSpeechProbability": 0.1587386429309845,
+      "words": [
+        {
+          "start": 6.66,
+          "end": 6.98,
+          "text": "還是"
+        },
+        {
+          "start": 6.98,
+          "end": 7.22,
+          "text": "她"
+        },
+        {
+          "start": 7.22,
+          "end": 7.32,
+          "text": "的"
+        },
+        {
+          "start": 7.32,
+          "end": 7.46,
+          "text": "認"
+        },
+        {
+          "start": 7.46,
+          "end": 7.66,
+          "text": "罪"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

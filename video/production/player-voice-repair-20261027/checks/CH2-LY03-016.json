@@ -1,0 +1,54 @@
+{
+  "id": "CH2-LY03-016",
+  "expected": "你就信得过魏国？",
+  "sha256": "3b2dce55f0c029e477081da191383f553f67e18d55ac985c28b90418ddf44ebc",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-016-v1.wav",
+  "recognized": "你就信得過魏國",
+  "similarity": 0.7142857142857143,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.46,
+      "text": "你就信得過魏國",
+      "noSpeechProbability": 0.3595113456249237,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.64,
+          "text": "你就"
+        },
+        {
+          "start": 0.64,
+          "end": 0.9,
+          "text": "信"
+        },
+        {
+          "start": 0.9,
+          "end": 1.02,
+          "text": "得"
+        },
+        {
+          "start": 1.02,
+          "end": 1.14,
+          "text": "過"
+        },
+        {
+          "start": 1.14,
+          "end": 1.3,
+          "text": "魏"
+        },
+        {
+          "start": 1.3,
+          "end": 1.46,
+          "text": "國"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

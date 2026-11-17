@@ -1,0 +1,26 @@
+// Build design samples through the real chapter state machine; no fabricated facts or player saves.
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import assert from 'node:assert/strict';
+const built = resolve('GameStarter/web-demo/.build');
+const { ChapterSession } = await import(pathToFileURL(resolve(built, 'GameStarter/web-demo/src/chapter-session.js')));
+const json = name => JSON.parse(readFileSync(resolve(built, 'story', name), 'utf8'));
+const content = json('chapter-one.script.json'), flow = json('chapter-one.flow.json'), manifest = json('session-manifest.json');
+const game = new ChapterSession(content, flow, manifest.contentVersion);
+const read = () => { let n = 0; while (game.snapshot().phase === 'dialogue' && n++ < 200) game.nextLine(); assert.ok(n < 200); };
+const act = id => { const action = flow.actions.find(a => a.id === id); if (game.snapshot().scene !== action.scene) game.move(action.scene); assert.ok(game.act(id)); read(); };
+game.finishCinematic(); read(); ['read-notice', 'meet-first-scout'].forEach(act); game.chooseScout('a'); read(); act('intercept-first');
+game.setFocus('我来转呈信息'); game.restoreSuggestion(); await game.confirmExpression(); game.acknowledgeReply(); read();
+['deliver-first', 'stand-watch'].forEach(act); game.finishCinematic(); read(); game.rewind(); read();
+['ask-guard', 'ask-relay', 'ask-scout'].forEach(act);
+assert.ok(game.beginThinking());
+assert.equal(game.snapshot().phase, 'thoughts');
+const stages = { initial: game.snapshot() };
+assert.ok(game.think()); stages.first = game.snapshot();
+assert.ok(game.placeThought('C04')); assert.ok(game.think()); stages.developed = game.snapshot();
+assert.ok(game.placeThought('C06')); assert.ok(game.placeThought('C07')); assert.ok(game.think()); stages.ready = game.snapshot();
+assert.equal(stages.ready.story.flags.JIANG_AUTH_GRANTED, undefined);
+const dir = resolve('GameStarter/web-demo/public/art-review'); mkdirSync(dir, { recursive: true });
+writeFileSync(resolve(dir, 'thought-options-states.json'), JSON.stringify({ version: 1, contentVersion: manifest.contentVersion, source: 'Actual ChapterSession progression, isolated design preview', stages }, null, 2));
+console.log(JSON.stringify({ stages: Object.keys(stages), clues: stages.initial.story.collected.length, history: stages.ready.thinking.history.length, realAuthorization: false }));

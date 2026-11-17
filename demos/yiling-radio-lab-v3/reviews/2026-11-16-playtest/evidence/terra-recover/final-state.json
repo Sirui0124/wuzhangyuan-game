@@ -1,0 +1,625 @@
+{
+  "version": 4,
+  "world": {
+    "version": 1,
+    "turn": 9,
+    "revision": 18,
+    "seed": 4289217819,
+    "initialSeed": 731115,
+    "camp": 2400,
+    "stock": 0,
+    "eaten": 4600,
+    "relief": 400,
+    "losses": 100,
+    "fronts": {
+      "fu": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "complete",
+        "policy": {
+          "troops": 800,
+          "mode": "borrow",
+          "guard": 0,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          500,
+          500
+        ],
+        "out": [
+          false,
+          false
+        ],
+        "supply": false,
+        "loss": 50,
+        "report": "750名接应兵已归营，下回合可调用。",
+        "morale": 26,
+        "fatigue": 19,
+        "ration": 80,
+        "factor": 0.45,
+        "riskBonus": 30
+      },
+      "feng": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "lost",
+        "policy": {
+          "troops": 850,
+          "mode": "clear",
+          "guard": 300,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          500,
+          943.75
+        ],
+        "out": [
+          false,
+          false
+        ],
+        "supply": false,
+        "loss": 50,
+        "report": "850名接应兵已归营，下回合可调用。",
+        "morale": 0,
+        "fatigue": 29,
+        "ration": 80,
+        "factor": 0.325,
+        "riskBonus": 40
+      },
+      "sha": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "complete",
+        "policy": {
+          "troops": 800,
+          "mode": "east",
+          "guard": 500,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          1000,
+          0
+        ],
+        "out": [
+          true,
+          true
+        ],
+        "supply": false,
+        "loss": 0,
+        "report": "800名接应兵已归营，下回合可调用。",
+        "morale": 64,
+        "fatigue": 14,
+        "ration": 80,
+        "factor": 0.5,
+        "riskBonus": 25
+      }
+    },
+    "queued": {},
+    "returns": [],
+    "saved": {
+      "沙摩柯": 2,
+      "傅肜": 5,
+      "张南": 5
+    },
+    "history": [
+      {
+        "turn": 1,
+        "camp": 0,
+        "stock": 2500,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "傅肜已退到隘口，接替队仍守后阵，等隘口整队。 本轮用粮400斤，队中余400斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发400斤；士气70→66，疲劳0→22。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "800人换防，完成500/500工作量"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          },
+          {
+            "route": "feng",
+            "text": "侧路已清，原军吏还在迁旗；前部暂等新旗。 本轮用粮450斤，队中余450斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发450斤；士气70→66，疲劳0→22。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "0名接应兵与原军吏迁旗，完成337.5/500",
+              "900人清侧路，完成500/500"
+            ],
+            "foodUsed": 450,
+            "requestedFood": 450
+          },
+          {
+            "route": "sha",
+            "text": "东沟已经接上，下一回合可过林口；出口仍需守住。 本轮用粮400斤，队中余400斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发400斤；士气70→66，疲劳0→22。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "500名接应兵与本部熟路军士搜东沟，完成500/500"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 2500
+      },
+      {
+        "turn": 2,
+        "camp": 0,
+        "stock": 2100,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "隘口已经准备好，后队按旗号交替撤。 本轮用粮400斤，队中余0斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发400斤；士气66→62，疲劳22→44。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "傅肜原部在隘口整队，本轮结束可回身掩护"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          },
+          {
+            "route": "feng",
+            "text": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮450斤，队中余0斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发450斤；士气66→62，疲劳22→44。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "900名接应兵与原军吏迁旗，完成162.5/500"
+            ],
+            "foodUsed": 450,
+            "requestedFood": 450
+          },
+          {
+            "route": "sha",
+            "text": "沙摩柯与首批已脱险，西沟部众仍需接应。 本轮用粮400斤，队中余0斤。 加紧推进：状态与节奏修正135%，额外受挫风险10个百分点。正常配给，本时段实发400斤；士气66→62，疲劳22→44。",
+            "risk": 10,
+            "loss": 0,
+            "jobs": [
+              "东沟部众通过林口",
+              "500名接应兵与本部熟路军士搜西沟，完成1000/1000"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          }
+        ],
+        "saved": [
+          "沙摩柯"
+        ],
+        "issuedGrain": 400
+      },
+      {
+        "turn": 3,
+        "camp": 0,
+        "stock": 850,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "部队奉令稳住现场，暂不推进接应。 本轮用粮400斤，队中余0斤。 本时段休整，任务进度暂停；下时段自动正常推进。正常配给，本时段实发400斤；士气62→74，疲劳44→9。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "800人坚守，等待下一道军令"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          },
+          {
+            "route": "feng",
+            "text": "部队奉令稳住现场，暂不推进接应。 本轮用粮450斤，队中余0斤。 本时段休整，任务进度暂停；下时段自动正常推进。正常配给，本时段实发450斤；士气62→74，疲劳44→9。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "900人坚守，等待下一道军令"
+            ],
+            "foodUsed": 450,
+            "requestedFood": 450
+          },
+          {
+            "route": "sha",
+            "text": "部队奉令稳住现场，暂不推进接应。 本轮用粮400斤，队中余0斤。 本时段休整，任务进度暂停；下时段自动正常推进。正常配给，本时段实发400斤；士气62→74，疲劳44→9。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "800人坚守，等待下一道军令"
+            ],
+            "foodUsed": 400,
+            "requestedFood": 400
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 1250
+      },
+      {
+        "turn": 4,
+        "camp": 0,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "隘口已经准备好，后队按旗号交替撤。 本轮用粮272斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正100%，额外受挫风险0个百分点。节用20%，本时段实发272斤；士气74→64，疲劳9→14。",
+            "risk": 25,
+            "loss": 0,
+            "jobs": [
+              "傅肜原部掩护，800人接队尾，完成400/500"
+            ],
+            "foodUsed": 272,
+            "requestedFood": 320
+          },
+          {
+            "route": "feng",
+            "text": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮306斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正100%，额外受挫风险0个百分点。节用20%，本时段实发306斤；士气74→64，疲劳9→14。",
+            "risk": 25,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，600人护送，完成300/1000"
+            ],
+            "foodUsed": 306,
+            "requestedFood": 360
+          },
+          {
+            "route": "sha",
+            "text": "两沟已知待接部众均通过林口，最后守口队可以撤回。 接应队下回合归营。 本轮用粮272斤，余粮随队归营。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正100%，额外受挫风险0个百分点。节用20%，本时段实发272斤；士气74→64，疲劳9→14。",
+            "risk": 25,
+            "loss": 0,
+            "jobs": [
+              "西沟部众通过林口"
+            ],
+            "foodUsed": 272,
+            "requestedFood": 320
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 850
+      },
+      {
+        "turn": 5,
+        "camp": 800,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "傅肜与队尾已过隘口，最后掩护队也撤下。 本轮50人负伤或掉队，退出可用兵力。 接应队下回合归营。 本轮用粮0斤，余粮随队归营。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正90%，额外受挫风险5个百分点。节用20%，本时段实发0斤；士气64→26，疲劳14→19。",
+            "risk": 30,
+            "loss": 50,
+            "jobs": [
+              "傅肜原部掩护，800人接队尾，完成100/500"
+            ],
+            "foodUsed": 0,
+            "requestedFood": 320
+          },
+          {
+            "route": "feng",
+            "text": "张南与前队已脱险，冯习仍在收后队。 本轮用粮0斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正90%，额外受挫风险5个百分点。节用20%，本时段实发0斤；士气64→34，疲劳14→19。",
+            "risk": 30,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，600人护送，完成270/1000"
+            ],
+            "foodUsed": 0,
+            "requestedFood": 360
+          },
+          {
+            "route": "sha",
+            "text": "800名接应兵已归营，下回合可调用。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": [
+          "傅肜",
+          "张南"
+        ],
+        "issuedGrain": 0
+      },
+      {
+        "turn": 6,
+        "camp": 1550,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "张南与前队已脱险，冯习仍在收后队。 本轮50人负伤或掉队，退出可用兵力。 本轮用粮0斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正65%，额外受挫风险15个百分点。节用20%，本时段实发0斤；士气34→0，疲劳19→24。",
+            "risk": 40,
+            "loss": 50,
+            "jobs": [
+              "300人引导岔口，600人护送，完成195/1000"
+            ],
+            "foodUsed": 0,
+            "requestedFood": 360
+          },
+          {
+            "route": "fu",
+            "text": "750名接应兵已归营，下回合可调用。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 0
+      },
+      {
+        "turn": 7,
+        "camp": 1550,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "张南与前队已脱险，冯习仍在收后队。 本路救援窗口关闭，接应队下回合紧急撤回；未接出者失联。 本轮用粮0斤，余粮随队归营。口粮不足，接应进展减半、受挫概率增加25个百分点。 正常推进：状态与节奏修正65%，额外受挫风险15个百分点。节用20%，本时段实发0斤；士气0→0，疲劳24→29。",
+            "risk": 40,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，550人护送，完成178.75/1000"
+            ],
+            "foodUsed": 0,
+            "requestedFood": 340
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 0
+      },
+      {
+        "turn": 8,
+        "camp": 2400,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "850名接应兵已归营，下回合可调用。",
+            "risk": 50,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": [],
+        "issuedGrain": 0
+      }
+    ],
+    "ended": true,
+    "commands": 10,
+    "totalGrain": 5000
+  },
+  "revision": 12,
+  "missions": {
+    "fu": {
+      "action": "rescue",
+      "goal": "all"
+    },
+    "feng": {
+      "action": "rescue",
+      "goal": "all"
+    },
+    "sha": {
+      "action": "rescue",
+      "goal": "all"
+    }
+  },
+  "settings": {
+    "fu": {
+      "ration": 80,
+      "pace": "normal"
+    },
+    "feng": {
+      "ration": 80,
+      "pace": "normal"
+    },
+    "sha": {
+      "ration": 80,
+      "pace": "normal"
+    }
+  },
+  "campUnits": [
+    {
+      "men": 800,
+      "morale": 80,
+      "fatigue": 0
+    },
+    {
+      "men": 750,
+      "morale": 38,
+      "fatigue": 0
+    },
+    {
+      "men": 850,
+      "morale": 4,
+      "fatigue": 14
+    }
+  ],
+  "queued": {},
+  "alerts": [
+    {
+      "id": "task-conflict",
+      "route": "feng",
+      "title": "接应遇到新增任务",
+      "text": "旧营新增一批饥饿散兵，需要收拢。可再派400人接手，或用400斤救济粮安置散兵；也可让现队休整并重整一时段，下期自动恢复。接受照旧则本冲突令接应效率为50%。加餐只影响状态，不能代替这项人手安排。",
+      "turn": 1,
+      "resolved": true
+    },
+    {
+      "id": "grain-alert",
+      "route": "fu",
+      "title": "营粮告急，配给需要取舍",
+      "text": "下一时段自动补给需1250斤，营中仅余850斤。可降低配给、抽回部分兵力或收队；也可明确照旧，接受缺粮后果。",
+      "turn": 3,
+      "resolved": true
+    }
+  ],
+  "seen": [
+    "task-conflict",
+    "grain-alert"
+  ],
+  "orders": [
+    {
+      "turn": 1,
+      "text": "派800人接应傅肜，900人接应冯习张南，800人接应沙摩柯，三路正常配粮，全都加紧赶路，接齐后回来。",
+      "commands": [
+        {
+          "route": "fu",
+          "action": "rescue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rush",
+          "ration": 100
+        },
+        {
+          "route": "feng",
+          "action": "rescue",
+          "count": 900,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rush",
+          "ration": 100
+        },
+        {
+          "route": "sha",
+          "action": "rescue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rush",
+          "ration": 100
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "text": "拨400斤救济粮安置旧营散兵，其余照原令执行。",
+      "commands": [
+        {
+          "route": "feng",
+          "action": "continue",
+          "count": 900,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 400,
+          "waitFor": "now",
+          "ration": 100,
+          "pace": "rush"
+        }
+      ]
+    },
+    {
+      "turn": 3,
+      "text": "三路人马疲劳过高，全部休整一时段，之后恢复正常推进，接齐后回来。",
+      "commands": [
+        {
+          "route": "fu",
+          "action": "rest",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rest",
+          "ration": 100
+        },
+        {
+          "route": "feng",
+          "action": "rest",
+          "count": 900,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rest",
+          "ration": 100
+        },
+        {
+          "route": "sha",
+          "action": "rest",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "pace": "rest",
+          "ration": 100
+        }
+      ]
+    },
+    {
+      "turn": 4,
+      "text": "三路都少给两成口粮，继续正常接应。",
+      "commands": [
+        {
+          "route": "fu",
+          "action": "adjust",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "ration": 80,
+          "pace": "normal"
+        },
+        {
+          "route": "feng",
+          "action": "adjust",
+          "count": 900,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "ration": 80,
+          "pace": "normal"
+        },
+        {
+          "route": "sha",
+          "action": "adjust",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now",
+          "ration": 80,
+          "pace": "normal"
+        }
+      ]
+    }
+  ],
+  "conflict": {
+    "route": "feng",
+    "kind": "crowd",
+    "baseMen": 900,
+    "helpers": 0,
+    "grain": 400,
+    "needGrain": 400,
+    "resolved": true
+  }
+}

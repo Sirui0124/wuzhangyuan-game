@@ -1,0 +1,1871 @@
+{
+  "group": "G1",
+  "status": "candidates-ready-awaiting-listening-and-user-review",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+  "repairPolicy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\repair-policy.json",
+  "rows": [
+    {
+      "id": "V01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V01-山路获救.mp4",
+      "reviewedSha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+      "oldDuration": 18.15,
+      "pureDialogueWhitelist": [],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V01-山路获救.mp4",
+      "candidateSha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+      "newDuration": 18.15,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "开章",
+        "next": [
+          "V02"
+        ],
+        "endEvent": "实际救援发生；尚未识别苟安"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY01-001",
+          "roleControlOnly": "视频（LI01）",
+          "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "existingSceneUtterances": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V01-山路获救.mp4",
+          "sourceSha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+          "range": [
+            0,
+            0.72
+          ],
+          "text": "赶紧"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V01-山路获救.mp4",
+          "sourceSha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+          "range": [
+            14.48,
+            16.92
+          ],
+          "text": "粮丢了还能找，人掉下去就没了"
+        }
+      ],
+      "treatment": "保留原用户通过的救援片及合理现场呼喊；无新声/新剧情。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V01-batch2-asr.json",
+      "asrLocatorSha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+        "status": "candidate-checked",
+        "userApproved": true
+      }
+    },
+    {
+      "id": "V02",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "这个你用之前的版本吧。要有在营外与士兵沟通。现在营外大部分太单薄了。\n",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V02-回忆与伤帐认人_画面修正V2.mp4",
+      "reviewedSha256": "d6bc271efdedbe3afe6fed29d30171a7b8e2e6a9a1609d840518aada81a6a480",
+      "oldDuration": 37.04,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY01-002",
+          "roleControlOnly": "我（心声）",
+          "text": "第四次北伐。这回，我成了运粮兵。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-007",
+          "roleControlOnly": "我（心声）",
+          "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-008",
+          "roleControlOnly": "我（心声）",
+          "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-009",
+          "roleControlOnly": "我（心声）",
+          "text": "得先弄清苟安现在的打算，也许还来得及。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-012",
+          "roleControlOnly": "我（心声）",
+          "text": "原来你就是苟安？",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-013",
+          "roleControlOnly": "我",
+          "text": "你接下来打算降魏？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY01-014",
+          "roleControlOnly": "苟安",
+          "text": "你说什么？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-001",
+          "roleControlOnly": "苟安",
+          "text": "谁让你来问这个的？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V02-恢复营外士兵完整沟通-R1.mp4",
+      "candidateSha256": "f485488faf3ff6ad9efb1171e171024c1430100f0ede385c34d25586b7a3ff72",
+      "newDuration": 54.88,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "V01结束",
+        "next": [
+          "UI-LIGHT"
+        ],
+        "endEvent": "实际认人；记忆不是本轮事实"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY01-011",
+          "roleControlOnly": "视频（LI02）",
+          "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "treatment": "恢复旧LI02A完整营外士兵沟通；增时来自实际交流，原心声/入帐/认人保留。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V02-batch2-asr.json",
+      "asrLocatorSha256": "f485488faf3ff6ad9efb1171e171024c1430100f0ede385c34d25586b7a3ff72",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "f485488faf3ff6ad9efb1171e171024c1430100f0ede385c34d25586b7a3ff72",
+        "status": "candidate-checked",
+        "userApproved": false
+      },
+      "existingSceneUtterances": {
+        "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\LI02A-granary-20261018.mp4",
+        "sourceRange": [
+          0,
+          17.83
+        ],
+        "reason": "用户直接要求恢复此既有营外沟通，不属于新增生成对白；仅源片例外，不扩大新发声白名单。",
+        "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\LI02A-asr.json"
+      }
+    },
+    {
+      "id": "V03A",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "怎么黑屏了？可以直接用和B一样的视频，替换音频即可。",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V03A-按B画面配A原句-R1.mp4",
+      "reviewedSha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+      "oldDuration": 6.67,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-003",
+          "roleControlOnly": "我（选项）",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V03A-按B画面配A原句-R1.mp4",
+      "candidateSha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+      "newDuration": 6.67,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-LIGHT选A",
+        "next": [
+          "V04"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "按用户复用B画面，配完整A既有原句，排除旧黑屏。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V03A-batch2-asr.json",
+      "asrLocatorSha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "9817ab5178165e397515ba7fd213bf894c79a7165a58966efdda20c4b0009c77",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V03B",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V03B-开场说明来意B_画面修正V2.mp4",
+      "reviewedSha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+      "oldDuration": 6.67,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-004",
+          "roleControlOnly": "我（选项）",
+          "text": "你救过我，我来看看你。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V03B-开场说明来意B_画面修正V2.mp4",
+      "candidateSha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+      "newDuration": 6.67,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-LIGHT选B",
+        "next": [
+          "V04"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "原用户通过版本保留。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V03B-batch2-asr.json",
+      "asrLocatorSha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+        "status": "candidate-checked",
+        "userApproved": true
+      }
+    },
+    {
+      "id": "V04",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "15-30s开始音频是乱码。请你用豆包语音模型来生成，按要求的文案，然后替换。\n",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "reviewedSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "oldDuration": 30.17,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-005",
+          "roleControlOnly": "苟安",
+          "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-006",
+          "roleControlOnly": "我",
+          "text": "那咱们确实是误了。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-007",
+          "roleControlOnly": "苟安",
+          "text": "我认栽，没什么委屈，养好伤就行了。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-008",
+          "roleControlOnly": "苟安",
+          "text": "我没打算去魏国。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-009",
+          "roleControlOnly": "我",
+          "text": "那是我多心了。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V04-纯台词与必要动作精剪-R2.mp4",
+      "candidateSha256": "baaf0281ccefcea7800ac979b025023a9669b75a707dc3385db5c899d1d5239e",
+      "newDuration": 18.17,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [
+        [
+          0,
+          4
+        ],
+        [
+          12.48,
+          25.66
+        ],
+        [
+          27.9,
+          30.17
+        ]
+      ],
+      "preservedActionsAndBoundaries": {
+        "entry": "V03A/B结束",
+        "next": [
+          "V05"
+        ],
+        "endEvent": "按原来源保存实际口供"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "editTimeline": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V04-batch2-timeline.json",
+      "removedRangesReason": "删元说明/乱码或不必要拖长，原正常对白/必要动作按sourceTimeline保留；ASR本身不作听审结论。",
+      "sourceTimeline": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+          "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+          "sourceRange": [
+            4,
+            9.44
+          ],
+          "slotRange": [
+            0,
+            5.458333333333333
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "保留永安/五月饮酒/江风完整原句，删0–4秒导演元说明"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+          "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+          "sourceRange": [
+            9.44,
+            12.48
+          ],
+          "slotRange": [
+            5.458333333333333,
+            8.5
+          ],
+          "node": "CH2-LY02-006",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY02-006.wav",
+          "audioSha256": "787aa1282fca656e447bb44a4532262216cb0c362c8a2ff5d77b98cbc6885556",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "reason": "原有玩家原句完整复用，NPC闭口"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+          "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+          "sourceRange": [
+            15.5,
+            19.7
+          ],
+          "slotRange": [
+            8.5,
+            12.708333333333332
+          ],
+          "node": "CH2-LY02-007",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-007-seed-audio1-reference.wav",
+          "audioSha256": "358923e9329c71d79061f690121a930f8b111e2ee715b60b2eb77d44f850b0ff",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "正确参考模型4秒原句替换乱码，缩短旧8秒段"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+          "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+          "sourceRange": [
+            20.48,
+            23.68
+          ],
+          "slotRange": [
+            12.708333333333332,
+            15.916666666666666
+          ],
+          "node": "CH2-LY02-008",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-008-seed-audio1-reference.wav",
+          "audioSha256": "10bc0258833a2dd9250aed7a8c5a61203ccecb319bc1b88e2b7f237fb28bef66",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "复用已成功3秒正确模型样本，不重复请求"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+          "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+          "sourceRange": [
+            25.66,
+            27.9
+          ],
+          "slotRange": [
+            15.916666666666666,
+            18.166666666666664
+          ],
+          "node": "CH2-LY02-009",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY02-009.wav",
+          "audioSha256": "1534da23561d6497292c8c48fc82eaec0826efe0892de63f63383f9ecec0fe16",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "reason": "完整既有玩家原句，去不必要尾段"
+        }
+      ],
+      "technical": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V04-纯台词与必要动作精剪-R2.mp4",
+        "sha256": "baaf0281ccefcea7800ac979b025023a9669b75a707dc3385db5c899d1d5239e",
+        "decode": true,
+        "duration": 18.17,
+        "blackEvents": []
+      },
+      "actualPlayback": {
+        "ended": true,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html"
+      },
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V04-batch2-final-asr.json",
+      "treatment": "删0–4秒元说明及尾段；007/008正确Seed-Audio1.0参考原句，玩家原WAV完整保留，30.17→18.17秒。",
+      "asrLocatorSha256": "baaf0281ccefcea7800ac979b025023a9669b75a707dc3385db5c899d1d5239e",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "baaf0281ccefcea7800ac979b025023a9669b75a707dc3385db5c899d1d5239e",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V05",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V05-夜间取账_画面修正V2.mp4",
+      "reviewedSha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+      "oldDuration": 16.34,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-012",
+          "roleControlOnly": "我",
+          "text": "这份交接记录，可以让我看看吗？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-013",
+          "roleControlOnly": "粮队管事",
+          "text": "嗯，看吧。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V05-夜间取账_画面修正V2.mp4",
+      "candidateSha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+      "newDuration": 16.34,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "V04结束",
+        "next": [
+          "UI-DATE"
+        ],
+        "endEvent": "获准查看，不等于拿走原件"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY02-010",
+          "roleControlOnly": "演出",
+          "text": "此后几夜，我在营外留意粮队的动静。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-011",
+          "roleControlOnly": "演出",
+          "text": "第三夜，一队粮兵在灯下交接文书。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "treatment": "原用户通过版本保留；已核转写定位为正常问账/看吧，无导演说明检出。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V05-batch2-asr.json",
+      "asrLocatorSha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+        "status": "candidate-checked",
+        "userApproved": true
+      }
+    },
+    {
+      "id": "V06",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V06-日期疑点.mp4",
+      "reviewedSha256": "173d1b12db8232de2587a5ee55d1a1fe4b60ecb516e8e44c52866130782e9ef3",
+      "oldDuration": 8.02,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-015",
+          "roleControlOnly": "我（心声）",
+          "text": "他说五月喝的酒，六月初二才领到粮。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V06-仅保留干净拿纸动作-R1.mp4",
+      "candidateSha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+      "newDuration": 5.0,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-DATE实际读完",
+        "next": [
+          "UI-GO-GOUAN"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "treatment": "旧纸面模糊层撤除，新源只取无字0–4秒真实拿纸动作，0.8倍至5秒，完整心声保留。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V06-batch2-asr.json",
+      "asrLocatorSha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V07",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "前3s音频乱码，音频删掉静音就行。\n",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V07-用户指定静音-R1.mp4",
+      "reviewedSha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed",
+      "oldDuration": 10.0,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-017",
+          "roleControlOnly": "苟安",
+          "text": "你这几夜总在外头走，是来看我，还是怕我跑了？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V07-用户指定静音-R1.mp4",
+      "candidateSha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed",
+      "newDuration": 10.0,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-GO-GOUAN实际选择去找",
+        "next": [
+          "UI-N1"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY02-016",
+          "roleControlOnly": "演出",
+          "text": "我带着获准抄取的记录回到伤帐。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "treatment": "严格只静音前3秒，视频及后续正常话保留。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V07-batch2-asr.json",
+      "asrLocatorSha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "368332b1d2c93f91d3f1eedd4f3333465bf1f88485bc2939401cdfe58a2568ed",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V08A",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08A-点出委屈分支_画面修正V2.mp4",
+      "reviewedSha256": "24bd453e665fc6072f2f0d5669726dd3a3880f122a9b14f11b913451c137a13e",
+      "oldDuration": 32.6,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-018",
+          "roleControlOnly": "我",
+          "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-018A",
+          "roleControlOnly": "我",
+          "text": "所以你上次在瞒我。你一定不想就这么算了",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-021",
+          "roleControlOnly": "苟安",
+          "text": "......",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-022",
+          "roleControlOnly": "苟安",
+          "text": "你说得对，我是委屈。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-纯台词与必要动作精剪-R2.mp4",
+      "candidateSha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+      "newDuration": 18.08,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [
+        [
+          15.3,
+          27.51
+        ]
+      ],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-N1选A",
+        "next": [
+          "V09"
+        ],
+        "endEvent": "所选对白与本段演出实际完成；不重复加分"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "editTimeline": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-batch2-timeline.json",
+      "removedRangesReason": "保留原通过版本；本次因旧纸面模糊层已需改版，提供完整合法022短候选，与15.3秒前两条玩家原句衔接；原音ASR不全不等于听审失败。",
+      "sourceTimeline": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+          "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+          "sourceRange": [
+            0,
+            15.3
+          ],
+          "slotRange": [
+            0,
+            15.291666666666666
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "两条玩家原句完整，随后短停顿为沉默，不删逻辑"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+          "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+          "sourceRange": [
+            17,
+            19.8
+          ],
+          "slotRange": [
+            15.291666666666666,
+            18.083333333333332
+          ],
+          "node": "CH2-LY02-022",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-022-seed-audio1-reference.wav",
+          "audioSha256": "e2fd9402e0c575320a9556817c22a9159fa91b311ea4ed8407d19b2bdc8bbafc",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "完整白名单承认委屈；短候选替代原12秒无法核出完整原句段，旧通过版本保留"
+        }
+      ],
+      "technical": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-纯台词与必要动作精剪-R2.mp4",
+        "sha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+        "decode": true,
+        "duration": 18.08,
+        "blackEvents": []
+      },
+      "actualPlayback": {
+        "ended": true,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html"
+      },
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V08A-batch2-final-asr.json",
+      "treatment": "去纸面遮字层并提供完整022合法短句候选；两条玩家原句与沉默停顿保留，32.60→18.08秒，原通过片保留。",
+      "asrLocatorSha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+        "status": "candidate-checked",
+        "userApproved": false
+      },
+      "misreadIntervalsSource": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+        "sha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee"
+      },
+      "intervalClassification": "未覆盖完整原句/过长尾段的候选替换，不声称ASR已经证实原音错误。"
+    },
+    {
+      "id": "V08B",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "5-10s（我话外...不容易）是脏音频，连着这段的视频都截掉",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08B-关心伤势分支_画面修正V2.mp4",
+      "reviewedSha256": "6ade3a84813e3189ba74e83c23591c6e04354484d156f4b9b350679c88d7f8a6",
+      "oldDuration": 18.34,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-B01",
+          "roleControlOnly": "我",
+          "text": "我还是怕你太难过",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B02",
+          "roleControlOnly": "我",
+          "text": "毕竟也不容易",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B03",
+          "roleControlOnly": "苟安",
+          "text": "伤总能养好。可这口气，没那么容易过去。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08B-脏段音画一并删除-R1.mp4",
+      "candidateSha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+      "newDuration": 12.51,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-N1选B",
+        "next": [
+          "V09"
+        ],
+        "endEvent": "所选对白与本段演出实际完成；不重复加分"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "treatment": "删除原4.208333–10.041667秒脏声音和同段画面，保留前面两句安慰及后续NPC句，18.34→12.51秒。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V08B-batch2-asr.json",
+      "asrLocatorSha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V09",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V09-李严下属的顾虑_画面修正V2.mp4",
+      "reviewedSha256": "2f262776410cd9c7d1a3e1913d75b3145e031a497f0e2b4066f252b5022b45bf",
+      "oldDuration": 36.31,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY02-023",
+          "roleControlOnly": "我",
+          "text": "你不是李严的人吗？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-024",
+          "roleControlOnly": "我",
+          "text": "为什么不找他说明白？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-025",
+          "roleControlOnly": "苟安",
+          "text": "我就是个替他跑腿的，他哪会替我说话。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-026",
+          "roleControlOnly": "苟安",
+          "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-027",
+          "roleControlOnly": "苟安",
+          "text": "真把话说明白，往后还在谁手底下领粮？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V09-纯台词与必要动作精剪-R2.mp4",
+      "candidateSha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+      "newDuration": 27.79,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [
+        [
+          21.7,
+          25
+        ]
+      ],
+      "preservedActionsAndBoundaries": {
+        "entry": "V08A/B结束",
+        "next": [
+          "UI-FIRST-LETTER"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY03-001",
+          "roleControlOnly": "演出",
+          "text": "苟安取出一封李丰的信，放在榻边。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "editTimeline": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V09-batch2-timeline.json",
+      "removedRangesReason": "删元说明/乱码或不必要拖长，原正常对白/必要动作按sourceTimeline保留；ASR本身不作听审结论。",
+      "sourceTimeline": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V09-李严下属的顾虑_画面修正V2.mp4",
+          "sourceSha256": "2f262776410cd9c7d1a3e1913d75b3145e031a497f0e2b4066f252b5022b45bf",
+          "sourceRange": [
+            0,
+            4.6
+          ],
+          "slotRange": [
+            0,
+            4.583333333333333
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "保留两句准确玩家原句，删除原8秒镜头多余等待"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V09-李严下属的顾虑_画面修正V2.mp4",
+          "sourceSha256": "2f262776410cd9c7d1a3e1913d75b3145e031a497f0e2b4066f252b5022b45bf",
+          "sourceRange": [
+            9.8,
+            21.7
+          ],
+          "slotRange": [
+            4.583333333333333,
+            16.5
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "保留跑腿/养伤/吃饭完整原声"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V09-李严下属的顾虑_画面修正V2.mp4",
+          "sourceSha256": "2f262776410cd9c7d1a3e1913d75b3145e031a497f0e2b4066f252b5022b45bf",
+          "sourceRange": [
+            25,
+            29.7
+          ],
+          "slotRange": [
+            16.5,
+            21.208333333333332
+          ],
+          "node": "CH2-LY02-027",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-027-seed-audio1-reference.wav",
+          "audioSha256": "76b744ee9d2bc9d7d689f6fd26a30e2ed4338c828c8dd8f0a61849e39ea4567d",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "删角色说明元音画21.7–25；补完整真实顾虑原句"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V09-李严下属的顾虑_画面修正V2.mp4",
+          "sourceSha256": "2f262776410cd9c7d1a3e1913d75b3145e031a497f0e2b4066f252b5022b45bf",
+          "sourceRange": [
+            29.7,
+            36.29
+          ],
+          "slotRange": [
+            21.208333333333332,
+            27.791666666666664
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "原无字封套取出/拿持/放榻边动作完整保留"
+        }
+      ],
+      "technical": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V09-纯台词与必要动作精剪-R2.mp4",
+        "sha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+        "decode": true,
+        "duration": 27.79,
+        "blackEvents": []
+      },
+      "actualPlayback": {
+        "ended": true,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html"
+      },
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V09-batch2-final-asr.json",
+      "treatment": "删明确角色元说明及多余等待，027正确参考原句补齐；完整取出/拿持/放下封套保留，36.31→27.79秒。",
+      "asrLocatorSha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V10",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "前12s的音频是乱的，需要重新生成或者删掉视频这段，12-28s没问题；28s以后音频全乱，需要重新生成（豆包语音，用参考音色，和要求的旁白）",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V10-第一封信后的交谈_画面修正V2.mp4",
+      "reviewedSha256": "9084d3b2420652f048d300721a2cfc9aa8cf7d81bd03722723bdeb43b932a292",
+      "oldDuration": 75.13,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY03-004",
+          "roleControlOnly": "我",
+          "text": "你们先前议的是什么？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-005",
+          "roleControlOnly": "苟安",
+          "text": "迟粮的事，究竟要不要往上说。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-006",
+          "roleControlOnly": "苟安",
+          "text": "我不想一直背着“饮酒误军”这几个字。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-010",
+          "roleControlOnly": "苟安",
+          "text": "我想把事情揭开，让这回北伐先停下来。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-011",
+          "roleControlOnly": "我",
+          "text": "你想讨回公道，为什么一定要停北伐？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-012",
+          "roleControlOnly": "苟安",
+          "text": "这回把粮送到了，下一回呢？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-013",
+          "roleControlOnly": "苟安",
+          "text": "难道换个人挨打，粮就自己长出来了？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-014",
+          "roleControlOnly": "我",
+          "text": "如果还是没人肯查呢？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-015",
+          "roleControlOnly": "苟安",
+          "text": "那我就换个肯听的地方。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-016",
+          "roleControlOnly": "我",
+          "text": "你就信得过魏国？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-017",
+          "roleControlOnly": "苟安",
+          "text": "我也没底。你想让我留下，就给我指条路。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-纯台词与必要动作精剪-R2.mp4",
+      "candidateSha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+      "newDuration": 45.75,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [
+        [
+          2.67,
+          9
+        ],
+        [
+          31.45,
+          52.45
+        ],
+        [
+          55.28,
+          60.93
+        ],
+        [
+          63.56,
+          75.13
+        ]
+      ],
+      "preservedActionsAndBoundaries": {
+        "entry": "UI-FIRST-LETTER实际读完",
+        "next": [
+          "UI-O1"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "editTimeline": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-batch2-timeline.json",
+      "removedRangesReason": "删元说明/乱码或不必要拖长，原正常对白/必要动作按sourceTimeline保留；ASR本身不作听审结论。",
+      "sourceTimeline": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            0,
+            2.67
+          ],
+          "slotRange": [
+            0,
+            2.6666666666666665
+          ],
+          "node": "CH2-LY03-004",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY03-004.wav",
+          "audioSha256": "4f0f5fd37a5c8c239e150dda6c6ec85bff3c52a70146eb87b77e6cc8ebc0dc05",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "reason": "玩家准确原句保留，闭口倾听"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            9,
+            28
+          ],
+          "slotRange": [
+            2.6666666666666665,
+            21.666666666666668
+          ],
+          "node": null,
+          "audio": "same source interval",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "删2.67–9秒元说明的音画；原12–28秒好声音完整保留"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            28,
+            31.2
+          ],
+          "slotRange": [
+            21.666666666666668,
+            24.875
+          ],
+          "node": "CH2-LY03-011",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY03-011.wav",
+          "audioSha256": "79e317b91d2c0a277a58c74942c60c79ae766ae3dc9c781bc193a874722742e5",
+          "audioStart": 0.5,
+          "audioDelay": 0,
+          "reason": "续完原27.5秒起的完整玩家句，保留12–28秒原音不覆盖"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            32,
+            35.7
+          ],
+          "slotRange": [
+            24.875,
+            28.583333333333332
+          ],
+          "node": "CH2-LY03-012",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-012-seed-audio1-reference.wav",
+          "audioSha256": "88881f2d2f620900f0b440f86aa9c054f87604d0246e0ee3edab0250c004efa5",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "四句NPC只读白名单；短镜头不保长静音"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            44.1,
+            48.3
+          ],
+          "slotRange": [
+            28.583333333333332,
+            32.791666666666664
+          ],
+          "node": "CH2-LY03-013",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-013-seed-audio1-reference.wav",
+          "audioSha256": "dbe5919047c152b0f0fb94beae85a03d5d5aa21b087e161bc541e2a8e21bb8ae",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "正确参考音色原句"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            52.45,
+            55
+          ],
+          "slotRange": [
+            32.791666666666664,
+            35.33333333333333
+          ],
+          "node": "CH2-LY03-014",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY03-014.wav",
+          "audioSha256": "151d3a99a80bc306761305119f74cf897e5c55cee1bccc7616119aa7d3157574",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "reason": "原有玩家原句"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            55.5,
+            58.7
+          ],
+          "slotRange": [
+            35.33333333333333,
+            38.541666666666664
+          ],
+          "node": "CH2-LY03-015",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-015-seed-audio1-reference.wav",
+          "audioSha256": "7f8248be36d888678c62ada33167a89804e2820d3839519320cc134ab70ccecb",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "正确参考原句；服务字幕为空但独立ASR文本吻合，实际听审pending"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            60.93,
+            63.43
+          ],
+          "slotRange": [
+            38.541666666666664,
+            41.041666666666664
+          ],
+          "node": "CH2-LY03-016",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY03-016.wav",
+          "audioSha256": "0b48c4accc5ef04437df7f9fa032faebc4d8e3168ea96688821461a69268436b",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "reason": "原有玩家原句"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+          "sourceSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+          "sourceRange": [
+            65,
+            69.7
+          ],
+          "slotRange": [
+            41.041666666666664,
+            45.75
+          ],
+          "node": "CH2-LY03-017",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-017-seed-audio1-reference.wav",
+          "audioSha256": "6dff24b06abdfc12378d5c775e4d032a42b2a87f2d95067bdff8427d21d3bed0",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "reason": "正确参考原句；服务字幕为空但独立ASR文本吻合，实际听审pending"
+        }
+      ],
+      "technical": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-纯台词与必要动作精剪-R2.mp4",
+        "sha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+        "decode": true,
+        "duration": 45.75,
+        "blackEvents": []
+      },
+      "actualPlayback": {
+        "ended": true,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html"
+      },
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V10-batch2-final-asr.json",
+      "treatment": "删元说明造成的音画拖长，原12–28秒声音内容保留；后四条NPC句按白名单补齐，所有玩家原句完整，75.13→45.75秒。",
+      "asrLocatorSha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "L01",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "背景音频是乱的，重新豆包语音搞音频",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\L01-用户指定静音-R1.mp4",
+      "reviewedSha256": "71195ba7331abe1bc8fa0717b2e90df25fb93c76c586ba66cbbbb091b1d09e18",
+      "oldDuration": 6.02,
+      "pureDialogueWhitelist": [],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\L01-用户指定静音-R1.mp4",
+      "candidateSha256": "71195ba7331abe1bc8fa0717b2e90df25fb93c76c586ba66cbbbb091b1d09e18",
+      "newDuration": 6.02,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "玩家确认本次原话后",
+        "next": [
+          "O1-SCORE"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "dynamicAudioContract": "只播放本次confirmedText；本底片无固定朗读。确认后单播，末帧保持，等待实际判定/回应。",
+      "nonSpoken": [],
+      "treatment": "底片清除非授权固定人声；本次confirmedText由运行时在确认后播放阶段处理，无固定TTS文本可预制，不伪造朗读。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\L01-batch2-asr.json",
+      "asrLocatorSha256": "71195ba7331abe1bc8fa0717b2e90df25fb93c76c586ba66cbbbb091b1d09e18",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "71195ba7331abe1bc8fa0717b2e90df25fb93c76c586ba66cbbbb091b1d09e18",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V11T",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11T-定制①回应T.mp4",
+      "reviewedSha256": "06290b99be7769177ef89c6827984da4f21aea181c2cbef9318f3f8f6c01daa9",
+      "oldDuration": 11.57,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-O1-RT",
+          "roleControlOnly": "苟安（定制回应）",
+          "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11T-定制①回应T.mp4",
+      "candidateSha256": "06290b99be7769177ef89c6827984da4f21aea181c2cbef9318f3f8f6c01daa9",
+      "newDuration": 11.57,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+        "next": [
+          "V12"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "保留原用户通过版本；ASR只覆盖部分不是听审失败证据，不生成替代声音。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V11T-batch2-asr.json",
+      "asrLocatorSha256": "06290b99be7769177ef89c6827984da4f21aea181c2cbef9318f3f8f6c01daa9",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "06290b99be7769177ef89c6827984da4f21aea181c2cbef9318f3f8f6c01daa9",
+        "status": "candidate-checked",
+        "userApproved": true
+      },
+      "newAudioRequest": "not dispatched; original-approved retained"
+    },
+    {
+      "id": "V11D",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11D-定制①回应D.mp4",
+      "reviewedSha256": "88e57c36d780bd0a92e4a9e20034201ca8b3b8601641ccf360cabbbfb3c3cccd",
+      "oldDuration": 8.02,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-O1-RD",
+          "roleControlOnly": "苟安（定制回应）",
+          "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11D-定制①回应D.mp4",
+      "candidateSha256": "88e57c36d780bd0a92e4a9e20034201ca8b3b8601641ccf360cabbbfb3c3cccd",
+      "newDuration": 8.02,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+        "next": [
+          "V12"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "保留原用户通过版本；ASR只覆盖部分不是听审失败证据，不生成替代声音。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V11D-batch2-asr.json",
+      "asrLocatorSha256": "88e57c36d780bd0a92e4a9e20034201ca8b3b8601641ccf360cabbbfb3c3cccd",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "88e57c36d780bd0a92e4a9e20034201ca8b3b8601641ccf360cabbbfb3c3cccd",
+        "status": "candidate-checked",
+        "userApproved": true
+      },
+      "newAudioRequest": "not dispatched; original-approved retained"
+    },
+    {
+      "id": "V11R",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11R-定制①回应R.mp4",
+      "reviewedSha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+      "oldDuration": 9.46,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-O1-RR",
+          "roleControlOnly": "苟安（定制回应）",
+          "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11R-定制①回应R.mp4",
+      "candidateSha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+      "newDuration": 9.46,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+        "next": [
+          "V12"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "原用户通过版本保留，ASR定位覆盖合法回应，未检出元字段。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V11R-batch2-asr.json",
+      "asrLocatorSha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+        "status": "candidate-checked",
+        "userApproved": true
+      }
+    },
+    {
+      "id": "V11A",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11A-定制①回应A.mp4",
+      "reviewedSha256": "6853314cf9134a25d83a9ae2772c84894d8e32b9e6a26e9a9bab782985aff6c0",
+      "oldDuration": 6.07,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-O1-RA",
+          "roleControlOnly": "苟安（定制回应）",
+          "text": "你去查。查到什么，你照实回来告诉我。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11A-定制①回应A.mp4",
+      "candidateSha256": "6853314cf9134a25d83a9ae2772c84894d8e32b9e6a26e9a9bab782985aff6c0",
+      "newDuration": 6.07,
+      "status": "original-approved-retained",
+      "userApproved": true,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "O1有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+        "next": [
+          "V12"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": false,
+      "nonSpoken": [],
+      "treatment": "原用户通过版本保留，ASR定位覆盖合法回应，未检出元字段。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V11A-batch2-asr.json",
+      "asrLocatorSha256": "6853314cf9134a25d83a9ae2772c84894d8e32b9e6a26e9a9bab782985aff6c0",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "6853314cf9134a25d83a9ae2772c84894d8e32b9e6a26e9a9bab782985aff6c0",
+        "status": "candidate-checked",
+        "userApproved": true
+      }
+    },
+    {
+      "id": "V11N",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "把音频里面2s左右的“苟安”两字静音，其他不变",
+      "originalApproved": false,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11N-定制①回应N.mp4",
+      "reviewedSha256": "f790b56a0040d4bb9b60b1ad490d48617d06f04c756fa234b124012ff4a71bfa",
+      "oldDuration": 6.61,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-O1-RN",
+          "roleControlOnly": "苟安（定制回应）",
+          "text": "先看看这批粮，再说往后。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V11N-只静音误读姓名-R1.mp4",
+      "candidateSha256": "e677a12855096015910dd7efad779859b8bf783341386a2d64a417a058feddf4",
+      "newDuration": 6.61,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [],
+      "preservedActionsAndBoundaries": {
+        "entry": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+        "next": [
+          "V12"
+        ],
+        "endEvent": "无新增剧情状态"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [],
+      "treatment": "严格只静音原1.76–2.395秒误读姓名；用户要求其他不变，既有重复片语不另裁。",
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V11N-batch2-asr.json",
+      "asrLocatorSha256": "e677a12855096015910dd7efad779859b8bf783341386a2d64a417a058feddf4",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "e677a12855096015910dd7efad779859b8bf783341386a2d64a417a058feddf4",
+        "status": "candidate-checked",
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V12",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+      "userComment": "语音冗余，有一些是“苟安叮嘱”之类的话、本来应该是旁白，被错误记录了，请你把语音移除掉。严格按照要求的语音",
+      "originalApproved": true,
+      "reviewedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V12-暂留与交付凭据.mp4",
+      "reviewedSha256": "71ac474a8cbb23c1d9e3b204bacbaf4f4646cd899d51475d1825520b7d8189a0",
+      "oldDuration": 36.13,
+      "pureDialogueWhitelist": [
+        {
+          "node": "CH2-LY03-021",
+          "roleControlOnly": "苟安",
+          "text": "好，我先不走。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-023",
+          "roleControlOnly": "苟安",
+          "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-024",
+          "roleControlOnly": "苟安",
+          "text": "凭这个能领本队材料，别拿着它乱闯。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-025",
+          "roleControlOnly": "我（心声）",
+          "text": "先查清这批粮出了什么事。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "candidateFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V12-纯台词与必要动作精剪-R4.mp4",
+      "candidateSha256": "c9f75fe2dd12740e2ebba8c15ed282c90766bfa9f17e966410e865ed541ce9ff",
+      "newDuration": 19.46,
+      "status": "repaired-candidate-awaiting-user-listening",
+      "userApproved": false,
+      "listeningReview": "pending actual listening; ASR is locator only",
+      "noBgmReview": "pending actual listening",
+      "misreadIntervals": [
+        [
+          0,
+          3.48
+        ],
+        [
+          6.42,
+          15.85
+        ],
+        [
+          23.78,
+          29.9
+        ],
+        [
+          33.1,
+          36.13
+        ]
+      ],
+      "preservedActionsAndBoundaries": {
+        "entry": "定制①一个安全回应结束",
+        "next": [
+          "V13"
+        ],
+        "endEvent": "实际暂留、交本队凭据；被扣粮说法仅是口供"
+      },
+      "oldApprovalNotTransferred": true,
+      "nonSpoken": [
+        {
+          "node": "CH2-LY03-022",
+          "roleControlOnly": "演出",
+          "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "editTimeline": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V12-batch2-timeline.json",
+      "removedRangesReason": "删元说明/乱码或不必要拖长，原正常对白/必要动作按sourceTimeline保留；ASR本身不作听审结论。",
+      "sourceTimeline": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-01-normalized.mp4",
+          "sourceSha256": "e0f02b56f721c2235ac0c2468de9623541b4f3187ccd1457e1f97b136e307284",
+          "sourceRange": [
+            0,
+            2
+          ],
+          "slotRange": [
+            0,
+            2.6666666666666665
+          ],
+          "node": "CH2-LY03-021",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-021-seed-audio1-reference.wav",
+          "audioSha256": "0d946c9e9e0ea48011bb89d2eabe5b874c6f708d7b08cb4c45748f06f99a5ba8",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "rate": 0.75,
+          "crop": null,
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-01.mp4",
+          "reason": "原未叠层0–2秒尚未露伪字；真实表情和取纸动作0.75倍，精确新原句"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-UR1-normalized.mp4",
+          "sourceSha256": "c6dd19790690a0fb094cd4b936fbddc6cf29b8d2477345503568ec5bac5fd334",
+          "sourceRange": [
+            2.7,
+            5.3
+          ],
+          "slotRange": [
+            2.6666666666666665,
+            5.25
+          ],
+          "node": null,
+          "audio": "digital silence",
+          "audioSha256": null,
+          "audioStart": 0,
+          "audioDelay": 0,
+          "rate": 1,
+          "crop": null,
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-02.mp4",
+          "reason": "放大核验发现0–2.5秒曾露细小伪字，整段弃用；从2.7秒纸背朝镜头的伸递开始，保留我的手伸入、接稳与苟安放手，不加遮罩或人声"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-UR2-point-normalized.mp4",
+          "sourceSha256": "5f2c563e804249cdba8ee6717800d780ef2708038f7609fa76d331b0225e70b3",
+          "sourceRange": [
+            0,
+            4.5
+          ],
+          "slotRange": [
+            5.25,
+            9.75
+          ],
+          "node": "CH2-LY03-023",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-023-保留原片正常原句.wav",
+          "audioSha256": "c48f4b6c5673a91aabb0ba8325f4359df1832ff2b1842e5a738067434844ca6b",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "rate": 1,
+          "crop": null,
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-03.mp4",
+          "reason": "接稳后真实指示；保留原正常口供前半，不念动作标签"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-02-normalized.mp4",
+          "sourceSha256": "5c43065140d93a062c75ae52325db21db37a8e1801a4a272dbd0a71f77be7dd2",
+          "sourceRange": [
+            10.4,
+            13.9
+          ],
+          "slotRange": [
+            9.75,
+            13.25
+          ],
+          "node": "CH2-LY03-023",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-023-保留原片正常原句.wav",
+          "audioSha256": "c48f4b6c5673a91aabb0ba8325f4359df1832ff2b1842e5a738067434844ca6b",
+          "audioStart": 4.5,
+          "audioDelay": 0,
+          "rate": 1,
+          "crop": "crop=910:512:370:0,scale=1280:720",
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-04.mp4",
+          "reason": "未叠层源只取人物面部，不露旧伪字/再交纸；原口供连续说完"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-03-normalized.mp4",
+          "sourceSha256": "373ed84a57f82fea3d33010c0a6b4372bb9915decda3c22b3b72cbf6684da3cd",
+          "sourceRange": [
+            6,
+            9.2
+          ],
+          "slotRange": [
+            13.25,
+            16.458333333333332
+          ],
+          "node": "CH2-LY03-024",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-024-保留原片正常原句.wav",
+          "audioSha256": "cf5f5863092312e872a6892ae58aa19f4d604c4dfaab77eb15c6b114ac97ccba",
+          "audioStart": 0,
+          "audioDelay": 0,
+          "rate": 1,
+          "crop": "crop=640:360:360:24,scale=1280:720",
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-05.mp4",
+          "reason": "原本正确叮嘱原句，进一步只取面部/头部，彻底排除前臂和旧纸以免暗示取回；排除苟安叮嘱角色/动作说明"
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V12-UR1-normalized.mp4",
+          "sourceSha256": "c6dd19790690a0fb094cd4b936fbddc6cf29b8d2477345503568ec5bac5fd334",
+          "sourceRange": [
+            6.5,
+            9.5
+          ],
+          "slotRange": [
+            16.458333333333332,
+            19.458333333333332
+          ],
+          "node": "CH2-LY03-025",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY03-025.wav",
+          "audioSha256": "1a25ca38b3ec0b495ec31768b0d044b3f2e2fe9817f4f1882dd4647811f8c5b8",
+          "audioStart": 0,
+          "audioDelay": 0.3,
+          "rate": 1,
+          "crop": null,
+          "partFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V12-06.mp4",
+          "reason": "唯一既有完整心声；切至我仍持同一纸的不同连续区间，不循环、不让NPC代说"
+        }
+      ],
+      "technical": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V12-纯台词与必要动作精剪-R4.mp4",
+        "sha256": "c9f75fe2dd12740e2ebba8c15ed282c90766bfa9f17e966410e865ed541ce9ff",
+        "decode": true,
+        "duration": 19.46,
+        "blackEvents": []
+      },
+      "actualPlayback": {
+        "ended": true,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-v12.html"
+      },
+      "asrLocator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V12-batch2-final-asr.json",
+      "treatment": "元说明/重复叮嘱/不完整心声剔除；021正确参考新句，023/024原正确句保留，025完整中央心声只在我持纸末段；纯面部反应排除旧纸和前臂，36.13→19.46秒。",
+      "asrLocatorSha256": "c9f75fe2dd12740e2ebba8c15ed282c90766bfa9f17e966410e865ed541ce9ff",
+      "asrConclusion": "用于定位和核对纯台词；同音误识/漏识不等于听审失败，不凭ASR撤销原通过。",
+      "visualPolicyAudit": {
+        "policy": "20261025-no-meta-no-cards-no-boxes",
+        "sha256": "c9f75fe2dd12740e2ebba8c15ed282c90766bfa9f17e966410e865ed541ce9ff",
+        "status": "candidate-checked",
+        "userApproved": false
+      },
+      "ownershipEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V12-final-R4-timed-actions.jpg",
+      "finalEDL": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V12-final-R4-action-EDL.json",
+      "rootOwnershipKeyframeCheck": "根已实际查看该时间码序列，关闭疑似取回凭据疑点；不代表用户/声音通过。"
+    }
+  ],
+  "notes": [
+    "用户实际通过仅对所评旧文件SHA有效。",
+    "新版本保留旧片，不继承通过。",
+    "角色标签/动作控制说明不可发声；合法心声不删除。",
+    "错误预置TTS2七条继续隔离，只有Seed-Audio1.0真实上传同角色参考可补缺。"
+  ],
+  "summary": {
+    "slots": 19,
+    "originalApprovedVersionsRetained": 7,
+    "repairedCandidates": 12,
+    "visualPolicyChecked": 19,
+    "currentShaAsrLocators": 19,
+    "actualListeningCompleted": false
+  },
+  "referenceAudioCandidates": [
+    {
+      "node": "CH2-LY02-007",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-007-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-007-seed-audio1-reference.wav",
+      "sha256": "358923e9329c71d79061f690121a930f8b111e2ee715b60b2eb77d44f850b0ff",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-008",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\seed-audio-required-probe-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-008-seed-audio1-reference.wav",
+      "sha256": "10bc0258833a2dd9250aed7a8c5a61203ccecb319bc1b88e2b7f237fb28bef66",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-021",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-021-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-021-seed-audio1-reference.wav",
+      "sha256": "0d946c9e9e0ea48011bb89d2eabe5b874c6f708d7b08cb4c45748f06f99a5ba8",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-012",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-012-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-012-seed-audio1-reference.wav",
+      "sha256": "88881f2d2f620900f0b440f86aa9c054f87604d0246e0ee3edab0250c004efa5",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-013",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-013-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-013-seed-audio1-reference.wav",
+      "sha256": "dbe5919047c152b0f0fb94beae85a03d5d5aa21b087e161bc541e2a8e21bb8ae",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-015",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-015-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-015-seed-audio1-reference.wav",
+      "sha256": "7f8248be36d888678c62ada33167a89804e2820d3839519320cc134ab70ccecb",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-017",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-017-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-017-seed-audio1-reference.wav",
+      "sha256": "6dff24b06abdfc12378d5c775e4d032a42b2a87f2d95067bdff8427d21d3bed0",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-022",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-022-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-022-seed-audio1-reference.wav",
+      "sha256": "e2fd9402e0c575320a9556817c22a9159fa91b311ea4ed8407d19b2bdc8bbafc",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-027",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-027-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-027-seed-audio1-reference.wav",
+      "sha256": "76b744ee9d2bc9d7d689f6fd26a30e2ed4338c828c8dd8f0a61849e39ea4567d",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    }
+  ],
+  "technicalValidation": {
+    "all19CurrentFileShaMatch": true,
+    "all19ReviewedSourceFilesPreserved": true,
+    "central76WavsMatchOriginalManifest": true,
+    "wrongPresetTts2Quarantine": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\QUARANTINED-TTS2.json",
+    "wrongPresetTts2Adopted": false,
+    "videoGenerationState": {
+      "group": "G1",
+      "phase": "generation",
+      "totalRequests": 53,
+      "submitted": 53,
+      "succeeded": 47,
+      "failed": 6,
+      "inFlight": 0,
+      "unknown": [],
+      "downloaded": 47,
+      "updatedEpoch": 1792919161.9663525
+    },
+    "newVideoPostPending": false
+  },
+  "remaining": [
+    "实际听审：音色、自然度、逐字、无BGM及精确口型；不以ASR或接口字幕替代。",
+    "新候选由用户重新review，原通过不迁移到新SHA。",
+    "L01实际confirmedText声音与正式证据UI的游戏整合验证由执行/整合负责人完成，本媒体任务未修改程序。"
+  ]
+}

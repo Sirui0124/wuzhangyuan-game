@@ -1,0 +1,563 @@
+{
+  "assistedGroup": "G2",
+  "reviewerGroup": "G6",
+  "updatedUTC": "2026-10-25T06:13:45.397693+00:00",
+  "status": "four-requested-current-files-reviewed-with-conditions",
+  "scope": "当前V13/V20沿用此前SHA绑定结论；本轮仅协审两条PRESENTABLE新V15/V18。旧大范围虚化草稿归档，不用于当前结论。未修改G2媒体或delivery，无API/TTS",
+  "clips": [
+    {
+      "id": "V13-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4",
+      "sha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+      "sha256Before": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+      "sha256After": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+      "unchangedDuringReview": true,
+      "userApproved": false,
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，从0.00播放至ended；8894根下/groups/...实际文件，未修改审核台状态",
+          "actualReviewedRanges": [
+            [
+              0,
+              5.8
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V13-01-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "id": "V13-01",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4",
+        "sha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+        "afterSamplingSha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+        "unchangedDuringSampling": true,
+        "sheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V13-01-2fps.jpg",
+        "times": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5
+        ]
+      },
+      "audioIssues": [
+        "只读画面协审，未逐字听审；未新增API/TTS"
+      ],
+      "reviewState": "reviewed",
+      "pictureUsability": "usable-with-integration-condition",
+      "excludedFromCurrentVerdict": false,
+      "conclusion": "走近案桌并呈出凭据的大轮廓可用，无可读伪文；不能当作凭据细节已被看清或收走的完成镜头",
+      "findings": [
+        {
+          "timeRange": [
+            0,
+            3
+          ],
+          "observation": "背景仓营和对方人物保持清楚，前景册页失焦随走近移动；未见可读的伪证据字句"
+        },
+        {
+          "timeRange": [
+            3.5,
+            5.8
+          ],
+          "observation": "书册及两侧拇指进入近景，整片前景明显重度柔化；持书姿态及向案前递近可辨，但指尖接触和纸纹细节不可辨。像重度前景失焦，不是固定在桌面不动的硬边色块；审美上处理痕迹明显"
+        }
+      ],
+      "integrationConditions": [
+        "仅用作第一视角走近和呈出凭据的过渡，不声称这一段已经展示凭据准确内容或对方实际接走",
+        "凭据核对细节依靠同父片后续正确镜头/已批准准确证据插页；不能把本片重糊近景作为阅读证据",
+        "若后续节奏允许，可缩短3.5–5.8秒过近失焦停留；如这一段被要求承担清楚的拇指与纸接触特写，则应本地细化遮罩后再审"
+      ],
+      "openVisualDefects": [],
+      "requiresNewVideoRequest": false
+    },
+    {
+      "id": "V15-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4",
+      "sha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "sha256Before": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "sha256After": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "metadataSha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "unchangedDuringReview": true,
+      "reviewState": "reviewed",
+      "pictureUsability": "usable-with-integration-condition",
+      "userApproved": false,
+      "excludedFromCurrentVerdict": false,
+      "conclusion": "PRESENTABLE当前画面可用，局部软化不破坏接取与翻查起始；准确正文只解释本节点，文字卡未代替已明确看到的接取动作",
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，8894根下当前PRESENTABLE文件，0.00播放至10.00 ended；V15另从头复看切点。仅记实际播放观察，不称连续人工逐帧",
+          "actualReviewedRanges": [
+            [
+              0,
+              10
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V15-04-presentable-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "method": "8fps first2.25s plus cut boundary, then2fps; ordered auxiliary frames, not continuous human frame-by-frame review",
+        "orderedFrameTimes": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0,
+          1.125,
+          1.25,
+          1.375,
+          1.5,
+          1.625,
+          1.75,
+          1.875,
+          2.0,
+          2.125,
+          2.25,
+          2.75,
+          3.25,
+          3.75,
+          4.25,
+          4.75,
+          5.25,
+          5.75,
+          6.25,
+          6.75,
+          7.25,
+          7.75,
+          8.25,
+          8.75,
+          9.25,
+          9.75
+        ],
+        "sheets": [
+          "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V15-04-presentable-sequence-1.jpg",
+          "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V15-04-presentable-sequence-2.jpg"
+        ],
+        "fileSha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b"
+      },
+      "findings": [
+        {
+          "timeRange": [
+            0,
+            2
+          ],
+          "category": "action",
+          "observation": "对方把一叠账页递到案前，我的双手伸入并接住/持页，对方松手后纸页开始翻起；接取动作在文字卡之前真实可见"
+        },
+        {
+          "timeRange": [
+            0,
+            2
+          ],
+          "category": "mask",
+          "observation": "纸面/竹卷上的原生字局部柔化仍可察觉，但手指、页边、持握位置保留；没有旧版横贯大部分前景、连手一起糊掉的长时大块假面。未见可辨读的原生伪证据句子"
+        },
+        {
+          "timeRange": [
+            2,
+            10
+          ],
+          "category": "accurate-document",
+          "observation": "2.000秒明确切为全幅准确正文，底层生成纸页不再露边；正文逐字与本节点sourceLines相符，未混入其他账页内容"
+        },
+        {
+          "timeRange": [
+            1.5,
+            2
+          ],
+          "category": "cut-and-continuity",
+          "observation": "页角刚翻起时在2秒切正文，可理解为阅读插入；没有展示整页翻到尽头再放平，不应额外声称完整翻页全程已拍到"
+        }
+      ],
+      "integrationConditions": [
+        "仅把前2秒作为真实接取/开始翻查，后8秒作为本节点材料的准确阅读插页；不把文字卡计作取得/签认/整页展开动作",
+        "正文只对应CH2-LY04-D03：途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+        "材料来源与可读时机仍由G2对应父片和章节状态保证；该子片不授予其他节点信息，也不提前认定归责、供述或结局",
+        "将2秒正文切点保留为清楚阅读插入；若以后要求无剪辑完整展开或逐页翻完，不能用本版冒充，须另作本地节奏/源段调整"
+      ],
+      "documentContentCheck": {
+        "node": "CH2-LY04-D03",
+        "observedCardText": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+        "sourceLineText": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+        "exactMatch": true,
+        "otherNodeFactsObserved": false,
+        "stateGateVerified": false,
+        "stateGateOwner": "G2"
+      },
+      "openVisualDefects": [],
+      "requiresNewVideoRequest": false,
+      "audioIssues": [
+        "静音画面协审，未逐字听审；未新增API/TTS，不为纯音频问题要求重拍"
+      ]
+    },
+    {
+      "id": "V18-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4",
+      "sha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "sha256Before": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "sha256After": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "metadataSha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "unchangedDuringReview": true,
+      "reviewState": "reviewed",
+      "pictureUsability": "usable-with-integration-condition",
+      "userApproved": false,
+      "excludedFromCurrentVerdict": false,
+      "conclusion": "PRESENTABLE当前画面可用，局部软化不破坏接取与翻查起始；准确正文只解释本节点，文字卡未代替已明确看到的接取动作",
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，8894根下当前PRESENTABLE文件，0.00播放至10.00 ended；V15另从头复看切点。仅记实际播放观察，不称连续人工逐帧",
+          "actualReviewedRanges": [
+            [
+              0,
+              10
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V18-04-presentable-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "method": "8fps first2.25s plus cut boundary, then2fps; ordered auxiliary frames, not continuous human frame-by-frame review",
+        "orderedFrameTimes": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0,
+          1.125,
+          1.25,
+          1.375,
+          1.5,
+          1.625,
+          1.75,
+          1.875,
+          2.0,
+          2.125,
+          2.25,
+          2.75,
+          3.25,
+          3.75,
+          4.25,
+          4.75,
+          5.25,
+          5.75,
+          6.25,
+          6.75,
+          7.25,
+          7.75,
+          8.25,
+          8.75,
+          9.25,
+          9.75
+        ],
+        "sheets": [
+          "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V18-04-presentable-sequence-1.jpg",
+          "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V18-04-presentable-sequence-2.jpg"
+        ],
+        "fileSha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c"
+      },
+      "findings": [
+        {
+          "timeRange": [
+            0,
+            2
+          ],
+          "category": "action",
+          "observation": "对方从案边取起竹卷，我先左手再右手握住，对方松手；约1.6秒切回案头并开始翻查纸页，接取动作真实可见"
+        },
+        {
+          "timeRange": [
+            0,
+            2
+          ],
+          "category": "mask",
+          "observation": "纸面/竹卷上的原生字局部柔化仍可察觉，但手指、页边、持握位置保留；没有旧版横贯大部分前景、连手一起糊掉的长时大块假面。未见可辨读的原生伪证据句子"
+        },
+        {
+          "timeRange": [
+            2,
+            10
+          ],
+          "category": "accurate-document",
+          "observation": "2.000秒明确切为全幅准确正文，底层生成纸页不再露边；正文逐字与本节点sourceLines相符，未混入其他账页内容"
+        },
+        {
+          "timeRange": [
+            1.6,
+            2
+          ],
+          "category": "cut-and-continuity",
+          "observation": "约1.6秒由近持竹卷跳切回桌面，属于核对插镜；2秒切正文干净、可理解为阅读插入，不是完整无剪辑展开动作"
+        }
+      ],
+      "integrationConditions": [
+        "仅把前2秒作为真实接取/开始翻查，后8秒作为本节点材料的准确阅读插页；不把文字卡计作取得/签认/整页展开动作",
+        "正文只对应CH2-LY04-D05：地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+        "材料来源与可读时机仍由G2对应父片和章节状态保证；该子片不授予其他节点信息，也不提前认定归责、供述或结局",
+        "将2秒正文切点保留为清楚阅读插入；若以后要求无剪辑完整展开或逐页翻完，不能用本版冒充，须另作本地节奏/源段调整",
+        "保留约1.6秒案头跳切的插镜性质，前后接同一核对场景，不宣称是无剪辑连续持卷运动"
+      ],
+      "documentContentCheck": {
+        "node": "CH2-LY04-D05",
+        "observedCardText": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+        "sourceLineText": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+        "exactMatch": true,
+        "otherNodeFactsObserved": false,
+        "stateGateVerified": false,
+        "stateGateOwner": "G2"
+      },
+      "openVisualDefects": [],
+      "requiresNewVideoRequest": false,
+      "audioIssues": [
+        "静音画面协审，未逐字听审；未新增API/TTS，不为纯音频问题要求重拍"
+      ]
+    },
+    {
+      "id": "V20-05",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-05.mp4",
+      "sha256": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "sha256Before": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "sha256After": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "unchangedDuringReview": true,
+      "userApproved": false,
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，从0.00播放至ended；8894根下/groups/...实际文件，未修改审核台状态",
+          "actualReviewedRanges": [
+            [
+              0,
+              7
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V20-05-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "id": "V20-05",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-05.mp4",
+        "sha256": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+        "afterSamplingSha256": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+        "unchangedDuringSampling": true,
+        "sheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V20-05-2fps.jpg",
+        "times": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5
+        ]
+      },
+      "audioIssues": [
+        "只读画面协审，未逐字听审；未新增API/TTS"
+      ],
+      "reviewState": "reviewed",
+      "pictureUsability": "usable-with-integration-condition",
+      "excludedFromCurrentVerdict": false,
+      "conclusion": "当前7秒画面可用：准确既有正文插页之后接NPC说明，未漏生成纸面伪字、未见遮罩盖住脸或手纸接触动作",
+      "findings": [
+        {
+          "timeRange": [
+            0,
+            3.95
+          ],
+          "observation": "全幅“缺额报告·已取得正文”准确插页，画面清楚稳定，无底层生成文书漏边；本段不是演出新取得"
+        },
+        {
+          "timeRange": [
+            3.95,
+            7
+          ],
+          "observation": "接仓中经手人中近景发话，角色、衣服、背景稳定，底部无可读假文书；本段本就没有翻纸动作，不能额外声称翻阅已在本片发生"
+        }
+      ],
+      "integrationConditions": [
+        "插页所需来源、已取得状态和条件由G2确保；只回看已有正文，不作为新取得证据",
+        "保留正文插页到经手人说明的清楚切点，只有该NPC做其既定说明口型；正确台词和声音由G2后续审核",
+        "此结论不覆盖前后其他取得/翻看镜头，也不代替G2父片整段验收"
+      ],
+      "openVisualDefects": [],
+      "requiresNewVideoRequest": false
+    }
+  ],
+  "counts": {
+    "currentReviewed": 4,
+    "currentConditionalUsable": 4,
+    "retiredDraftExcluded": 2,
+    "pending": 0,
+    "sourceChanged": 0
+  },
+  "newAPIRequests": 0,
+  "newTTSRequests": 0,
+  "userApproved": false,
+  "retiredDrafts": [
+    {
+      "id": "V15-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-04.mp4",
+      "sha256": "5fcb4e428087240629bf84eba5eebc905c3bd4d26baa42b16cb338cf9d85b2b9",
+      "sha256Before": "5fcb4e428087240629bf84eba5eebc905c3bd4d26baa42b16cb338cf9d85b2b9",
+      "sha256After": "5fcb4e428087240629bf84eba5eebc905c3bd4d26baa42b16cb338cf9d85b2b9",
+      "unchangedDuringReview": true,
+      "userApproved": false,
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，从0.00播放至ended；8894根下/groups/...实际文件，未修改审核台状态",
+          "actualReviewedRanges": [
+            [
+              0,
+              10
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V15-04-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "id": "V15-04",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-04.mp4",
+        "sha256": "5fcb4e428087240629bf84eba5eebc905c3bd4d26baa42b16cb338cf9d85b2b9",
+        "afterSamplingSha256": "5fcb4e428087240629bf84eba5eebc905c3bd4d26baa42b16cb338cf9d85b2b9",
+        "unchangedDuringSampling": true,
+        "sheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V15-04-2fps.jpg",
+        "times": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5
+        ]
+      },
+      "audioIssues": [
+        "只读画面协审，未逐字听审；未新增API/TTS"
+      ],
+      "reviewState": "retired-draft-not-final",
+      "pictureUsability": null,
+      "excludedFromCurrentVerdict": true,
+      "conclusion": "总控已明确此旧路径未采用、G2正另出独立新版；停止重复验收，待新路径再审。以下仅为收到停审消息前的一次观察，不当最终结论",
+      "historicalObservations": [
+        {
+          "timeRange": [
+            1,
+            9.5
+          ],
+          "detail": "V15纸面中心大块失焦、7秒背景另一页仍见字迹"
+        }
+      ]
+    },
+    {
+      "id": "V18-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-04.mp4",
+      "sha256": "e243b4bc0337d08610d23fd2d13d4bd0e9286d6e6b5b8c275cbe1bf997216657",
+      "sha256Before": "e243b4bc0337d08610d23fd2d13d4bd0e9286d6e6b5b8c275cbe1bf997216657",
+      "sha256After": "e243b4bc0337d08610d23fd2d13d4bd0e9286d6e6b5b8c275cbe1bf997216657",
+      "unchangedDuringReview": true,
+      "userApproved": false,
+      "dynamicChecks": [
+        {
+          "method": "IAB原生视频1倍静音，从0.00播放至ended；8894根下/groups/...实际文件，未修改审核台状态",
+          "actualReviewedRanges": [
+            [
+              0,
+              10
+            ]
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V18-04-dynamic-end.png"
+        }
+      ],
+      "auxiliaryEvidence": {
+        "id": "V18-04",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-04.mp4",
+        "sha256": "e243b4bc0337d08610d23fd2d13d4bd0e9286d6e6b5b8c275cbe1bf997216657",
+        "afterSamplingSha256": "e243b4bc0337d08610d23fd2d13d4bd0e9286d6e6b5b8c275cbe1bf997216657",
+        "unchangedDuringSampling": true,
+        "sheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\G2-V18-04-2fps.jpg",
+        "times": [
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0,
+          2.5,
+          3.0,
+          3.5,
+          4.0,
+          4.5,
+          5.0,
+          5.5,
+          6.0,
+          6.5,
+          7.0,
+          7.5,
+          8.0,
+          8.5,
+          9.0,
+          9.5
+        ]
+      },
+      "audioIssues": [
+        "只读画面协审，未逐字听审；未新增API/TTS"
+      ],
+      "reviewState": "retired-draft-not-final",
+      "pictureUsability": null,
+      "excludedFromCurrentVerdict": true,
+      "conclusion": "总控已明确此旧路径未采用、G2正另出独立新版；停止重复验收，待新路径再审。以下仅为收到停审消息前的一次观察，不当最终结论",
+      "historicalObservations": [
+        {
+          "timeRange": [
+            3.5,
+            7.5
+          ],
+          "detail": "V18左边0–90像素纸页仍见清晰伪字列，前景横向遮罩覆盖手和纸的接触细节"
+        }
+      ]
+    }
+  ],
+  "notificationDelivery": {
+    "recipientThread": "01a16f08-4fed-7eb0-ac75-041e1f010683",
+    "status": "failed-target-steering-unavailable",
+    "attempts": 2,
+    "toolReason": "Cannot steer conversation without an active turn id",
+    "reportSaved": true
+  },
+  "historicalReviewPolicy": "before-user-20261025-1549",
+  "supersededByPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "validAsCurrentPolicyAcceptance": false,
+  "policyNote": "保留历史实际观察与旧SHA，不把当时允许字卡/局部柔化的制作结论当新标准通过；当前修复由对应拥有者维护。"
+}

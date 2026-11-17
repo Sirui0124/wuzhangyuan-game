@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7946
+        },
+        {
+          "label": "Music",
+          "p": 0.726
+        },
+        {
+          "label": "Television",
+          "p": 0.0956
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0466
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0396
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0318
+        },
+        {
+          "label": "Rain",
+          "p": 0.0185
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0171
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0146
+        },
+        {
+          "label": "Spray",
+          "p": 0.0119
+        },
+        {
+          "label": "Animal",
+          "p": 0.0113
+        },
+        {
+          "label": "Tender music",
+          "p": 0.0105
+        }
+      ],
+      "music": 0.726
+    }
+  ]
+}

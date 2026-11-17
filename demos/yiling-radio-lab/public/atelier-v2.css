@@ -1,0 +1,215 @@
+/* 2026-11-15 · 纸本军图 / 军报册 / 传令笺。仅视觉层。 */
+:root{
+ --ink:#312f28;--muted:#706c60;--line:#b5ab9470;--paper:#eee9dc;
+ --jade:#4a5d53;--cinnabar:#8c4032;--bronze:#a3916c;
+}
+.command-room{
+ padding:0 24px;
+ grid-template-rows:72px minmax(160px,1fr) 68px 326px 30px;
+ background:linear-gradient(#303530cc,#30332ce8),url('/cloth.png') center/185% 185%;
+ box-shadow:inset 0 0 90px #101b1755;
+}
+button{transition:background .16s,box-shadow .16s,transform .16s}
+button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid #ad6746;outline-offset:3px}
+button:active:not(:disabled){transform:translateY(1px)}
+.masthead{color:#f0ebdc;padding-inline:3px;gap:22px}
+.brand{gap:21px}
+.brand>span{font-size:30px;letter-spacing:5px;text-shadow:0 2px 4px #121b1588}
+.brand small{font-size:13px;letter-spacing:3px;color:#c4c6b6;padding-left:20px;border-left:1px solid #a49a7c66}
+.clock{gap:16px}
+.clock>span{font-size:13px;color:#b9c5b9;letter-spacing:1px}
+.clock strong{font-size:16px;color:#e7dfca}
+.clock em{font:25px Georgia,serif;letter-spacing:2px;color:#f2e9d4;margin-left:12px}
+.transport{gap:0;border:1px solid #a8997077;padding:3px;background:#1e292673;box-shadow:inset 0 1px 4px #101d1c88}
+.transport button{border:0;border-radius:0;background:transparent;box-shadow:none;color:#ccc9b6;min-height:31px;width:38px}
+.transport button[aria-pressed=true]{background:linear-gradient(#b8ae8e,#8e8d72);color:#25342e;box-shadow:inset 0 1px #e9dec466,0 1px 3px #11221d88}
+.folio-button{background:linear-gradient(#726a55,#4c493c);border:1px solid #b2a17c88;color:#eee4ce;font-size:18px;min-height:38px;padding:5px 16px;box-shadow:inset 0 1px #eadabb33,0 2px 6px #17271f55}
+.map-area{border:1px solid #beb49a;box-shadow:0 6px 18px #12251e66,0 1px #faf3df66;isolation:isolate}
+.map-tools{top:13px;left:16px;right:14px}
+.map-tools>span{background:#efeadbcc;font-size:16px;letter-spacing:2px;color:#595448}
+.map-tools button{min-height:32px;font-size:13px;border:1px solid #9e967a66;background:linear-gradient(#f0ebdeee,#ddd5c1ee);color:#5b5c4d;box-shadow:inset 0 1px #fff9,0 1px 3px #5a5b4033}
+.map-tools button:hover{background:#f8f1df}
+.unit-label{background:#f2eddded;box-shadow:1px 3px 8px #474e3f33;border:1px solid #b6ab8b88;padding:8px 12px}
+.unit-label strong{font:23px/1.3 KaiTi,serif;letter-spacing:1px;color:#34372d}
+.unit-label small{font-size:13px;line-height:1.6;color:#606c59;margin-top:4px}
+.unit.selected .unit-label{border-left:3px solid #65765d;background:#f5efdc}
+.unit.urgent .unit-label{border-left:3px solid #a05a40}
+.flag{box-shadow:2px 3px 4px #30403244;background:linear-gradient(100deg,#4b6251,#647760);color:#f8eed3;font-size:15px}
+.map-legend{background:#f0e9d5d9;color:#696657;padding:5px 9px;font-size:12px;left:12px;bottom:9px}
+.camp-token{font-size:18px;color:#4f5745}
+.supply-strip{gap:34px;padding:9px 7px 11px;border-bottom:1px solid #c6b58a33;margin-bottom:5px}
+.supply-strip>div{gap:9px;color:#ebe4d0}
+.supply-strip>div:nth-of-type(-n+2)::before{content:'';width:23px;height:24px;display:block;margin-right:2px;opacity:.85;background-color:#b5b49b;mask-repeat:no-repeat;mask-position:center;mask-size:contain;align-self:center}
+.supply-strip>div:nth-of-type(1)::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 22V3h13l-2 4 2 4H5M2 22h7' fill='none' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.supply-strip>div:nth-of-type(2)::before{mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m8 3 4 1 4-1-2 5c6 4 8 13-2 13S4 12 10 8Zm1 5h6M9 13h6m-3-2v7' fill='none' stroke='black' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.supply-strip span{font-size:14px;color:#c7c8b8;letter-spacing:1px}
+.supply-strip b{font:30px/1.1 Georgia,serif;color:#f0e7cf;letter-spacing:.5px}
+.supply-strip small{color:#b9b79f;font-size:12px;bottom:-14px}
+.supply-strip>button{background:linear-gradient(#a9ac91,#838e76);border:1px solid #b9b89a;color:#1f332c;min-height:44px;padding:9px 20px;font-size:16px;letter-spacing:1px;box-shadow:inset 0 1px #e8e1c566,0 3px 8px #1a2a2444}
+.supply-strip>button:hover{background:linear-gradient(#c0bea3,#a1ab90)}
+.radio-console{
+ grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:16px;
+ padding:12px;background:linear-gradient(#353b2ccc,#30362bd9),url('/cloth.png') center/190% 190%;
+ border:1px solid #9b8e6c70;box-shadow:0 6px 20px #10231e55,inset 0 1px #d2bb8333;
+}
+.communications{
+ position:relative;padding:14px 22px 12px 27px;
+ background:linear-gradient(90deg,#c6bda8 0,#e5decd 10px,#f0eadc 19px,#f3eee3 55%,#e8e0cd 100%),var(--paper-texture);
+ border:1px solid #c2b69a;border-left:4px solid #918a71;box-shadow:1px 3px 6px #17271c55,inset 1px 0 #fff7;
+}
+.communications::before{content:'';position:absolute;left:8px;top:14px;bottom:13px;border-left:1px solid #a8967266;pointer-events:none}
+.section-head{font:22px/1.4 KaiTi,serif;letter-spacing:3px;color:#535b47;margin-bottom:10px;min-height:32px;border-bottom:1px solid #a9a08466;padding-bottom:8px}
+button.link-button{font-size:14px;min-height:30px;text-decoration:none;border-bottom:1px solid transparent;color:#72765d;letter-spacing:0;padding:2px 4px}
+button.link-button:hover{border-bottom-color:#a39572;color:#424f3d;background:transparent}
+.section-head .link-button{font:14px "Microsoft YaHei",sans-serif}
+.radio-log{padding-right:13px;scrollbar-width:thin;scrollbar-color:#9b9e87 transparent}
+.transmission{padding:12px 0 14px;border-bottom:1px solid #b4aa8c55}
+.transmission>div{gap:12px;margin-bottom:7px}
+.transmission b{font-size:15px;color:#42604e;letter-spacing:1px;font-weight:600}
+.transmission time{font-size:12px;color:#8d8572;letter-spacing:.5px}
+.transmission p{font:20px/1.7 KaiTi,"STKaiti",serif;color:#363b30;letter-spacing:.3px}
+.transmission.system p{color:#646650}
+.transmission.order p,.transmission.question p{color:#62513b}
+.transmission.request{padding:12px 14px;margin:6px 0;border-left:3px solid #a15d43;background:linear-gradient(90deg,#dfc59444,transparent)}
+.transmission.request b,.transmission.request time{color:#91472e}
+.command-station{
+ padding:14px 20px 10px;gap:8px;
+ background:linear-gradient(98deg,#e8e0cd,#f3eddf 7%,#f3eee3 85%,#e8dfc9);
+ border:1px solid #bfb299;box-shadow:1px 3px 6px #17271c55,inset 0 1px #fff9;
+}
+.channel-tabs{gap:5px;position:relative;border-bottom:1px solid #b3a68b;padding-bottom:7px}
+.channel-tabs button{font:21px/1.4 KaiTi,serif;letter-spacing:1px;min-height:41px;padding:6px 10px;background:linear-gradient(#ece4d3,#ddd2ba);border:1px solid #bdb093;border-bottom-color:#9e9477;color:#646953;box-shadow:inset 0 1px #fff8}
+.channel-tabs button[aria-pressed=true]{background:linear-gradient(#f7efe0,#e9dcc3);color:#794535;border-color:#a98e66;box-shadow:inset 0 2px #aa6546,0 2px 3px #98835b33}
+.channel-tabs button:hover{background:#f5ead4}
+.signal{width:17px;height:17px;border-radius:0;transform:rotate(-5deg);background:#9e5239;font-size:13px;border:1px solid #b87855}
+.station-caption{min-height:25px;gap:8px}
+.station-caption>span{font-size:13px;color:#73735f;letter-spacing:.4px}
+.station-caption .link-button{font-size:13px;min-height:25px}
+.report-shortcuts{gap:12px}
+.report-shortcuts button{font:16px/1.5 KaiTi,serif;min-height:32px;background:transparent;padding:3px 1px;border:0;border-bottom:1px solid #b2a38688;box-shadow:none;color:#5f6851}
+.report-shortcuts button:hover{color:#85503a;border-bottom-color:#a16543;background:transparent}
+.composer{min-height:76px;gap:13px}
+.composer textarea{
+ min-height:74px;border:1px solid #b5a688;border-bottom-color:#a78f66;border-radius:1px;
+ background:repeating-linear-gradient(transparent 0,transparent 34px,#ae9c7626 34px,#ae9c7626 35px),linear-gradient(105deg,#f8f3e7,#eee5d2);
+ background-position:0 7px,0 0;background-origin:content-box,padding-box;
+ font:22px/1.6 KaiTi,"STKaiti",serif;color:#35372e;letter-spacing:.3px;padding:12px 16px;
+ box-shadow:inset 1px 2px 7px #88785520,0 1px #fff6;
+}
+.composer textarea::placeholder{color:#9b9380;font-family:KaiTi,serif;font-size:20px}
+.composer textarea:focus{border-color:#9b8b65;box-shadow:inset 1px 2px 7px #88785520,0 0 0 2px #bba87b33}
+.composer>button.primary{
+ min-width:68px;background:linear-gradient(110deg,#a05b43,#853e30 70%,#773a2d);border:1px solid #b17456;
+ color:#fff0d8;box-shadow:inset 1px 1px #e5ac7966,inset -1px -2px #5d2a2288,0 3px 5px #6a4a3433;
+ font:26px/1.4 KaiTi,serif;letter-spacing:5px;writing-mode:vertical-rl;text-orientation:upright;padding:12px 17px;
+}
+.composer>button.primary:hover{background:linear-gradient(110deg,#b26b4b,#9d5038)}
+.composer>button.primary:disabled{writing-mode:horizontal-tb;letter-spacing:0;font-size:16px;min-width:68px;padding:8px;opacity:.8}
+.composer .cancel-call{min-width:68px;min-height:25px;padding:2px 5px;background:#d9cbb1;color:#5c4c36;font-size:12px;writing-mode:horizontal-tb;letter-spacing:0;z-index:1}
+.command-bottom{min-height:25px;gap:12px}
+.command-bottom .link-button{font:14px KaiTi,serif;min-height:25px}
+.command-bottom small{font-size:12px;color:#8d8370}
+.command-station:has(.request-banner) .station-caption>span{visibility:hidden}
+.request-banner{position:absolute;top:76px;left:20px;right:100px;font-size:13px;line-height:25px;padding:0;color:#914832;background:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.intel-detail{background:#f3eddd var(--paper-texture);border-color:#baaa89;box-shadow:0 -9px 28px #152b2344;padding:24px}
+.intel-detail p{font:21px/1.75 KaiTi,serif;color:#3c4335}
+.intel-detail .muted{font:13px/1.7 "Microsoft YaHei",sans-serif;color:#7a7c67}
+.room-footer{padding:0 5px;font-size:12px;color:#b5bcaa}
+.room-footer button{font-size:12px;color:#c9c8af;min-height:26px}
+.briefing,.order-review,.folio{background:linear-gradient(105deg,#e4dac2,#f4eddf 7%,#f3eee2 90%,#e0d4b9);border-color:#b8a580;box-shadow:0 20px 75px #10251f99,inset 0 1px #fff8}
+.briefing{padding:34px 42px;border-top:3px solid #8b6d47}
+.briefing h1{font-size:32px;color:#3e4535}
+.briefing p{font-size:24px;line-height:1.8;color:#4e5241}
+.briefing .eyebrow{color:#8a7351}
+.brief-resources{border-block:1px solid #b1a17b66;padding:15px 0;gap:36px}
+.brief-resources b{font-size:30px;color:#4a604c}
+.briefing>button.primary,.actions button.primary,.folio-body>button.primary{background:linear-gradient(#63755d,#465a49);border-color:#809071;color:#fff4df;box-shadow:inset 0 1px #d4d4a944,0 2px 5px #45503a33}
+.briefing>small{font-size:13px;color:#8a806b}
+.order-review>header,.folio>header{border-bottom:1px solid #b3a27d88;background:#e3d8bf55}
+.order-review h2,.folio h2{font-size:30px;color:#414c39}
+.eyebrow{font-size:13px;letter-spacing:2px;color:#8c7755}
+.my-order{font-size:24px;line-height:1.8;color:#414735}
+.review-row{padding:13px 0;border-bottom-color:#b7a98666;gap:8px;font-size:16px}
+.review-row strong{font:22px KaiTi,serif;color:#49583e}
+.review-row p{font-size:15px;color:#747359}
+.review-row b{font-size:23px;color:#6f5036}
+.order-review>footer{background:linear-gradient(#e3d7bd,#d8c9ab);border-top-color:#af9b75;padding:17px 26px 21px}
+.review-cost{font-size:16px;color:#5e5e48}
+.review-cost small{font-size:14px;color:#7b765d}
+.actions{gap:13px;margin-top:14px}
+.actions button{font-size:17px;min-height:44px;border-color:#aa9874;background:linear-gradient(#eee3cc,#d9caab)}
+.actions button.primary{background:linear-gradient(#9c5d42,#804130);border-color:#9b6f4b;color:#fff0d8;box-shadow:inset 0 1px #d8a86c77,0 2px 4px #65523a33}
+.folio-body>p{font-size:24px;line-height:1.8}
+.menu-list button{font:20px KaiTi,serif;background:linear-gradient(#efe5d2,#e0d3b7);border-color:#b7a483;min-height:44px}
+.error-toast{background:#f1dfc4;border-left-color:#a96345;box-shadow:0 7px 22px #172a2544}
+
+@media(min-width:1800px){
+ .command-room{grid-template-rows:78px minmax(240px,1fr) 74px 354px 32px;padding-inline:32px}
+ .transmission p{font-size:22px}.command-station{padding:16px 24px;gap:10px}.communications{padding:16px 25px 14px 30px}
+ .composer textarea{font-size:24px}.section-head{font-size:24px}.channel-tabs button{font-size:23px}
+ .request-banner{top:84px;left:24px}.station-caption>span{font-size:14px}
+}
+@media(max-width:1050px){
+ .command-room{padding-inline:14px;grid-template-rows:62px minmax(150px,1fr) 62px 310px 28px}
+ .brand{display:block}.brand>span{font-size:27px}.brand small{display:none}.clock{gap:9px}.clock>span{display:none}.clock em{font-size:23px;margin-left:7px}.transport button{width:34px}
+ .supply-strip{gap:22px;padding-inline:4px}.supply-strip span{font-size:13px}.supply-strip b{font-size:27px}.supply-strip>div::before{width:19px!important;height:21px!important}.supply-strip .saved-count{display:none}
+ .supply-strip>button{font-size:14px;min-width:160px;padding:8px 12px}
+ .radio-console{padding:9px;gap:11px}.communications{padding:11px 15px 9px 21px}.section-head{font-size:21px;margin-bottom:5px;min-height:30px}.transmission p{font-size:19px}.transmission b{font-size:14px}.transmission time{font-size:12px}
+ .command-station{padding:11px 14px 8px;gap:6px}.channel-tabs{gap:3px;padding-bottom:5px}.channel-tabs button{font-size:19px;min-height:37px;padding:5px 6px;letter-spacing:0}
+ .report-shortcuts{gap:11px}.report-shortcuts button{font-size:15px;min-height:30px}.composer{min-height:68px;gap:9px}.composer textarea{font-size:21px;min-height:66px;padding:10px 12px}.composer textarea::placeholder{font-size:19px}.composer>button.primary{min-width:60px;font-size:24px;padding:10px 13px}
+ .composer .cancel-call{min-width:60px}.station-caption>span{font-size:12px}.request-banner{top:65px;left:14px;right:86px;font-size:12px}
+ .unit-label strong{font-size:21px}.unit-label small{font-size:12px}.map-tools>span{font-size:14px}.map-tools button{font-size:12px;min-height:30px}
+}
+@media(max-width:800px){
+ .command-room{padding-inline:9px;grid-template-rows:56px minmax(135px,1fr) 61px 350px 26px}
+ .masthead{gap:8px}.brand>span{font-size:25px;letter-spacing:3px}.clock strong{font-size:13px}.clock em{font-size:19px;letter-spacing:1px}.transport{padding:2px}.transport button{width:29px;min-height:29px}.folio-button{font-size:16px;padding:4px 10px;min-height:34px}
+ .supply-strip{gap:18px;margin-bottom:4px;padding:8px 3px 11px}.supply-strip>div{gap:6px}.supply-strip>div:nth-of-type(-n+2)::before{display:none}.supply-strip span{font-size:12px;letter-spacing:0}.supply-strip b{font-size:25px}.supply-strip>button{font-size:13px;min-height:39px;min-width:152px;padding:7px 11px;letter-spacing:0}.supply-strip small{font-size:11px;bottom:-13px}
+ .radio-console{grid-template-columns:1fr;grid-template-rows:96px minmax(0,1fr);gap:8px;padding:7px}
+ .communications{padding:7px 14px 5px 20px;border-left-width:3px}.communications::before{left:7px;top:8px;bottom:8px}.section-head{font-size:20px;min-height:27px;margin-bottom:2px;padding-bottom:3px}.section-head .link-button{font-size:12px;min-height:23px}
+ .transmission{padding:5px 0 8px}.transmission>div{margin-bottom:3px;gap:10px}.transmission p{font-size:18px;line-height:1.65;letter-spacing:0}.transmission b{font-size:13px}.transmission time{font-size:11px}.transmission.request{padding:6px 10px;margin:3px 0}
+ .command-station{padding:10px 14px 7px;gap:5px}.channel-tabs{padding-bottom:4px;gap:4px}.channel-tabs button{font-size:19px;min-height:36px;padding:4px 7px}.station-caption{min-height:23px}.station-caption>span{font-size:12px}.station-caption .link-button{font-size:12px;min-height:23px}
+ .report-shortcuts button{font-size:16px;min-height:29px;padding:2px 1px}.report-shortcuts{gap:17px}.composer{min-height:62px;gap:10px}.composer textarea{min-height:60px;font-size:21px;padding:8px 12px;line-height:1.55}.composer textarea::placeholder{font-size:19px}.composer>button.primary{min-width:60px;padding:8px 13px;font-size:23px;letter-spacing:4px}.command-bottom{min-height:23px}.command-bottom .link-button{font-size:13px;min-height:23px}.command-bottom small{display:none}
+ .request-banner{top:61px;left:14px;right:85px;line-height:23px;font-size:12px}.room-footer{font-size:11px;padding-inline:2px}.room-footer button{font-size:11px;min-height:23px}
+ .map-tools{left:8px;right:8px;top:8px}.map-tools>span{font-size:12px;letter-spacing:1px;padding:3px 5px}.map-tools button{font-size:11px;min-height:27px;padding:3px 6px}.map-legend{font-size:10px;padding:3px 6px;left:7px;bottom:6px}
+ .unit-label{padding:5px 8px}.unit-label strong{font-size:20px}.unit-label small{font-size:12px;margin-top:2px}.unit{gap:5px}.flag{font-size:12px;width:24px;height:29px}
+ .briefing{padding:26px}.briefing h1{font-size:29px}.briefing p{font-size:23px}.brief-resources{padding:12px 0;margin:12px 0;gap:25px}
+ .my-order{font-size:23px}.review-row strong{font-size:21px}
+}
+@media(max-width:450px){
+ .command-room{padding-inline:6px;grid-template-rows:52px minmax(140px,1fr) 61px 354px 25px}
+ .masthead{gap:5px}.brand>span{font-size:20px;letter-spacing:1px}.clock{gap:4px}.clock strong{font-size:11px}.clock em{font-size:16px;margin-left:4px}.transport{padding:1px}.transport button{width:25px;min-height:28px;font-size:12px}.folio-button{font-size:13px;padding:3px 6px;min-height:31px}
+ .supply-strip{gap:11px;padding-inline:2px}.supply-strip>div{gap:3px}.supply-strip span{font-size:11px}.supply-strip b{font-size:21px}.supply-strip>button{font-size:11px;min-width:121px;min-height:37px;padding:6px 7px}.supply-strip small{font-size:10px}
+ .radio-console{padding:6px;gap:7px;grid-template-rows:101px minmax(0,1fr)}.communications{padding:6px 11px 5px 18px}.section-head{font-size:19px;min-height:27px}.transmission p{font-size:18px;line-height:1.65}.transmission b{font-size:13px}.transmission time{font-size:11px}
+ .command-station{padding:9px 10px 6px;gap:5px}.channel-tabs{gap:3px}.channel-tabs button{font-size:18px;min-height:35px;padding:4px 4px}.station-caption>span{font-size:11px}.station-caption .link-button{font-size:11px}.report-shortcuts{gap:17px}.report-shortcuts button{font-size:15px;min-height:29px}.composer{min-height:60px;gap:8px}.composer textarea{font-size:20px;min-height:58px;padding:8px 10px}.composer textarea::placeholder{font-size:18px}.composer>button.primary{min-width:55px;padding:8px 10px;font-size:22px;letter-spacing:3px}.composer .cancel-call{min-width:55px}.command-bottom .link-button{font-size:12px;min-height:22px}.command-bottom{min-height:22px}.request-banner{top:59px;left:10px;right:75px;font-size:11px}
+ .map-tools>span{font-size:10px;max-width:76px}.map-tools>div{gap:2px}.map-tools button{font-size:10px;min-height:25px}.map-legend{font-size:9px}.unit-label strong{font-size:18px}.unit-label small{font-size:11px}.unit-label{padding:4px 6px}.unit .flag{width:21px;height:25px;font-size:11px}
+ .room-footer{font-size:10px}.room-footer button{font-size:10px}.briefing{padding:22px}.briefing h1{font-size:28px}.briefing p{font-size:22px;line-height:1.8}.brief-resources{gap:24px}.brief-resources b{font-size:27px}.briefing>small{font-size:12px}
+ .order-review h2,.folio h2{font-size:28px}.my-order{font-size:22px}.review-row strong{font-size:20px}.review-row{font-size:15px;gap:6px}.review-row p{font-size:14px}.review-cost{font-size:14px}.review-cost small{font-size:13px}.actions button{font-size:16px}.folio-body>p{font-size:23px}
+}
+@media(max-height:650px) and (min-width:801px){
+ .command-room{grid-template-rows:50px minmax(100px,1fr) 52px 264px 24px;padding-inline:14px}.brand>span{font-size:25px}.brand small{display:none}.supply-strip{padding-block:5px;margin-bottom:3px}.supply-strip b{font-size:25px}.supply-strip>button{min-height:37px}
+ .radio-console{padding:8px;gap:12px}.communications{padding:9px 15px 7px 21px}.section-head{min-height:28px;font-size:20px;margin-bottom:3px;padding-bottom:3px}.transmission p{font-size:19px}.command-station{padding:9px 13px 6px;gap:4px}.channel-tabs button{min-height:32px;font-size:19px;padding:3px 5px}.channel-tabs{padding-bottom:4px}.station-caption{min-height:22px}.station-caption .link-button{min-height:22px}.report-shortcuts button{min-height:27px;font-size:15px}.composer{min-height:55px;gap:9px}.composer textarea{min-height:53px;font-size:20px;padding:7px 11px}.composer>button.primary{font-size:22px;min-width:58px;padding:8px 11px}.command-bottom{min-height:22px}.command-bottom .link-button{min-height:22px}.request-banner{top:54px;left:13px}
+}
+@media(prefers-reduced-motion:reduce){button{transition:none}}
+/* 窄窗口：先保证文字、输入和资源完整，再调整纸签位置。 */
+.radio-log{position:relative}
+.composer>button.primary{white-space:nowrap}
+.composer>button.primary:disabled{white-space:normal}
+@media(max-width:800px) and (min-width:451px){
+ .unit[data-route=fu]{transform:translate(-35%,-85%)}
+ .unit[data-route=feng]{transform:translate(-45%,-110%)}
+ .unit[data-route=sha]{transform:translate(-60%,-55%)}
+ .map-legend{display:none}
+}
+@media(max-width:450px){
+ .supply-strip{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 122px;gap:8px;align-content:center;padding:5px 2px 7px}
+ .supply-strip>div{display:grid;grid-template-columns:max-content max-content;gap:2px 4px;align-items:baseline;justify-content:start;line-height:1.2}
+ .supply-strip>div>span{grid-column:1/-1;font-size:11px;line-height:1.3;margin-bottom:1px}
+ .supply-strip b{font-size:23px;line-height:1.1}
+ .supply-strip>button{margin:0;min-width:0;min-height:39px;width:100%;font-size:11px;padding:6px 7px}
+ .supply-strip small{bottom:-12px;white-space:nowrap;font-size:9px}
+ .channel-tabs button{font-size:17px;white-space:nowrap;padding-inline:3px}
+ .composer{min-height:74px}.composer textarea{min-height:72px;font-size:19px;line-height:1.5}
+ .composer textarea::placeholder{font-size:18px}
+ .composer>button.primary{font-size:22px;line-height:1.1}
+ .map-legend{display:none}
+}

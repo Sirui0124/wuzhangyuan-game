@@ -1,0 +1,78 @@
+{
+  "id": "V19A-01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-corrected\\V19A-01.mp4",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-corrected\\V19A-01-replacement-source.mp4",
+  "sourceSha256": "b84665f216b36c5f486cd86eb328bb034bc1d9d1a174c9e869c3496d3a4a0c41",
+  "pictureChanges": {
+    "documentDefocusZones": [
+      [
+        0,
+        20,
+        0,
+        720,
+        110
+      ]
+    ],
+    "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+    "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+    "fullFrameExistingEvidence": true,
+    "trim": [
+      0,
+      9.4
+    ],
+    "tailHold": 0,
+    "sourceReuse": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-01-raw.mp4",
+        "sha256": "6bf4d8a8777c0c25c269f31afc440faa405e4694349a12c68c925c23c0dfbe37",
+        "usedRange": [
+          0,
+          3.4
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D06"
+        ],
+        "context": "仅复用既有账页核看动作，无NPC讲话、无其他分支选择结果"
+      },
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19B-01-raw.mp4",
+        "sha256": "00a9569ca62ea2712205a12b978811fbcca8a32b72de177ff4f02498c9e87652",
+        "usedRange": [
+          0,
+          6
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D06"
+        ],
+        "context": "仅复用既有账页核看动作，无NPC讲话、无其他分支选择结果"
+      }
+    ]
+  },
+  "sourceLines": [
+    {
+      "node": "CH2-LY04-Q4A",
+      "speaker": "我（普通选项）",
+      "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "voiceReused": {
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4A.wav",
+    "duration": 5.810833333333333,
+    "offset": 1.0,
+    "provider": "existing player TTS",
+    "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+    "listeningReview": "未听审",
+    "centralSource": "reused_G2_same_voice",
+    "sha256": "72bb4e44e2af46ea5dd6cbbe3d595e81b82731d910d4f8881253ae6bcd6cc8ab"
+  },
+  "audioReview": "未听审、未新增TTS",
+  "duration": 9.42,
+  "sha256": "ac85bcfc5ea556b82bed987c5ba4394f676c283884e4e86762222659633b95d2",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioHz": 48000
+}

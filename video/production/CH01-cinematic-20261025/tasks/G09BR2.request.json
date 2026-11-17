@@ -1,0 +1,26 @@
+{
+  "model": "MiniMax-H3",
+  "duration": 10,
+  "resolution": "768P",
+  "ratio": "16:9",
+  "content": [
+    {
+      "type": "text",
+      "text": "Create a realistic Chinese historical live-action movie scene. 16:9 full frame, restrained low saturation, natural skin, soft firelight, detailed dark canvas and worn iron armour. The camera is the visitor's eyes: no visitor body, shoulder, face, reflection or permanent spear in foreground. Not an over-the-shoulder shot. Audio: ONLY speak the Chinese sentences inside quotation marks below. Never read any directions, names, identifiers, labels or English text. No subtitles, no text, no music. Other sounds: wind, canvas, clothes and steps synchronized to the scene. Keep the same face, costume, camp location and screen direction between shots. All unquoted text is silent direction.\nPicture 1: 甲, 只锁甲的中年宽脸、黑布包髻、短须与旧铁札甲，不复制背景及画风.\nPicture 2: 中军帐, 只锁中军大帐、闭帘、门侧火盆、右侧告示、土路及木栏的空间；时段按分镜.\n0-10 seconds. 甲仍在同一守位，先轻指营道，再收手；把急报和禁令两件事说完整，最后说明自己不能处置军情。 与G09A同眼线65mm中近景，台词后留0.7秒自然余量。\nOnly the on-screen 甲 speaks to the unseen visitor: \"急报得赶紧送到，禁令也不能擅改。\". Other people stay silent with closed lips.\nOnly the on-screen 甲 speaks to the unseen visitor: \"我只能守门递话，不能处置军情。\". Other people stay silent with closed lips.\n\nFinish every quoted sentence in order. End with 0.4 seconds of quiet. Do not add any spoken words."
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/v1792862494/parallel-world/minimax-reference/e9e72e9b8cea3b2f71c8ff7386a8a91b1ed8f2f1fa10c256d6e6497a1281b400.png"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/v1792862501/parallel-world/minimax-reference/e1f328f0b0a77ba8407dfc270b7f7cabc679c4ee42b62a6620f85d9cfc23fa16.png"
+      },
+      "role": "reference_image"
+    }
+  ]
+}

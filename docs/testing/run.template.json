@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "record_kind": "template",
+  "test_id": null,
+  "run_id": null,
+  "role_id": null,
+  "status": "template",
+  "source": {
+    "url": "https://my.feishu.cn/sheets/RuuwsyCMzh5lGetfbyCcz0sxnTc",
+    "sheet_id": "0CKUXL",
+    "row_number": null,
+    "read_at_utc": null,
+    "snapshot_path": null
+  },
+  "model": {
+    "requested_model": null,
+    "actual_model": null,
+    "requested_effort": null,
+    "actual_effort": null,
+    "availability": "unchecked",
+    "availability_evidence": [],
+    "execution_evidence": [],
+    "agent_id": null,
+    "fork_turns": "none"
+  },
+  "persona": {
+    "synthetic": true,
+    "source_values": {},
+    "behavior_brief": null,
+    "selection_reason": null
+  },
+  "game": {
+    "entry_url": "http://127.0.0.1:8812/",
+    "chapter": "第一关",
+    "start_point": "独立空白测试环境中的可见主菜单",
+    "build_id_start": null,
+    "build_id_end": null,
+    "built_at_utc": null,
+    "content_version_start": null,
+    "content_version_end": null,
+    "git_head": null,
+    "dirty_workspace": null,
+    "runtime_mode": null,
+    "version_evidence": []
+  },
+  "environment": {
+    "isolation_id": null,
+    "isolation_method": null,
+    "fresh_state_verified": false,
+    "fresh_state_evidence": [],
+    "ui_target": null,
+    "exclusive_ui_lease": false,
+    "save_path": null,
+    "user_save_untouched": true,
+    "control_returned": false
+  },
+  "permissions": {
+    "tools": [],
+    "visible_only": true,
+    "forbidden_sources": [
+      "游戏源码",
+      "策划答案与攻略",
+      "未来剧情",
+      "存档内部状态",
+      "开发者隐藏状态",
+      "其他角色报告"
+    ],
+    "write_scope": null,
+    "audio_capability": "unverified"
+  },
+  "stop_conditions": {
+    "patience_rule": null,
+    "no_progress_attempt_budget": null,
+    "max_effective_actions": null,
+    "completion_requires_visible_evidence": true,
+    "allowed_reasons": [
+      "visible_completion",
+      "persona_quit",
+      "game_blocker",
+      "infrastructure_failure",
+      "model_unavailable",
+      "test_budget",
+      "coordinator_stop"
+    ]
+  },
+  "timing": {
+    "started_at_utc": null,
+    "ended_at_utc": null,
+    "wall_clock_seconds": null,
+    "model_wait_seconds": null,
+    "tool_wait_seconds": null,
+    "player_active_seconds": null,
+    "measurement_note": "尚未启动。墙钟时间不可作为玩家阅读或思考时间；未测量时保持 null。"
+  },
+  "execution": {
+    "steps_path": null,
+    "step_count": 0,
+    "effective_action_count": 0,
+    "reached_scope": null,
+    "termination_reason": null,
+    "termination_evidence": [],
+    "audio_tested": false,
+    "audio_note": "音频未测试"
+  },
+  "evidence": [],
+  "feedback": {
+    "story": {
+      "status": "not_tested",
+      "scope": "尚未实际试玩",
+      "observations": [],
+      "likes": [],
+      "confusions": [],
+      "suggestions": [],
+      "score": null
+    },
+    "interaction": {
+      "status": "not_tested",
+      "scope": "尚未实际试玩",
+      "observations": [],
+      "likes": [],
+      "confusions": [],
+      "suggestions": [],
+      "score": null
+    },
+    "art": {
+      "status": "not_tested",
+      "scope": "尚未实际试玩",
+      "observations": [],
+      "likes": [],
+      "confusions": [],
+      "suggestions": [],
+      "score": null
+    },
+    "overall": {
+      "status": "not_tested",
+      "scope": "尚未实际试玩",
+      "observations": [],
+      "likes": [],
+      "confusions": [],
+      "suggestions": [],
+      "score": null
+    }
+  },
+  "issues": [],
+  "blockers": [],
+  "verification_limits": [
+    "这是一份空模板，没有角色、操作、反馈或通关结果。"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "C1-D01",
+  "expected": "今夜守帐怎么这么严？",
+  "sha256": "15118f2090c3cff3aaa5d9419dcf5f3fc5b38536d92d13035abc6b11b05169a1",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D01-v1.wav",
+  "recognized": "今夜手掌怎么这么严",
+  "similarity": 0.7777777777777778,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.58,
+      "text": "今夜手掌怎么这么严",
+      "noSpeechProbability": 0.13469873368740082,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.56,
+          "text": "今"
+        },
+        {
+          "start": 0.56,
+          "end": 0.68,
+          "text": "夜"
+        },
+        {
+          "start": 0.68,
+          "end": 0.82,
+          "text": "手"
+        },
+        {
+          "start": 0.82,
+          "end": 1.02,
+          "text": "掌"
+        },
+        {
+          "start": 1.02,
+          "end": 1.22,
+          "text": "怎么"
+        },
+        {
+          "start": 1.22,
+          "end": 1.4,
+          "text": "这么"
+        },
+        {
+          "start": 1.4,
+          "end": 1.58,
+          "text": "严"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

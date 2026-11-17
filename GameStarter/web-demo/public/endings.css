@@ -106,3 +106,7 @@
   .retry-options button { padding: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .ending-content { animation: none; } .ending-screen button, .ending-modal button { transition: none; } }
+
+/* First death follows EN02B-A with a black screen, without the rejected arrest film. */
+.ending-screen:has(.ending-actions [data-action="continue-teaching"]) { background: #000; }
+.ending-screen:has(.ending-actions [data-action="continue-teaching"]) .ending-frame { display: none; }

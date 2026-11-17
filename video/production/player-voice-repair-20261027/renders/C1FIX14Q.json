@@ -1,0 +1,79 @@
+{
+  "id": "C1FIX14Q",
+  "group": "chapterDialogue",
+  "oldSrc": "/video/current/C1FIX14Q-20261025.mp4",
+  "oldSha256": "fd36ed1ed8354a3e26d3552dbdadc32f85c3c888813278b5b74ddb62673eaf2b",
+  "oldSubtitles": "/video/subtitles/C1FIX14Q-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX14Q-0b5a01bf.mp4",
+  "sha256": "9acb7b861d821c08f7864a931fa6c2ac2e3bb6ec2a00457e4d2cc731510e40ea",
+  "bytes": 818430,
+  "duration": 4.0,
+  "containerDuration": 4.0,
+  "width": 1344,
+  "height": 756,
+  "fps": "24/1",
+  "frames": 96,
+  "videoCodec": "h264",
+  "current": {
+    "id": "C1FIX14Q",
+    "src": "/video/current/PV27-C1FIX14Q-0b5a01bf.mp4",
+    "title": "请亲兵通传",
+    "rows": [
+      "J03"
+    ],
+    "afterPlayback": "advance",
+    "subtitles": "/video/subtitles/PV27-C1FIX14Q-0b5a01bf.vtt"
+  },
+  "replacements": [
+    {
+      "id": "C1-J03",
+      "node": "J03",
+      "text": "营前有急报，请替我通传姜将军。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\J03.wav",
+      "oldCorrelation": 0.9717233110781012,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-J03-v1.wav",
+      "newVoiceSha256": "7b691aacdaf3aca2998bb89f3138baafc94645e437f56608cf43ee679fe08fee",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.35450000000000004,
+        3.7744999999999997
+      ],
+      "insertAt": 0.35450000000000004,
+      "voiceSeconds": 3.28,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9947015047073364,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.6345000000000001,
+      "end": 3.4644999999999997,
+      "text": "营前有急报，请替我通传姜将军"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

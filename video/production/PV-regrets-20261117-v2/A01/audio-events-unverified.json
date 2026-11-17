@@ -1,0 +1,61 @@
+{
+  "source_sha256": "e589e79ce586b28abd73bb3309496f796d074a94489d08f502d248c3c8ea3985",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7615
+        },
+        {
+          "label": "Music",
+          "p": 0.7058
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0332
+        },
+        {
+          "label": "Scary music",
+          "p": 0.0317
+        },
+        {
+          "label": "White noise",
+          "p": 0.0275
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0246
+        },
+        {
+          "label": "Television",
+          "p": 0.0215
+        },
+        {
+          "label": "Buzz",
+          "p": 0.0206
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0197
+        },
+        {
+          "label": "Animal",
+          "p": 0.0196
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0188
+        },
+        {
+          "label": "Spray",
+          "p": 0.0153
+        }
+      ],
+      "music": 0.7058
+    }
+  ]
+}

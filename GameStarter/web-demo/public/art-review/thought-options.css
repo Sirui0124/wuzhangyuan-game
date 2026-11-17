@@ -1,0 +1,27 @@
+/* Review-only host. No selectors apply to the live game entry. */
+body:has(.design-controls){font-family:'Microsoft YaHei','PingFang SC',sans-serif;background:#e4e5dc}
+.design-controls{height:80px;display:flex;align-items:center;gap:20px;padding:12px 24px;background:#f5f4ed;color:#37473d;border-bottom:1px solid #cbd2c6;position:relative;z-index:50;font:14px/1.5 'Microsoft YaHei',sans-serif;box-sizing:border-box}
+.design-title{display:flex;flex-direction:column;gap:3px;min-width:170px}.design-title strong{font-weight:500}.design-title span{font-size:11px;color:#727e72}
+.design-controls .visibility-control{display:flex;align-items:center;gap:7px}.visibility-control input{width:75px;accent-color:#70866a}.visibility-control output{font-size:12px;min-width:30px;color:#6f7f65}
+.design-controls nav{display:flex;gap:6px;margin-right:auto}.design-controls button,.design-controls select{font:inherit;padding:9px 12px;color:inherit;border:1px solid transparent;border-radius:3px;background:none;cursor:pointer}.design-controls button[aria-pressed=true]{background:#dce4d8;color:#2e543f;border-color:#b6c6b0}.design-controls button:hover{background:#e6e9df}.design-controls select{padding:8px;background:#ffffff88;border-color:#cbd2c6;margin-left:7px}.design-controls label{white-space:nowrap}.design-controls :focus-visible,#design-exit-focus:focus-visible{outline:2px solid #5e7d63;outline-offset:3px}
+body:has(.design-controls) #game-root{height:calc(100dvh - 80px);position:relative}
+body:has(.design-controls) #game-root .workspace-screen{height:100%;--mind-line:#648570}
+body:has(.design-controls) #game-root .workspace-screen:after{border-top:0;box-shadow:none}
+body:has(.design-controls) #game-root .reasoning-curves{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:0}
+body:has(.design-controls) #game-root .reasoning-curve{fill:none;stroke:var(--mind-line);stroke-width:1.5;opacity:.65;vector-effect:non-scaling-stroke;transition:opacity .15s,stroke-width .15s}
+body:has(.design-controls) #game-root .curve-origin{fill:var(--mind-line);opacity:.65}
+body:has(.design-controls) #game-root .reasoning-curve.continuation-curve{stroke-dasharray:4 6;opacity:.4}
+body:has(.design-controls) #game-root .reasoning-curve.is-related{opacity:1;stroke-width:2.5}
+body:has(.design-controls) #game-root .reasoning-curve.is-unrelated{opacity:.14}
+body:has(.design-controls) #game-root .working-clue[draggable=true]{cursor:grab}
+body:has(.design-controls) #game-root .thought-outcome{cursor:pointer}
+body:has(.design-controls) #game-root .thought-outcome:focus-visible{outline:1px solid var(--mind-line);outline-offset:6px}
+body:has(.design-controls) #game-root .working-clue-title,body:has(.design-controls) #game-root .thought-outcome h2{overflow-wrap:anywhere}
+/* The meaning lives in each node and its source. Repeating category labels add noise. */
+:root body[data-thought-theme] #game-root .workspace-screen :is(.reasoning-kicker,.canvas-invitation,.working-clue>small,.outcome-kicker,.thought-record-state){display:none}
+:root body[data-thought-theme] #game-root .workspace-screen .thought-record .thought-input-row{display:block}
+#design-toast{position:fixed;z-index:70;bottom:18px;left:50%;transform:translateX(-50%);max-width:80vw;background:#20362de8;color:#ecebdb;padding:12px 22px;font:14px/1.7 'Microsoft YaHei',sans-serif;pointer-events:none;opacity:0;transition:opacity .2s}
+#design-toast.is-visible{opacity:1}#design-exit-focus{position:fixed;top:12px;right:16px;z-index:60;padding:8px 12px;background:#f3f1e3d9;color:#38533d;font-size:12px}
+body.design-focus .design-controls{display:none}body.design-focus #game-root{height:100dvh}
+@media(max-width:1100px){.design-controls{height:112px;gap:10px;flex-wrap:wrap;padding:10px 16px}.design-title{min-width:145px}.design-controls nav{gap:0}.design-controls button{padding:7px 8px}.design-controls label{margin-left:auto}body:has(.design-controls) #game-root{height:calc(100dvh - 112px)}body.design-focus #game-root{height:100dvh}}
+@media(max-width:650px){.design-controls{height:150px}.design-title{width:100%}.design-title span{display:none}.design-controls nav{width:100%}.design-controls label{margin-left:0}.design-controls button,.design-controls select{font-size:12px;padding:6px}.design-controls #design-fullscreen{display:none}body:has(.design-controls) #game-root{height:calc(100dvh - 150px)}}

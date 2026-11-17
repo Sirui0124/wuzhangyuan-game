@@ -1,0 +1,162 @@
+/* C · 夜色星图. Review only: requires the explicit body theme gate.
+   Uses the existing inventory/reasoning DOM and its measured SVG curves.
+   No image substitution, fabricated connectors, remote assets, or game rules. */
+body[data-thought-theme="night"] #game-root .workspace-screen {
+  --mind-ink: #e5dfcd;
+  --mind-red: #d7c298;
+  --mind-muted: #b2b9ad;
+  --mind-line: #8da999;
+  --mind-paper: #172322;
+  --glass: transparent;
+  --conclusion: transparent;
+  color: var(--mind-ink);
+  background: #111e21;
+  color-scheme: dark;
+}
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-landscape {
+  opacity: .86;
+  filter: saturate(.68) brightness(.6);
+  mask-image: none;
+  -webkit-mask-image: none;
+  background-position: center;
+  mix-blend-mode: normal;
+}
+body[data-thought-theme="night"] #game-root .workspace-screen::after { border: 0; box-shadow: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .paper-atmosphere {
+  opacity: 1;
+  background: linear-gradient(90deg, #101b1de0 0%, #1421248c 24%, #14212454 74%, #101b1d8a), linear-gradient(180deg, #101b1d57, transparent 34%, #101b1d9c);
+}
+body[data-thought-theme="night"] #game-root .workspace-screen :is(button, textarea) { font-size: 14px; }
+body[data-thought-theme="night"] #game-root .workspace-screen button:hover:not(:disabled) { color: #f4e9cc; filter: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen :is(button, textarea, [tabindex]):focus-visible { outline: 1px solid #c2ceb6; outline-offset: 5px; }
+body[data-thought-theme="night"] #game-root .workspace-screen button:disabled { opacity: .48; }
+body[data-thought-theme="night"] #game-root .workspace-screen :is(.light-hud, .light-hud nav, .game-mark, .game-mark small) { color: #bfc3b4; font-size: 14px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .light-hud nav button { font-size: 14px; color: #c7cabd; }
+body[data-thought-theme="night"] #game-root .workspace-screen .chapter-seal { color: #d4c7a8; border-color: #c1b58a55; }
+body[data-thought-theme="night"] #game-root .workspace-screen .workspace-layout { inset: 108px 5vw 58px 128px; scrollbar-color: #a5b5a64d transparent; }
+body[data-thought-theme="night"] #game-root .workspace-screen.inventory-open .workspace-layout { left: 355px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-stage { max-width: 1030px; padding: 0 30px 38px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-heading { text-align: left; margin: 0 0 24px 7%; }
+body[data-thought-theme="night"] #game-root .workspace-screen .workspace-modes { justify-content: flex-start; font-size: 14px; gap: 24px; margin-bottom: 16px; color: #aeb9b0; }
+body[data-thought-theme="night"] #game-root .workspace-screen .workspace-modes button { font-size: 14px; letter-spacing: 2px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .workspace-modes button[aria-current] { color: #e0d2af; border-color: #b9bda06b; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-kicker { font-size: 14px; color: #b2bfae; letter-spacing: 2px; margin-bottom: 12px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-heading h1 { font: 400 28px/1.65 var(--serif); color: #eee6d2; letter-spacing: 1px; text-shadow: 0 2px 12px #081313; }
+body[data-thought-theme="night"] #game-root .workspace-screen .canvas-invitation { font-size: 14px; color: #b9c0b5; margin: 17px 0 0; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-timeline { padding: 0 0 24px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-record { margin-bottom: 34px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-input-row { grid-template-columns: minmax(0, 1fr) 76px; gap: 18px; }
+body[data-thought-theme="night"] #game-root .workspace-screen :is(.thought-dropzone, .record-evidence) {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  gap: 20px 30px;
+  padding: 8px 8px 12px;
+  min-height: 78px;
+  align-items: flex-start;
+}
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-dropzone { background: radial-gradient(ellipse at 42% 50%, #879c7b0d, transparent 70%); }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-dropzone.is-drag-over { background: #a7baa216; box-shadow: inset 0 -1px #b3c4aa80; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue {
+  flex: 1 1 190px;
+  max-width: 300px;
+  padding: 7px 25px 13px 16px;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ccc6a6;
+  box-shadow: 0 0 7px #c7c4a53d;
+  pointer-events: none;
+}
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue:nth-child(even) { margin-top: 14px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue > small { font-size: 14px; color: #aeb9ae; margin-bottom: 9px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue-title { font: 400 20px/1.65 var(--serif); color: #e3decb; text-shadow: 0 2px 7px #081516; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue-remove { color: #b1bbad; font-size: 14px; width: 28px; height: 28px; top: 2px; right: 0; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue.is-understanding { border: 0; background: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue.is-understanding::before { background: #a7bfa9; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue.is-understanding .working-clue-title { color: #c2d5bd; }
+body[data-thought-theme="night"] #game-root .workspace-screen .working-clue.is-unused { opacity: .7; }
+body[data-thought-theme="night"] #game-root .workspace-screen .unused-label { font-size: 14px; color: #b6b8aa; }
+body[data-thought-theme="night"] #game-root .workspace-screen .drop-invitation { flex-basis: 145px; margin: 12px 0; min-height: 44px; padding: 8px 10px; border: 0; border-bottom: 1px solid #b5bea340; border-radius: 0; background: none; font-size: 14px; color: #c3c9b7; }
+body[data-thought-theme="night"] #game-root .workspace-screen .drop-invitation > span { font-size: 14px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .think-button { width: 70px; min-height: 70px; padding: 12px 8px; flex-direction: column; gap: 7px; font-size: 14px; border: 1px solid #bfc4a24d; border-radius: 50%; background: #a6b6970a; color: #e0d4b2; box-shadow: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .think-button:hover:not(:disabled) { background: #bec5a51a; color: #f0e4c4; }
+body[data-thought-theme="night"] #game-root .workspace-screen .think-button i { font-size: 14px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-record-state { font-size: 14px; color: #9dae9e; letter-spacing: 1px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .record-outputs { margin: 42px 94px 0 13%; gap: 35px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-record:nth-of-type(even) .record-outputs { margin-left: 4%; margin-right: 16%; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-outcome { padding: 14px 19px 12px; border: 0; border-radius: 0; background: radial-gradient(ellipse at 50% 15%, #819f8214, transparent 78%); box-shadow: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-convergence { width: 5px; height: 5px; left: calc(50% - 2.5px); top: -3px; background: #bed1b3; box-shadow: 0 0 9px #a8c39a47; }
+body[data-thought-theme="night"] #game-root .workspace-screen .outcome-kicker { font-size: 14px; color: #a4b99f; letter-spacing: 2px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-outcome h2 { font: 400 20px/1.65 var(--serif); color: #d2dfc5; margin: 10px 0; letter-spacing: .5px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .outcome-insight { font: 400 20px/1.7 var(--serif); color: #d0d4c4; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-curve { stroke: #94ae9a; stroke-width: 1; opacity: .66; fill: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-curve.continuation-curve { stroke: #b3bda5; stroke-width: 1; opacity: .38; }
+body[data-thought-theme="night"] #game-root .workspace-screen .curve-origin { fill: #b7c7ae; opacity: .8; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-await { margin: 15px 94px 0 24px; gap: 15px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-await p { font-size: 14px; color: #bdc5b7; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-more { font-size: 14px; color: #dfcdab; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-action { margin: 0 94px 0 13%; padding: 24px 19px; border: 0; border-radius: 0; background: linear-gradient(90deg, #b9bc9610, transparent); box-shadow: none; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-action > small { font-size: 14px; color: #d9c79e; letter-spacing: 3px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-action > p { font-size: 20px; color: #e6dec6; line-height: 1.65; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-action > span { font-size: 20px; color: #bfc7b8; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-action > button { font-size: 14px; min-height: 44px; padding: 9px 0; border: 0; border-bottom: 1px solid #d4c39477; border-radius: 0; background: none; color: #e8d7b1; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-revision { margin-right: 94px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-revision button { font-size: 14px; color: #aab9a6; border-color: #a9b29b40; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-footer { font-size: 14px; color: #aeb8ac; border-color: #bdc4a922; margin-top: 28px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-footer button { font-size: 14px; color: #cfceb8; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-tail-link { font-size: 14px; color: #ded3b7; background: #182524d9; border: 0; border-radius: 0; padding: 10px 15px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-notice { font-size: 14px; color: #e5d5af; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-tab { top: 150px; width: 64px; border: 0; border-right: 1px solid #b6bfaa38; background: #17232152; box-shadow: none; color: #e0d6bb; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-tab > span { font-size: 20px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-tab :is(b, small) { font-size: 14px; color: #bdc6b3; }
+body[data-thought-theme="night"] #game-root .workspace-screen.inventory-open .inventory-tab { left: 293px; width: 50px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-inventory { background: linear-gradient(90deg, #14211df0, #172521dc 75%, #172521b0); border: 0; box-shadow: none; top: 130px; bottom: 55px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-inventory h2 { font-size: 20px; color: #e0d9bf; letter-spacing: 1px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-inventory header :is(small, button) { font-size: 14px; color: #b7c2af; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-caption { font-size: 14px; color: #aebbaa; border-color: #bac6a923; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-entry { border-color: #b5c0a71c; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-row { font-size: 20px; color: #e0ddc9; padding: 18px 2px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-row > small { font-size: 14px; color: #a9b9a2; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-grip { font-size: 14px; color: #92a18c; }
+body[data-thought-theme="night"] #game-root .workspace-screen .is-placed .inventory-row > small { color: #d5c59d; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-detail { color: #d4d7c6; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-detail :is(p, blockquote) { font-size: 20px; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-detail :is(small, .source-boundary, .source-links, .source-links button) { font-size: 14px; color: #b0bda7; }
+body[data-thought-theme="night"] #game-root .workspace-screen .inventory-place { font-size: 14px; color: #dbcba5; border-color: #c2b38c66; }
+body[data-thought-theme="night"] #game-root .workspace-screen .thought-inventory > footer { font-size: 14px; color: #aebca6; border-color: #aebba126; }
+@media (max-width: 1100px) {
+  body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-stage { padding: 0 12px 30px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-heading { margin-left: 20px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .working-clue { flex-basis: 170px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .record-outputs { gap: 18px; margin-left: 5%; }
+}
+@media (max-width: 900px) {
+  body[data-thought-theme="night"] #game-root .workspace-screen .workspace-layout { left: 105px; right: 22px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen.inventory-open .workspace-layout { left: 350px; right: 20px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-heading { margin: 0 0 24px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-heading h1 { font-size: 28px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-input-row { grid-template-columns: minmax(0, 1fr) 65px; gap: 12px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .think-button { width: 62px; min-height: 62px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .working-clue { max-width: none; flex-basis: 170px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .working-clue:nth-child(even) { margin-top: 0; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .record-outputs,
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-record:nth-of-type(even) .record-outputs { margin: 40px 77px 0 0; flex-direction: column; gap: 24px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-outcome { padding: 14px 13px 12px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-action { margin: 0 77px 0 0; padding: 22px 13px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-await { margin: 12px 77px 0 12px; flex-wrap: wrap; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .thought-revision { margin-right: 77px; }
+  body[data-thought-theme="night"] #game-root .workspace-screen .reasoning-footer { gap: 14px; }
+}

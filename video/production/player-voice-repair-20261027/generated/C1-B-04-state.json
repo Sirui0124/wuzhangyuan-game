@@ -1,0 +1,142 @@
+{
+  "id": "C1-B-04",
+  "node": "B-04",
+  "text": "天亮了。你握着长矛的手慢慢松开。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 3.88,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "69e0ef9e-a405-40ac-98e8-739889dd1e0f",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:08:53.086Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“天亮了。你握着长矛的手慢慢松开。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约3.88秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "6bacb2901ff5508c60784b5aec3d5337954b15c2fe240da575d30a5331aa751f",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027190853E1C01C3D87D0C1ECB031",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-04-v1.wav",
+  "sha256": "db8b0c266a113379610a202357ce2d51c9b3fa06a2ae69fb415ed28660fe9245",
+  "duration": 4,
+  "originalDuration": 4,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 1040,
+        "start_time": 120,
+        "text": "天亮了。",
+        "words": [
+          {
+            "end_time": 400,
+            "start_time": 120,
+            "text": "天"
+          },
+          {
+            "end_time": 680,
+            "start_time": 400,
+            "text": "亮"
+          },
+          {
+            "end_time": 1040,
+            "start_time": 680,
+            "text": "了"
+          },
+          {
+            "end_time": 1040,
+            "start_time": 1040,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 3920,
+        "start_time": 1760,
+        "text": "你握着长矛的手慢慢松开。",
+        "words": [
+          {
+            "end_time": 2000,
+            "start_time": 1760,
+            "text": "你"
+          },
+          {
+            "end_time": 2240,
+            "start_time": 2120,
+            "text": "握"
+          },
+          {
+            "end_time": 2440,
+            "start_time": 2280,
+            "text": "着"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2520,
+            "text": "长"
+          },
+          {
+            "end_time": 2800,
+            "start_time": 2760,
+            "text": "矛"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 2880,
+            "text": "的"
+          },
+          {
+            "end_time": 3240,
+            "start_time": 3040,
+            "text": "手"
+          },
+          {
+            "end_time": 3360,
+            "start_time": 3240,
+            "text": "慢"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3400,
+            "text": "慢"
+          },
+          {
+            "end_time": 3680,
+            "start_time": 3480,
+            "text": "松"
+          },
+          {
+            "end_time": 3920,
+            "start_time": 3680,
+            "text": "开"
+          },
+          {
+            "end_time": 3920,
+            "start_time": 3920,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "天亮了。你握着长矛的手慢慢松开。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:09:25.867Z"
+}

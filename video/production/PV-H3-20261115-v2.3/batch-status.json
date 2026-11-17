@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-11-15T16:23:03.212521+08:00",
+  "units": [
+    {
+      "id": "R04",
+      "version": "v2.3",
+      "status": "unknown_outcome",
+      "started_at": "2026-11-15T16:08:00.611041+08:00",
+      "updated_at": "2026-11-15T16:09:17.824417+08:00",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+      "task_id": null,
+      "submission_started": "2026-11-15T16:08:02.771173+08:00",
+      "preflight": "pass",
+      "exit_code": 1,
+      "note": "No task ID returned; no automatic resubmission"
+    },
+    {
+      "id": "M03",
+      "version": "v2.3",
+      "status": "downloaded",
+      "started_at": "2026-11-15T16:09:35.819327+08:00",
+      "updated_at": "2026-11-15T16:13:22.710298+08:00",
+      "submission_started": "2026-11-15T16:09:42.007554+08:00",
+      "preflight": "pass",
+      "task_id": "task_9eGbZ5yJIORkarkqGHjsGQPBnbli8O70",
+      "local_file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.3\\M03\\source.mp4",
+      "selected_file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.3\\M03\\selected.mp4",
+      "technical": "pass",
+      "downloaded_at": "2026-11-15T16:13:22.708728+08:00",
+      "user_review": "待review",
+      "api_status": "succeeded"
+    },
+    {
+      "id": "R04R",
+      "version": "v2.3",
+      "status": "unknown_outcome",
+      "started_at": "2026-11-15T16:15:51.830903+08:00",
+      "updated_at": "2026-11-15T16:16:14.851080+08:00",
+      "submission_started": "2026-11-15T16:15:53.385741+08:00",
+      "preflight": "pass",
+      "exit_code": 1,
+      "note": "No task ID returned; no automatic resubmission"
+    },
+    {
+      "id": "R04RR",
+      "version": "v2.3",
+      "status": "downloaded",
+      "started_at": "2026-11-15T16:19:15.393345+08:00",
+      "updated_at": "2026-11-15T16:23:03.167566+08:00",
+      "submission_started": "2026-11-15T16:19:17.370367+08:00",
+      "preflight": "pass",
+      "task_id": "task_jCkh8qA3BwxzRKBIr7TdZ6n503E1wvga",
+      "local_file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.3\\R04RR\\source.mp4",
+      "selected_file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.3\\R04RR\\selected.mp4",
+      "technical": "pass",
+      "downloaded_at": "2026-11-15T16:23:03.167057+08:00",
+      "user_review": "待review",
+      "api_status": "succeeded"
+    }
+  ],
+  "counts": {
+    "downloaded": 2,
+    "unknown_outcome": 2
+  },
+  "user_review": "待review"
+}

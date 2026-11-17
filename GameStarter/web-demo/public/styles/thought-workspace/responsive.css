@@ -1,0 +1,216 @@
+@keyframes ink-thought{
+from{
+stroke-dashoffset:1;opacity:.3}
+to{
+stroke-dashoffset:0;opacity:.85}
+}
+@keyframes thought-arrives{
+from{
+opacity:0;transform:translateY(6px);filter:blur(1px)}
+to{
+opacity:1;transform:none;filter:none}
+}
+@keyframes inventory-unfold{
+from{
+opacity:0;transform:translateX(-8px)}
+to{
+opacity:1;transform:none}
+}
+
+@media(max-width:1200px){
+.inventory-open .workspace-layout{
+left:335px;right:22px}
+.reasoning-stage{
+padding:4px 10px 25px}
+:root #game-root .workspace-screen .working-clue{
+flex-basis:150px}
+.working-clue-title{
+font-size:21px}
+.expression-layout{
+grid-template-columns:minmax(0,1fr) 120px;gap:15px}
+.expression-layout .weiyan-presence p{
+font-size:16px}
+}
+
+@media(max-width:900px){
+.workspace-layout,.inventory-open .workspace-layout{
+left:100px;right:20px}
+.thought-inventory{
+box-shadow:12px 0 90px #3e3c3c28}
+.inventory-tab{
+left:18px}
+.inventory-open .inventory-tab{
+left:293px}
+.reasoning-heading h1{
+font-size:29px}
+.expression-layout{
+display:block;padding:5px 3px 25px}
+.expression-layout .weiyan-presence{
+display:none}
+.expression-workspace>.workspace-modes,.inventory-open.expression-workspace>.workspace-modes{
+left:100px}
+:root #game-root .workspace-screen .record-outputs{
+gap:12px}
+:root #game-root .workspace-screen .thought-outcome{
+padding:16px}
+:root #game-root .workspace-screen .thought-outcome h2{
+font-size:24px}
+:root #game-root .workspace-screen .outcome-insight{
+font-size:18px}
+.reasoning-footer>span{
+max-width:50%;line-height:1.8}
+}
+
+@media(max-width:600px){
+.workspace-screen .game-hud{
+top:18px;left:18px;right:18px}
+.workspace-screen .game-mark small{
+display:none}
+.workspace-screen .game-mark{
+font-size:15px;letter-spacing:1px;gap:9px}
+.workspace-screen .game-hud nav{
+gap:12px;font-size:10px;letter-spacing:0}
+.workspace-screen .game-hud nav button:first-child{
+display:none}
+.workspace-screen .chapter-seal{
+width:24px;height:31px;line-height:29px;font-size:16px}
+.workspace-layout{
+inset:87px 12px 30px 67px}
+.inventory-open .workspace-layout{
+left:67px}
+.inventory-tab{
+left:10px;top:110px;width:42px;padding:16px 4px;gap:9px}
+.inventory-tab>span{
+font-size:18px}
+.inventory-tab small{
+font-size:9px}
+.thought-inventory{
+left:10px;top:90px;width:260px;bottom:20px}
+.inventory-open .inventory-tab{
+left:270px;width:35px}
+.reasoning-stage{
+padding:8px 0 20px}
+.workspace-modes{
+font-size:14px;gap:16px;margin-bottom:22px}
+.workspace-modes button{
+letter-spacing:1px}
+.reasoning-kicker{
+font-size:9px;letter-spacing:1px}
+.reasoning-heading h1{
+font-size:24px;letter-spacing:0}
+.canvas-invitation{
+font-size:10px;margin:15px 0 23px}
+:root #game-root .workspace-screen .thought-input-row{
+grid-template-columns:minmax(0,1fr) 66px;gap:8px}
+:root #game-root .workspace-screen .thought-dropzone,:root #game-root .workspace-screen .record-evidence{
+gap:8px;padding:10px;border-radius:12px}
+:root #game-root .workspace-screen .working-clue{
+max-width:none;flex-basis:100%;padding:8px 19px 9px 9px}
+.working-clue-title{
+font-size:20px}
+:root #game-root .workspace-screen .working-clue>small{
+font-size:9px}
+:root #game-root .workspace-screen .drop-invitation{
+flex-basis:100%;min-height:34px;font-size:10px;padding:7px}
+:root #game-root .workspace-screen .think-button{
+font-size:17px;gap:6px;padding:10px 7px;min-height:40px}
+:root #game-root .workspace-screen .thought-record-state{
+font-size:9px;letter-spacing:0}
+:root #game-root .workspace-screen .record-outputs{
+margin:34px 74px 0 0;flex-direction:column;gap:18px}
+:root #game-root .workspace-screen .thought-outcome{
+padding:13px 14px;border-radius:12px}
+:root #game-root .workspace-screen .thought-outcome h2{
+font-size:23px;letter-spacing:0}
+:root #game-root .workspace-screen .outcome-insight{
+font-size:17px;line-height:1.7}
+.thought-record{
+margin-bottom:28px}
+:root #game-root .workspace-screen .thought-await{
+margin:10px 74px 0 3px;display:block}
+:root #game-root .workspace-screen .thought-await p{
+font-size:10px}
+:root #game-root .workspace-screen .thought-more{
+font-size:10px;margin-top:5px}
+:root #game-root .workspace-screen .continuation-heading{
+margin:0 74px 10px 3px;display:block}
+:root #game-root .workspace-screen .continuation-heading>span{
+font-size:9px}
+:root #game-root .workspace-screen .continuation-heading>p{
+font-size:10px;margin-top:5px}
+.thought-action{
+margin-right:74px;padding:17px 14px}
+.thought-action>p{
+font-size:23px}
+.thought-action>span{
+font-size:16px}
+.thought-action>button{
+font-size:18px;padding:8px 11px}
+.thought-revision{
+margin-right:74px}
+.thought-revision button{
+font-size:9px}
+.reasoning-footer>span{
+display:none}
+.thought-tail-link{
+right:15px;bottom:12px;padding:7px 10px;font-size:10px}
+.expression-workspace>.workspace-modes,.inventory-open.expression-workspace>.workspace-modes{
+left:67px;right:12px;top:70px}
+.expression-workspace .workspace-layout{
+top:115px}
+:root #game-root .workspace-screen .expression-layout .expression-center h1{
+font-size:29px}
+:root #game-root .workspace-screen .expression-input-block{
+padding:12px;border-radius:12px}
+:root #game-root .workspace-screen .speech-evidence>header small{
+font-size:9px}
+:root #game-root .workspace-screen .speech-add{
+font-size:10px}
+:root #game-root .workspace-screen .speech-evidence-items .working-clue{
+flex-basis:100%}
+:root #game-root .workspace-screen .expression-composer{
+grid-template-columns:minmax(0,1fr) 85px;gap:9px;padding-top:12px;margin-top:12px}
+:root #game-root .workspace-screen .expression-composer label{
+font-size:10px}
+:root #game-root .workspace-screen .expression-composer label small{
+display:none}
+:root #game-root .workspace-screen .expression-layout .expression-paper #expression-focus{
+height:100px;min-height:100px;padding:8px;font-size:18px}
+:root #game-root .workspace-screen .expression-layout #expression-focus::placeholder{
+font-size:17px}
+:root #game-root .workspace-screen .polish-button{
+font-size:16px;padding:10px 5px}
+:root #game-root .workspace-screen .polish-actions{
+padding-bottom:25px}
+:root #game-root .workspace-screen .expression-result{
+margin-top:34px;padding:14px;border-radius:12px}
+:root #game-root .workspace-screen .expression-result>header label{
+font-size:10px;letter-spacing:1px}
+:root #game-root .workspace-screen .expression-result>header small{
+font-size:9px}
+:root #game-root .workspace-screen .expression-layout .expression-paper #player-expression{
+font-size:20px;min-height:220px;height:250px;line-height:1.7}
+:root #game-root .workspace-screen .expression-result>footer{
+flex-wrap:wrap;gap:14px}
+:root #game-root .workspace-screen .confirm-expression{
+font-size:17px;padding:8px 12px;margin-left:auto}
+:root #game-root .workspace-screen .expression-hint{
+font-size:10px;display:block}
+:root #game-root .workspace-screen .focus-suggestion{
+margin-top:5px}
+.workspace-screen .thought-notice{
+font-size:9px;left:70px;right:10px}
+}
+
+html[data-reduced=true] .workspace-screen *,html[data-reduced=true] .workspace-screen *:before,html[data-reduced=true] .workspace-screen *:after{
+animation:none!important;transition:none!important}
+
+@media(prefers-reduced-motion:reduce){
+.workspace-screen *,.workspace-screen *:before,.workspace-screen *:after{
+animation:none!important;transition:none!important}
+}
+
+/* Keep action labels readable when the shared material skin applies hover states. */
+:root #game-root .workspace-screen :is(.think-button,.polish-button,.confirm-expression):hover:not(:disabled){
+color:#7f3025;filter:none;text-shadow:none;background-color:#fff8eb}
+

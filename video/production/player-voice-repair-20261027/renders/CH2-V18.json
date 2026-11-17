@@ -1,0 +1,80 @@
+{
+  "id": "CH2-V18",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V18-warehouse-retained-20261027-fda6b495.mp4",
+  "oldSha256": "8ffd6d2971457329ad4242202dc0e348578182e90fa6b5d88c283a1ff911983d",
+  "oldSubtitles": "/video/subtitles/CH2-V18-warehouse-retained-20261027-fda6b495.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V18-0cb82c10.mp4",
+  "sha256": "3bebddd286ea472ab1bcb56d6352d1336e59d4e8b341c9f409408fefc6e41f4c",
+  "bytes": 5101172,
+  "duration": 8.5,
+  "containerDuration": 8.5,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 204,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V18",
+    "src": "/video/current/PV27-CH2-V18-0cb82c10.mp4",
+    "title": "仓中核对（保留原版片段）",
+    "subtitles": "/video/subtitles/PV27-CH2-V18-0cb82c10.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY04-T01",
+      "node": "CH2-LY04-T01",
+      "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-T01.wav",
+      "oldCorrelation": 0.9994039474320979,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-T01-v1.wav",
+      "newVoiceSha256": "42c7596bce671cf2e59b2ebb93756770321e5de0c20063f2d1d88c5b4d6edab8",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.55,
+        5.53
+      ],
+      "insertAt": 0.55,
+      "voiceSeconds": 4.8,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9705328345298767,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.55,
+      "end": 3.4599999999999995,
+      "text": "苟安说粮早已备好。我得看看"
+    },
+    {
+      "start": 3.4699999999999998,
+      "end": 5.38,
+      "text": "入仓的粮后来发到哪儿了"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

@@ -1,0 +1,126 @@
+{
+  "delivery": {
+    "id": "V16C",
+    "name": "先行归责与纠正",
+    "entry": "UI-N2选C",
+    "next": [
+      "V17"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16C-01",
+      "V16C-02"
+    ],
+    "subclips": [
+      "V16C-01",
+      "V16C-02"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+    "technical": {
+      "duration": 18.17,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "decodedVideoFrames": 436,
+      "videoTrackSeconds": 18.166666666666668,
+      "videoEndSeconds": 18.166667,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "玩家归责句改用先前D01/D02账页核看0–2.1秒，再以准确D01/D02对照承载；避开原NPC代我说话与新认罪书样字。回应首2.1秒仓吏取材料，之后回看同两条已知文书，未新增认罪内容。NPC原片保留10.125秒原生时长，尾部不闪回伪字。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "仅回看此前D01/D02；指责是玩家当轮选择，不能将原片伪认罪字或对照卡当作新认罪书。",
+      "回应后仍按原V17后续；不增一次考试或自动结论。"
+    ]
+  },
+  "usability": {
+    "id": "V16C",
+    "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "玩家归责句改用先前D01/D02账页核看0–2.1秒，再以准确D01/D02对照承载；避开原NPC代我说话与新认罪书样字。回应首2.1秒仓吏取材料，之后回看同两条已知文书，未新增认罪内容。NPC原片保留10.125秒原生时长，尾部不闪回伪字。"
+    ],
+    "issues": [
+      {
+        "type": "wrong-visible-speaker",
+        "state": "repaired",
+        "repair": "玩家句用此前账页核看替换NPC说话"
+      },
+      {
+        "type": "fake-confession",
+        "state": "repaired",
+        "repair": "去假认罪字，只回看D01/D02"
+      }
+    ],
+    "integrationConditions": [
+      "仅回看此前D01/D02；指责是玩家当轮选择，不能将原片伪认罪字或对照卡当作新认罪书。",
+      "回应后仍按原V17后续；不增一次考试或自动结论。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          18.17
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V16C\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V16C",
+        "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+        "event": "ended",
+        "start": 0,
+        "end": 18.166667,
+        "duration": 18.166667,
+        "time": "2026-10-25T06:21:11.064Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 18.17,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb"
+    }
+  }
+}

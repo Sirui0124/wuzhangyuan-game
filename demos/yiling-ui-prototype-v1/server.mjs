@@ -1,0 +1,4 @@
+import http from 'node:http';
+import {readFile} from 'node:fs/promises';
+const files={'/':['public/index.html','text/html; charset=utf-8'],'/style.css':['public/style.css','text/css; charset=utf-8'],'/app.js':['.build/app.js','text/javascript; charset=utf-8'],'/terrain.png':['../yiling-radio-lab-v6/public/terrain-night-v1.png','image/png']};
+http.createServer(async(req,res)=>{const p=new URL(req.url,'http://localhost').pathname;if(p==='/health'){res.writeHead(200,{'Content-Type':'application/json'});return res.end(JSON.stringify({demo:'yiling-ui-prototype-v1'}));}const f=files[p];if(!f){res.writeHead(404);return res.end('Not found');}try{const data=await readFile(new URL(f[0],import.meta.url));res.writeHead(200,{'Content-Type':f[1],'Cache-Control':'no-store'});res.end(data);}catch{res.writeHead(500);res.end('Build the prototype first.');}}).listen(8956,'127.0.0.1',()=>console.log('http://127.0.0.1:8956/'));

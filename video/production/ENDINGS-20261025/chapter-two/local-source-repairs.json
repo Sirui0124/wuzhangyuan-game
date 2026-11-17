@@ -1,0 +1,171 @@
+{
+  "V41L": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\repairs\\V41L-完整画面时间轴-R3.mp4",
+    "sha256": "6d96e8fafb2bd7a601732e8054938a4ffd2c9e45ce2a26876799975a3639ff34",
+    "duration": 39.146,
+    "supersedesSha256": "a1e5b1daf53f84f9a7abbfcb6ae169bad74b709670dc3062721ea472c3d76d12",
+    "originalPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R3.mp4",
+    "baseSource": {
+      "id": "V41L",
+      "name": "晚支撑不足版：认下来的罪",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R3.mp4",
+      "subclips": [
+        "V41L-01",
+        "V41L-02",
+        "V41L-03",
+        "V41L-04"
+      ],
+      "entry": "V39实际收件且Q假",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "本路线实际查办收束才E4",
+      "duration": 39.146,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "a1e5b1daf53f84f9a7abbfcb6ae169bad74b709670dc3062721ea472c3d76d12",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41L-01-face-safe-R2.mp4",
+          "duration": 8.0,
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-01-16x9.mp4",
+          "trim": "full 8-second original audio retained",
+          "reason": "总控定位晚E4合辑24–29秒：V41L-01可识别侧鼻嘴胡子；使用独立脸部安全构图修版",
+          "segments": [
+            {
+              "source": "V41L-01",
+              "trim": [
+                0,
+                2.1
+              ],
+              "crop": [
+                300,
+                0,
+                704,
+                396
+              ]
+            },
+            {
+              "source": "V41E-01",
+              "trim": [
+                8.2,
+                9.25
+              ],
+              "purpose": "中性闭合卷束，不导入早E4事实"
+            },
+            {
+              "source": "V41L-01",
+              "trim": [
+                3.15,
+                8
+              ],
+              "crop": [
+                600,
+                0,
+                704,
+                396
+              ]
+            }
+          ],
+          "visualReview": "裁后曾实际动态播放核验，0–8秒无前景可识别脸，待新版整段连接复核",
+          "audioIssues": [
+            "完整原音轨未裁，未逐字听审"
+          ],
+          "previousAdoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-01-16x9.mp4"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-02-R2-16x9.mp4",
+          "sourceTask": "V41L-02-R2",
+          "duration": 9.42,
+          "trim": "none",
+          "visualReview": "2fps抽帧未见元文字或身份异常，待整段动态播放",
+          "audioIssues": [
+            "NPC原句未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-03-R2-16x9.mp4",
+          "sourceTask": "V41L-03-R2",
+          "duration": 8.0,
+          "trim": "none",
+          "visualReview": "待抽帧与动态审片",
+          "audioIssues": [
+            "NPC原句未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-04-R2-16x9.mp4",
+          "sourceTask": "V41L-04-R2",
+          "duration": 13.67,
+          "trim": "none",
+          "visualReview": "逐秒抽帧未见烧字、关键动作或身份异常，待整V动态复查",
+          "audioIssues": [
+            "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+          ]
+        }
+      ],
+      "audioReview": "未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R3.mp4",
+        "containerDuration": 39.146,
+        "videoFrames": 938,
+        "firstPTS": 0.0,
+        "lastPTS": 39.041666666666664,
+        "videoEnd": 39.08333333333333,
+        "videoTimeBase": "1/24000",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.041666666666671404,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 39.145999999999994,
+        "audioDecodedSamples": 1879008,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V41L"
+      },
+      "videoTrackComplete": true,
+      "assemblyMethod": "per-input setpts/fps/SAR/timebase + asetpts/aresample + concat filter; independent R3",
+      "visualReview": "原画面及侧脸修复保留；R3完整帧与PTS通过，待最终动态播放"
+    },
+    "owner": "G6素材／本任务时间轴修复",
+    "sourceParts": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41L-01-face-safe-R2.mp4",
+        "sha256": "cd182da2ef90b74ba1e7cec17ec265e7910048a3e9d9b44d1ef1eae01a711f78"
+      },
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-02-R2-16x9.mp4",
+        "sha256": "b222ac6b037c3774c49e6e59bc2d153755f2b6bdc6dea6abe2136bc34b69c961"
+      },
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-03-R2-16x9.mp4",
+        "sha256": "b71e38da67630e68147d671e6000bb49310cd86866ea1f2766dac72a42c42f07"
+      },
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-04-R2-16x9.mp4",
+        "sha256": "c3c13feb0453e9bfbab4aaa19b00c19f4ab5d20d557ab3f534776de5cdcbf942"
+      }
+    ],
+    "videoCoverage": {
+      "videoSeconds": 39.083,
+      "decodedFrames": 938,
+      "expectedSeconds": 39.146,
+      "passed": true
+    },
+    "reason": "将四个输入独立归零时间戳、统一24fps后用concat filter重拼完整画面；原39.16秒音轨整轨复制，未裁音、未新增配音或生成请求。",
+    "userApproved": false,
+    "enabled": false,
+    "adoption": "未采用：原G6拥有者修正版已同步通过视频轨完整性核验，汇总优先使用其新SHA"
+  }
+}

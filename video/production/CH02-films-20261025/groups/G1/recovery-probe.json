@@ -1,0 +1,23 @@
+{
+  "id": "V04-01-R2",
+  "repairOf": "V04-01",
+  "authorization": "Coordinator explicitly permits the sole global inline-reference recovery probe",
+  "imageSha256": "d24f553d3bdc91e9e8a74ee2e606e7b67c9e1873223e3275f94370f5467684b9",
+  "imageBytes": 1393660,
+  "imageMime": "image/png",
+  "imageSize": [
+    1280,
+    720
+  ],
+  "payloadBytes": 1859290,
+  "requestSha256": "a76ecc52b93384b8d868f9f994696035bea7358a2c0c13a167ec61db772937eb",
+  "duration": 9,
+  "referenceRole": "first_frame",
+  "transport": "strict-image-data-uri",
+  "status": "failed",
+  "task_id": "task_2qziSfDMWpTabMsL7t5IF8oQiy4n2m4K",
+  "error": {
+    "code": "input_storage_failed",
+    "message": "open inline image: operation error S3: GetObject, https response error StatusCode: 404, RequestID: NmFkZDBmM2VfMTA0ZjdiMGJfMjc4MF80NTg3OGM5, HostID: , NoSuchKey: The specified key does not exist."
+  }
+}

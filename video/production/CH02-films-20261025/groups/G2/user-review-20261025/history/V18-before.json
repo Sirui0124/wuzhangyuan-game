@@ -1,0 +1,134 @@
+{
+  "delivery": {
+    "id": "V18",
+    "name": "入仓、实收、应征连续核对",
+    "entry": "V17结束",
+    "next": [
+      "UI-N3"
+    ],
+    "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+    "children": [
+      "V18-01",
+      "V18-02",
+      "V18-03",
+      "V18-04",
+      "V18-05",
+      "V18-06"
+    ],
+    "subclips": [
+      "V18-01",
+      "V18-02",
+      "V18-03",
+      "V18-04",
+      "V18-05",
+      "V18-06"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+    "technical": {
+      "duration": 53.63,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "decodedVideoFrames": 1287,
+      "videoTrackSeconds": 53.625,
+      "videoEndSeconds": 53.625,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "入仓、地方实收、应征/实收按D04→D05→D06次序。D04/D05先短操作再准确正文；D05当前SHA经G6协审：递接竹卷成立，约1.6秒跳切案头翻查，2秒切正文，可作有剪辑核对插镜。玩家追问改用刚取得D05回看，不提前出D06；D06先连续2.8秒指向账栏，再显示准确正文，留7.2秒阅读。未见新数值、份额或定罪词。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "D04和D05各在本子片2秒正文出现后登记；D06为本子片2.8秒后，不能在追问D05时提前授予。",
+      "D05约1.6秒有剪辑，不宣称连续完整展开。回看D05不新增证据；文书不默认已带离仓案。"
+    ]
+  },
+  "usability": {
+    "id": "V18",
+    "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "入仓、地方实收、应征/实收按D04→D05→D06次序。D04/D05先短操作再准确正文；D05当前SHA经G6协审：递接竹卷成立，约1.6秒跳切案头翻查，2秒切正文，可作有剪辑核对插镜。玩家追问改用刚取得D05回看，不提前出D06；D06先连续2.8秒指向账栏，再显示准确正文，留7.2秒阅读。未见新数值、份额或定罪词。"
+    ],
+    "issues": [
+      {
+        "type": "wrong-visible-speaker",
+        "state": "repaired",
+        "repair": "玩家追问改用已知D05账页，不展示NPC讲话"
+      },
+      {
+        "type": "fake-evidence-text",
+        "state": "repaired",
+        "repair": "D04/D05/D06为准确不透明正文，D06延长到10秒阅读"
+      }
+    ],
+    "integrationConditions": [
+      "D04和D05各在本子片2秒正文出现后登记；D06为本子片2.8秒后，不能在追问D05时提前授予。",
+      "D05约1.6秒有剪辑，不宣称连续完整展开。回看D05不新增证据；文书不默认已带离仓案。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          53.63
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V18\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V18",
+        "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+        "event": "ended",
+        "start": 0,
+        "end": 53.632,
+        "duration": 53.632,
+        "time": "2026-10-25T06:25:54.324Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 53.63,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6"
+    }
+  }
+}

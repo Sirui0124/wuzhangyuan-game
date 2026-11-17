@@ -1,0 +1,61 @@
+{
+  "source_sha256": "3be808e3e8fdb600a5b58b9eeacbcf7bfbce4c4fa991fe8c6183955e5e30b452",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6582
+        },
+        {
+          "label": "White noise",
+          "p": 0.0542
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0532
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0332
+        },
+        {
+          "label": "Static",
+          "p": 0.0287
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0219
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0192
+        },
+        {
+          "label": "Hum",
+          "p": 0.0179
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0147
+        },
+        {
+          "label": "Tick",
+          "p": 0.0109
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0102
+        },
+        {
+          "label": "Animal",
+          "p": 0.0102
+        }
+      ],
+      "music": 0.0061
+    }
+  ]
+}

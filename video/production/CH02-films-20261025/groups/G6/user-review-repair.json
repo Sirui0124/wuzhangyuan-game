@@ -1,0 +1,471 @@
+{
+  "group": "G6",
+  "status": "new-standard-visual-scan-complete-one-local-repair-five-unchanged",
+  "requestSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\返修要求.md",
+  "commentsSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\comments.json",
+  "versionSnapshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\version-snapshot.json",
+  "policyPriority": "user-20261025-1549 overrides prior production usability",
+  "clips": [
+    {
+      "id": "V38",
+      "name": "救下眼前的人",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V38-救下眼前的人-R2.mp4",
+      "oldSha256": "faf1a96218417af8c2b580596ffe30bee4523dadde87ecb6ebe03459d76e0590",
+      "snapshotSha256": "faf1a96218417af8c2b580596ffe30bee4523dadde87ecb6ebe03459d76e0590",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "readable-meta-document-on-prop",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "independent-local-continuous-source-recut",
+      "oldRanges": [
+        [
+          0,
+          34.197
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+      "newSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+          "sha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+          "actualReviewedRanges": [
+            [
+              0,
+              34.197
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-playback-end.png"
+        },
+        {
+          "method": "2fps full-film +8fps replacement-window/seam auxiliary ordered frames, not continuous human frame-by-frame",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-02.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-03.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-04.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-05.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "hits": [
+        {
+          "category": "readable-director-document-on-prop",
+          "oldRange": [
+            9.958333333,
+            10.5
+          ],
+          "description": "第一处收件回应纸面闪现；ENDINGS复核10.208333/10.416667见字，源片同剧情映射",
+          "status": "closed",
+          "newSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+          "repairRange": [
+            9.416666666666666,
+            18.833333333333332
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-evidence.json"
+        },
+        {
+          "category": "readable-director-document-on-prop",
+          "oldRange": [
+            12.75,
+            13.416666667
+          ],
+          "description": "第二处纸面可读制作控制词，含口型/嘴型，不是正常剧情文书",
+          "status": "closed",
+          "newSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+          "repairRange": [
+            9.416666666666666,
+            18.833333333333332
+          ],
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-R3-scan-evidence.json"
+        }
+      ],
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": true,
+      "repairedRanges": [
+        [
+          9.416666666666666,
+          18.833333333333332
+        ]
+      ],
+      "findings": [
+        "原10.2/10.4和12.8–13.2秒两次纸面制作控制文字均被覆盖，完整9.416667–18.833333秒换为同军吏连续闭卷原镜头；未增加字卡、字幕、模糊或阴影层",
+        "材料交接仍在0–9.416667秒，26.166667秒之后苟安在伤帐中先睁眼后低头，保留存活留营；不挪用E3空铺",
+        "819帧和34.197秒容器时长保持，完整原AAC包哈希序列一致；声音只标记，不因画面修复改变原句或新合成"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": [],
+      "technicalEvidence": {
+        "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V38-救下眼前的人-R2.mp4",
+        "oldSha256": "faf1a96218417af8c2b580596ffe30bee4523dadde87ecb6ebe03459d76e0590",
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+        "newSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+        "replacedFrameRange": [
+          226,
+          452
+        ],
+        "replacedTimeRange": [
+          9.416666666666666,
+          18.833333333333332
+        ],
+        "pictureSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-01-16x9.mp4",
+        "sourceSha256": "95d53b31146d51e8e13f674c25c767763677e1910f1ad22501c028b79c00c222",
+        "sourceFrameRange": [
+          17,
+          243
+        ],
+        "newChild": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-02-无字闭卷修版.mp4",
+        "newChildSha256": "e8b09e4607cb931e9e4bad9d9a6d058a60e102d340be62527632bb91bd3badfc",
+        "completeOriginalAudioPacketHashesIdentical": true,
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+          "containerDuration": 34.197,
+          "videoFrames": 819,
+          "firstPTS": 0.0,
+          "lastPTS": 34.083333333333336,
+          "videoEnd": 34.125,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.041666666666671404,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 34.197,
+          "audioDecodedSamples": 1641456,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "newVideoRequests": 0,
+        "newTTSRequests": 0,
+        "reviewState": "awaiting-visual-review-do-not-adopt-yet"
+      }
+    },
+    {
+      "id": "V39",
+      "name": "晚交案的共同收件",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+      "oldSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "snapshotSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "global-scan-no-hit",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "no-hit-retain-user-review-file",
+      "oldRanges": [
+        [
+          0,
+          19.616
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+      "newSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+          "sha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+          "actualReviewedRanges": [
+            [
+              0,
+              19.616
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V39-playback-end.png"
+        },
+        {
+          "method": "2fps ordered full-video auxiliary frames; every frame decoded for cut-candidate detection; not continuous human frame-by-frame review",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V39-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V39-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V39-scan-02.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": false,
+      "repairedRanges": [],
+      "findings": [
+        "0–5.1秒实际交接，2.5秒前景页角斜举掠过有原生运动失焦，无法辨读成句；不是工作文档卡、不是后期方框遮罩，不因此无故改片",
+        "5.1秒后为同场闭卷案头及军吏反应，纸面仅不可辨读纹理，未出现工作正文、字幕列表、制作编号或可见方框暗影",
+        "共同收件与之后Q分流边界保持，不把收件当作结案"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": []
+    },
+    {
+      "id": "V40",
+      "name": "查办、苟安之死与空铺",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "oldSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "snapshotSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "global-scan-no-hit",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "no-hit-retain-user-review-file",
+      "oldRanges": [
+        [
+          0,
+          55.296
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "newSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "actualReviewedRanges": [
+            [
+              0,
+              55.296
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-playback-end.png"
+        },
+        {
+          "method": "2fps ordered full-video auxiliary frames; every frame decoded for cut-candidate detection; not continuous human frame-by-frame review",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-02.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-03.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-04.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V40-scan-05.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": false,
+      "repairedRanges": [],
+      "findings": [
+        "0–19.5秒伤帐问答/听者反应，19.5–41秒军吏处置消息及案头动作均未见字卡/字幕列表/方框糊块",
+        "约41秒之后才空铺，47.25秒后裸木底板空车经过；前段正式消息先于死亡后空铺的顺序保持",
+        "不改V42独立接入边界；未因本轮规则改动原来净片"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": []
+    },
+    {
+      "id": "V41E",
+      "name": "早停查版：认下来的罪",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+      "oldSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "snapshotSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "global-scan-no-hit",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "no-hit-retain-user-review-file",
+      "oldRanges": [
+        [
+          0,
+          26.91
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+      "newSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+          "sha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+          "actualReviewedRanges": [
+            [
+              0,
+              26.91
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41E-playback-end.png"
+        },
+        {
+          "method": "2fps ordered full-video auxiliary frames; every frame decoded for cut-candidate detection; not continuous human frame-by-frame review",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41E-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41E-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41E-scan-02.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41E-scan-03.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": false,
+      "repairedRanges": [],
+      "findings": [
+        "前10.1秒军吏收卷，之后苟安问退军与低头反应；无烧入旁白正文、制作说明、人物名字幕或可见遮罩",
+        "前期裁幅去名仍为整幅构图裁切，画面没有可见方框模糊/暗影补丁；不能混称当前音轨已通过",
+        "保留早停查“不曾问出串通”的剧情映射，不改为已知李严线索的晚分支"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": []
+    },
+    {
+      "id": "V41L",
+      "name": "晚支撑不足版：认下来的罪",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "oldSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "snapshotSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "global-scan-no-hit",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "no-hit-retain-user-review-file",
+      "oldRanges": [
+        [
+          0,
+          35.264
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "newSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+          "sha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+          "actualReviewedRanges": [
+            [
+              0,
+              35.264
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41L-playback-end.png"
+        },
+        {
+          "method": "2fps ordered full-video auxiliary frames; every frame decoded for cut-candidate detection; not continuous human frame-by-frame review",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41L-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41L-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41L-scan-02.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V41L-scan-03.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": false,
+      "repairedRanges": [],
+      "findings": [
+        "0–8秒为军吏近景与中性闭卷桥接，8–25.4秒为军吏说明及前景甲衣手部；无制作卡、字幕列表或方框遮罩",
+        "25.4秒后军吏归拢闭卷，纸面未见可辨读制作控制文字；保留知道线索但细节不足，不伪造定罪/查全材料",
+        "现版本35.264秒播放完整，画面收在闭卷手部，不回用已停用旧R2/R3"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": []
+    },
+    {
+      "id": "V43",
+      "name": "放行与赴魏散谣后果",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+      "oldSha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+      "snapshotSha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+      "snapshotMatches": true,
+      "userComment": "",
+      "observedPictureApproved": false,
+      "problemClassification": "global-scan-no-hit",
+      "reviewState": "reviewed-new-standard",
+      "treatment": "no-hit-retain-user-review-file",
+      "oldRanges": [
+        [
+          0,
+          21.024
+        ]
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+      "newSha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+      "evidence": [
+        {
+          "method": "本轮IAB原生视频1倍静音从头播放至ended；不复用旧QA作新标准结论",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+          "sha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+          "actualReviewedRanges": [
+            [
+              0,
+              21.024
+            ]
+          ],
+          "playbackEnd": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V43-playback-end.png"
+        },
+        {
+          "method": "2fps ordered full-video auxiliary frames; every frame decoded for cut-candidate detection; not continuous human frame-by-frame review",
+          "indexFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V43-scan-evidence.json",
+          "sheets": [
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V43-scan-01.jpg",
+            "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V43-scan-02.jpg"
+          ]
+        }
+      ],
+      "unresolved": [
+        "声音仍未逐字听审；音色、错词、BGM及临时声口问题只保留标记，本轮不新增TTS"
+      ],
+      "audioReview": "只标记，未逐字听审，不新增TTS",
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "mediaChanged": false,
+      "repairedRanges": [],
+      "findings": [
+        "0–9.42秒实际离营，之后匿名士兵不安反应；全片无时间说明卡/散谣摘要卡/字幕列表/可见模糊暗影",
+        "军旗等场景纹样未被解释成可读案情证据或制作信息",
+        "实际放行在先，后果在后；赴魏与“后来”仍依既定画外叙事/游戏层，不新增画面文字"
+      ],
+      "visualUnresolved": [],
+      "userAudioOpinions": [],
+      "userComments": []
+    }
+  ],
+  "oldFilesPreserved": true,
+  "newVideoRequests": 0,
+  "newTTSRequests": 0,
+  "userApproved": false,
+  "completedUTC": "2026-10-25T08:08:20.143076+00:00",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "counts": {
+    "scanned": 6,
+    "repaired": 1,
+    "unchanged": 5,
+    "openVisualIssues": 0,
+    "pending": 0
+  },
+  "audioScope": "G6无逐条声音评论，本轮只标记、不新增TTS、不做新音色或全组重配；未声称无BGM/无错词已听审通过"
+}

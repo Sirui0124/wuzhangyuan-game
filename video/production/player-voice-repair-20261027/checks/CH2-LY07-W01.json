@@ -1,0 +1,107 @@
+{
+  "id": "CH2-LY07-W01",
+  "expected": "先说说你经手后，账上记的那些损耗。",
+  "sha256": "e1f83000fa60547b12b58a0209d9787efda0ad484093260e3c8d75a570b92233",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-W01-v1.wav",
+  "recognized": "先说说你经手后账上记得那些损耗",
+  "similarity": 0.9333333333333333,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.38,
+      "end": 1.52,
+      "text": "先说说你经手后",
+      "noSpeechProbability": 0.015333636663854122,
+      "words": [
+        {
+          "start": 0.38,
+          "end": 0.66,
+          "text": "先"
+        },
+        {
+          "start": 0.66,
+          "end": 0.8,
+          "text": "说"
+        },
+        {
+          "start": 0.8,
+          "end": 0.92,
+          "text": "说"
+        },
+        {
+          "start": 0.92,
+          "end": 1.04,
+          "text": "你"
+        },
+        {
+          "start": 1.04,
+          "end": 1.18,
+          "text": "经"
+        },
+        {
+          "start": 1.18,
+          "end": 1.34,
+          "text": "手"
+        },
+        {
+          "start": 1.34,
+          "end": 1.52,
+          "text": "后"
+        }
+      ]
+    },
+    {
+      "start": 1.86,
+      "end": 3.12,
+      "text": "账上记得那些损耗",
+      "noSpeechProbability": 0.015333636663854122,
+      "words": [
+        {
+          "start": 1.86,
+          "end": 2.14,
+          "text": "账"
+        },
+        {
+          "start": 2.14,
+          "end": 2.28,
+          "text": "上"
+        },
+        {
+          "start": 2.28,
+          "end": 2.42,
+          "text": "记"
+        },
+        {
+          "start": 2.42,
+          "end": 2.54,
+          "text": "得"
+        },
+        {
+          "start": 2.54,
+          "end": 2.62,
+          "text": "那"
+        },
+        {
+          "start": 2.62,
+          "end": 2.76,
+          "text": "些"
+        },
+        {
+          "start": 2.76,
+          "end": 2.9,
+          "text": "损"
+        },
+        {
+          "start": 2.9,
+          "end": 3.12,
+          "text": "耗"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

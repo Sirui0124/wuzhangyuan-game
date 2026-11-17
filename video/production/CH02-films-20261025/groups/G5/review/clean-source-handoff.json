@@ -1,0 +1,104 @@
+{
+  "group": "G5",
+  "clips": [
+    {
+      "id": "V36-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-03-C3-clean-clerk.mp4",
+      "sha256": "7aba51ffb3e6a2c4f1be524f7e8b40c0d21be08bbe6f36c756fe786423bfe0a6",
+      "duration": 10.13,
+      "sourceParts": [
+        {
+          "source": "V36-02",
+          "start": 1,
+          "end": 11.13,
+          "crop": [
+            200,
+            0,
+            896,
+            504
+          ]
+        }
+      ],
+      "audioSource": "V36-03",
+      "audioSourceRange": "original full line",
+      "containsTextOverlay": false,
+      "containsFullFrameCard": false,
+      "reviewState": "reviewed",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "dynamicReview": {
+        "actuallyReviewedRanges": [
+          [
+            0,
+            10.13
+          ]
+        ],
+        "method": "IAB1倍0至片尾ended + 完整4fps全序列逐张检查",
+        "evidence": [
+          "review/current-V36-03-C3-clean-clerk/sequence-index.json"
+        ]
+      },
+      "integrationConditions": [
+        "仅对应E1裁处已正式提交后同场军吏宣读，纸面不作为文字证据",
+        "临时声音口型差异单列音频，未逐字听审"
+      ]
+    },
+    {
+      "id": "V36-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-04-C4-clean-clerk.mp4",
+      "sha256": "8fcb98b309ef9e7e0c502fda31d4ead7d1ca95d5079e48a9ba561cbe4ab65631",
+      "duration": 9.09,
+      "sourceParts": [
+        {
+          "source": "V36-02",
+          "start": 0,
+          "end": 3.5,
+          "crop": [
+            200,
+            0,
+            896,
+            504
+          ]
+        },
+        {
+          "source": "V36-04",
+          "start": 7.5,
+          "end": 12.25,
+          "crop": [
+            200,
+            0,
+            896,
+            504
+          ],
+          "speed": 0.85
+        }
+      ],
+      "audioSource": "V36-04",
+      "audioSourceRange": [
+        4.5,
+        12.25
+      ],
+      "containsTextOverlay": false,
+      "containsFullFrameCard": false,
+      "reviewState": "reviewed",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "dynamicReview": {
+        "actuallyReviewedRanges": [
+          [
+            0,
+            9.09
+          ]
+        ],
+        "method": "IAB1倍0至片尾ended + 完整4fps全序列逐张检查",
+        "evidence": [
+          "review/current-V36-04-C4-clean-clerk/sequence-index.json"
+        ]
+      },
+      "integrationConditions": [
+        "仅对应E1裁处已正式提交后同场军吏宣读，纸面不作为文字证据",
+        "临时声音口型差异单列音频，未逐字听审"
+      ]
+    }
+  ]
+}

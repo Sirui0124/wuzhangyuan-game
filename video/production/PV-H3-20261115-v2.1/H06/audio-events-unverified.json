@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7684
+        },
+        {
+          "label": "Biting",
+          "p": 0.0291
+        },
+        {
+          "label": "Patter",
+          "p": 0.0265
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0213
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0188
+        },
+        {
+          "label": "Fire",
+          "p": 0.0183
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0143
+        },
+        {
+          "label": "Squish",
+          "p": 0.0123
+        },
+        {
+          "label": "Crunch",
+          "p": 0.0117
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0114
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0104
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0099
+        }
+      ],
+      "music": 0.0023
+    }
+  ]
+}

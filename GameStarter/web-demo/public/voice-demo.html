@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>实时配音试听</title>
+<style>body{max-width:720px;margin:40px auto;padding:24px;background:#152b32;color:#f1e6cf;font:18px/1.7 system-ui}label{display:block;margin:16px 0}input,textarea,select{display:block;box-sizing:border-box;width:100%;padding:10px;font:inherit}button,a{margin:10px 12px 10px 0;color:inherit}button{background:#365760;border:1px solid #b5a278;padding:10px;cursor:pointer}a{display:inline-block}small{color:#c5c8c1}</style>
+<h1>实时配音试听</h1><p>“我”说话时，魏延同时思考回应。语音分段到达即播放。</p>
+<p><a href="/voice-clone.html">游戏原声复刻：查看已提取的两人原声 →</a></p>
+<p><a href="/voice-casting.html">比较更贴近角色的音色：每人三个版本 →</a></p>
+<form id="voice-form"><label>火山引擎语音 API Key<input id="key" type="password" autocomplete="off" placeholder="留空保留本机已保存的密钥"></label>
+<label>资源<select id="resource"><option>seed-tts-2.0</option><option>seed-icl-2.0</option></select></label>
+<label>我的音色 ID<input id="player" required spellcheck="false"></label><label>魏延的音色 ID<input id="weiyan" required spellcheck="false"></label>
+<small>音色 ID 从火山引擎音色库复制。密钥只保存到本机服务配置，不写入游戏存档。</small><br><button id="save" disabled>保存配音配置</button></form>
+<label>试听文字<textarea id="text">将军，我现在替您转呈军情。</textarea></label>
+<button id="test-player">试听我的声音</button><button id="test-weiyan">试听魏延的声音</button><button id="stop">停止</button>
+<label><input type="checkbox" id="mute" style="display:inline;width:auto">关闭游戏实时配音（刷新游戏生效）</label>
+<p id="status" role="status">正在读取配置……</p><a href="/?playtest=weiyan-first">进入第一轮对白试玩</a><a href="/">回到游戏</a>
+<p id="voice-diagnostics" role="status"></p>
+<h2>普通播放器对照试听</h2><p>下面是已生成的同一组音色。可直接播放，也可下载后用系统播放器打开。</p>
+<p>我 · 活力小哥 2.0</p><audio controls preload="metadata" src="/audio/voice-samples/player.wav"></audio><a href="/audio/voice-samples/player.wav" download="我的配音.wav">下载我的配音</a>
+<p>魏延 · 霸气青叔 2.0</p><audio controls preload="metadata" src="/audio/voice-samples/weiyan.wav"></audio><a href="/audio/voice-samples/weiyan.wav" download="魏延配音.wav">下载魏延配音</a>
+<script type="module" src="/GameStarter/web-demo/src/voice-demo.js"></script></html>

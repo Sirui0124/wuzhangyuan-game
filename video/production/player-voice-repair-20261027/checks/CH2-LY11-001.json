@@ -1,0 +1,153 @@
+{
+  "id": "CH2-LY11-001",
+  "expected": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+  "sha256": "23029f2e2ce0cc0efd412e43f1a1ec49dce423ed5be772285979902f6d71dab7",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-001-v1.wav",
+  "recognized": "我陪你寫楊禽原來的計劃準備怎樣補救都如實寫上去",
+  "similarity": 0.4782608695652174,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.78,
+      "text": "我陪你寫",
+      "noSpeechProbability": 0.04146726429462433,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.34,
+          "text": "我"
+        },
+        {
+          "start": 0.34,
+          "end": 0.46,
+          "text": "陪"
+        },
+        {
+          "start": 0.46,
+          "end": 0.56,
+          "text": "你"
+        },
+        {
+          "start": 0.56,
+          "end": 0.78,
+          "text": "寫"
+        }
+      ]
+    },
+    {
+      "start": 1.3800000000000006,
+      "end": 3.04,
+      "text": "楊禽原來的計劃",
+      "noSpeechProbability": 0.04146726429462433,
+      "words": [
+        {
+          "start": 1.3800000000000006,
+          "end": 1.74,
+          "text": "楊"
+        },
+        {
+          "start": 1.74,
+          "end": 1.96,
+          "text": "禽"
+        },
+        {
+          "start": 1.96,
+          "end": 2.48,
+          "text": "原"
+        },
+        {
+          "start": 2.48,
+          "end": 2.6,
+          "text": "來"
+        },
+        {
+          "start": 2.6,
+          "end": 2.68,
+          "text": "的"
+        },
+        {
+          "start": 2.68,
+          "end": 2.86,
+          "text": "計"
+        },
+        {
+          "start": 2.86,
+          "end": 3.04,
+          "text": "劃"
+        }
+      ]
+    },
+    {
+      "start": 3.04,
+      "end": 4.26,
+      "text": "準備怎樣補救",
+      "noSpeechProbability": 0.04146726429462433,
+      "words": [
+        {
+          "start": 3.04,
+          "end": 3.66,
+          "text": "準備"
+        },
+        {
+          "start": 3.66,
+          "end": 3.88,
+          "text": "怎樣"
+        },
+        {
+          "start": 3.88,
+          "end": 4.1,
+          "text": "補"
+        },
+        {
+          "start": 4.1,
+          "end": 4.26,
+          "text": "救"
+        }
+      ]
+    },
+    {
+      "start": 4.26,
+      "end": 5.56,
+      "text": "都如實寫上去",
+      "noSpeechProbability": 0.04146726429462433,
+      "words": [
+        {
+          "start": 4.26,
+          "end": 4.84,
+          "text": "都"
+        },
+        {
+          "start": 4.84,
+          "end": 5.0,
+          "text": "如"
+        },
+        {
+          "start": 5.0,
+          "end": 5.14,
+          "text": "實"
+        },
+        {
+          "start": 5.14,
+          "end": 5.3,
+          "text": "寫"
+        },
+        {
+          "start": 5.3,
+          "end": 5.42,
+          "text": "上"
+        },
+        {
+          "start": 5.42,
+          "end": 5.56,
+          "text": "去"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 0.9710144927536232
+}

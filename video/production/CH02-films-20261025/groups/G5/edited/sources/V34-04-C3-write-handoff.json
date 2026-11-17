@@ -1,0 +1,52 @@
+{
+  "id": "V34-04-C3-write-handoff",
+  "parts": [
+    {
+      "source": "V34-04",
+      "range": [
+        4.3,
+        6.85
+      ],
+      "crop": [
+        390,
+        450,
+        340,
+        192
+      ]
+    },
+    {
+      "source": "V34-04",
+      "range": [
+        6.85,
+        8.3
+      ],
+      "crop": [
+        330,
+        0,
+        800,
+        450
+      ]
+    },
+    {
+      "source": "V34-04",
+      "range": [
+        8.3,
+        10.15
+      ]
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-04-C2-received-edge.mp4",
+      "range": [
+        0,
+        2.05
+      ]
+    }
+  ],
+  "audioSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V34-04-16x9.mp4",
+  "duration": 9.4,
+  "newPaidRequest": false,
+  "loop": false,
+  "holdOnlyUnderReadingPanel": true,
+  "sha256": "c5c74d62c142e062a9ccabc60d93f0d275f595986064e6a8d6adbd08ad55ed98",
+  "reviewState": "pending-current-SHA-motion-review"
+}

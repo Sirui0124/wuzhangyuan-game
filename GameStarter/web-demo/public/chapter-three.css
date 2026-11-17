@@ -1,0 +1,127 @@
+/* Uses the shared ink dialogue and phone components; the chapter supplies its locations. */
+.jieting-pair { position:absolute;inset:13vh 9vw 0;display:flex;align-items:flex-end;justify-content:space-between;pointer-events:none; }
+.jieting-pair .character-art { width:40%;height:84vh;object-fit:contain;object-position:bottom;opacity:1;mask-image:linear-gradient(0deg,transparent,#000 21%); }
+.jieting-pair .is-listening { filter:brightness(.77) saturate(.7); }
+.jieting-scene-enter .scene-image { animation:jieting-arrive .65s ease both; }
+@keyframes jieting-arrive { from { opacity:.2; } to { opacity:1; } }
+:root[data-ui-theme=xuan] #game-root .jieting-scene .scene-image { filter:saturate(.8) brightness(.84); }
+:root[data-ui-theme=xuan] #game-root .jieting-scene .portrait-stage .character-art { object-fit:contain;object-position:bottom; }
+.jieting-status { position:absolute;bottom:16px;left:15vw;color:#e3c4ad;font:16px/1.5 var(--serif); }
+.jieting-clue-list { display:grid;gap:12px; }
+.jieting-clue { padding:14px 18px;border:1px solid #6f70503d;background:#d4c6a51a; }
+.jieting-clue header { display:flex;align-items:center;justify-content:space-between;gap:12px; }
+.jieting-clue h2 { font:21px/1.5 var(--serif);margin:0; }
+.jieting-clue p,.jieting-clue blockquote { font:18px/1.75 var(--serif);margin:10px 0;color:inherit; }
+.jieting-clue blockquote { padding-left:12px;border-left:2px solid #9b87633d;opacity:.8; }
+.jieting-clue button { border:1px solid #91826565;background:#9d825529;color:inherit;padding:7px 13px;font:17px/1.4 var(--serif); }
+.jieting-clue details { font:16px/1.6 var(--serif); }
+.jieting-situation dl { display:grid;grid-template-columns:1fr auto;gap:10px 20px;margin:16px 0;font:20px/1.7 var(--serif); }
+.jieting-situation dd { margin:0; }
+.jieting-situation p { font:18px/1.8 var(--serif); }
+.jieting-item-test { font:18px/1.8 var(--serif); }
+.jieting-item-test label { display:block;margin:16px 0 8px; }
+.jieting-item-test textarea { display:block;box-sizing:border-box;width:100%;min-height:120px;margin-bottom:16px;padding:12px;background:#e9e1cf80;color:#384137;border:1px solid #93886e55;font:19px/1.7 var(--serif); }
+.jieting-ending .ending-background { background-size:cover;background-position:center;filter:brightness(.45); }
+.jieting-ending .ending-copy { z-index:2; }
+.jieting-ending .ending-copy h1 { font-size:clamp(38px,5vw,64px); }
+.jieting-success .ending-kicker { color:#d2c498; }
+.jieting-ending .game-hud { z-index:3; }
+.jieting-ending .ending-copy p { max-width:650px;text-wrap:balance; }
+@media(max-width:850px) {
+ .jieting-pair { left:0;right:0; }
+ .jieting-pair .character-art { width:49%; }
+}
+
+@media(prefers-reduced-motion:reduce) { .jieting-scene-enter .scene-image { animation:none; } }
+:root[data-reduced=true] .jieting-scene-enter .scene-image { animation:none; }
+
+/* A single top dock, outside the scrolling dialogue and expression content. */
+:is(.jieting-scene,.jieting-expression).has-deployment,#game-root:has(.jieting-scene.has-deployment) { --deployment-top:78px;--deployment-panel-height:170px;--deployment-content-top:calc(var(--deployment-top) + var(--deployment-panel-height) + 18px); }
+.jieting-deployment { position:absolute;z-index:5;top:var(--deployment-top);left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 80px));height:var(--deployment-panel-height);display:flex;flex-direction:column;box-sizing:border-box;padding:12px 18px;margin:0;color:#e8e0cd;background:linear-gradient(110deg,#202b25f2,#252a23ed);border:1px solid #b9a77d66;border-radius:3px;box-shadow:inset 0 1px #dfd2ac1a,0 8px 24px #0002;font:18px/1.4 var(--serif);font-variant-numeric:tabular-nums; }
+.jieting-deployment::before { content:'';position:absolute;top:-1px;left:35%;right:35%;height:1px;background:linear-gradient(90deg,transparent,#e5d3a8,transparent); }
+.jieting-deployment header { display:grid;grid-template-columns:140px minmax(0,1fr) 140px;align-items:center;gap:12px;color:#c1bba9;margin-bottom:6px; }
+.deployment-objective { text-align:center;color:#e2d1ad; }
+.deployment-rounds { white-space:nowrap;text-align:right; }
+.deployment-rounds strong { color:#e4c899;font-weight:400; }
+.deployment-counts,.deployment-caption { display:flex;justify-content:space-between;align-items:baseline;gap:12px; }
+.deployment-counts { margin-bottom:6px; }
+.deployment-counts strong { font-size:20px;font-weight:400;margin-left:8px;white-space:nowrap; }
+.deployment-counts>span:first-child { color:#c5d5ae; }
+.deployment-counts>span:last-child { color:#dbc5b3;text-align:right; }
+.deployment-scale { position:relative;flex:1;min-height:38px; }
+.deployment-track { position:relative;height:14px;background:#775c4c;border:1px solid #c7b98a66;isolation:isolate; }
+.deployment-below { position:absolute;inset:0 auto 0 0;width:var(--below-share);background:linear-gradient(90deg,#617b5b,#92a77a); }
+.deployment-pending { position:absolute;left:var(--below-share);width:var(--pending-share);height:100%;box-sizing:border-box;border-inline:1px dashed #dfd5b2;background:repeating-linear-gradient(135deg,#c8d4ab50 0 3px,transparent 3px 7px); }
+.deployment-ticks { position:relative;height:24px; }
+.deployment-tick { position:absolute;top:-14px;width:1px;height:14px;background:#ead9ae70; }
+.deployment-tick>span { position:absolute;top:17px;left:0;transform:translateX(-50%);font-size:16px;white-space:nowrap;color:#c4beae; }
+.deployment-tick:first-child>span { transform:none; }
+.deployment-tick:last-child>span { transform:translateX(-100%); }
+.deployment-tick.is-threshold { width:2px;background:#dcc28b; }
+.deployment-tick.is-threshold::before { content:'';position:absolute;left:-2px;top:-4px;width:5px;height:5px;background:#dcc28b;transform:rotate(45deg); }
+.deployment-tick.is-threshold>span { color:#ead2a2; }
+.deployment-tick.is-target { background:#cbd7b2;width:2px; }
+.deployment-tick.is-target>span { color:#d1dfba; }
+.deployment-caption { margin-top:4px; }
+.deployment-feedback { color:#d7dfbf; }
+.deployment-threshold { color:#c4bda9;text-align:right; }
+.jieting-deployment.is-troops-updated .deployment-below { animation:jieting-troops-shift .75s ease-out both; }
+.jieting-deployment.is-troops-updated .deployment-feedback { animation:jieting-troops-notice 1.2s ease-out; }
+@keyframes jieting-troops-shift { from { width:var(--previous-share); } to { width:var(--below-share); } }
+@keyframes jieting-troops-notice { from { color:#ffdf8c; } to { color:#d7dfbf; } }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .workspace-layout { top:var(--deployment-content-top); }
+:root[data-ui-theme=xuan] #game-root .jieting-scene.has-deployment .dialogue-box { bottom:clamp(48px,7dvh,76px);max-height:calc(100dvh - var(--deployment-content-top) - clamp(48px,7dvh,76px));overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;scrollbar-color:#c5b68b66 transparent;box-sizing:border-box; }
+:root[data-ui-theme=xuan] #game-root .jieting-scene.has-deployment .dialogue-box::before { inset:0; }
+:root[data-ui-theme=xuan] #game-root .jieting-scene.has-deployment .scout-choice button { box-sizing:border-box;max-width:100%;min-width:0; }
+:root[data-ui-theme=xuan] #game-root .jieting-scene.has-deployment .portrait-stage[data-composition] { top:var(--deployment-content-top);bottom:0;height:auto; }
+.jieting-scene.has-deployment .jieting-pair { top:var(--deployment-content-top); }
+.jieting-scene.has-deployment .jieting-pair .character-art { height:100%; }
+#game-root:has(.jieting-scene.has-deployment) .character-identity { top:calc(var(--deployment-top) + var(--deployment-panel-height) + 4px);display:flex;align-items:baseline;gap:12px;padding:4px 12px; }
+#game-root:has(.jieting-scene.has-deployment) .character-identity strong { font-size:20px;letter-spacing:.08em; }
+#game-root:has(.jieting-scene.has-deployment) .character-identity span { font-size:16px;letter-spacing:0; }
+@media(max-width:1000px) {
+ :is(.jieting-scene,.jieting-expression).has-deployment,#game-root:has(.jieting-scene.has-deployment) { --deployment-panel-height:226px; }
+ .jieting-deployment { width:calc(100% - 48px); }
+ .jieting-deployment header { grid-template-columns:1fr 1fr;gap:4px 12px; }
+ .deployment-total { grid-column:1;grid-row:1; }
+ .deployment-rounds { grid-column:2;grid-row:1; }
+ .deployment-objective { grid-column:1/-1;grid-row:2; }
+}
+@media(max-width:600px) {
+ :is(.jieting-scene,.jieting-expression).has-deployment,#game-root:has(.jieting-scene.has-deployment) { --deployment-top:96px;--deployment-panel-height:256px; }
+ .jieting-deployment { width:calc(100% - 24px);padding:10px 12px;font-size:16px; }
+ .deployment-counts { gap:4px; }
+ .deployment-counts strong { font-size:18px;margin-left:4px; }
+ .deployment-tick>span { font-size:14px; }
+ .deployment-tick:last-child>span { display:none; }
+ .deployment-caption { align-items:flex-start;flex-direction:column;gap:2px; }
+ .deployment-threshold { text-align:left; }
+}
+@media(prefers-reduced-motion:reduce) { .jieting-deployment.is-troops-updated :is(.deployment-below,.deployment-feedback) { animation:none; } }
+:root[data-reduced=true] .jieting-deployment.is-troops-updated :is(.deployment-below,.deployment-feedback) { animation:none; }
+
+/* Landscape phones keep the troop reference alongside the current action.
+   Both regions scroll independently, including above the software keyboard. */
+:root[data-compact-viewport] #game-root :is(.jieting-scene,.jieting-expression).has-deployment { --deployment-top:58px;--deployment-side-width:280px;--deployment-content-top:58px; }
+:root[data-compact-viewport] #game-root .jieting-deployment { left:var(--game-safe-left);top:58px;bottom:max(10px,env(safe-area-inset-bottom));transform:none;width:var(--deployment-side-width);height:auto;overflow:auto;overscroll-behavior:contain;padding:12px;font-size:18px; }
+:root[data-compact-viewport] #game-root .jieting-deployment header { grid-template-columns:1fr;gap:10px; }
+:root[data-compact-viewport] #game-root .jieting-deployment>* { flex-shrink:0; }
+:root[data-compact-viewport] #game-root .jieting-deployment :is(.deployment-total,.deployment-rounds,.deployment-objective) { grid-column:1;grid-row:auto;text-align:left; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-objective { order:-1; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-counts { flex-direction:column;gap:4px;margin:8px 0 12px; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-counts>span { text-align:left; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-scale { flex:none;min-height:66px; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-tick:nth-child(even)>span { top:37px; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-caption { flex-direction:column;align-items:flex-start;gap:8px; }
+:root[data-compact-viewport] #game-root .jieting-deployment .deployment-threshold { text-align:left; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .workspace-layout { top:58px;left:calc(var(--game-safe-left) + var(--deployment-side-width) + 12px); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .jieting-expression.has-deployment .expression-heading { flex-direction:column;align-items:flex-start; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .jieting-expression.has-deployment .expression-current-reply { max-width:100%;margin:0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .jieting-expression.has-deployment .expression-paper { grid-template-columns:minmax(0,1fr);row-gap:16px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .expression-result { grid-column:1;grid-row:3; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .expression-actions { grid-column:1;grid-row:4; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .expression-inspection-slot { grid-column:1;grid-row:5;flex-direction:column; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace.jieting-expression.has-deployment .expression-inspection-slot>:is(.thought-inventory,.thought-detail-popover) { width:100%;max-width:100%; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .jieting-scene.has-deployment .dialogue-box { left:calc(var(--game-safe-left) + var(--deployment-side-width) + 12px);right:var(--game-safe-right);bottom:max(30px,env(safe-area-inset-bottom));max-height:calc(var(--game-viewport-height) - 98px);width:auto; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root:has(.jieting-scene.has-deployment) .character-identity { display:none; }
+

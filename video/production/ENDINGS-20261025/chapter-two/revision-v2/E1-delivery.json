@@ -1,0 +1,202 @@
+{
+  "id": "E1",
+  "title": "一起回头",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-54秒-V3.mp4",
+  "sha256": "7bf506462c8d90e59eb1c9e3d7382e91b873c111f1c83773a5709446111dfe6e",
+  "duration": 54.042,
+  "decode": "passed",
+  "videoCoverage": {
+    "videoSeconds": 54.041667,
+    "decodedFrames": 1297,
+    "expectedSeconds": 54.041667,
+    "passed": true
+  },
+  "editDecisionList": [
+    {
+      "id": "E1-batch2-trim",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-60秒-V2.mp4",
+      "sourceSha256": "a75c9ac47dca27ae5675103d371c579e753bbca6b72843c32781fbb08f2bc013",
+      "start": 5.75,
+      "end": 59.791666666666664,
+      "frames": 1297,
+      "duration": 54.041667,
+      "timelineStart": 0,
+      "timelineEnd": 54.041667,
+      "reason": "删除开头导演说明及冗余反应；保留快乐结局、合法对白与心声",
+      "essentialActionAudioCleanup": {
+        "originalRange": [
+          42.125,
+          45.791666666666664
+        ],
+        "newRange": [
+          36.375,
+          40.041666666666664
+        ],
+        "reason": "No dialogue allowed in V36-06; retain actual order handoff, remove unwanted voice. No frozen/looped filler."
+      }
+    }
+  ],
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\batch2-audio\\E1-V3-review.jpg",
+  "userApproved": false,
+  "gameIntegrated": false,
+  "executesGameState": false,
+  "artifactType": "edited-review-candidate",
+  "audioReview": "已按原组确认清除导演说明误读；合法对白/心声保留；未逐字听审",
+  "visualReview": "已查看新开头、退军令动作、快乐招呼与末尾的有序抽帧；非连续全片观看",
+  "visualAssessment": "有序抽帧：军吏收件、裁处、递交退军令及苟安笑着招呼/转身/推车均保留；待连续听审",
+  "integrationConditions": [
+    "正式提交已经由游戏确认；片头从军吏核收答复进入",
+    "本片到归途结束，魏地广人众另作独立尾声",
+    "保留用户review状态，声音待统一"
+  ],
+  "previousVersion": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头.mp4",
+    "sha256": "1c618ba9c993603292c716a106bdb820a4847da0ed2a052a947b6c5de270366d",
+    "duration": 108.3
+  },
+  "entryPrerequisite": "UI-E1-FILE已确认；双方停手及全部附件已齐；V36实际核收和裁处完成后进入归途。",
+  "description": "两人担责后，苟安活下来，笑着招呼我搭手推空车；北伐仍须撤回。",
+  "slots": [
+    "V36",
+    "V37"
+  ],
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\batch2-audio\\E1-repair-candidate.json",
+  "pictureUsability": "新版待用户审阅；旧审批不继承",
+  "previousRevision": {
+    "id": "E1",
+    "title": "一起回头-60秒",
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-60秒-V2.mp4",
+    "sha256": "a75c9ac47dca27ae5675103d371c579e753bbca6b72843c32781fbb08f2bc013",
+    "duration": 60.0,
+    "decode": "passed",
+    "videoCoverage": {
+      "videoSeconds": 59.792,
+      "decodedFrames": 1435,
+      "expectedSeconds": 60.0,
+      "passed": true
+    },
+    "editDecisionList": [
+      {
+        "id": "V36-02",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-02-final-30f94a3f01.mp4",
+        "sourceSha256": "a1debd5b217c93d821a3ef43dab7928220631c06dbddc0f4bba60094c1cce326",
+        "start": 0,
+        "frames": 328,
+        "duration": 13.666666666666666,
+        "reason": "删除旧片前7.79秒，从核收答复开始；约等于用户指定第8秒",
+        "audio": null,
+        "timelineStart": 0,
+        "timelineEnd": 13.666666666666666
+      },
+      {
+        "id": "CLERK",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\revision-v2\\generated\\E1-CLERK-NOCARD-V2-clean.mp4",
+        "sourceSha256": "9d946996df573975a7d5ac5f484c3f5cfd5e04145e2993db16ac1fd3b3d3d4a8",
+        "start": 0,
+        "frames": 192,
+        "duration": 8.0,
+        "reason": "新拍军吏胸像替换文字卡及错误文字特写",
+        "audio": null,
+        "timelineStart": 13.666666666666666,
+        "timelineEnd": 21.666666666666664
+      },
+      {
+        "id": "V36-04",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\revision-v2\\generated\\V36-04-upper-clean.mp4",
+        "sourceSha256": "d2a2dd8bdf8f375afa67a8db49beb3f0282bdd4d1a423a34f6b068d6f383af8f",
+        "start": 0,
+        "frames": 218,
+        "duration": 9.083333333333334,
+        "reason": "保留原责任、裁处或退军令关键动作",
+        "audio": null,
+        "timelineStart": 21.666666666666664,
+        "timelineEnd": 30.75
+      },
+      {
+        "id": "V36-05",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-05-final-947b1ec0d9.mp4",
+        "sourceSha256": "54003e620cfe3ae18f74ffb5f0d62e090791205be36e37027a212dee7138ff0e",
+        "start": 0,
+        "frames": 277,
+        "duration": 11.541666666666666,
+        "reason": "保留原责任、裁处或退军令关键动作",
+        "audio": null,
+        "timelineStart": 30.75,
+        "timelineEnd": 42.291666666666664
+      },
+      {
+        "id": "V36-06",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-06-final-53ddf10e06.mp4",
+        "sourceSha256": "923089f9581e7f3e5685ddd35efe66f00486af7a07f6bdbb4820dfb933bd32b4",
+        "start": 0,
+        "frames": 88,
+        "duration": 3.6666666666666665,
+        "reason": "保留原责任、裁处或退军令关键动作",
+        "audio": null,
+        "timelineStart": 42.291666666666664,
+        "timelineEnd": 45.95833333333333
+      },
+      {
+        "id": "GOUAN",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\revision-v2\\generated\\E1-GOUAN-HAPPY-V2-clean.mp4",
+        "sourceSha256": "8629d5e0000e45493ffcb035743395f54e9f1e24bc2555e2a65fd7d9735825f7",
+        "start": 0,
+        "frames": 192,
+        "duration": 8.0,
+        "reason": "新拍明确快乐的招呼和转身",
+        "audio": null,
+        "timelineStart": 45.95833333333333,
+        "timelineEnd": 53.95833333333333
+      },
+      {
+        "id": "V37-03",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V37-03-final-d99d2a6330.mp4",
+        "sourceSha256": "7bac0ee9afaf8e956944a8446f5a11672ba50e98ae3e5dd1deef1ea12eed4b50",
+        "start": 2,
+        "frames": 145,
+        "duration": 6.041666666666667,
+        "reason": "从准备搭手进入，两人共同推空车；缩短重复路面停留",
+        "audio": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12B-019.wav",
+          "sha256": "a2fc3059a965f061672f0827a9cad3898f2a4a6b9658074a40a905a91151e016",
+          "text": "人活着，可这趟北伐，还是得退。",
+          "newTTS": false
+        },
+        "timelineStart": 53.95833333333333,
+        "timelineEnd": 59.99999999999999
+      }
+    ],
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\pace-v2\\E1-V2.jpg",
+    "userApproved": false,
+    "gameIntegrated": false,
+    "executesGameState": false,
+    "artifactType": "edited-review-candidate",
+    "audioReview": "原声及已有心声沿用，未完成逐字听审",
+    "visualReview": "关键动作/切点有序抽帧复核完成；非完整连续人工观看，待用户review",
+    "visualAssessment": "usable-with-integration-condition",
+    "integrationConditions": [
+      "正式提交已经由游戏确认；片头从军吏核收答复进入",
+      "本片到归途结束，魏地广人众另作独立尾声",
+      "保留用户review状态，声音待统一"
+    ],
+    "previousVersion": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头.mp4",
+      "sha256": "1c618ba9c993603292c716a106bdb820a4847da0ed2a052a947b6c5de270366d",
+      "duration": 108.3
+    },
+    "entryPrerequisite": "UI-E1-FILE已确认；双方停手及全部附件已齐；V36实际核收和裁处完成后进入归途。",
+    "description": "两人担责后，苟安活下来，笑着招呼我搭手推空车；北伐仍须撤回。",
+    "slots": [
+      "V36",
+      "V37"
+    ],
+    "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+    "pictureUsability": "usable-with-integration-condition"
+  },
+  "postProcessing": {
+    "type": "confirmed-director-speech-cleanup",
+    "record": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\batch2-audio\\E1-repair-candidate.json",
+    "newGeneration": false,
+    "newTTS": false
+  }
+}

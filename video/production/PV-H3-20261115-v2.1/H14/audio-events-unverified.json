@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Vehicle",
+          "p": 0.2402
+        },
+        {
+          "label": "Fire",
+          "p": 0.1978
+        },
+        {
+          "label": "Car",
+          "p": 0.1318
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.1249
+        },
+        {
+          "label": "Rain",
+          "p": 0.092
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0595
+        },
+        {
+          "label": "Wind",
+          "p": 0.0383
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.034
+        },
+        {
+          "label": "Engine",
+          "p": 0.0331
+        },
+        {
+          "label": "White noise",
+          "p": 0.0261
+        },
+        {
+          "label": "Idling",
+          "p": 0.0241
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.019
+        }
+      ],
+      "music": 0.0021
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V32A",
+  "src": "/video/current/CH2-V32A-bb21c6e9f5-20261025.mp4",
+  "title": "同意尝试、苟安实际停手署名",
+  "subtitles": "/video/subtitles/CH2-V32A-bb21c6e9f5-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V32A-bb21c6e9f5-20261025.mp4",
+  "sha256": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+  "duration": 30.72,
+  "cues": [
+    {
+      "start": 0.02,
+      "end": 4.22,
+      "text": "我陪你写。粮情、原来的计划、准备怎样补救"
+    },
+    {
+      "start": 4.22,
+      "end": 5.54,
+      "text": "都如实写上去"
+    },
+    {
+      "start": 6.3,
+      "end": 7.26,
+      "text": "那就把纸铺开"
+    },
+    {
+      "start": 7.82,
+      "end": 12.06,
+      "text": "你救不了这次北伐，也不一定保得住我"
+    },
+    {
+      "start": 12.88,
+      "end": 16.42,
+      "text": "我知道。你愿意和我一起把真话送上去吗？"
+    },
+    {
+      "start": 17.14,
+      "end": 20.54,
+      "text": "愿意，我留下待核，不去魏国，也不散谣"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY11-001",
+      "node": "CH2-LY11-001",
+      "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-001.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "2a8e726d6baa3b875e4bfcfc025a3d576e0f01f30db66b533043b1fd92d9b78c",
+      "duration": 5.563,
+      "speechRange": [
+        0.2,
+        5.26
+      ],
+      "correlation": 0.9997515407922184,
+      "insertAt": 0.15,
+      "speechStart": 0.35,
+      "speechEnd": 5.41
+    },
+    {
+      "id": "CH2-LY11-018",
+      "node": "CH2-LY11-018",
+      "text": "我知道。你愿意和我一起把真话送上去吗？",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-018.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "e0784010b7726e9758f75038558027e829dd4cf842f6b3f156dc46256ba3b200",
+      "duration": 4.2,
+      "speechRange": [
+        0.42,
+        3.92
+      ],
+      "correlation": 0.9998952507361845,
+      "insertAt": 12.45,
+      "speechStart": 12.87,
+      "speechEnd": 16.37
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

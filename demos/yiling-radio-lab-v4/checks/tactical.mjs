@@ -1,0 +1,4 @@
+import {fresh,confirm,tick,savedCount} from '../.build/engine.js';import fs from 'node:fs/promises';
+const c=(unit,action,target,via='normal')=>({units:[unit],action,target,via});
+function run(kind){const s=fresh();confirm(s,[c('a','rescue','rear'),c('b','rescue','campfire','side'),c('c','rescue','east'),...(kind==='flank'?[c('d','move','ridge')]:[])]);let attacked=false;while(!s.ended&&s.time<610){tick(s);if(s.units.a.status==='fighting'&&!attacked&&kind!=='wait'){confirm(s,[c('a','attack','rear'),...(kind==='flank'?[c('d','attack','rear','ridge')]:[])]);attacked=true;}}return {kind,time:s.time,leaders:savedCount(s),loss:s.losses};}
+const rows=['wait','attack','flank'].map(run);await fs.writeFile(new URL('tactical-comparison.json',import.meta.url),JSON.stringify(rows,null,2));console.log(rows);

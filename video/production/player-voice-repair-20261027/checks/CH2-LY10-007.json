@@ -1,0 +1,120 @@
+{
+  "id": "CH2-LY10-007",
+  "expected": "李严做过什么，苟安做过什么，都得如实交代。",
+  "sha256": "54c22c72a69f5037e9de9aad378da7af5053da0b0385fc9ee27cf8f60e0f572a",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-007-v1.wav",
+  "recognized": "李延做过什么苟安做过什么都得如实交代",
+  "similarity": 0.9444444444444444,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.22,
+      "text": "李延做过什么",
+      "noSpeechProbability": 0.002228697296231985,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": "李"
+        },
+        {
+          "start": 0.54,
+          "end": 0.72,
+          "text": "延"
+        },
+        {
+          "start": 0.72,
+          "end": 0.88,
+          "text": "做"
+        },
+        {
+          "start": 0.88,
+          "end": 1.02,
+          "text": "过"
+        },
+        {
+          "start": 1.02,
+          "end": 1.22,
+          "text": "什么"
+        }
+      ]
+    },
+    {
+      "start": 1.9799999999999998,
+      "end": 3.0,
+      "text": "苟安做过什么",
+      "noSpeechProbability": 0.002228697296231985,
+      "words": [
+        {
+          "start": 1.9799999999999998,
+          "end": 2.32,
+          "text": "苟"
+        },
+        {
+          "start": 2.32,
+          "end": 2.48,
+          "text": "安"
+        },
+        {
+          "start": 2.48,
+          "end": 2.66,
+          "text": "做"
+        },
+        {
+          "start": 2.66,
+          "end": 2.78,
+          "text": "过"
+        },
+        {
+          "start": 2.78,
+          "end": 3.0,
+          "text": "什么"
+        }
+      ]
+    },
+    {
+      "start": 3.62,
+      "end": 4.78,
+      "text": "都得如实交代",
+      "noSpeechProbability": 0.002228697296231985,
+      "words": [
+        {
+          "start": 3.62,
+          "end": 3.96,
+          "text": "都"
+        },
+        {
+          "start": 3.96,
+          "end": 4.1,
+          "text": "得"
+        },
+        {
+          "start": 4.1,
+          "end": 4.26,
+          "text": "如"
+        },
+        {
+          "start": 4.26,
+          "end": 4.42,
+          "text": "实"
+        },
+        {
+          "start": 4.42,
+          "end": 4.58,
+          "text": "交"
+        },
+        {
+          "start": 4.58,
+          "end": 4.78,
+          "text": "代"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

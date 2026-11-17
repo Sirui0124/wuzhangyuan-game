@@ -1,0 +1,233 @@
+{
+  "id": "V08A",
+  "name": "点出委屈分支",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-纯台词与必要动作精剪-R2.mp4",
+  "duration": 18.08,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-N1选A",
+  "next": [
+    "V09"
+  ],
+  "endEvent": "所选对白与本段演出实际完成；不重复加分",
+  "subclips": [
+    {
+      "id": "V08A-batch2-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V08A-01.mp4",
+      "slotStart": 0,
+      "slotEnd": 15.291666666666666,
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+      "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+      "sourceTrim": [
+        0,
+        15.3
+      ],
+      "rate": 1,
+      "crop": null,
+      "audioMode": "source-original-or-silent-action",
+      "review": {
+        "actualDynamicReview": true,
+        "visualReview": "新标准关键帧与浏览器ended核对",
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html",
+        "audioIssues": [
+          "实际听审未完成"
+        ],
+        "userApproved": false
+      }
+    },
+    {
+      "id": "V08A-batch2-02",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-parts\\V08A-02.mp4",
+      "slotStart": 15.291666666666666,
+      "slotEnd": 18.083333333333332,
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+      "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+      "sourceTrim": [
+        17,
+        19.8
+      ],
+      "rate": 1,
+      "crop": null,
+      "audioMode": "exact-line-replacement",
+      "review": {
+        "actualDynamicReview": true,
+        "visualReview": "新标准关键帧与浏览器ended核对",
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-batch2-audio-candidates.html",
+        "audioIssues": [
+          "实际听审未完成"
+        ],
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-018",
+      "speaker": "我",
+      "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018.wav",
+      "centralSha256": "e48a0a25685af31df1465335d0eb179b92aa7575fb5ecb237f203ea8da45428b",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 9.39,
+      "slotStart": 0.3,
+      "slotEnd": 9.690000000000001,
+      "subclip": "V08A-batch2-01"
+    },
+    {
+      "node": "CH2-LY02-018A",
+      "speaker": "我",
+      "text": "所以你上次在瞒我。你一定不想就这么算了",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018A.wav",
+      "centralSha256": "d6437df56eb46c3619ca07f5502a6a7af19721d429bb7398550624f887c729d0",
+      "slotStart": 10.3,
+      "slotEnd": 14.68,
+      "subclip": "V08A-batch2-01",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 4.38
+    }
+  ],
+  "sha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成实际听审；ASR只定位，音色/自然度/逐字/无BGM/口型待用户复审",
+  "visualReview": "本轮本地浏览器实际播放到ended，并核关键动作/关键帧；无字卡或可见方框模糊层。",
+  "audioIssues": [
+    "仅合法白名单原句发声；角色/动作/导演说明不朗读。",
+    "必要新句采用Seed-Audio1.0真实上传同角色参考；旧7条预置TTS2未采用。",
+    "工具不支持听音，ASR与接口subtitle不代表听审通过；音色、自然度、无BGM与精确口型待用户复审。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+  "previousSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+  "pictureRevision": 2,
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "全片新标准：去可见局部模糊层/卡片",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08A-点出委屈分支_画面修正V2.mp4",
+    "oldSha256": "24bd453e665fc6072f2f0d5669726dd3a3880f122a9b14f11b913451c137a13e",
+    "oldInterval": [
+      0,
+      15.1
+    ],
+    "repairs": [
+      {
+        "id": "V08A",
+        "requirement": "20261025-no-meta-no-cards-no-boxes",
+        "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08A-点出委屈分支_画面修正V2.mp4",
+        "oldSha256": "24bd453e665fc6072f2f0d5669726dd3a3880f122a9b14f11b913451c137a13e",
+        "oldInterval": [
+          0,
+          15.1
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+        "newSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+        "newDuration": 27.51,
+        "status": "repaired-awaiting-user-review",
+        "treatment": "以同人同帐两段不同连续倾听机位替代被遮字的纸面镜头；不使用静帧/循环/局部模糊，不露原伪字。完整既有原句保留，后段不动。",
+        "details": {
+          "firstOriginalDuration": 15.1,
+          "replacementDuration": 10,
+          "sources": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V03A-01-normalized.mp4",
+              "sha256": "2d21c7f4c9b1d3ce950c6dfd51f9f7dacdeaef076546068e08f7b5a6b25bebd2",
+              "range": [
+                0,
+                5.75
+              ],
+              "rate": 0.9
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V09-01-normalized.mp4",
+              "sha256": "963875b66557d6f07df104906090d0d0ac090123b6dbf80297c506dc8c4b582d",
+              "range": [
+                0,
+                3.25
+              ],
+              "rate": 0.9
+            }
+          ],
+          "audio": {
+            "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018.wav",
+            "sha256": "e48a0a25685af31df1465335d0eb179b92aa7575fb5ecb237f203ea8da45428b",
+            "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？"
+          },
+          "factPreservation": "日期已由既定UI与同一对白提供；抄件仍在前镜已放好的案上，不在影片烧入文字证据。"
+        },
+        "userApproved": false,
+        "checks": {
+          "actualPlayback": {
+            "range": [
+              0,
+              27.51
+            ],
+            "ended": true,
+            "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-more.html"
+          },
+          "technical": {
+            "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+            "sha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+            "decode": true,
+            "blackEvents": []
+          }
+        }
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\batch2-old-assembly\\V08A-3e5496bd5646.json",
+  "sourceTimeline": [
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+      "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+      "sourceRange": [
+        0,
+        15.3
+      ],
+      "slotRange": [
+        0,
+        15.291666666666666
+      ],
+      "node": null,
+      "audio": "same source interval",
+      "audioSha256": null,
+      "audioStart": 0,
+      "audioDelay": 0,
+      "reason": "两条玩家原句完整，随后短停顿为沉默，不删逻辑"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08A-撤遮字层改真实倾听镜头-R1.mp4",
+      "sourceSha256": "3e5496bd5646f5a9e9fb41d3954a85e60a838edb36ecf21fb15e261e57e250ee",
+      "sourceRange": [
+        17,
+        19.8
+      ],
+      "slotRange": [
+        15.291666666666666,
+        18.083333333333332
+      ],
+      "node": "CH2-LY02-022",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-022-seed-audio1-reference.wav",
+      "audioSha256": "e2fd9402e0c575320a9556817c22a9159fa91b311ea4ed8407d19b2bdc8bbafc",
+      "audioStart": 0,
+      "audioDelay": 0,
+      "reason": "完整白名单承认委屈；短候选替代原12秒无法核出完整原句段，旧通过版本保留"
+    }
+  ],
+  "referenceVoiceCues": [
+    {
+      "node": "CH2-LY02-022",
+      "text": "你说得对，我是委屈。",
+      "speaker": "苟安",
+      "slotStart": 15.291666666666666,
+      "slotEnd": 17.791666666666664,
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 2.5,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-022-seed-audio1-reference.wav",
+      "sha256": "e2fd9402e0c575320a9556817c22a9159fa91b311ea4ed8407d19b2bdc8bbafc",
+      "subclip": "V08A-batch2-02"
+    }
+  ]
+}

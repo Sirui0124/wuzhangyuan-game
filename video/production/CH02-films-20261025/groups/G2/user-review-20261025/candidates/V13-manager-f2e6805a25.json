@@ -1,0 +1,92 @@
+{
+  "id": "V13-manager",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-manager-f2e6805a25.mp4",
+  "sha256": "e2bacb2270641bf4989f0aefdb452d748bd72c9d24f41beeb53a7349d6b6aa67",
+  "videoFrames": 95,
+  "videoSeconds": 3.9583333333333335,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V13-manager",
+    "parts": [
+      {
+        "range": [
+          0,
+          0.85
+        ],
+        "source": "V13-03",
+        "crop": [
+          0,
+          0,
+          650,
+          366
+        ]
+      },
+      {
+        "range": [
+          0,
+          1.2
+        ],
+        "source": "V13-04"
+      },
+      {
+        "range": [
+          3.3,
+          5.3
+        ],
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+      }
+    ],
+    "audio": {
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-03-seed-audio1-reference.wav",
+      "start": 0,
+      "end": 4
+    },
+    "sourceNodes": [
+      "CH2-LY04-002"
+    ]
+  },
+  "sourceParts": [
+    {
+      "range": [
+        0,
+        0.85
+      ],
+      "source": "V13-03",
+      "crop": [
+        0,
+        0,
+        650,
+        366
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-03-raw.mp4",
+      "sourceSha256": "8d81c546cbeffb98198eb97284e96db0f3f68762b09d8144db8d84fa2cd7a758"
+    },
+    {
+      "range": [
+        0,
+        1.2
+      ],
+      "source": "V13-04",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-04-raw.mp4",
+      "sourceSha256": "bff5a7bbfdbfed07b3bca9384bd31b6a16760e26855dfa25f609e2a5a40a0df7"
+    },
+    {
+      "range": [
+        3.3,
+        5.3
+      ],
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4",
+      "sourceSha256": "d5c75dd2b6fe7c4ac428dabfdad763b5e199a1c6d7b407233c47b80a5f006f6b"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

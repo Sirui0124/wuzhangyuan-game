@@ -1,0 +1,652 @@
+{
+  "clues": [
+    {
+      "id": "JT-C01",
+      "title": "守街亭的军令",
+      "unlock": [
+        "JT-008",
+        "JT-WANG-CAMP-ORDER"
+      ]
+    },
+    {
+      "id": "JT-C02",
+      "title": "马谡等的是攻山后的战机",
+      "unlock": [
+        "JT-009"
+      ]
+    },
+    {
+      "id": "JT-C03",
+      "title": "山营用水要从山下运",
+      "unlock": [
+        "JT-063"
+      ]
+    },
+    {
+      "id": "JT-C04",
+      "title": "山下有两处要守",
+      "unlock": [
+        "JT-035"
+      ]
+    },
+    {
+      "id": "JT-C05",
+      "title": "侧路外出现魏军游骑",
+      "unlock": [
+        "JT-024",
+        "JT-069",
+        "JT-092",
+        "JT-100"
+      ]
+    },
+    {
+      "id": "JT-C06",
+      "title": "下山部队仍听马谡号令",
+      "unlock": [
+        "JT-048"
+      ]
+    },
+    {
+      "id": "JT-C07",
+      "title": "敌探能看见营旗和人影",
+      "unlock": [
+        "JT-076"
+      ]
+    },
+    {
+      "id": "JT-C08",
+      "title": "下山后还要列阵",
+      "unlock": [
+        "JT-127"
+      ]
+    },
+    {
+      "id": "JT-C09",
+      "title": "取水路受阻，水源仍在",
+      "unlock": [
+        "JT-156"
+      ]
+    },
+    {
+      "id": "JT-C10",
+      "title": "山下当前的兵力与分工",
+      "unlock": [
+        "JT-R2-USE-REPORT",
+        "JT-215"
+      ]
+    },
+    {
+      "id": "JT-C11",
+      "title": "两次军报都未见攻山",
+      "unlock": [
+        "JT-191"
+      ]
+    },
+    {
+      "id": "JT-C12",
+      "title": "山道尚通，坡脚可接应",
+      "unlock": [
+        "JT-192"
+      ]
+    }
+  ],
+  "openNodes": [
+    {
+      "node": "JT-OPEN-R1",
+      "phase": "reinforcement",
+      "round": 1,
+      "next": "JT-R1-RESULT"
+    },
+    {
+      "node": "JT-OPEN-R2",
+      "phase": "reinforcement",
+      "round": 2,
+      "next": "JT-R2-RESULT"
+    },
+    {
+      "node": "JT-OPEN-R3",
+      "phase": "reinforcement",
+      "round": 3,
+      "next": "JT-R3-RESULT"
+    },
+    {
+      "node": "JT-OPEN-WITHDRAW",
+      "phase": "withdrawal",
+      "round": null,
+      "next": "JT-WITHDRAW-VERIFY"
+    },
+    {
+      "node": "JT-OPEN-LURE",
+      "phase": "lure",
+      "round": null,
+      "next": "JT-LURE-PLAN-GATE"
+    },
+    {
+      "node": "JT-OPEN-R4",
+      "phase": "reinforcement",
+      "round": 4,
+      "next": "JT-R4-ORDER"
+    },
+    {
+      "node": "JT-OPEN-R5",
+      "phase": "reinforcement",
+      "round": 5,
+      "next": "JT-R5-ORDER"
+    }
+  ],
+  "scoreEvents": [
+    {
+      "node": "JT-017",
+      "event": {
+        "type": "score",
+        "id": "q1",
+        "delta": {
+          "w": 2
+        }
+      }
+    },
+    {
+      "node": "JT-019",
+      "event": {
+        "type": "score",
+        "id": "q1",
+        "delta": {
+          "m": 2
+        }
+      }
+    },
+    {
+      "node": "JT-026",
+      "event": {
+        "type": "score",
+        "id": "q1",
+        "delta": {
+          "r": 2
+        }
+      }
+    },
+    {
+      "node": "JT-092",
+      "event": {
+        "type": "score",
+        "id": "q3",
+        "delta": {
+          "w": 1,
+          "m": 1
+        }
+      }
+    },
+    {
+      "node": "JT-100",
+      "event": {
+        "type": "score",
+        "id": "q3",
+        "delta": {
+          "r": 2
+        }
+      }
+    },
+    {
+      "node": "JT-108",
+      "event": {
+        "type": "score",
+        "id": "q4",
+        "delta": {
+          "w": 2
+        }
+      }
+    },
+    {
+      "node": "JT-110",
+      "event": {
+        "type": "score",
+        "id": "q4",
+        "delta": {
+          "m": 2
+        }
+      }
+    },
+    {
+      "node": "JT-114",
+      "event": {
+        "type": "score",
+        "id": "q4",
+        "delta": {
+          "r": 2
+        }
+      }
+    },
+    {
+      "node": "JT-127",
+      "event": {
+        "type": "score",
+        "id": "round1-r",
+        "delta": {
+          "r": 1
+        }
+      }
+    },
+    {
+      "node": "JT-156",
+      "event": {
+        "type": "score",
+        "id": "round2-r",
+        "delta": {
+          "r": 1
+        }
+      }
+    },
+    {
+      "node": "JT-R2-USE-REPORT",
+      "event": {
+        "type": "score",
+        "id": "round2-r",
+        "delta": {
+          "r": 1
+        }
+      }
+    },
+    {
+      "node": "JT-191",
+      "event": {
+        "type": "score",
+        "id": "round3-r",
+        "delta": {
+          "r": 1
+        }
+      }
+    }
+  ],
+  "roundSettlement": [
+    {
+      "node": "JT-139",
+      "event": {
+        "type": "round-order",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-141",
+      "event": {
+        "type": "round-order",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-143",
+      "event": {
+        "type": "round-order",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-147",
+      "event": {
+        "type": "round-order",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-151",
+      "event": {
+        "type": "round-arrival",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-151",
+      "event": {
+        "type": "round-report",
+        "round": 1
+      }
+    },
+    {
+      "node": "JT-174",
+      "event": {
+        "type": "round-order",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-176",
+      "event": {
+        "type": "round-order",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-178",
+      "event": {
+        "type": "round-order",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-182",
+      "event": {
+        "type": "round-order",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-184",
+      "event": {
+        "type": "round-report",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-R2-ARRIVAL",
+      "event": {
+        "type": "round-arrival",
+        "round": 2
+      }
+    },
+    {
+      "node": "JT-205",
+      "event": {
+        "type": "round-order",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-207",
+      "event": {
+        "type": "round-order",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-209",
+      "event": {
+        "type": "round-order",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-213",
+      "event": {
+        "type": "round-order",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-215",
+      "event": {
+        "type": "round-arrival",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-215",
+      "event": {
+        "type": "round-report",
+        "round": 3
+      }
+    },
+    {
+      "node": "JT-R4-ORDER",
+      "event": {
+        "type": "round-order",
+        "round": 4
+      }
+    },
+    {
+      "node": "JT-R4-REPORT",
+      "event": {
+        "type": "round-report",
+        "round": 4
+      }
+    },
+    {
+      "node": "JT-R4-REPORT",
+      "event": {
+        "type": "round-arrival",
+        "round": 4
+      }
+    },
+    {
+      "node": "JT-R5-ORDER",
+      "event": {
+        "type": "round-order",
+        "round": 5
+      }
+    },
+    {
+      "node": "JT-R5-REPORT",
+      "event": {
+        "type": "round-report",
+        "round": 5
+      }
+    },
+    {
+      "node": "JT-R5-REPORT",
+      "event": {
+        "type": "round-arrival",
+        "round": 5
+      }
+    }
+  ],
+  "optionScoreEvents": [
+    {
+      "node": "JT-Q2",
+      "option": "JT-O029",
+      "event": {
+        "type": "score",
+        "id": "q2",
+        "delta": {
+          "w": 1
+        }
+      }
+    },
+    {
+      "node": "JT-Q2",
+      "option": "JT-O030",
+      "event": {
+        "type": "score",
+        "id": "q2",
+        "delta": {
+          "m": 1
+        }
+      }
+    },
+    {
+      "node": "JT-Q2",
+      "option": "JT-O031",
+      "event": {
+        "type": "score",
+        "id": "q2",
+        "delta": {
+          "r": 1
+        }
+      }
+    }
+  ],
+  "firstActQuestions": [
+    {
+      "node": "JT-Q1",
+      "options": [
+        {
+          "option": "JT-O016",
+          "scoreNode": "JT-017",
+          "w": 2
+        },
+        {
+          "option": "JT-O018",
+          "scoreNode": "JT-019",
+          "m": 2
+        },
+        {
+          "option": "JT-O020",
+          "scoreNode": "JT-026",
+          "r": 2
+        }
+      ]
+    },
+    {
+      "node": "JT-Q2",
+      "mandatoryVisits": [
+        "wang",
+        "ma",
+        "camp"
+      ],
+      "firstVisitOnly": true,
+      "options": [
+        {
+          "option": "JT-O029",
+          "w": 1
+        },
+        {
+          "option": "JT-O030",
+          "m": 1
+        },
+        {
+          "option": "JT-O031",
+          "r": 1
+        }
+      ]
+    },
+    {
+      "node": "JT-Q3",
+      "options": [
+        {
+          "option": "JT-O085",
+          "scoreNode": "JT-092",
+          "w": 1,
+          "m": 1
+        },
+        {
+          "option": "JT-O093",
+          "scoreNode": "JT-100",
+          "r": 2
+        }
+      ]
+    },
+    {
+      "node": "JT-Q4",
+      "options": [
+        {
+          "option": "JT-O107",
+          "scoreNode": "JT-108",
+          "w": 2
+        },
+        {
+          "option": "JT-O109",
+          "scoreNode": "JT-110",
+          "m": 2
+        },
+        {
+          "option": "JT-O111",
+          "scoreNode": "JT-114",
+          "r": 2
+        }
+      ]
+    }
+  ],
+  "openSettlement": {
+    "trigger": "Only a confirmed and validated judgment. Display its NPC response first. Read the authored order and actual arrival before changing below.",
+    "reinforcement": {
+      "great": [
+        "factsReliable",
+        "gapEstablished",
+        "reinforcementUse",
+        "concernAnswered"
+      ],
+      "small": [
+        "factsReliable",
+        "gapEstablished",
+        "reinforcementUse"
+      ],
+      "troops": {
+        "great": 5000,
+        "small": 3000,
+        "none": 0,
+        "scope": "Explicit offline choices and legacy saved judgments only."
+      },
+      "awards": {
+        "m": "Only first three adopted nonzero orders grant one point each.",
+        "w": "Only first three faithful returns grant one point each.",
+        "r": "Only the original authored verification scenes grant points. Extra attempts grant no score bundle."
+      },
+      "limit": 5,
+      "targetBelow": 20000,
+      "earlyFinish": "Only after actual arrival reaches target.",
+      "topicCap": 5000,
+      "repeatedArguments": "No duplicate credit. Improving support from 2500 to 4000 adds only 1500. Final grant capped by 20000 minus actual below.",
+      "aiTroops": {
+        "minimum": 0,
+        "maximum": 5000,
+        "integer": true,
+        "meaning": "Total justified support for this topic, not extra troops beyond earlier topic credit.",
+        "withoutReasoning": 0,
+        "unansweredConcernMaximum": 3000,
+        "actualGrant": "min(max(0,supportedTroops-priorTopicCredit),20000-below); identical repeated quotation earns zero."
+      },
+      "openingQuestion": "AI generates one contextual Ma Su question per round from actual deployment and owned facts; saved read-only. On failure retain contextual fallback question and free input with retry. Only explicit offline preference displays fixed answers."
+    },
+    "clueUnlocks": "AI prose never unlocks a new factual clue. Its reasons only retain already owned current evidence. Actual dialogue/action source nodes in clues[].unlock control unlocking.",
+    "guard": {
+      "formula": "below / 1000 + (w + m) / 2 + r + receptionBonus - failedLurePenalty",
+      "holds": 20,
+      "allRearSafe": 26,
+      "earlyMa": {
+        "m": 4
+      },
+      "receptionBonus": {
+        "points": 3,
+        "w": 4,
+        "r": 5,
+        "exclusiveWithEarly": true
+      },
+      "failedLurePenalty": {
+        "points": 3,
+        "onlyAfterActualExecution": true
+      }
+    },
+    "lure": {
+      "entryBelow": 10000,
+      "phone": {
+        "w": 4,
+        "m": 4,
+        "r": 5,
+        "itemPurchaseRequired": false
+      },
+      "fixed": {
+        "w": 4,
+        "m": 4,
+        "r": 7
+      },
+      "plan": [
+        "factsReliable",
+        "motive",
+        "means",
+        "reception",
+        "withdrawal"
+      ],
+      "noMountainCountPenalty": true
+    },
+    "items": {
+      "gift": "fuhu-wood-tiger",
+      "source": "JT-058",
+      "saleFen": 50000,
+      "chapterAllowanceFen": 0,
+      "consume": "Only actual adopted usedItemIds, at round-order or JT-303 authorization. Trial, attachment, follow-up and failures do not consume.",
+      "rewind": "Narrative and economy restore atomically from the same checkpoint."
+    }
+  },
+  "rulesVersion": "jieting-five-rounds-topic-credit-v1",
+  "storyVersion": "jieting-20261027-five-rounds-v1",
+  "balanceChange": {
+    "wangTrustMinimum": 4,
+    "appliesTo": [
+      "lure",
+      "extraRearReception"
+    ],
+    "reason": "Three faithful returns already grant w=3. An earlier choice must earn at least one more Wang trust point.",
+    "unchanged": [
+      "m=4",
+      "r=5/7",
+      "guard uses average trust"
+    ]
+  }
+}

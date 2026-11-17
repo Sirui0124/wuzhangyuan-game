@@ -1,0 +1,90 @@
+{
+  "scope": "总控独立抽查；不等同完整人工视听或用户通过",
+  "checkedAt": "2026-10-25T17:02:47.051037+08:00",
+  "checks": [
+    {
+      "clips": [
+        "V32A",
+        "V36"
+      ],
+      "source": "groups/G5/user-review-batch2/review",
+      "evidence": [
+        "V36-3d25fb9f77/sequence-01.jpg",
+        "V32A-bb21c6e9f5/sequence-02.jpg"
+      ],
+      "observation": "直接查看时序图，收件近景与书写/提笔近景未见HTML式卡片或矩形遮挡。实物墨迹并非后期字幕；未核对为准确署名。",
+      "coverage": "仅上述两张序列所示区间",
+      "audio": "未听审；另读取7条final-asr，字面未见角色/导演字段，转写不证明读音/BGM正确"
+    },
+    {
+      "clips": [
+        "V35"
+      ],
+      "evidence": [
+        "groups/G5/user-review-batch2/review/V35-486c5c0cbf/sequence-01.jpg"
+      ],
+      "observation": "直接查看0–13秒每秒序列：取卷、递给玩家、展开、两附件放稳；未见文档字卡或矩形模糊。动作密集连续性另由拥有者记录。",
+      "coverage": "上述序列所示离散帧",
+      "audio": "未听审；白名单为空，拥有者已删除误借用V33人声"
+    },
+    {
+      "clips": [
+        "V12"
+      ],
+      "evidence": [
+        "groups/G1/user-review-20261025/inspection/V12-batch2-sequence.jpg"
+      ],
+      "observation": "纸背与前段交接清楚；后半旧反应镜疑似再现NPC持纸，已要求G1核对并裁面部避开，尚未关闭。",
+      "coverage": "当前候选无时间标签序列",
+      "audio": "未听审"
+    },
+    {
+      "clips": [
+        "V40"
+      ],
+      "sha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+      "evidence": [
+        "groups/G6/user-review-batch2/V40-R2-seam-every-frame.jpg"
+      ],
+      "observation": "根发现R1切口约12.917秒空座/走入闪镜并退回；现直接查看R2 12.667–13.167逐帧序列，已去掉闪镜，坐定镜头直接相接。",
+      "coverage": "仅切口0.5秒逐帧，非全片",
+      "audio": "拥有者报告R1/R2独立音轨SHA完全相同；根未听审"
+    },
+    {
+      "clips": [
+        "V26",
+        "V29"
+      ],
+      "evidence": [
+        "groups/G4/user-review-batch2/verification/V26-timeline.jpg",
+        "groups/G4/user-review-batch2/verification/V29-timeline.jpg"
+      ],
+      "observation": "根查看全片0.5秒间隔时序图，未见工作文字卡/方块；玩家问句通过反应/案面窗，军吏回答回到军吏机位。",
+      "coverage": "有序离散帧，未作逐字声口审核",
+      "audio": "仅依据白名单核对结构，未听审"
+    },
+    {
+      "clips": [
+        "V12"
+      ],
+      "evidence": [
+        "groups/G1/user-review-20261025/inspection/V12-final-R4-timed-actions.jpg"
+      ],
+      "observation": "R4明确取出、纸背伸递、玩家接稳、苟安放手、接后指示、纯面部口供/叮嘱、玩家持续持纸；前一所有权疑点在这些关键帧上关闭。",
+      "coverage": "12张带时间码关键动作图，非逐字听审",
+      "audio": "未听审"
+    },
+    {
+      "clips": [
+        "V14"
+      ],
+      "evidence": [
+        "groups/G2/user-review-20261025/review/UR-V14-FLOW-R2/sequence-01.jpg",
+        "groups/G2/user-review-20261025/review/UR-V14-FLOW-R2/sequence-02.jpg"
+      ],
+      "observation": "R2可见发筹、量粮、入仓、装车发出、军队接袋及末段从右至左手指倒查；无字画卷是通用流程示意，不构成本批粮数/责任事实证据。",
+      "coverage": "0–15秒0.5秒间隔序列",
+      "audio": "空发声白名单，根未听审"
+    }
+  ]
+}

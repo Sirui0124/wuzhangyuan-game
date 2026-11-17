@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const input=JSON.parse(fs.readFileSync(path.join(root,'outputs/film-studio/chapter-source/ch1-live-20261030.json'),'utf8'));
+if(input.has_more)throw Error('Online chapter read is incomplete');
+function csv(text){const out=[];let row=[],cell='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){row.push(cell);cell='';}else if(c==='\n'&&!quoted){row.push(cell);out.push(row);row=[];cell='';}else if(c!=='\r')cell+=c;}if(cell||row.length){row.push(cell);out.push(row);}return out;}
+const rows=csv(input.annotated_csv.replace(/^\[row=\d+\] /gm,''));
+const headers=rows.shift();
+const runtime=JSON.parse(fs.readFileSync(path.join(root,'content/chapters/wuzhang/chapter-one.script.json')));
+const byId=new Map(runtime.rows.map(r=>[r.id,r]));
+const normalized=rows.filter(r=>r[0]&&byId.has(r[0].trim())).map((r,i)=>({id:r[0].trim(),speaker:r[1]||'',text:r[2]||'',clue:r[3]||'',clueIds:r[4]||'',humanCondition:r[5]||'',transition:r[6]||'',sourceRow:input.row_indices?.[i+1]||i+2}));
+const missing=runtime.rows.filter(r=>!normalized.some(n=>n.id===r.id)).map(r=>r.id);
+const extra=rows.filter(r=>r[0]&&!byId.has(r[0].trim())&&r[1]).map(r=>({id:r[0],speaker:r[1],text:r[2]}));
+if(normalized.length<100)throw Error('Online chapter has too few matching rows');
+const data={url:runtime.source_url,revision:input.revision,fetchedAt:new Date().toISOString(),headers,rows:normalized,missingRuntimeRows:missing,extraOnlineRows:extra};
+const target=path.join(root,'tools/film-studio/data');fs.mkdirSync(target,{recursive:true});fs.writeFileSync(path.join(target,'chapter-source.json'),JSON.stringify(data,null,2));
+const differences=normalized.flatMap(r=>['speaker','text','humanCondition','transition'].filter(k=>r[k]!==byId.get(r.id)[k]).map(k=>({id:r.id,field:k,online:r[k],runtime:byId.get(r.id)[k]})));
+fs.writeFileSync(path.join(root,'outputs/film-studio/chapter-source/source-diff.json'),JSON.stringify(differences,null,2));
+console.log(JSON.stringify({revision:data.revision,rows:normalized.length,missing,extra,differences:differences.length,changedTexts:differences.filter(d=>d.field==='text').map(d=>({id:d.id,online:d.online.slice(0,65),runtime:d.runtime.slice(0,65)}))},null,2));

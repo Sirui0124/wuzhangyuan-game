@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.3078
+        },
+        {
+          "label": "Oink",
+          "p": 0.0628
+        },
+        {
+          "label": "Snort",
+          "p": 0.0504
+        },
+        {
+          "label": "Whispering",
+          "p": 0.0451
+        },
+        {
+          "label": "Animal",
+          "p": 0.0421
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0349
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0346
+        },
+        {
+          "label": "Domestic animals, pets",
+          "p": 0.0339
+        },
+        {
+          "label": "Biting",
+          "p": 0.0337
+        },
+        {
+          "label": "Chewing, mastication",
+          "p": 0.0298
+        },
+        {
+          "label": "Writing",
+          "p": 0.0157
+        },
+        {
+          "label": "Crunch",
+          "p": 0.0129
+        }
+      ],
+      "music": 0.0081
+    }
+  ]
+}

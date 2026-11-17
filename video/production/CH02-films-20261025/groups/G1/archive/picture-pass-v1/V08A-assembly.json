@@ -1,0 +1,104 @@
+{
+  "id": "V08A",
+  "name": "点出委屈分支",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V08A-点出委屈分支.mp4",
+  "duration": 27.38,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-N1选A",
+  "next": [
+    "V09"
+  ],
+  "endEvent": "所选对白与本段演出实际完成；不重复加分",
+  "subclips": [
+    {
+      "id": "V08A-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08A-01-voiced.mp4",
+      "slotStart": 0,
+      "slotEnd": 15.1,
+      "sourceTrim": [
+        0,
+        15.1
+      ],
+      "audioMode": "central-player-voiceover",
+      "review": {
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08A-01-document-softened.mp4",
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08A-01-normalized.mp4",
+        "sourceSha256": "54b3f642e886e9acfdea3d2e07010fc52e81f6043ab8b77e5e51a5eafe9340b6",
+        "visualReview": "usable-after-moving-document-defocus",
+        "actualDynamicReview": true,
+        "reviewedBy": "G2 1x source ended + G1 final edit sequence check",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\G1-assist-review.json",
+        "editEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\V08A-01-document-edit.json",
+        "findings": "完整时长及手指/纸边动作保留；局部随动散焦文书，不制造或展示可采信伪日期。精确信息归既有UI/原文。",
+        "audioIssues": [
+          "既有中央玩家原句完整回填；原生成音轨静音，环境声待统一；未逐字听审。"
+        ]
+      }
+    },
+    {
+      "id": "V08A-02",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08A-02-normalized.mp4",
+      "slotStart": 15.1,
+      "slotEnd": 27.36,
+      "sourceTrim": [
+        0,
+        12.26
+      ],
+      "audioMode": "mixed-picture-audio-pending",
+      "review": {
+        "visualReview": "usable-candidate",
+        "actualDynamicReview": true,
+        "reviewedBy": "G2 1x muted playback through ended +0.5sec sequence; raw SHA verified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\G1-assist-review.json",
+        "sourceSha256": "f8b792aa0b1b55100bc653a430c477e5bea01e242fda7f76745d9d2eb11094d1",
+        "findings": "画面可采用全段。背景医兵是中性伤帐动作，先保留；如需要更集中，可轻裁靠苟安而不裁掉手/碗交接。不要仅因背景人或临时嘴动重拍，也不要裁掉玩家4.38秒原句、2秒沉默和承认委屈。",
+        "remainingMinorDifferences": [
+          {
+            "start": 0.5,
+            "end": 4.2,
+            "type": "extra_medic_and_bowl",
+            "observation": "苟安回头，医兵从左近侧递碗；3–3.6秒交接两方手先后接触碗沿，未见明显穿透/多手；近侧躯干属于递碗者，未证明是外拍玩家"
+          },
+          {
+            "start": 4.5,
+            "end": 12.25,
+            "type": "background_people_and_lips",
+            "observation": "医兵退后，后景另有医兵活动；苟安持碗嘴动，临时说话归最终配音与口型核对"
+          }
+        ],
+        "audioIssues": [
+          "临时音轨与口型待统一；未逐字听审，混合段玩家原句保留完整策划与既有音轨索引。"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-018",
+      "speaker": "我",
+      "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018.wav",
+      "centralSha256": "e48a0a25685af31df1465335d0eb179b92aa7575fb5ecb237f203ea8da45428b",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 9.394041666666666,
+      "slotStart": 0.3,
+      "slotEnd": 9.694041666666667,
+      "subclip": "V08A-01"
+    }
+  ],
+  "sha256": "0ca5d38305d58105c2944b367f8d9fb0fa301e2ba3d65fa40aa75041b28ec79b",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。",
+    "玩家纯画面段已复用中央既有音轨；生成原音轨静音以避免制作说明/额外人声混入，环境声待统一配音阶段恢复。",
+    "混合对白段当前保留生成原音，玩家画外原句完整列于plan和分镜；暂不混入以免覆盖NPC，留统一配音阶段。"
+  ]
+}

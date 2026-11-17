@@ -1,0 +1,81 @@
+{
+  "C1END-EXEC": {
+    "method": "全长每秒3帧取样；浏览器播放验证",
+    "decision": "candidate",
+    "observations": [
+      "魏延红衣黑巾与衣甲保持一致，两军士带走灰褐背影；无可辨玩家正脸。",
+      "未展示行刑，须接在已有处斩判定之后，死亡结论由既有结局承载。"
+    ],
+    "audio": "原始生成音轨保留，未听审；不能据无对白Prompt宣称成片无额外声音。"
+  },
+  "C1END-RADIO": {
+    "method": "全长每秒3帧取样",
+    "decision": "candidate-with-audio-review-pending",
+    "observations": [
+      "魏延、姜维脸型与红/蓝灰衣领区分持续；两个小匣在各自手中。",
+      "实际为两人靠近后再错开，展示距离有限，不能证明已经建立远距离通信。",
+      "部分口部有动作；本轮未听审，声音与嘴部动作须在统一审片中核对。"
+    ],
+    "audio": "未听审，未据此另开TTS或重拍。"
+  },
+  "C1END-ITEM": {
+    "method": "全长每秒3帧取样",
+    "decision": "candidate",
+    "observations": [
+      "布包保持系口不透明，灰褐衣袖收起布包；不把动态选购物品固定成一种外形。",
+      "魏延与姜维转向帐前，未拍战果或实际解决粮荒。"
+    ],
+    "audio": "原始生成音轨保留，未听审。"
+  },
+  "C1END-LIGHT": {
+    "decision": "rejected",
+    "observations": [
+      "光束过强且有异常亮部；末段换镜后手电移到姜维手中，没有递交动作。"
+    ],
+    "replacement": "C1END-LIGHT-R2"
+  },
+  "C1END-TENT": {
+    "decision": "rejected",
+    "observations": [
+      "约6–8秒转身出现清楚侧脸，破坏本轮只使用玩家背影的约束。"
+    ],
+    "replacement": "C1END-TENT-R1-CUT3"
+  },
+  "C1END-TENT-R2": {
+    "method": "全长每秒3帧取样，未冒充逐帧动态或听审",
+    "decision": "not-adopted-needs-action-repair",
+    "observations": [
+      "更正此前三人沿路远离的判断：R2中军士前行，玩家仍近镜头，随后镜头上仰，未清楚表现带离。"
+    ],
+    "audio": "未听审，保留原始生成音轨。",
+    "pictureUsability": "needs-repair",
+    "replacement": "C1END-TENT-R1-CUT3"
+  },
+  "C1END-LIGHT-R2": {
+    "method": "全长每秒3帧取样，未冒充逐帧动态或听审",
+    "decision": "candidate-with-limits",
+    "observations": [
+      "魏延、姜维身份服装持续；手电全程由相同灰褐衣袖的手持有，末段同手放低。",
+      "未再出现第一版穿透式光束和换手；光斑照到魏延及帐面，魏延抬手回应。",
+      "实际只作近距离灯光演示；不能将其表述成已经验证远距离信号。",
+      "灯光照面较亮，抬手可同时理解为示意/遮光，保留供用户审阅。"
+    ],
+    "audio": "未听审，保留原始生成音轨。"
+  },
+  "C1END-TENT-R1-CUT3": {
+    "method": "原生离线播放器真实1x播放到末帧；分段复看并观察播放中截图，另核对全长3fps与两切点24fps连续帧。不是逐帧全片人工审查或声音听审。",
+    "decision": "candidate-with-integration-condition",
+    "observations": [
+      "0–5.5秒军士靠近并停在玩家面前；5.5–8.625秒同一动作时间的腰身、手部近景，转身时未见可辨玩家面孔。",
+      "8.625秒回全景，玩家背向向右离开，两军士依次同向跟进，形成看守带离；未表现抓握、捆绑或行刑。",
+      "全景到动作近景再回全景，保持原动作时间和方向；近景较软，属于原1280×720素材的局部放大。",
+      "帐布不透明，不新增帐内信息；末尾保留原画面渐暗。"
+    ],
+    "audio": "原始R1压缩音频包哈希一致；未听审，没有生成新TTS。",
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "接在游戏已确认擅闯与处罚判定之后；死亡结论由已有结局承担，视频本身只呈现拦下与带离。"
+    ],
+    "userApproved": false
+  }
+}

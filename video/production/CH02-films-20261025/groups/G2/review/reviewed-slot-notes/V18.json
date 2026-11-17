@@ -1,0 +1,39 @@
+{
+  "id": "V18",
+  "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+  "reviewState": "reviewed",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "入仓、地方实收、应征/实收按D04→D05→D06次序。D04/D05先短操作再准确正文；D05当前SHA经G6协审：递接竹卷成立，约1.6秒跳切案头翻查，2秒切正文，可作有剪辑核对插镜。玩家追问改用刚取得D05回看，不提前出D06；D06先连续2.8秒指向账栏，再显示准确正文，留7.2秒阅读。未见新数值、份额或定罪词。"
+  ],
+  "issues": [
+    {
+      "type": "wrong-visible-speaker",
+      "state": "repaired",
+      "repair": "玩家追问改用已知D05账页，不展示NPC讲话"
+    },
+    {
+      "type": "fake-evidence-text",
+      "state": "repaired",
+      "repair": "D04/D05/D06为准确不透明正文，D06延长到10秒阅读"
+    }
+  ],
+  "integrationConditions": [
+    "D04和D05各在本子片2秒正文出现后登记；D06为本子片2.8秒后，不能在追问D05时提前授予。",
+    "D05约1.6秒有剪辑，不宣称连续完整展开。回看D05不新增证据；文书不默认已带离仓案。"
+  ],
+  "audioIssues": [
+    "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+    "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+  ],
+  "dynamicReview": [
+    {
+      "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+      "range": [
+        0,
+        53.63
+      ],
+      "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V18\\identity.json"
+    }
+  ]
+}

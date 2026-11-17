@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-17",
+  "version": "v5 standalone; user review pending",
+  "health": {
+    "demo": "yiling-radio-lab-v5",
+    "version": 5
+  },
+  "tests": {
+    "command": "npm test",
+    "passed": 22,
+    "failed": 0
+  },
+  "browser": {
+    "realApiRequests": 7,
+    "errors": [],
+    "checks": [
+      "three named contacts",
+      "questions do not deploy or advance time",
+      "contact-page order redirects",
+      "dispatch confirmation required",
+      "confirm returns to frontline",
+      "full rescue",
+      "returned contact report",
+      "per-page drafts survive navigation and refresh"
+    ],
+    "returnedGenerals": 4,
+    "returnedObjectiveGroups": 5
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 388
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 388
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 256
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 256
+    },
+    {
+      "width": 681,
+      "height": 688,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 224
+    },
+    {
+      "width": 681,
+      "height": 688,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 224
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 320
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 320
+    }
+  ],
+  "v4Preserved": {
+    "baselineFiles": 9,
+    "changed": []
+  },
+  "battleEngineByteIdenticalToV4": true,
+  "officialChapter4Touched": false,
+  "sourceHashes": {
+    "src\\app.ts": "703713b6600a07c19c85f75541340d8847eea7cc392c286b12a6adffeb016101",
+    "src\\engine.ts": "83563805ea316193e77858408577e8efbfbcd87e577c627150155dae586b0d18",
+    "src\\frontline.ts": "2ff2c5ad091fc7510f0ffa21cdc1340f2ec74f76b3691976e52fcca8757d4df9",
+    "ai.mjs": "2ed13edad68651fa57add46dea0736f29cce4f3ca5137df8256906eb64f620ec",
+    "public\\style.css": "e92c3a44beee1efadbba87f18d2abd06bbdea97343578c79ea5dec3d921eff08",
+    "server.mjs": "bcb29b0bcba6d7734c5b3bbe915832fbb8e622dee2e3c92ad650a0fc44dcac2c"
+  }
+}

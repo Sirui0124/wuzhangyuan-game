@@ -1,0 +1,46 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V05",
+  "src": "/video/current/CH2-V05-037fce3f72-20261025.mp4",
+  "title": "夜间取账",
+  "subtitles": "/video/subtitles/CH2-V05-037fce3f72-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V05-037fce3f72-20261025.mp4",
+  "sha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+  "duration": 16.2775,
+  "cues": [
+    {
+      "start": 6.6,
+      "end": 9.64,
+      "text": "这份交接记录，可以让我看看吗？"
+    },
+    {
+      "start": 10.26,
+      "end": 11.06,
+      "text": "嗯，看吧"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-012",
+      "node": "CH2-LY02-012",
+      "text": "这份交接记录，可以让我看看吗？",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-012.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "94311ef9a4ee7757127af29dca86ccfb9059174c59f663be9540934e90181b18",
+      "duration": 3.1725,
+      "speechRange": [
+        0.28,
+        2.9
+      ],
+      "correlation": 0.9773882095164528,
+      "insertAt": 6.6392,
+      "speechStart": 6.91925,
+      "speechEnd": 9.53925
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

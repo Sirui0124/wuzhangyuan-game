@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-06",
+  "passed": true,
+  "scope": "Independent art viewer; no story API or game playthrough",
+  "results": [
+    {
+      "camera": "camp",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": []
+    },
+    {
+      "camera": "river",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": [
+        "南岸渡口",
+        "北岸泊点"
+      ]
+    },
+    {
+      "camera": "east",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": []
+    },
+    {
+      "camera": "south",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": []
+    },
+    {
+      "camera": "imperial",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": [
+        "刘备御营"
+      ]
+    },
+    {
+      "camera": "overview",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "labels": [
+        "大本营",
+        "刘备御营",
+        "南岸渡口",
+        "北岸泊点",
+        "傅肜方向",
+        "黄权方向",
+        "程畿方向",
+        "沙摩柯方向"
+      ]
+    }
+  ],
+  "checks": [
+    "Six camera images load at native 1920x1080",
+    "All overview landmarks inside image",
+    "Four routes start at camp",
+    "Route selection",
+    "Label toggle",
+    "Keyboard camera switching",
+    "Fullscreen",
+    "390px viewport no horizontal overflow"
+  ],
+  "errors": [],
+  "userArtApproval": false
+}

@@ -1,0 +1,39 @@
+{
+  "id": "CH2-LY12A-013",
+  "expected": "可粮呢？",
+  "sha256": "026af3ec9d6c19817072bb72b07f168981f5e61d13f7a5da4cb4c3ea1c8a4cb2",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-013-v1.wav",
+  "recognized": "可良呢",
+  "similarity": 0.6666666666666666,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.04,
+      "text": "可良呢",
+      "noSpeechProbability": 0.06538000702857971,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.48,
+          "text": "可"
+        },
+        {
+          "start": 0.48,
+          "end": 0.8,
+          "text": "良"
+        },
+        {
+          "start": 0.8,
+          "end": 1.04,
+          "text": "呢"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

@@ -1,0 +1,133 @@
+{
+  "id": "CH2-V09",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V09-8413b1ae38-20261025.mp4",
+  "oldSha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+  "oldSubtitles": "/video/subtitles/CH2-V09-8413b1ae38-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V09-0eb8dd8c.mp4",
+  "sha256": "eda49961dbe214facb03a20c1af8b0f8775e9d6312f0342ec5b2cce5aad75257",
+  "bytes": 10507079,
+  "duration": 27.791666666666668,
+  "containerDuration": 27.791667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 667,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V09",
+    "src": "/video/current/PV27-CH2-V09-0eb8dd8c.mp4",
+    "title": "李严下属的顾虑",
+    "subtitles": "/video/subtitles/PV27-CH2-V09-0eb8dd8c.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY02-023",
+      "node": "CH2-LY02-023",
+      "text": "你不是李严的人吗？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-023.wav",
+      "oldCorrelation": 0.9791151530799778,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-023-v1.wav",
+      "newVoiceSha256": "e6407ff1fe9b4a5d15fee49147eaeaffdc5fe30b3e9e7299a99bde6216ed917a",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.40125,
+        2.44125
+      ],
+      "insertAt": 0.40125,
+      "voiceSeconds": 2.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0084254741668701,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY02-024",
+      "node": "CH2-LY02-024",
+      "text": "为什么不找他说明白？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-024.wav",
+      "oldCorrelation": 0.9757133134399247,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-024-v1.wav",
+      "newVoiceSha256": "d866f3003314f965c3605813448c5565b871cf5cd821e9c2a3f7ec59f24bc61f",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        2.40725,
+        4.5272499999999996
+      ],
+      "insertAt": 2.40725,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1956371068954468,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.76125,
+      "end": 2.43125,
+      "text": "你不是李严的人吗？"
+    },
+    {
+      "start": 2.7272499999999997,
+      "end": 4.19725,
+      "text": "为什么不找他说明白？"
+    },
+    {
+      "start": 4.86,
+      "end": 9.64,
+      "text": "我就是个替他跑腿的，他哪会替我说话"
+    },
+    {
+      "start": 11.12,
+      "end": 16.04,
+      "text": "认个酒误，养好伤，还能接着吃这碗饭"
+    },
+    {
+      "start": 16.6,
+      "end": 20.72,
+      "text": "真把话说明白，往后还在谁手底下领粮？"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

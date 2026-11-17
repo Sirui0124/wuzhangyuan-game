@@ -1,0 +1,73 @@
+{
+  "id": "V14",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V14-e4411beb30.mp4",
+  "sha256": "9a3ef0d7af9cc6dc0a000303922f460b6bebb2051ad428c87dc543d21e97cd9a",
+  "videoFrames": 99,
+  "videoSeconds": 4.125,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V14",
+    "parts": [
+      {
+        "source": "V14-02",
+        "range": [
+          0,
+          1.7
+        ]
+      },
+      {
+        "source": "V14-02",
+        "range": [
+          5.5,
+          8.0
+        ],
+        "crop": [
+          335,
+          350,
+          400,
+          225
+        ]
+      }
+    ],
+    "audio": null,
+    "sourceNodes": [
+      "CH2-LY04-004"
+    ],
+    "comment": "remove all native background voice; replace prior chart/card and masks with actual environment and globally cropped physical-map sketch"
+  },
+  "sourceParts": [
+    {
+      "source": "V14-02",
+      "range": [
+        0,
+        1.7
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-02-raw.mp4",
+      "sourceSha256": "b690dffb6ae69d28f3f91410a1bb70322ececd45052c92921ec1f8863f883feb"
+    },
+    {
+      "source": "V14-02",
+      "range": [
+        5.5,
+        8.0
+      ],
+      "crop": [
+        335,
+        350,
+        400,
+        225
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-02-raw.mp4",
+      "sourceSha256": "b690dffb6ae69d28f3f91410a1bb70322ececd45052c92921ec1f8863f883feb"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

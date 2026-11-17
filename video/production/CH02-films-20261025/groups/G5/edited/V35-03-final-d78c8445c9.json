@@ -1,0 +1,48 @@
+{
+  "id": "V35-03",
+  "sourceId": "V35-03-C2-two-attachments",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-03-C2-two-attachments.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V35-03-final-d78c8445c9.mp4",
+  "postVoice": [],
+  "textLayers": [
+    {
+      "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+      "start": 5.35,
+      "end": 10.15,
+      "fullFrame": true
+    },
+    {
+      "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+      "start": 10.15,
+      "end": 16.23,
+      "fullFrame": true
+    }
+  ],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "loop": false,
+    "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-03-C2-two-attachments.json"
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "新8秒源的后5.35秒实际取出两张独立附件、左右分开、各自触案并松手，非通用旧卷假充",
+    "背面无字，不能当成可读署名证明；准确粮情/责任全文保留冻结阅读层；未交给军吏或提前结案"
+  ],
+  "audioIssues": [
+    "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 16.25,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V35-03-final-d78c8445c9.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:16.25, start: 0.000000, bitrate: 2109 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2008 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 94 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

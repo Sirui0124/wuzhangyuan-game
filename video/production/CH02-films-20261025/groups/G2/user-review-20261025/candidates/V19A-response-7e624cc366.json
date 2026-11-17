@@ -1,0 +1,125 @@
+{
+  "id": "V19A-response",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19A-response-7e624cc366.mp4",
+  "sha256": "a209eb7d27137cfff4c3aa6670777589b2e7615d99fc8f683f9e452a6509913f",
+  "videoFrames": 244,
+  "videoSeconds": 10.166666666666666,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V19A-response",
+    "parts": [
+      {
+        "source": "V19A-02",
+        "range": [
+          0,
+          1.8
+        ],
+        "crop": [
+          140,
+          0,
+          1060,
+          596
+        ]
+      },
+      {
+        "source": "V15-02",
+        "range": [
+          6,
+          10.1
+        ]
+      },
+      {
+        "source": "V18-03",
+        "range": [
+          0,
+          2
+        ]
+      },
+      {
+        "source": "V14-02",
+        "range": [
+          0,
+          1.8
+        ]
+      },
+      {
+        "source": "V13-04",
+        "range": [
+          0,
+          0.55
+        ]
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-02-raw.mp4",
+      "start": 0,
+      "end": 10.125
+    },
+    "sourceNodes": [
+      "CH2-LY04-Q4FB0"
+    ],
+    "comment": "remove invented written evidence; native reply retained over true already acquired roll actions, no new documents"
+  },
+  "sourceParts": [
+    {
+      "source": "V19A-02",
+      "range": [
+        0,
+        1.8
+      ],
+      "crop": [
+        140,
+        0,
+        1060,
+        596
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-02-raw.mp4",
+      "sourceSha256": "181c2945e873377cfafc313864053e4031f1c079ac1772c63df01402bc93d173"
+    },
+    {
+      "source": "V15-02",
+      "range": [
+        6,
+        10.1
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-02-raw.mp4",
+      "sourceSha256": "9bd88c3885737dcb269b7ae02c99361a85063d5371f47d3387998e9b53873f2a"
+    },
+    {
+      "source": "V18-03",
+      "range": [
+        0,
+        2
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-03-raw.mp4",
+      "sourceSha256": "c29fb33875bb74c4852555b2264f657d4b3e0b650d19f60f949b430b3ac43920"
+    },
+    {
+      "source": "V14-02",
+      "range": [
+        0,
+        1.8
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-02-raw.mp4",
+      "sourceSha256": "b690dffb6ae69d28f3f91410a1bb70322ececd45052c92921ec1f8863f883feb"
+    },
+    {
+      "source": "V13-04",
+      "range": [
+        0,
+        0.55
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-04-raw.mp4",
+      "sourceSha256": "bff5a7bbfdbfed07b3bca9384bd31b6a16760e26855dfa25f609e2a5a40a0df7"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

@@ -1,0 +1,137 @@
+/* A name in ink, four double-ended scales, and the choices that put it there. */
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality]{
+ width:min(1000px,100%);height:min(850px,calc(100dvh - 64px));max-height:calc(100dvh - 64px);min-height:0;
+ display:grid;grid-template-columns:86px minmax(0,1fr);padding:0;overflow:hidden;color:#e7d9b9;
+ background:#23251e var(--folio-cover,url('/ui/folio-cover-neutral-v1.png')) center/100% 100% no-repeat;border:0;border-radius:0;
+ font-family:var(--serif,'KaiTi','STKaiti','Songti SC',serif);box-shadow:0 28px 80px #000b;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality]::before,
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality]::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality] .folio-header{padding-top:52px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality] .modal-close{width:36px;height:36px;min-height:36px;top:19px;right:21px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel.personality-panel[data-page=personality] .folio-body[data-personality-content]{
+ margin:58px 32px 28px 26px;padding:0 8px 0 0;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain;
+ scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#ad9663 transparent;background:none;border:0;box-shadow:none;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-content{min-width:0;overflow-wrap:anywhere}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero{position:relative;isolation:isolate;min-height:170px;padding:12px 32px 16px 8px;overflow:hidden;display:flex;align-items:center;gap:25px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-copy{position:relative;z-index:1;max-width:590px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-kicker{margin:0 0 6px;color:#d8c6a2;font-size:20px;line-height:1.7;letter-spacing:3px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-name{margin:0 0 8px;color:#f0dfbb;font:400 clamp(44px,5vw,64px)/1.25 WuzhangBrush,var(--serif);letter-spacing:9px;text-shadow:0 2px 10px #0004}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-state-title{margin:0 0 8px;color:#efdeba;font:400 28px/1.5 var(--serif);letter-spacing:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-intro{max-width:510px;margin:0;color:#c7b99b;font-size:18px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .is-ready .personality-hero-copy{flex:1;min-width:0;max-width:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:6px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-heading .personality-kicker{flex-shrink:0;margin:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-heading .personality-intro{max-width:280px;font-size:14px;line-height:1.6;text-align:right;opacity:.55}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-seal{align-self:flex-start;flex:none;writing-mode:vertical-rl;margin:6px 0 0;padding:8px 6px;border:2px solid #aa6047;color:#cf8b6e;font:20px/1.2 var(--serif);letter-spacing:5px;box-shadow:inset 0 0 0 2px #7a3b2b66;transform:rotate(-4deg)}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-ink-ring{position:absolute;z-index:-1;right:2%;top:10px;width:230px;height:230px;border:12px solid #b9a2720c;border-left-width:4px;border-bottom-width:5px;border-radius:50%;transform:rotate(-24deg);box-shadow:0 0 0 2px #c7b38806}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-reading-leaf{background:var(--folio-leaf,url('/ui/panel-grain.svg'),#d8c9a7);color:#36382d;padding:20px 34px;border:1px solid #e0ceaa70;box-shadow:3px 3px #8c7b59,5px 5px #24251b,inset 3px 0 #f1e1b34d}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-section-heading h3{margin:0;color:#4a3c2c;font:400 20px/1.5 var(--serif);letter-spacing:3px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-section-heading>span{color:#756b55;font-size:14px;line-height:1.7}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-list{display:grid;gap:12px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-labels{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin-bottom:6px;font-size:20px;line-height:1.5;color:#383d32;letter-spacing:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-labels>span:last-child{text-align:right}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-reading{font-size:14px;letter-spacing:1px;color:#83523c}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale{height:12px;position:relative;margin:0 6px;background:repeating-linear-gradient(90deg,#70654b66 0 1px,transparent 1px 12.5%);background-position:0 4px;background-size:100% 5px;background-repeat:no-repeat}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale::before{content:'';position:absolute;left:0;right:0;top:6px;height:1px;background:#86744c77}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale-center{position:absolute;left:50%;top:0;bottom:0;width:1px;background:#81745099}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale-span{position:absolute;top:5px;height:3px;background:#9c513d99}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale-marker{position:absolute;top:1px;width:10px;height:10px;transform:translateX(-50%) rotate(45deg);background:#924834;border:1px solid #713928;box-shadow:0 0 0 3px #d6c7a8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis.is-unobserved .personality-axis-reading{color:#7c725c}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis.is-unobserved .personality-scale{opacity:.42}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence{margin-top:14px;padding-top:12px;border-top:1px solid #7b674344}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence ol{list-style:none;margin:0;padding:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence li{padding:0;margin:0;border-bottom:1px solid #7b674329}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence li:last-child{margin-bottom:0;padding-bottom:0;border:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-chapter{display:block;color:#87513a;font-size:16px;line-height:1.6}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence blockquote{margin:0;color:#30392f;font-size:20px;line-height:1.85;white-space:pre-wrap}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence li p{margin:8px 0 0;color:#6a6653;font-size:16px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-empty-copy{margin:0;color:#6a6653;font-size:18px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel details>summary{min-height:44px;cursor:pointer;font-size:16px;line-height:1.8;padding:10px 0;color:inherit}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence details{margin-top:12px;color:#79513b}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence details[open]>summary{margin-bottom:8px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence .personality-section-heading{margin-bottom:4px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence .personality-evidence-record{margin:0;color:#30392f}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence .personality-evidence-record>summary{display:grid;grid-template-columns:56px minmax(0,1fr) 14px;align-items:start;gap:10px;min-height:44px;margin:0;padding:9px 0;list-style:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-record>summary::-webkit-details-marker{display:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-copy{min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:8px 12px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-title{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:18px;line-height:1.6}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-traits{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px;max-width:185px;margin-top:1px;color:#87513a;font-size:14px;line-height:1.5}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-attribute-tag{display:inline-block;max-width:100%;padding:1px 7px;border:1px solid #9e7d4b66;border-radius:3px;background:#9e7d4b14;color:#75432e;white-space:nowrap}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-chevron{color:#87513a;line-height:1.6;transition:transform .15s}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-record[open]>summary .personality-evidence-chevron{transform:rotate(180deg)}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-original{padding:2px 0 12px 66px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-source-label{display:block;color:#87513a;font-size:14px;line-height:1.6}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-original :is(p,blockquote){margin:3px 0 9px;font-size:16px;line-height:1.7;white-space:pre-wrap;color:#30392f}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-footer{margin-top:18px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-footer>p{margin:0;color:#c7b99b;font-size:16px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-actions{display:flex;align-items:center;gap:13px;flex-wrap:wrap;margin-top:12px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-actions button{font:16px/1.6 var(--serif);min-height:44px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-actions .quiet-button{color:#d3c39f}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-copy-status:not(:empty){padding-top:12px;color:#dfc993}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-manual-copy{display:block;margin-top:14px;font-size:16px;line-height:1.8;color:#d3c39f}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-manual-copy textarea{display:block;width:100%;min-height:160px;padding:14px;margin-top:8px;resize:vertical;background:#e0d2b7;color:#30392f;border:1px solid #b9a273;font:16px/1.8 var(--serif)}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-footer .personality-storage-notice{color:#e0a28a;margin-top:14px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history{margin-top:18px;border-top:1px solid #b9a2733b;border-bottom:1px solid #b9a2733b;color:#c7b99b}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history-count{margin-left:12px;color:#ac9870;font-variant-numeric:tabular-nums}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history>p{margin:0 0 16px;font-size:16px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history ol{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history li>div{display:flex;justify-content:space-between;gap:8px;font-size:14px;line-height:1.7;color:#baa987}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history li strong{display:block;margin:5px 0;color:#e0cda7;font-size:18px;line-height:1.7;font-weight:400}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history li p{margin:0;font-size:16px;line-height:1.7;color:#c7b99b}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-footnote{margin:12px 0 3px;color:#ad9f82;font-size:14px;line-height:1.8}
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel :is(button,summary,textarea):focus-visible{outline:2px solid #c29664;outline-offset:4px}
+@media(max-width:650px){
+ :root #game-root .game-modal-shade.personality-shade{padding:12px 9px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality]{height:calc(100dvh - 24px);max-height:calc(100dvh - 24px);grid-template-columns:48px minmax(0,1fr);background-size:auto 100%}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality] .folio-header{padding:48px 0 0 4px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality] .folio-header h1{font-size:22px;letter-spacing:4px;padding:14px 3px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel.personality-panel[data-page=personality] .folio-body[data-personality-content]{margin:51px 10px 18px 5px;padding:0 5px 0 0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality] .modal-close{top:14px;right:16px;width:32px;height:32px;min-height:32px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero{padding:6px 6px 14px;min-height:155px;gap:13px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-kicker{font-size:18px;letter-spacing:1px;margin-bottom:6px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-name{font-size:44px;letter-spacing:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-state-title{font-size:24px;letter-spacing:0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-intro{font-size:16px;line-height:1.8}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-heading{flex-wrap:wrap;gap:4px;margin-bottom:8px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-hero-heading .personality-intro{max-width:100%;margin-left:auto;font-size:12px;line-height:1.6}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-seal{font-size:16px;padding:6px 4px;letter-spacing:3px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-ink-ring{width:175px;height:175px;right:-20px;top:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-reading-leaf{padding:16px 17px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-section-heading{display:block;margin-bottom:12px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-section-heading>span{display:block;margin-top:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-labels{font-size:18px;letter-spacing:1px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-axis-reading{font-size:13px;letter-spacing:0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence{margin-top:12px;padding-top:10px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence blockquote{font-size:18px;line-height:1.85}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-chapter{font-size:14px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence .personality-evidence-record>summary{grid-template-columns:42px minmax(0,1fr) 12px;gap:7px;padding:8px 0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-title{font-size:16px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-copy{grid-template-columns:minmax(0,1fr);gap:3px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-traits{justify-content:flex-start;max-width:none;margin-top:0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-evidence-original{padding-left:0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-history ol{grid-template-columns:1fr}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-actions{gap:6px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-actions button{padding-left:14px;padding-right:14px}
+}
+@media(max-height:480px) and (min-width:651px){
+ :root #game-root .game-modal-shade.personality-shade{padding:12px 24px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality]{height:calc(100dvh - 24px);max-height:calc(100dvh - 24px)}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel.personality-panel[data-page=personality] .folio-body[data-personality-content]{margin-top:48px;margin-bottom:20px}
+}
+@media(forced-colors:active){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=personality],:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-reading-leaf{background:Canvas;color:CanvasText;border:1px solid CanvasText}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel :is(h2,h3,p,span,blockquote,strong,summary,time){color:CanvasText}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale::before,:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale-center{background:CanvasText}
+ :root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-scale-marker{background:Highlight;border-color:Highlight;forced-color-adjust:none}
+}
+
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-footer .personality-pending{margin-top:10px;color:#dec48d}
+
+:root[data-ui-theme=xuan] #game-root .game-modal.personality-panel .personality-preview-note{margin:0 0 4px;padding:5px 12px;border:1px solid #b78d5e70;background:#342c1c99;color:#e5c99a;font:16px/1.7 var(--serif)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary[data-action=pause-personality]{grid-column:1/-1;border:0;border-top:1px solid #b9a27330;border-bottom:1px solid #b9a27330;padding:12px 8px;color:#e0cca4;background:linear-gradient(90deg,transparent,#a38b4915,transparent)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary[data-action=pause-personality] svg{stroke:#bd795b}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary:is([data-action=pause-save],[data-action=pause-restart]){border-left:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary:is([data-action=settings],[data-action=pause-home]){border-left:1px solid #a68e5833}

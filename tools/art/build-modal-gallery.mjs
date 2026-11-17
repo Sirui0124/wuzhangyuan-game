@@ -1,0 +1,97 @@
+import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { dirname, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+// Keep the gallery portable: local images and inline assets work over file://.
+// This script writes only its own review index; it never changes game assets.
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
+const directory = resolve(root, 'source-art/visuals/review/20261022/modal-suite');
+const screenshots = resolve(root, 'docs/art/review-20261022/modal-suite');
+const prefix = relative(directory, screenshots).replaceAll('\\', '/');
+const themes = [
+  { id: 'dark', title: '玄青夜绢', subtitle: '已采用方向', state: '用户已选用', description: '已接入正式游戏；下图保留选择前的方案比较画面，当前实机请看玄青实机图册。' },
+  { id: 'light', title: '月白素绢', subtitle: '保留备选', state: '备选 · 未采用', description: '保留月白绢面与灰绿文字的比较样张，未作为当前正式主题。' },
+];
+const pages = [
+  { id: 'settings', title: '设置', description: '比较选项、滑杆与开关的主次，查看反馈是否清楚。' },
+  { id: 'saves', title: '存档', description: '比较存档信息与操作的辨识，查看列表是否容易扫读。' },
+  { id: 'history', title: '历史对白', description: '比较长段对白的阅读节奏，查看角色与内容是否分明。' },
+  { id: 'thought', title: '思绪', description: '比较线索与推理的阅读顺序，查看思路是否连续。' },
+];
+const image = (theme, page) => `${prefix}/${theme}-${page}.png`;
+const preview = (theme, page) => `http://127.0.0.1:8812/modal-suite.html?theme=${theme}&amp;page=${page}`;
+const cards = themes.map(theme => `<article class="theme-card" data-theme="${theme.id}">
+  <header class="theme-heading"><div><span class="eyebrow">${theme.subtitle}</span><h2><i class="swatch ${theme.id}" aria-hidden="true"></i>${theme.title}</h2></div><span class="review-state">${theme.state}</span></header>
+  <button type="button" class="image-frame pending" data-open="${theme.id}" aria-label="放大${theme.title}设置截图"><img src="${image(theme.id, 'settings')}" alt="${theme.title} · 设置 · 实际运行截图"><span class="image-missing">截图待生成<span>生成截图后，重新打开或刷新本页</span></span><span class="image-cue" aria-hidden="true">查看大图 ↗</span></button>
+  <div class="card-footer"><p>${theme.description}</p><a data-preview href="${preview(theme.id, 'settings')}" target="_blank" rel="noopener">打开历史方案预览 ↗</a></div>
+</article>`).join('\n');
+const tabletCards = themes.map(theme => `<figure class="tablet-card"><button type="button" class="image-frame pending" data-open="${theme.id}" data-shot="tablet" aria-label="放大${theme.title}窄屏截图"><img src="${image(theme.id, 'tablet')}" alt="${theme.title} · 窄屏补充截图"><span class="image-missing">窄屏截图待生成</span><span class="image-cue" aria-hidden="true">查看大图 ↗</span></button><figcaption>${theme.title} · 窄屏补充</figcaption></figure>`).join('\n');
+
+const html = `<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>弹窗与思绪 · 深浅主题比较</title><style>
+:root{color-scheme:light;--paper:#eeede5;--ink:#33443f;--muted:#727c70;--line:#b9c2b250;--accent:#5d7568}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.75 'Microsoft YaHei','PingFang SC',sans-serif}button,a{font:inherit}button{color:inherit;cursor:pointer}a{color:var(--accent);text-underline-offset:5px}button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #6c8677;outline-offset:5px}button:disabled{cursor:default}main{max-width:1840px;margin:auto;padding:34px 42px 40px}.intro{display:flex;justify-content:space-between;gap:32px;align-items:flex-start}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--muted)}h1,h2{font-family:KaiTi,STKaiti,'Kaiti SC',SimSun,serif;font-weight:400}h1{font-size:34px;line-height:1.4;margin:10px 0 12px;letter-spacing:1px}.intro p{margin:0;color:#67776a;max-width:900px}.intro>a{font-size:13px;white-space:nowrap;margin-top:6px;text-decoration:none}.status-line{display:flex;align-items:center;gap:12px;margin-top:18px;color:#657467;font-size:13px}.status-line b{font-weight:400;border:1px solid #8d9b8266;padding:3px 10px;letter-spacing:2px;color:#506648}.status-line span{display:block}.page-navigation{display:flex;align-items:center;justify-content:space-between;gap:24px;border-block:1px solid var(--line);margin:24px 0 22px;padding:0 0 0 2px}.tabs{display:flex;gap:28px}.tabs button{position:relative;border:0;background:none;padding:15px 2px;min-height:50px;color:#7a8277;letter-spacing:2px;white-space:nowrap}.tabs button[aria-selected=true]{color:#324d3e}.tabs button[aria-selected=true]::after{content:'';position:absolute;height:2px;background:#71856a;bottom:-1px;left:0;right:2px}.page-hint{font-size:13px;color:#7b8478;margin:0}.compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px}.theme-card{min-width:0}.theme-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:13px}.theme-heading .eyebrow{font-size:11px;letter-spacing:2px}.theme-heading h2{display:flex;align-items:center;gap:11px;font-size:26px;line-height:1.4;margin:3px 0 0}.swatch{display:inline-block;width:12px;height:12px;transform:rotate(45deg);flex:none}.swatch.dark{background:#203b3e;border:1px solid #66857a}.swatch.light{background:#e5e7d7;border:1px solid #a3af98}.review-state{font-size:12px;letter-spacing:1px;color:#7e896f}.image-frame{width:100%;position:relative;display:block;border:0;background:#dce0d6;padding:0;line-height:0;overflow:hidden;box-shadow:0 8px 24px #26352d0b;text-align:center}.image-frame img{display:block;width:100%;height:auto;min-width:0}.image-frame:hover:not(:disabled){outline:1px solid #9dab90;outline-offset:4px}.image-cue{position:absolute;bottom:12px;right:12px;padding:7px 12px;line-height:1.5;color:#e7e6d6;background:#1c302bd9;font-size:12px;opacity:0;transition:opacity .15s}.image-frame:hover .image-cue,.image-frame:focus-visible .image-cue{opacity:1}.image-missing{display:none;line-height:1.7;font-size:16px;color:#72836d}.image-missing>span{display:block;font-size:12px;margin-top:8px}.image-frame.pending{aspect-ratio:8/5;display:grid;place-items:center;background:repeating-linear-gradient(130deg,#dce0d6,#dce0d6 16px,#d7ddcf 16px,#d7ddcf 17px)}.image-frame.pending img,.image-frame.pending .image-cue{display:none}.image-frame.pending .image-missing{display:block}.card-footer{display:flex;align-items:start;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:13px 0 16px}.card-footer p{margin:0;color:#78816f;font-size:13px;max-width:70%}.card-footer a{white-space:nowrap;text-decoration:none;font-size:13px;color:#506c56}.shared-note{display:flex;gap:18px;align-items:center;flex-wrap:wrap;color:#6e7f6c;font-size:13px;margin:21px 0 16px}.shared-note span+span::before{content:'·';margin-right:18px;color:#95a08c}.tablet-section{border-top:1px solid var(--line);padding-top:14px}.tablet-section summary{cursor:pointer;color:#596e5d;font-size:14px;width:fit-content;padding:4px 0}.tablet-section>p{color:#7c8676;font-size:13px;margin:9px 0 18px}.tablet-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;max-width:1050px}.tablet-card{margin:0;min-width:0}.tablet-card figcaption{color:#6c7d69;margin:10px 0;font-size:13px}.scope-note{font-size:12px;color:#838d7e;margin:22px 0 0;line-height:1.9}.scope-note a{color:inherit}dialog{border:1px solid #9ba98c55;background:#e9ecdf;color:#3c5140;padding:16px;max-width:96vw;max-height:96vh;box-shadow:0 18px 65px #0005}dialog::backdrop{background:#0b1715e8}dialog header{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-bottom:12px;font-size:14px}dialog header button{border:0;background:none;padding:6px 10px;min-height:36px;color:#526c50}dialog img{display:block;max-width:90vw;max-height:82vh;object-fit:contain}dialog .viewer-note{font-size:12px;color:#7b8971;margin:10px 0 0}
+@media(min-width:2000px){main{padding-top:48px}}@media(max-width:1100px){main{padding:28px 24px}.intro{gap:16px}.page-navigation{align-items:start;flex-direction:column;gap:0}.page-hint{padding-bottom:12px}.compare-grid{gap:20px}.card-footer{display:block}.card-footer p{max-width:none}.card-footer a{display:inline-block;margin-top:8px}.intro>a{white-space:normal;min-width:90px}h1{font-size:30px}}@media(max-width:700px){main{padding:23px 18px}.intro{display:block}.intro>a{display:inline-block;margin-top:16px}.compare-grid{grid-template-columns:1fr;gap:30px}.tabs{gap:23px}.tabs button{letter-spacing:1px}.status-line{align-items:start}.status-line b{white-space:nowrap}.tablet-grid{grid-template-columns:1fr}.shared-note{gap:7px;display:block}.shared-note span{display:block}.shared-note span+span::before{content:none}.theme-heading h2{font-size:25px}h1{font-size:28px}.page-hint{font-size:12px}.image-cue{opacity:1}.card-footer{display:flex}.card-footer p{max-width:65%}.card-footer a{margin-top:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}@media print{.intro>a,.tabs,.card-footer a,.image-cue,dialog{display:none}.compare-grid{grid-template-columns:repeat(2,minmax(0,1fr))}main{padding:0}.image-frame{box-shadow:none}}
+</style></head><body><main>
+<header class="intro"><div><span class="eyebrow">逆转五丈原 / 方案比较存档 / 2026.10.22</span><h1>玄青已采用，月白保留备选</h1><p>用户已选定玄青，正式游戏已接入。本页保留选择前的深浅方案截图，便于比较设计；它们不代表当前实机版本。</p><div class="status-line"><b>玄青已采用</b><a href="../xuan-live/index.html">查看正式实机图册 ↗</a><a href="http://127.0.0.1:8812/" target="_blank" rel="noopener">进入正式试玩 ↗</a></div></div><a href="../index.html#ui">返回完整美术图册 ↗</a></header>
+<nav class="page-navigation" aria-label="界面比较"><div class="tabs" role="tablist" aria-label="比较页面">${pages.map((page, index) => `<button type="button" role="tab" id="tab-${page.id}" data-page="${page.id}" aria-selected="${index === 0}" aria-controls="comparison" tabindex="${index === 0 ? 0 : -1}">${page.title}</button>`).join('')}</div><p class="page-hint" id="page-hint" aria-live="polite">${pages[0].description}</p></nav>
+<section class="compare-grid" id="comparison" role="tabpanel" aria-labelledby="tab-settings">${cards}</section>
+<div class="shared-note"><span>以下均为方案比较截图</span><span>点击截图放大 · Esc 关闭</span><span>正式试玩及历史预览需本机游戏服务运行</span></div>
+<details class="tablet-section"><summary>查看窄屏补充截图</summary><p>窄屏截图独立于上方页签，以实际捕获画面为准。</p><div class="tablet-grid">${tabletCards}</div></details>
+<p class="scope-note">玄青方向由用户选定并已正式接入；月白保持备选。这里的旧图是独立设计预览的运行截图，正式版本以玄青实机图册为准。离线可查看已有图片与放大图，试玩与交互预览需要启动本机服务；技术检查不替代后续用户对实机细节的审核。</p>
+</main><dialog id="viewer" aria-labelledby="viewer-title"><header><span id="viewer-title"></span><button type="button" id="close-viewer" aria-label="关闭大图">关闭 ×</button></header><img id="viewer-image" alt=""><p class="viewer-note">方案比较截图 · 非当前正式实机 · 玄青已采用，月白保留备选</p></dialog>
+<script>
+const themes=${JSON.stringify(themes)}, pages=${JSON.stringify(pages)}, prefix=${JSON.stringify(prefix)};
+let selectedPage='settings';
+const tabs=Array.from(document.querySelectorAll('[data-page]'));
+const source=(theme,page)=>prefix+'/'+theme+'-'+page+'.png';
+const frames=Array.from(document.querySelectorAll('.image-frame'));
+function setImage(frame,url,alt){
+  const img=frame.querySelector('img');frame.classList.add('pending');frame.disabled=true;
+  img.onload=()=>{frame.classList.remove('pending');frame.disabled=false;};
+  img.onerror=()=>{frame.classList.add('pending');frame.disabled=true;};
+  img.alt=alt;img.src=url;
+  if(img.complete&&img.naturalWidth){frame.classList.remove('pending');frame.disabled=false;}
+}
+frames.forEach(frame=>{const img=frame.querySelector('img');setImage(frame,img.getAttribute('src'),img.alt);});
+function selectPage(id,focus){
+  const page=pages.find(p=>p.id===id);if(!page)return;selectedPage=id;
+  tabs.forEach(tab=>{const active=tab.dataset.page===id;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;if(active&&focus)tab.focus();});
+  document.querySelector('#comparison').setAttribute('aria-labelledby','tab-'+id);
+  document.querySelector('#page-hint').textContent=page.description;
+  document.querySelectorAll('.theme-card').forEach(card=>{
+    const theme=themes.find(t=>t.id===card.dataset.theme),frame=card.querySelector('.image-frame');
+    frame.setAttribute('aria-label','放大'+theme.title+page.title+'截图');
+    setImage(frame,source(theme.id,id),theme.title+' · '+page.title+' · 实际运行截图');
+    card.querySelector('[data-preview]').href='http://127.0.0.1:8812/modal-suite.html?theme='+theme.id+'&page='+id;
+  });
+}
+tabs.forEach((tab,index)=>{
+  tab.addEventListener('click',()=>selectPage(tab.dataset.page,false));
+  tab.addEventListener('keydown',event=>{
+    let next=index;
+    if(event.key==='ArrowRight')next=(index+1)%tabs.length;
+    else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;
+    else if(event.key==='Home')next=0;
+    else if(event.key==='End')next=tabs.length-1;
+    else return;
+    event.preventDefault();selectPage(tabs[next].dataset.page,true);
+  });
+});
+const viewer=document.querySelector('#viewer');
+frames.forEach(frame=>frame.addEventListener('click',()=>{
+  const theme=themes.find(t=>t.id===frame.dataset.open),shot=frame.dataset.shot||selectedPage;
+  const title=theme.title+' · '+(shot==='tablet'?'窄屏补充':pages.find(p=>p.id===shot).title);
+  document.querySelector('#viewer-title').textContent=title;
+  document.querySelector('#viewer-image').src=source(theme.id,shot);
+  document.querySelector('#viewer-image').alt=title+'实际运行截图';viewer.showModal();
+}));
+document.querySelector('#close-viewer').addEventListener('click',()=>viewer.close());
+viewer.addEventListener('click',event=>{const r=viewer.getBoundingClientRect();if(event.target===viewer&&(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom))viewer.close();});
+</script></body></html>`;
+
+mkdirSync(directory, { recursive: true });
+writeFileSync(resolve(directory, 'index.html'), html, 'utf8');
+const expected = themes.flatMap(theme => [...pages.map(page => `${theme.id}-${page.id}.png`), `${theme.id}-tablet.png`]);
+console.log(JSON.stringify({ output: relative(root, resolve(directory, 'index.html')).replaceAll('\\', '/'), screenshotsPresent: expected.filter(name => existsSync(resolve(screenshots, name))), screenshotsPending: expected.filter(name => !existsSync(resolve(screenshots, name))) }, null, 2));

@@ -1,0 +1,11 @@
+from pathlib import Path
+import json
+O=Path(__file__).resolve().parent
+sets={'priority':[('V25-06原片','generated/V25-06-raw.mp4'),('V25-07原片','generated/V25-07-raw.mp4'),('V25-06手部草稿','review/picture-repair/V25-06-hands-draft.mp4'),('V25-07灯火草稿','review/picture-repair/V25-07-lamp-draft.mp4'),('V24-03原片','generated/V24-03-R2-raw.mp4'),('V24-06原片','generated/V24-06-raw.mp4'),('V24-03桌案草稿','review/picture-repair/V24-03-R2-hands-draft.mp4'),('V24-06灯火草稿','review/picture-repair/V24-06-lamp-draft.mp4')]}
+html='''<!doctype html><meta charset="utf-8"><title>G3画面可用性复核</title><style>body{background:#151515;color:#eee;font:16px sans-serif}video{width:1050px;max-width:95vw}pre{white-space:pre-wrap}button{padding:12px}</style><h2>G3画面可用性复核</h2><button id="go">播放本批</button><video controls muted id="v"></video><pre id="s"></pre><pre id="log"></pre><script>
+let sets=SETS, clips=sets[new URLSearchParams(location.search).get('set')||'priority'],i=0,v=document.querySelector('video'),log=[];
+async function init(){let q=new URLSearchParams(location.search);if(q.get('manifest'))clips=await(await fetch(q.get('manifest'))).json();}init();
+function play(){v.src=clips[i][1];v.play()};document.querySelector('button').onclick=play;
+v.addEventListener('ended',()=>{let played=[];for(let j=0;j<v.played.length;j++)played.push([v.played.start(j),v.played.end(j)]);log.push({id:clips[i][0],file:clips[i][1],duration:v.duration,played,ended:true});document.querySelector('#log').textContent=JSON.stringify(log,null,2);i++;if(i<clips.length)play()});setInterval(()=>document.querySelector('#s').textContent=(clips[Math.min(i,clips.length-1)]?.[0]||'')+' '+v.currentTime.toFixed(2)+' / '+(v.duration||0).toFixed(2)+' '+(v.ended?'ended':v.paused?'paused':'playing'),100);
+</script>'''.replace('SETS',json.dumps(sets,ensure_ascii=False))
+(O/'picture-player.html').write_text(html,encoding='utf-8');print('Picture player prepared.')

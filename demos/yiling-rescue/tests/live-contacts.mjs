@@ -1,0 +1,9 @@
+import assert from 'node:assert/strict';
+import {writeFile,mkdir} from 'node:fs/promises';
+const out='outputs/yiling-rescue-choices-20261028';await mkdir(out,{recursive:true});let s;const log=[];const base='http://127.0.0.1:8828';
+async function post(path,data={}){const response=await fetch(base+'/api/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session:s?.id,revision:s?.revision,...data})});const r=await response.json();if(!response.ok)throw new Error(r.error);if(r.state)s=r.state;log.push({path,...data,reply:r.reply,hour:s?.hour,troops:s?.troops,names:s?.routes.map(r=>r.name)});await writeFile(out+'/live-contacts.json',JSON.stringify(log,null,2));console.log(path,data.target??'',r.reply??'');return r;}
+await post('start');assert.equal(s.troops,2500);await post('camp-choice',{target:'liu',subject:'front',choice:'trace'});assert.ok(s.routes.some(r=>r.id==='front'));
+await post('camp-choice',{target:'liu',subject:'ma',choice:'camp'});assert.ok(!s.routes.some(r=>r.id==='ma'));const p=await post('preview',{orders:[]});await post('commit',{token:p.token});assert.equal(s.troops,2500);await post('next');assert.equal(s.troops,3000);assert.ok(s.routes.some(r=>r.id==='ma'));
+await post('camp-choice',{target:'attendant',subject:'huang',choice:'motive'});assert.ok(s.routes.some(r=>r.id==='huang'));
+const delayed=await post('camp-choice',{target:'clerk',subject:'sha',choice:'roster'});assert.ok(!s.routes.some(r=>r.id==='sha'));assert.ok(!delayed.reply.includes('沙摩柯'));
+const p2=await post('preview',{orders:[]});await post('commit',{token:p2.token});assert.equal(s.hour,4);await post('camp-choice',{target:'boat',subject:'sun',choice:'recipient'});assert.ok(s.routes.some(r=>r.id==='sun'));assert.equal(s.hour,4);await post('next');assert.equal(s.troops,3500);assert.ok(s.routes.some(r=>r.id==='sha'));console.log('LIVE CHOICES PASS');

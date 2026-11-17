@@ -1,0 +1,534 @@
+{
+  "date": "2026-11-15",
+  "authorization": "用户明确要求针对本PV采用指定MiniMax-H3 SOP生成视频；本次覆盖完整108秒稿，25条生成任务，每条最多提交一次，不自动重新生成。",
+  "sop": "D:/AI视频/VJ-1106/api-tools/docs/MiniMax-H3-API视频生成SOP-20261114-v1.md",
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "ratio": "16:9",
+  "audio": "H3原片保留；工作剪辑无声，无BGM。配音与声音设计未在本轮制作。",
+  "source_storyboard": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\storyboard.json",
+  "total_edit_duration": 108,
+  "generated_edit_duration": 104,
+  "title_duration": 4,
+  "requested_total_seconds": 139,
+  "units": [
+    {
+      "id": "G01",
+      "title": "铜印在身",
+      "version": "v1",
+      "duration": 5,
+      "edit_duration": 3,
+      "source_shots": [
+        "S01"
+      ],
+      "reference_ids": [
+        "N07"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N07-奔马-左腰铜印-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1是准确道具、衣装及低头构图。第一视角骑在灰白马上低头看左前腰，短绦系牢的小铜印贴着衣料，随正常马步小幅碰动。相机跟身体上下起伏，背景道路持续后退。印体保持25毫米见方、低矮穿孔鼻钮，不放大，不金黄，不漂浮。结束保持同一位置与自然运动，不能定格。",
+      "prompt_sha256": "455bd7344bf465fcc3dfd12f73deb6d6f9d596ad02ac9f0385d917f561427060",
+      "status": "prepared"
+    },
+    {
+      "id": "G02",
+      "title": "白马奔向赤红天际",
+      "version": "v1",
+      "duration": 15,
+      "edit_duration": 14,
+      "source_shots": [
+        "S02",
+        "S03"
+      ],
+      "reference_ids": [
+        "E11"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E11-白马第一视角.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定灰白马、第一视角、缰绳、山路及远处火光。全程一个连续向前的奔马镜头，前7秒沿弯曲山路疾驰，近处马鬃和林木有真实视差，视线看清路面；第7至14秒沿同一方向转过弯，树木遮挡退出，视线轻轻抬起，远山后的暗红烟顶和沿江多处营火逐渐显出。是实际营火映红烟云，不是晚霞、日出或魔法。第一视角，不露骑手脸、全身或第三人称背影，不突然飞成航拍。马耳、马颈、鬃毛各自运动可信，缰绳连到正确位置。最后1秒延续前进作为剪辑余量。",
+      "prompt_sha256": "a5c3a55a01ac426d10c57cdd820961784b883f76c920b38ce575dc98fc8b9c3e",
+      "status": "prepared"
+    },
+    {
+      "id": "G03",
+      "title": "庞统托付",
+      "version": "v1",
+      "duration": 8,
+      "edit_duration": 7,
+      "source_shots": [
+        "S04"
+      ],
+      "reference_ids": [
+        "E12",
+        "E14"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E12-庞统托印.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E14-掌心铜印25毫米.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定庞统脸、完整黑冠、深蓝衣、军帐凤鸟漆屏及正面中景；参考图2只锁小铜印25毫米形制与材质，不套用巨大的近景手掌比例。庞统看着镜头，右掌托印从腰前向镜头送出一小段，视线稳定，另一只手仍在腰边。仅庞统自然张嘴说一句话的口型，约前6秒，句意为“此乃我的私印，请你持此，速救主公。”不可生成声音或字幕。冠帽不变、手指五根、印在掌心有接触阴影。第6至8秒说完闭口，托住小印等我接，不收回、不重复递印。",
+      "prompt_sha256": "735ad3f428e8323ec9056e23844386fc472ce26d2fab64deeff17b5f8b566c74",
+      "status": "prepared"
+    },
+    {
+      "id": "G04",
+      "title": "一次真实交印",
+      "version": "v1",
+      "duration": 5,
+      "edit_duration": 4,
+      "source_shots": [
+        "S05"
+      ],
+      "reference_ids": [
+        "E14"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E14-掌心铜印25毫米.png"
+      ],
+      "depends_on": "G03",
+      "action": "参考图1为上一镜实际末帧，锁定庞统、伸出的右掌与同一印；参考图2只补充印与手的细节。相机是我的眼睛，从庞统的脸自然低头至他掌心。我穿青白布衣的左手从左下方伸入，左掌在小印下方接稳，庞统将同一枚印和短绦轻放到我的左掌，等确实承住才撤开右手。只交接一次，印不能复制、穿过皮肤、变成大方块，手掌不能融合。最终我的左掌托住印，庞统手退出；不额外张嘴。",
+      "prompt_sha256": "618817efb66026b7a1ea7dd9cbe47ab881a0ec56b6c7b6cad0cefdf642788c11",
+      "status": "prepared"
+    },
+    {
+      "id": "G05",
+      "title": "夷陵沿江火营全景",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 1,
+      "source_shots": [
+        "S06"
+      ],
+      "reference_ids": [
+        "E01"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E01-夷陵沿江火营-找回原图.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定沿江连营与山路地理。极缓慢从山坡高处向前推进，不穿进帐篷。沿江5至7处独立木栅营寨的前、中、远层次同时在燃烧，真实布帐烧穿、梁架发红、烟被风吹向同一方向；道路上小人持续向西撤出，有人搀扶伤兵。江面反射局部火光，烟有厚薄层次，不能把地面烧成岩浆，不加爆炸。旗帜的汉字形状稳定，不另生文字。前1秒即有可用的动态大全景，后面延续运动提供选择。",
+      "prompt_sha256": "923616d16e18576355177daae3c86655b718a5abcd5f8089e9b08e2dcbccb344",
+      "status": "prepared"
+    },
+    {
+      "id": "G06",
+      "title": "营道架走伤兵",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 2,
+      "source_shots": [
+        "S06"
+      ],
+      "reference_ids": [
+        "E02"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E02-夷陵营内撤军-找回原图.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定地面营道、帐布与辎重车。镜头保持地面眼高，缓慢向前。两名士兵分别从左右架住同一伤兵，三人脚步不齐但真实受力，持续背对镜头沿营道远去；另外两名士兵在前方继续撤离。伤兵的腿偶尔拖地，不自己突然健步如飞。左侧帐布燃烧卷曲、粗麻绳受力、后景烟火继续移动，物件不融化变形。不要让人全部停住供观看，不增加第六个清晰近处人物。",
+      "prompt_sha256": "d9c091160a32d304e25b4e36b2824c935bc7960a96293ebb437537182d715412",
+      "status": "prepared"
+    },
+    {
+      "id": "G07",
+      "title": "冯习报败转马救驾",
+      "version": "v1",
+      "duration": 8,
+      "edit_duration": 7,
+      "source_shots": [
+        "S07",
+        "S08"
+      ],
+      "reference_ids": [
+        "N01"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N01-冯习张南-救驾受阻-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定两个不同人脸、两匹深色马、左右位置和城门道路。左边冯习身形较壮、暗红围巾短浓须；右边张南较瘦、黑巾短须、黄褐袖，禁止互换身份。0至4秒左边冯习稍向张南倾身，口型说“御营败了，速去救驾！”，右边张南闭口听、转眼望向前方；4至7秒两人明确收缰并向画面深处左侧的救驾道路转马，马各自用真实步伐转身，镜头轻轻向侧后方跟进，前路出现敌方横列长矛，两马随之减速。实际握缰、马头颈与前后腿动作连贯，不瞬间整体旋转，不腾空，不人马融合。最后1秒维持道路受阻与马的小动作，结束时两人仍在一起。",
+      "prompt_sha256": "5787310a53683b27479c6dc1f15f8933e21f02eace5b52a81e99a26f6d98abd4",
+      "status": "prepared"
+    },
+    {
+      "id": "G08",
+      "title": "城门后路杀出",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S09"
+      ],
+      "reference_ids": [
+        "N01"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N01-冯习张南-救驾受阻-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1只锁定原来的木城门、围栅和两军衣甲，不复刻两名将领的正面构图。这是同一营路的反向机位：镜头站在蜀军位置朝后方木门看，前景仅有一个蜀卒的肩与长矛，孙桓部吴军从已打开的木门向镜头这一侧跑出，形成追击。他们跑步有重量、脚踏泥地溅少量泥，兵器握持稳定。前景蜀卒听见身后动静，转肩并将矛转向来敌。不能再展示将领摆拍，不把木门变成宫殿，不添文字，敌军不穿过门板。",
+      "prompt_sha256": "2435128d7497956c4c7c9b40a9ef034df8d45d5e32c379adc2a46555cf112267",
+      "status": "prepared"
+    },
+    {
+      "id": "G09",
+      "title": "冯习张南各迎一面",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S10"
+      ],
+      "reference_ids": [
+        "N01"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N01-冯习张南-救驾受阻-v1.png"
+      ],
+      "depends_on": "G07",
+      "action": "参考图1是上一条两骑转马后的实际末帧，参考图2只锁两人面孔衣甲及营道。相机转到两骑之间的侧面，左边冯习向前路敌军、右边张南回身朝后路来敌。两人先短暂互望一次，随即各向自己的敌军举起兵器迎住一击，身体和马随接触受力，绝不空挥。烟尘从中间横过，最后遮住两人之间的视线。人数有限且清晰，刀枪不穿过人马，马不撞成一体，不展示血腥伤口，不添加对白口型。",
+      "prompt_sha256": "4b9f5ce1bebcc305038a5f93e6c355078cd4c79d2c5f9c60351e72286bb55fbe",
+      "status": "prepared"
+    },
+    {
+      "id": "G10",
+      "title": "傅肜断后拒降",
+      "version": "v1",
+      "duration": 10,
+      "edit_duration": 8,
+      "source_shots": [
+        "S11",
+        "S12",
+        "S13"
+      ],
+      "reference_ids": [
+        "N02"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N02-傅肜-断后拒降-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定傅肜演员、朴素头盔、深铁札甲、低持的单刃刀及营道窄口。固定中景轻微推近，全程同一位傅肜。0至2秒他站在倒下的部卒之间喘息，手指有疲惫而不夸张颤动，远处敌军停住；2至4秒他看向画外右侧，闭口听劝降，绝不能自己做劝降句的口型；4至7.5秒他直视对方，沙哑拒降的自然口型，唯一对应原句“吴狗！何有汉将军降者！”；7.5至8秒及其后余量他闭口握稳刀，向右前方敌军迈出一步。刀和甲有重量，动作随呼吸进行，不长啸、不张臂、不翻转刀型，地上同袍不复活，背景火烟持续。无实际声音、无字幕。",
+      "prompt_sha256": "a7ecd334a22cb5efe479cb435443da61cbd3a876eaa4200ca602d9f41fcecdfd",
+      "status": "prepared"
+    },
+    {
+      "id": "G11",
+      "title": "沙摩柯回望中箭坠马",
+      "version": "v1",
+      "duration": 8,
+      "edit_duration": 6,
+      "source_shots": [
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "reference_ids": [
+        "N03"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N03-沙摩柯-孤骑回望-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定沙摩柯、深棕马、两张弓与低垂铁蒺藜骨朵，来路无人。一个正常速度连续侧面跟拍，人物向右走，禁止慢动作。0至2秒他回头看左后来路，空路没有部众，马仍小步走；2至3.4秒他刚回头向前，一支真实木箭从画外飞来击中胸前甲衣，箭留在甲衣上，身体受冲击短促一顿，禁止瞬移出现多支箭，不出现穿透、血口；3.4至4.4秒手先松开，沉重骨朵落到泥地；4.4至6秒他失去平衡从马的近侧自然滑落，人体重量改变鞍具和马步，马受惊向右继续跑出，镜头顺势略向下跟到落地的骨朵及人。6至8秒只留空路与离去马的余势，不能重新骑回、不复活、不增加敌将。箭命中、松手、落物、落人必须有清楚因果，宁可收敛动作，不可融化穿插。",
+      "prompt_sha256": "95caacde512b87decaae4a6e830176090f3a633d80133e3fdc39b7243790c103",
+      "status": "prepared"
+    },
+    {
+      "id": "G12",
+      "title": "汉旗焦裂",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 2,
+      "source_shots": [
+        "S17"
+      ],
+      "reference_ids": [
+        "E03"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E03-夷陵汉旗.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定同一块真实暗红汉旗、木杆、汉字与火场。相机轻微推近，旗布被同一风向鼓起又落下，汉字随着布褶连续变形而不改字。火从下方着火帐布实际接触旗沿，下缘一小片布卷曲发黑后被风扯裂，落下少量焦屑。不是整面旗瞬间爆燃，不把布变成硬质招牌，不生成多余汉字、字幕或符号。",
+      "prompt_sha256": "40148306db76deef8b9dcaebbee49c8f8f9c77054fa28cbb0062d03360dcae49",
+      "status": "prepared"
+    },
+    {
+      "id": "G13",
+      "title": "上方谷暴雨与远火",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S18"
+      ],
+      "reference_ids": [
+        "N08"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N08-上方谷-同一演员雨火-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定同一巨大峡谷、左前景石台上的诸葛亮、谷底残火、暴雨、冷灰色温。起镜偏重中远处少量低火线，镜头缓慢拉远并向左揭出诸葛亮及前景石台，形成一个完整空间；不是穿越到另一个山谷。雨持续斜落、湿岩反光自然，远火被雨压住仅残小火和暗红炭，局部蒸汽随风。禁止重新猛烈燃烧、火墙、岩浆、全谷红雾。诸葛亮保持原地，只有衣摆雨水轻动，不离开悬崖。",
+      "prompt_sha256": "08fc446ce564838f5fdc9fded3e11db566423b8c986d2d8a9ca0aed59c78539e",
+      "status": "prepared"
+    },
+    {
+      "id": "G14",
+      "title": "谷底雨压残火",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S19"
+      ],
+      "reference_ids": [
+        "N08"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N08-上方谷-同一演员雨火-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1只提供同一峡谷湿冷色温与远处被雨浇灭的营地，重新取谷底局部近景，不出现诸葛亮。眼前两根焦黑倒塌木梁和一块湿麻布，在真实暴雨中只有背雨夹缝一点低小橙火，雨滴撞进火边使火舌不断压低，黑湿木头冒白汽，积水起涟漪，暗红炭也逐渐变暗。微小火必须有真实燃料，不悬浮、不突然长高；无熔岩、无爆炸、无发亮地面、无人物、无新建筑。相机固定观察这一个物理变化。",
+      "prompt_sha256": "08b4c11d85dda5f5767ecb2aadc60343dc1089bb4908128af88834bfbf0f2be7",
+      "status": "prepared"
+    },
+    {
+      "id": "G15",
+      "title": "诸葛亮仰望骤雨",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S20"
+      ],
+      "reference_ids": [
+        "N08",
+        "E09"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N08-上方谷-同一演员雨火-v1.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E09-诸葛亮含泪.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定上方谷诸葛亮的年龄、雨衣冠帽、石台与冷灰雨光；参考图2只校对同一演员脸部骨相，不复制干燥衣服、刑场或夕阳。取较近的侧面半身，诸葛亮先看画外右下谷底，再慢慢抬眼望向雨天，握羽扇的手从胸前垂向腰间。嘴唇始终合拢，不说话、不仰天长啸，表情是克制而疲惫的落空。雨沿帽檐胡须和扇羽实际滴落，湿衣服有重量，皮肤自然，不突然换脸或完全白发衰老。",
+      "prompt_sha256": "fb20ef0d723656b9cdbcb859f3b6bc7ea84e1898ee745b758601e86438ff243e",
+      "status": "prepared"
+    },
+    {
+      "id": "G16",
+      "title": "关羽持刀松手",
+      "version": "v1",
+      "duration": 5,
+      "edit_duration": 4,
+      "source_shots": [
+        "S21"
+      ],
+      "reference_ids": [
+        "E05"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E05-关羽持刀.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定关羽整个人、绿巾绿袍、长髯、全长竖直青龙刀和夕照湿地。镜头极缓慢向人物靠近，保持刀刃、长柄与地面关系可辨。关羽先立定，看向画外，衣角与头巾被风拂动；第2至4秒持刀的手缓慢松开，长刀先轻微向画面右侧倾斜，不在这一镜落地、不自行飞走。远方敌方军列小幅前移形成压力，不能变成胜利检阅。无雨、无对白、无魔法，不改刀柄长度。",
+      "prompt_sha256": "a67c9379930191bd0c421e454033e7af9828ae4e938bfde0e8103ca79f301bde",
+      "status": "prepared"
+    },
+    {
+      "id": "G17",
+      "title": "整把青龙刀倒地",
+      "version": "v1",
+      "duration": 5,
+      "edit_duration": 3,
+      "source_shots": [
+        "S22"
+      ],
+      "reference_ids": [
+        "E06"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E06-关羽落刀.png"
+      ],
+      "depends_on": "G16",
+      "action": "参考图1是关羽持刀松手的实际末帧，只锁前一刻动作；参考图2是完整长柄青龙刀落地的目标几何与夕照湿地，不是要求开头已经躺地。低机位近景，关羽身体在画外，长柄刀从松手后的倾斜状态受重力倒向泥地，长柄端及刀刃先后接触地面，微弹一次即停，红缨稍晚落下。保持完整长木柄和刀形，不变成短刀，不分裂、不悬浮、不穿地。前2秒完成倒地，2至3秒余震消退，3至5秒风吹缨的极小余动供选择，无新的主动动作。",
+      "prompt_sha256": "7988667985e8e1534cf0f1a624efa271165766df62d021275cfd38cc1dc71000",
+      "status": "prepared"
+    },
+    {
+      "id": "G18",
+      "title": "马谡刑刀在前",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 2,
+      "source_shots": [
+        "S23"
+      ],
+      "reference_ids": [
+        "E07"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E07-马谡刑场.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定马谡捆缚、刑刀在他身前一臂左右、刑场守卫和傍晚方向。非常缓慢向内推近，刽子手只调整一次短柄握持，低垂刑刀维持斜线且离人体安全间距，不挥砍、不触碰。马谡被绑的双手一直在背后，胸腹有自然呼吸，头略抬，目光开始向右上。嘴不说话；士兵不乱跑，不出现血腥或行刑结果。",
+      "prompt_sha256": "63f6ebd6748dc3cb72ade42121f857f03a55653fdc0085f2637d30b0c0d3a643",
+      "status": "prepared"
+    },
+    {
+      "id": "G19",
+      "title": "马谡抬眼",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S24"
+      ],
+      "reference_ids": [
+        "E08"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E08-马谡抬眼.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定同一个马谡、脸、发髻、灰褐囚衣、绳缚及背景。跪姿眼高紧近景，他原先低看，吸一口气后慢慢抬眼望向画面右上方的诸葛亮，嘴唇刚要动却停住，最终合拢，没有发声。眼眶微湿而不夸张哭喊，眼珠看向明确位置，不翻白眼、不转头看镜头，不变换面孔；皮肤与鬓发细节自然。",
+      "prompt_sha256": "08ba9c975065b0d42c753e60b7d4fbf7f057a29005ceec790531f34a6c1c8f45",
+      "status": "prepared"
+    },
+    {
+      "id": "G20",
+      "title": "诸葛亮含泪垂眼",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S25"
+      ],
+      "reference_ids": [
+        "E09"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E09-诸葛亮含泪.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定诸葛亮47岁左右同一演员、冠帽、蓝灰袍和光线。反打紧近景，他位于右侧，先看画面左下方的马谡，保持目光约1秒，随后眼皮慢慢垂下，已有的一滴细泪沿面颊自然滑下，嘴唇轻抿但始终闭口。只有一次视线变化和一次细微呼吸，不反复摇头、不大哭、不念台词，不变脸，不多出泪线或夸张皱纹。",
+      "prompt_sha256": "6f3d85401f03ca4f6d13ab0c11e637830aba6edb2fe70fbb6ebfb5f1ad16e508",
+      "status": "prepared"
+    },
+    {
+      "id": "G21",
+      "title": "宽羽扇举起掩面",
+      "version": "v1",
+      "duration": 5,
+      "edit_duration": 3,
+      "source_shots": [
+        "S26"
+      ],
+      "reference_ids": [
+        "E10",
+        "N04"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E10-诸葛亮监斩中景.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N04-诸葛亮-举扇掩面-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定监斩台中景、同一演员、黑冠、蓝灰袍、桌案、左手扶案和初始站姿；参考图2锁定羽扇正确展开宽度及掩面动作终点，不把掩面终点提前当成起始状态。起镜右手持同一把宽灰白羽扇于腰前，扇面从开始就约30厘米宽、总长46厘米，不使用参考图1旧的窄扇。0至2.5秒他慢慢举起右手，羽扇上移自然遮住眉眼和鼻部，头稍低，左手始终撑案；2.5至5秒动作落定、身体保留呼吸。手握真实单柄，五指不融化，羽毛数量和扇形在上举时稳定，不缩放扇子，不把人脸溶成羽毛。",
+      "prompt_sha256": "0b4baf362e7f6d1ef2b3aeb7d8764af58fd046e2189058d3bb929d0113880b06",
+      "status": "prepared"
+    },
+    {
+      "id": "G22",
+      "title": "五丈原扇与未竟地图",
+      "version": "v1",
+      "duration": 7,
+      "edit_duration": 6,
+      "source_shots": [
+        "S27",
+        "S28"
+      ],
+      "reference_ids": [
+        "N05"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1锁定同一演员延续到约53岁、黑袍白襟、暗色冠帽、夜帐、地图、铜灯和羽扇。连续一镜，0至3秒从案旁低垂的羽扇及左手近景缓慢上移，露出诸葛亮侧面和右手，保持同一空间不穿透桌子；3至5秒他从桌边缓慢向地图伸右手；5至6秒指尖停在地图边缘上方一小段，气力不足而停止，6至7秒留呼吸余量。地图图样稳定且无可读文字，火焰小幅晃动，皮肤自然不过度衰老，不变成八旬老人，不突然收回手或翻动地图，不加新人物。",
+      "prompt_sha256": "32a8c3f571c97b1676832ba8c0bfa3bac27b458647372b376ea8cb6a77bcb4cb",
+      "status": "prepared"
+    },
+    {
+      "id": "G23",
+      "title": "案旁灯灭",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S29"
+      ],
+      "reference_ids": [
+        "N05"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1只锁定五丈原案旁同一小铜灯、木案、夜帐色温。另取灯火近景，三足小铜油灯在画面右前，灯芯清楚，背后帐帘虚化；开头小火仍正常燃烧，约1秒后帐帘被外面一阵风推动，灯焰侧偏细长，再变小并熄灭，约2.5秒时只剩细烟；烟随风略斜散开。灯本体不动、不爆炸，油不溅起，不能先熄后亮或重复熄灭。保持暗部可读，不用整屏淡黑代替实际火焰熄灭。",
+      "prompt_sha256": "4db5a5b9b9e273ddda84b016873d1ed7639e0752d34bd2f9cdc00ceee3943a61",
+      "status": "prepared"
+    },
+    {
+      "id": "G24",
+      "title": "逆撤军而行蹲到伤兵前",
+      "version": "v1",
+      "duration": 4,
+      "edit_duration": 3,
+      "source_shots": [
+        "S30"
+      ],
+      "reference_ids": [
+        "N06",
+        "E02"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N06-夷陵-伸手救人-v1.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E02-夷陵营内撤军-找回原图.png"
+      ],
+      "depends_on": null,
+      "action": "参考图1只锁定车轮旁年轻伤兵的脸、黑褐衣甲、受伤坐姿和车轮，不使用图中已经互握的前臂动作；参考图2锁定夷陵营道、帐布、辎重车和撤军方向。严格我的第一视角，从距离伤兵约2米的眼高开始，我向营火方向走近，其他撤退士兵从身旁向后方离开。伤兵坐在左边烧旧车轮旁，尚未伸手，抬眼看向我。相机随我蹲下自然降低到伤兵面前，最后看清他面孔和单侧屈膝。全程我的手在画外、双方尚未接触、不要提前互握；不露我脸、背影或第三人称身体。不要将已握住的参考图当成视频首帧，禁止从握手动作倒放来假装靠近。",
+      "prompt_sha256": "fe625ffdc2ae57cc35fb325a1c1055ac3699e6904aeae17a0ad1d7a612775c7d",
+      "status": "prepared"
+    },
+    {
+      "id": "G25",
+      "title": "伸手互握扶起",
+      "version": "v1",
+      "duration": 6,
+      "edit_duration": 5,
+      "source_shots": [
+        "S31",
+        "S32"
+      ],
+      "reference_ids": [
+        "N06",
+        "E15"
+      ],
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N06-夷陵-伸手救人-v1.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E15-骑手衣装与灰白马参考.png"
+      ],
+      "depends_on": "G24",
+      "action": "参考图1是上一镜我蹲到伤兵面前的实际末帧，锁定距离和双方位置；参考图2是互握前臂的动作终点与伤兵身份；参考图3只锁我的青白衣袖、银灰轻甲护腕，不复制马或第三人称。严格第一视角，0至2秒我的右手从画面右下向伤兵伸出，他先看手、再伸左手；2至3秒我的右手握住他左前臂，他的左手回握我的右前臂；3至5秒双方开始真实用力，袖口绷紧，伤兵肩背从车轮离开、身子上移准备站起。最后1秒延续向上受力，不冻结或淡黑，留给剪辑切断。恰好两只参与握持的手、两条前臂，五指正确、腕肘连贯、皮肤接触和重心可信，不能穿插、多指或互换左右。伤兵不说话、嘴自然闭合，无实际声音，不突然健步跑走。",
+      "prompt_sha256": "f1fa160e5a910d41bf5c6cd23e3dd4f79857ddd6c0cfbe2caa81364361d4665d",
+      "status": "prepared"
+    }
+  ]
+}

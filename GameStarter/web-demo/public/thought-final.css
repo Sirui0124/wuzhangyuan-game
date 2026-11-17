@@ -1,0 +1,66 @@
+/* Approved left/right canvas: fixed viewport, latest entry, two text sizes. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen { font:20px/1.6 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen :is(p,span,small,h1,h2,h3,button,textarea,blockquote) { font-family:var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .workspace-layout { padding:22px 34px 20px;overflow-x:hidden;overflow-y:auto;scrollbar-gutter:stable;overflow-anchor:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .reasoning-heading { margin-bottom:24px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .workspace-modes { margin-bottom:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-record { grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;margin-bottom:30px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .record-evidence { gap:7px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .record-evidence .working-clue { display:flex;flex:none;align-items:center;gap:3px;min-height:36px;min-width:0;max-width:100%;padding:2px 7px 2px 9px;flex-wrap:nowrap;border:0;border-bottom:1px solid #b6bd9c26;background:linear-gradient(90deg,#a7b69512,transparent); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue-title { display:block;font:20px/1.6 var(--serif);min-width:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue-remove { position:static;flex:none;width:28px;height:30px;margin-left:auto;padding:0;font:18px/1 var(--serif);opacity:.42; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue-remove:hover,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue-remove:focus-visible { opacity:1; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .record-outputs { gap:14px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-outcome { padding:9px 14px;background:linear-gradient(90deg,#a9b48a17,transparent); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-outcome h2 { margin:0;font:28px/1.5 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .outcome-title { font:28px/1.5 var(--serif); }
+/* The detailed interpretation is read in the anchored popover, not repeated in every node. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen .outcome-insight { position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap;font:20px/1.6 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-editor { margin-top:4px;padding-top:20px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .current-question { font:28px/1.5 var(--serif);color:#e7d8b6;margin:0 0 14px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-dropzone { gap:7px 13px;min-height:44px;align-items:center; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .drop-invitation { flex:none;min-height:40px;padding:4px 10px;font:18px/1.5 var(--serif);border:1px solid #b6ae7e60;background:#152e3370; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .think-button { min-width:110px;min-height:44px;padding:7px 16px;font:20px/1.5 var(--serif);letter-spacing:4px;color:#f3dfb6;background:linear-gradient(110deg,#a45d49,#793e36);border:1px solid #c4936b;box-shadow:inset 0 0 0 3px #e6c79122,0 3px 0 #4b2925; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .think-button:hover:not(:disabled) { background:#ae644b;color:#fff0cb; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .think-button:active:not(:disabled) { transform:translateY(2px); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-await { margin-top:12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-await p,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-action>span,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-action>small,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-tab b,
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-inventory>footer { font:20px/1.6 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-action>p { font:28px/1.5 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-inventory { background:linear-gradient(90deg,#10282de8,#142f32f5); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-inventory>header { padding:16px 16px 12px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-scroll { padding:0 10px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-entry { display:flex;align-items:center;gap:6px;padding:4px 0;border:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-row { flex:1;min-width:0;width:auto;font:20px/1.6 var(--serif);padding:4px 0;gap:5px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-grip { font:18px/1 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-place { width:32px;height:34px;min-height:34px;flex:none;padding:0;font:20px/1 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .inventory-place[aria-pressed=true] { border-color:transparent;background:none;color:#b6c6ad; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover { position:absolute;z-index:45;width:360px;max-width:calc(100% - 24px);max-height:calc(100% - 24px);overflow:auto;overscroll-behavior:contain;padding:16px 18px;background:#143039;color:#e7dfc9;border:1px solid #baa57780;box-shadow:0 10px 30px #0007; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover>header { display:flex;align-items:baseline;justify-content:space-between;gap:12px;color:#ddc79b;font:20px/1.6 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover>header button { flex:none;min-width:30px;min-height:32px;font:20px/1 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover :is(p,blockquote,small,.source-links) { display:block;font:20px/1.65 var(--serif);margin:10px 0 0;color:#c5d0b9; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover .source-links button { font:20px/1.6 var(--serif);color:#d6c69e;text-align:left; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover blockquote { padding:0;border:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .thought-detail-popover small { color:#aebeab; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen .is-revealing .thought-outcome { animation:thought-node-arrival 1200ms ease-out both;animation-delay:calc(280ms + var(--reveal-elapsed)); }
+@keyframes thought-node-arrival { 0%{transform:translateY(14px) scale(.97);box-shadow:0 0 0 1px #dfc68a99;background-color:#b9ad6b22}45%{transform:none;box-shadow:0 0 24px #c8bd7d50}100%{transform:none;box-shadow:none;background-color:transparent} }
+@media(max-width:1000px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .thought-record { gap:32px; }
+}
+@media(max-width:700px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .workspace-layout { padding:18px 16px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .thought-record { grid-template-columns:minmax(0,1fr);gap:38px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .working-clue { flex-basis:auto; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .thought-outcome { margin-left:12px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .thought-input-row { grid-template-columns:minmax(0,1fr); }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .think-button { justify-self:end; }
+}
+@media(prefers-reduced-motion:reduce) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen .is-revealing .thought-outcome { animation:none; }
+}
+:root[data-reduced=true] #game-root .workspace-screen .is-revealing .thought-outcome { animation:none; }

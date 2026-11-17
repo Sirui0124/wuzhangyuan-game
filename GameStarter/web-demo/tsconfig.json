@@ -4,5 +4,5 @@
     "strict": true, "lib": ["ES2022", "DOM"], "rootDir": "../..",
     "outDir": ".build", "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "../assets/scripts/narrative/**/*.ts", "../assets/scripts/GameApi.ts", "../../content/schema/narrative.ts"]
+  "include": ["src/**/*.ts", "../assets/scripts/GameApi.ts"]
 }

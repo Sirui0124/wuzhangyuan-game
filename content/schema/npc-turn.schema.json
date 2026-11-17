@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NPC turn v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "npcId",
+    "stage",
+    "classification",
+    "reply"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "npcId": {
+      "const": "weiyan"
+    },
+    "stage": {
+      "enum": [
+        "first",
+        "authorized"
+      ]
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "disposition",
+        "reason",
+        "evidenceIds"
+      ],
+      "properties": {
+        "code": {
+          "enum": [
+            "ok",
+            "execute",
+            "R1-RETRY",
+            "P2-F1",
+            "P2-F2",
+            "P2-F2B",
+            "P2-F3",
+            "P2-F4",
+            "P2-F5"
+          ]
+        },
+        "disposition": {
+          "enum": [
+            "accept",
+            "revise",
+            "execute"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "evidenceIds": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "code": {
+                "const": "ok"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "disposition": {
+                "const": "accept"
+              }
+            }
+          },
+          "else": {
+            "if": {
+              "properties": {
+                "code": {
+                  "const": "execute"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "disposition": {
+                  "const": "execute"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "disposition": {
+                  "const": "revise"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "reply": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "speaker",
+        "text"
+      ],
+      "properties": {
+        "speaker": {
+          "const": "魏延"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "stage": {
+            "const": "first"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "classification": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "ok",
+                  "execute",
+                  "R1-RETRY"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "classification": {
+            "properties": {
+              "code": {
+                "enum": [
+                  "ok",
+                  "execute",
+                  "P2-F1",
+                  "P2-F2",
+                  "P2-F2B",
+                  "P2-F3",
+                  "P2-F4",
+                  "P2-F5"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Runtime additionally checks that evidenceIds were actually acquired, strings are nonblank prose, role and stage match, and no internal result codes appear in dialogue. New generated replies are limited to 45 characters and 1-2 sentences; existing saved v1 prose remains loadable."
+}

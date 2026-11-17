@@ -1,0 +1,202 @@
+{
+  "id": "CH2-LY09-018",
+  "node": "CH2-LY09-018",
+  "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 6.56,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "1520dbf5-2f1a-4219-9ac8-6c485e7e1979",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:20:04.763Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。唯一允许发声的原句：“丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约6.56秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "ac9adaf11a46699c12a3dc7dfad485c82245d61dda4403985710b3553ccc5dce",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027192004BF644ECF2837868AE79E",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-018-v1.wav",
+  "sha256": "141decff202b7b769f40ac12c3a4c89624c7d27befa361db6ea840402ea8e9d5",
+  "duration": 6.58,
+  "originalDuration": 6.58,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2120,
+        "start_time": 240,
+        "text": "丞相答应这次退军了。",
+        "words": [
+          {
+            "end_time": 320,
+            "start_time": 240,
+            "text": "丞"
+          },
+          {
+            "end_time": 640,
+            "start_time": 560,
+            "text": "相"
+          },
+          {
+            "end_time": 880,
+            "start_time": 760,
+            "text": "答"
+          },
+          {
+            "end_time": 1040,
+            "start_time": 880,
+            "text": "应"
+          },
+          {
+            "end_time": 1160,
+            "start_time": 1040,
+            "text": "这"
+          },
+          {
+            "end_time": 1280,
+            "start_time": 1160,
+            "text": "次"
+          },
+          {
+            "end_time": 1480,
+            "start_time": 1280,
+            "text": "退"
+          },
+          {
+            "end_time": 1680,
+            "start_time": 1560,
+            "text": "军"
+          },
+          {
+            "end_time": 2120,
+            "start_time": 1800,
+            "text": "了"
+          },
+          {
+            "end_time": 2120,
+            "start_time": 2120,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 6360,
+        "start_time": 2600,
+        "text": "魏军还在修路积粮，往后的风险也得想。",
+        "words": [
+          {
+            "end_time": 2680,
+            "start_time": 2600,
+            "text": "魏"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 2840,
+            "text": "军"
+          },
+          {
+            "end_time": 3160,
+            "start_time": 3040,
+            "text": "还"
+          },
+          {
+            "end_time": 3280,
+            "start_time": 3160,
+            "text": "在"
+          },
+          {
+            "end_time": 3440,
+            "start_time": 3280,
+            "text": "修"
+          },
+          {
+            "end_time": 3600,
+            "start_time": 3560,
+            "text": "路"
+          },
+          {
+            "end_time": 3880,
+            "start_time": 3840,
+            "text": "积"
+          },
+          {
+            "end_time": 4160,
+            "start_time": 4120,
+            "text": "粮"
+          },
+          {
+            "end_time": 4160,
+            "start_time": 4160,
+            "text": "，"
+          },
+          {
+            "end_time": 5000,
+            "start_time": 4800,
+            "text": "往"
+          },
+          {
+            "end_time": 5160,
+            "start_time": 5000,
+            "text": "后"
+          },
+          {
+            "end_time": 5280,
+            "start_time": 5160,
+            "text": "的"
+          },
+          {
+            "end_time": 5440,
+            "start_time": 5280,
+            "text": "风"
+          },
+          {
+            "end_time": 5760,
+            "start_time": 5440,
+            "text": "险"
+          },
+          {
+            "end_time": 6000,
+            "start_time": 5800,
+            "text": "也"
+          },
+          {
+            "end_time": 6160,
+            "start_time": 6000,
+            "text": "得"
+          },
+          {
+            "end_time": 6360,
+            "start_time": 6160,
+            "text": "想"
+          },
+          {
+            "end_time": 6360,
+            "start_time": 6360,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:20:59.008Z"
+}

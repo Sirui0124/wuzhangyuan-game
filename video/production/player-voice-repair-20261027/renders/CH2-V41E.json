@@ -1,0 +1,128 @@
+{
+  "id": "CH2-V41E",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V41E-0d1a10e001-20261025.mp4",
+  "oldSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+  "oldSubtitles": "/video/subtitles/CH2-V41E-0d1a10e001-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V41E-ca5d9302.mp4",
+  "sha256": "b0bb9069a55f9ac7cd400b1f543ab669bb6a728653ab9b7aa2b12b776d174c57",
+  "bytes": 7045490,
+  "duration": 16.0,
+  "containerDuration": 16.0,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 384,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V41E",
+    "src": "/video/current/PV27-CH2-V41E-ca5d9302.mp4",
+    "title": "早停查版：认下来的罪",
+    "subtitles": "/video/subtitles/PV27-CH2-V41E-ca5d9302.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY07-BAD1",
+      "node": "CH2-LY07-BAD1",
+      "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-BAD1.wav",
+      "oldCorrelation": 0.9999919570999783,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD1-v1.wav",
+      "newVoiceSha256": "21c3544a19f35c89bde1b42ce598e61e3c38c73af475f8b95dbe4b8d319d0a7e",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.37,
+        5.2700000000000005
+      ],
+      "insertAt": 0.37,
+      "voiceSeconds": 4.5,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.2278337478637695,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY07-BAD3",
+      "node": "CH2-LY07-BAD3",
+      "text": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-BAD3.wav",
+      "oldCorrelation": 0.9736705094071413,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD3-v1.wav",
+      "newVoiceSha256": "6f7b9b6e3a86f49acca375f407dba91ae472eed9b51083e0da058029fbf4cc6d",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        6.85675,
+        15.96
+      ],
+      "insertAt": 6.85675,
+      "voiceSeconds": 9.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9662072062492371,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.53,
+      "end": 4.880000000000001,
+      "text": "军吏接手查办。缺粮的实情报了上去，大军退了"
+    },
+    {
+      "start": 5.33,
+      "end": 6.57,
+      "text": "大军退了吗？"
+    },
+    {
+      "start": 7.13675,
+      "end": 11.68675,
+      "text": "他一认罪，我就停了查。他借我报出了缺粮的实情"
+    },
+    {
+      "start": 12.136750000000001,
+      "end": 15.726750000000001,
+      "text": "他和李严究竟商量过什么，我始终没问出来"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

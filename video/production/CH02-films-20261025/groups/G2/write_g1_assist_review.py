@@ -1,0 +1,19 @@
+from pathlib import Path
+import json,hashlib,datetime
+OUT=Path(__file__).parent;rows=json.loads((OUT/'review/G1-assist-source-index.json').read_text(encoding='utf-8-sig'))
+voice=json.loads((OUT.parents[1]/'voice/manifest.json').read_text(encoding='utf-8-sig'))['rows']
+findings={
+'V06-01':dict(duration=8.0,issues=[dict(start=.4,end=8,type='generated_document_text',observation='纸面从模糊转为可读伪字，日期样字与多余文字不可当真实记录')],usableIntervals=[[0,8]],recommendation='保留完整8秒；局部散焦/遮掉纸面伪字即可，保留指尖从一行移到另一行及退手。准确心声用既有音轨承载，不把日期推断变扣粮书证。',needsVisualRepair=True,repairScope='local_text_soften_only',needsPaidRegeneration=False,dialogueTiming='中央既有CH2-LY02-015音轨3.9858秒，原片8秒足够，勿为躲字只裁到末1秒。'),
+'V07-01':dict(duration=12.25,issues=[dict(start=0,end=2.35,type='external_waist_and_sword',observation='近景外拍持剑腰身行走；无脸，不能证明是玩家，但与要求的第一视角带抄件入帐不一致'),dict(start=2.35,end=7.75,type='copy_placement_then_seated_body',observation='放册与坐定后才抬见苟安脸；镜头连续看放册者身体，因此不应直接宣称完整实现我带抄件入帐')],usableIntervals=[[2.35,12.25]],recommendation='先做本地裁切：去0–2.35秒；2.35–4.45秒仅保留矮案、手、放妥抄件，裁去放册者躯干和剑；4.45–12.25秒作为对面苟安坐定、抬头、问话的反应镜头。候选保留约9.9秒，放册与原NPC完整问题必须都装下。7.75秒后脸部窗口只有约4.5秒，不能只取这段后删原句；如最终语速仍装不下，补同场闭口反应/静观，不循环嘴动。',needsVisualRepair=True,repairScope='local_trim_and_reframe_then_verify',needsPaidRegeneration=False,dialogueTiming='CH2-LY02-016演出说明不朗读；CH2-LY02-017完整问题保留，NPC无已验证固定音轨，6–7秒只是排时建议，最终由正式原句音轨核对。'),
+'V08A-01':dict(duration=15.083333,issues=[dict(start=1.65,end=15.083333,type='generated_dates_and_prose',observation='镜头转入抄件后占画面大部的可读伪字，不能当日期证据；手持纸边未见明显穿透')],usableIntervals=[[0,15.083333]],recommendation='保留全片作为闭口苟安→我看抄件的观察切换；对1.65秒后纸面做随动散焦/遮字。不要直接把整句玩家推论印在纸上。既有9.394秒玩家原句保留，毋须缩短到仅首秒苟安脸或新生成。',needsVisualRepair=True,repairScope='local_document_text_soften_only',needsPaidRegeneration=False,dialogueTiming='中央既有CH2-LY02-018音轨9.3940秒；15.08秒可承载原句及气口。'),
+'V08A-02':dict(duration=12.25,issues=[dict(start=.5,end=4.2,type='extra_medic_and_bowl',observation='苟安回头，医兵从左近侧递碗；3–3.6秒交接两方手先后接触碗沿，未见明显穿透/多手；近侧躯干属于递碗者，未证明是外拍玩家'),dict(start=4.5,end=12.25,type='background_people_and_lips',observation='医兵退后，后景另有医兵活动；苟安持碗嘴动，临时说话归最终配音与口型核对')],usableIntervals=[[0,12.25]],recommendation='画面可采用全段。背景医兵是中性伤帐动作，先保留；如需要更集中，可轻裁靠苟安而不裁掉手/碗交接。不要仅因背景人或临时嘴动重拍，也不要裁掉玩家4.38秒原句、2秒沉默和承认委屈。',needsVisualRepair=False,repairScope='optional_composition_only',needsPaidRegeneration=False,dialogueTiming='中央既有CH2-LY02-018A玩家原句4.3805秒，随后留2秒沉默，再承载你说得对，我是委屈。省略号只演出。12.25秒足够排时，待正式NPC配音核对。'),
+'V08B-01':dict(duration=13.667,issues=[dict(start=2.2,end=4.1,type='bowl_handover',observation='右画外手递碗，苟安伸手接住，随后回收持稳；未见明显脱手悬浮、穿碗或额外肩背'),dict(start=5,end=13.667,type='turn_and_eyeline',observation='苟安将碗放下后转向画右回应，视线与原先镜头方向略偏；未新增叙事事实')],usableIntervals=[[0,13.667]],recommendation='可直接保留全段，递碗和转头视线作为轻微机位差异记录。保留两句安慰和后续整句回应；嘴动先后与最终声音统一处理，不因临时声音/偏视线新付费重拍。',needsVisualRepair=False,repairScope='none_required',needsPaidRegeneration=False,dialogueTiming='中央两句玩家原句1.9734+1.5718=3.5452秒，含短停后仍可容纳NPC完整回应；保留13.67秒空间。')
+}
+for r in rows:
+    r.update(findings[r['id']]);r['sourceStillSameHash']=hashlib.sha256(Path(r['sourcePath']).read_bytes()).hexdigest()==r['sha256']
+    r['existingPlayerVoice']=[dict(node=l['node'],duration=voice[l['node']]['duration'],path=voice[l['node']]['path']) for l in r['sourceLines'] if l['node'] in voice]
+    r['audioReview']='静音审片；音色/逐字/BGM/口型均待统一处理，未主观听审'
+    assert r['sourceStillSameHash']
+report=dict(group='G2 assisting G1',reviewedAtUtc=datetime.datetime.now(datetime.timezone.utc).isoformat(),scope='只读G1五条原片；未编辑G1、未调用生成API、未拼接G1',method='同SHA本地审片副本，五条1x静音自然播放到可见ended；全部0.5秒序列检查。实时截图观察V08A-01纸面、V08A-02转头、V08B-01收尾。区间按0.5秒序列定位约±0.25秒，G1应用裁点需直接首帧/尾帧复核。',lastVisibleEndedUtc='2026-10-25T03:24:25.998Z',playedCount=5,userApproval='未审核',summary='两条局部文书去伪字、一条本地裁切/重构机位；两条画面可采用。五条当前均不建议新付费生成。',clips=rows)
+(OUT/'review/G1-assist-review.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+print('G1 assist report',len(rows),'sources hash rechecked')

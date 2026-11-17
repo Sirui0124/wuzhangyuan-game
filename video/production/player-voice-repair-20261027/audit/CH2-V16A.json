@@ -1,0 +1,46 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V16A",
+  "src": "/video/current/CH2-V16A-f16c45272f-20261025.mp4",
+  "title": "核交接选项",
+  "subtitles": "/video/subtitles/CH2-V16A-f16c45272f-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V16A-f16c45272f-20261025.mp4",
+  "sha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+  "duration": 6.144,
+  "cues": [
+    {
+      "start": 0.43,
+      "end": 4.19,
+      "text": "先把出仓和签收对一遍，看缺口是在领粮前"
+    },
+    {
+      "start": 4.19,
+      "end": 5.17,
+      "text": "还是在路上"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY04-Q1A",
+      "node": "CH2-LY04-Q1A",
+      "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+      "speaker": "我（普通选项）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1A.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "7c3ee61540d9d789ca70d082e5a60a02f7467054720440da5e589a985e583604",
+      "duration": 5.1725,
+      "speechRange": [
+        0.44,
+        4.84
+      ],
+      "correlation": 0.9995144091224908,
+      "insertAt": 0.35,
+      "speechStart": 0.79,
+      "speechEnd": 5.19
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

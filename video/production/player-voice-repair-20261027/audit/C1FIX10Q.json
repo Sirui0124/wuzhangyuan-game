@@ -1,0 +1,45 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1FIX10Q",
+  "src": "/video/current/C1FIX10Q-20261025.mp4",
+  "title": "问今夜当值",
+  "rows": [
+    "D07"
+  ],
+  "afterPlayback": "advance",
+  "subtitles": "/video/subtitles/C1FIX10Q-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1FIX10Q-20261025.mp4",
+  "sha256": "5bcd51b77caa8571be7611ebe74407cc6ff8dcdf33dd11070c1f203982237544",
+  "duration": 4.01075,
+  "cues": [
+    {
+      "start": 0.46,
+      "end": 2.18,
+      "text": "今夜军务是谁当值？"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-D07",
+      "node": "D07",
+      "text": "今夜军务是谁当值？",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D07.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "43c469b597243e0607a35e60a415729103c7e8e30c215b7afd41dd1f90c205c4",
+      "duration": 2.196,
+      "speechRange": [
+        0.34,
+        1.82
+      ],
+      "correlation": 0.9941293224735934,
+      "insertAt": 0.4965,
+      "speechStart": 0.8365,
+      "speechEnd": 2.3165
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

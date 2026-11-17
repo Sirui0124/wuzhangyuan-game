@@ -1,0 +1,74 @@
+{
+  "id": "V11R",
+  "name": "定制①回应R",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11R-定制①回应R.mp4",
+  "duration": 9.46,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+  "next": [
+    "V12"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V11R-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11R-01-normalized.mp4",
+      "slotStart": 0,
+      "slotEnd": 9.44,
+      "sourceTrim": [
+        0,
+        9.44
+      ],
+      "audioMode": "npc-native",
+      "review": {
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11R-01-raw.mp4",
+        "sourceSha256": "9225a8e7b7b207badd6523e8ed483bdbba75ddff5ba788514a6799bbfde847cb",
+        "visualReview": "制作自查可用，待G1采用/用户review",
+        "actualDynamicReview": true,
+        "reviewedBy": "G3 full1x muted playback +3fps sequence; SHA reverified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-template-assist-review.json",
+        "findings": [
+          {
+            "time": [
+              0,
+              9.417
+            ],
+            "issue": "同一日间伤帐、灰衣黑巾苟安；约1–2.7秒调整前臂并稍抬上身，始终留榻上。无站起、额外人脸、新道具、伪字幕或新增证据。自然开口回应。"
+          }
+        ],
+        "audioIssues": [
+          "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+        ],
+        "sourceLines": [
+          {
+            "node": "CH2-O1-RR",
+            "speaker": "苟安（定制回应）",
+            "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+            "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+          }
+        ],
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11R-01-normalized.mp4",
+        "sourceIntervals": [
+          [
+            0,
+            9.42
+          ]
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ]
+}

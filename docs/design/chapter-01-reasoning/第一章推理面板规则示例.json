@@ -1,0 +1,105 @@
+{
+  "document_type": "configuration_illustration_only",
+  "version": "2026-10-21",
+  "chapter_id": "CH01",
+  "runtime_enabled": false,
+  "implementation_status": "not_implemented",
+  "opening": {
+    "mode": "automatic_at_story_pause",
+    "requires": ["round_evidence_collection_complete", "natural_story_pause"],
+    "anytime_free_canvas_intro": false
+  },
+  "visible_reasoning_outcomes": ["formed_card", "no_card"],
+  "question_order": ["Q1_URGENCY", "Q2_AUTHORITY"],
+  "free_question_order": false,
+  "state_machine": {
+    "initial": "COLLECTING",
+    "states": ["COLLECTING", "Q1_ACTIVE", "Q1_COMPLETE", "Q2_ACTIVE", "PANEL_COMPLETE"],
+    "transitions": [
+      {"from": "COLLECTING", "to": "Q1_ACTIVE", "on": "collection_complete_and_natural_pause"},
+      {"from": "Q1_ACTIVE", "to": "Q1_ACTIVE", "on": "no_card"},
+      {"from": "Q1_ACTIVE", "to": "Q1_COMPLETE", "on": "C_MILITARY_REPORT_formed"},
+      {"from": "Q1_COMPLETE", "to": "Q2_ACTIVE", "on": "transition_voice_complete"},
+      {"from": "Q2_ACTIVE", "to": "PANEL_COMPLETE", "on": null, "enabled": false, "status": "pending_Q2_design"}
+    ]
+  },
+  "inputs": {
+    "evidence": "selected_collected_evidence_ids",
+    "optional_text": true,
+    "q1_comparison_answer": {"required": true, "values": ["yes", "no"]},
+    "validation_before_reasoning": ["active_question", "known_evidence_ids", "collected_and_stage_visible", "explicit_comparison_choice"]
+  },
+  "evidence_catalog": [
+    {"id": "E_SCOUT_CURRENT", "source": "斥候", "semantic_scope": "当晚魏军实际位置与行为", "kind": "reported_observation", "canonical_text": null, "status": "source_approved_text_pending"},
+    {"id": "E_SOLDIER_B_PAST", "source": "兵乙", "semantic_scope": "前几晚魏军试探方式", "kind": "character_report", "placement": "提到姜伯约后补充", "canonical_text": null, "status": "source_approved_text_pending"},
+    {"id": "E_SOLDIER_A_DUTY", "source": "兵甲", "semantic_scope": "军报应传递且守卫不能决定禁令例外", "kind": "character_report", "canonical_text": null, "question": "Q2_AUTHORITY"}
+  ],
+  "questions": {
+    "Q1_URGENCY": {
+      "title": "军报有多紧急？",
+      "subquestions": [
+        {"id": "Q1_A_POSITION", "title": "魏军到哪了？", "intended_content": "尚未破营门、尚未交战，不是必须立刻直报的情形", "interpretation_caution": "仍应将军报交有权者判断，不能压报不报", "presentation_policy": "pending"},
+        {"id": "Q1_B_PURPOSE", "title": "目的是什么？", "author_truth": "佯装来袭，看有无人决策，试探诸葛亮病情", "knowledge_kind": "intended_inference_not_observed_fact", "player_knowledge_delivery": "pending", "presentation_policy": "pending"},
+        {"id": "Q1_C_COMPARISON", "title": "这次与前几晚试探一样吗？", "interaction": "yes_no_plus_evidence"}
+      ],
+      "ab_policy": {"status": "pending_user_confirmation", "proposed": "display_acquired_information_only", "approved": false, "never_display_uncollected_truth": true},
+      "ordered_rules": [
+        {"priority": 1, "if": "no_usable_collected_evidence", "outcome": "no_card", "exact_message": "你的判断没有依据。"},
+        {"priority": 2, "if": "has_usable_evidence_and_answer_yes", "outcome": "no_card", "exact_message": "推理错误。"},
+        {"priority": 3, "if": "answer_no_and_evidence_does_not_support_canonical_difference", "outcome": "no_card", "message_policy": "explain_missing_relevance_without_revealing_uncollected_clues"},
+        {"priority": 4, "if": "answer_no_and_evidence_supports_canonical_difference", "outcome": "formed_card", "card_type": "C_MILITARY_REPORT"}
+      ],
+      "semantic_evidence_gate": {
+        "status": "pending_canonical_clue_text",
+        "proposed_comparison_sources": ["E_SCOUT_CURRENT", "E_SOLDIER_B_PAST"],
+        "canonical_difference_predicates": null,
+        "minimum_evidence_sets": null,
+        "matching": "semantic_support_not_keywords_or_id_presence_alone",
+        "on_missing_configuration": "block_evaluation_as_configuration_issue"
+      },
+      "success_card": {
+        "id": "C_MILITARY_REPORT",
+        "required_meaning": "此次不能按前几晚相同试探处理",
+        "fields": ["title", "conclusion", "supporting_submitted_evidence_ids", "bounded_explanation"],
+        "title_and_wording": "may_vary_without_changing_meaning",
+        "include_position_purpose_urgency": "pending_ab_policy_and_evidence_delivery"
+      },
+      "transition_voice": {
+        "approved_intent": "不能只拦魏延，需要找能通传、能做主的人",
+        "proposed_text": "不能只拦住魏延，却把军报压在自己手里。得找个能接报、能做主的人。",
+        "text_status": "pending_user_confirmation"
+      }
+    },
+    "Q2_AUTHORITY": {
+      "title": "谁能负责判断和接收新报？",
+      "unlocks_after": "Q1_COMPLETE",
+      "runtime_enabled": false,
+      "status": "pending_design_not_implemented",
+      "approved_direction": ["诸葛亮安排常务处置、急事上报", "姜维收紧禁令", "守卫无自行决策权", "姜维可接报、判断并在授权范围内处置", "超出姜维权限时请示诸葛亮"],
+      "options": null,
+      "evidence_gates": null,
+      "completion_rule": null,
+      "next_story_binding": null
+    }
+  },
+  "ai_constraints": {
+    "classification": "semantic_evidence_support_under_declared_rules",
+    "final_outcome_and_unlock": "declared_rule_contract",
+    "allowed_expression": ["bounded_card_wording", "bounded_failure_reason"],
+    "forbidden": ["invent_evidence", "use_uncollected_author_truth", "leak_future_stage", "change_outcome_taxonomy", "silently_complete_pending_rules"],
+    "card_auto_reuse": {"status": "pending", "enabled": false},
+    "variable_valid_cards": true,
+    "fixed_card_quota": null
+  },
+  "proposals_not_approved": {
+    "no_failure_penalty": true,
+    "retain_input_after_failure": true,
+    "no_countdown": true,
+    "progressive_hints": ["先提示比较当晚与以往行为", "再指向正式线索中已交付的具体差异"]
+  },
+  "engineering_recommendations": {
+    "runtime_error_is_story_failure": false,
+    "retry_submission_idempotency": true,
+    "do_not_advance_on_timeout_or_parse_failure": true
+  }
+}

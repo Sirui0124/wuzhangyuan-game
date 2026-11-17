@@ -1,0 +1,88 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { resolve } from 'node:path';
+import { mkdirSync,writeFileSync } from 'node:fs';
+import { createStaticServer } from '../../GameStarter/web-demo/serve.mjs';
+const out=resolve('outputs/story-film-20261024');mkdirSync(out,{recursive:true});
+const server=createStaticServer({root:resolve('GameStarter/web-demo/.build')});await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
+const browser=await chromium.launch({headless:true,channel:'chrome'});const page=await browser.newPage({viewport:{width:1440,height:900}});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));const checks=[];
+const key='wuzhang-chapter-session-v1';const state=()=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);
+try{
+ await page.addInitScript(()=>localStorage.setItem('wuzhang-voice-muted','1'));
+ await page.goto(`http://127.0.0.1:${server.address().port}`);await page.locator('[data-action=new]').click();
+ await page.locator('[data-cinema-action=skip]').click();await page.locator('[data-story-film]').waitFor();
+ const before=await state();assert.equal(before.story.current,'A-08');
+ await page.locator('video').evaluate(async v=>{if(v.readyState<1)await new Promise(ok=>v.addEventListener('loadedmetadata',ok,{once:true}));});
+ await page.keyboard.press('Enter');assert.equal((await state()).story.current,'A-08');
+ const media=await page.locator('video').evaluate(v=>({duration:v.duration,width:v.videoWidth,height:v.videoHeight,error:v.error?.message}));
+ assert.ok(media.width>0&&media.duration>0&&!media.error);checks.push('实际剪辑片解码、载入和播放，按Enter不会跳过尚未确认的剧情');
+ await page.locator('video').evaluate(async v=>{v.muted=true;v.currentTime=v.duration-.25;await v.play();});
+ await page.locator('[data-scene-action=read-notice]').waitFor({state:'visible'});assert.equal((await state()).phase,'explore');
+ assert.equal(await page.locator('[data-film-confirm]').count(),0);
+ assert.equal(await page.getByText('原文回看').count(),0);
+ assert.equal(await page.getByText('帐前贴着今夜的禁令。').count(),0);
+ assert.ok(!(await state()).story.collected.includes('T01'));
+ await page.screenshot({path:resolve(out,'01-completed-directly-enters-camp.png')});
+ // Restore a pre-change narrative save at the old confirmation boundary with a completed film.
+ before.contentVersion='7169c1276a20a3d18c2aa6c3afac88a82bb515faf8758fec2054d5ea6cda74d9';
+ await page.evaluate(({key,before})=>localStorage.setItem(key,JSON.stringify(before)),{key,before});
+ await page.reload();await page.locator('[data-action=continue]').click();await page.locator('[data-scene-action=read-notice]').waitFor({state:'visible'});
+ assert.equal((await state()).phase,'explore');assert.equal(await page.locator('[data-film-confirm]').count(),0);
+ assert.ok(!(await state()).story.collected.includes('T01'));
+ checks.push('醒来视频结束直接进入帐前，无额外继续页和禁令提示；旧存档兼容且不提前授予告示线索');
+ await page.locator('[data-scene-action=read-notice]').click();await page.locator('[data-story-film]').waitFor();assert.ok(!(await state()).story.collected.includes('T01'));
+ await page.waitForFunction(()=>{const v=document.querySelector('video');return v&&!v.paused&&v.currentTime>0;});
+ await page.locator('video').evaluate(async v=>{v.currentTime=v.duration-.2;await v.play();});await page.locator('.dialogue-box').waitFor({state:'visible'});
+ await page.waitForFunction(()=>document.querySelector('#spoken-line')?.textContent==='今夜帐内有要事，闲人不得擅入。');
+ assert.equal(await page.locator('[data-story-film]').count(),0);
+ assert.equal(await page.getByText('原文回看').count(),0);
+ assert.match(await page.locator('.scene-image').getAttribute('style'),/scenes-notice_front/);
+ assert.ok(!(await state()).story.collected.includes('T01'));
+ for (const size of [{width:1440,height:900},{width:1280,height:720}]) {
+  await page.setViewportSize(size);
+  const style=await page.locator('.dialogue-box').evaluate(box=>({width:box.getBoundingClientRect().width,left:box.getBoundingClientRect().left,font:getComputedStyle(box.querySelector('.dialogue-text')).fontFamily,size:getComputedStyle(box.querySelector('.dialogue-text')).fontSize,background:getComputedStyle(box,'::before').backgroundImage,opacity:getComputedStyle(box,'::before').opacity}));
+  assert.ok(Math.abs(style.width-size.width*.7)<2);assert.ok(Math.abs(style.left-size.width*.15)<2);
+  assert.match(style.font,/KaiTi/);assert.equal(style.size,'24px');assert.match(style.background,/dialogue-ink-wash/);assert.equal(style.opacity,'0.7');
+  await page.screenshot({path:resolve(out,`02-notice-dialogue-${size.width}.png`)});
+ }
+ await page.reload();await page.locator('[data-action=continue]').click();await page.locator('.dialogue-box').waitFor({state:'visible'});
+ assert.equal(await page.locator('[data-story-film]').count(),0);assert.ok(!(await state()).story.collected.includes('T01'));
+ await page.waitForFunction(()=>document.querySelector('#spoken-line')?.textContent==='今夜帐内有要事，闲人不得擅入。');
+ await page.locator('.dialogue-box').click();assert.ok((await state()).story.collected.includes('T01'));
+ checks.push('告示沿用70%居中对话框、24px楷体与半透明墨纹；读档不重播，点击读完才取得证据');
+ await page.locator('[data-move=report_post]').click();
+ await page.locator('[data-scene-action=meet-first-scout]').click();
+ await page.waitForFunction(()=>{const v=document.querySelector('video');return v&&!v.paused&&v.currentTime>0;});
+ await page.locator('video').evaluate(async v=>{v.currentTime=v.duration-.2;await v.play();});
+ await page.locator('[data-scout-choice=a]').waitFor({state:'visible'});
+ assert.equal(await page.locator('[data-film-confirm]').count(),0);
+ assert.equal(await page.locator('.portrait-stage').count(),0);
+ assert.match(await page.locator('.scene-image').getAttribute('style'),/scenes-scout_report_end/);
+ await page.screenshot({path:resolve(out,'03-scout-options-on-final-frame.png')});
+ checks.push('点击即自动播放，告示结束直接显示文字；斥候结束在真实尾帧自动显示选项，无需继续');
+ const choiceSave=await state();
+ await page.locator('[data-scout-choice=a]').click();
+ await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.1);
+ assert.match(await page.locator('video').getAttribute('src'),/C1T03-scout-answer-20261024-cba52c25/);
+ assert.equal(await page.locator('.dialogue-box').count(),0);assert.ok(!(await state()).story.collected.includes('T02'));
+ // Play the newly integrated film to its real end, including the original audio track.
+ await page.locator('[data-film-confirm]').waitFor({state:'visible',timeout:20000});
+ assert.ok(!(await state()).story.collected.includes('T02'));
+ assert.ok(await page.locator('video').evaluate(v=>v.webkitAudioDecodedByteCount>0));
+ await page.screenshot({path:resolve(out,'04-scout-answer-film.png')});
+ await page.reload();await page.locator('[data-action=continue]').click();await page.locator('[data-film-confirm]').waitFor({state:'visible'});
+ await page.locator('[data-film-confirm]').click();assert.ok((await state()).story.collected.includes('T02'));
+ assert.equal((await state()).phase,'explore');
+ checks.push('营门失守选项播放C1T03原声视频，完整自然播放与读档正常，确认后才获得营门未失守线索');
+ await page.evaluate(({key,save})=>localStorage.setItem(key,JSON.stringify(save)),{key,save:choiceSave});
+ await page.reload();await page.locator('[data-action=continue]').click();await page.locator('[data-scout-choice=b]').click();
+ await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.1);
+ assert.match(await page.locator('video').getAttribute('src'),/C1T04-/);
+ await page.locator('video').evaluate(async v=>{v.currentTime=v.duration-.2;await v.play();});
+ await page.locator('[data-film-confirm]').waitFor({state:'visible'});await page.locator('[data-film-confirm]').click();
+ assert.ok(!(await state()).story.collected.includes('T02'));assert.equal((await state()).phase,'explore');
+ checks.push('拒绝入帐选项仍只播放C1T04，不串播营门答复、不补造T02');
+ assert.deepEqual(errors,[]);writeFileSync(resolve(out,'checks.json'),JSON.stringify({passed:true,media,checks,errors},null,2));console.log(checks);
+}catch(error){await page.screenshot({path:resolve(out,'failure.png')});writeFileSync(resolve(out,'checks.json'),JSON.stringify({passed:false,checks,errors,error:String(error.stack)},null,2));throw error;}
+finally{await browser.close();server.close();}

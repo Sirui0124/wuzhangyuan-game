@@ -1,0 +1,5 @@
+<!doctype html><meta charset="utf-8"><title>G5署名动作协审</title>
+<style>body{background:#111;color:#eee;font:18px system-ui;margin:12px}video{width:100%;max-height:82vh}button{font:inherit;margin:8px}#time{font:18px monospace}</style>
+<button id="go">播放动作关键段</button><button id="replay">重放完整后段</button><div id="time"></div>
+<video controls muted preload="auto" src="review/G5-V32A-readonly-copy.mp4"></video>
+<script>const v=document.querySelector('video');document.querySelector('#go').onclick=()=>{v.currentTime=49.8;v.play()};document.querySelector('#replay').onclick=()=>{v.currentTime=47;v.play()};setInterval(()=>document.querySelector('#time').textContent=v.currentTime.toFixed(3)+' / '+v.duration+' '+(v.ended?'已结束':v.paused?'暂停':'播放中'),100)</script>

@@ -1,0 +1,125 @@
+{
+  "delivery": {
+    "id": "V15",
+    "name": "倒查起点与三份账页",
+    "entry": "V14结束",
+    "next": [
+      "UI-N2"
+    ],
+    "endEvent": "各原件实际展示到相应文字后才取得",
+    "children": [
+      "V15-01",
+      "V15-02",
+      "V15-03",
+      "V15-04"
+    ],
+    "subclips": [
+      "V15-01",
+      "V15-02",
+      "V15-03",
+      "V15-04"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+    "technical": {
+      "duration": 41.05,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "decodedVideoFrames": 985,
+      "videoTrackSeconds": 41.041666666666664,
+      "videoEndSeconds": 41.041667,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "0–11秒为倒查起点的玩家发问与翻查过渡，纸面和部分手有明显柔化，不当作新文书正文。随后D01/D02/D03每条先展示约2秒接持或翻看，再切准确全文。D03按G6当前SHA协审可见递页、双手接持、对方松手及页角开始翻起；不把切卡说成连续完整翻页。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "D01/D02/D03仅在对应短操作及准确正文出现后登记；不得以V15-01先授予三文书。",
+      "D03接持成立，翻页仅为开始动作；不宣称无剪辑完整展开，不增加朗读。"
+    ]
+  },
+  "usability": {
+    "id": "V15",
+    "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "0–11秒为倒查起点的玩家发问与翻查过渡，纸面和部分手有明显柔化，不当作新文书正文。随后D01/D02/D03每条先展示约2秒接持或翻看，再切准确全文。D03按G6当前SHA协审可见递页、双手接持、对方松手及页角开始翻起；不把切卡说成连续完整翻页。"
+    ],
+    "issues": [
+      {
+        "type": "fake-evidence-text",
+        "state": "repaired",
+        "repair": "D01/D02/D03改为当前源准确不透明正文，切卡前保留取看动作"
+      }
+    ],
+    "integrationConditions": [
+      "D01/D02/D03仅在对应短操作及准确正文出现后登记；不得以V15-01先授予三文书。",
+      "D03接持成立，翻页仅为开始动作；不宣称无剪辑完整展开，不增加朗读。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          41.05
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V15\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V15",
+        "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+        "event": "ended",
+        "start": 0,
+        "end": 41.045,
+        "duration": 41.045,
+        "time": "2026-10-25T06:24:08.244Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 41.05,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b"
+    }
+  }
+}

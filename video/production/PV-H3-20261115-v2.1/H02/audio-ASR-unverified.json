@@ -1,0 +1,21 @@
+{
+  "source_sha256": "b964cd6fdad8c0e6ba0693ce8bed37b2d85b3ef5ef75763d5b9b104f3df7eaee",
+  "method": "faster-whisper-base CPU int8; no expected script injected; VAD; automatic language",
+  "language": "zh",
+  "language_probability": 0.9958771467208862,
+  "expected_lines": [
+    "此乃我的私印，请你持此，速救主公。"
+  ],
+  "segments": [
+    {
+      "in": 2.22,
+      "out": 7.3,
+      "text": "此奈我的思因,请你词词,速救主宫。",
+      "no_speech_probability": 0.028413305059075356,
+      "logprob": -0.6047341979068258
+    }
+  ],
+  "rms_dbfs": -15.203569412231445,
+  "peak_dbfs": 2.4418089389801025,
+  "notice": "Machine locator only; not a transcript approval or proof of no music; inspect actual audio and lip/action timing."
+}

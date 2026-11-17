@@ -1,0 +1,110 @@
+{
+  "scope": "新剪辑7个文件；完整解码、视频轨覆盖、黑场检测、来源哈希核对及全时段抽帧另列",
+  "records": [
+    {
+      "id": "E1",
+      "sha256": "a75c9ac47dca27ae5675103d371c579e753bbca6b72843c32781fbb08f2bc013",
+      "duration": 60.0,
+      "fullDecode": {
+        "videoSeconds": 59.792,
+        "decodedFrames": 1435,
+        "expectedSeconds": 60.0,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "E2",
+      "sha256": "aafcb83c59cbb9d1b6f31e8aa5bddb1478be5337f18da0a4214bcc492f902a7a",
+      "duration": 34.2,
+      "fullDecode": {
+        "videoSeconds": 34.125,
+        "decodedFrames": 819,
+        "expectedSeconds": 34.2,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "E3",
+      "sha256": "d423e1d3ee142aebb7919ab7ef1463150b82b652af16e661c0697b108eee9fcd",
+      "duration": 74.917,
+      "fullDecode": {
+        "videoSeconds": 74.917,
+        "decodedFrames": 1798,
+        "expectedSeconds": 74.917,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "E4-early",
+      "sha256": "176e4746a466f72d7203a1e1c098d6e97db3b855afd1fa22688a1021d681f90c",
+      "duration": 26.917,
+      "fullDecode": {
+        "videoSeconds": 26.833,
+        "decodedFrames": 644,
+        "expectedSeconds": 26.917,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "E4-late",
+      "sha256": "9190ff9d2250905cfb761485dca72923af5f1e8babc1496218b0aec3f66c3fc7",
+      "duration": 54.875,
+      "fullDecode": {
+        "videoSeconds": 54.708,
+        "decodedFrames": 1313,
+        "expectedSeconds": 54.875,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "E5",
+      "sha256": "1e0c7b2fff10fda6cb04561941e7cdec1fe5f1808a9ce0ff4ae2003df7281808",
+      "duration": 21.02,
+      "fullDecode": {
+        "videoSeconds": 21.0,
+        "decodedFrames": 504,
+        "expectedSeconds": 21.02,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    },
+    {
+      "id": "EPILOGUE",
+      "sha256": "ce067491fc135c66ee0bb6041982ec77660b5da3fc5af9ba0d36a0f950eb50b6",
+      "duration": 15,
+      "fullDecode": {
+        "videoSeconds": 15.0,
+        "decodedFrames": 360,
+        "expectedSeconds": 15,
+        "passed": true
+      },
+      "blackIntervals": [],
+      "userApproved": false,
+      "realTimePlaybackReview": false,
+      "audioListening": false
+    }
+  ]
+}

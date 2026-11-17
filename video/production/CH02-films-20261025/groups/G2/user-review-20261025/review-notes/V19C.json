@@ -1,0 +1,35 @@
+{
+  "id": "V19C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-be8a84b107.mp4",
+  "sha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "C判断后保留经手人回应；剪掉原回应前的误读和相应多余停顿，玩家段再删近2秒尾部空余。无字幕卡或局部遮罩。"
+  ],
+  "repairs": [
+    "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+    "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度",
+    "保留完整所选原句音源区间，末尾加0.4秒未用仓中自然续镜作尾气，不定格或循环。"
+  ],
+  "integrationConditions": [
+    "保持原节点及分支顺序，影片动作不额外授予后续材料或自动判定。"
+  ],
+  "audioReview": "原句/服务字幕/ASR技术核对；实际1倍速播放只验证结束，不代表听审。只复用既有准确玩家WAV与选定的原生原句，不新增文书旁白。",
+  "audioIssues": [
+    "工具不能实际听音，声音和BGM听审pending。"
+  ],
+  "unresolved": [
+    "修改版本待用户重新审核"
+  ],
+  "evidence": [
+    {
+      "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V19C",
+      "sha256": "377926382a9ec11350fd33fd364657fc569a5e4a5881efe6bc1da38cbfcb51f0"
+    },
+    {
+      "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+    }
+  ]
+}

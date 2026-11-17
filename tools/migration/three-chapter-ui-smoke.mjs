@@ -1,0 +1,66 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {readFileSync,mkdirSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {createStaticServer} from '../../GameStarter/web-demo/serve.mjs';
+import {ChapterSession,GAME_SAVE_KEY} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapter-session.js';
+import {GrainSession} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/session.js';
+import {GRAIN_SAVE_KEY} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-two/navigation.js';
+import {createJietingPlaytest} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-three/session.js';
+const read=p=>JSON.parse(readFileSync(p,'utf8'));
+const first=read('GameStarter/web-demo/.build/playtest/weiyan-second.json');
+first.supplies={version:2,rewards:['weiyan-action'],legacyPurchases:['flashlight','batteries','radio-pair'],purchases:['flashlight','batteries','radio-pair'],attached:[],agreement:null};
+first.story.selected=[];
+const one=new ChapterSession(read('content/chapters/wuzhang/chapter-one.script.json'),read('content/chapters/wuzhang/chapter-one.flow.json'),first.contentVersion);one.restore(JSON.stringify(first));
+const two=new GrainSession(read('content/chapters/grain/chapter-two.films.json'),undefined,read('content/chapters/grain/chapter-two.films-rubric.json'),true);
+for(let i=0;i<100&&two.current.kind!=='open';i++)assert.ok(two.advance(two.current.options?.[0]?.id));
+assert.equal(two.current.kind,'open');two.unlockPhone();two.state.supplies.purchases=['flashlight','batteries','radio-pair'];two.state.supplies.attached=[];two.state.supplies.legacyPurchases=[...two.state.supplies.purchases];
+const three=createJietingPlaytest(read('GameStarter/web-demo/.build/story/chapter-three.story.json'),'reinforcement',{aiEnabled:true,phoneAllowed:true});
+three.state.supplies.worldItems={acquired:['fuhu-wood-tiger'],sold:['fuhu-wood-tiger']};three.state.supplies.purchases=['flashlight','batteries'];
+const output=resolve(process.env.SELECTION_OUTPUT ?? 'outputs/three-chapter-ui-20261027');mkdirSync(output,{recursive:true});
+const server=createStaticServer();await new Promise(ok=>server.listen(0,'127.0.0.1',ok));
+const browser=await chromium.launch({headless:true,channel:'chrome'});const errors=[],metrics=[];
+try{
+ for(const [chapter,key,save,url] of [[1,GAME_SAVE_KEY,one.serialize(),'/'],[2,GRAIN_SAVE_KEY,JSON.stringify(two.state),'/?chapter=grain'],[3,'jieting-chapter-three-v1',JSON.stringify(three.state),'/?chapter=jieting']]){
+  const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
+  await context.route('http://127.0.0.1:8787/**',route=>route.fulfill({json:{configured:true},headers:{'Access-Control-Allow-Origin':'*'}}));
+  await context.addInitScript(({key,save})=>{if(!localStorage.getItem(key))localStorage.setItem(key,save);localStorage.setItem('wuzhang-runtime-mode-v1','ai-phone');localStorage.setItem('wuzhang-reduced-motion','1');},{key,save});
+  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(`http://127.0.0.1:${server.address().port}${url}`);if(chapter===1)await page.locator('.game-menu [data-action=continue]').click();
+  await page.locator('.expression-workspace').waitFor();
+  const state=()=>page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
+  const selected=s=>chapter===1?s.story.selected:s.selected;
+  const font=async selector=>page.locator(selector).first().evaluate(el=>{const s=getComputedStyle(el);return {font:s.fontSize,line:s.lineHeight,family:s.fontFamily,border:s.borderStyle,minHeight:s.minHeight};});
+  assert.deepEqual(await font('.speech-add'),await font('.speech-add-item'),'Clue/item entry styles match');
+  await page.locator('.speech-add').click();assert.equal(await page.locator('.speech-add').getAttribute('aria-expanded'),'true');
+  const firstRow=page.locator('.thought-inventory .inventory-entry').first();
+  const title=await firstRow.locator('.inventory-row').innerText();
+  await firstRow.locator('.inventory-row').click();assert.equal(selected(await state()).length,0,'Reading details never selects an entry');
+  assert.equal(await page.locator('.game-modal').count(),0,'Source details stay inline in all chapters');
+  await firstRow.locator('.inventory-place').click();
+  assert.equal(await firstRow.locator('.inventory-place').innerText(),'✓');assert.equal(await firstRow.locator('.inventory-place').getAttribute('aria-pressed'),'true');
+  assert.equal(selected(await state()).length,1);assert.ok((await firstRow.getAttribute('class')).includes('is-placed'));
+  assert.equal(await page.locator('.speech-evidence .working-clue').count(),1);
+  await page.locator('.speech-evidence .working-clue-remove').click();assert.equal(selected(await state()).length,0);assert.equal(await firstRow.locator('.inventory-place').innerText(),'＋');
+  await firstRow.locator('.inventory-place').click();const selectedBefore=selected(await state());
+  await page.locator('[data-inventory-search]').fill(title);assert.deepEqual(selected(await state()),selectedBefore,'Search preserves selections');
+  const ui={};for(const selector of ['.expression-heading h1','.expression-current-reply p','#player-expression','.polish-button','.confirm-expression','.expression-status','.phone-launcher'])ui[selector]=await font(selector);
+  metrics.push({chapter,ui,add:await font('.speech-add'),row:await font('.inventory-row'),toggle:await font('.inventory-place'),remove:await font('.working-clue-remove')});
+  await page.screenshot({path:resolve(output,`chapter-${chapter}-clues.png`)});
+  await page.locator('.speech-add-item').click();assert.equal(await page.locator('.speech-add-item').getAttribute('aria-expanded'),'true');
+  const items=page.locator('.thought-inventory .inventory-place');assert.equal(await items.count(),chapter===3?2:3);
+  await items.nth(0).click();await items.nth(1).click();assert.equal((await state()).supplies.attached.length,2);if(chapter!==3)assert.equal(await items.nth(2).isDisabled(),true);
+  await page.locator('.speech-items .working-clue-remove').first().click();assert.equal((await state()).supplies.attached.length,1);
+  if(chapter!==3){assert.equal(await items.nth(2).isDisabled(),false);await items.nth(2).click();await items.nth(1).click();assert.equal((await state()).supplies.attached.length,1);}
+  await page.screenshot({path:resolve(output,`chapter-${chapter}-items.png`)});
+  await page.setViewportSize({width:390,height:844});await page.locator('.thought-inventory').scrollIntoViewIfNeeded();
+  assert.ok(await page.locator('.inventory-place').first().evaluate(el=>{const r=el.getBoundingClientRect();return r.right<=innerWidth&&r.left>=0;}));
+  assert.equal(await page.locator('.phone-launcher').evaluate(e=>getComputedStyle(e).position),'static','Narrow phone stays in header');
+  await page.screenshot({path:resolve(output,`chapter-${chapter}-narrow.png`)});
+  const before=await state();await page.reload();if(chapter===1)await page.locator('.game-menu [data-action=continue]').click();await page.locator('.expression-workspace').waitFor();
+  assert.deepEqual(selected(await state()),selected(before));assert.deepEqual((await state()).supplies.attached,before.supplies.attached);
+  await context.close();
+ }
+ const {chapter:a,...left}=metrics[0];for(const {chapter,...right} of metrics.slice(1))assert.deepEqual(left,right,'Chapter '+chapter+' matches first-chapter computed styles');assert.deepEqual(errors,[]);
+ writeFileSync(resolve(output,'verification.json'),JSON.stringify({passed:true,metrics,errors},null,2));console.log('PASS: all three chapters use matching computed styles; inline details, selection/removal, search, persistence and responsive layouts passed.');
+}finally{await browser.close();server.closeAllConnections();await new Promise(ok=>server.close(ok));}

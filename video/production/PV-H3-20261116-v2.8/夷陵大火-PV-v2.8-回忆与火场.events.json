@@ -1,0 +1,277 @@
+{
+  "source_sha256": "fa541f9a5fe1c0a364992d6bbf70c068f2331759a4b1ffc6ee088a54d20a4f1a",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7691
+        },
+        {
+          "label": "Sigh",
+          "p": 0.189
+        },
+        {
+          "label": "Fire",
+          "p": 0.0476
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0395
+        },
+        {
+          "label": "Crackle",
+          "p": 0.023
+        },
+        {
+          "label": "Crack",
+          "p": 0.0229
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0214
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0152
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0148
+        },
+        {
+          "label": "Music",
+          "p": 0.0125
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0093
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0092
+        }
+      ],
+      "music": 0.0125
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Sigh",
+          "p": 0.3103
+        },
+        {
+          "label": "Speech",
+          "p": 0.244
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.063
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.0174
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0151
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0139
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0113
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0113
+        },
+        {
+          "label": "Crack",
+          "p": 0.0095
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0088
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0083
+        },
+        {
+          "label": "Groan",
+          "p": 0.0077
+        }
+      ],
+      "music": 0.0043
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6077
+        },
+        {
+          "label": "White noise",
+          "p": 0.3454
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0577
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0474
+        },
+        {
+          "label": "Noise",
+          "p": 0.0435
+        },
+        {
+          "label": "Fire",
+          "p": 0.0367
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0273
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0268
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0248
+        },
+        {
+          "label": "Aircraft",
+          "p": 0.0242
+        },
+        {
+          "label": "Rain",
+          "p": 0.0229
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0222
+        }
+      ],
+      "music": 0.0121
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Pink noise",
+          "p": 0.4354
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.119
+        },
+        {
+          "label": "White noise",
+          "p": 0.1048
+        },
+        {
+          "label": "Wind",
+          "p": 0.1021
+        },
+        {
+          "label": "Ocean",
+          "p": 0.097
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0775
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0769
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0652
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0415
+        },
+        {
+          "label": "Rain",
+          "p": 0.041
+        },
+        {
+          "label": "Ship",
+          "p": 0.0402
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0334
+        }
+      ],
+      "music": 0.0097
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Waves, surf",
+          "p": 0.1611
+        },
+        {
+          "label": "Ocean",
+          "p": 0.1526
+        },
+        {
+          "label": "Rain",
+          "p": 0.1112
+        },
+        {
+          "label": "Wind",
+          "p": 0.1105
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.1102
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0935
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0756
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0713
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.0458
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0353
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0267
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.022
+        }
+      ],
+      "music": 0.0032
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "CH2-LY02-QC",
+  "role": "player",
+  "text": "喝酒误了粮，你这顿打不算冤。",
+  "seconds": 4,
+  "status": "succeeded",
+  "model": "seed-audio-1.0",
+  "requestId": "a910793b-c79d-42ec-9467-4306a7590c58",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "reference": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\voice-clone\\20261023\\player-reference.wav",
+    "sha256": "c9ace1c9f2e272025dadd2cbc7ef166d9b52343faa5baf0d1ba55c6f507461aa",
+    "field": "references[0].audio_data"
+  },
+  "text_prompt": "仅采用@音频1中成年男性的音色，自然克制的普通话，语气符合问句。只朗读引号内唯一原句：“喝酒误了粮，你这顿打不算冤。”其余均为控制说明，绝不朗读姓名、角色标签、旁白、画外、编号或导演说明。不复述参考录音，不添加任何词。总长约4秒，开头留0.2秒气口，句末自然落音。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "bodySha256": "c41c8fe4c906eb1a6a8d354811f36171c165e97b20350d9a5e2f2a4f293b1882",
+  "humanListeningReview": false,
+  "noPresetSpeaker": true,
+  "httpStatus": 200,
+  "logId": "202610251954034B719AC85D70B2B422E6",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-bedside-choice-20261025\\CH2-LY02-QC.wav",
+  "sha256": "ec237ed562452d543e927c91173648c42554e143a1e34d4f606b434dd54341b6",
+  "duration": 4,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 3960,
+        "start_time": 0,
+        "text": "喝酒误了粮，你这顿打不算冤。",
+        "words": [
+          {
+            "end_time": 240,
+            "start_time": 0,
+            "text": "喝"
+          },
+          {
+            "end_time": 440,
+            "start_time": 240,
+            "text": "酒"
+          },
+          {
+            "end_time": 600,
+            "start_time": 560,
+            "text": "误"
+          },
+          {
+            "end_time": 920,
+            "start_time": 720,
+            "text": "了"
+          },
+          {
+            "end_time": 1160,
+            "start_time": 920,
+            "text": "粮"
+          },
+          {
+            "end_time": 1160,
+            "start_time": 1160,
+            "text": "，"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2600,
+            "text": "你"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 2840,
+            "text": "这"
+          },
+          {
+            "end_time": 3200,
+            "start_time": 3040,
+            "text": "顿"
+          },
+          {
+            "end_time": 3520,
+            "start_time": 3240,
+            "text": "打"
+          },
+          {
+            "end_time": 3640,
+            "start_time": 3520,
+            "text": "不"
+          },
+          {
+            "end_time": 3800,
+            "start_time": 3640,
+            "text": "算"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3920,
+            "text": "冤"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3960,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "喝酒误了粮，你这顿打不算冤。"
+  },
+  "referenceUploaded": true
+}

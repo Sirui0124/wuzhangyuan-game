@@ -1,0 +1,51 @@
+{
+  "version": "2026-11-06",
+  "scope": "仅四路听报场景背景；map.png保持不变",
+  "assets": [
+    {
+      "route": "fu",
+      "file": "scene-fu.png",
+      "source": "source-art/visuals/runtime/scenes/yiling/yiling_reception_camp-v1.png",
+      "sha256": "9b5173bd0a6125fbbf9e71a386ecff25e5dd187bf5d3bd3dbd1ae18a90809037",
+      "usage": "同一接应营听报背景；不表示已到达被救将领所在地",
+      "review": "目视检查背景；现有素材复用，未新增人物或生成图片"
+    },
+    {
+      "route": "huang",
+      "file": "scene-huang.png",
+      "source": "source-art/visuals/runtime/scenes/yiling/yiling_reception_camp-v1.png",
+      "sha256": "9b5173bd0a6125fbbf9e71a386ecff25e5dd187bf5d3bd3dbd1ae18a90809037",
+      "usage": "同一接应营听报背景；不表示已到达被救将领所在地",
+      "review": "目视检查背景；现有素材复用，未新增人物或生成图片"
+    },
+    {
+      "route": "cheng",
+      "file": "scene-cheng.png",
+      "source": "source-art/visuals/runtime/scenes/yiling/yiling_reception_camp-v1.png",
+      "sha256": "9b5173bd0a6125fbbf9e71a386ecff25e5dd187bf5d3bd3dbd1ae18a90809037",
+      "usage": "同一接应营听报背景；不表示已到达被救将领所在地",
+      "review": "目视检查背景；现有素材复用，未新增人物或生成图片"
+    },
+    {
+      "route": "sha",
+      "file": "scene-sha.png",
+      "source": "source-art/visuals/runtime/scenes/yiling/yiling_reception_camp-v1.png",
+      "sha256": "9b5173bd0a6125fbbf9e71a386ecff25e5dd187bf5d3bd3dbd1ae18a90809037",
+      "usage": "同一接应营听报背景；不表示已到达被救将领所在地",
+      "review": "目视检查背景；现有素材复用，未新增人物或生成图片"
+    },
+    {
+      "route": "reserve",
+      "file": "riverbank.png",
+      "source": "source-art/visuals/runtime/scenes/yiling/yiling_riverbank-v1.png",
+      "sha256": "628d4213b4cf3b49f53477953b3b7d19877b77604caec27b7f9e8fb4095366d1",
+      "usage": "备用江边场景；仅实际到江边或渡江回报时选用，当前未接入",
+      "review": "已目视检查；原素材复用"
+    }
+  ],
+  "notes": [
+    "四路共用接应营以保持听报地点连续；各路困境由军士回报和选择承载。",
+    "背景中的既有小舟、营具仅属场景陈设，不构成新增可调资源。",
+    "未使用其他已知人物形象冒充四路将领。"
+  ]
+}

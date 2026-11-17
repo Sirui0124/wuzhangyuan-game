@@ -1,0 +1,572 @@
+{
+  "id": "E3",
+  "title": "真相到了人没回来",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-纯台词短版-V4.mp4",
+  "sha256": "4b9395b41e0a920c893b020e635bd5660e492a8cd9b8711430b822bec75eda50",
+  "duration": 33.5,
+  "decode": "passed",
+  "videoCoverage": {
+    "videoSeconds": 33.5,
+    "decodedFrames": 804,
+    "expectedSeconds": 33.5,
+    "passed": true
+  },
+  "editDecisionList": [
+    {
+      "slot": "V39",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+      "sourceSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "frames": 245,
+      "start": 0.0,
+      "end": 10.208333333333334,
+      "duration": 10.208333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              58
+            ],
+            [
+              139,
+              223
+            ]
+          ],
+          "node": "CH2-LY12A-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+          "timelineRange": [
+            0,
+            5.916666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              323,
+              426
+            ]
+          ],
+          "node": "CH2-LY12A-003",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.45,
+          "delay": 0,
+          "reason": "仅真实共同核收原句，不能提前宣布定案",
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+        "共同收件不提前判定李严责任或凭空补齐缺失证据",
+        "我的递交说明与军吏核收原句均保留，删掉元说明音画"
+      ]
+    },
+    {
+      "slot": "V40",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+      "sourceSha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+      "frames": 559,
+      "start": 10.208333333333334,
+      "end": 33.5,
+      "duration": 23.291666666666668,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              26
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "短暂交代查办中的伤帐；不念演出说明",
+          "timelineRange": [
+            0,
+            1.0833333333333333
+          ]
+        },
+        {
+          "pictures": [
+            [
+              151,
+              200
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 6.3,
+          "delay": 0,
+          "reason": "苟安主动担责前半",
+          "timelineRange": [
+            1.0833333333333333,
+            3.125
+          ]
+        },
+        {
+          "pictures": [
+            [
+              239,
+              276
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.95,
+          "delay": 0,
+          "reason": "苟安承担问责后半，缩掉过长停顿",
+          "timelineRange": [
+            3.125,
+            4.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              288,
+              390
+            ]
+          ],
+          "node": "CH2-LY12A-006",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "我要求查李严，苟安闭口反应",
+          "timelineRange": [
+            4.666666666666667,
+            8.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              480,
+              501
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "正式处置另时传来，用无字卷束短转场，不念007演出说明",
+          "timelineRange": [
+            8.916666666666668,
+            9.791666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              684,
+              759
+            ]
+          ],
+          "node": "CH2-LY12A-008",
+          "audio": "original-whitelist-window",
+          "audioStart": 28.52,
+          "delay": 0,
+          "reason": "李严革职/交官印真实原句",
+          "timelineRange": [
+            9.791666666666668,
+            12.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              759,
+              762
+            ],
+            [
+              897,
+              981
+            ]
+          ],
+          "node": "CH2-LY12A-009",
+          "audio": "original-whitelist-window",
+          "audioStart": 37.25,
+          "delay": 0,
+          "reason": "实际军法死讯先于空铺；删除苟安死讯等标签段；前镜连续尾部3帧承接死讯起音，再切已坐定镜头，删掉孤立入座闪镜；原句音轨完整不动",
+          "timelineRange": [
+            12.916666666666668,
+            16.541666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              988,
+              1058
+            ],
+            [
+              1164,
+              1256
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "死亡报告后才空铺/空粮车；三句心声完整放入",
+          "timelineRange": [
+            16.541666666666668,
+            23.291666666666668
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅在V39实际收件且Q真后进入查办；苟安担责及我要求查李严均保留",
+        "正式裁处及军法处死原句先于空铺和空粮车；不把提交材料直接当处死",
+        "三句合法末心声完整保留；不将G5的V42重复附在本片",
+        "死讯起音保留完整，孤立入座闪镜已用前镜连续尾部3帧替换"
+      ]
+    }
+  ],
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E3-overview-0.jpg",
+  "userApproved": false,
+  "gameIntegrated": false,
+  "executesGameState": false,
+  "artifactType": "edited-review-candidate",
+  "audioReview": "采用G6登记的纯台词短版及已核来源；实际逐字听审仍pending",
+  "visualReview": "已查看全时段有序抽帧及拼接切点，非连续全片观看",
+  "previousVersion": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了，人没回来.mp4",
+    "sha256": "d348d1b6d8035f7ec08ff3b1858abadcea9c505928f8bf50a4018408661bb4c2",
+    "duration": 96.75
+  },
+  "entryPrerequisite": "UI-CASE已确认且锁定Q真；先V39实际收件，再V40查办裁处。本合辑结束于空铺/空车；V42经原游戏确认/继续边界作为独立尾声接入，不由本片结束自动触发。",
+  "description": "实际收件、查办与裁处之后，留下空铺、空粮车和未能补上的缺口。",
+  "slots": [
+    "V39",
+    "V40"
+  ],
+  "previousRevision": {
+    "id": "E3",
+    "title": "真相到了人没回来",
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-V3.mp4",
+    "sha256": "6e366d11bcbf9e71fa0a3b200fd7253f103552d3327623c808c74bf0e762c57d",
+    "duration": 74.917,
+    "decode": "passed",
+    "videoCoverage": {
+      "videoSeconds": 74.917,
+      "decodedFrames": 1798,
+      "expectedSeconds": 74.91666666666667,
+      "passed": true
+    },
+    "editDecisionList": [
+      {
+        "id": "E3-without-shared-tail",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了，人没回来.mp4",
+        "sourceSha256": "d348d1b6d8035f7ec08ff3b1858abadcea9c505928f8bf50a4018408661bb4c2",
+        "start": 0,
+        "frames": 1798,
+        "duration": 74.91666666666667,
+        "reason": "仅保留本分支收件、查办、死亡及空铺；V42拆出独立",
+        "audio": null,
+        "timelineStart": 0,
+        "timelineEnd": 74.91666666666667
+      }
+    ],
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\pace-v2\\E3-V2.jpg",
+    "userApproved": false,
+    "gameIntegrated": false,
+    "executesGameState": false,
+    "artifactType": "edited-review-candidate",
+    "audioReview": "原声及已有心声沿用，未完成逐字听审",
+    "visualReview": "关键动作/切点有序抽帧复核完成；非完整连续人工观看，待用户review",
+    "previousVersion": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了，人没回来.mp4",
+      "sha256": "d348d1b6d8035f7ec08ff3b1858abadcea9c505928f8bf50a4018408661bb4c2",
+      "duration": 96.75
+    },
+    "entryPrerequisite": "UI-CASE已确认且锁定Q真；先V39实际收件，再V40查办裁处。本合辑结束于空铺/空车；V42经原游戏确认/继续边界作为独立尾声接入，不由本片结束自动触发。",
+    "description": "实际收件、查办与裁处之后，留下空铺、空粮车和未能补上的缺口。",
+    "slots": [
+      "V39",
+      "V40"
+    ],
+    "previousRevision": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-V2.mp4",
+      "sha256": "d423e1d3ee142aebb7919ab7ef1463150b82b652af16e661c0697b108eee9fcd"
+    },
+    "postProcessing": [
+      {
+        "operation": "replace-last-frame-with-previous",
+        "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-V2.mp4",
+        "sourceSha256": "d423e1d3ee142aebb7919ab7ef1463150b82b652af16e661c0697b108eee9fcd",
+        "frameIndex": 1797,
+        "heldFrameIndex": 1796,
+        "audioPacketsUnchanged": true
+      }
+    ],
+    "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+    "pictureUsability": "usable-with-integration-condition",
+    "overviewProvenance": {
+      "version": "V2 historical overview",
+      "sha256": "d423e1d3ee142aebb7919ab7ef1463150b82b652af16e661c0697b108eee9fcd",
+      "note": "沿用旧V2总览，仅供未变镜头参考；不是V3新总览，V3单帧修正见下列逐帧证据。",
+      "currentRevisionEndFrameEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\E3-V3-last-12-frames.jpg"
+    }
+  },
+  "postProcessing": {
+    "type": "registered-G6-batch2-short-source-integration",
+    "newGeneration": false
+  },
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\visual-review.json",
+  "sources": [
+    {
+      "slot": "V39",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+      "sourceSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "frames": 245,
+      "start": 0.0,
+      "end": 10.208333333333334,
+      "duration": 10.208333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              58
+            ],
+            [
+              139,
+              223
+            ]
+          ],
+          "node": "CH2-LY12A-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+          "timelineRange": [
+            0,
+            5.916666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              323,
+              426
+            ]
+          ],
+          "node": "CH2-LY12A-003",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.45,
+          "delay": 0,
+          "reason": "仅真实共同核收原句，不能提前宣布定案",
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+        "共同收件不提前判定李严责任或凭空补齐缺失证据",
+        "我的递交说明与军吏核收原句均保留，删掉元说明音画"
+      ]
+    },
+    {
+      "slot": "V40",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+      "sourceSha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+      "frames": 559,
+      "start": 10.208333333333334,
+      "end": 33.5,
+      "duration": 23.291666666666668,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              26
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "短暂交代查办中的伤帐；不念演出说明",
+          "timelineRange": [
+            0,
+            1.0833333333333333
+          ]
+        },
+        {
+          "pictures": [
+            [
+              151,
+              200
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 6.3,
+          "delay": 0,
+          "reason": "苟安主动担责前半",
+          "timelineRange": [
+            1.0833333333333333,
+            3.125
+          ]
+        },
+        {
+          "pictures": [
+            [
+              239,
+              276
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.95,
+          "delay": 0,
+          "reason": "苟安承担问责后半，缩掉过长停顿",
+          "timelineRange": [
+            3.125,
+            4.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              288,
+              390
+            ]
+          ],
+          "node": "CH2-LY12A-006",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "我要求查李严，苟安闭口反应",
+          "timelineRange": [
+            4.666666666666667,
+            8.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              480,
+              501
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "正式处置另时传来，用无字卷束短转场，不念007演出说明",
+          "timelineRange": [
+            8.916666666666668,
+            9.791666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              684,
+              759
+            ]
+          ],
+          "node": "CH2-LY12A-008",
+          "audio": "original-whitelist-window",
+          "audioStart": 28.52,
+          "delay": 0,
+          "reason": "李严革职/交官印真实原句",
+          "timelineRange": [
+            9.791666666666668,
+            12.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              759,
+              762
+            ],
+            [
+              897,
+              981
+            ]
+          ],
+          "node": "CH2-LY12A-009",
+          "audio": "original-whitelist-window",
+          "audioStart": 37.25,
+          "delay": 0,
+          "reason": "实际军法死讯先于空铺；删除苟安死讯等标签段；前镜连续尾部3帧承接死讯起音，再切已坐定镜头，删掉孤立入座闪镜；原句音轨完整不动",
+          "timelineRange": [
+            12.916666666666668,
+            16.541666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              988,
+              1058
+            ],
+            [
+              1164,
+              1256
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "死亡报告后才空铺/空粮车；三句心声完整放入",
+          "timelineRange": [
+            16.541666666666668,
+            23.291666666666668
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅在V39实际收件且Q真后进入查办；苟安担责及我要求查李严均保留",
+        "正式裁处及军法处死原句先于空铺和空粮车；不把提交材料直接当处死",
+        "三句合法末心声完整保留；不将G5的V42重复附在本片",
+        "死讯起音保留完整，孤立入座闪镜已用前镜连续尾部3帧替换"
+      ]
+    }
+  ],
+  "overviewSheets": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E3-overview-0.jpg",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E3-overview-1.jpg",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E3-cuts-0.jpg",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E3-cuts-1.jpg"
+  ],
+  "adoptionMethod": "frame-exact-concat-of-registered-sources",
+  "sourceSignature": "ec3efaca422646bd83f43d81c46dac13c2f97acafdede404118e8ed221580d2c",
+  "joinFrames": [
+    245,
+    555
+  ],
+  "integrationConditions": [
+    "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+    "共同收件不提前判定李严责任或凭空补齐缺失证据",
+    "我的递交说明与军吏核收原句均保留，删掉元说明音画",
+    "仅在V39实际收件且Q真后进入查办；苟安担责及我要求查李严均保留",
+    "正式裁处及军法处死原句先于空铺和空粮车；不把提交材料直接当处死",
+    "三句合法末心声完整保留；不将G5的V42重复附在本片",
+    "死讯起音保留完整，孤立入座闪镜已用前镜连续尾部3帧替换"
+  ],
+  "sourceDuration": 33.5,
+  "status": "registered-short-version-awaiting-user-review",
+  "sourceAudioNotes": [
+    {
+      "slot": "V39",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    },
+    {
+      "slot": "V40",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    }
+  ]
+}

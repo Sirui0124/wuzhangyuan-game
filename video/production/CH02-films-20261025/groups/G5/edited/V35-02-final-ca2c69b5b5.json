@@ -1,0 +1,48 @@
+{
+  "id": "V35-02",
+  "sourceId": "V35-02-C2-clean-reply",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-02-C2-clean-reply.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V35-02-final-ca2c69b5b5.mp4",
+  "postVoice": [],
+  "textLayers": [
+    {
+      "text": "此次粮乏，应据实请退。",
+      "start": 2.65,
+      "end": 6.85,
+      "fullFrame": true
+    },
+    {
+      "text": "日后是否再战，留待另议。",
+      "start": 6.85,
+      "end": 11.1,
+      "fullFrame": true
+    }
+  ],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "loop": false,
+    "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-02-C2-clean-reply.json"
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "独立补镜的回信真实展开/放稳0–2.65秒；无伪字、无脸，局部机位只见右手与纸边，不伪造全景伤帐",
+    "随后的精确文书阅读层沿冻结源保留，不新增朗读、事实或提交动作；静态只在阅读层下"
+  ],
+  "audioIssues": [
+    "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 11.13,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V35-02-final-ca2c69b5b5.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:11.13, start: 0.000000, bitrate: 1881 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1737 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 137 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

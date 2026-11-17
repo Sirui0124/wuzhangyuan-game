@@ -1,0 +1,277 @@
+{
+  "source_sha256": "023b4c2d15e7c16bc2cbc46c08b930f914bc27c929af1cec852c635624e8fa70",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8834
+        },
+        {
+          "label": "Music",
+          "p": 0.0531
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0398
+        },
+        {
+          "label": "Sigh",
+          "p": 0.035
+        },
+        {
+          "label": "Animal",
+          "p": 0.0338
+        },
+        {
+          "label": "Horse",
+          "p": 0.0333
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0171
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0157
+        },
+        {
+          "label": "Patter",
+          "p": 0.0153
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0139
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0115
+        },
+        {
+          "label": "Fire",
+          "p": 0.0104
+        }
+      ],
+      "music": 0.0531
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.3461
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0794
+        },
+        {
+          "label": "Music",
+          "p": 0.0478
+        },
+        {
+          "label": "Scratch",
+          "p": 0.0466
+        },
+        {
+          "label": "Scratching (performance technique)",
+          "p": 0.038
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.023
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.0157
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.015
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0129
+        },
+        {
+          "label": "Animal",
+          "p": 0.0099
+        },
+        {
+          "label": "Scrape",
+          "p": 0.0093
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0089
+        }
+      ],
+      "music": 0.0478
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.4747
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1209
+        },
+        {
+          "label": "Fire",
+          "p": 0.0265
+        },
+        {
+          "label": "Rumble",
+          "p": 0.024
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0226
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0197
+        },
+        {
+          "label": "Static",
+          "p": 0.0186
+        },
+        {
+          "label": "White noise",
+          "p": 0.0146
+        },
+        {
+          "label": "Music",
+          "p": 0.0123
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0112
+        },
+        {
+          "label": "Gasp",
+          "p": 0.011
+        },
+        {
+          "label": "Hum",
+          "p": 0.0101
+        }
+      ],
+      "music": 0.0123
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Rain",
+          "p": 0.3743
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.3316
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.1287
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0642
+        },
+        {
+          "label": "White noise",
+          "p": 0.0562
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0315
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.0294
+        },
+        {
+          "label": "Fire",
+          "p": 0.0271
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0252
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0214
+        },
+        {
+          "label": "Music",
+          "p": 0.0158
+        },
+        {
+          "label": "Static",
+          "p": 0.0134
+        }
+      ],
+      "music": 0.0158
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Rain",
+          "p": 0.6727
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.4724
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.2957
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.2595
+        },
+        {
+          "label": "Thunder",
+          "p": 0.1692
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0109
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0109
+        },
+        {
+          "label": "White noise",
+          "p": 0.0074
+        },
+        {
+          "label": "Fire",
+          "p": 0.0071
+        },
+        {
+          "label": "Music",
+          "p": 0.0068
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0064
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0051
+        }
+      ],
+      "music": 0.0068
+    }
+  ]
+}

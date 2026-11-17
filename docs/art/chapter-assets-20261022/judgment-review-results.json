@@ -1,0 +1,113 @@
+{
+  "checkedAt": "2026-10-22T08:46:25.560Z",
+  "browser": "msedge headless",
+  "rules": {
+    "passed": true,
+    "exhaustiveAvailableEvidenceCombinations": 240,
+    "unknownEvidenceRejected": true,
+    "missingChoiceRejected": true,
+    "duplicateEvidenceCannotFillMissingRequirement": true
+  },
+  "devices": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "checks": [
+        "Zero, one, and two irrelevant/insufficient evidence cards are blocked without advancing",
+        "Reload preserves evidence drafts and enforces the same submission gate",
+        "Stages 2–4 reject false assertions even with every available card; supported combinations advance",
+        "Full supported trace unlocks a separate signature-verification action before its report is acquired",
+        "Revising history invalidates downstream submissions, keeps drafts, and blocks downstream resubmission after refresh",
+        "First-stage receipt + loss establishes inquiry only; no conviction, testimony, signature report, second letter, or ending is granted",
+        "Asking performs the encounter; testimony is acquired only afterward; cancelling closure and continuing investigation return safely",
+        "Only ask → close-case → confirm-close reaches failure; refreshing preserves failure and retry clears submitted/action/outcome states while retaining editable drafts",
+        "Full reset clears all drafts; no browser JavaScript errors"
+      ],
+      "errors": [],
+      "screenshots": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\investigation-expansion-20261022\\proof-judgment-blocked.png"
+      ],
+      "layouts": [
+        {
+          "label": "blocked",
+          "width": 1440,
+          "documentWidth": 1440,
+          "canvasWidth": 1358,
+          "canvasScrollWidth": 1358,
+          "undersizedVerticalTargets": []
+        },
+        {
+          "label": "trace-ready",
+          "width": 1440,
+          "documentWidth": 1440,
+          "canvasWidth": 1358,
+          "canvasScrollWidth": 1358,
+          "undersizedVerticalTargets": []
+        },
+        {
+          "label": "bad-ending",
+          "width": 1440,
+          "documentWidth": 1440,
+          "canvasWidth": 1358,
+          "canvasScrollWidth": 1358,
+          "undersizedVerticalTargets": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "checks": [
+        "Zero, one, and two irrelevant/insufficient evidence cards are blocked without advancing",
+        "Reload preserves evidence drafts and enforces the same submission gate",
+        "Stages 2–4 reject false assertions even with every available card; supported combinations advance",
+        "Full supported trace unlocks a separate signature-verification action before its report is acquired",
+        "Revising history invalidates downstream submissions, keeps drafts, and blocks downstream resubmission after refresh",
+        "First-stage receipt + loss establishes inquiry only; no conviction, testimony, signature report, second letter, or ending is granted",
+        "Asking performs the encounter; testimony is acquired only afterward; cancelling closure and continuing investigation return safely",
+        "Only ask → close-case → confirm-close reaches failure; refreshing preserves failure and retry clears submitted/action/outcome states while retaining editable drafts",
+        "Full reset clears all drafts; no browser JavaScript errors"
+      ],
+      "errors": [],
+      "screenshots": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\investigation-expansion-20261022\\proof-judgment-mobile.png"
+      ],
+      "layouts": [
+        {
+          "label": "blocked",
+          "width": 390,
+          "documentWidth": 390,
+          "canvasWidth": 390,
+          "canvasScrollWidth": 390,
+          "undersizedVerticalTargets": []
+        },
+        {
+          "label": "trace-ready",
+          "width": 390,
+          "documentWidth": 390,
+          "canvasWidth": 390,
+          "canvasScrollWidth": 390,
+          "undersizedVerticalTargets": []
+        },
+        {
+          "label": "bad-ending",
+          "width": 390,
+          "documentWidth": 390,
+          "canvasWidth": 390,
+          "canvasScrollWidth": 390,
+          "undersizedVerticalTargets": []
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

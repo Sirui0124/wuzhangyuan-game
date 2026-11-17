@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "ready": true,
+  "status": "ready",
+  "model": "gpt-image-2",
+  "provider": "OpenAI Next",
+  "assets": [
+    {
+      "id": "书房",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\书房\\image-01.png",
+      "sha256": "5877dfcdd08a2a23376f319587b9cb76c695e7edc384239203a3411f12fabf87",
+      "use": "李严书房固定空间，昼夜由分镜控制",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "以低案席坐设计正式场面，避免放大参考图中高背椅；其余锁左窗、右书架、旧木与灯位"
+    },
+    {
+      "id": "仓中经手人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+      "sha256": "e3bac2c07c367de832b627edbc9661cf3dcd1bbf7a1d7338beb13b73f83295df",
+      "use": "仓中经手人固定身份，受杖前签认见证",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    {
+      "id": "仓吏",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+      "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+      "use": "仓吏固定身份，查账许可及结论",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    {
+      "id": "伤帐",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+      "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+      "use": "伤帐床、衣甲悬挂、灯与门方向；无人空间基准",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "信使",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\信使\\image-01.png",
+      "sha256": "b0fa0a32f17e6ba094a21f4776d3f732e297e3531bdac080dafd65873beaf9cb",
+      "use": "传信兵统一身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    {
+      "id": "前线接收人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+      "sha256": "554d25d17ba1c661dd1791ef4e1fc168c84b146be598a510a95bfaff4395f9d8",
+      "use": "前线接收人固定身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    {
+      "id": "地方经手人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+      "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+      "use": "地方经手人固定身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "收件军吏",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+      "sha256": "03666729062d5786cb6f4de289c90ef43dea30a1178d47c7f842474d45c39c74",
+      "use": "收件军吏统一身份；V26/29/36/38/39等",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "收件案头",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+      "sha256": "0dc8f15dbe25648b49ef45b75dd584a1e3e25274707aa2998b34cb3e6d32b2bb",
+      "use": "收件军吏案头空间；不预置已完成的事件",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "李严",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\李严\\image-01.png",
+      "sha256": "dd4dd7140325aec218ed419cc2980fc3956c3bd4898bde99c8feba2addf7ed78",
+      "use": "新建李严统一身份，夜访/日间读信同脸同冠",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "查粮案头",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+      "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+      "use": "查账近景、并排核对留白；精确记录后期叠加",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "粮仓",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+      "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+      "use": "粮棚/案头/通道空间，少量麻袋不作为粮数证据",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "粮队管事",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+      "sha256": "38f37cbd1dc4858218fdf1546e76240104c7431f542b55a5081e3f97cfc75c1e",
+      "use": "粮队管事固定身份；白天夜间共用",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    {
+      "id": "苟安",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+      "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+      "use": "锁现片苟安脸、黑巾发髻短须与灰麻衣；姿态/伤势按剧情",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    {
+      "id": "访村",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\访村\\image-01.png",
+      "sha256": "b53ae49e9e69cbdebc63cf0e351621a5cc684f094caf908c18bc3cd228c7d8c1",
+      "use": "同一老妇人及村庄，手与少量粮的观察镜",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    }
+  ],
+  "byId": {
+    "书房": {
+      "id": "书房",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\书房\\image-01.png",
+      "sha256": "5877dfcdd08a2a23376f319587b9cb76c695e7edc384239203a3411f12fabf87",
+      "use": "李严书房固定空间，昼夜由分镜控制",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "以低案席坐设计正式场面，避免放大参考图中高背椅；其余锁左窗、右书架、旧木与灯位"
+    },
+    "仓中经手人": {
+      "id": "仓中经手人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+      "sha256": "e3bac2c07c367de832b627edbc9661cf3dcd1bbf7a1d7338beb13b73f83295df",
+      "use": "仓中经手人固定身份，受杖前签认见证",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    "仓吏": {
+      "id": "仓吏",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+      "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+      "use": "仓吏固定身份，查账许可及结论",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    "伤帐": {
+      "id": "伤帐",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+      "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+      "use": "伤帐床、衣甲悬挂、灯与门方向；无人空间基准",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "信使": {
+      "id": "信使",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\信使\\image-01.png",
+      "sha256": "b0fa0a32f17e6ba094a21f4776d3f732e297e3531bdac080dafd65873beaf9cb",
+      "use": "传信兵统一身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    "前线接收人": {
+      "id": "前线接收人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+      "sha256": "554d25d17ba1c661dd1791ef4e1fc168c84b146be598a510a95bfaff4395f9d8",
+      "use": "前线接收人固定身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    "地方经手人": {
+      "id": "地方经手人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+      "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+      "use": "地方经手人固定身份",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "收件军吏": {
+      "id": "收件军吏",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+      "sha256": "03666729062d5786cb6f4de289c90ef43dea30a1178d47c7f842474d45c39c74",
+      "use": "收件军吏统一身份；V26/29/36/38/39等",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "收件案头": {
+      "id": "收件案头",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+      "sha256": "0dc8f15dbe25648b49ef45b75dd584a1e3e25274707aa2998b34cb3e6d32b2bb",
+      "use": "收件军吏案头空间；不预置已完成的事件",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "李严": {
+      "id": "李严",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\李严\\image-01.png",
+      "sha256": "dd4dd7140325aec218ed419cc2980fc3956c3bd4898bde99c8feba2addf7ed78",
+      "use": "新建李严统一身份，夜访/日间读信同脸同冠",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "查粮案头": {
+      "id": "查粮案头",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+      "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+      "use": "查账近景、并排核对留白；精确记录后期叠加",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "粮仓": {
+      "id": "粮仓",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+      "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+      "use": "粮棚/案头/通道空间，少量麻袋不作为粮数证据",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "粮队管事": {
+      "id": "粮队管事",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+      "sha256": "38f37cbd1dc4858218fdf1546e76240104c7431f542b55a5081e3f97cfc75c1e",
+      "use": "粮队管事固定身份；白天夜间共用",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准",
+      "constraint": "只取前景单人身份，忽略/不得复制背景其他人、粮袋数量与文字；环境由空间图决定"
+    },
+    "苟安": {
+      "id": "苟安",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+      "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+      "use": "锁现片苟安脸、黑巾发髻短须与灰麻衣；姿态/伤势按剧情",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    },
+    "访村": {
+      "id": "访村",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\访村\\image-01.png",
+      "sha256": "b53ae49e9e69cbdebc63cf0e351621a5cc684f094caf908c18bc3cd228c7d8c1",
+      "use": "同一老妇人及村庄，手与少量粮的观察镜",
+      "status": "ready",
+      "ready": true,
+      "visualReview": "根任务已逐张对照现片检查；无明显穿帮，可用于生成候选，非用户批准"
+    }
+  },
+  "note": "15张均实际生成且逐张目视核对；主要身份从现片延续，新次要角色统一创建；参考不是用户最终批准"
+}

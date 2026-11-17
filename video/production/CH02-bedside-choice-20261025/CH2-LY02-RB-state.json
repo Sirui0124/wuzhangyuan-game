@@ -1,0 +1,114 @@
+{
+  "id": "CH2-LY02-RB",
+  "role": "gouan",
+  "text": "养些日子就好。你不必总挂着。",
+  "seconds": 4,
+  "status": "succeeded",
+  "model": "seed-audio-1.0",
+  "requestId": "aa423865-1eb3-4d3c-b575-a4a6d9ce9419",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "reference": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\gouan-reference-user-approved-V10-14p4-17p6.wav",
+    "sha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+    "field": "references[0].audio_data"
+  },
+  "text_prompt": "仅采用@音频1中成年男性的音色，伤后克制、疲惫但清楚。只朗读引号内唯一原句：“养些日子就好。你不必总挂着。”其余均为控制说明，绝不朗读姓名、角色标签、旁白、画外、编号或导演说明。不复述参考录音，不添加任何词。总长约4秒，开头留0.2秒气口，句末自然落音。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "bodySha256": "57204dfaaa82791f4e4f9bb63c05e37114814bcf4ddacfd8bc81dfe1d0904b00",
+  "humanListeningReview": false,
+  "noPresetSpeaker": true,
+  "httpStatus": 200,
+  "logId": "20261025195455551365B7A79D1271A9C1",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-bedside-choice-20261025\\CH2-LY02-RB.wav",
+  "sha256": "6d97169e223a93f0aaebf6be3557f2215004deecb6d95f2b2c7ae3c8fd9c1c34",
+  "duration": 4,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 1720,
+        "start_time": 440,
+        "text": "养些日子就好。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 440,
+            "text": "养"
+          },
+          {
+            "end_time": 840,
+            "start_time": 680,
+            "text": "些"
+          },
+          {
+            "end_time": 1080,
+            "start_time": 880,
+            "text": "日"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1080,
+            "text": "子"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1240,
+            "text": "就"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1400,
+            "text": "好"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1720,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 3720,
+        "start_time": 2400,
+        "text": "你不必总挂着。",
+        "words": [
+          {
+            "end_time": 2640,
+            "start_time": 2400,
+            "text": "你"
+          },
+          {
+            "end_time": 2760,
+            "start_time": 2640,
+            "text": "不"
+          },
+          {
+            "end_time": 2960,
+            "start_time": 2760,
+            "text": "必"
+          },
+          {
+            "end_time": 3200,
+            "start_time": 3000,
+            "text": "总"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3240,
+            "text": "挂"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3480,
+            "text": "着"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3720,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "养些日子就好。你不必总挂着。"
+  },
+  "referenceUploaded": true
+}

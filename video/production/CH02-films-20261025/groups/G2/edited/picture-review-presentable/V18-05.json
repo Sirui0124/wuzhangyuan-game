@@ -1,0 +1,66 @@
+{
+  "id": "V18-05",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+  "sourceSha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955",
+  "pictureChanges": {
+    "documentDefocusZones": [
+      [
+        0,
+        20,
+        80,
+        720,
+        180
+      ]
+    ],
+    "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+    "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+    "fullFrameExistingEvidence": true,
+    "trim": [
+      3,
+      9.58
+    ],
+    "tailHold": 0,
+    "sourceReuse": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+        "sha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955",
+        "usedRange": [
+          3,
+          9.58
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D05"
+        ],
+        "context": "只回看刚取得的地方实收账，不提前展示D06应征及欠交"
+      }
+    ]
+  },
+  "sourceLines": [
+    {
+      "node": "CH2-LY04-C01",
+      "speaker": "我",
+      "text": "收到的粮对上了。原定要交多少？",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "voiceReused": {
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-C01.wav",
+    "duration": 3.397666666666667,
+    "offset": 1.0,
+    "provider": "existing player TTS",
+    "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+    "listeningReview": "未听审",
+    "centralSource": "reused_G2_same_voice",
+    "sha256": "83b48a44fa42dfae87f227a62604ff626aa94398e5415149c6249168e0ed1fae"
+  },
+  "audioReview": "未听审、未新增TTS",
+  "duration": 6.58,
+  "sha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioHz": 48000
+}

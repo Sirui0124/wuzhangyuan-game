@@ -1,0 +1,22 @@
+from pathlib import Path
+import json,hashlib
+R=Path(__file__).resolve().parent;A=R.parent/'PV-opening-20261114/references'
+request='庞统整部分含马背1.2x—1.4x；24秒起部队段重设计先看火烧连营；56秒火须被大雨浇灭；1分12秒恢复旧镜头语言并修诸葛亮动作；1分31秒删掉重做。'
+(R/'authorization.json').write_text(json.dumps({'date':'2026-11-15','user_request':request,'scope':'按用户点名段落重做与H3生成；不重复请求已授权审批','sound':'无BGM，保留人物声音和环境音','v2.1_review':'用户要求修改，非已通过','new_film_review':'待review'},ensure_ascii=False,indent=2),'utf-8')
+rows=[
+('R01','上方谷大雨将既有火势彻底压灭',6,[R/'references/R01-谷火起始.png'],'''Six-second single live-action historical film shot. Match this composition exactly. The valley fire is ALREADY burning at its maximum in the FIRST frame. A violent downpour is already striking the whole valley. During seconds0—4 the visible orange flame area steadily SHRINKS under the rain: tall tongues become short flickers, then the LAST flicker dies. Seconds4—6 show only dark soaked wood and white steam in the valley, NO orange flames remaining. No ignition, no new flare, no explosion. Dense wind-driven rain streaks pass the foreground, heavy drops splash on the cliff. Zhuge Liang remains at left watching downward, soaked robe moves in gusts, mouth closed. Camera slowly pushes toward the extinguishing valley. Physical rain and smothering fire, not a fantasy spectacle. Sound only heavy rain and wind, fire hiss diminishing to rain. No speech, no narration, no music. Full-frame16:9.'''),
+('R02','湿木最后一点火熄灭',4,[R.parent/'PV-H3-20261115-v2.1/H14/end-native.png'],'''Four-second live-action close shot of the same soaked charred wood. Start with only a tiny remaining flame below the wet log. Heavy raindrops strike that small flame immediately; by1.5seconds it is COMPLETELY extinguished. Remaining2.5seconds only water runs down black wood, drops splash in the puddle, pale steam rises. All wood stays fixed. No flame growth, no relighting, no explosion. Low camera, slight forward movement. Only rain, water drops and a brief hiss. No words, no music. Full frame16:9.'''),
+('M01','马谡抬眼近景恢复旧正反打',4,[A/'existing/E08-马谡抬眼.png'],'''Four-second live-action close-up, same actor Ma Su, same brown rough robe and binding rope, same camp evening. He is kneeling BELOW the other person's eye height. Start his eyes down, then raise his eyes and chin ONCE toward offscreen UPPER RIGHT. He draws a restrained breath, lower lip tightens, mouth remains closed. End holding that eyeline for a brief moment. Camera makes a small smooth approach of20cm, hair and cloth respond to wind; no static freeze. Background only soft tents and palisade, no person enters. Real textured skin, no new tears, no glossy beauty filter. Only quiet breathing and camp wind. No dialogue, no narration, no music.16:9.'''),
+('M02','诸葛亮垂眼近景无第三人',4,[A/'existing/E09-诸葛亮含泪.png'],'''Four-second live-action tight close-up of this SAME Zhuge Liang actor, black cloth crown, blue-gray robe and beard. He stands higher than Ma Su, gazing offscreen LOWER LEFT. Only Zhuge Liang is visible, no shoulder or other person in foreground. Keep the first second's eyeline toward lower left, then his eyelids close briefly and his gaze drops once. His jaw tightens, a quiet exhale; lips stay closed. Existing moisture at one eye only, no exaggerated crying. Feather fan stays low outside this face close-up; he does NOT raise it in this shot. Camera slowly moves a few centimeters closer. Same evening camp and soft natural light, real skin, no pose freeze. Only soft breath, wind and cloth, no speech, no music.16:9.''')]
+plan=json.loads((R/'production-plan.json').read_text('utf-8')) if (R/'production-plan.json').exists() else {'version':'v2.2','units':[]}
+for id,title,dur,refs,prompt in rows:
+ d=R/id;d.mkdir(exist_ok=True)
+ if (d/'state.json').exists():continue
+ assert all(p.exists() for p in refs)
+ (d/'prompt.txt').write_text(prompt+'\n','utf-8');(d/'references.json').write_text(json.dumps(list(map(str,refs)),ensure_ascii=False,indent=2),'utf-8')
+ u=dict(id=id,title=title,duration=dur,edit_duration=dur,reference_paths=list(map(str,refs)),depends_on=None,version='v2.2',prompt_sha256=hashlib.sha256((d/'prompt.txt').read_bytes()).hexdigest())
+ if id not in [x['id'] for x in plan['units']]:plan['units'].append(u)
+(R/'production-plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),'utf-8')
+for name in ['pipeline.py','status.py']:
+ p=R/name;p.write_text(p.read_text('utf-8').replace("'v2.1'","'v2.2'"),'utf-8')
+print('v2.2 independent rain and eyeline shots prepared')

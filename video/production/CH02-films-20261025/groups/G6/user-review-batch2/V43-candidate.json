@@ -1,0 +1,104 @@
+{
+  "id": "V43",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+  "sha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+  "oldSHA": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+  "oldDuration": 21.024,
+  "duration": 12.333333,
+  "removedSeconds": 8.690667000000001,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+    "containerDuration": 12.333333,
+    "videoFrames": 296,
+    "firstPTS": 0.0,
+    "lastPTS": 12.291666666666666,
+    "videoEnd": 12.333333333333332,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 12.333,
+    "audioDecodedSamples": 591984,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          2,
+          62
+        ],
+        [
+          150,
+          226
+        ]
+      ],
+      "node": null,
+      "audio": "silence-essential-action",
+      "audioStart": null,
+      "delay": 0,
+      "reason": "保留回身/离开实行动作，删中间重复步行，原污染声音去除；不以静音填旧长片",
+      "timelineRange": [
+        0,
+        5.666666666666667
+      ]
+    },
+    {
+      "pictures": [
+        [
+          228,
+          288
+        ],
+        [
+          384,
+          484
+        ]
+      ],
+      "node": "CH2-E5-002",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.25,
+      "reason": "放行后另时营地与兵士反应，明确后来，禁止兵士代说旁白",
+      "timelineRange": [
+        5.666666666666667,
+        12.333333333333334
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-E5-002",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E5-002.wav",
+      "sourceSha256": "3b3531de06c41f74693f5a40b849a8eee3853900d90d0574491c94ae5e15cab3",
+      "sourceRange": [
+        0,
+        5.97175
+      ],
+      "timelineRange": [
+        5.916666666666667,
+        11.888416666666668
+      ],
+      "samples": 286644
+    }
+  ],
+  "mixPeakBefore": 0.590911865234375,
+  "mixScale": 1,
+  "newVideoRequests": 0,
+  "newAudioRequests": 0,
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-E5-002"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

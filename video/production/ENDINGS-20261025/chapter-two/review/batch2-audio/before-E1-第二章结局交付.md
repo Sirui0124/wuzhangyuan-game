@@ -1,0 +1,21 @@
+# 第二章结局修订版
+
+按用户要求：一起回头压为60秒；原片约第8秒开始；苟安快乐表演及军吏无卡宣读由OpenAI Next补镜。魏地广人众从E1/E3拆出，作为独立尾声。所有后期说明卡/浮层从当前审片采用版本移除。
+
+| 影片 | 当前长度 | 文件 |
+| --- | ---: | --- |
+| 一起回头-60秒 | 60.00秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E1-一起回头-60秒-V2.mp4) |
+| 救下眼前的人 | 34.20秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E2-救下眼前的人-去元文书R3.mp4) |
+| 真相到了人没回来 | 74.92秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E3-真相到了人没回来-V3.mp4) |
+| 认下来的罪-早停查 | 26.92秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E4-early-认下来的罪-早停查-V2.mp4) |
+| 认下来的罪-晚支撑不足 | 54.88秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E4-late-认下来的罪-晚支撑不足-V2.mp4) |
+| 还是走上了险路 | 21.02秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/E5-还是走上了险路.mp4) |
+| 魏地广人众 | 15.00秒 | [播放](C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/ENDINGS-20261025/chapter-two/films/EPILOGUE-魏地广人众-V2.mp4) |
+
+只更新审片候选与剪辑记录；旧片留存。原组V节点未覆盖，游戏路由未修改。声音仍待统一处理，未声称逐字听审或用户通过。
+
+详细来源、时间线与SHA见 delivery.json 的 editDecisionList；生成请求及参考图绑定见 revision-v2/prompts。
+
+补充画面检查：E3 V3 修正片尾一帧误入的旧尾声桌面，原音频包与时长保留。关键动作和切点有序抽帧记录见 review/motion-followup/assessment.json；未完成连续人工全片观看或逐字听审。
+
+E2已采用去元文书R3，覆盖约10.2秒与13秒两处纸面制作文字；其余六个影片文件保持不变。声音沿用、待听审，新版待用户审阅。

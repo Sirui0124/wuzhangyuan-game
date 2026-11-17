@@ -1,0 +1,12 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+const live=JSON.parse(await readFile(new URL('../checks/live-ai-result.json',import.meta.url),'utf8'));
+const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage();
+try{
+await page.route('**/api/plan',async route=>{const body=route.request().postDataJSON();await route.fulfill({json:{...live[0].result,draft:{...live[0].result.draft,id:crypto.randomUUID(),revision:body.state.revision,time:body.state.time}}});});
+await page.goto('http://127.0.0.1:8946/legacy?qa=1');await page.waitForSelector('#ai-command');await page.locator('#ai-command').fill('甲队先守40秒再接人，乙丙接黄权，同时派船。');await page.locator('#plan-ai').click();await page.waitForSelector('#confirm-plan');assert.equal(await page.evaluate(()=>window.demoQA.state.tasks.length),0);await page.locator('#confirm-plan').click();assert.equal(await page.evaluate(()=>window.demoQA.state.tasks.length),4);assert.equal(await page.evaluate(()=>window.demoQA.state.units[0].state),'travel');await page.reload();await page.waitForSelector('.task-row');assert.equal(await page.locator('.task-row').count(),4);
+await page.route('**/api/ask',route=>route.fulfill({json:live[1].result}));await page.locator('#ai-question').fill('傅将军为何没撤？');await page.locator('#ask-ai').click();await page.waitForFunction(()=>window.demoQA.state.conversations.length===1);assert.equal(await page.evaluate(()=>window.demoQA.state.time),0);await page.locator('[data-question="0"]').click();assert.ok(await page.locator('#ask-ai').isDisabled());
+await page.unroute('**/api/plan');await page.route('**/api/plan',async route=>{await new Promise(r=>setTimeout(r,600));try{await route.fulfill({json:live[0].result});}catch{}});await page.locator('#plan-ai').click();await page.locator('.front[data-route="sha"]').click();await page.waitForTimeout(900);assert.equal(await page.locator('#confirm-plan').count(),0);assert.equal(await page.evaluate(()=>window.demoQA.state.tasks.length),4);
+await writeFile(new URL('../checks/ai-browser-result.json',import.meta.url),JSON.stringify({passed:true,mode:'Mocked browser transport using previously observed live model response',checks:['draft does not execute','confirmation creates four tasks','save restores tasks','question quota shared','route switch aborts stale response']}));console.log('AI browser integration passed');
+}finally{await browser.close();}

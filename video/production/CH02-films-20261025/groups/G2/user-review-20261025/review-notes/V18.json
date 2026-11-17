@@ -1,0 +1,32 @@
+{
+  "id": "V18",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-bf693534c5.mp4",
+  "sha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "T01→D04→W01→D05→C01→D06顺序保留。新木牍背面接触及原未叠层动作替换三张长正文卡，没有字幕或模糊方框。"
+  ],
+  "repairs": [
+    "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+    "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度"
+  ],
+  "integrationConditions": [
+    "保持原节点及分支顺序，影片动作不额外授予后续材料或自动判定。",
+    "文书准确正文保留于source-realization.json；画面只承担取得/观察动作，gamePresentationImplemented=false，需接入者独立呈现；木牍背面不冒充可读正文。",
+    "短段可见接触与握持，不把剪接省略处宣称为无剪切完整松手。"
+  ],
+  "audioReview": "原句/服务字幕/ASR技术核对；实际1倍速播放只验证结束，不代表听审。只复用既有准确玩家WAV与选定的原生原句，不新增文书旁白。",
+  "audioIssues": [
+    "工具不能实际听音，声音和BGM听审pending。"
+  ],
+  "unresolved": [
+    "修改版本待用户重新审核"
+  ],
+  "evidence": [
+    {
+      "method": "directly inspected complete current-SHA 0.5-second sequence; natural playback logged separately",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V18",
+      "sha256": "fda6b495d083e6575b5222c361feea787880c56b6f51b8a6a111f6e8f055e45f"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "V29-05",
+  "slot": "V29",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V29-05.mp4",
+  "sha256": "d0939c7b09d6e3661e6c1b77c5d57665b9e4e252d6b9fd43be67a13648cf390c",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V29-05.mp4",
+  "oldSha256": "e79b75eecba6b67a9ab6d3b6e0dcf384a3ae4a41d0a723c59006135e7e9c38cf",
+  "oldDuration": 11.542,
+  "sourceFrames": [
+    16,
+    276
+  ],
+  "sourceRange": [
+    0.6666666666666666,
+    11.5
+  ],
+  "newDuration": 10.833333333333334,
+  "technical": {
+    "duration": 10.833333,
+    "videoDuration": 10.833333333333334,
+    "frames": 260,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "d0939c7b09d6e3661e6c1b77c5d57665b9e4e252d6b9fd43be67a13648cf390c",
+    "bytes": 4879441
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY10-005",
+      "speaker": "军吏",
+      "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚，甚至处死。最后如何处置，要等查办。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY10-005",
+      "roleControlOnly": "军吏",
+      "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚，甚至处死。最后如何处置，要等查办。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

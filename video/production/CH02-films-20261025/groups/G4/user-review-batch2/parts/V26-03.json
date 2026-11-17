@@ -1,0 +1,52 @@
+{
+  "id": "V26-03",
+  "slot": "V26",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V26-03.mp4",
+  "sha256": "bea8cb3b68a061ce9881dd281e1a96eefb461f17a2dfe1b1b798990ccc67366a",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V26-03.mp4",
+  "oldSha256": "9f536b5634133c2441f5979a08c7b52352800a33c768e23c56f92a785d3060ae",
+  "oldDuration": 4.134,
+  "sourceFrames": [
+    3,
+    99
+  ],
+  "sourceRange": [
+    0.125,
+    4.125
+  ],
+  "newDuration": 4.0,
+  "technical": {
+    "duration": 4.0,
+    "videoDuration": 4.0,
+    "frames": 96,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "bea8cb3b68a061ce9881dd281e1a96eefb461f17a2dfe1b1b798990ccc67366a",
+    "bytes": 1702571
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-008",
+      "speaker": "军吏",
+      "text": "缺额、民食和种粮的情况，一并列明。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-008",
+      "roleControlOnly": "军吏",
+      "text": "缺额、民食和种粮的情况，一并列明。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

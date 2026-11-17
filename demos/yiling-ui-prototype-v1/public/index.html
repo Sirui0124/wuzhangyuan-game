@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>夷陵 · 军报交互稿</title><link rel="stylesheet" href="/style.css"></head><body>
+<main class="desk" id="desk">
+<header><div class="title">夷陵<span>前线军图</span></div><div class="header-actions"><button id="about">交互演示 · 预设回报</button><button id="reset">重新体验</button></div></header>
+<section class="map" aria-label="前线军图"><div class="map-world" id="map-world"><img src="/terrain.png" alt="夷陵山川实景地形军图" draggable="false"><svg class="map-routes" viewBox="0 0 1080 360" preserveAspectRatio="none" aria-hidden="true"><g id="routes"></g></svg><div id="places"></div></div><div class="map-note">位置以收到的军报为准</div></section>
+<div class="divider"><div id="resize" role="separator" aria-label="拖动或用上下方向键调整地图高度" aria-orientation="horizontal" tabindex="0" aria-valuemin="160" aria-valuemax="360" aria-valuenow="330"><span></span></div><button id="layout-toggle" aria-expanded="false">展开军报 ↓</button></div>
+<section class="work">
+<section class="conversation" aria-label="前线对话">
+<div class="conversation-head"><div id="contacts" class="tabs"></div><button id="mode-toggle" aria-pressed="false" aria-controls="command-panel">传令</button></div>
+<div class="filter-bar"><button id="filter-current" aria-pressed="true">沙摩柯往来</button><button id="filter-all" aria-pressed="false">所有传令</button><span id="filter-hint" role="status"></span><span id="compact-countdown" aria-label="传令间隔"></span></div>
+<section class="reports" aria-label="往来军报"><div id="log" tabindex="0" aria-label="军报记录"></div><button id="new-reports" hidden>有新军报 ↓</button></section>
+<div id="conflict" hidden></div>
+<section class="composer" aria-label="问话与传令"><div class="compose-scroll"><div id="suggestions" class="suggestions" hidden></div><label id="draft-label" for="draft" class="sr-only">向前线问话</label><textarea id="draft" maxlength="500" rows="1" placeholder="想问什么，直接写下来……"></textarea></div><div class="compose-actions"><button id="suggest" class="text-action">拟一句问话</button><p id="feedback" role="status"></p><div id="send-home"><button id="send" class="primary">传话</button></div></div></section>
+</section>
+<aside class="command-panel" id="command-panel" aria-label="军情与调遣"><div class="panel-head"><h2 id="panel-title">军情</h2><button id="close-command" hidden>返回军情</button></div><div class="panel-scroll">
+<div id="army-summary"><div class="strength-total"><span>接应兵力</span><strong id="total-men">2500<small>人</small></strong></div><div id="army-roster"></div></div>
+<div id="preview" hidden></div><section id="command-config" hidden aria-label="调遣配置"><div id="units" class="tabs unit-tabs"></div><div id="unit-status" class="unit-status"></div><div class="config-grid"><label>任务<select id="config-task"><option value="rescue">接应前线</option><option value="hold">原地待命</option><option value="rest">原地休整</option><option value="retreat">撤回接应营</option></select></label><label>出动人数<input id="config-men" type="number" min="1" step="1" value="700"></label><label class="config-wide">接应对象<select id="config-target"><option value="sha">沙摩柯 · 东沟 / 西沟</option><option value="camp">冯习 · 张南 · 旧营</option><option value="fu">傅肜 · 后阵</option></select></label><label>行军<select id="config-pace"><option value="normal">正常行军</option><option value="rush">急行军</option></select></label><label>路线<select id="config-via"><option value="normal">常规路线</option><option value="side">绕行南侧路</option></select></label></div><p class="config-note">先拟令复诵，确认后出动。余员留营。</p><button id="write-order" class="primary">交军侯复诵</button></section>
+</div><section class="time-status"><span>传令间隔</span><strong id="command-countdown">可传话</strong><small>问话与军令共用，每 10 秒可发一次</small></section>
+</aside>
+</section><footer><span id="mode-note">联络前线，了解三路处境</span><span>Ctrl + Enter 发送 · 输入内容自动保留</span></footer>
+</main><dialog id="info"><h2>先看军图，再问前线。</h2><p>选择一支前线部队，写下问话；再从军报旁进入出兵调遣，安排接应队。军令复诵无误后才会发出。</p><p>这是一份独立交互稿：使用预设情境和本地指令识别，不调用 AI API，也不计算正式战斗结果。军令发出后，回报会自动到来。</p><button id="close-info" class="primary">开始体验</button></dialog><dialog id="reset-dialog"><h2>重新体验？</h2><p>本交互稿的军报、草稿和接应队安排将清空。旧版试玩不受影响。</p><button id="cancel-reset">保留当前进度</button><button id="confirm-reset" class="primary">重新开始</button></dialog><script type="module" src="/app.js"></script></body></html>
+

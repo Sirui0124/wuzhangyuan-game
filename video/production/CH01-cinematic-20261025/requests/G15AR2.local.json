@@ -1,0 +1,26 @@
+{
+  "model": "MiniMax-H3",
+  "duration": 15,
+  "resolution": "768P",
+  "ratio": "16:9",
+  "content": [
+    {
+      "type": "text",
+      "text": "Create a realistic Chinese historical live-action movie scene. 16:9 full frame, restrained low saturation, natural skin, soft firelight, detailed dark canvas and worn iron armour. The camera is the visitor's eyes: no visitor body, shoulder, face, reflection or permanent spear in foreground. Not an over-the-shoulder shot. Audio: ONLY speak the Chinese sentences inside quotation marks below. Never read any directions, names, identifiers, labels or English text. No subtitles, no text, no music. Other sounds: wind, canvas, clothes and steps synchronized to the scene. Keep the same face, costume, camp location and screen direction between shots. All unquoted text is silent direction.\nPicture 1: 姜维, 从现片8.25秒提取，锁年轻姜维脸、高束发、蓝灰衣袍和麻白领；不复制左侧魏延及此图站位.\nPicture 2: 中军帐, 只锁中军大帐、闭帘、门侧火盆、右侧告示、土路及木栏的空间；时段按分镜.\n0-6.2 seconds. 中军帐外，姜维刚从低咳声方向转回，目光稳住，确认禁令和当值职责。 65mm第一视角胸像，自然肤色和侧光，台词驱动微小表情。\nOnly the on-screen 姜维 speaks to the unseen visitor: \"禁令不能犯，军情也不能误。\". Other people stay silent with closed lips.\nOnly the on-screen 姜维 speaks to the unseen visitor: \"今夜军务由我处置。\". Other people stay silent with closed lips.\n\n6.2-15 seconds. 姜维手指向帐外空地，明确让魏延来报及自己判断、承担责任，不开门。 50mm略放宽给示意动作，然后稳住；不怒瞪、不反复点头。\nOnly the on-screen 姜维 speaks to the unseen visitor: \"请魏将军到帐外报明军情，是否禀报丞相，由我判断。\". Other people stay silent with closed lips.\nOnly the on-screen 姜维 speaks to the unseen visitor: \"该我作的决定，我担责。\". Other people stay silent with closed lips.\n\nFinish every quoted sentence in order. End with 0.4 seconds of quiet. Do not add any spoken words."
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "local_path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/core/姜维.png"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "local_path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/core/中军帐.png"
+      },
+      "role": "reference_image"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "L01",
+  "name": "定制①听者反应底片",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\L01-定制①听者反应底片.mp4",
+  "duration": 6.02,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "玩家确认本次原话后",
+  "next": [
+    "O1-SCORE"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "L01-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+      "slotStart": 0,
+      "slotEnd": 6.0,
+      "sourceTrim": [
+        0,
+        6.0
+      ],
+      "audioMode": "environment-only",
+      "review": {
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\L01-01-raw.mp4",
+        "sourceSha256": "dc4159f019711d79463d643b35f909f233dfe09068872f8c1c0ff295c7caff9f",
+        "visualReview": "不能整段用作稳定闭口循环；可免费取前段",
+        "actualDynamicReview": true,
+        "reviewedBy": "G3 full1x muted playback +3fps sequence; SHA reverified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-template-assist-review.json",
+        "findings": [
+          {
+            "time": [
+              0,
+              4.5
+            ],
+            "issue": "闭口为主，但约1.5秒后镜头持续横移/推近，姿态和视线逐步下移；不是首尾同姿态。"
+          },
+          {
+            "time": [
+              4.7,
+              10.125
+            ],
+            "issue": "出现开口，后半转明显侧脸，帐外白帐篷和树景进入背景；不宜将完整10秒标成闭口循环。"
+          }
+        ],
+        "audioIssues": [
+          "本次不逐字听审；音频仅标记，纯音频不建议付费重拍",
+          "有效画面已免费取窗并适度慢放；源句完整保留在策划与此条记录，临时音轨截句/语速待统一配音，不删源句。"
+        ],
+        "sourceLines": [],
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+        "sourceIntervals": [
+          [
+            0,
+            4.5
+          ]
+        ],
+        "rate": 0.75,
+        "loopReady": false,
+        "loopLimitation": "6秒非循环倾听反应；源0–4.5秒0.75倍，无短片反复。首尾不匹配，不作为循环已完成。"
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "9a0c513b3124245265c6ec67785d4cbbc4f634959523579ad6d134181bae38a3",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ],
+  "dynamicSource": "CH2-LY03-018.confirmedText",
+  "integrationConditions": [
+    "仅在玩家确认本次原话后的播放／等待判定阶段单次播放，动态内容仅使用CH2-LY03-018.confirmedText；正在自由输入的界面不播放。",
+    "播放结束保持真实末帧，不自动循环、倒放或推进剧情；取得判定／回应后才进入对应V11。"
+  ],
+  "userApproved": false
+}

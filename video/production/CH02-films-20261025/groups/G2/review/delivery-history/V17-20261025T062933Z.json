@@ -1,0 +1,77 @@
+{
+  "delivery": {
+    "id": "V17",
+    "name": "共同交付核对",
+    "entry": "V16A/C或B后明确继续返回仓中",
+    "next": [
+      "V18"
+    ],
+    "endEvent": "保留B+1，不补成A+2",
+    "children": [
+      "V17-01"
+    ],
+    "subclips": [
+      "V17-01"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V17-共同交付核对-画面候选-1dcec74a.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "ec4334bd9933d2381240e13b30574db97456ec4b37a22946e732102c7a20a87d",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V17-共同交付核对.mp4",
+    "technical": {
+      "duration": 12.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "ec4334bd9933d2381240e13b30574db97456ec4b37a22946e732102c7a20a87d"
+    },
+    "visualReview": [
+      {
+        "id": "V17-01",
+        "observation": "0–12.25秒前线接收人、两份交接册、翻纸及回看仓案；皮护腕与其余镜头略不同，记连续性限制。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V17-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "貓眼,出倉數和本隊簽收數對得上,路上損耗另有登記,領糧食的缺口還得往前查,悲軟的所謂閉嘴,全票是閉嘴。",
+        "expected": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "1dcec74aa73a9f049febb47d24ecbcc63d559df56c7b27cd9572c407550867cb"
+  },
+  "usability": {
+    "id": "V17",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V17-共同交付核对-画面候选-1dcec74a.mp4",
+    "sha256": "ec4334bd9933d2381240e13b30574db97456ec4b37a22946e732102c7a20a87d",
+    "reviewState": "pending",
+    "pictureUsability": null,
+    "issues": [],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V17-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "貓眼,出倉數和本隊簽收數對得上,路上損耗另有登記,領糧食的缺口還得往前查,悲軟的所謂閉嘴,全票是閉嘴。",
+        "expected": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+      }
+    ],
+    "userApproved": false
+  }
+}

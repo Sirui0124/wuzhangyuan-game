@@ -1,0 +1,52 @@
+{
+  "id": "V36-01",
+  "sourceId": "V36-01-C4-receipt",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-01-C4-receipt.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-01-final-07e9ecd15f.mp4",
+  "postVoice": [
+    {
+      "node": "CH2-LY12B-010",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-010.wav",
+      "start": 1,
+      "end": 5.775041666666667
+    }
+  ],
+  "textLayers": [
+    {
+      "text": "原信\n查粮材料\n苟安、李严各自的补充说明",
+      "start": 4.8,
+      "end": 7.8,
+      "fullFrame": true
+    }
+  ],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "sourceRange": [
+      0,
+      4.8
+    ],
+    "hold": "末3秒静态文书插入，不循环交接动作"
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "保留首叠材料实际接触、放稳与松手；错误生成字作局部柔焦，效果可见，未伪称纸面已可精确阅读",
+    "放稳后准确材料名称为后期插入，尚未提前确认收齐/结案；其后V36-02才宣布收齐"
+  ],
+  "audioIssues": [
+    "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 7.79,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-01-final-07e9ecd15f.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:07.79, start: 0.000000, bitrate: 3302 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3147 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 148 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

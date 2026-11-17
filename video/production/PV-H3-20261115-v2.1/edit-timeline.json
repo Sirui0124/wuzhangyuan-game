@@ -1,0 +1,276 @@
+{
+  "duration": 103.16666666666667,
+  "shots": [
+    {
+      "id": "V01",
+      "unit": "H01",
+      "duration": 4.75,
+      "title_name": "山河火线",
+      "gain_db": 7,
+      "timeline_in": 0,
+      "timeline_out": 4.75
+    },
+    {
+      "id": "V02",
+      "unit": "H10",
+      "duration": 6.75,
+      "in": 2.5,
+      "title_name": "奔赴与庞统画外叮嘱",
+      "gain_db": -6,
+      "timeline_in": 4.75,
+      "timeline_out": 11.5
+    },
+    {
+      "id": "V03",
+      "unit": "H02",
+      "duration": 7.25,
+      "title_name": "梦中托付",
+      "audio_in": 0,
+      "picture_parts": [
+        {
+          "in": 0,
+          "out": 5,
+          "duration": 5
+        },
+        {
+          "in": 6,
+          "out": 7.25,
+          "duration": 2.25
+        }
+      ],
+      "note": "去除模型溶接；对白完整保留，掌心末段降速，不涉及口型。",
+      "gain_db": -3,
+      "timeline_in": 11.5,
+      "timeline_out": 18.75
+    },
+    {
+      "id": "V04",
+      "unit": "H11",
+      "duration": 6.166666666666667,
+      "in": 3,
+      "title_name": "接印与保全儿郎",
+      "note": "删除0–2.27无关念白，保留完整条件句与交印动作。",
+      "gain_db": 1,
+      "timeline_in": 18.75,
+      "timeline_out": 24.916666666666668
+    },
+    {
+      "id": "V05",
+      "unit": "H12",
+      "duration": 3.75,
+      "title_name": "伤兵退入败营",
+      "gain_db": 1,
+      "timeline_in": 24.916666666666668,
+      "timeline_out": 28.666666666666668
+    },
+    {
+      "id": "V06",
+      "unit": "H03B",
+      "duration": 4.25,
+      "in": 0.75,
+      "title_name": "御营告急",
+      "gain_db": 0,
+      "timeline_in": 28.666666666666668,
+      "timeline_out": 32.91666666666667
+    },
+    {
+      "id": "V07",
+      "unit": "H03",
+      "duration": 3.5,
+      "in": 3,
+      "title_name": "前路受阻",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H03\\ambience-separated.wav",
+      "audio_in": 3,
+      "note": "转向后战况，去除重复警告。",
+      "gain_db": 9,
+      "timeline_in": 32.91666666666667,
+      "timeline_out": 36.41666666666667
+    },
+    {
+      "id": "V08a",
+      "unit": "H04",
+      "duration": 1.75,
+      "title_name": "敌将劝降",
+      "gain_db": 1,
+      "timeline_in": 36.41666666666667,
+      "timeline_out": 38.16666666666667
+    },
+    {
+      "id": "V08b",
+      "unit": "H04",
+      "duration": 4.5,
+      "in": 4.75,
+      "title_name": "傅肜拒降",
+      "crop": "1216:684:0:42",
+      "note": "压缩回答前无行动停顿；同轴轻近景接完整回答与迈步。",
+      "gain_db": 0,
+      "timeline_in": 38.16666666666667,
+      "timeline_out": 42.66666666666667
+    },
+    {
+      "id": "V09",
+      "unit": "H05B",
+      "duration": 2.25,
+      "title_name": "沙摩柯回望",
+      "note": "仅用异常箭出现前的干净回望；中箭在画外，由单次同期箭啸与下一镜结果建立。",
+      "gain_db": 7,
+      "timeline_in": 42.66666666666667,
+      "timeline_out": 44.91666666666667
+    },
+    {
+      "id": "V10",
+      "unit": "H06",
+      "duration": 3.75,
+      "title_name": "人去马还行",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\sound\\sha-empty-horse.wav",
+      "audio_in": 0,
+      "gain_db": -3,
+      "timeline_in": 44.91666666666667,
+      "timeline_out": 48.66666666666667
+    },
+    {
+      "id": "V11",
+      "unit": "H13",
+      "duration": 3.5,
+      "title_name": "残旗",
+      "gain_db": -1,
+      "timeline_in": 48.66666666666667,
+      "timeline_out": 52.16666666666667
+    },
+    {
+      "id": "V12",
+      "unit": "H14",
+      "duration": 3.75,
+      "title_name": "雨中余烬",
+      "gain_db": -3,
+      "timeline_in": 52.16666666666667,
+      "timeline_out": 55.91666666666667
+    },
+    {
+      "id": "V13",
+      "unit": "H07",
+      "duration": 4.75,
+      "title_name": "大雨压火",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\sound\\valley-rain.wav",
+      "audio_in": 0,
+      "gain_db": 0,
+      "timeline_in": 55.91666666666667,
+      "timeline_out": 60.66666666666667
+    },
+    {
+      "id": "V14",
+      "unit": "H08",
+      "duration": 2,
+      "title_name": "闭口望天",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\sound\\valley-rain.wav",
+      "audio_in": 4.75,
+      "picture_parts": [
+        {
+          "in": 0,
+          "out": 1.25,
+          "duration": 2
+        }
+      ],
+      "note": "仅取开口前的抬眼动作，雨声连续；不使用原片配乐与无关台词。",
+      "gain_db": 0,
+      "timeline_in": 60.66666666666667,
+      "timeline_out": 62.66666666666667
+    },
+    {
+      "id": "V15",
+      "unit": "H15",
+      "duration": 7.75,
+      "title_name": "关羽刀落泥中",
+      "gain_db": 0,
+      "timeline_in": 62.66666666666667,
+      "timeline_out": 70.41666666666667
+    },
+    {
+      "id": "V16",
+      "unit": "H09",
+      "duration": 12,
+      "title_name": "马谡与诸葛亮相望掩面",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H09\\no-music-mix.wav",
+      "audio_in": 0,
+      "gain_db": 5,
+      "timeline_in": 70.41666666666667,
+      "timeline_out": 82.41666666666667
+    },
+    {
+      "id": "V17",
+      "unit": "H16B",
+      "duration": 4.75,
+      "title_name": "五丈原手停地图",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H16B\\ambience-separated.wav",
+      "audio_in": 0,
+      "gain_db": 24,
+      "timeline_in": 82.41666666666667,
+      "timeline_out": 87.16666666666667
+    },
+    {
+      "id": "V18",
+      "unit": "H17",
+      "duration": 3.75,
+      "title_name": "灯灭",
+      "gain_db": 3,
+      "timeline_in": 87.16666666666667,
+      "timeline_out": 90.91666666666667
+    },
+    {
+      "id": "V19",
+      "duration": 0.5,
+      "black": true,
+      "title_name": "暗场换气",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H18B\\source.mp4",
+      "audio_in": 0,
+      "gain_db": 4,
+      "timeline_in": 90.91666666666667,
+      "timeline_out": 91.41666666666667
+    },
+    {
+      "id": "V20",
+      "unit": "H18B",
+      "duration": 7.75,
+      "title_name": "我拉起伤兵",
+      "audio_in": 0.5,
+      "picture_parts": [
+        {
+          "in": 0.5,
+          "out": 3.25,
+          "duration": 2.75
+        },
+        {
+          "in": 3.25,
+          "out": 4.5,
+          "duration": 1.25,
+          "crop": "864:486:240:282"
+        },
+        {
+          "in": 4.5,
+          "out": 8.25,
+          "duration": 3.75
+        }
+      ],
+      "note": "施救者只露前臂；我的台词期间切双手握紧特写，避免伤兵口型代说；原生声音与动作保持同一时间。",
+      "gain_db": 4,
+      "timeline_in": 91.41666666666667,
+      "timeline_out": 99.16666666666667
+    },
+    {
+      "id": "V21",
+      "duration": 4,
+      "title": true,
+      "title_name": "逆转五丈原",
+      "audio_source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H18B\\source.mp4",
+      "audio_in": 8.25,
+      "gain_db": 4,
+      "sound_fade_at": 0.7,
+      "sound_fade_duration": 0.3,
+      "timeline_in": 99.16666666666667,
+      "timeline_out": 103.16666666666667
+    }
+  ],
+  "bridges": [],
+  "no_added_music": true,
+  "source_audio_policy": "native voices and ambience preserved; per-shot processing and findings recorded separately"
+}

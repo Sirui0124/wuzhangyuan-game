@@ -1,0 +1,68 @@
+{
+  "updated": "2026-10-25 17:39:18",
+  "pictureProductionComplete": false,
+  "logicalCandidates": 63,
+  "expectedLogicalSlots": 63,
+  "endingRouteCompilations": 6,
+  "audioComplete": false,
+  "userApproved": false,
+  "gameIntegrated": false,
+  "reviewUrl": "http://127.0.0.1:8894/",
+  "endingReviewPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\审片.html",
+  "verification": [
+    "63 current actual files SHA256 match owning picture usability reports",
+    "63 current independent complete video-track checks passed",
+    "6 current ending route versions plus 1 standalone epilogue file identities and video-track coverage passed",
+    "G6 sources in ending compilations match currently registered logical sources",
+    "Review evidence combines ordered frame sequences, dense action/cut inspection and actual observed playback moments; not continuous human frame-by-frame review"
+  ],
+  "limitations": [
+    "39 logical clips carry explicit source/voice/entry/branch conditions recorded per clip; this is production usability, not user approval",
+    "L01 and L02 are non-looping listener footage after confirmed text, not typing-UI loops; preserve actual judgment and response boundaries",
+    "Some document/signature close-ups are enlarged or softened; native writing is not guaranteed exact Chinese, accurate content uses documented text layers",
+    "Audio wording/voice/BGM/listening and final synchronization remain for later unified audio stage; no new TTS or cloning in this phase",
+    "No gameplay integration or user approval has been performed"
+  ],
+  "historicalUnknown": "G5 V32A-01 original submission outcome remains unknown; original record preserved and never rePOSTed; visual slot fulfilled by documented reuse",
+  "noNewTTS": true,
+  "candidateProductionComplete": true,
+  "pictureUsabilityComplete": false,
+  "pictureUsabilityStatus": "user-feedback-repair-in-progress",
+  "endingCompilationsStatus": "current-six-routes-and-one-epilogue-owner-picture-review-complete-root-identity-and-video-track-verified",
+  "pictureUsabilityCounts": {
+    "usable": 21,
+    "usable-with-integration-condition": 35,
+    "needs-repair": 0,
+    "pending": 7
+  },
+  "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\picture-usability\\current.json",
+  "standaloneEpilogues": 1,
+  "reviewEvidenceBoundary": "制作自查基于全时段有序抽帧、关键动作/切点密集序列及实播中实际观察到的时刻；播放器到ended仅证明可播放，不能冒称模型连续看见每一帧、人工逐帧审核或用户通过。",
+  "historicalVerification": [
+    {
+      "phase": "12:17候选生产阶段，后续新版需重新核验",
+      "statement": "6 ending compilations match final owning paths and SHA256"
+    }
+  ],
+  "endingKnownVisualRepair": {
+    "id": "E3",
+    "reportedVersion": "V2",
+    "issue": "末帧1797/74.875秒残留已拆出的V42桌面，空铺后闪一帧",
+    "owner": "补充第一二章结局视频",
+    "status": "closed-current-V3",
+    "scope": "仅替换末帧，保持总帧数/时长及音频；不覆盖逻辑片",
+    "sha256": "6e366d11bcbf9e71fa0a3b200fd7253f103552d3327623c808c74bf0e762c57d",
+    "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\E3-tail-repair.json"
+  },
+  "endingCurrentVerification": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\picture-usability\\ending-current-integrity.json",
+  "endingReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+  "pictureUsabilityCompletedAt": "2026-10-25T14:31:25.630964+08:00",
+  "finalCurrentAcceptance": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\picture-usability\\final-current-acceptance.json",
+  "userFeedbackSnapshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\comments.json",
+  "latestUserReviewBoundary": "V16C",
+  "audioRepairScope": "用户点名片段按评论处理，新增必要豆包语音；非全章统一配音",
+  "requiredPictureReviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "batch2Complete": false,
+  "audioProductionComplete": false,
+  "batch2UserReviewSnapshot": "reviews/user-20261025-batch2/comments-and-versions.json"
+}

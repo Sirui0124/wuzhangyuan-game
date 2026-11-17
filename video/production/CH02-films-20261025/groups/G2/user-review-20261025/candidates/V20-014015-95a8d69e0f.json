@@ -1,0 +1,50 @@
+{
+  "id": "V20-014015",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-014015-95a8d69e0f.mp4",
+  "sha256": "67f3927fe862110ea6f0d01c943fe56a0950a8ff3f82cae6dc8c609c2acf1182",
+  "videoFrames": 231,
+  "videoSeconds": 9.625,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V20-014015",
+    "parts": [
+      {
+        "range": [
+          0,
+          9.65
+        ],
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4"
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-02-raw.mp4",
+      "start": 0,
+      "end": 9.416667
+    },
+    "sourceNodes": [
+      "CH2-LY06-014",
+      "CH2-LY06-015"
+    ],
+    "comment": "Operator speech stays over actual plain-back report handoff; report evidence acquisition at local9.3 after contact/release, no second report grant"
+  },
+  "sourceParts": [
+    {
+      "range": [
+        0,
+        9.65
+      ],
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceSha256": "41e4435693d4ff028bdccb1dcaa5e7f8d0f521ae66ca77a44ac754a36f39b762"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

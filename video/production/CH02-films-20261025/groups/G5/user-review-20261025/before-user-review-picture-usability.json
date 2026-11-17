@@ -1,0 +1,622 @@
+{
+  "group": "G5",
+  "schema": "logical-slot-picture-usability-v1",
+  "scope": "仅G5；新验收不等于用户通过，声音单列",
+  "clips": [
+    {
+      "id": "V32A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V32A-31dd1af561-cfr24.mp4",
+      "sha256": "441fbe43f92f67e52db5f02aed7f9f6c7800caa80b13c40e7ac7ec9a8a2169a9",
+      "duration": 57.63,
+      "pictureUsability": "needs-repair",
+      "reviewState": "repair-in-progress",
+      "dynamicReview": {
+        "method": "新父片SHA IAB1倍0至片尾完成，V32A-06微距全2秒连续4fps已看；尾部C13源及真实动作未变，新父片重新动态复核",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            57.63
+          ],
+          [
+            33.5,
+            36
+          ],
+          [
+            47,
+            57.63
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round2.json",
+          "review/current-V32A-06-C3/sequence-index.json",
+          "review/V32A-07-C13-final-audit/sequence-index.json"
+        ]
+      },
+      "issues": [
+        {
+          "type": "time-and-view-continuity",
+          "state": "closed-by-local-reframe",
+          "time": [
+            33.5,
+            36
+          ],
+          "description": "写交代只留手/笔尖/纸边连续2秒，排除原日光帐景与侧身；准确交代全文转冻结阅读层"
+        },
+        {
+          "type": "crossout-and-signature",
+          "state": "closed-with-integration-condition",
+          "time": [
+            47,
+            57.63
+          ],
+          "description": "C13横划、下移、署名与提笔完整保留，未因前段调整重构末尾"
+        },
+        {
+          "type": "user-global-correction",
+          "state": "open",
+          "source": "reviews/user-20261025-1549/返修要求.md",
+          "description": "用户最新全片禁止正文卡/工作文档式文字与可见局部模糊；旧制作结论失效，本轮独立重剪"
+        }
+      ],
+      "integrationConditions": [
+        "前镜已建立苟安、夜帐和同一交代；手部微距不再放大",
+        "微距柔化可见；局部墨迹及原生署名字形不作为精确汉字证明，准确全文/姓名沿冻结阅读层",
+        "末段C13须完整保留撤回句先完整出现、真实横划、笔尖下移、署名触纸和提笔；文字卡不能替代动作",
+        "普通V32A仍为玩家视角，不能剪入结局归途的第三人称镜头"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V32A-4dc62cf1df-cfr24.mp4",
+          "sha256": "eef82304821abe3dae5d7ecf39a27720eae952c2b7e235bb80c770bfd0bb962b",
+          "duration": 57.63,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "crossout-and-signature",
+              "state": "closed-with-integration-condition",
+              "time": [
+                47,
+                57.63
+              ],
+              "description": "四步真实动作及可看性成立；紧裁/放大柔化为微距接入限制，首尾释义卡不计作动作证据"
+            },
+            {
+              "type": "time-and-view-continuity",
+              "state": "open",
+              "time": [
+                33.65,
+                36.8
+              ],
+              "description": "复核发现V32A-06短书写源仍为日间侧视，与普通夜帐段落不一致，正在从本组夜间手部源局部重构，不增加付费生成"
+            }
+          ],
+          "dynamicReview": {
+            "method": "当前SHA父片IAB 0–57.63秒复看；47–57.625关键窗另参同SHA G6只读协审，重看C13完整4fps序列，非字卡代替动作",
+            "actuallyReviewedRanges": [
+              [
+                0,
+                57.63
+              ],
+              [
+                47,
+                57.63
+              ]
+            ],
+            "evidence": [
+              "review/final-dynamic-review.json",
+              "review/V32A-07-C13-final-audit/sequence-index.json",
+              "../G6/review/G5-signature-assist.json"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "V33",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V33-3ba2700e32-cfr24.mp4",
+      "sha256": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+      "duration": 9.47,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "dynamicReview": {
+        "method": "当前SHA IAB1倍从0到9.47秒连续播放结束；完整4fps序列检查交卷接触与松手",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            9.47
+          ]
+        ],
+        "evidence": [
+          "review/usability-V33/sequence-index.json"
+        ]
+      },
+      "issues": [],
+      "integrationConditions": [
+        "仅玩家实际发信确认后使用；交卷完成与UI确认边界保持"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false
+    },
+    {
+      "id": "V34",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V34-dc2c0bde30-cfr24.mp4",
+      "sha256": "b7801ff6a94f76dedd87438c6a36b21fde13167d9b7b38233499bd1722090de7",
+      "duration": 45.58,
+      "pictureUsability": "needs-repair",
+      "reviewState": "repair-in-progress",
+      "dynamicReview": {
+        "method": "IAB当前SHA 1倍0至片尾；全4fps/同源裁剪动作序列复核，动态与技术检测分开",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            45.58
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round2.json",
+          "review/current-V34-final-C6/sequence-index.json",
+          "review/V34-cut-boundary-check.jpg"
+        ]
+      },
+      "issues": [
+        {
+          "type": "prior-picture-issue",
+          "state": "closed-by-local-repair-and-reviewed-replacement",
+          "description": "清理遮挡/伪文/错姓名，保留真实写、提笔、递出与握边；旧版问题与文件保留在history"
+        },
+        {
+          "type": "user-global-correction",
+          "state": "open",
+          "source": "reviews/user-20261025-1549/返修要求.md",
+          "description": "用户最新全片禁止正文卡/工作文档式文字与可见局部模糊；旧制作结论失效，本轮独立重剪"
+        }
+      ],
+      "integrationConditions": [
+        "仅远方李严已收信后的传信人目击；交给信使不等于我已收件，V35才进入回营接收",
+        "同场李严近景跨句复用，完整原音保留；临时嘴型差异归音频",
+        "签署后整理材料以剪辑省略，真实取件/递出及接收者握边均保留；微距不可再放大",
+        "可见原生落笔只证明签署动作，不证明准确字形；姓名/责任标题沿冻结阅读层；不能宣称镜头展示了整份已签精确文本",
+        "旧计划移离不作为镜头可见放稳证明，以原句撤回和后续实际补报承接，不新增玩家已收附件状态"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V34-4c44c858eb-cfr24.mp4",
+          "sha256": "fb2e57fc19db2b4108fc29a42a831e3a6e3c4a7cea44739510534f657ca3b81c",
+          "duration": 48.5,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                10.2,
+                10.45
+              ],
+              "description": "短插入仍露出原生伪字来信"
+            },
+            {
+              "type": "occlusion",
+              "state": "open",
+              "time": [
+                3.5,
+                8.5
+              ],
+              "description": "观察镜大面积前景遮挡，须改为同场干净回应"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                24.5,
+                26.8
+              ],
+              "description": "案上原生文字可读，应裁出"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                38.5,
+                47
+              ],
+              "description": "补报书写/交回旁的纸卷出现错误姓名与伪文，需保留真实动作另作局部裁幅"
+            }
+          ],
+          "dynamicReview": {
+            "method": "pending current-SHA playback; old evidence may be referenced, key doubts must be rechecked",
+            "actuallyReviewedRanges": []
+          }
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V34-a08fce9c2e-cfr24.mp4",
+          "sha256": "44d0551d85961b5b34367562fdfaa41aea3fe6960432a1f6f6f52763135fbcb6",
+          "duration": 46.0,
+          "pictureUsability": null,
+          "reviewState": "pending",
+          "issues": [],
+          "dynamicReview": {
+            "method": "新SHA待动态复核；旧问题保留于history，不把原SHA结论移给新SHA",
+            "actuallyReviewedRanges": []
+          }
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V34-9181c052b5-cfr24.mp4",
+          "sha256": "c988066a24040d552d722591e87efd0ad45dcb885d935f8825cf4181eb9aa89b",
+          "duration": 45.63,
+          "pictureUsability": null,
+          "reviewState": "pending",
+          "issues": [],
+          "dynamicReview": {
+            "method": "新SHA待完整衔接动态复核",
+            "actuallyReviewedRanges": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "V35",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V35-35d5d8645c-cfr24.mp4",
+      "sha256": "c827a0ea4f750433d842d4e7674f996da0636f630a1b996f33748cc25cfefb26",
+      "duration": 35.63,
+      "pictureUsability": "needs-repair",
+      "reviewState": "repair-in-progress",
+      "dynamicReview": {
+        "method": "IAB当前SHA 1倍0至片尾；全4fps/同源裁剪动作序列复核，动态与技术检测分开",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            35.63
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round2.json",
+          "review/current-V35-final-R2/sequence-index.json",
+          "review/V35-R2-clean/sequence-index.json",
+          "review/current-V35-01-C2-return-complete/sequence-index.json"
+        ]
+      },
+      "issues": [
+        {
+          "type": "prior-picture-issue",
+          "state": "closed-by-local-repair-and-reviewed-replacement",
+          "description": "唯一8秒补镜显示两独立附件接触、放稳、松手，已去字幕/伪文；完整收回纸包也已修正"
+        },
+        {
+          "type": "user-global-correction",
+          "state": "open",
+          "source": "reviews/user-20261025-1549/返修要求.md",
+          "description": "用户最新全片禁止正文卡/工作文档式文字与可见局部模糊；旧制作结论失效，本轮独立重剪"
+        }
+      ],
+      "integrationConditions": [
+        "必须在真实回营交件入口；保留取卷、我接触、信使松手/退开与纸包留手的完整动作",
+        "两附件来自同一新8秒源，分别放稳和松手后再显示冻结全文；纸背不作可读签名证明",
+        "核阅结束等待UI正式提交；不可由视频结束直接送军吏或结案",
+        "原通用旧卷未冒充两附件；本版近景只保留案面/麻袖/纸背，不把未展示的全景声称为已匹配场景"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V35-77a90d8837-cfr24.mp4",
+          "sha256": "5057df0542b02485c41c076cda4fadc69a2bda95ded9f58649af344165464be4",
+          "duration": 33.46,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "action-direction",
+              "state": "open",
+              "time": [
+                0,
+                6
+              ],
+              "description": "倒放取卷递回须重看接触、松手、布囊与衣物方向；旧播放完成不直接当动作通过"
+            },
+            {
+              "type": "unwanted-generated-subtitle",
+              "state": "open",
+              "time": [
+                6.8,
+                8.0
+              ],
+              "description": "进入核阅时原生字幕没存对，应裁除"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                8.5,
+                9.9
+              ],
+              "description": "信件落稳前伪字可见"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                19,
+                22.4
+              ],
+              "description": "两份附件正面大字未被准确层覆盖，不能作为可用证据画面"
+            }
+          ],
+          "dynamicReview": {
+            "method": "pending current-SHA playback; old evidence may be referenced, key doubts must be rechecked",
+            "actuallyReviewedRanges": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "V36",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V36-00214332a0-cfr24.mp4",
+      "sha256": "4c8730beeb3f1610f28f3ccb789010ab137fe23937352cf3c2acf09ef3d0ab42",
+      "duration": 55.96,
+      "pictureUsability": "needs-repair",
+      "reviewState": "repair-in-progress",
+      "dynamicReview": {
+        "method": "IAB1倍当前SHA从0至ended；新替换源全时段4fps逐张检查，未改变源沿既有同SHA证据",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            55.96
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round1.json",
+          "review/clean-source-handoff.json",
+          "review/current-V36-03-C3-clean-clerk/sequence-index.json",
+          "review/current-V36-04-C4-clean-clerk/sequence-index.json"
+        ]
+      },
+      "issues": [
+        {
+          "type": "readable-false-evidence",
+          "state": "closed-by-picture-replacement",
+          "description": "旧版问题窗已整体替换；历史文件与问题保留在history，新SHA不再露出原生伪文"
+        },
+        {
+          "type": "user-global-correction",
+          "state": "open",
+          "source": "reviews/user-20261025-1549/返修要求.md",
+          "description": "用户最新全片禁止正文卡/工作文档式文字与可见局部模糊；旧制作结论失效，本轮独立重剪"
+        }
+      ],
+      "integrationConditions": [
+        "只在UI正式提交材料后播放；接触/放稳/松手后再收齐，结案由正式流程决定",
+        "V36-01局部柔焦仍可见，纸面不作为可读内容证据；准确材料名称沿冻结源阅读层",
+        "同场军吏近景跨句复用，不循环；保留原完整对白音轨，临时嘴型差异归音频"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V36-53a7893f53-cfr24.mp4",
+          "sha256": "ffbebff16b5b6692684933244486266cb4fcd6a6c04437e41477e7b13c831f94",
+          "duration": 56.0,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                21.5,
+                25.0
+              ],
+              "description": "V36-03取卷时案上大字可见，须裁出或改为干净同场宣读",
+              "evidence": "review/usability-V36/sequence-05.jpg"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                31.5,
+                40.5
+              ],
+              "description": "V36-04观察/宣读段仍露出案上文字，须统一裁出纸面",
+              "evidence": "review/usability-V36/sequence-07.jpg"
+            }
+          ],
+          "dynamicReview": {
+            "method": "pending current-SHA playback; old evidence may be referenced, key doubts must be rechecked",
+            "actuallyReviewedRanges": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "V37",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4",
+      "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "duration": 29.87,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "dynamicReview": {
+        "method": "IAB当前SHA 1倍0至片尾；全4fps/同源裁剪动作序列复核，动态与技术检测分开",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            29.87
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round2.json",
+          "review/current-V37-happy/sequence-index.json",
+          "review/E1-happy-readonly/sequence-index.json"
+        ]
+      },
+      "issues": [
+        {
+          "type": "prior-picture-issue",
+          "state": "closed-by-local-repair-and-reviewed-replacement",
+          "description": "按最新快乐要求接入同角色笑着招呼→转身，并切除后续重复回头，未新生成"
+        }
+      ],
+      "integrationConditions": [
+        "仅E1实际裁处完成后使用；普通粮兵、空车、我随后搭手，不能用于苟安死亡或投魏分支",
+        "14.4秒后复用已生成快乐招呼8秒源，ENDINGS原文件/配音/60秒合辑未修改",
+        "移除后段重复回头0–2秒，保留双人实际接触横木及推行；未新增玩家正脸",
+        "车轮越辙未入画，不能把隐含音效当可见轮子动作证明；临时口型归音频"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-ae658cf754-cfr24.mp4",
+          "sha256": "854931eb3198e7d0786f9d3196fd415484afff754e041284c54c7d58ccfa8dc4",
+          "duration": 30.46,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "latest-emotional-direction",
+              "state": "open",
+              "time": [
+                0,
+                30.46
+              ],
+              "description": "用户新要求苟安还是挺快乐，现有主体中性/喊话表情不足；等待复用ENDINGS已生成同角色空车快乐镜，不新增生成"
+            }
+          ],
+          "dynamicReview": {
+            "method": "pending current-SHA playback; old evidence may be referenced, key doubts must be rechecked",
+            "actuallyReviewedRanges": []
+          }
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-ed677fb95a-cfr24.mp4",
+          "sha256": "e831c9dc768ded082a895de575ca1b5194d6cf00d48b24f8353d1be58c15c7e1",
+          "duration": 31.87,
+          "pictureUsability": null,
+          "reviewState": "pending",
+          "issues": [],
+          "dynamicReview": {
+            "method": "新SHA待完整衔接动态复核",
+            "actuallyReviewedRanges": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "V42",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4",
+      "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "duration": 15.1,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "dynamicReview": {
+        "method": "IAB1倍当前SHA从0至ended；新替换源全时段4fps逐张检查，未改变源沿既有同SHA证据",
+        "actuallyReviewedRanges": [
+          [
+            0,
+            15.1
+          ]
+        ],
+        "evidence": [
+          "review/current-SHA-playback-round1.json",
+          "review/V42-clean-source-handoff.json",
+          "review/V42-R2-clean/sequence-index.json"
+        ]
+      },
+      "issues": [
+        {
+          "type": "readable-false-evidence",
+          "state": "closed-by-picture-replacement",
+          "description": "旧版问题窗已整体替换；历史文件与问题保留在history，新SHA不再露出原生伪文"
+        }
+      ],
+      "integrationConditions": [
+        "仅E1/E3各自裁处完成的独立尾声；不可跨到其他结局",
+        "前镜先建立旧记录身份；本镜只见纸背/边，不能声称屏幕可读人口或损耗数字",
+        "连续15.10秒完成展开、观察、翻页，三条原心声沿中央WAV，未新增事实"
+      ],
+      "audioIssues": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过"
+      ],
+      "userApproved": false,
+      "history": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-694edfe52b-cfr24.mp4",
+          "sha256": "1180ff7d86278d884b8cfc386567972e9cca11f0dc775348ddfd9195fea22405",
+          "duration": 21.83,
+          "pictureUsability": "needs-repair",
+          "reviewState": "repair-in-progress",
+          "issues": [
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                3.5,
+                7.3
+              ],
+              "description": "展开旧卷后的生成字可见，底部正确栏目条没有替换纸面"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                7.5,
+                16.9
+              ],
+              "description": "旧记录大段伪字清晰且持续，可能被误认为剧情材料"
+            },
+            {
+              "type": "readable-false-evidence",
+              "state": "open",
+              "time": [
+                17.0,
+                21.83
+              ],
+              "description": "翻页的红线表单含生成文字，需要隐藏/替换"
+            }
+          ],
+          "dynamicReview": {
+            "method": "pending current-SHA playback; old evidence may be referenced, key doubts must be rechecked",
+            "actuallyReviewedRanges": []
+          }
+        }
+      ]
+    }
+  ],
+  "unknownOriginal": {
+    "id": "V32A-01",
+    "recordPreserved": true,
+    "repostForbidden": true
+  },
+  "newTTS": 0,
+  "reviewStatus": "用户2026-10-25实审全片标准返修中；旧14:31完成状态不适用",
+  "pendingSlots": [],
+  "needsRepairSlots": [
+    "V32A",
+    "V34",
+    "V35",
+    "V36"
+  ]
+}

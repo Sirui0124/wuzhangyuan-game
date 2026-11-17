@@ -1,0 +1,85 @@
+{
+  "id": "CH2-V13",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V13-22a96a9c7c-20261025.mp4",
+  "oldSha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+  "oldSubtitles": "/video/subtitles/CH2-V13-22a96a9c7c-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V13-71351c07.mp4",
+  "sha256": "b9abdf650f542de73ac14c8510ca565f11d19035133429ef690dc3f693b35851",
+  "bytes": 11543420,
+  "duration": 15.666666666666666,
+  "containerDuration": 15.666667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 376,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V13",
+    "src": "/video/current/PV27-CH2-V13-71351c07.mp4",
+    "title": "仓中核凭据、获准查账",
+    "subtitles": "/video/subtitles/PV27-CH2-V13-71351c07.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY04-001",
+      "node": "CH2-LY04-001",
+      "text": "我来领取本队这批粮的交接材料。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+      "oldCorrelation": 0.9994599564763399,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-001-v1.wav",
+      "newVoiceSha256": "011d16efc706f294f7a157bced119460d44442bb0787b69f51435aac8262067a",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        1.645,
+        4.405
+      ],
+      "insertAt": 1.645,
+      "voiceSeconds": 2.58,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9053437113761902,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 1.805,
+      "end": 4.235,
+      "text": "我来领取本队这批粮的交接材料"
+    },
+    {
+      "start": 5.26,
+      "end": 8.98,
+      "text": "凭据对得上，我陪你问仓吏"
+    },
+    {
+      "start": 9.82,
+      "end": 15.34,
+      "text": "这批粮的收发账可以查。其他队的账，先别动"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

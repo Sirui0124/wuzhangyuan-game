@@ -1,0 +1,77 @@
+{
+  "updated": "2026-10-25 11:40:16",
+  "groups": [
+    {
+      "group": "G1",
+      "requests": 41,
+      "seconds": 391,
+      "tasks": {
+        "succeeded": 37,
+        "failed": 6,
+        "accepted": 2
+      },
+      "assembled": 6,
+      "deliveryExists": true
+    },
+    {
+      "group": "G2",
+      "requests": 35,
+      "seconds": 309,
+      "tasks": {
+        "succeeded": 35
+      },
+      "assembled": 38,
+      "deliveryExists": true
+    },
+    {
+      "group": "G3",
+      "requests": 34,
+      "seconds": 344,
+      "tasks": {
+        "succeeded": 34,
+        "failed": 1
+      },
+      "assembled": 5,
+      "deliveryExists": true
+    },
+    {
+      "group": "G4",
+      "requests": 37,
+      "seconds": 304,
+      "tasks": {
+        "failed": 1,
+        "succeeded": 40
+      },
+      "assembled": 15,
+      "deliveryExists": true
+    },
+    {
+      "group": "G5",
+      "requests": 27,
+      "seconds": 275,
+      "tasks": {
+        "dispatching": 1,
+        "succeeded": 28,
+        "failed": 1
+      },
+      "assembled": 14,
+      "deliveryExists": true
+    },
+    {
+      "group": "G6",
+      "requests": 22,
+      "seconds": 200,
+      "tasks": {
+        "succeeded": 26,
+        "failed": 3
+      },
+      "assembled": 8,
+      "deliveryExists": true
+    }
+  ],
+  "requests": 196,
+  "candidateSeconds": 1823,
+  "problems": [],
+  "voiceReady": 76,
+  "voiceExpected": 76
+}

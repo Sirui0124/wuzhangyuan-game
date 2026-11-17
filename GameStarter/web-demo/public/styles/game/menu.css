@@ -1,0 +1,103 @@
+
+/* Selected option A: full bronze fittings and red cord. Source images have
+   asymmetric transparent margins; align the visible plaque, not the PNG box.
+   The first available action is the parchment primary. */
+:root { --menu-action-font-size: 23px; }
+
+:root #game-root main.game-menu nav{
+width:86%;max-width:390px;gap:10px}
+
+:root #game-root main.game-menu nav button{
+
+  --menu-skin:url('/main-menu-button-idle-v02.png');
+  --menu-skin-y:48.416%;
+  position:relative;isolation:isolate;display:flex;flex:none;align-items:center;justify-content:center;
+  height:54px;min-height:54px;padding:0 48px;border:0;
+  color:#e8dfc9;font-size:var(--menu-action-font-size);line-height:1;letter-spacing:5px;
+  text-align:center;text-shadow:0 2px 3px #000;
+  transition:color .18s,filter .18s,transform .18s;
+}
+
+:root #game-root main.game-menu nav button::before{
+
+  content:'';position:absolute;z-index:-1;inset:0;pointer-events:none;
+  background:var(--menu-skin) center var(--menu-skin-y) / 100% 255% no-repeat;
+  filter:drop-shadow(0 4px 4px #0007);
+}
+
+:root #game-root main.game-menu nav button:first-child{
+
+  --menu-skin:url('/main-menu-button-active-v02.png');
+  --menu-skin-y:47.303%;
+  color:#34281b;text-shadow:0 1px 1px #fff6;
+}
+
+:root #game-root main.game-menu nav button>span{
+position:absolute;right:15%;top:50%;transform:translateY(-50%);font-size:16px;line-height:1;letter-spacing:0;opacity:.7}
+
+:root #game-root main.game-menu nav button:hover:not(:disabled){
+transform:translateY(-2px);filter:brightness(1.18);color:#fff0d2}
+
+:root #game-root main.game-menu nav button:first-child:hover:not(:disabled){
+color:#261a10;filter:brightness(1.1)}
+
+:root #game-root main.game-menu nav button:active:not(:disabled){
+transform:translateY(1px);filter:brightness(.95)}
+
+:root #game-root main.game-menu nav button:focus-visible{
+outline:2px solid #eed4a3;outline-offset:4px}
+
+@media(max-height:800px){
+
+  :root { --menu-action-font-size: 21px; }
+
+  :root #game-root main.game-menu>header,:root #game-root main.game-menu>footer{
+padding-top:18px;padding-bottom:18px}
+
+  :root #game-root main.game-menu>section{
+padding-bottom:12px}
+
+  :root #game-root main.game-menu .game-logo{
+height:25vh}
+
+  :root #game-root main.game-menu>section>p{
+margin-bottom:22px}
+
+  :root #game-root main.game-menu nav{
+gap:8px}
+
+  :root #game-root main.game-menu nav button{
+height:48px;min-height:48px;padding-top:0;padding-bottom:0}
+
+}
+
+@media(max-width:700px){
+
+  :root #game-root main.game-menu>section{
+width:min(420px,88vw);margin-left:6vw}
+
+  :root #game-root main.game-menu nav{
+width:94%}
+
+}
+
+@media(max-height:580px){
+
+  :root #game-root main.game-menu{
+overflow-y:auto}
+
+  :root #game-root main.game-menu>section{
+flex:none}
+
+  :root #game-root main.game-menu .game-logo{
+height:100px}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+:root #game-root main.game-menu nav button{
+transition:none}
+:root #game-root main.game-menu nav button:hover:not(:disabled),:root #game-root main.game-menu nav button:active:not(:disabled){
+transform:none}
+}
+

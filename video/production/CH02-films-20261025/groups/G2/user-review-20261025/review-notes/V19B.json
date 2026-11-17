@@ -1,0 +1,30 @@
+{
+  "id": "V19B",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19B-fef1c14bab.mp4",
+  "sha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "直接检查当前SHA全部0.5秒序列并完成1倍速浏览器回放。没有正文卡、字幕列、局部方框模糊或矩形暗影；使用闭合卷束的核看与归拢动作。"
+  ],
+  "repairs": [
+    "撤下旧工作正文卡和模糊遮挡层；用未叠层原始画面重新剪辑",
+    "仅保留白名单玩家原句"
+  ],
+  "integrationConditions": [
+    "判断发生在D06后；不改变三分支结果，不新增扣粮事实或自动答案。"
+  ],
+  "audioReview": "既有玩家WAV；全片不混入原生乱码声。未作主观听审",
+  "audioIssues": [
+    "工具不支持实际听音；ASR、文本核对和播放结束不代表声音合格或用户通过。"
+  ],
+  "unresolved": [
+    "待用户重新审核音画"
+  ],
+  "evidence": [
+    {
+      "method": "directly inspected all 0.5-second samples",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V19B",
+      "sha256": "79ed64256b0bbf0cd3f377084afaf9bd50163a813b3c1aebaa17824448199064"
+    }
+  ]
+}

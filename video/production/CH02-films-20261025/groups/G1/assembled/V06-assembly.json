@@ -1,0 +1,125 @@
+{
+  "id": "V06",
+  "name": "日期疑点",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V06-仅保留干净拿纸动作-R1.mp4",
+  "duration": 5.0,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-DATE实际读完",
+  "next": [
+    "UI-GO-GOUAN"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V06-user-repair-r1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V06-仅保留干净拿纸动作-R1.mp4",
+      "slotStart": 0,
+      "slotEnd": 5.0,
+      "sourceTrim": [
+        0,
+        5.0
+      ],
+      "audioMode": "user-requested-repair",
+      "review": {
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-more.html",
+        "actualDynamicReview": true,
+        "visualReview": "浏览器播放至ended，结合关键帧核对画面；听审未完成",
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-015",
+      "text": "他说五月喝的酒，六月初二才领到粮。",
+      "speaker": "我（心声）",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+      "centralSha256": "511fdfbcfc521fa25e027496aadb0d7cb89dd77cd2eed9c36c16af6819c43827",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 3.9857916666666666,
+      "slotStart": 0.3,
+      "slotEnd": 4.285791666666666,
+      "subclip": "V06-user-repair-r1"
+    }
+  ],
+  "sha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮用户返修：本地浏览器实际完整播放到ended，未见黑屏、文字卡或可见方框层。",
+  "audioIssues": [
+    "新预置TTS音频未采用；本条仅历史正确原声复用或按用户静音/删除。",
+    "制作核对不替代用户重新审核。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V06-日期疑点.mp4",
+  "previousSha256": "173d1b12db8232de2587a5ee55d1a1fe4b60ecb516e8e44c52866130782e9ef3",
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "全片新标准：去可见局部模糊层/卡片",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V06-日期疑点.mp4",
+    "oldSha256": "173d1b12db8232de2587a5ee55d1a1fe4b60ecb516e8e44c52866130782e9ef3",
+    "oldInterval": [
+      0,
+      8.02
+    ],
+    "repairs": [
+      {
+        "id": "V06",
+        "requirement": "20261025-no-meta-no-cards-no-boxes",
+        "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V06-日期疑点.mp4",
+        "oldSha256": "173d1b12db8232de2587a5ee55d1a1fe4b60ecb516e8e44c52866130782e9ef3",
+        "oldInterval": [
+          0,
+          8.02
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V06-仅保留干净拿纸动作-R1.mp4",
+        "newSha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+        "newDuration": 5.0,
+        "status": "repaired-awaiting-user-review",
+        "treatment": "新生成镜头只取0–4秒完整干净拿纸/持纸动作，以0.8倍播放；4.3秒后伪字全段弃用，无局部模糊/遮罩；完整复用既有心声。",
+        "details": {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V06-UR1-normalized.mp4",
+          "sourceSha256": "1e8840694cabbb386e4381ecca945b6e1057eceff3c5f1fee2de93489d1ed306",
+          "sourceRange": [
+            0,
+            4
+          ],
+          "rate": 0.8,
+          "voice": {
+            "node": "CH2-LY02-015",
+            "text": "他说五月喝的酒，六月初二才领到粮。",
+            "speaker": "我（心声）",
+            "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+            "duration": 3.9857916666666666,
+            "sha256": "511fdfbcfc521fa25e027496aadb0d7cb89dd77cd2eed9c36c16af6819c43827",
+            "ready": true,
+            "source": "central_tts"
+          }
+        },
+        "userApproved": false,
+        "checks": {
+          "actualPlayback": {
+            "range": [
+              0,
+              5.0
+            ],
+            "ended": true,
+            "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-more.html"
+          },
+          "technical": {
+            "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V06-仅保留干净拿纸动作-R1.mp4",
+            "sha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+            "decode": true,
+            "blackEvents": []
+          }
+        }
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\old-assembly\\V06-173d1b12db82.json"
+}

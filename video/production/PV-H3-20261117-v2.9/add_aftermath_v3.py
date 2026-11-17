@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,subprocess,sys
+R=Path(__file__).resolve().parent
+p=R/'A22/review.json';v=json.loads(p.read_text('utf-8'));v.update(motion_review='rejected',selected_for_work_edit=False,method='2fps contact sheet whole clip',notes=['Unrequested male character and close tracking shot appears; violates empty wide camp and fixed camera. Not used.']);p.write_text(json.dumps(v,ensure_ascii=False,indent=2),'utf-8')
+s=dict(id='A23',title='雨后空营-五秒单一环境动作',duration=5,reference_paths=[str(R/'references/A21.png')],prompt='A five-second uninterrupted wide shot of this EMPTY burned encampment. The camera is stationary for the entire shot, matching the reference composition exactly. Only thin residual smoke drifts very slowly upward from the damp black ruins, and wet cloth ends move a little in a light breeze. The wood frames and boxes stay still. All flames are extinguished. The entire landscape remains empty of people and animals. This is one continuous wide landscape shot, no cuts, no close-ups, no camera movement. Natural grey overcast light, realistic damp timber and ash. Sound: soft breeze and sparse water drops only. No music, no voices, no words, no text.')
+p=R/'A23-spec.json';p.write_text(json.dumps(s,ensure_ascii=False,indent=2),'utf-8');subprocess.run([sys.executable,str(R/'add_one_unit.py'),str(p)],check=True)

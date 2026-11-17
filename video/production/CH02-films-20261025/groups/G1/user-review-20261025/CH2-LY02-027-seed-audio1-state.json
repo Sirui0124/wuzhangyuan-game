@@ -1,0 +1,132 @@
+{
+  "status": "succeeded",
+  "node": "CH2-LY02-027",
+  "text": "真把话说明白，往后还在谁手底下领粮？",
+  "requestedSeconds": 4.5,
+  "text_prompt": "仅使用@音频1中成年男性的音色，伤后克制、自然、吐字清楚。仅朗读下面引号内这一句中文原话：“真把话说明白，往后还在谁手底下领粮？”不得朗读任何控制说明，不复述参考原句，不增加姓名、角色标签、某某说、旁白、画外或其他词句。总长约4.5秒，0.2秒后开始说话，末尾安静。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "2d8f82e1-a657-4882-b58a-e219430636a8",
+  "reference": {
+    "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/gouan-reference-user-approved-V10-14p4-17p6.wav",
+    "sha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+    "bytes": 307278,
+    "field": "references[0].audio_data",
+    "speakerNotSent": true,
+    "uploaded": true,
+    "acceptedInRequest": true
+  },
+  "bodySha256": "2b330b2c54d42fad0a0d5fb4cc903438ff3723ab3939d467bb2c9a0d47dd59c8",
+  "noClone": true,
+  "wrongTts2Adopted": false,
+  "authorization": "user-20261025-batch2: actual listening gate removed as execution blocker; output remains pending listening",
+  "httpStatus": 200,
+  "logId": "202610251657425EE91FE0FC9F2CB0B5D4",
+  "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-027-seed-audio1-reference.wav",
+  "sha256": "76b744ee9d2bc9d7d689f6fd26a30e2ed4338c828c8dd8f0a61849e39ea4567d",
+  "duration": 4.5,
+  "original_duration": 4.5,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4440,
+        "start_time": 320,
+        "text": "真把话说明白，往后还在谁手底下领粮？",
+        "words": [
+          {
+            "end_time": 600,
+            "start_time": 320,
+            "text": "真"
+          },
+          {
+            "end_time": 800,
+            "start_time": 600,
+            "text": "把"
+          },
+          {
+            "end_time": 1000,
+            "start_time": 800,
+            "text": "话"
+          },
+          {
+            "end_time": 1200,
+            "start_time": 1000,
+            "text": "说"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1200,
+            "text": "明"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1400,
+            "text": "白"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1600,
+            "text": "，"
+          },
+          {
+            "end_time": 2640,
+            "start_time": 2400,
+            "text": "往"
+          },
+          {
+            "end_time": 2920,
+            "start_time": 2640,
+            "text": "后"
+          },
+          {
+            "end_time": 3120,
+            "start_time": 2920,
+            "text": "还"
+          },
+          {
+            "end_time": 3280,
+            "start_time": 3120,
+            "text": "在"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3280,
+            "text": "谁"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3480,
+            "text": "手"
+          },
+          {
+            "end_time": 3880,
+            "start_time": 3720,
+            "text": "底"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 3880,
+            "text": "下"
+          },
+          {
+            "end_time": 4240,
+            "start_time": 4120,
+            "text": "领"
+          },
+          {
+            "end_time": 4440,
+            "start_time": 4400,
+            "text": "粮"
+          },
+          {
+            "end_time": 4440,
+            "start_time": 4440,
+            "text": "？"
+          }
+        ]
+      }
+    ],
+    "text": "真把话说明白，往后还在谁手底下领粮？"
+  },
+  "listeningReview": "pending; this tool/model cannot hear audio"
+}

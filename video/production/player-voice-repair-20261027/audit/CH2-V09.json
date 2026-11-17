@@ -1,0 +1,80 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V09",
+  "src": "/video/current/CH2-V09-8413b1ae38-20261025.mp4",
+  "title": "李严下属的顾虑",
+  "subtitles": "/video/subtitles/CH2-V09-8413b1ae38-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V09-8413b1ae38-20261025.mp4",
+  "sha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+  "duration": 27.7975,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 1.9,
+      "text": "你不是李严的人吗？"
+    },
+    {
+      "start": 2.5,
+      "end": 3.7,
+      "text": "为什么不找他说明白？"
+    },
+    {
+      "start": 4.86,
+      "end": 9.64,
+      "text": "我就是个替他跑腿的，他哪会替我说话"
+    },
+    {
+      "start": 11.12,
+      "end": 16.04,
+      "text": "认个酒误，养好伤，还能接着吃这碗饭"
+    },
+    {
+      "start": 16.6,
+      "end": 20.72,
+      "text": "真把话说明白，往后还在谁手底下领粮？"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-023",
+      "node": "CH2-LY02-023",
+      "text": "你不是李严的人吗？",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-023.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "47669f787cabfda37a7f3f0e4b540461813d8d1a14f9280c74e6fcaea7d9f970",
+      "duration": 1.806,
+      "speechRange": [
+        0.3,
+        1.42
+      ],
+      "correlation": 0.9791151530799778,
+      "insertAt": 0.3212,
+      "speechStart": 0.62125,
+      "speechEnd": 1.74125
+    },
+    {
+      "id": "CH2-LY02-024",
+      "node": "CH2-LY02-024",
+      "text": "为什么不找他说明白？",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-024.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "d4fc0e9c70ce7960529aa819bf3b752e9466d134eb8d6ea4dddd72897e3c472e",
+      "duration": 1.79975,
+      "speechRange": [
+        0.28,
+        1.48
+      ],
+      "correlation": 0.9757133134399247,
+      "insertAt": 2.3472,
+      "speechStart": 2.62725,
+      "speechEnd": 3.82725
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

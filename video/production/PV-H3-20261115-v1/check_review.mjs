@@ -1,0 +1,28 @@
+import {chromium} from 'playwright';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
+import fs from 'node:fs/promises';
+
+const root=process.cwd();const dir=path.join(root,'video/production/PV-H3-20261115-v1');
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto(pathToFileURL(path.join(dir,'视频审阅.html')).href);
+await page.waitForFunction(()=>[...document.querySelectorAll('video')].every(v=>v.readyState>=1),null,{timeout:30000});
+const metadata=await page.locator('video').evaluateAll(v=>v.map(e=>({src:e.getAttribute('src'),duration:e.duration,width:e.videoWidth,height:e.videoHeight,error:e.error?.message||null})));
+if(metadata.length!==26||metadata.some(m=>m.error||!m.duration))throw Error('Video metadata check failed');
+if(metadata[0].duration!==108)throw Error('Wrong final duration');
+const main=page.locator('video.hero');await main.evaluate(v=>{v.muted=true;return v.play()});
+await page.waitForFunction(()=>document.querySelector('video.hero').currentTime>1);
+await page.screenshot({path:path.join(dir,'review-desktop.png')});
+console.log(JSON.stringify({stage:'playing',metadataLoaded:metadata.length,mainDuration:metadata[0].duration}));
+await page.waitForFunction(()=>document.querySelector('video.hero').ended,null,{timeout:140000});
+const playback=await main.evaluate(v=>({ended:v.ended,currentTime:v.currentTime,duration:v.duration,error:v.error?.message||null,quality:v.getVideoPlaybackQuality?{total:v.getVideoPlaybackQuality().totalVideoFrames,dropped:v.getVideoPlaybackQuality().droppedVideoFrames}:null}));
+if(!playback.ended||playback.error)throw Error('Playback did not reach end cleanly');
+await page.setViewportSize({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));
+const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile overflow');
+await page.screenshot({path:path.join(dir,'review-mobile.png')});
+await browser.close();
+const result={date:'2026-11-15',status:'pass',videoMetadata:metadata,playback,mobileOverflow:overflow,pageErrors:errors,note:'浏览器以正常速度播放至108秒结尾；这只是技术播放检查，不是人工完整视听审阅。'};
+if(errors.length)throw Error(errors.join('\n'));
+await fs.writeFile(path.join(dir,'browser-verification.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({stage:'complete',playback,mobileOverflow:overflow}));

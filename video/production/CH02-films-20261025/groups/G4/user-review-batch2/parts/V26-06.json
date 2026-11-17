@@ -1,0 +1,52 @@
+{
+  "id": "V26-06",
+  "slot": "V26",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V26-06.mp4",
+  "sha256": "7c8cb4d9a14373b3724f556ac72a56f6f8d457fbfc541af3c6390089ccaa9e2b",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V26-06.mp4",
+  "oldSha256": "020de968649e447dcae4869b8fe8552a6a4c9273aa3f6aee7d9d2afd8e993ef1",
+  "oldDuration": 5.515,
+  "sourceFrames": [
+    3,
+    132
+  ],
+  "sourceRange": [
+    0.125,
+    5.5
+  ],
+  "newDuration": 5.375,
+  "technical": {
+    "duration": 5.375,
+    "videoDuration": 5.375,
+    "frames": 129,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "7c8cb4d9a14373b3724f556ac72a56f6f8d457fbfc541af3c6390089ccaa9e2b",
+    "bytes": 2235487
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-011",
+      "speaker": "军吏",
+      "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-011",
+      "roleControlOnly": "军吏",
+      "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

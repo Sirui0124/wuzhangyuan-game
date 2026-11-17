@@ -1,0 +1,10 @@
+{
+  "observedLocalClock": "2026-10-25T11:11:24.565576+08:00",
+  "controllerReportedGap": [
+    "2026-10-25 04:37 +08:00",
+    "2026-10-25 11:07 +08:00"
+  ],
+  "cause": "未知；不判断主机是否休眠",
+  "handling": "沿用唯一运行器与持久化task_id；不把时钟跨越当服务生成耗时；不重投accepted/running/unknown",
+  "runnerPid": "24688"
+}

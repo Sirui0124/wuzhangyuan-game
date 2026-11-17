@@ -1,0 +1,67 @@
+{
+  "id": "V20-014015",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-014015-5ba6bbf736.mp4",
+  "sha256": "1c929ec1f0810bd7c625e402fd59d75d81c760b0a19ae1d29ea8762f6a338ec9",
+  "videoFrames": 143,
+  "videoSeconds": 5.958333333333333,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V20-014015",
+    "parts": [
+      {
+        "range": [
+          1.8,
+          5.3
+        ],
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4"
+      },
+      {
+        "range": [
+          6.7,
+          9.25
+        ],
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4"
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-02-raw.mp4",
+      "start": 3.45,
+      "end": 9.35,
+      "offset": 0.1
+    },
+    "sourceNodes": [
+      "CH2-LY06-014",
+      "CH2-LY06-015"
+    ],
+    "comment": "Remove original3.45s silent lead too. Continuous handoff6.7–9.25 includes recipient grip8.7 and both donor hands opening clear at9.041667–9.208333. Stop before red frames9.291667/9.458333/9.625 and later regrip/written front. Exact body remains separate game integration after end; no duplicate grant."
+  },
+  "sourceParts": [
+    {
+      "range": [
+        1.8,
+        5.3
+      ],
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceSha256": "41e4435693d4ff028bdccb1dcaa5e7f8d0f521ae66ca77a44ac754a36f39b762"
+    },
+    {
+      "range": [
+        6.7,
+        9.25
+      ],
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceSha256": "41e4435693d4ff028bdccb1dcaa5e7f8d0f521ae66ca77a44ac754a36f39b762"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

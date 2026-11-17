@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {handleAI} from '../ai.mjs';
+import {fresh,defaultPolicy} from '../.build/engine.js';
+const signal=AbortSignal.timeout(5000),body=()=>({state:fresh(),route:'feng',text:'派三百人先清侧路',policy:{...defaultPolicy('feng'),troops:500,guard:200,native:false}});
+const model=result=>async()=>({text:JSON.stringify(result)});
+test('AI草案不能直接派兵；三百人按原数保留',async()=>{const b=body();const r=await handleAI('plan',b,signal,model({reply:'三百先清侧路，军吏未另安排。',policy:{...b.policy,troops:300},unsupported:[],evidence:{}}));assert.equal(r.policy.troops,300);assert.equal(b.state.camp,2500);assert.equal(b.state.stock,8);});
+test('模型没有原话依据时不能偷偷花军需或调用原部',async()=>{const b=body();const r=await handleAI('plan',b,signal,model({reply:'拟定',policy:{...b.policy,package:true,native:true},unsupported:[],evidence:{package:'送绳索',native:'让军吏'}}));assert.equal(r.unsupported.length,2);});
+test('不支持的条件保留，不静默执行部分军令',async()=>{const b=body();const r=await handleAI('plan',b,signal,model({reply:'放火尚不能落实。',policy:{...b.policy},unsupported:['放火阻敌未实现'],evidence:{}}));assert.match(r.unsupported[0],/放火/);assert.equal(b.state.camp,2500);});
+test('问讯必须有来源索引，且不执行命令',async()=>{const b=body();const r=await handleAI('ask',b,signal,model({reply:'侧路的车还要移开。',factsUsed:[0,1]}));assert.match(r.reply,/车/);await assert.rejects(()=>handleAI('ask',b,signal,model({reply:'已经接出',factsUsed:[99]})),/军情依据/);});
+test('模型将三百擅改五百时重拟一次，仍不一致就拒绝',async()=>{const b=body();let calls=0;await assert.rejects(()=>handleAI('plan',b,signal,async()=>{calls++;return {text:JSON.stringify({reply:'拟五百',policy:b.policy,unsupported:[],evidence:{}})};}),/300人不一致/);assert.equal(calls,2);assert.equal(b.state.camp,2500);});

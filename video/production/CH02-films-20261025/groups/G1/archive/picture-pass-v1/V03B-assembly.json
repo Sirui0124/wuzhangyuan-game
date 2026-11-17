@@ -1,0 +1,68 @@
+{
+  "id": "V03B",
+  "name": "开场说明来意B",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V03B-开场说明来意B.mp4",
+  "duration": 6.61,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-LIGHT选B",
+  "next": [
+    "V04"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V03B-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V03B-01-voiced.mp4",
+      "slotStart": 0,
+      "slotEnd": 6.59,
+      "sourceTrim": [
+        0,
+        6.59
+      ],
+      "audioMode": "central-player-voiceover",
+      "review": {
+        "visualReview": "usable-candidate",
+        "actualDynamicReview": true,
+        "method": "actual browser playback start/end plus ordered2fps sequence",
+        "checkedRange": [
+          0,
+          6.59
+        ],
+        "findings": "同脸、同榻、第一视角完整，未见字幕或玩家肩背；背景兵卒走过不改变剧情。",
+        "audioIssues": [
+          "有暂时说话口型，配音待统一；按用户最新要求不自动判画面失败。",
+          "采用既有中央我声原句；生成原音静音，环境音待统一。"
+        ],
+        "userReview": "待review"
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-004",
+      "speaker": "我（选项）",
+      "text": "你救过我，我来看看你。",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-004.wav",
+      "centralSha256": "6912595e632bbfb870532db2d88e656a5a7f7e68799fed382edf0d7896956044",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 2.371541666666667,
+      "slotStart": 0.3,
+      "slotEnd": 2.6715416666666667,
+      "subclip": "V03B-01"
+    }
+  ],
+  "sha256": "0ee058094c3177136e8a8fa1fe36a09f6876a3d96a272d22764507b5654b90e9",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。",
+    "玩家纯画面段已复用中央既有音轨；生成原音轨静音以避免制作说明/额外人声混入，环境声待统一配音阶段恢复。"
+  ]
+}

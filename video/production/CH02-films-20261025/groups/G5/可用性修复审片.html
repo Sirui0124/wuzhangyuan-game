@@ -1,0 +1,11 @@
+<!doctype html><meta charset="utf-8"><title>G5 可用性修复审片</title>
+<style>body{background:#151b19;color:#ddd;font:18px sans-serif;margin:24px}button{font:inherit;padding:10px;margin:4px}video{width:95%;max-height:73vh}#log{white-space:pre-wrap}</style>
+<h1>G5 当前修复画面复核</h1><p>1倍播放；无卡清理源。画面与音频问题分别记录，用户未批准。</p>
+<nav>
+<button onclick="select('V42-R2-clean','generated/V42-R2-clean-16x9.mp4')">V42新连续补镜</button>
+<button onclick="select('V42-clean-master','edited/sources/V42-R2-clean-master.mp4')">V42无卡交付母片</button>
+<button onclick="select('V36-04-clean','edited/sources/V36-04-C4-clean-clerk.mp4')">V36-04无卡近景</button>
+<button onclick="select('V36-03-clean','edited/sources/V36-03-C3-clean-clerk.mp4')">V36-03无卡近景</button>
+<button onclick="select('V35-return-C2','edited/sources/V35-01-C2-return-complete.mp4')">V35完整松手版</button>
+</nav><video id="v" controls></video><p><button onclick="v.currentTime=0;v.play()">从头播放</button></p><p id="clock"></p><p id="log"></p>
+<script>let id='',completed=[];const v=document.getElementById('v');function select(n,s){id=n;v.src=s;clock.textContent=n+'待播放'}v.ontimeupdate=()=>{clock.textContent=id+' '+v.currentTime.toFixed(2)+' / '+v.duration.toFixed(2)+'秒'};v.onended=()=>{completed.push(id);log.textContent='本轮从头播放至尾：'+completed.join('、')};select('V42-R2-clean','generated/V42-R2-clean-16x9.mp4');</script>

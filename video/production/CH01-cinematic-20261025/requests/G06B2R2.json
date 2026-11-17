@@ -1,0 +1,26 @@
+{
+  "model": "MiniMax-H3",
+  "duration": 7,
+  "resolution": "768P",
+  "ratio": "16:9",
+  "content": [
+    {
+      "type": "text",
+      "text": "Create a realistic Chinese historical live-action movie scene. 16:9 full frame, restrained low saturation, natural skin, soft firelight, detailed dark canvas and worn iron armour. The camera is the visitor's eyes: no visitor body, shoulder, face, reflection or permanent spear in foreground. Not an over-the-shoulder shot. Audio: ONLY speak the Chinese sentences inside quotation marks below. Never read any directions, names, identifiers, labels or English text. No subtitles, no text, no music. Other sounds: wind, canvas, clothes and steps synchronized to the scene. Keep the same face, costume, camp location and screen direction between shots. All unquoted text is silent direction.\nPicture 1: 甲, 只锁甲的中年宽脸、黑布包髻、短须与旧铁札甲，不复制背景及画风.\nPicture 2: 中军帐, 只锁中军大帐、闭帘、门侧火盆、右侧告示、土路及木栏的空间；时段按分镜.\n0-7 seconds. 甲表明只能递话，不能作主；我回答后视线转回值守方向。 50mm第一视角中景，甲说完闭嘴听我的答句，末尾只开始转视线。\nOnly the on-screen 甲 speaks to the unseen visitor: \"我只能递话，作不得主。\". Other people stay silent with closed lips.\nWhile the on-screen listener keeps his lips CLOSED, the unseen visitor says in a young adult male voice: \"知道了，交给你了。\". The voice comes from behind the camera.\n\nFinish every quoted sentence in order. End with 0.4 seconds of quiet. Do not add any spoken words."
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/v1792862494/parallel-world/minimax-reference/e9e72e9b8cea3b2f71c8ff7386a8a91b1ed8f2f1fa10c256d6e6497a1281b400.png"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/v1792862501/parallel-world/minimax-reference/e1f328f0b0a77ba8407dfc270b7f7cabc679c4ee42b62a6620f85d9cfc23fa16.png"
+      },
+      "role": "reference_image"
+    }
+  ]
+}

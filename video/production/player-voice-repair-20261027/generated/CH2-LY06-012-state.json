@@ -1,0 +1,175 @@
+{
+  "id": "CH2-LY06-012",
+  "node": "CH2-LY06-012",
+  "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 5.2,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "41d4e44d-8f82-4499-96f3-5e4fa61ac990",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:18:44.977Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“原来，账上没有收齐的数，眼前是这些人最后的口粮。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约5.2秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "5c5b8c9329b1048e7a95851021b2c031507cea2b4d105699b1933cd42a44d12b",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027191845B3B9D4CB3E0DD202F363",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY06-012-v1.wav",
+  "sha256": "7d22ceef33aed8c1bd425102f81f6151c2a05efc2ec3a85c1b85d561bab20088",
+  "duration": 5.18,
+  "originalDuration": 5.18,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 5120,
+        "start_time": 520,
+        "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+        "words": [
+          {
+            "end_time": 760,
+            "start_time": 520,
+            "text": "原"
+          },
+          {
+            "end_time": 1000,
+            "start_time": 760,
+            "text": "来"
+          },
+          {
+            "end_time": 1000,
+            "start_time": 1000,
+            "text": "，"
+          },
+          {
+            "end_time": 1560,
+            "start_time": 1480,
+            "text": "账"
+          },
+          {
+            "end_time": 1880,
+            "start_time": 1720,
+            "text": "上"
+          },
+          {
+            "end_time": 2000,
+            "start_time": 1880,
+            "text": "没"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 2000,
+            "text": "有"
+          },
+          {
+            "end_time": 2200,
+            "start_time": 2080,
+            "text": "收"
+          },
+          {
+            "end_time": 2400,
+            "start_time": 2360,
+            "text": "齐"
+          },
+          {
+            "end_time": 2720,
+            "start_time": 2520,
+            "text": "的"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2720,
+            "text": "数"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2840,
+            "text": "，"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3520,
+            "text": "眼"
+          },
+          {
+            "end_time": 3880,
+            "start_time": 3720,
+            "text": "前"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 3880,
+            "text": "是"
+          },
+          {
+            "end_time": 4160,
+            "start_time": 4080,
+            "text": "这"
+          },
+          {
+            "end_time": 4240,
+            "start_time": 4160,
+            "text": "些"
+          },
+          {
+            "end_time": 4400,
+            "start_time": 4240,
+            "text": "人"
+          },
+          {
+            "end_time": 4560,
+            "start_time": 4400,
+            "text": "最"
+          },
+          {
+            "end_time": 4680,
+            "start_time": 4560,
+            "text": "后"
+          },
+          {
+            "end_time": 4800,
+            "start_time": 4680,
+            "text": "的"
+          },
+          {
+            "end_time": 4920,
+            "start_time": 4800,
+            "text": "口"
+          },
+          {
+            "end_time": 5120,
+            "start_time": 5080,
+            "text": "粮"
+          },
+          {
+            "end_time": 5120,
+            "start_time": 5120,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:19:37.434Z"
+}

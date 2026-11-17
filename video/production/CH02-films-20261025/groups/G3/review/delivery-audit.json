@@ -1,0 +1,86 @@
+{
+  "group": "G3",
+  "status": "candidate",
+  "batch2Status": "partial-complete-P02-unknown",
+  "unresolved": [
+    "V25的CH2-LY09-P02请求结果未知，不重投；未找到可验证完整同句；保留旧片，七段可用部件未拼成缺句新版。",
+    "四条新版仍待实际听审与用户审核；V25 P04 ASR疑似多我字也待听审。"
+  ],
+  "plannedSourceSubclips": 34,
+  "revisions": 3,
+  "taskCounts": {
+    "succeeded": 36,
+    "failed": 1
+  },
+  "sourceMappingExact": true,
+  "missingSubclips": [],
+  "candidateFiles": [
+    {
+      "id": "V21",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V21-拆穿、第二封信与合谋供述_纯台词精剪V1.mp4",
+      "sha256": "7b713bd8fbb593927704987bd300ac027ce21894595f8991081ed2badbf6298e",
+      "bytes": 23131538,
+      "decode": "passed",
+      "dynamicReviewed": true,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "玩家问句及心声从画外发出，保留当前自然听者窗口，不恢复旧持续代说。",
+        "第二封折信只交接一次；不恢复摘要卡、文字正文或纸面局部模糊层。",
+        "完成一次真实接信后仍须由既有信息层呈现CH2-LY07-006全文并按原设计确认读完，不能把动画播完直接当成已读或授予线索。"
+      ]
+    },
+    {
+      "id": "V22",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V22-邀请访村与正式出营批准_纯台词精剪V1.mp4",
+      "sha256": "a4f3411246d3ff8ed60628c84a00f8e2cb10761e6b2de6efd679a0b7c4b54b98",
+      "bytes": 13707763,
+      "decode": "passed",
+      "dynamicReviewed": true,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "令牌只承担接待及材料核对，正式出营批准仍在最后粮队管事节点，不能提前据令牌放行。",
+        "两个玩家问句从画外发出，当前窗口为5.000秒及2.208秒，保留自然听者画面。"
+      ]
+    },
+    {
+      "id": "V23",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V23-获准访村的连续见闻_补合法心声V1.mp4",
+      "sha256": "10bf78398293bd72fcea5933d29b1a18df78d6635120716ef40283a531780979",
+      "bytes": 13041498,
+      "decode": "passed",
+      "dynamicReviewed": true,
+      "pictureUsability": "usable",
+      "integrationConditions": []
+    },
+    {
+      "id": "V24",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V24-夜访回忆_纯台词精剪V1.mp4",
+      "sha256": "b3623f3c932c574e95825a4f144b4fccdb77420d892d862b956ffad6edddc22e",
+      "bytes": 21256869,
+      "decode": "passed",
+      "dynamicReviewed": true,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "仅作苟安口述回忆的借位视角，不能当作玩家亲见或已经独立核实的历史。",
+        "03与06由苟安画外叙述；李严仅在自己的02/04/05发言。保留当前夜帐引入、进入回忆和回到伤帐的首尾。",
+        "只采用R3原片[3.5,9.5)及记录中的精确裁框，不能把其余新纸/旁观者/说话部分接回。"
+      ]
+    },
+    {
+      "id": "V25",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V25-赴魏散谣的未实行计划与风险_画面修复V2.mp4",
+      "sha256": "0d463a52831df177bdd594d0f19f6cc7bbfa2329c717e5e9bd8e884cb58f8087",
+      "bytes": 27595920,
+      "decode": "passed",
+      "dynamicReviewed": true,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "按本版7秒、8.5秒的两个问句窗口接入，玩家问句只从画外发出；保留当前表情/观察镜组合，不回切旧V25-06/07连续口型或循环补时长。",
+        "V25仍是未实行计划与风险讨论；不能按影片结束自动认为已经赴魏、散谣或召军。"
+      ]
+    }
+  ],
+  "issues": [],
+  "audio": "未逐字听审；实际音色、杂音、BGM及口型核对待完成；issues为空仅为技术/文件一致性，无关P02已完成或听审通过",
+  "userApproval": "新版本待用户review；旧通过仅绑定旧SHA"
+}

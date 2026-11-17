@@ -1,0 +1,150 @@
+{
+  "id": "CH2-LY04-Q1A",
+  "expected": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+  "sha256": "43450ccfd72c632ba3c3e7b7c7ec6c56c9d0244d9e18cf90e89f1ab5b29cba5d",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1A-v1.wav",
+  "recognized": "先把出倉和牽收对一遍看缺口是在领粮前还是在路上",
+  "similarity": 0.9130434782608695,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "text": "先把出倉和牽收对一遍",
+      "noSpeechProbability": 0.0672854334115982,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.6,
+          "text": "先"
+        },
+        {
+          "start": 0.6,
+          "end": 0.74,
+          "text": "把"
+        },
+        {
+          "start": 0.74,
+          "end": 0.94,
+          "text": "出"
+        },
+        {
+          "start": 0.94,
+          "end": 1.08,
+          "text": "倉"
+        },
+        {
+          "start": 1.08,
+          "end": 1.22,
+          "text": "和"
+        },
+        {
+          "start": 1.22,
+          "end": 1.38,
+          "text": "牽"
+        },
+        {
+          "start": 1.38,
+          "end": 1.52,
+          "text": "收"
+        },
+        {
+          "start": 1.52,
+          "end": 1.64,
+          "text": "对"
+        },
+        {
+          "start": 1.64,
+          "end": 1.76,
+          "text": "一"
+        },
+        {
+          "start": 1.76,
+          "end": 2.4,
+          "text": "遍"
+        }
+      ]
+    },
+    {
+      "start": 2.4,
+      "end": 3.82,
+      "text": "看缺口是在领粮前",
+      "noSpeechProbability": 0.0672854334115982,
+      "words": [
+        {
+          "start": 2.4,
+          "end": 2.66,
+          "text": "看"
+        },
+        {
+          "start": 2.66,
+          "end": 2.86,
+          "text": "缺"
+        },
+        {
+          "start": 2.86,
+          "end": 3.04,
+          "text": "口"
+        },
+        {
+          "start": 3.04,
+          "end": 3.2,
+          "text": "是"
+        },
+        {
+          "start": 3.2,
+          "end": 3.32,
+          "text": "在"
+        },
+        {
+          "start": 3.32,
+          "end": 3.46,
+          "text": "领"
+        },
+        {
+          "start": 3.46,
+          "end": 3.6,
+          "text": "粮"
+        },
+        {
+          "start": 3.6,
+          "end": 3.82,
+          "text": "前"
+        }
+      ]
+    },
+    {
+      "start": 4.160000000000001,
+      "end": 5.02,
+      "text": "还是在路上",
+      "noSpeechProbability": 0.0672854334115982,
+      "words": [
+        {
+          "start": 4.160000000000001,
+          "end": 4.48,
+          "text": "还是"
+        },
+        {
+          "start": 4.48,
+          "end": 4.72,
+          "text": "在"
+        },
+        {
+          "start": 4.72,
+          "end": 4.86,
+          "text": "路"
+        },
+        {
+          "start": 4.86,
+          "end": 5.02,
+          "text": "上"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

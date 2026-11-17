@@ -1,0 +1,61 @@
+{
+  "source_sha256": "f827cfd9377e7eb410fdca4adae59ef87061071adcb9fda28465d17ad4d6410d",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7572
+        },
+        {
+          "label": "Sigh",
+          "p": 0.3124
+        },
+        {
+          "label": "Snort",
+          "p": 0.1417
+        },
+        {
+          "label": "Gasp",
+          "p": 0.1296
+        },
+        {
+          "label": "Breathing",
+          "p": 0.1003
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0321
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0135
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0122
+        },
+        {
+          "label": "Music",
+          "p": 0.0103
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0086
+        },
+        {
+          "label": "Snake",
+          "p": 0.0059
+        },
+        {
+          "label": "Caw",
+          "p": 0.0047
+        }
+      ],
+      "music": 0.0103
+    }
+  ]
+}

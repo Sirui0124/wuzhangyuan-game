@@ -1,0 +1,133 @@
+{
+  "id": "CH2-V38",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V38-c454ac7e3b-20261025.mp4",
+  "oldSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+  "oldSubtitles": "/video/subtitles/CH2-V38-c454ac7e3b-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V38-c7639871.mp4",
+  "sha256": "21524c599e3150898fd674be6bec0167a8d15129436bf251cf918a8ea882d3f6",
+  "bytes": 9758269,
+  "duration": 20.166666666666668,
+  "containerDuration": 20.166667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 484,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V38",
+    "src": "/video/current/PV27-CH2-V38-c7639871.mp4",
+    "title": "救下眼前的人",
+    "subtitles": "/video/subtitles/PV27-CH2-V38-c7639871.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-E2-001",
+      "node": "CH2-E2-001",
+      "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-001.wav",
+      "oldCorrelation": 0.9999859127757331,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E2-001-v1.wav",
+      "newVoiceSha256": "eebae82a48254da931f8c97e53dadb476021add7a2325c332b21c4e3c91b70b9",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.33000000000000007,
+        4.79
+      ],
+      "insertAt": 0.33000000000000007,
+      "voiceSeconds": 4.3,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.7718645334243774,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-E2-003",
+      "node": "CH2-E2-003",
+      "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-003.wav",
+      "oldCorrelation": 0.9782145140695466,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E2-003-v1.wav",
+      "newVoiceSha256": "32d1625b2aa756ec1b2513d884759d1b82db6db319dd33a7d8e4ca7b4ba58e0c",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        13.86675,
+        20.1415
+      ],
+      "insertAt": 13.86675,
+      "voiceSeconds": 6.18,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.928234338760376,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.65,
+      "end": 4.640000000000001,
+      "text": "这些是我拿到的材料和苟安的停手说明，请一并收下"
+    },
+    {
+      "start": 5.73,
+      "end": 9.23,
+      "text": "材料收到了。苟安停手补报的经过已经记下"
+    },
+    {
+      "start": 9.23,
+      "end": 13.61,
+      "text": "人先留营受查。李严一节，还要继续核"
+    },
+    {
+      "start": 14.02675,
+      "end": 17.61675,
+      "text": "我留下了救过我的人。可我交出的结论"
+    },
+    {
+      "start": 17.82675,
+      "end": 19.97675,
+      "text": "还不足以把每一处责任说清"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

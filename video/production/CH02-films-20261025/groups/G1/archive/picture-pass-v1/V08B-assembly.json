@@ -1,0 +1,65 @@
+{
+  "id": "V08B",
+  "name": "关心伤势分支",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V08B-关心伤势分支.mp4",
+  "duration": 13.72,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-N1选B",
+  "next": [
+    "V09"
+  ],
+  "endEvent": "所选对白与本段演出实际完成；不重复加分",
+  "subclips": [
+    {
+      "id": "V08B-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08B-01-normalized.mp4",
+      "slotStart": 0,
+      "slotEnd": 13.7,
+      "sourceTrim": [
+        0,
+        13.7
+      ],
+      "audioMode": "mixed-picture-audio-pending",
+      "review": {
+        "visualReview": "usable-candidate",
+        "actualDynamicReview": true,
+        "reviewedBy": "G2 1x muted playback through ended +0.5sec sequence; raw SHA verified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\G1-assist-review.json",
+        "sourceSha256": "bd080e476be24c2452885589d8a0bed1848201affc526a18a79908ad676e7277",
+        "findings": "可直接保留全段，递碗和转头视线作为轻微机位差异记录。保留两句安慰和后续整句回应；嘴动先后与最终声音统一处理，不因临时声音/偏视线新付费重拍。",
+        "remainingMinorDifferences": [
+          {
+            "start": 2.2,
+            "end": 4.1,
+            "type": "bowl_handover",
+            "observation": "右画外手递碗，苟安伸手接住，随后回收持稳；未见明显脱手悬浮、穿碗或额外肩背"
+          },
+          {
+            "start": 5,
+            "end": 13.667,
+            "type": "turn_and_eyeline",
+            "observation": "苟安将碗放下后转向画右回应，视线与原先镜头方向略偏；未新增叙事事实"
+          }
+        ],
+        "audioIssues": [
+          "临时音轨与口型待统一；未逐字听审，混合段玩家原句保留完整策划与既有音轨索引。"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "0b1bcd5a90f5b87d31b77f49eb9a73d982b64266c5f965b4975220da9789d135",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。",
+    "混合对白段当前保留生成原音，玩家画外原句完整列于plan和分镜；暂不混入以免覆盖NPC，留统一配音阶段。"
+  ]
+}

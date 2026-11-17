@@ -1,0 +1,216 @@
+{
+  "clips": [
+    {
+      "id": "V26-02-R2",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 6,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-007"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-007",
+          "speaker": "演出",
+          "text": "我返营交差，军吏核收本次获准查阅的粮情材料。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "silent": true,
+      "action": "第一人称在收件案前已经停稳。桌边只有我刚放下的一束闭合无字竹木卷束，捆绳不拆。对面的同一收件军吏从案后用一只手把这束材料平缓拉到自己一侧，手掌压稳后松开，完成核收；我不再伸手，不出现更多手臂。不展开任何纸面，不出现可读文字，不签名、不盖章、不递交正式案卷。镜头保持水平中近景，看得见军吏闭口的脸和案边完整动作。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-03"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "第一人称在收件案前已经停稳。桌边只有我刚放下的一束闭合无字竹木卷束，捆绳不拆。对面的同一收件军吏从案后用一只手把这束材料平缓拉到自己一侧，手掌压稳后松开，完成核收；我不再伸手，不出现更多手臂。不展开任何纸面，不出现可读文字，不签名、不盖章、不递交正式案卷。镜头保持水平中近景，看得见军吏闭口的脸和案边完整动作。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成",
+      "replaces": "V26-02"
+    },
+    {
+      "id": "V26-04-R2",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 6,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-009"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-009",
+          "speaker": "转运简报·正文",
+          "text": "敌方正在修整粮道、筹集军资，并恢复屯田。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "silent": true,
+      "action": "第一人称向下观察同一收件案头无字平整麻纸。画内没有任何人和手；器物不移动、不展开、不变形，纸面始终无字且平整。只有极轻的帐布光影变化。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-05"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "第一人称向下观察同一收件案头无字平整麻纸。画内没有任何人和手；器物不移动、不展开、不变形，纸面始终无字且平整。只有极轻的帐布光影变化。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": true,
+      "status": "待生成",
+      "replaces": "V26-04"
+    },
+    {
+      "id": "V26-08-R2",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 8,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-013"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-013",
+          "speaker": "军吏",
+          "text": "他担心休兵这段日子，魏军修田积粮，将来更难打。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "第一人称固定中近景看同一收件军吏，他在案后平静说话，手始终自然放在画面外，不拿卷束、不碰纸页。脸与衣冠、案后帐布保持不变，不切到书写或纸面。话后自然闭嘴看向我。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-09"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "第一人称固定中近景看同一收件军吏，他在案后平静说话，手始终自然放在画面外，不拿卷束、不碰纸页。脸与衣冠、案后帐布保持不变，不切到书写或纸面。话后自然闭嘴看向我。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成",
+      "replaces": "V26-08"
+    },
+    {
+      "id": "V26-09-R2",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 11,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-014"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-014",
+          "speaker": "军吏",
+          "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "第一人称稳定看同一收件军吏，他在案后说完整原句，语气低稳，谈到诺言时短暂一停；没有额外人物从背后入镜，没有武器逼近，没有文件或卷束交接，不切纸面。双手自然不动，句末闭口看我。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "第一人称稳定看同一收件军吏，他在案后说完整原句，语气低稳，谈到诺言时短暂一停；没有额外人物从背后入镜，没有武器逼近，没有文件或卷束交接，不切纸面。双手自然不动，句末闭口看我。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成",
+      "replaces": "V26-09"
+    }
+  ]
+}

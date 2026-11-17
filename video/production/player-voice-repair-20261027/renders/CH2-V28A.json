@@ -1,0 +1,80 @@
+{
+  "id": "CH2-V28A",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V28A-a45ad04086-20261025.mp4",
+  "oldSha256": "a45ad04086c85cdb56061cb1c785d7b1d02d3339fc9d443e330df948672f9ff1",
+  "oldSubtitles": "/video/subtitles/CH2-V28A-a45ad04086-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V28A-9cec13a2.mp4",
+  "sha256": "440d739d5d00375b3590260c4defdfbe7c4ff94a60874c2275294a2239f9d190",
+  "bytes": 5458253,
+  "duration": 13.125,
+  "containerDuration": 13.125,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 315,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V28A",
+    "src": "/video/current/PV27-CH2-V28A-9cec13a2.mp4",
+    "title": "访村后态度A",
+    "subtitles": "/video/subtitles/PV27-CH2-V28A-9cec13a2.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY09-QA",
+      "node": "CH2-LY09-QA",
+      "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-QA.wav",
+      "oldCorrelation": 0.9824873709093084,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-QA-v1.wav",
+      "newVoiceSha256": "f211548ea6ae1e438cc620374136e933a5316bafd4b3c11ec806463238ff4e7b",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.56125,
+        5.36125
+      ],
+      "insertAt": 0.56125,
+      "voiceSeconds": 4.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.7883199453353882,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.84125,
+      "end": 5.111250000000001,
+      "text": "村里那些人已经很难了。我明白你为什么想停下来"
+    },
+    {
+      "start": 5.94,
+      "end": 12.77,
+      "text": "你总算去看过了。我不想下一回还把他们逼到这一步"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

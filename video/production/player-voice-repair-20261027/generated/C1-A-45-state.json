@@ -1,0 +1,100 @@
+{
+  "id": "C1-A-45",
+  "node": "A-45",
+  "text": "知道了，交给你了。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 2.12,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "fb9459ce-f3a8-4497-924d-4fff822cd365",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:07:41.636Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。唯一允许发声的原句：“知道了，交给你了。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约2.12秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "8e4dd55b281c94fdf619affe3d699e55704efa31b3e7268d89c9bd144456c12b",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027190742F676BB58CD52F40B6F3A",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A-45-v1.wav",
+  "sha256": "1f2e745e0620f375218f14ae7a7d79b4976dd791a4bb5ddefbfbe1621e08bd0a",
+  "duration": 2.08,
+  "originalDuration": 2.08,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 1840,
+        "start_time": 0,
+        "text": "知道了，交给你了。",
+        "words": [
+          {
+            "end_time": 80,
+            "start_time": 0,
+            "text": "知"
+          },
+          {
+            "end_time": 320,
+            "start_time": 160,
+            "text": "道"
+          },
+          {
+            "end_time": 640,
+            "start_time": 320,
+            "text": "了"
+          },
+          {
+            "end_time": 640,
+            "start_time": 640,
+            "text": "，"
+          },
+          {
+            "end_time": 1200,
+            "start_time": 1160,
+            "text": "交"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1200,
+            "text": "给"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1360,
+            "text": "你"
+          },
+          {
+            "end_time": 1840,
+            "start_time": 1440,
+            "text": "了"
+          },
+          {
+            "end_time": 1840,
+            "start_time": 1840,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "知道了，交给你了。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:08:32.117Z"
+}

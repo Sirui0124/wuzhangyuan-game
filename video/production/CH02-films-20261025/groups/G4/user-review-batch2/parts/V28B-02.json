@@ -1,0 +1,52 @@
+{
+  "id": "V28B-02",
+  "slot": "V28B",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V28B-02.mp4",
+  "sha256": "cbfc51fef74f18e79c30b98a98b52fcac5ec0625ca00f4b9a9349002c93f67f4",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V28B-02.mp4",
+  "oldSha256": "513ccda22eb808979500bf3c7055e8d2bd8b9c5bd556e792d246f76bc3dd53a1",
+  "oldDuration": 8.0,
+  "sourceFrames": [
+    34,
+    192
+  ],
+  "sourceRange": [
+    1.4166666666666667,
+    8.0
+  ],
+  "newDuration": 6.583333333333333,
+  "technical": {
+    "duration": 6.583333,
+    "videoDuration": 6.583333333333333,
+    "frames": 158,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "cbfc51fef74f18e79c30b98a98b52fcac5ec0625ca00f4b9a9349002c93f67f4",
+    "bytes": 2199133
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-RB",
+      "speaker": "苟安",
+      "text": "这话我听见了。可真说出去，会落个什么下场？",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-RB",
+      "roleControlOnly": "苟安",
+      "text": "这话我听见了。可真说出去，会落个什么下场？",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

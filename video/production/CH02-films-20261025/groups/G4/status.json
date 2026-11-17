@@ -1,0 +1,50 @@
+{
+  "group": "G4",
+  "stage": "G4第二批免费音频/时长返修已完成，14条文字/画面/视频轨核对完成，实际听审pending、用户待review",
+  "logicalSlots": 14,
+  "deliveredSlots": 14,
+  "sourceNodes": 36,
+  "originalRequests": 37,
+  "submitted": 41,
+  "succeeded": 40,
+  "failed": 1,
+  "active": 0,
+  "newTTSRequests": 0,
+  "delivery": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\delivery.json",
+  "index": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\交付索引.md",
+  "userApproval": "待review",
+  "pictureUsability": {
+    "report": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\picture-usability.json",
+    "usable": 13,
+    "usableWithIntegrationCondition": 1,
+    "needsRepair": 0,
+    "pending": 0
+  },
+  "userApproved": false,
+  "updated": "2026-10-25T17:35:00+08:00",
+  "userReviewRepair": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-repair.json",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "userReviewBatch2": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2.json",
+  "batch2Summary": {
+    "total": 14,
+    "changed": 11,
+    "retained": 3,
+    "oldSeconds": 266.71999999999997,
+    "newSeconds": 235.269332,
+    "shortenedSeconds": 31.45066799999998,
+    "spokenUtterancesPreserved": 32,
+    "restoredExistingPlayerLines": [
+      "CH2-LY09-010",
+      "CH2-LY10-007"
+    ],
+    "newTTSRequests": 0,
+    "newVideoAPIRequests": 0,
+    "quarantinedWrongTTS2Adopted": false,
+    "userApproved": 0
+  },
+  "videoGenerationMode": "api-expired-md-only",
+  "videoAPISubmissionsAllowed": false,
+  "reGenerationMDHandoff": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\re-generation-md-handoff.json",
+  "pendingVideoRegeneration": 0,
+  "maxMDVideoDurationSeconds": 30
+}

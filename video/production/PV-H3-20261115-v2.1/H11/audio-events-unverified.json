@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6982
+        },
+        {
+          "label": "Animal",
+          "p": 0.1563
+        },
+        {
+          "label": "Dog",
+          "p": 0.145
+        },
+        {
+          "label": "Domestic animals, pets",
+          "p": 0.1348
+        },
+        {
+          "label": "Bow-wow",
+          "p": 0.1015
+        },
+        {
+          "label": "Bark",
+          "p": 0.0871
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0378
+        },
+        {
+          "label": "Whimper (dog)",
+          "p": 0.0348
+        },
+        {
+          "label": "Yip",
+          "p": 0.0327
+        },
+        {
+          "label": "Canidae, dogs, wolves",
+          "p": 0.0323
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0257
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0256
+        }
+      ],
+      "music": 0.0015
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7934
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.1104
+        },
+        {
+          "label": "Gasp",
+          "p": 0.036
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0272
+        },
+        {
+          "label": "Throat clearing",
+          "p": 0.0265
+        },
+        {
+          "label": "Whispering",
+          "p": 0.0242
+        },
+        {
+          "label": "Grunt",
+          "p": 0.0174
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0161
+        },
+        {
+          "label": "Music",
+          "p": 0.0113
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0102
+        },
+        {
+          "label": "Hiccup",
+          "p": 0.01
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0098
+        }
+      ],
+      "music": 0.0113
+    }
+  ]
+}

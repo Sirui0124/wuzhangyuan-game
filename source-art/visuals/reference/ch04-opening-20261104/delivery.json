@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-04",
+  "mode": "built-in image_gen",
+  "reviewStatus": "待用户审阅",
+  "seal": {
+    "file": "庞统旧铜印-多角度参考-v2.png",
+    "version": 2,
+    "revisionPrompt": "Edit the supplied bronze seal reference sheet. Make ONLY ONE precise correction in the bottom-right compartment: the square bronze underside engraving (the square bronze face to the LEFT of the round brown clay impression) must have its carved glyphs and their ordering HORIZONTALLY MIRRORED, so the entire carved name is a mirror image of the readable name on the clay. Currently the bronze face and the clay show the same orientation, which is physically wrong for a seal. Mirror only the engraved pattern WITHIN the bronze square, preserve the bronze square's outer body, texture, chipped top-right corner, lighting and framing. The round clay impression to its right must remain unchanged and readable in traditional seal characters 龐統, 龐 on right and 統 on left. Preserve absolutely everything else in all other panels: hero prop, low nose knob, cord, top view, side view, colors, gray backdrop and layout. Do not add text or labels. This is an optical/physical correction of the incised glyph orientation only.",
+    "visualReview": "Macro, top and side views inspected. Original v1 had same-orientation inscription and impression; v2 corrects the engraved face to a mirrored counterpart. Script is a generated visual concept, not an epigraphic facsimile."
+  },
+  "character": {
+    "file": "庞统-影视造型六视图-v1.png",
+    "reference": "庞统-用户指定影视截图.png",
+    "visualReview": "Front, profile, three-quarter, full front, full back and waist-up views inspected against the right-hand man. Preserves navy robe, tall ribbed crown, thin moustache and pointed goatee. Unseen sides and full costume are generated extrapolations."
+  },
+  "originalsRetained": true,
+  "gameRuntimeModified": false
+}

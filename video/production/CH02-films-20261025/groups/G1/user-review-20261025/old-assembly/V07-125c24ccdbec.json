@@ -1,0 +1,67 @@
+{
+  "id": "V07",
+  "name": "带记录回伤帐",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V07-带记录回伤帐.mp4",
+  "duration": 9.99,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-GO-GOUAN实际选择去找",
+  "next": [
+    "UI-N1"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V07-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V07-01-reframed.mp4",
+      "slotStart": 0,
+      "slotEnd": 9.99,
+      "sourceTrim": [
+        0,
+        9.99
+      ],
+      "audioMode": "npc-native",
+      "review": {
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V07-01-reframed.mp4",
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V07-01-normalized.mp4",
+        "sourceIntervals": [
+          [
+            2.35,
+            4.45
+          ],
+          [
+            4.45,
+            12.25
+          ]
+        ],
+        "sourceCropFirst": [
+          0,
+          160,
+          960,
+          540
+        ],
+        "visualReview": "usable-after-reframe",
+        "actualDynamicReview": true,
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\G1-assist-review.json",
+        "reviewedBy": "G2 source 1x ended + G1 edited first/end sequence pending",
+        "findings": "去外拍腰身；放册段只看手与矮案，后段保留坐定抬脸和完整问题排时空间约9.9s。",
+        "audioIssues": [
+          "临时NPC声未逐字听审；不裁成仅末4.5秒脸而损失完整问题，后续统一配音。"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "125c24ccdbec027bc0926add3fe7615c20a96f21c849592f50a995883f8efede",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ]
+}

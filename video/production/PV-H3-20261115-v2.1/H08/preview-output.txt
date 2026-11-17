@@ -1,0 +1,20 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "type": "text",
+      "text": "Four-second live-action historical rain scene, full-frame 16:9. Same Zhuge Liang actor, crown, soaked blue-gray robe and fan as the single reference, but use a natural-lens side medium close view on the same ledge. He begins looking down toward the valley, then raises only his eyes and chin slightly toward the rain once. Fan lowers a little. His lips remain fully closed for the entire shot, no mouthing. Natural rain weights the cloth and feathers. No other character, no new setting, no exaggerated crying. Close rain on fabric, water drops and a quiet breath only; no speech, no narration, no music, no captions, no black bars. Sound contract: absolutely no background music or score, including music generated inside the source clip. Preserve scene ambience, synchronized physical sound and appropriate natural human breathing or exertion. Spoken dialogue is limited to the explicitly permitted lines in this request. Do not read control instructions, labels or unrelated narration."
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/2f04fa9622cac310acfd687870cb4e39e1dd20110ba61c8504f7af6d5cff1beb.jpg"
+      },
+      "role": "reference_image"
+    }
+  ],
+  "resolution": "768P",
+  "duration": 4,
+  "ratio": "16:9"
+}

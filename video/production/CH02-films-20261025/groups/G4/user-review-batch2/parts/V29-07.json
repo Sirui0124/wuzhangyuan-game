@@ -1,0 +1,59 @@
+{
+  "id": "V29-07",
+  "slot": "V29",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V29-07.mp4",
+  "sha256": "369d9d5700547fb5513fac0f8605417ba52c3f13ff273dd037ea50ca51e28845",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V29-07.mp4",
+  "oldSha256": "492b8f0dd50f94ec4928b7e9e0a38af41192f5e23b82adf4aa4a2d3dba849cd2",
+  "oldDuration": 5.583333,
+  "sourceFrames": [
+    0,
+    126
+  ],
+  "sourceRange": [
+    0.0,
+    5.25
+  ],
+  "newDuration": 5.25,
+  "technical": {
+    "duration": 5.25,
+    "videoDuration": 5.25,
+    "frames": 126,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "369d9d5700547fb5513fac0f8605417ba52c3f13ff273dd037ea50ca51e28845",
+    "bytes": 1585553
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY10-007",
+      "speaker": "我（心声）",
+      "text": "李严做过什么，苟安做过什么，都得如实交代。",
+      "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY10-007",
+      "roleControlOnly": "我（心声）",
+      "text": "李严做过什么，苟安做过什么，都得如实交代。",
+      "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "合法我心声原句缺失而混有杂句；补回已有纯文本玩家心声，不给NPC做口型，保留案头观察",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": {
+    "node": "CH2-LY10-007",
+    "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY10-007.wav",
+    "sha256": "72df18216d3a2d3655abebaae84c343c6fc9861e530699f68e2563fe2f4e4c06",
+    "text": "李严做过什么，苟安做过什么，都得如实交代。",
+    "offset": 0.25,
+    "scope": "根明确允许复用的原中央76条纯玩家原音，非隔离的G1错误7条预置NPC音轨"
+  },
+  "listeningReview": "pending, ASR only"
+}

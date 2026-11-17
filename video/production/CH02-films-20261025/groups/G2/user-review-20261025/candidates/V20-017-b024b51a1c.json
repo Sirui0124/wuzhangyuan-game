@@ -1,0 +1,66 @@
+{
+  "id": "V20-017",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-017-b024b51a1c.mp4",
+  "sha256": "1ca2dda95bb3c64d2ed8bcfab8365dcc67815a3fafefe74fd64291c0cd34fb0c",
+  "videoFrames": 88,
+  "videoSeconds": 3.6666666666666665,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V20-017",
+    "parts": [
+      {
+        "source": "V20-08",
+        "range": [
+          0,
+          0.4
+        ]
+      },
+      {
+        "source": "V20-05",
+        "range": [
+          3.95,
+          7.291667
+        ]
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-05-raw.mp4",
+      "start": 3.8,
+      "end": 7.291667,
+      "offset": 0.25
+    },
+    "sourceNodes": [
+      "CH2-LY06-017"
+    ],
+    "comment": "remove gibberish first rendition, keep actual correct repeated native sentence and face; no report card"
+  },
+  "sourceParts": [
+    {
+      "source": "V20-08",
+      "range": [
+        0,
+        0.4
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+      "sourceSha256": "dd32106380f49b16d40cd5415de1c9e2b553eb127da9611aa3a3c78d7440169a"
+    },
+    {
+      "source": "V20-05",
+      "range": [
+        3.95,
+        7.291667
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-05-raw.mp4",
+      "sourceSha256": "e0f823c56b6c9b40544a4e934098f7acf23914f2fdb18f3a993892e95a4e0fac"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

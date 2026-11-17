@@ -1,0 +1,275 @@
+{
+  "reviewerGroup": "G4",
+  "assistedGroup": "G1",
+  "scope": "只读V09-01/02/03；未修改G1、未生成API、未拼接G1、未新增TTS",
+  "status": "只读动态画面协查完成，供G1唯一编辑者最终核对采用",
+  "reviewedLocalDate": "2026-10-25",
+  "timeCodePrecision": "关键展开点以0.2秒间隔精定位，边界约±0.1秒；前段口部/背景时间为观察范围",
+  "sourcePlan": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\plan.json",
+  "files": [
+    {
+      "id": "V09-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V09-01-normalized.mp4",
+      "sha256": "963875b66557d6f07df104906090d0d0ac090123b6dbf80297c506dc8c4b582d",
+      "bytes": 2793981,
+      "mtimeUtc": "2026-10-25T03:16:06.897683+00:00",
+      "mtime_ns": 1792898166897683000,
+      "unchangedSinceReviewStarted": true,
+      "reviewedInitialSha256": "963875b66557d6f07df104906090d0d0ac090123b6dbf80297c506dc8c4b582d",
+      "durationSeconds": 8.0,
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-023",
+          "speaker": "我",
+          "text": "你不是李严的人吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-024",
+          "speaker": "我",
+          "text": "为什么不找他说明白？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "dynamicReview": {
+        "completed": true,
+        "playedRangesSeconds": [
+          [
+            0,
+            8.0
+          ]
+        ],
+        "method": "本机只读HTTP播放器从0实际播放至片尾，结合G1既有quick联系图；V09-03另外在内存中按2–10秒及8.0/8.2/8.4/8.6/8.8/9.0秒抽帧定位，无新图像文件写入"
+      },
+      "identityAndScene": {
+        "sameGouAn": true,
+        "sameDaytimeTent": true,
+        "sameGreyRobeBlackHeadwrap": true,
+        "noNewFacialWound": true,
+        "firstPersonView": true
+      },
+      "audioIssues": [
+        "本次未听审，不判断错词、音色或BGM；临时音轨问题留统一配音阶段，不据此要求重拍"
+      ],
+      "visualVerdict": "可保留8秒画面候选；最终播放器对白与口部关系留后核，不因临时音轨自动重拍",
+      "recommendedWindows": [
+        {
+          "start": 0,
+          "end": 8.0,
+          "use": "两句玩家画外问话的反应镜头，保留足长承载时间"
+        }
+      ],
+      "cropRecommendation": null,
+      "findings": [
+        {
+          "start": 0,
+          "end": 3.5,
+          "issue": "苟安卧榻、看向帐口再回转，空间身份稳定，未出现李严实景或新道具",
+          "severity": "informational"
+        },
+        {
+          "start": 3.5,
+          "end": 8.0,
+          "issue": "后半口部有活动，不能声称全段严格闭口；结合最终玩家画外音再判断，不单凭暂时音轨作画面失败结论",
+          "severity": "final_audio_alignment"
+        }
+      ],
+      "timingAssessment": {
+        "centralPlayerWavSeconds": [
+          1.8059166666666666,
+          1.79975
+        ],
+        "totalSpeechSeconds": 3.6056666666666666,
+        "recommendedReservedSeconds": 4.8,
+        "availableSeconds": 8.0,
+        "sufficient": true
+      }
+    },
+    {
+      "id": "V09-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V09-02-normalized.mp4",
+      "sha256": "8e7347e5451706a9cf3f7b9865f8b03372295050751500aa0cac3e568c612bda",
+      "bytes": 5239698,
+      "mtimeUtc": "2026-10-25T03:22:36.252271+00:00",
+      "mtime_ns": 1792898556252270700,
+      "unchangedSinceReviewStarted": true,
+      "reviewedInitialSha256": "8e7347e5451706a9cf3f7b9865f8b03372295050751500aa0cac3e568c612bda",
+      "durationSeconds": 13.7,
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-025",
+          "speaker": "苟安",
+          "text": "我就是个替他跑腿的，他哪会替我说话。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-026",
+          "speaker": "苟安",
+          "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "dynamicReview": {
+        "completed": true,
+        "playedRangesSeconds": [
+          [
+            0,
+            13.7
+          ]
+        ],
+        "method": "本机只读HTTP播放器从0实际播放至片尾，结合G1既有quick联系图；V09-03另外在内存中按2–10秒及8.0/8.2/8.4/8.6/8.8/9.0秒抽帧定位，无新图像文件写入"
+      },
+      "identityAndScene": {
+        "sameGouAn": true,
+        "sameDaytimeTent": true,
+        "sameGreyRobeBlackHeadwrap": true,
+        "noNewFacialWound": true,
+        "firstPersonView": true
+      },
+      "audioIssues": [
+        "本次未听审，不判断错词、音色或BGM；临时音轨问题留统一配音阶段，不据此要求重拍"
+      ],
+      "visualVerdict": "可直接建议采用，不必因轻微背景连续性另拍",
+      "recommendedWindows": [
+        {
+          "start": 0,
+          "end": 13.7,
+          "use": "保留苟安两句完整表演及句间气口"
+        }
+      ],
+      "cropRecommendation": null,
+      "findings": [
+        {
+          "start": 0,
+          "end": 13.7,
+          "issue": "同脸、同衣、同榻；有重心与呼吸，未站起离开、无新饮酒演出、无新证物/字幕",
+          "severity": "informational"
+        },
+        {
+          "start": 5.8,
+          "end": 13.7,
+          "issue": "左后方营中人员进入处理陶器并离开，未与前景对白形成新剧情；不建议仅为此缩短原句承载时间",
+          "severity": "minor_background_continuity"
+        }
+      ],
+      "timingAssessment": {
+        "expectedHanCharacters": 31,
+        "availableSeconds": 13.7,
+        "sufficient": true,
+        "note": "仅确认画面承载时长足够，不冒称实际语音已逐字通过"
+      }
+    },
+    {
+      "id": "V09-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V09-03-normalized.mp4",
+      "sha256": "d40ba441cbb057a21f4465f60d43ae0089fb60c486895072fbed05558ac708b8",
+      "bytes": 6314676,
+      "mtimeUtc": "2026-10-25T03:20:36.305828+00:00",
+      "mtime_ns": 1792898436305828300,
+      "unchangedSinceReviewStarted": true,
+      "reviewedInitialSha256": "d40ba441cbb057a21f4465f60d43ae0089fb60c486895072fbed05558ac708b8",
+      "durationSeconds": 12.26,
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-027",
+          "speaker": "苟安",
+          "text": "真把话说明白，往后还在谁手底下领粮？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-001",
+          "speaker": "演出",
+          "text": "苟安取出一封李丰的信，放在榻边。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "dynamicReview": {
+        "completed": true,
+        "playedRangesSeconds": [
+          [
+            0,
+            12.26
+          ]
+        ],
+        "method": "本机只读HTTP播放器从0实际播放至片尾，结合G1既有quick联系图；V09-03另外在内存中按2–10秒及8.0/8.2/8.4/8.6/8.8/9.0秒抽帧定位，无新图像文件写入"
+      },
+      "identityAndScene": {
+        "sameGouAn": true,
+        "sameDaytimeTent": true,
+        "sameGreyRobeBlackHeadwrap": true,
+        "noNewFacialWound": true,
+        "firstPersonView": true
+      },
+      "audioIssues": [
+        "本次未听审，不判断错词、音色或BGM；临时音轨问题留统一配音阶段，不据此要求重拍"
+      ],
+      "visualVerdict": "前段可用；末尾不能直接作为“折信放榻边、尚未读信”完成节点",
+      "recommendedWindows": [
+        {
+          "start": 0,
+          "end": 8.2,
+          "use": "可保留领粮顾虑与从身侧取出闭合信件的前段，但到8.2秒尚未放下并松手",
+          "completeEndEvent": false
+        }
+      ],
+      "avoidWindows": [
+        {
+          "start": 8.4,
+          "end": 12.26,
+          "reason": "约8.4秒开始翻开信面，8.8秒清晰生成非源正文；约9秒后将展开字面朝上放榻边，末段特写正文。"
+        }
+      ],
+      "cropRecommendation": null,
+      "findings": [
+        {
+          "start": 0,
+          "end": 4.2,
+          "issue": "苟安保持榻上姿态，转身从身侧取物，没有站起出帐",
+          "severity": "informational"
+        },
+        {
+          "start": 4.8,
+          "end": 8.2,
+          "issue": "折好的信件已取出并持在手中，外封/折痕正常；尚未完整放到榻边并让手离开",
+          "severity": "incomplete_end_action"
+        },
+        {
+          "start": 8.4,
+          "end": 8.8,
+          "issue": "左侧信面翻开，动作由闭合信变为展开读面，已跨原计划的未读边界",
+          "severity": "plot_boundary"
+        },
+        {
+          "start": 8.8,
+          "end": 12.26,
+          "issue": "信上可见大段模型字形与红框，不能当李丰信正文或线索依据；末尾9秒后持续正文特写",
+          "severity": "false_document_text"
+        }
+      ],
+      "requiredRemainingAction": "补齐同场“闭合折信实际放到榻边，手离开；停在UI-FIRST-LETTER前”的短演出。优先检查是否已有匹配可复用素材；由G1唯一编辑/提交者决定，不必重做已可用前段。",
+      "cannotMeetEndStateBySimpleTrim": true,
+      "doNotInfer": "不能裁去字面后便声称闭合信已经放好；模糊文字不能改变已展开的物体状态。",
+      "timingAssessment": {
+        "expectedHanCharacters": 16,
+        "usableFrontSeconds": 8.2,
+        "sufficientForOriginalSpokenLine": true,
+        "missingPart": "放下闭合折信并松手的完整演出，而非台词时长"
+      }
+    }
+  ],
+  "summary": {
+    "directlyUsable": [
+      "V09-02"
+    ],
+    "usableWithFinalAudioCaveat": [
+      "V09-01"
+    ],
+    "usableFrontButMissingRequiredEndAction": [
+      "V09-03"
+    ],
+    "newGenerationCalls": 0,
+    "newTTSCalls": 0,
+    "G1FilesModified": 0
+  },
+  "concurrencyCheckPassed": true
+}

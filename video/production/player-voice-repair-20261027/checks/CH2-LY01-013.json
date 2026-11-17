@@ -1,0 +1,64 @@
+{
+  "id": "CH2-LY01-013",
+  "expected": "你接下来打算降魏？",
+  "sha256": "ab7e30275e494849835be7ebc3ac86c659ecb3e6afcb04c2133e41317b69bac0",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-013-v1.wav",
+  "recognized": "你接下来打算降位",
+  "similarity": 0.875,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.06,
+      "text": "你接下来打算降位",
+      "noSpeechProbability": 0.004348739515990019,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.64,
+          "text": "你"
+        },
+        {
+          "start": 0.64,
+          "end": 0.84,
+          "text": "接"
+        },
+        {
+          "start": 0.84,
+          "end": 0.96,
+          "text": "下"
+        },
+        {
+          "start": 0.96,
+          "end": 1.24,
+          "text": "来"
+        },
+        {
+          "start": 1.24,
+          "end": 1.54,
+          "text": "打"
+        },
+        {
+          "start": 1.54,
+          "end": 1.7,
+          "text": "算"
+        },
+        {
+          "start": 1.7,
+          "end": 1.92,
+          "text": "降"
+        },
+        {
+          "start": 1.92,
+          "end": 2.06,
+          "text": "位"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

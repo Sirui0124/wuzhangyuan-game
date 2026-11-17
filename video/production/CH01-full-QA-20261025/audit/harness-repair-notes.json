@@ -1,0 +1,28 @@
+{
+  "firstAttempt": {
+    "mediaClipsCompletedAtRate1": 34,
+    "mediaErrors": [],
+    "opening": {
+      "duration": 42.517,
+      "error": null
+    },
+    "variants": [
+      {
+        "choice": "a",
+        "film": "C1T06-06",
+        "noInventedClue": true
+      },
+      {
+        "choice": "b",
+        "film": "C1FIX06B",
+        "noInventedClue": true
+      }
+    ],
+    "harnessIssue": "四个媒体检查页替换了游戏DOM，异步初始化仍引用旧节点；媒体本身34条都自然播放完。"
+  },
+  "secondAttempt": {
+    "completed": 0,
+    "harnessIssue": "about:blank页的媒体加载返回Format error；改为同源无游戏脚本的独立媒体页并维持4路并行后恢复。未将测试页环境错误当作视频损坏。"
+  },
+  "finalAttempt": "使用同源独立媒体页、4路普通倍速、真实游戏UI另检；结果见browser-verification.json。"
+}

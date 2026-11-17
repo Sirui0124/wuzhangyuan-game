@@ -1,0 +1,335 @@
+{
+  "id": "CH2-V02",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V02-tight-bedside-20261027.mp4",
+  "oldSha256": "5b35df9c90036f8ea63235c2eb1e6bafee55edee6ad21bae20fd48d6852f8af9",
+  "oldSubtitles": "/video/subtitles/CH2-V02-tight-bedside-20261027.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V02-4efa3fde.mp4",
+  "sha256": "29fdc69079a47e22660ae1e9f51a167dac70bc87f136e4a97a4a09f1e4b4432d",
+  "bytes": 25136151,
+  "duration": 44.374961,
+  "containerDuration": 44.374961,
+  "width": 1280,
+  "height": 720,
+  "fps": "1065000000/44374961",
+  "frames": 1065,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V02",
+    "src": "/video/current/PV27-CH2-V02-4efa3fde.mp4",
+    "title": "回忆与伤帐认人",
+    "subtitles": "/video/subtitles/PV27-CH2-V02-4efa3fde.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY01-002",
+      "node": "CH2-LY01-002",
+      "text": "第四次北伐。这回，我成了运粮兵。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-002.wav",
+      "oldCorrelation": 0.9997412196831078,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-002-v1.wav",
+      "newVoiceSha256": "7cb3d70927a837aa931f614a201b83b29e74c992c04a30fa9f8f41ee38c46c6f",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.44000000000000006,
+        4.793
+      ],
+      "insertAt": 0.44000000000000006,
+      "voiceSeconds": 4.055,
+      "trimmedLeadingSilence": 0.345,
+      "gain": 1.0457267761230469,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY01-007",
+      "node": "CH2-LY01-007",
+      "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-007.wav",
+      "oldCorrelation": 0.976400269040014,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-007-v1.wav",
+      "newVoiceSha256": "a8769eca19def604cf418a5cacac53138e4695e1dcc3497dfad764d429518800",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        20.30275,
+        25.89
+      ],
+      "insertAt": 20.30275,
+      "voiceSeconds": 5.5,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8158568143844604,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY01-008",
+      "node": "CH2-LY01-008",
+      "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-008.wav",
+      "oldCorrelation": 0.9683686770599991,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-008-v1.wav",
+      "newVoiceSha256": "c831f0c8b8b8e48a2ae25cae20d6eed271c5115c83eb3063d1ed47f32d7b5a65",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        25.89375,
+        31.89375
+      ],
+      "insertAt": 25.89375,
+      "voiceSeconds": 5.9,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0274568796157837,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY01-009",
+      "node": "CH2-LY01-009",
+      "text": "得先弄清苟安现在的打算，也许还来得及。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-009.wav",
+      "oldCorrelation": 0.9819372675747027,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-009-v1.wav",
+      "newVoiceSha256": "3fec627cdf39bdf62ff573d514e097168aac81c52198627c917abb302a467586",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        32.509750000000004,
+        36.40975
+      ],
+      "insertAt": 32.509750000000004,
+      "voiceSeconds": 3.78,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0248066186904907,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY01-012",
+      "node": "CH2-LY01-012",
+      "text": "原来你就是苟安？",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-012.wav",
+      "oldCorrelation": 0.9758401779117132,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-012-v1.wav",
+      "newVoiceSha256": "318094de42d72803af73e80365e9ae91d52b71a47711d625ae66a1d5fe603f58",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        36.98975,
+        39.223
+      ],
+      "insertAt": 36.98975,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.3061449527740479,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY01-013",
+      "node": "CH2-LY01-013",
+      "text": "你接下来打算降魏？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-013.wav",
+      "oldCorrelation": 0.9749353237016354,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-013-v1.wav",
+      "newVoiceSha256": "ab7e30275e494849835be7ebc3ac86c659ecb3e6afcb04c2133e41317b69bac0",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        39.250750000000004,
+        41.41075
+      ],
+      "insertAt": 39.250750000000004,
+      "voiceSeconds": 1.745,
+      "trimmedLeadingSilence": 0.445,
+      "gain": 1.0106104612350464,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.44000000000000006,
+      "end": 4.525000000000001,
+      "text": "第四次北伐。这回，我成了运粮兵"
+    },
+    {
+      "start": 4.833,
+      "end": 6.353,
+      "text": "现在，到哪一步了？"
+    },
+    {
+      "start": 7.113,
+      "end": 8.753,
+      "text": "这批粮，才送到？"
+    },
+    {
+      "start": 10.693,
+      "end": 14.253,
+      "text": "迟了十日。督粮的苟安，已被丞相杖责八十"
+    },
+    {
+      "start": 15.713,
+      "end": 17.853,
+      "text": "苟安……他在哪儿？"
+    },
+    {
+      "start": 18.773,
+      "end": 19.673,
+      "text": "那边帐里养伤"
+    },
+    {
+      "start": 20.70275,
+      "end": 24.89275,
+      "text": "我记得，苟安是李严的部下。他因运粮受罚"
+    },
+    {
+      "start": 25.06275,
+      "end": 25.81275,
+      "text": "怀恨在心"
+    },
+    {
+      "start": 26.25375,
+      "end": 30.16375,
+      "text": "后来他投了魏，又回来散布丞相篡位的谣言"
+    },
+    {
+      "start": 30.493750000000002,
+      "end": 31.723750000000003,
+      "text": "后主便召回了丞相"
+    },
+    {
+      "start": 32.509750000000004,
+      "end": 36.29975,
+      "text": "得先弄清苟安现在的打算，也许还来得及"
+    },
+    {
+      "start": 37.38975,
+      "end": 38.81975,
+      "text": "原来你就是苟安？"
+    },
+    {
+      "start": 39.250750000000004,
+      "end": 40.99575,
+      "text": "你接下来打算降魏？"
+    },
+    {
+      "start": 41.763,
+      "end": 42.563,
+      "text": "你说什么？"
+    },
+    {
+      "start": 42.94,
+      "end": 44.28,
+      "text": "谁让你来问这个的？"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

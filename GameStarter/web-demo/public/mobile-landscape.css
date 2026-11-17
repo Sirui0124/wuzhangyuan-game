@@ -1,0 +1,69 @@
+/* One shared landscape layout for all chapters. Text keeps the chapter-one
+   sizes; short screens scroll inside each active panel instead of clipping. */
+:root { --game-viewport-height:100dvh;--game-viewport-top:0px;--game-safe-left:max(14px,env(safe-area-inset-left));--game-safe-right:max(14px,env(safe-area-inset-right)); }
+#game-root { position:relative;top:var(--game-viewport-top);height:var(--game-viewport-height); }
+#game-root :is(.game-menu,.game-scene,.thought-screen,.workspace-screen,.chapter-ending,.chapter-map) { height:var(--game-viewport-height); }
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] { grid-template-rows:minmax(0,1fr); }
+:root[data-ui-theme=xuan] #game-root :is(.game-modal-shade,.phone-shade) { top:var(--game-viewport-top);bottom:auto;height:var(--game-viewport-height);box-sizing:border-box; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root :is(.game-hud,.dialogue-hud,.workspace-hud) { top:max(8px,env(safe-area-inset-top));left:var(--game-safe-left);right:var(--game-safe-right);width:auto; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .dialogue-hud { gap:12px;align-items:center; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .dialogue-hud nav { gap:16px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-hud { gap:12px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-hud :is(.game-mark,.dialogue-place) { display:block;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-hud nav { flex:none;gap:12px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-hud nav button { flex:none;white-space:nowrap; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-scene .dialogue-box { left:max(6vw,env(safe-area-inset-left));right:max(6vw,env(safe-area-inset-right));width:auto;bottom:max(30px,env(safe-area-inset-bottom));max-height:calc(var(--game-viewport-height) - 96px);overflow:auto;overscroll-behavior:contain;box-sizing:border-box;padding:12px 18px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .dialogue-reading { max-height:none; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-scene .dialogue-box::before { inset:0; }
+/* The same character details remain available through 人物志 in the header. */
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .character-identity { display:none; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .dialogue-key-hint { bottom:max(5px,env(safe-area-inset-bottom));right:var(--game-safe-right); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace>.workspace-modes { top:48px;left:var(--game-safe-left);right:var(--game-safe-right);width:auto;padding:0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .workspace-layout,
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace .workspace-layout { inset:86px var(--game-safe-right) max(10px,env(safe-area-inset-bottom)) var(--game-safe-left); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout { padding:4px 10px 16px 18px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .expression-workspace .expression-paper { grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px;row-gap:0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .expression-workspace .expression-heading { flex-direction:row;gap:16px;margin-bottom:12px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace :is(.expression-composer,.speech-evidence-items,.polish-actions) { margin-left:0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result { grid-column:2;grid-row:1; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-actions { grid-column:2;grid-row:2;flex-wrap:wrap; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot { grid-column:1/-1;grid-row:3;margin-top:16px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot:empty { margin:0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-paper #player-expression { height:116px;min-height:116px;max-height:116px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .expression-workspace .expression-return { margin-top:10px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root :is(.game-scene,.workspace-screen) .game-hud nav .phone-launcher { position:static;transform:none;display:inline-flex;flex-direction:row;width:auto;min-height:36px;height:auto;padding:3px 10px;border-radius:3px;box-shadow:none; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-hud nav .phone-launcher :is(svg,small) { display:none; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal-shade { padding:10px var(--game-safe-right) max(10px,env(safe-area-inset-bottom)) var(--game-safe-left); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] { height:100%;max-height:100%;min-height:0;grid-template-columns:60px minmax(0,1fr); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::after { left:59px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header { padding:35px 0 14px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-body { min-height:0;max-height:none;margin:44px 18px 16px 16px;padding:0 8px 8px 0;overflow-y:auto;overscroll-behavior:contain; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close { top:8px;right:12px;min-height:36px;height:36px;width:36px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-context { margin-bottom:12px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions { gap:8px 0; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-shade { padding:8px var(--game-safe-right) max(8px,env(safe-area-inset-bottom)) var(--game-safe-left); }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-panel { width:min(720px,100%);height:100%;max-height:100%;border-radius:18px;padding-bottom:4px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-header { padding:3px 15px 5px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-content { padding:6px 18px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-composer { padding:4px 18px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-input { min-height:54px;padding:4px 9px; }
+:root[data-compact-viewport][data-ui-theme=xuan] #game-root .phone-input textarea { min-height:44px;max-height:72px; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .phone-suggestions { display:none; }
+
+/* Above the keyboard, keep the active editor and its action together. Clues
+   and the other editor return as soon as the full viewport is available. */
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .expression-workspace .expression-heading,
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .expression-workspace .expression-inspection-slot { display:none; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .workspace-layout,
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace .workspace-layout { top:48px; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-paper { display:flex;flex-direction:column;gap:0; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .expression-workspace .expression-paper>* { width:100%; }
+:root[data-keyboard-editing][data-editing-field=player-expression][data-ui-theme=xuan] #game-root .expression-workspace :is(.expression-input-block,.polish-actions,.expression-return,.expression-status) { display:none; }
+:root[data-keyboard-editing][data-editing-field=player-expression][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result>header { display:none; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-paper #player-expression { height:80px;min-height:80px;max-height:80px; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-actions { margin-top:4px; }
+:root[data-keyboard-editing][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace :is(.confirm-expression,.polish-button) { min-height:44px; }
+:root[data-keyboard-editing][data-editing-field=expression-focus][data-ui-theme=xuan] #game-root .expression-workspace :is(.expression-result,.expression-actions,.speech-evidence,.speech-items,.expression-input-block>p) { display:none; }
+:root[data-keyboard-editing][data-editing-field=expression-focus][data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-composer { margin-top:0; }

@@ -1,0 +1,110 @@
+{
+  "id": "CH2-V36",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V36-3d25fb9f77-20261025.mp4",
+  "oldSha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+  "oldSubtitles": "/video/subtitles/CH2-V36-3d25fb9f77-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V36-507805c4.mp4",
+  "sha256": "9847ca89d76c620b5afd548b49667895317927319ffd0de735be3a7deec2a08f",
+  "bytes": 17080087,
+  "duration": 37.291666666666664,
+  "containerDuration": 37.291667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 895,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V36",
+    "src": "/video/current/PV27-CH2-V36-507805c4.mp4",
+    "title": "双方补报正式收件与裁处",
+    "subtitles": "/video/subtitles/PV27-CH2-V36-507805c4.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY12B-010",
+      "node": "CH2-LY12B-010",
+      "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-010.wav",
+      "oldCorrelation": 0.9997968606467473,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-010-v1.wav",
+      "newVoiceSha256": "3c709e8d7bf324458c354ef8b7296203d003ffa14bd8d40f05e79fd4422fa850",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.32000000000000006,
+        5.180000000000001
+      ],
+      "insertAt": 0.32000000000000006,
+      "voiceSeconds": 4.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8815770149230957,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.76,
+      "end": 5.03,
+      "text": "请将两人的补充说明、原信和查粮材料一同登记收件"
+    },
+    {
+      "start": 6.03,
+      "end": 10.03,
+      "text": "原信、查粮材料和两人的补充说明都已收齐"
+    },
+    {
+      "start": 10.79,
+      "end": 13.59,
+      "text": "停手和各自的责任，会一并核实"
+    },
+    {
+      "start": 13.59,
+      "end": 18.81,
+      "text": "李严交出此次粮运调度职责，受处分，仍须配合查问"
+    },
+    {
+      "start": 18.81,
+      "end": 24.01,
+      "text": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任"
+    },
+    {
+      "start": 24.01,
+      "end": 25.83,
+      "text": "留下做普通粮兵"
+    },
+    {
+      "start": 26.29,
+      "end": 30.53,
+      "text": "这次处置，已考虑两人停手补救的情节"
+    },
+    {
+      "start": 31.25,
+      "end": 33.37,
+      "text": "该担的责任仍要担"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

@@ -1,0 +1,60 @@
+{
+  "userReview": "待review",
+  "sources": [
+    {
+      "id": "QA-GUARD-LISTEN-R2",
+      "selected": false,
+      "reason": "新增前景背影、字幕和说话口型，整条不采用"
+    },
+    {
+      "id": "QA-GUARD-LISTEN-R3",
+      "selected": true,
+      "ranges": [
+        [
+          0,
+          2.25
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        896,
+        504
+      ],
+      "reason": "只采用核对过的前2.25秒闭口表演，剔除右缘肩影；后续字幕及说话部分弃用"
+    },
+    {
+      "id": "QA-WEI-LISTEN-R2",
+      "selected": true,
+      "ranges": [
+        [
+          0,
+          3.5
+        ]
+      ],
+      "reason": "采用前3.5秒闭口表演，尾部张嘴不采用，接0.625秒闭帘"
+    },
+    {
+      "id": "QA-WEI-EXIT-R2",
+      "selected": true,
+      "ranges": [
+        [
+          0.75,
+          3.75
+        ]
+      ],
+      "reason": "只取沿路离开，后续靠近帐篷全部弃用"
+    },
+    {
+      "id": "QA-HAND-RELAX-R2",
+      "selected": true,
+      "ranges": [
+        [
+          0,
+          4
+        ]
+      ],
+      "reason": "全4秒手指自然放松，单只右手扶稳木矛"
+    }
+  ]
+}

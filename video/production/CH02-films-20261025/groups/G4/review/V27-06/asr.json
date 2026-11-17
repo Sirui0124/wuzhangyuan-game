@@ -1,0 +1,77 @@
+{
+  "id": "V27-06",
+  "expected": "真话送上去，就一定有人肯听？",
+  "postVoiceText": null,
+  "actual": "真话送上去就一定有人肯听",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.13,
+      "end": 6.23,
+      "text": "真话送上去就一定有人肯听",
+      "words": [
+        {
+          "start": 2.13,
+          "end": 2.67,
+          "word": "真",
+          "probability": 0.5207871794700623
+        },
+        {
+          "start": 2.67,
+          "end": 2.93,
+          "word": "话",
+          "probability": 0.7097314596176147
+        },
+        {
+          "start": 2.93,
+          "end": 3.17,
+          "word": "送",
+          "probability": 0.9914830327033997
+        },
+        {
+          "start": 3.17,
+          "end": 3.39,
+          "word": "上",
+          "probability": 0.997042715549469
+        },
+        {
+          "start": 3.39,
+          "end": 3.71,
+          "word": "去",
+          "probability": 0.9988555908203125
+        },
+        {
+          "start": 3.71,
+          "end": 5.03,
+          "word": "就",
+          "probability": 0.8551176190376282
+        },
+        {
+          "start": 5.03,
+          "end": 5.39,
+          "word": "一定",
+          "probability": 0.998786985874176
+        },
+        {
+          "start": 5.39,
+          "end": 5.67,
+          "word": "有人",
+          "probability": 0.996216356754303
+        },
+        {
+          "start": 5.67,
+          "end": 5.97,
+          "word": "肯",
+          "probability": 0.9401776194572449
+        },
+        {
+          "start": 5.97,
+          "end": 6.23,
+          "word": "听",
+          "probability": 0.9857764840126038
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

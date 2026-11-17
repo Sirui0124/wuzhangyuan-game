@@ -1,0 +1,32 @@
+{
+  "group": "G2",
+  "status": "user-review-repair-in-progress",
+  "pictureUsability": {
+    "usable": 1,
+    "usableWithIntegrationCondition": 11,
+    "needsRepair": 0,
+    "pending": 0,
+    "userApproved": false
+  },
+  "logicalClips": 12,
+  "sourceRequests": 35,
+  "sourceNodes": 33,
+  "newPaidRepairJobs": 0,
+  "newTTS": 0,
+  "userApproved": false,
+  "integrity": "review/current-picture-integrity.json",
+  "usability": "review/picture-usability.json",
+  "evidenceLayers": "review/evidence-layer-provenance.json",
+  "updatedUtc": "2026-10-25T06:32:16.078362+00:00",
+  "coordinatorAcceptance": {
+    "status": "accepted-current-production-picture-results",
+    "source": "总控聊天01a16f08-4fed-7eb0-ac75-041e1f010683明确回传：14:31最终核验接受G2十二条当前版本",
+    "logicalClips": 12,
+    "userApproved": false,
+    "audioApproved": false,
+    "gameImported": false
+  },
+  "previousProductionReviewSuperseded": true,
+  "currentPolicyReviewed": 12,
+  "total": 12
+}

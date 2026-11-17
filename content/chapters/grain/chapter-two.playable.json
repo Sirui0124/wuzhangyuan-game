@@ -1,0 +1,527 @@
+{
+  "version": "grain-open1-63ff98b066ea",
+  "start": "CH2-LY01-001",
+  "nodes": [
+    {
+      "id": "CH2-LY01-001",
+      "kind": "video",
+      "speaker": "视频（LI01）",
+      "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。",
+      "next": "CH2-LY01-V02A",
+      "clip": "LI01"
+    },
+    {
+      "id": "CH2-LY01-V02A",
+      "kind": "video",
+      "speaker": "视频（LI02A）",
+      "text": "营外打听苟安。",
+      "clip": "LI02A",
+      "next": "CH2-LY01-002"
+    },
+    {
+      "id": "CH2-LY01-002",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "这次是回到第四次北伐。这一次，我是个运粮兵。",
+      "next": "CH2-LY01-007"
+    },
+    {
+      "id": "CH2-LY01-007",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "我记得，故事里的苟安因为运粮而受罚，苟安是李严的人。",
+      "next": "CH2-LY01-008"
+    },
+    {
+      "id": "CH2-LY01-008",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "因此怀恨在心、投奔魏国，又回来散布丞相篡位的谣言。导致这次后主把丞相召回。",
+      "next": "CH2-LY01-009",
+      "clues": [
+        {
+          "id": "LY-X02",
+          "title": "记忆中的苟安故事",
+          "detail": "我记得，故事里的苟安因为运粮而受罚，苟安是李严的人。\n因此怀恨在心、投奔魏国，又回来散布丞相篡位的谣言。导致这次后主把丞相召回。",
+          "sources": [
+            {
+              "node": "CH2-LY01-007",
+              "speaker": "我（心声）",
+              "text": "我记得，故事里的苟安因为运粮而受罚，苟安是李严的人。"
+            },
+            {
+              "node": "CH2-LY01-008",
+              "speaker": "我（心声）",
+              "text": "因此怀恨在心、投奔魏国，又回来散布丞相篡位的谣言。导致这次后主把丞相召回。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY01-009",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "所以苟安也是个转机。只是不知道这次到哪一步了",
+      "next": "CH2-LY01-011"
+    },
+    {
+      "id": "CH2-LY01-011",
+      "kind": "video",
+      "speaker": "视频（LI02）",
+      "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+      "next": "CH2-LY01-012",
+      "clip": "LI02B",
+      "clues": [
+        {
+          "id": "LY-X01",
+          "title": "苟安眼前的伤",
+          "detail": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+          "sources": [
+            {
+              "node": "CH2-LY01-011",
+              "speaker": "演出",
+              "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY01-012",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "原来你就是苟安？",
+      "next": "CH2-LY01-013",
+      "clues": [
+        {
+          "id": "LY-X03",
+          "title": "崖边救命恩人",
+          "detail": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。\n我掀帘，认出榻上的伤者正是崖边救我的队长。\n原来你就是苟安？",
+          "sources": [
+            {
+              "node": "CH2-LY01-001",
+              "speaker": "演出",
+              "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。"
+            },
+            {
+              "node": "CH2-LY01-011",
+              "speaker": "演出",
+              "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。"
+            },
+            {
+              "node": "CH2-LY01-012",
+              "speaker": "我（心声）",
+              "text": "原来你就是苟安？"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY01-013",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你下一步，是准备降魏了吗？",
+      "next": "CH2-LY01-014"
+    },
+    {
+      "id": "CH2-LY01-014",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "你说什么？",
+      "next": "CH2-LY02-001"
+    },
+    {
+      "id": "CH2-LY02-001",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "谁让你来问这个的？",
+      "next": "CH2-LY02-002"
+    },
+    {
+      "id": "CH2-LY02-002",
+      "kind": "choice",
+      "speaker": "我",
+      "text": "他问你为何这样说。你要怎样说明来意？",
+      "options": [
+        {
+          "id": "CH2-LY02-003",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下离营。",
+          "next": "CH2-LY02-005"
+        },
+        {
+          "id": "CH2-LY02-004",
+          "text": "你救过我，我是来看看你",
+          "next": "CH2-LY02-005"
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY02-005",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+      "next": "CH2-LY02-006",
+      "clues": [
+        {
+          "id": "LY-X04",
+          "title": "苟安的饮酒自述",
+          "detail": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+          "sources": [
+            {
+              "node": "CH2-LY02-005",
+              "speaker": "苟安",
+              "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY02-006",
+      "kind": "line",
+      "speaker": "我",
+      "text": "那咱们确实是误了。",
+      "next": "CH2-LY02-007"
+    },
+    {
+      "id": "CH2-LY02-007",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "所以我也认栽，没有委屈，养养伤就好了。",
+      "next": "CH2-LY02-008"
+    },
+    {
+      "id": "CH2-LY02-008",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "没有要去魏国啊。",
+      "next": "CH2-LY02-009"
+    },
+    {
+      "id": "CH2-LY02-009",
+      "kind": "line",
+      "speaker": "我",
+      "text": "哈...那是我多心了。",
+      "next": "CH2-LY02-009A"
+    },
+    {
+      "id": "CH2-LY02-009A",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "就这么简单吗？和故事不一样啊...",
+      "next": "CH2-LY02-010"
+    },
+    {
+      "id": "CH2-LY02-010",
+      "kind": "line",
+      "speaker": "演出",
+      "text": "此后几夜，我在营外留意粮队的动静。",
+      "next": "CH2-LY02-011"
+    },
+    {
+      "id": "CH2-LY02-011",
+      "kind": "line",
+      "speaker": "演出",
+      "text": "第三夜，一队粮兵在灯下交接文书。",
+      "next": "CH2-LY02-012"
+    },
+    {
+      "id": "CH2-LY02-012",
+      "kind": "line",
+      "speaker": "我",
+      "text": "这份交接记录，可以让我看看吗？",
+      "next": "CH2-LY02-013"
+    },
+    {
+      "id": "CH2-LY02-013",
+      "kind": "line",
+      "speaker": "粮队管事",
+      "text": "嗯，看吧。",
+      "next": "CH2-LY02-014"
+    },
+    {
+      "id": "CH2-LY02-014",
+      "kind": "line",
+      "speaker": "文书·正文",
+      "text": "领粮日期：六月初二 于永安城 督卫苟安",
+      "next": "CH2-LY02-015",
+      "clues": [
+        {
+          "id": "LY-X06",
+          "title": "交接记录：六月初二领到粮",
+          "detail": "领粮日期：六月初二 于永安城 督卫苟安",
+          "sources": [
+            {
+              "node": "CH2-LY02-014",
+              "speaker": "演出",
+              "text": "领粮日期：六月初二 于永安城 督卫苟安"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY02-015",
+      "kind": "line",
+      "speaker": "我（心声）",
+      "text": "六月初二才领到粮。但他说喝酒是在五月！",
+      "next": "CH2-LY02-ACT01"
+    },
+    {
+      "id": "CH2-LY02-ACT01",
+      "kind": "action",
+      "speaker": "行动",
+      "text": "去找苟安",
+      "next": "CH2-LY02-016"
+    },
+    {
+      "id": "CH2-LY02-016",
+      "kind": "line",
+      "speaker": "演出",
+      "text": "我带着获准抄取的记录回到伤帐。",
+      "next": "CH2-LY02-017"
+    },
+    {
+      "id": "CH2-LY02-017",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "你这几夜总在外头走，是来看我，还是怕我跑了？",
+      "next": "CH2-LY02-018"
+    },
+    {
+      "id": "CH2-LY02-018",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你心里肯定是委屈的。我查了记录，你饮酒时，粮还没到呢。",
+      "next": "CH2-LY02-018A"
+    },
+    {
+      "id": "CH2-LY02-018A",
+      "kind": "line",
+      "speaker": "我",
+      "text": "所以你上次在瞒我。你一定不想就这么算了",
+      "next": "CH2-LY02-021"
+    },
+    {
+      "id": "CH2-LY02-021",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "......",
+      "next": "CH2-LY02-022"
+    },
+    {
+      "id": "CH2-LY02-022",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "你说的对，我确实委屈。",
+      "next": "CH2-LY02-023"
+    },
+    {
+      "id": "CH2-LY02-023",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你不是李严的人吗？",
+      "next": "CH2-LY02-024"
+    },
+    {
+      "id": "CH2-LY02-024",
+      "kind": "line",
+      "speaker": "我",
+      "text": "为什么不找他说明白？",
+      "next": "CH2-LY02-025"
+    },
+    {
+      "id": "CH2-LY02-025",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "我是替他办事的下人，他难道还会替我解释？",
+      "next": "CH2-LY02-026"
+    },
+    {
+      "id": "CH2-LY02-026",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+      "next": "CH2-LY02-027"
+    },
+    {
+      "id": "CH2-LY02-027",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "真把话说明白，往后还在谁手底下领粮？",
+      "next": "CH2-LY03-001"
+    },
+    {
+      "id": "CH2-LY03-001",
+      "kind": "line",
+      "speaker": "演出",
+      "text": "苟安取出一封李丰的信，放在榻边。",
+      "next": "CH2-LY03-002"
+    },
+    {
+      "id": "CH2-LY03-002",
+      "kind": "line",
+      "speaker": "李丰·信件",
+      "text": "前议之事，切勿再行。\n若有人问起，莫再牵及家父。",
+      "next": "CH2-LY03-004",
+      "clues": [
+        {
+          "id": "LY-C02",
+          "title": "李丰的第一封家书",
+          "detail": "前议之事，切勿再行。\n若有人问起，莫再牵及家父。",
+          "sources": [
+            {
+              "node": "CH2-LY03-002",
+              "speaker": "李丰·信件",
+              "text": "前议之事，切勿再行。\n若有人问起，莫再牵及家父。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY03-004",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你们先前议的是什么？",
+      "next": "CH2-LY03-005"
+    },
+    {
+      "id": "CH2-LY03-005",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "迟粮的事，究竟要不要往上说。",
+      "next": "CH2-LY03-006"
+    },
+    {
+      "id": "CH2-LY03-006",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "我不想一直背着“饮酒误军”这几个字。",
+      "next": "CH2-LY03-007"
+    },
+    {
+      "id": "CH2-LY03-007",
+      "kind": "line",
+      "speaker": "我",
+      "text": "所以，他不让你再提？",
+      "next": "CH2-LY03-008"
+    },
+    {
+      "id": "CH2-LY03-008",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "信就在你手上。",
+      "next": "CH2-LY03-010"
+    },
+    {
+      "id": "CH2-LY03-010",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "我想把事情揭开，让这回北伐先停下来。",
+      "next": "CH2-LY03-011",
+      "clues": [
+        {
+          "id": "LY-X07",
+          "title": "苟安想让本次北伐停止",
+          "detail": "我想把事情揭开，让这回北伐先停下来。",
+          "sources": [
+            {
+              "node": "CH2-LY03-010",
+              "speaker": "苟安",
+              "text": "我想把事情揭开，让这回北伐先停下来。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY03-011",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你想讨回公道，为什么一定要停北伐？",
+      "next": "CH2-LY03-012"
+    },
+    {
+      "id": "CH2-LY03-012",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "这回把粮送到了，下一回呢？",
+      "next": "CH2-LY03-013"
+    },
+    {
+      "id": "CH2-LY03-013",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "难道换个人挨打，粮就自己长出来了？",
+      "next": "CH2-LY03-014"
+    },
+    {
+      "id": "CH2-LY03-014",
+      "kind": "line",
+      "speaker": "我",
+      "text": "如果还是没人肯查呢？",
+      "next": "CH2-LY03-015"
+    },
+    {
+      "id": "CH2-LY03-015",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "那我就换个肯听的地方。",
+      "next": "CH2-LY03-016"
+    },
+    {
+      "id": "CH2-LY03-016",
+      "kind": "line",
+      "speaker": "我",
+      "text": "你怎么知道，魏国不会也是这样？",
+      "next": "CH2-LY03-017"
+    },
+    {
+      "id": "CH2-LY03-017",
+      "kind": "line",
+      "speaker": "苟安",
+      "text": "我不知道，可你要我留下，总得让我看见一条别的路。",
+      "next": "CH2-LY03-018",
+      "clues": [
+        {
+          "id": "LY-X08",
+          "title": "他提出另找魏国出路",
+          "detail": "那我就换个肯听的地方。\n你怎么知道，魏国不会也是这样？\n我不知道，可你要我留下，总得让我看见一条别的路。",
+          "sources": [
+            {
+              "node": "CH2-LY03-015",
+              "speaker": "苟安",
+              "text": "那我就换个肯听的地方。"
+            },
+            {
+              "node": "CH2-LY03-016",
+              "speaker": "我",
+              "text": "你怎么知道，魏国不会也是这样？"
+            },
+            {
+              "node": "CH2-LY03-017",
+              "speaker": "苟安",
+              "text": "我不知道，可你要我留下，总得让我看见一条别的路。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CH2-LY03-018",
+      "kind": "open",
+      "speaker": "演出",
+      "text": "要请他先留下，你能提出什么可实行的办法？",
+      "next": "CH2-PREFIX-END"
+    },
+    {
+      "id": "CH2-PREFIX-END",
+      "kind": "finish",
+      "speaker": "首次交谈完成",
+      "text": "接下来，还要查清这批粮的来龙去脉。后续调查暂未开放。"
+    }
+  ]
+}

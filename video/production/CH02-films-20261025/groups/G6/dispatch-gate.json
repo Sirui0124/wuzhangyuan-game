@@ -1,0 +1,36 @@
+{
+  "allowedRetries": [
+    "V38-03-R2"
+  ],
+  "allRetriesApproved": true,
+  "reason": "总控要求先验证一条最简正向首帧返修，再扩大同类",
+  "heldRequests": [],
+  "qualityEvidence": "V38-03-R2正面构图稳定，边缘甲衣身体经960x540裁幅去除，保留完整7.29秒，裁后实际播放核验。其余返修逐片继续动态检查，不自动当作通过。",
+  "newPostEnabled": false,
+  "holdReason": "用户2026-10-25通知视频API过期；禁止新增视频POST及自动重投，后续必要重生成改交独立Seedance本地Markdown，单条不超过30秒",
+  "skipRequests": [
+    "V38-01-R2",
+    "V40-02-R2",
+    "V40-05-R2",
+    "V40-03-R2",
+    "V38-02-R2",
+    "V39-01-R2",
+    "V39-02-R2"
+  ],
+  "skipReason": "结局第三人称授权重评，优先复用原画面，乱码镜头以同场无字案头替换，不再为越肩付费重拍",
+  "acknowledgedFailures": [
+    "V41L-02",
+    "V41L-03",
+    "V41L-04"
+  ],
+  "restorationAuthorization": "总控明确succeeded后统一开放，4条末批已用中央promote校验同SHA HTTPS res-1",
+  "completionReason": "全部已授权生成终态，本地修版及6段全轨核验完成；无后续生成必要",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reasonForNoNewGeneration": "本轮仅一处本地连续原素材重剪，两次纸面闪现已同修，无新API/TTS",
+  "historicalHoldReasonBeforeApiExpiry": "总控跨组input_download_failed故障，等待统一媒体托管恢复方案；仅查询既有task_id",
+  "videoApiExpired": true,
+  "automaticResubmissionEnabled": false,
+  "maxFutureVideoRequestSeconds": 30,
+  "futureGenerationDelivery": "independent-local-seedance-markdown-only",
+  "policyUpdatedAt": "2026-10-25T19:12:33.767974+08:00"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "V21-03",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v4\\V21-03-paper-interior-repaired.mp4",
+  "sha256": "e5b2e3e294c63df6a8522e8c36d56c58f74346647903d401774a47b43d0aa449",
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v3\\V21-03-summary-after-handoff.mp4",
+      "sha256": "c4ce168dcd72ddc6755f175b6ed26e0e741b9ebd532fe771233fe0aad170742e",
+      "sourceTime": [
+        0,
+        7.291666666666667
+      ],
+      "playbackRate": 1
+    }
+  ],
+  "overlay": {
+    "start": 2.8,
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\second-letter-summary-fullframe.png",
+    "text": "李丰担忧父亲的安危，劝父亲与苟安停止原先的计划。",
+    "kind": "准确摘要插镜，非假造原信全文"
+  },
+  "reviewState": "pending-final-dynamic-review",
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "audioIssues": [
+    "原片额外声音留统一清理；准确摘要不新增朗读，无新增TTS。"
+  ],
+  "paperInteriorRepair": {
+    "time": [
+      0.5,
+      2.8
+    ],
+    "method": "跟随纸张颜色和区域的局部光学失焦，纸边及手指保持；不修改正文摘要、不伪造信全文",
+    "gaussianSigma": 5,
+    "maxFrameAreaFraction": 0.04105251736111111
+  },
+  "repairReason": "完整接住及松手动作保留，纸面模型乱字不作为可读证据；2.8秒后准确摘要不变。"
+}

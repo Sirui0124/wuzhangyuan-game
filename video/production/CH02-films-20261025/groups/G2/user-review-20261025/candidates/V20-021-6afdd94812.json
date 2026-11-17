@@ -1,0 +1,80 @@
+{
+  "id": "V20-021",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-021-6afdd94812.mp4",
+  "sha256": "e00ac522a103ef83b9c22c91a92b5f9247d800915f55e692ffa987204cc431c7",
+  "videoFrames": 183,
+  "videoSeconds": 7.625,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V20-021",
+    "parts": [
+      {
+        "range": [
+          0,
+          2.6
+        ],
+        "source": "V20-08"
+      },
+      {
+        "range": [
+          5.4,
+          10.1
+        ],
+        "source": "V15-02"
+      },
+      {
+        "range": [
+          0,
+          0.4
+        ],
+        "source": "V18-03"
+      }
+    ],
+    "audio": {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+      "start": 0,
+      "end": 7.5
+    },
+    "sourceNodes": [
+      "CH2-LY06-021"
+    ]
+  },
+  "sourceParts": [
+    {
+      "range": [
+        0,
+        2.6
+      ],
+      "source": "V20-08",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+      "sourceSha256": "dd32106380f49b16d40cd5415de1c9e2b553eb127da9611aa3a3c78d7440169a"
+    },
+    {
+      "range": [
+        5.4,
+        10.1
+      ],
+      "source": "V15-02",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-02-raw.mp4",
+      "sourceSha256": "9bd88c3885737dcb269b7ae02c99361a85063d5371f47d3387998e9b53873f2a"
+    },
+    {
+      "range": [
+        0,
+        0.4
+      ],
+      "source": "V18-03",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-03-raw.mp4",
+      "sourceSha256": "c29fb33875bb74c4852555b2264f657d4b3e0b650d19f60f949b430b3ac43920"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

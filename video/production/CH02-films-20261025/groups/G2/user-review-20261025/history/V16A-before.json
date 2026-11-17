@@ -1,0 +1,117 @@
+{
+  "delivery": {
+    "id": "V16A",
+    "name": "核交接选项",
+    "entry": "UI-N2选A",
+    "next": [
+      "V17"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16A-01"
+    ],
+    "subclips": [
+      "V16A-01"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+    "technical": {
+      "duration": 9.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "decodedVideoFrames": 217,
+      "videoTrackSeconds": 9.041666666666666,
+      "videoEndSeconds": 9.041667,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "0–2.1秒管事闭口听问并低头，之后为此前已取得的D01/D02并列回看。没有NPC代我发言，没有新证据或新增答案；全文不透出原伪字。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "仅在V15取得D01/D02后播放；并列层只回看，不授予新证据、不自动替玩家提交推理。"
+    ]
+  },
+  "usability": {
+    "id": "V16A",
+    "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "0–2.1秒管事闭口听问并低头，之后为此前已取得的D01/D02并列回看。没有NPC代我发言，没有新证据或新增答案；全文不透出原伪字。"
+    ],
+    "issues": [
+      {
+        "type": "fake-evidence-text",
+        "state": "repaired",
+        "repair": "改为此前已得D01/D02不透明回看"
+      }
+    ],
+    "integrationConditions": [
+      "仅在V15取得D01/D02后播放；并列层只回看，不授予新证据、不自动替玩家提交推理。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          9.04
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V16A\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V16A",
+        "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+        "event": "ended",
+        "start": 0,
+        "end": 9.041667,
+        "duration": 9.041667,
+        "time": "2026-10-25T06:20:17.463Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 9.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec"
+    }
+  }
+}

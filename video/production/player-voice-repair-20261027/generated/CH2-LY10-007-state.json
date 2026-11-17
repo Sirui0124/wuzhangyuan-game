@@ -1,0 +1,160 @@
+{
+  "id": "CH2-LY10-007",
+  "node": "CH2-LY10-007",
+  "text": "李严做过什么，苟安做过什么，都得如实交代。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 4.74,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "a0fc0737-2014-4fdc-8810-57bc2fd7ea46",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:19:28.937Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“李严做过什么，苟安做过什么，都得如实交代。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约4.74秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "74808c8a5c2e75598913a968c4432e23d5e5b78a2a496e365043cc2b652bf3ff",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "202610271919292F20E2D12DCF3AE1979E",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-007-v1.wav",
+  "sha256": "54c22c72a69f5037e9de9aad378da7af5053da0b0385fc9ee27cf8f60e0f572a",
+  "duration": 4.8,
+  "originalDuration": 4.8,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4760,
+        "start_time": 360,
+        "text": "李严做过什么，苟安做过什么，都得如实交代。",
+        "words": [
+          {
+            "end_time": 480,
+            "start_time": 360,
+            "text": "李"
+          },
+          {
+            "end_time": 720,
+            "start_time": 600,
+            "text": "严"
+          },
+          {
+            "end_time": 1080,
+            "start_time": 920,
+            "text": "做"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1080,
+            "text": "过"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1240,
+            "text": "什"
+          },
+          {
+            "end_time": 1520,
+            "start_time": 1400,
+            "text": "么"
+          },
+          {
+            "end_time": 1520,
+            "start_time": 1520,
+            "text": "，"
+          },
+          {
+            "end_time": 2200,
+            "start_time": 2080,
+            "text": "苟"
+          },
+          {
+            "end_time": 2640,
+            "start_time": 2360,
+            "text": "安"
+          },
+          {
+            "end_time": 2800,
+            "start_time": 2640,
+            "text": "做"
+          },
+          {
+            "end_time": 2920,
+            "start_time": 2800,
+            "text": "过"
+          },
+          {
+            "end_time": 3040,
+            "start_time": 2920,
+            "text": "什"
+          },
+          {
+            "end_time": 3160,
+            "start_time": 3040,
+            "text": "么"
+          },
+          {
+            "end_time": 3160,
+            "start_time": 3160,
+            "text": "，"
+          },
+          {
+            "end_time": 3840,
+            "start_time": 3640,
+            "text": "都"
+          },
+          {
+            "end_time": 4040,
+            "start_time": 3840,
+            "text": "得"
+          },
+          {
+            "end_time": 4240,
+            "start_time": 4040,
+            "text": "如"
+          },
+          {
+            "end_time": 4400,
+            "start_time": 4320,
+            "text": "实"
+          },
+          {
+            "end_time": 4680,
+            "start_time": 4520,
+            "text": "交"
+          },
+          {
+            "end_time": 4760,
+            "start_time": 4680,
+            "text": "代"
+          },
+          {
+            "end_time": 4760,
+            "start_time": 4760,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "李严做过什么，苟安做过什么，都得如实交代。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:19:51.915Z"
+}

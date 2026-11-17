@@ -1,0 +1,142 @@
+{
+  "id": "CH2-LY12B-010",
+  "expected": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+  "sha256": "3c709e8d7bf324458c354ef8b7296203d003ffa14bd8d40f05e79fd4422fa850",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-010-v1.wav",
+  "recognized": "请将两人的补充说明原信和查量材料一同登记收件",
+  "similarity": 0.9545454545454546,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.42000000000000004,
+      "end": 1.9,
+      "text": "请将两人的补充说明",
+      "noSpeechProbability": 0.36500439047813416,
+      "words": [
+        {
+          "start": 0.42000000000000004,
+          "end": 0.74,
+          "text": "请"
+        },
+        {
+          "start": 0.74,
+          "end": 0.9,
+          "text": "将"
+        },
+        {
+          "start": 0.9,
+          "end": 1.02,
+          "text": "两"
+        },
+        {
+          "start": 1.02,
+          "end": 1.16,
+          "text": "人"
+        },
+        {
+          "start": 1.16,
+          "end": 1.26,
+          "text": "的"
+        },
+        {
+          "start": 1.26,
+          "end": 1.38,
+          "text": "补"
+        },
+        {
+          "start": 1.38,
+          "end": 1.52,
+          "text": "充"
+        },
+        {
+          "start": 1.52,
+          "end": 1.68,
+          "text": "说"
+        },
+        {
+          "start": 1.68,
+          "end": 1.9,
+          "text": "明"
+        }
+      ]
+    },
+    {
+      "start": 1.9,
+      "end": 4.66,
+      "text": "原信和查量材料一同登记收件",
+      "noSpeechProbability": 0.36500439047813416,
+      "words": [
+        {
+          "start": 1.9,
+          "end": 2.3,
+          "text": "原"
+        },
+        {
+          "start": 2.3,
+          "end": 2.52,
+          "text": "信"
+        },
+        {
+          "start": 2.52,
+          "end": 2.96,
+          "text": "和"
+        },
+        {
+          "start": 2.96,
+          "end": 3.12,
+          "text": "查"
+        },
+        {
+          "start": 3.12,
+          "end": 3.24,
+          "text": "量"
+        },
+        {
+          "start": 3.24,
+          "end": 3.42,
+          "text": "材"
+        },
+        {
+          "start": 3.42,
+          "end": 3.66,
+          "text": "料"
+        },
+        {
+          "start": 3.66,
+          "end": 3.96,
+          "text": "一"
+        },
+        {
+          "start": 3.96,
+          "end": 4.12,
+          "text": "同"
+        },
+        {
+          "start": 4.12,
+          "end": 4.26,
+          "text": "登"
+        },
+        {
+          "start": 4.26,
+          "end": 4.4,
+          "text": "记"
+        },
+        {
+          "start": 4.4,
+          "end": 4.54,
+          "text": "收"
+        },
+        {
+          "start": 4.54,
+          "end": 4.66,
+          "text": "件"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

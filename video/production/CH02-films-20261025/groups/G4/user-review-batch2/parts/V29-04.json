@@ -1,0 +1,52 @@
+{
+  "id": "V29-04",
+  "slot": "V29",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V29-04.mp4",
+  "sha256": "6f6226130843033675ab5573c7071e03e01fde8a6ff1d5bd2a9339eb6d684e57",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V29-04.mp4",
+  "oldSha256": "4fe45fc25ced131d398ec7786dfc281fa7058461b77fa89a096c2b143aa099a6",
+  "oldDuration": 10.135,
+  "sourceFrames": [
+    38,
+    243
+  ],
+  "sourceRange": [
+    1.5833333333333333,
+    10.125
+  ],
+  "newDuration": 8.541666666666666,
+  "technical": {
+    "duration": 8.541667,
+    "videoDuration": 8.541666666666666,
+    "frames": 205,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "6f6226130843033675ab5573c7071e03e01fde8a6ff1d5bd2a9339eb6d684e57",
+    "bytes": 4896686
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY10-004",
+      "speaker": "军吏",
+      "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY10-004",
+      "roleControlOnly": "军吏",
+      "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

@@ -1,0 +1,61 @@
+{
+  "source_sha256": "c2e2983df904321d4689ae70073eb9f70d2190387fd4d3ebaf759a5508679c64",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8737
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1708
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0981
+        },
+        {
+          "label": "Snort",
+          "p": 0.0842
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0337
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0274
+        },
+        {
+          "label": "Chink, clink",
+          "p": 0.0162
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.014
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0074
+        },
+        {
+          "label": "White noise",
+          "p": 0.0069
+        },
+        {
+          "label": "Air conditioning",
+          "p": 0.0061
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0053
+        }
+      ],
+      "music": 0.0045
+    }
+  ]
+}

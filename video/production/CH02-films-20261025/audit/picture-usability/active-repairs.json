@@ -1,0 +1,25 @@
+{
+  "updated": "2026-10-25 13:38:02",
+  "remoteTasks": [
+    {
+      "group": "G3",
+      "clip": "V24-03-R3",
+      "taskId": "task_6UehXgD1jTyoXwPFoBYnd8NjQZJWEA23",
+      "duration": 15,
+      "status": "succeeded",
+      "queryOwner": "G3",
+      "maxRepairVersionReached": true,
+      "verification": "local persisted original task record; no extra remote GET; visual review still required"
+    },
+    {
+      "group": "G5",
+      "clip": "V42-R2-clean",
+      "taskId": "task_568T2bKNxHqPhiPxeesGVyxHlc5awTlN",
+      "duration": 15,
+      "status": "succeeded",
+      "queryOwner": "G5",
+      "verification": "local persisted original task record; no extra remote GET; visual review still required"
+    }
+  ],
+  "rules": "这里只记录原组上报，不另GET/POST；单ID至少120秒查询，未知原V32A01永久禁止重POST；无新增TTS。"
+}

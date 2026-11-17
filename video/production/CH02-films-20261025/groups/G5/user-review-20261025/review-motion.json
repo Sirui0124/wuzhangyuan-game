@@ -1,0 +1,74 @@
+{
+  "method": "Current-file 1x muted playback from zero to ended; full-range native-frame-zero 1fps sheets actually inspected; critical source actions separately inspected at4fps. Playback is not continuous frame-by-frame watching or audio listening.",
+  "audioListening": false,
+  "clips": [
+    {
+      "id": "V32A",
+      "sha256": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+      "range": [
+        0,
+        43.71
+      ],
+      "state": "completed",
+      "evidence": "IAB AX: V32A 43.71/43.71 and ended log with the same SHA"
+    },
+    {
+      "id": "V33",
+      "sha256": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+      "range": [
+        0,
+        9.47
+      ],
+      "state": "completed"
+    },
+    {
+      "id": "V34",
+      "sha256": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+      "range": [
+        0,
+        44.01
+      ],
+      "state": "completed"
+    },
+    {
+      "id": "V35",
+      "sha256": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+      "range": [
+        0,
+        16.21
+      ],
+      "state": "completed"
+    },
+    {
+      "id": "V36",
+      "sha256": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        0,
+        54.18
+      ],
+      "state": "completed"
+    },
+    {
+      "id": "V37",
+      "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "range": [
+        0,
+        29.87
+      ],
+      "state": "completed"
+    },
+    {
+      "id": "V42",
+      "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "range": [
+        0,
+        15.1
+      ],
+      "state": "completed"
+    }
+  ],
+  "supersededV32APlayedSHA": "374c92e45458343ec75cdb20154f2847d9addb4b2752bca9888b534157d8b989",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "checkedAt": "2026-10-25T16:46:54.812148+08:00",
+  "userApproved": false
+}

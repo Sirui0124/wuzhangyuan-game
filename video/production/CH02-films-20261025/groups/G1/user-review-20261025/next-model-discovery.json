@@ -1,0 +1,198 @@
+{
+  "endpoint": "https://api.openai-next.com/v1/models",
+  "total": 387,
+  "audioMatches": [
+    {
+      "id": "doubao-seed-2-0-code-preview-260215",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "doubao-seed-2-0-code-preview-260215",
+      "permission": null,
+      "root": "doubao-seed-2-0-code-preview-260215",
+      "parent": null
+    },
+    {
+      "id": "doubao-seed-2-0-lite-260215",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "doubao-seed-2-0-lite-260215",
+      "permission": null,
+      "root": "doubao-seed-2-0-lite-260215",
+      "parent": null
+    },
+    {
+      "id": "doubao-seed-2-0-mini-260215",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "doubao-seed-2-0-mini-260215",
+      "permission": null,
+      "root": "doubao-seed-2-0-mini-260215",
+      "parent": null
+    },
+    {
+      "id": "doubao-seed-2-0-pro-260215",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "doubao-seed-2-0-pro-260215",
+      "permission": null,
+      "root": "doubao-seed-2-0-pro-260215",
+      "parent": null
+    },
+    {
+      "id": "doubao-seedream-5-0-260128",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "doubao",
+      "permission": [
+        {
+          "id": "modelperm-LwHkVFn8AcMItP432fKKDIKJ",
+          "object": "model_permission",
+          "created": 1626777600,
+          "allow_create_engine": true,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "root": "doubao-seedream-5-0-260128",
+      "parent": null
+    },
+    {
+      "id": "doubao-seedream-5-0-pro-260628",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "doubao",
+      "permission": [
+        {
+          "id": "modelperm-LwHkVFn8AcMItP432fKKDIKJ",
+          "object": "model_permission",
+          "created": 1626777600,
+          "allow_create_engine": true,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "root": "doubao-seedream-5-0-pro-260628",
+      "parent": null
+    },
+    {
+      "id": "gpt-4o-audio-preview",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "gpt-4o-audio-preview",
+      "permission": null,
+      "root": "gpt-4o-audio-preview",
+      "parent": null
+    },
+    {
+      "id": "gpt-4o-mini-audio-preview",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "gpt-4o-mini-audio-preview",
+      "permission": null,
+      "root": "gpt-4o-mini-audio-preview",
+      "parent": null
+    },
+    {
+      "id": "qwen3-tts-flash",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "ali",
+      "permission": [
+        {
+          "id": "modelperm-LwHkVFn8AcMItP432fKKDIKJ",
+          "object": "model_permission",
+          "created": 1626777600,
+          "allow_create_engine": true,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "root": "qwen3-tts-flash",
+      "parent": null
+    },
+    {
+      "id": "speech-1.5",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "speech-1.5",
+      "permission": null,
+      "root": "speech-1.5",
+      "parent": null
+    },
+    {
+      "id": "speech-1.6",
+      "object": "model",
+      "created": 1677649963,
+      "owned_by": "speech-1.6",
+      "permission": null,
+      "root": "speech-1.6",
+      "parent": null
+    },
+    {
+      "id": "tts-1",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "advanced custom",
+      "permission": [
+        {
+          "id": "modelperm-LwHkVFn8AcMItP432fKKDIKJ",
+          "object": "model_permission",
+          "created": 1626777600,
+          "allow_create_engine": true,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "root": "tts-1",
+      "parent": null
+    },
+    {
+      "id": "tts-1-hd",
+      "object": "model",
+      "created": 1626777600,
+      "owned_by": "advanced custom",
+      "permission": [
+        {
+          "id": "modelperm-LwHkVFn8AcMItP432fKKDIKJ",
+          "object": "model_permission",
+          "created": 1626777600,
+          "allow_create_engine": true,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "root": "tts-1-hd",
+      "parent": null
+    }
+  ]
+}

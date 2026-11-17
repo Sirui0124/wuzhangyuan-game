@@ -1,0 +1,25 @@
+{
+  "task": {
+    "created_at": 1792867127,
+    "duration": 5,
+    "error": {
+      "code": "input_download_failed",
+      "message": "download media: Get \"https://res.cloudinary.com/cpxdw5vd/image/upload/v1792867118/parallel-world/minimax-reference/4fe819dbda2f0999f2b31722dd3402e786d5e91dcb33380573b1d9bd778b97fb.png\": net/http: TLS handshake timeout"
+    },
+    "id": "task_sBkKltyyunYrKuGJ4tgU73SgvvtzGQ5W",
+    "modality": "video",
+    "model": "MiniMax-H3",
+    "progress": 1,
+    "ratio": "16:9",
+    "resolution": "768P",
+    "status": "failed",
+    "task_type": "generation",
+    "updated_at": 1792867165,
+    "usage": {
+      "input_image_count": 2,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "total_seconds": 0
+    }
+  }
+}

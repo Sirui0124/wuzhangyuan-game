@@ -1,0 +1,24 @@
+/* One navigation size, matching the expanded thought page. */
+:root[data-ui-theme=xuan] #game-root :is(.game-scene,.workspace-screen) .game-hud nav button:not(.phone-launcher),
+:root[data-ui-theme=xuan] #game-root :is(.cinema-menu,.character-floating){font-size:16px;line-height:1.6;min-height:44px}
+:root[data-ui-theme=xuan] #game-root .game-hud nav small{font-size:16px;line-height:1.6}
+#game-root .cinema-menu{position:absolute;right:3vw;top:24px;z-index:12;padding:10px 16px;color:#eee1c6;background:#2b1e17e6;border:1px solid #b0956d80;border-radius:2px;font-family:var(--serif)}
+#game-root:has(.cinema-screen)>.character-floating{right:calc(3vw + 96px);top:24px;padding:10px 16px;background:#2b1e17e6;border-color:#b0956d80}
+#game-root .cinema-menu:hover,#game-root:has(.cinema-screen)>.character-floating:hover{background:#402b20}
+#game-root .cinema-menu:focus-visible,#game-root:has(.cinema-screen)>.character-floating:focus-visible{outline-color:#d0ad7b}
+:root[data-ui-theme=xuan] #game-root .game-modal[data-page=pause]{width:min(540px,100%);height:auto;max-height:calc(100dvh - 60px);padding:30px 44px 40px;--panel-paper:#102329f5}
+:root[data-ui-theme=xuan] #game-root .game-modal[data-page=pause] .folio-header{min-height:62px;margin-bottom:10px}
+.pause-menu-copy{text-align:center;padding:12px 0 22px;color:#aaa98e}
+.pause-seal{display:inline-grid;place-items:center;border:1px solid #a97c5280;width:46px;height:54px;font-family:WuzhangBrush,var(--serif);font-size:26px;color:#c4a178}
+.pause-menu-copy p{font-size:14px;letter-spacing:3px;margin:18px 0 0}
+.pause-actions{display:grid;gap:13px}
+:root[data-ui-theme=xuan] #game-root .pause-actions button{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:58px;padding:14px 22px;border:1px solid #a18b565e;background:#25393166;color:#dfd7bc;font:20px/1.5 var(--serif);letter-spacing:3px;text-align:left}
+:root[data-ui-theme=xuan] #game-root .pause-actions button:first-child{border-color:#b7a16a99;background:#7c744426;color:#f1e1b8}
+:root[data-ui-theme=xuan] #game-root .pause-actions button:hover{background:#7c744440;border-color:#c7b27d}
+.pause-actions span{color:#b8ac86;font-size:18px}
+@media(max-width:600px){
+ :root[data-ui-theme=xuan] #game-root .game-hud nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}
+ :root[data-ui-theme=xuan] #game-root .game-modal[data-page=pause]{padding:24px 25px 30px}
+ #game-root .cinema-menu{top:12px;right:16px}
+ #game-root:has(.cinema-screen)>.character-floating{top:12px;right:112px}
+}

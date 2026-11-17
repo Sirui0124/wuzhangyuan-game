@@ -1,0 +1,84 @@
+{
+  "id": "C1-D03",
+  "expected": "可要是拦住不报，误了军情呢？",
+  "sha256": "0b21424e87bc65a671fa32e0a761fa1da28ec265d06b69e5c1bcbfeb3e749fdd",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D03-v1.wav",
+  "recognized": "可要是蓝主不报 误了军情呢",
+  "similarity": 0.8333333333333334,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.36,
+      "text": "可要是蓝主不报 误了军情呢",
+      "noSpeechProbability": 0.011170035228133202,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.46,
+          "text": "可"
+        },
+        {
+          "start": 0.46,
+          "end": 0.54,
+          "text": "要"
+        },
+        {
+          "start": 0.54,
+          "end": 0.66,
+          "text": "是"
+        },
+        {
+          "start": 0.66,
+          "end": 0.8,
+          "text": "蓝"
+        },
+        {
+          "start": 0.8,
+          "end": 0.92,
+          "text": "主"
+        },
+        {
+          "start": 0.92,
+          "end": 1.04,
+          "text": "不"
+        },
+        {
+          "start": 1.04,
+          "end": 1.24,
+          "text": "报"
+        },
+        {
+          "start": 1.68,
+          "end": 1.78,
+          "text": " 误"
+        },
+        {
+          "start": 1.78,
+          "end": 1.9,
+          "text": "了"
+        },
+        {
+          "start": 1.9,
+          "end": 2.06,
+          "text": "军"
+        },
+        {
+          "start": 2.06,
+          "end": 2.24,
+          "text": "情"
+        },
+        {
+          "start": 2.24,
+          "end": 2.36,
+          "text": "呢"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

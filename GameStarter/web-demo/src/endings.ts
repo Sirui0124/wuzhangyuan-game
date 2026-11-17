@@ -2,9 +2,9 @@ import type { Condition } from '../../../content/schema/narrative';
 import type { RuntimeState } from '../../assets/scripts/narrative/state';
 import { evaluate, emptyContext } from '../../assets/scripts/narrative/conditions';
 
-export type Ending = { id: string; number: string; phase: string; result: string; when?: Condition; title: string; description: string; hint: string; kind: string; note?: string };
+export type Ending = { id: string; number: string; phase: string; result: string; when?: Condition; title: string; description: string; hint: string; kind: string; note?: string; chapter?: string; category?: 'ending' | 'milestone'; emblem?: string };
 export type EndingCatalog = { schemaVersion: 1; chapterId: string; endings: Ending[] };
-export type EndingCollection = { schemaVersion: 1; unlocked: Record<string, { firstUnlockedAt: string; lastLoopId: string; times: number }> };
+export type EndingCollection = { schemaVersion: 1; unlocked: Record<string, { firstUnlockedAt: string; lastLoopId: string; times: number; runs?: string[] }> };
 export const ENDINGS_KEY = 'wuzhang-endings-v1';
 export const freshCollection = (): EndingCollection => ({ schemaVersion: 1, unlocked: {} });
 export function endingFor(catalog: EndingCatalog, state: RuntimeState): Ending | null {
@@ -12,7 +12,7 @@ export function endingFor(catalog: EndingCatalog, state: RuntimeState): Ending |
     if (matches.length > 1) throw new Error('Ambiguous ending definition');
     return matches[0] ?? null;
 }
-export function unlockEnding(collection: EndingCollection, ending: Ending, loopId: string): EndingCollection {
+export function unlockEnding(collection: EndingCollection, ending: Pick<Ending, 'id'>, loopId: string): EndingCollection {
     const old = collection.unlocked[ending.id];
     if (old?.lastLoopId === loopId) return collection;
     return { schemaVersion: 1, unlocked: { ...collection.unlocked, [ending.id]: { firstUnlockedAt: old?.firstUnlockedAt ?? new Date().toISOString(), lastLoopId: loopId, times: (old?.times ?? 0) + 1 } } };

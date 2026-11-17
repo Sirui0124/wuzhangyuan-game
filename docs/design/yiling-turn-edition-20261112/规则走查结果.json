@@ -1,0 +1,1228 @@
+{
+  "status": "passed",
+  "scope": "独立策划规则演算；未测试UI或AI",
+  "cases": [
+    {
+      "name": "均衡分兵",
+      "rounds": 4,
+      "completeRoutes": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "leadersSaved": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "lost": [],
+      "returnedTeams": 5,
+      "trappedTeams": 0,
+      "recordedAttrition": 170,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "fu:gate",
+            "fu:carry",
+            "huang:south",
+            "sha:gate",
+            "sha:search"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 5,
+            "sha": 4
+          },
+          "batches": {
+            "fu": 1,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "fu:gate",
+            "fu:carry",
+            "huang:south",
+            "sha:gate",
+            "sha:search"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "fu:gate",
+            "fu:carry",
+            "huang:south",
+            "sha:gate",
+            "sha:search"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 5,
+            "sha": 4
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 1,
+            "sha": 2
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "fu:gate",
+            "fu:carry",
+            "huang:south",
+            "sha:gate",
+            "sha:search"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "return",
+            "return",
+            "huang:south",
+            "return",
+            "return"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 5,
+            "sha": 4
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "huang:south",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "camp",
+            "camp",
+            "return",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 5,
+            "sha": 4
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "林口牵制配合东路换防",
+      "rounds": 4,
+      "completeRoutes": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "leadersSaved": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "lost": [],
+      "returnedTeams": 5,
+      "trappedTeams": 0,
+      "recordedAttrition": 220,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "fu:gate",
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:feint"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 5,
+            "sha": 4
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "sha",
+          "positions": [
+            "fu:gate",
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:feint"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "fu:gate",
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:feint"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 5,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 1,
+            "huang": 2,
+            "sha": 1
+          },
+          "nextReserve": "sha",
+          "positions": [
+            "fu:gate",
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:feint"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "fu:gate",
+            "return",
+            "return",
+            "sha:gate",
+            "sha:feint"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 5,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "sha",
+          "positions": [
+            "fu:gate",
+            "camp",
+            "camp",
+            "sha:gate",
+            "sha:feint"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "return",
+            "camp",
+            "camp",
+            "return",
+            "return"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 5,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "sha",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "先集中救傅肜再分兵",
+      "rounds": 5,
+      "completeRoutes": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "leadersSaved": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "lost": [],
+      "returnedTeams": 5,
+      "trappedTeams": 0,
+      "recordedAttrition": 300,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "fu:gate",
+            "fu:carry",
+            "fu:carry",
+            "fu:carry",
+            "fu:carry"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 4,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "fu:gate",
+            "fu:carry",
+            "fu:carry",
+            "fu:carry",
+            "fu:carry"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "return",
+            "return",
+            "return",
+            "return",
+            "return"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:search",
+            "sha:gate"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:search",
+            "sha:gate"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:search",
+            "sha:gate"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "sha:gate",
+            "sha:search",
+            "sha:gate"
+          ]
+        },
+        {
+          "turn": 5,
+          "orders": [
+            "return",
+            "return",
+            "return",
+            "return",
+            "return"
+          ],
+          "health": {
+            "fu": 3,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 2,
+            "huang": 2,
+            "sha": 2
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "没有部署",
+      "rounds": 5,
+      "completeRoutes": [],
+      "leadersSaved": [],
+      "lost": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "returnedTeams": 5,
+      "trappedTeams": 0,
+      "recordedAttrition": 0,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 4,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 1
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 1,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 5,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "只搜两沟无人接出口",
+      "rounds": 5,
+      "completeRoutes": [],
+      "leadersSaved": [],
+      "lost": [
+        "fu",
+        "huang",
+        "sha"
+      ],
+      "returnedTeams": 3,
+      "trappedTeams": 2,
+      "recordedAttrition": 100,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 4,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 3,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 1
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "sha:search",
+            "sha:search",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 1,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "trapped",
+            "trapped",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 5,
+          "orders": [
+            "trapped",
+            "trapped",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "trapped",
+            "trapped",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "黄权双岸",
+      "rounds": 8,
+      "completeRoutes": [
+        "huang"
+      ],
+      "leadersSaved": [
+        "huang"
+      ],
+      "lost": [
+        "fu",
+        "sha"
+      ],
+      "returnedTeams": 3,
+      "trappedTeams": 0,
+      "recordedAttrition": 160,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 5,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 1
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 5,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 6,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 7,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 8,
+          "orders": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:north",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "黄权同岸堆兵",
+      "rounds": 8,
+      "completeRoutes": [
+        "huang"
+      ],
+      "leadersSaved": [
+        "huang"
+      ],
+      "lost": [
+        "fu",
+        "sha"
+      ],
+      "returnedTeams": 3,
+      "trappedTeams": 0,
+      "recordedAttrition": 160,
+      "rows": [
+        {
+          "turn": 1,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 2,
+            "huang": 5,
+            "sha": 3
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 0,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 2,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 2
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 1,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 3,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 1
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 4,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 5,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 6,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 7,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        },
+        {
+          "turn": 8,
+          "orders": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "health": {
+            "fu": 0,
+            "huang": 5,
+            "sha": 0
+          },
+          "batches": {
+            "fu": 0,
+            "huang": 2,
+            "sha": 0
+          },
+          "nextReserve": "fu",
+          "positions": [
+            "huang:south",
+            "huang:south",
+            "camp",
+            "camp",
+            "camp"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1T06-06",
+  "src": "/video/current/C1T06-06-QA-20261025.mp4",
+  "title": "交给甲",
+  "rows": [
+    "A-42",
+    "A-43",
+    "A-44",
+    "A-45"
+  ],
+  "subtitles": "/video/subtitles/C1T06-06-QA-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1T06-06-QA-20261025.mp4",
+  "sha256": "78389b26ae5644e125fd9bbd68ff157b7ed03a8299356795f962ac0612875fe7",
+  "duration": 12.928,
+  "cues": [
+    {
+      "start": 0.21,
+      "end": 4.33,
+      "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破"
+    },
+    {
+      "start": 4.75,
+      "end": 6.89,
+      "text": "魏将军让我转呈，请你递进去"
+    },
+    {
+      "start": 7.79,
+      "end": 9.57,
+      "text": "我只能递话，作不得主"
+    },
+    {
+      "start": 10.59,
+      "end": 11.75,
+      "text": "知道了，交给你了"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-A-45",
+      "node": "A-45",
+      "text": "知道了，交给你了。",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A-45.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "872308dd93482153ec170f98f59f51532bee583ba63d8fc598bf72c5e4a0b30d",
+      "duration": 1.9745,
+      "speechRange": [
+        0.4,
+        1.72
+      ],
+      "correlation": 0.9990366421088848,
+      "insertAt": 10.077,
+      "speechStart": 10.477,
+      "speechEnd": 11.797
+    }
+  ],
+  "unmatchedTextCandidates": [
+    {
+      "id": "C1-A42-variant",
+      "score": 0.06379402790505517,
+      "text": "小甲，营前急报：魏兵逼近，来意未明。魏将军让我转呈，请你递进去。"
+    }
+  ],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

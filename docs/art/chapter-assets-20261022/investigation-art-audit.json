@@ -1,0 +1,585 @@
+{
+  "auditAt": "2026-10-22T16:05:19+08:00",
+  "scope": "Read-only technical audit of 11 delivered investigation assets; this JSON is the only output. No image/runtime/source/user-review-state changes.",
+  "historicalHandoff": "INVESTIGATION-HANDOFF.md remains the pre-delivery snapshot and was not edited.",
+  "inputs": [
+    {
+      "path": "docs/art/chapter-assets-20261022/investigation-validation.json",
+      "sha256": "ec3485c3f9ed906b677ccdd124bce65d09756701898cf7e294809db314d959bc"
+    },
+    {
+      "path": "docs/art/chapter-assets-20261022/investigation-generation.json",
+      "sha256": "6ecdd0448b8a7bf5c13ab837ecfd0301b931f20290ad28592edb5b2cedec0929"
+    },
+    {
+      "path": "GameStarter/web-demo/visual-assets.json",
+      "sha256": "4a9baf4f8da0751b9ee7077594dd3bbe62b309b1ea520bc68eaac5e11ecef6a5"
+    }
+  ],
+  "summary": {
+    "expectedCount": 11,
+    "actualPngCount": 11,
+    "sceneCount": 8,
+    "characterCount": 3,
+    "metadataMatches": 11,
+    "generatedOriginalMatches": 11,
+    "referencesRequired": 7,
+    "referencesFound": 7,
+    "duplicateContentGroups": [],
+    "technicalChecksPassed": true,
+    "allRecordedReviewStates": [
+      "待review"
+    ]
+  },
+  "assets": [
+    {
+      "id": "scenes/warehouse-interior-v1",
+      "title": "粮仓核账内景",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/warehouse-interior-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "e66d1268adee366edd81f8dd1d58b39cc08bc5ca4ea5a07381c4759213db3646",
+      "bytes": 2814875,
+      "modifiedAt": "2026-10-22T15:51:17+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/granary-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "a909002d6339a8af4b243627f06f0fc86c1395782bf0c17d8a30fb7e039d26fc"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-b6e99896-a94d-4c87-a7c1-abeb0762b446.png",
+        "exists": true,
+        "sha256": "e66d1268adee366edd81f8dd1d58b39cc08bc5ca4ea5a07381c4759213db3646",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/transport-handoff-v1",
+      "title": "督运交接处",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/transport-handoff-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "991f6c0268667ecd0b48dd713742ac298b4fcba05415f673a7c1265ed5ed0d3d",
+      "bytes": 2936847,
+      "modifiedAt": "2026-10-22T15:51:59+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/granary-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "a909002d6339a8af4b243627f06f0fc86c1395782bf0c17d8a30fb7e039d26fc"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-efd6dd2c-657a-4bc9-af35-7d5b989388b5.png",
+        "exists": true,
+        "sha256": "991f6c0268667ecd0b48dd713742ac298b4fcba05415f673a7c1265ed5ed0d3d",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/frontline-receipt-v1",
+      "title": "前线收粮核验点",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/frontline-receipt-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "dbd2ee2c0e31994f4c041a517a3295ab05d5020ee055c3207296220a40441bc4",
+      "bytes": 2793402,
+      "modifiedAt": "2026-10-22T15:52:29+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/granary-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "a909002d6339a8af4b243627f06f0fc86c1395782bf0c17d8a30fb7e039d26fc"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-cbafc434-266b-4d69-81d1-82c7dce37c40.png",
+        "exists": true,
+        "sha256": "dbd2ee2c0e31994f4c041a517a3295ab05d5020ee055c3207296220a40441bc4",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/farm-courtyard-v1",
+      "title": "村内农户院落",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/farm-courtyard-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "fa034110f629b792ab13a8ff0bbcc87d11db8b06c8a68ec6384360415dcabd62",
+      "bytes": 3005600,
+      "modifiedAt": "2026-10-22T15:52:54+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/village-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "e6d0243f358e3f5cae01773b92a73ca06af2423e920d0acf209b516eeecabc16"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-9b6eca5e-0801-4092-bc22-ea2d25eb428c.png",
+        "exists": true,
+        "sha256": "fa034110f629b792ab13a8ff0bbcc87d11db8b06c8a68ec6384360415dcabd62",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/archive-reading-v1",
+      "title": "书库旧卷阅览处",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/archive-reading-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "d6577d030c87b8a31b376f2d4c34efea43acb71e730aed54fa45102baec7242f",
+      "bytes": 2785922,
+      "modifiedAt": "2026-10-22T15:53:22+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": null,
+        "required": false,
+        "exists": null,
+        "sha256": null
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-92568765-8707-472b-a16b-01278886dcca.png",
+        "exists": true,
+        "sha256": "d6577d030c87b8a31b376f2d4c34efea43acb71e730aed54fa45102baec7242f",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/levy-records-v1",
+      "title": "征收记录核验台",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/levy-records-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "2440e1bffa66886c15322e90a112c061af520942b3f79d543ce189845d44a240",
+      "bytes": 2611084,
+      "modifiedAt": "2026-10-22T15:53:53+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/granary-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "a909002d6339a8af4b243627f06f0fc86c1395782bf0c17d8a30fb7e039d26fc"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-a521a1dd-29a0-40f9-b3dc-31c78a196aed.png",
+        "exists": true,
+        "sha256": "2440e1bffa66886c15322e90a112c061af520942b3f79d543ce189845d44a240",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/village-records-v1",
+      "title": "村中原报告核账台",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/village-records-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "35013586493b1ab277a05c7500b33841a4c65963b3e45e15e20cffb85d47dd42",
+      "bytes": 2895274,
+      "modifiedAt": "2026-10-22T15:54:18+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/village-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "e6d0243f358e3f5cae01773b92a73ca06af2423e920d0acf209b516eeecabc16"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-a3761429-2e0a-4601-aa5c-58426d957a02.png",
+        "exists": true,
+        "sha256": "35013586493b1ab277a05c7500b33841a4c65963b3e45e15e20cffb85d47dd42",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "scenes/team-reconciliation-v1",
+      "title": "本队总对账桌",
+      "path": "source-art/visuals/investigation-expansion-20261022/scenes/team-reconciliation-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "9c797698e7e898d84a296e37d8286def80e240a1ca1ea594a446bee3f11d8555",
+      "bytes": 2621102,
+      "modifiedAt": "2026-10-22T15:54:50+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true
+      },
+      "isCharacter": false,
+      "matchesTransparentIntent": true,
+      "reference": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/source-art/visuals/chapter-expansion-20261022/scenes/granary-day-v1.png",
+        "required": true,
+        "exists": true,
+        "sha256": "a909002d6339a8af4b243627f06f0fc86c1395782bf0c17d8a30fb7e039d26fc"
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-f6b9dfe3-872d-41b5-adfd-70e992b67096.png",
+        "exists": true,
+        "sha256": "9c797698e7e898d84a296e37d8286def80e240a1ca1ea594a446bee3f11d8555",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "characters/local-levy-handler/neutral-v1",
+      "title": "地方经手人",
+      "path": "source-art/visuals/investigation-expansion-20261022/characters/local-levy-handler/neutral-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "aeafa08ccfc8e63166007777f07dfbe9cbb9b9bf3d20518c4a97fb03b56d2485",
+      "bytes": 2400810,
+      "modifiedAt": "2026-10-22T15:55:24+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true,
+        "alphaRange": true,
+        "transparentRatio": true
+      },
+      "isCharacter": true,
+      "matchesTransparentIntent": true,
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "transparentPixels": 795961,
+        "transparentRatio": 0.5060583750406901,
+        "nearOpaqueRatio": 0.48357518513997394,
+        "lowAlpha1To16Ratio": 0.0070031483968098955,
+        "corners": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "edgeMax": {
+          "top": 1,
+          "left": 1,
+          "right": 0,
+          "bottom": 254
+        },
+        "visibleBoundsAbove16": [
+          157,
+          32,
+          929,
+          1536
+        ]
+      },
+      "hasActualTransparency": true,
+      "reference": {
+        "path": null,
+        "required": false,
+        "exists": null,
+        "sha256": null
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-d3e27944-2d26-407c-9768-74ab595ce8ee.png",
+        "exists": true,
+        "sha256": "aeafa08ccfc8e63166007777f07dfbe9cbb9b9bf3d20518c4a97fb03b56d2485",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "characters/transport-handler/neutral-v1",
+      "title": "督运经手人",
+      "path": "source-art/visuals/investigation-expansion-20261022/characters/transport-handler/neutral-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "14496aa588fe217b58bed8d9427e2fca0ade3820932fe32b02ee2b29da9f04dc",
+      "bytes": 2278906,
+      "modifiedAt": "2026-10-22T15:55:52+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true,
+        "alphaRange": true,
+        "transparentRatio": true
+      },
+      "isCharacter": true,
+      "matchesTransparentIntent": true,
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "transparentPixels": 881371,
+        "transparentRatio": 0.5603605906168619,
+        "nearOpaqueRatio": 0.4253044128417969,
+        "lowAlpha1To16Ratio": 0.009293874104817709,
+        "corners": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "edgeMax": {
+          "top": 2,
+          "left": 1,
+          "right": 0,
+          "bottom": 254
+        },
+        "visibleBoundsAbove16": [
+          169,
+          9,
+          839,
+          1536
+        ]
+      },
+      "hasActualTransparency": true,
+      "reference": {
+        "path": null,
+        "required": false,
+        "exists": null,
+        "sha256": null
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-b9601031-8385-45dc-8765-b5abf8d671d6.png",
+        "exists": true,
+        "sha256": "14496aa588fe217b58bed8d9427e2fca0ade3820932fe32b02ee2b29da9f04dc",
+        "matchesDelivered": true
+      }
+    },
+    {
+      "id": "characters/frontline-receiver/neutral-v1",
+      "title": "前线接收人",
+      "path": "source-art/visuals/investigation-expansion-20261022/characters/frontline-receiver/neutral-v1.png",
+      "exists": true,
+      "statusRecorded": "待review",
+      "problems": [],
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "sha256": "69913ab1f08b0851ee158b0e154addd91d35843670c8f6237ae83bb50a4e5b9c",
+      "bytes": 2427974,
+      "modifiedAt": "2026-10-22T15:56:30+08:00",
+      "validationMatches": {
+        "size": true,
+        "mode": true,
+        "sha256": true,
+        "recordedPath": true,
+        "alphaRange": true,
+        "transparentRatio": true
+      },
+      "isCharacter": true,
+      "matchesTransparentIntent": true,
+      "alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "transparentPixels": 814890,
+        "transparentRatio": 0.5180931091308594,
+        "nearOpaqueRatio": 0.4678961435953776,
+        "lowAlpha1To16Ratio": 0.009474436442057291,
+        "corners": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "edgeMax": {
+          "top": 0,
+          "left": 1,
+          "right": 0,
+          "bottom": 254
+        },
+        "visibleBoundsAbove16": [
+          149,
+          16,
+          899,
+          1536
+        ]
+      },
+      "hasActualTransparency": true,
+      "reference": {
+        "path": null,
+        "required": false,
+        "exists": null,
+        "sha256": null
+      },
+      "generatedOriginal": {
+        "path": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a161e1-fded-7e33-bc61-ac508f481e53\\exec-2861d455-c04d-446d-9082-c134b0d485ae.png",
+        "exists": true,
+        "sha256": "69913ab1f08b0851ee158b0e154addd91d35843670c8f6237ae83bb50a4e5b9c",
+        "matchesDelivered": true
+      }
+    }
+  ],
+  "bindingAudit": {
+    "authoritativeSource": "GameStarter/web-demo/visual-assets.json",
+    "version": "wuzhang-art-v3-20261022",
+    "sourceRuntimeChain": [
+      "GameStarter/web-demo/build.mjs:44-58 reads visual-assets.json and copies selected images into media/manifest.json.",
+      "GameStarter/web-demo/src/game.ts:23-24 loads /media/manifest.json and the current chapter-one script/flow."
+    ],
+    "manifestEntriesChecked": 35,
+    "manifestMatches": [],
+    "sourceSearchRoots": [
+      "GameStarter",
+      "content"
+    ],
+    "sourceFilesChecked": 142,
+    "sourceTerms": [
+      "investigation-expansion-20261022",
+      "warehouse-interior-v1",
+      "transport-handoff-v1",
+      "frontline-receipt-v1",
+      "farm-courtyard-v1",
+      "archive-reading-v1",
+      "levy-records-v1",
+      "village-records-v1",
+      "team-reconciliation-v1",
+      "local-levy-handler",
+      "transport-handler",
+      "frontline-receiver"
+    ],
+    "sourceHits": [],
+    "builtManifest": {
+      "path": "GameStarter/web-demo/.build/media/manifest.json",
+      "exists": true,
+      "candidateMatches": [],
+      "version": "wuzhang-art-v3-20261022",
+      "sha256": "960ea57f455a466950f87b6e85bfbfb3b95ff6f7c2c286c8f613132c28556019"
+    },
+    "liveManifest": {
+      "url": "http://127.0.0.1:8812/media/manifest.json",
+      "attempted": true,
+      "available": true,
+      "version": "wuzhang-art-v3-20261022",
+      "sha256": "960ea57f455a466950f87b6e85bfbfb3b95ff6f7c2c286c8f613132c28556019",
+      "candidateTermMatches": [],
+      "counts": {
+        "characters": 13,
+        "scenes": 6,
+        "cinematics": 2,
+        "ui": 14
+      }
+    },
+    "conclusion": "No candidate path, asset-name or content-hash binding found in the audited current source and build."
+  },
+  "issues": [],
+  "limits": [
+    "Technical validity is not visual approval or user approval. All delivered statuses remain 待review.",
+    "Alpha statistics establish genuine transparency but do not prove clean visible edges at final scene scale. Alpha max 254 means about 99.6% opacity, not proof of visible ghosting. Bottom-edge contact can be intentional knee-up crop.",
+    "No new build, gameplay test, compositing/occlusion review, historical costume review, 3D continuity review or video frame comparison was performed.",
+    "Non-null reference file existence and hashes are checked; tool attachment order and generation service internals are not independently verifiable from these records.",
+    "The earlier HANDOFF is a dated pre-delivery observation; this audit records newly delivered files without rewriting history."
+  ]
+}

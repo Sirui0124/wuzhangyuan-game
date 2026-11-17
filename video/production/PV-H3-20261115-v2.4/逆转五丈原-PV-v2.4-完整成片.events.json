@@ -1,0 +1,601 @@
+{
+  "source_sha256": "26da73cbfba44e8012f89a1d62575e01595eb439b27c5f5926a8315e0eb3160d",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8602
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1937
+        },
+        {
+          "label": "Fire",
+          "p": 0.0437
+        },
+        {
+          "label": "Music",
+          "p": 0.0262
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0242
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.024
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0185
+        },
+        {
+          "label": "Crack",
+          "p": 0.018
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0152
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0121
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0096
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0092
+        }
+      ],
+      "music": 0.0262
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.4857
+        },
+        {
+          "label": "Sigh",
+          "p": 0.4405
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.1217
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0149
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0104
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0101
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0101
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0099
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0093
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.0088
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0057
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0048
+        }
+      ],
+      "music": 0.0021
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7687
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0538
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0484
+        },
+        {
+          "label": "Field recording",
+          "p": 0.0425
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.031
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0308
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0303
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0283
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0278
+        },
+        {
+          "label": "Fire",
+          "p": 0.0234
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0222
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0172
+        }
+      ],
+      "music": 0.0106
+    },
+    {
+      "start": 24.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6815
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.1172
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0346
+        },
+        {
+          "label": "Horse",
+          "p": 0.0307
+        },
+        {
+          "label": "Crackle",
+          "p": 0.028
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0195
+        },
+        {
+          "label": "Animal",
+          "p": 0.0165
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.0162
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0156
+        },
+        {
+          "label": "Thump, thud",
+          "p": 0.0136
+        },
+        {
+          "label": "Firecracker",
+          "p": 0.0127
+        },
+        {
+          "label": "Child speech, kid speaking",
+          "p": 0.0098
+        }
+      ],
+      "music": 0.0038
+    },
+    {
+      "start": 32.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.5835
+        },
+        {
+          "label": "Gunshot, gunfire",
+          "p": 0.22
+        },
+        {
+          "label": "Horse",
+          "p": 0.1511
+        },
+        {
+          "label": "Machine gun",
+          "p": 0.1493
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.1429
+        },
+        {
+          "label": "Animal",
+          "p": 0.0883
+        },
+        {
+          "label": "Artillery fire",
+          "p": 0.0478
+        },
+        {
+          "label": "Firecracker",
+          "p": 0.0448
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0419
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0325
+        },
+        {
+          "label": "Fusillade",
+          "p": 0.0189
+        },
+        {
+          "label": "Run",
+          "p": 0.0166
+        }
+      ],
+      "music": 0.0022
+    },
+    {
+      "start": 40.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.1149
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0793
+        },
+        {
+          "label": "Horse",
+          "p": 0.0423
+        },
+        {
+          "label": "Thunk",
+          "p": 0.038
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0291
+        },
+        {
+          "label": "Speech",
+          "p": 0.0274
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0271
+        },
+        {
+          "label": "Noise",
+          "p": 0.0268
+        },
+        {
+          "label": "Boom",
+          "p": 0.0255
+        },
+        {
+          "label": "White noise",
+          "p": 0.025
+        },
+        {
+          "label": "Fire",
+          "p": 0.0229
+        },
+        {
+          "label": "Animal",
+          "p": 0.0228
+        }
+      ],
+      "music": 0.1149
+    },
+    {
+      "start": 48.0,
+      "top": [
+        {
+          "label": "Pink noise",
+          "p": 0.3453
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0414
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0339
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.033
+        },
+        {
+          "label": "White noise",
+          "p": 0.0326
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0311
+        },
+        {
+          "label": "Rain",
+          "p": 0.0258
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0198
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0184
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0166
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0148
+        },
+        {
+          "label": "Snort",
+          "p": 0.0143
+        }
+      ],
+      "music": 0.0072
+    },
+    {
+      "start": 56.0,
+      "top": [
+        {
+          "label": "Pink noise",
+          "p": 0.0569
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0558
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0494
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0236
+        },
+        {
+          "label": "Drip",
+          "p": 0.0215
+        },
+        {
+          "label": "Breaking",
+          "p": 0.02
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0172
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0169
+        },
+        {
+          "label": "Chewing, mastication",
+          "p": 0.0149
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0146
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0142
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0115
+        }
+      ],
+      "music": 0.005
+    },
+    {
+      "start": 64.0,
+      "top": [
+        {
+          "label": "Animal",
+          "p": 0.253
+        },
+        {
+          "label": "Pig",
+          "p": 0.0872
+        },
+        {
+          "label": "Speech",
+          "p": 0.0841
+        },
+        {
+          "label": "Domestic animals, pets",
+          "p": 0.0673
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0615
+        },
+        {
+          "label": "Dog",
+          "p": 0.0464
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0461
+        },
+        {
+          "label": "Oink",
+          "p": 0.0436
+        },
+        {
+          "label": "Canidae, dogs, wolves",
+          "p": 0.0254
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0237
+        },
+        {
+          "label": "Wood",
+          "p": 0.0201
+        },
+        {
+          "label": "Livestock, farm animals, working animals",
+          "p": 0.017
+        }
+      ],
+      "music": 0.0081
+    },
+    {
+      "start": 72.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7914
+        },
+        {
+          "label": "Sigh",
+          "p": 0.2091
+        },
+        {
+          "label": "Fire",
+          "p": 0.177
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0556
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0318
+        },
+        {
+          "label": "Whispering",
+          "p": 0.0151
+        },
+        {
+          "label": "Pant",
+          "p": 0.0123
+        },
+        {
+          "label": "Sizzle",
+          "p": 0.0102
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0085
+        },
+        {
+          "label": "Silence",
+          "p": 0.0081
+        },
+        {
+          "label": "Animal",
+          "p": 0.0073
+        },
+        {
+          "label": "Scissors",
+          "p": 0.007
+        }
+      ],
+      "music": 0.0028
+    },
+    {
+      "start": 80.0,
+      "top": [
+        {
+          "label": "Gasp",
+          "p": 0.1879
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0904
+        },
+        {
+          "label": "Sneeze",
+          "p": 0.0262
+        },
+        {
+          "label": "Snort",
+          "p": 0.0182
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0119
+        },
+        {
+          "label": "Music",
+          "p": 0.009
+        },
+        {
+          "label": "Speech",
+          "p": 0.007
+        },
+        {
+          "label": "Sniff",
+          "p": 0.0064
+        },
+        {
+          "label": "Wheeze",
+          "p": 0.0063
+        },
+        {
+          "label": "Chop",
+          "p": 0.0062
+        },
+        {
+          "label": "Slap, smack",
+          "p": 0.006
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0054
+        }
+      ],
+      "music": 0.009
+    }
+  ]
+}

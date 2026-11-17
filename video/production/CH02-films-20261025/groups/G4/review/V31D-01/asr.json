@@ -1,0 +1,145 @@
+{
+  "id": "V31D-01",
+  "expected": "你肯护我，我记着。可压下这些，就真能把事情停住？",
+  "postVoiceText": null,
+  "actual": "你肯护我 我记着可压下这些就真能把事情停住",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 0.98,
+      "end": 3.58,
+      "text": "你肯护我 我记着",
+      "words": [
+        {
+          "start": 0.98,
+          "end": 1.44,
+          "word": "你",
+          "probability": 0.7515751123428345
+        },
+        {
+          "start": 1.44,
+          "end": 1.62,
+          "word": "肯",
+          "probability": 0.9961670339107513
+        },
+        {
+          "start": 1.62,
+          "end": 1.82,
+          "word": "护",
+          "probability": 0.8748251795768738
+        },
+        {
+          "start": 1.82,
+          "end": 2.44,
+          "word": "我",
+          "probability": 0.9982512593269348
+        },
+        {
+          "start": 2.44,
+          "end": 3.02,
+          "word": " 我",
+          "probability": 0.19886302947998047
+        },
+        {
+          "start": 3.02,
+          "end": 3.24,
+          "word": "记",
+          "probability": 0.9817795157432556
+        },
+        {
+          "start": 3.24,
+          "end": 3.58,
+          "word": "着",
+          "probability": 0.9733055233955383
+        }
+      ]
+    },
+    {
+      "start": 4.42,
+      "end": 5.68,
+      "text": "可压下这些",
+      "words": [
+        {
+          "start": 4.42,
+          "end": 4.86,
+          "word": "可",
+          "probability": 0.973380982875824
+        },
+        {
+          "start": 4.86,
+          "end": 5.06,
+          "word": "压",
+          "probability": 0.8145802617073059
+        },
+        {
+          "start": 5.06,
+          "end": 5.22,
+          "word": "下",
+          "probability": 0.9765695929527283
+        },
+        {
+          "start": 5.22,
+          "end": 5.38,
+          "word": "这",
+          "probability": 0.9989073276519775
+        },
+        {
+          "start": 5.38,
+          "end": 5.68,
+          "word": "些",
+          "probability": 0.9995118379592896
+        }
+      ]
+    },
+    {
+      "start": 6.2,
+      "end": 7.76,
+      "text": "就真能把事情停住",
+      "words": [
+        {
+          "start": 6.2,
+          "end": 6.64,
+          "word": "就",
+          "probability": 0.8566247224807739
+        },
+        {
+          "start": 6.64,
+          "end": 6.8,
+          "word": "真",
+          "probability": 0.9688163995742798
+        },
+        {
+          "start": 6.8,
+          "end": 6.94,
+          "word": "能",
+          "probability": 0.9993917942047119
+        },
+        {
+          "start": 6.94,
+          "end": 7.06,
+          "word": "把",
+          "probability": 0.9993195533752441
+        },
+        {
+          "start": 7.06,
+          "end": 7.28,
+          "word": "事情",
+          "probability": 0.9993036985397339
+        },
+        {
+          "start": 7.28,
+          "end": 7.54,
+          "word": "停",
+          "probability": 0.8932706117630005
+        },
+        {
+          "start": 7.54,
+          "end": 7.76,
+          "word": "住",
+          "probability": 0.9968087077140808
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

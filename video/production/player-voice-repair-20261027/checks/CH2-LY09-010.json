@@ -1,0 +1,92 @@
+{
+  "id": "CH2-LY09-010",
+  "expected": "那我们退了，他们也还会继续准备？",
+  "sha256": "4c7fceae21a80ce9e00a06fffadbe16557fa24a8368a0c367901c50a0795b1fb",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-010-v1.wav",
+  "recognized": "那我们退了他们也还会继续准备",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.92,
+      "text": "那我们退了",
+      "noSpeechProbability": 0.020783958956599236,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.34,
+          "text": "那"
+        },
+        {
+          "start": 0.34,
+          "end": 0.48,
+          "text": "我们"
+        },
+        {
+          "start": 0.48,
+          "end": 0.68,
+          "text": "退"
+        },
+        {
+          "start": 0.68,
+          "end": 0.92,
+          "text": "了"
+        }
+      ]
+    },
+    {
+      "start": 1.8800000000000003,
+      "end": 3.18,
+      "text": "他们也还会继续准备",
+      "noSpeechProbability": 0.020783958956599236,
+      "words": [
+        {
+          "start": 1.8800000000000003,
+          "end": 2.2,
+          "text": "他们"
+        },
+        {
+          "start": 2.2,
+          "end": 2.36,
+          "text": "也"
+        },
+        {
+          "start": 2.36,
+          "end": 2.52,
+          "text": "还"
+        },
+        {
+          "start": 2.52,
+          "end": 2.64,
+          "text": "会"
+        },
+        {
+          "start": 2.64,
+          "end": 2.78,
+          "text": "继"
+        },
+        {
+          "start": 2.78,
+          "end": 2.9,
+          "text": "续"
+        },
+        {
+          "start": 2.9,
+          "end": 3.06,
+          "text": "准"
+        },
+        {
+          "start": 3.06,
+          "end": 3.18,
+          "text": "备"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

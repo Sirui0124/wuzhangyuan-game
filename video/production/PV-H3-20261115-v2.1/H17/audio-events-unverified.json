@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Fire",
+          "p": 0.0794
+        },
+        {
+          "label": "Static",
+          "p": 0.0404
+        },
+        {
+          "label": "Finger snapping",
+          "p": 0.0315
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0266
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0192
+        },
+        {
+          "label": "Buzz",
+          "p": 0.0175
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0147
+        },
+        {
+          "label": "Sizzle",
+          "p": 0.0128
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0111
+        },
+        {
+          "label": "Flap",
+          "p": 0.0107
+        },
+        {
+          "label": "Music",
+          "p": 0.0107
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0099
+        }
+      ],
+      "music": 0.0107
+    }
+  ]
+}

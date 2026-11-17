@@ -1,0 +1,107 @@
+{
+  "id": "CH2-LY02-QB",
+  "role": "player",
+  "text": "八十杖挨下来，伤还撑得住吗？",
+  "seconds": 4,
+  "status": "succeeded",
+  "model": "seed-audio-1.0",
+  "requestId": "7e972226-4f66-4418-bc24-9d8d6599913b",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "reference": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\voice-clone\\20261023\\player-reference.wav",
+    "sha256": "c9ace1c9f2e272025dadd2cbc7ef166d9b52343faa5baf0d1ba55c6f507461aa",
+    "field": "references[0].audio_data"
+  },
+  "text_prompt": "仅采用@音频1中成年男性的音色，自然克制的普通话，语气符合问句。只朗读引号内唯一原句：“八十杖挨下来，伤还撑得住吗？”其余均为控制说明，绝不朗读姓名、角色标签、旁白、画外、编号或导演说明。不复述参考录音，不添加任何词。总长约4秒，开头留0.2秒气口，句末自然落音。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "bodySha256": "cd8d432ae765e0f1d8da3ef5290f0c6da8812a7212b9e83db09ffccd41128d97",
+  "humanListeningReview": false,
+  "noPresetSpeaker": true,
+  "httpStatus": 200,
+  "logId": "20261025195314412BDB79D8A077727C91",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-bedside-choice-20261025\\CH2-LY02-QB.wav",
+  "sha256": "7b831263195cf38b1ad452de24ba27cc724e971a472c9ca33ddfcf0894718f8a",
+  "duration": 4,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 3880,
+        "start_time": 320,
+        "text": "八十杖挨下来，伤还撑得住吗？",
+        "words": [
+          {
+            "end_time": 560,
+            "start_time": 320,
+            "text": "八"
+          },
+          {
+            "end_time": 720,
+            "start_time": 640,
+            "text": "十"
+          },
+          {
+            "end_time": 920,
+            "start_time": 880,
+            "text": "杖"
+          },
+          {
+            "end_time": 1280,
+            "start_time": 1160,
+            "text": "挨"
+          },
+          {
+            "end_time": 1520,
+            "start_time": 1320,
+            "text": "下"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1520,
+            "text": "来"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1720,
+            "text": "，"
+          },
+          {
+            "end_time": 2720,
+            "start_time": 2600,
+            "text": "伤"
+          },
+          {
+            "end_time": 3080,
+            "start_time": 2880,
+            "text": "还"
+          },
+          {
+            "end_time": 3280,
+            "start_time": 3080,
+            "text": "撑"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3280,
+            "text": "得"
+          },
+          {
+            "end_time": 3680,
+            "start_time": 3480,
+            "text": "住"
+          },
+          {
+            "end_time": 3880,
+            "start_time": 3680,
+            "text": "吗"
+          },
+          {
+            "end_time": 3880,
+            "start_time": 3880,
+            "text": "？"
+          }
+        ]
+      }
+    ],
+    "text": "八十杖挨下来，伤还撑得住吗？"
+  },
+  "referenceUploaded": true
+}

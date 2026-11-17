@@ -1,0 +1,60 @@
+{
+  "id": "V29-07",
+  "expected": "",
+  "postVoiceText": "李严做过什么，苟安做过什么，都得如实交代。",
+  "actual": "祝缺钦优姜莲",
+  "similarity": 0,
+  "segments": [
+    {
+      "start": 3.44,
+      "end": 4.58,
+      "text": "祝缺钦",
+      "words": [
+        {
+          "start": 3.44,
+          "end": 4.0,
+          "word": "祝",
+          "probability": 0.8821806907653809
+        },
+        {
+          "start": 4.0,
+          "end": 4.24,
+          "word": "缺",
+          "probability": 0.7714861929416656
+        },
+        {
+          "start": 4.24,
+          "end": 4.58,
+          "word": "钦",
+          "probability": 0.5377864092588425
+        }
+      ]
+    },
+    {
+      "start": 6.26,
+      "end": 7.44,
+      "text": "优姜莲",
+      "words": [
+        {
+          "start": 6.26,
+          "end": 6.92,
+          "word": "优",
+          "probability": 0.6094303801655769
+        },
+        {
+          "start": 6.92,
+          "end": 7.24,
+          "word": "姜",
+          "probability": 0.5609955936670303
+        },
+        {
+          "start": 7.24,
+          "end": 7.44,
+          "word": "莲",
+          "probability": 0.49469610676169395
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

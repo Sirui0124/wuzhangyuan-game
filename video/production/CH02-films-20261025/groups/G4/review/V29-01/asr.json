@@ -1,0 +1,35 @@
+{
+  "id": "V29-01",
+  "expected": "",
+  "postVoiceText": null,
+  "actual": "擦流血",
+  "similarity": 0,
+  "segments": [
+    {
+      "start": 3.02,
+      "end": 3.92,
+      "text": "擦流血",
+      "words": [
+        {
+          "start": 3.02,
+          "end": 3.5,
+          "word": "擦",
+          "probability": 0.5595703944563866
+        },
+        {
+          "start": 3.5,
+          "end": 3.66,
+          "word": "流",
+          "probability": 0.691890299320221
+        },
+        {
+          "start": 3.66,
+          "end": 3.92,
+          "word": "血",
+          "probability": 0.7435501217842102
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

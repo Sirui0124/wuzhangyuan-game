@@ -1,0 +1,99 @@
+{
+  "id": "CH2-LY02-015",
+  "expected": "他说五月喝的酒，六月初二才领到粮。",
+  "sha256": "077f389770d670453988dd2eb56d9e82139a87d2e536461d5646d916d7f4f678",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-015-v1.wav",
+  "recognized": "他说五月喝的酒,六月初二才领倒量。",
+  "similarity": 0.8666666666666667,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.92,
+      "text": "他说五月喝的酒,六月初二才领倒量。",
+      "noSpeechProbability": 0.02924405224621296,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.52,
+          "text": "他"
+        },
+        {
+          "start": 0.52,
+          "end": 0.68,
+          "text": "说"
+        },
+        {
+          "start": 0.68,
+          "end": 0.86,
+          "text": "五"
+        },
+        {
+          "start": 0.86,
+          "end": 1.0,
+          "text": "月"
+        },
+        {
+          "start": 1.0,
+          "end": 1.2,
+          "text": "喝"
+        },
+        {
+          "start": 1.2,
+          "end": 1.32,
+          "text": "的"
+        },
+        {
+          "start": 1.32,
+          "end": 1.5,
+          "text": "酒,"
+        },
+        {
+          "start": 2.16,
+          "end": 2.82,
+          "text": "六"
+        },
+        {
+          "start": 2.82,
+          "end": 3.0,
+          "text": "月"
+        },
+        {
+          "start": 3.0,
+          "end": 3.2,
+          "text": "初"
+        },
+        {
+          "start": 3.2,
+          "end": 3.36,
+          "text": "二"
+        },
+        {
+          "start": 3.36,
+          "end": 3.52,
+          "text": "才"
+        },
+        {
+          "start": 3.52,
+          "end": 3.66,
+          "text": "领"
+        },
+        {
+          "start": 3.66,
+          "end": 3.8,
+          "text": "倒"
+        },
+        {
+          "start": 3.8,
+          "end": 3.92,
+          "text": "量。"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

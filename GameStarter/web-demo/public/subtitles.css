@@ -1,0 +1,12 @@
+/* All chapters (including chapter three) and video review share this file.
+   Chapter one is the baseline: native WebVTT font sizing/family, white text,
+   transparent background. Do not add chapter-specific ::cue rules or a fixed
+   pixel size. The browser scales captions with the displayed video.
+   Contract: docs/art/CHAPTER-TYPOGRAPHY.md; enforced by check:architecture. */
+video::cue {
+  background: transparent;
+  color: #fff;
+}
+video::cue-region {
+  background: transparent;
+}

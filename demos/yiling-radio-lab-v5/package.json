@@ -1,0 +1,10 @@
+{
+  "name": "yiling-radio-lab-v5",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node server.mjs",
+    "test": "node build.mjs && node --test tests/*.test.mjs"
+  }
+}

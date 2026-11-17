@@ -1,0 +1,217 @@
+/* Expression uses the thought canvas's warm night, small clue washes and paired columns. */
+.expression-selection-note { font:16px/1.6 var(--serif);color:var(--mind-muted);margin:6px 0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace {
+  --mind-ink:var(--dialogue-ink,#e8e1d3);--mind-muted:var(--dialogue-muted,#b9b1a3);
+  --serif:KaiTi,'Kaiti SC',STKaiti,'楷体',serif;
+  color:var(--mind-ink);background:#292725 url('/ui/thought-night-air-v1.png') center/cover no-repeat;font:20px/1.65 var(--serif);
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-landscape {
+  display:none;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .paper-atmosphere {
+  opacity:1;background:linear-gradient(180deg,#1717180a,#17171800 75%,#17171815);
+  pointer-events:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.inventory-tab { display:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace>.workspace-modes {
+  position:absolute;inset:82px 5vw auto;z-index:5;display:flex;justify-content:flex-start;
+  box-sizing:border-box;width:90vw;max-width:1040px;padding:0 28px 0 74px;
+  gap:18px;margin:0 auto;color:var(--mind-muted);font:16px/1.5 var(--serif);
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .workspace-modes button {
+  padding:3px 0;min-height:30px;font:18px/1.5 var(--serif);letter-spacing:0;color:var(--mind-muted);background:none;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .workspace-modes button[aria-current] {
+  color:var(--mind-ink);background:none;border-bottom:1px solid #c9947880;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .workspace-layout,
+:root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace .workspace-layout {
+  position:absolute;inset:118px 5vw 40px;z-index:4;box-sizing:border-box;
+  padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;
+  overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;overflow-anchor:none;
+  scrollbar-gutter:stable;scrollbar-width:thin;scrollbar-color:#d0c0a83d transparent;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout {
+  display:block;position:relative;width:100%;max-width:1040px;box-sizing:border-box;margin:0 auto;padding:4px 28px 20px 74px;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout>.reasoning-curves { opacity:1;pointer-events:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-center {
+  position:relative;inset:auto;transform:none;width:100%;padding:0;min-width:0;isolation:isolate;text-align:left;
+  color:var(--mind-ink);background:none;border:0;box-shadow:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-center::before {
+  content:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-center h1 {
+  position:relative;flex:none;margin:0;padding:0;color:var(--mind-ink);font:400 20px/1.5 var(--serif);letter-spacing:0;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-center h1::before {
+  content:'';position:absolute;left:-17px;top:4px;width:4px;height:19px;background:#bd735e;
+  clip-path:polygon(10% 5%,82% 0,100% 12%,84% 37%,98% 72%,71% 100%,4% 93%,20% 55%,0 24%);
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-heading { display:flex;align-items:baseline;gap:24px;min-width:0;margin:0 0 20px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply {
+  display:flex;align-items:baseline;justify-content:flex-end;gap:8px;min-width:0;max-width:72%;margin:0 0 0 auto;padding:0;
+  color:var(--mind-muted);background:none;border:0;box-shadow:none;text-shadow:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply small { flex:none;white-space:nowrap;font:16px/1.65 var(--serif);color:var(--mind-muted); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply p { min-width:0;overflow:visible;text-overflow:clip;white-space:normal;margin:0;font:16px/1.65 var(--serif);color:var(--mind-muted); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-paper {
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:clamp(96px,8vw,128px);row-gap:0;
+  align-items:start;width:100%;padding:0;text-align:left;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-input-block {
+  grid-column:1;grid-row:1;min-width:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;backdrop-filter:none;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-input-block>p { margin:0 0 14px;font:20px/1.65 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence { min-height:0;padding:0;margin:0;border:0;border-radius:0;background:none; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence>header {
+  display:flex;align-items:center;justify-content:flex-start;gap:24px;margin:0 0 7px;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .speech-evidence>header small { font:16px/1.5 var(--serif);letter-spacing:0;color:var(--mind-muted); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace :is(.speech-add,.speech-add-item) { min-height:44px;padding:8px 18px;font:18px/1.5 var(--serif);color:#f5efdf;border:1px solid #eee5cf80;border-radius:3px;background:#f2eadb14;box-shadow:inset 0 1px 0 #ffffff0d;cursor:pointer; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace :is(.speech-add,.speech-add-item):hover,
+:root[data-ui-theme=xuan] #game-root .expression-workspace :is(.speech-add,.speech-add-item)[aria-expanded=true] { background:#f2eadb29;border-color:#eee5cfbb; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace :is(.speech-add,.speech-add-item,.confirm-focus-button):focus-visible { outline:2px solid #eee5cf;outline-offset:3px; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .confirm-focus-button { min-height:40px;padding:6px 24px;font:18px/1.5 var(--serif);color:#f5efdf;border:1px solid #eee5cf80;border-radius:3px;background:#f2eadb14;cursor:pointer; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .confirm-focus-button:hover:not(:disabled) { background:#f2eadb29;border-color:#eee5cfbb; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .confirm-focus-button:disabled { opacity:.4;cursor:default; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence-items { display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-left:54px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence-items .working-clue {
+  position:relative;flex:0 0 auto;width:fit-content;max-width:100%;min-height:30px;
+  display:inline-flex;align-items:center;gap:7px;padding:3px 7px 3px 10px;margin:0;border:0;border-radius:0;background:none;box-shadow:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence-items .working-clue-title {
+  min-width:0;padding:0;font:16px/1.65 var(--serif);color:var(--mind-ink);text-align:left;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence-items .working-clue-remove {
+  position:static;width:22px;height:24px;min-height:24px;margin:0;padding:0;font:18px/1 var(--serif);opacity:.6;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .speech-evidence.is-drag-over { outline:1px solid #c9947870;outline-offset:5px;background:#c9947809;box-shadow:none; }
+
+/* Search and source details share the full-width row below the editors. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot {
+  grid-column:1/-1;grid-row:3;position:relative;display:flex;align-items:flex-start;gap:16px;min-width:0;min-height:max(220px,var(--inspection-height,0px));margin:20px 0 0;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot:empty { min-height:0;margin:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot>.thought-inventory {
+  position:relative;inset:auto;width:min(440px,50%);max-width:50%;min-height:120px;max-height:220px;
+  margin:0;box-sizing:border-box;animation:none;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot>.thought-detail-popover {
+  width:min(360px,calc(50% - 16px));max-width:calc(50% - 16px);max-height:220px;box-sizing:border-box;
+  overflow-y:auto;overscroll-behavior:contain;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-inventory>header { gap:7px;padding:9px 10px 6px; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .inventory-scroll {
+  display:flex;flex-direction:column;gap:0;min-height:0;padding:0 10px 8px;overflow-y:auto;overscroll-behavior:contain;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .inventory-entry { width:100%;box-sizing:border-box; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .inventory-row { font:16px/1.6 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .inventory-place { font:18px/1 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-detail-popover :is(p,blockquote) { font:16px/1.7 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-detail-popover :is(small,.source-boundary,.source-links button) { font:16px/1.65 var(--serif); }
+
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-composer {
+  display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:18px 0 0 54px;padding:0;border:0;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-composer label { display:block;color:var(--mind-ink);font:16px/1.5 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-paper #expression-focus {
+  display:block;width:100%;height:auto;field-sizing:content;min-height:76px;max-height:160px;resize:none;box-sizing:border-box;
+  margin:0;padding:8px 10px;border:0;border-radius:0;
+  background:none;color:var(--mind-ink);caret-color:var(--mind-ink);font:16px/1.8 var(--serif);letter-spacing:0;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout :is(#expression-focus,#player-expression)::placeholder { color:#b9b1a394;font:16px/1.8 var(--serif);opacity:1; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .polish-actions { grid-column:1;grid-row:2;align-self:center;display:flex;flex-direction:row;flex-wrap:wrap;gap:12px;margin:12px 0 0 54px;padding:0;align-items:center;justify-content:flex-end; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .polish-button {
+  min-width:0;min-height:34px;padding:5px 19px;font:18px/1.5 var(--serif);letter-spacing:2px;
+  color:#f4e5cd;border:1px solid #c18d6e55;border-radius:3px 6px 3px 5px;background:linear-gradient(105deg,#995d49,#874938 75%,#9e6049);box-shadow:inset 0 0 0 2px #e8bf8e0d,0 2px 3px #0002;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button.polish-button:hover:not(:disabled) { color:#fff1d7;background:#a66950; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .cancel-polish { padding:2px 0;min-height:26px;font:18px/1.5 var(--serif);color:var(--mind-muted); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result {
+  grid-column:2;grid-row:1;position:relative;min-width:0;margin:0;padding:0;border:0;border-radius:0;background:none;box-shadow:none;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-result::before {
+  content:none;
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-result>header { display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:4px; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result>header label { color:var(--mind-ink);font:20px/1.5 var(--serif);letter-spacing:0; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-writing-wash { display:block;position:relative;isolation:isolate;margin-top:8px; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-writing-wash::before {
+  content:'';position:absolute;inset:0 -4px;z-index:-1;pointer-events:none;
+  background:repeating-linear-gradient(4deg,#c3b39904 0 1px,transparent 1px 4px),linear-gradient(96deg,#c0ac8716,#a3917709);
+  mask-image:linear-gradient(90deg,transparent,#000 5%,#000 94%,transparent);
+  clip-path:polygon(0 4%,8% 0,28% 2%,55% 0,79% 2%,100% 0,99% 96%,77% 100%,50% 98%,22% 100%,0 97%);
+}
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-writing-wash:focus-within::before { background:repeating-linear-gradient(4deg,#c3b39904 0 1px,transparent 1px 4px),linear-gradient(96deg,#c0ac8729,#a3917712); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout .expression-paper #player-expression {
+  display:block;width:100%;height:180px;field-sizing:fixed;min-height:180px;max-height:180px;resize:none;box-sizing:border-box;
+  padding:8px 10px;margin:0;border:0;border-radius:0;background:none;color:var(--mind-ink);caret-color:var(--mind-ink);
+  font:16px/1.8 var(--serif);letter-spacing:0;overflow-y:auto;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-status { margin:7px 10px 4px;color:var(--mind-muted);font:16px/1.65 var(--serif); }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-status:empty { margin:0; }
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-actions {
+  grid-column:2;grid-row:2;align-self:center;display:flex;align-items:center;justify-content:flex-end;flex-wrap:nowrap;gap:12px;margin:12px 0 0;padding:0;border:0;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .confirm-expression {
+  min-height:34px;min-width:124px;margin:0;padding:5px 19px;border:1px solid #c18d6e55;border-radius:3px 6px 3px 5px;white-space:nowrap;
+  color:#f4e5cd;background:linear-gradient(105deg,#995d49,#874938 75%,#9e6049);font:18px/1.5 var(--serif);letter-spacing:1px;
+}
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button.confirm-expression:hover:not(:disabled) { color:#fff1d7;background:#a66950; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .expression-return { margin-top:18px;font:18px/1.5 var(--serif);color:var(--mind-ink); }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .is-revealing .expression-result { animation:expression-ink-arrives 550ms ease both;animation-delay:calc(650ms + var(--reveal-elapsed)); }
+@keyframes expression-ink-arrives { from { opacity:.45; } to { opacity:1; } }
+
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-notice { max-width:80vw;left:5vw;bottom:7px;transform:none;text-align:left;font:16px/1.6 var(--serif); }
+@media (max-height:760px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace>.workspace-modes { top:73px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .workspace-layout,
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace .workspace-layout { top:112px;bottom:28px; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-heading { margin-bottom:21px; }
+}
+@media (max-width:1100px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace>.workspace-modes { padding-left:32px;padding-right:12px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout { padding-left:32px;padding-right:12px; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-paper { column-gap:54px; }
+}
+@media (max-width:700px) {
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace>.workspace-modes,
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace>.workspace-modes { top:94px;left:22px;right:22px;width:auto;padding:0; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .workspace-layout,
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.inventory-open.expression-workspace .workspace-layout { inset:137px 16px 30px 22px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-layout { padding:4px 10px 20px 18px; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-paper { grid-template-columns:minmax(0,1fr);row-gap:24px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .speech-evidence-items { margin-left:24px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-composer { margin-left:24px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .polish-actions { grid-column:1;grid-row:2;margin-left:24px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-result { grid-column:1;grid-row:3; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-actions { grid-column:1;grid-row:4;flex-wrap:wrap; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot { grid-column:1;grid-row:5;margin-top:0; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-heading { gap:16px; }
+  :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-composer { grid-template-columns:minmax(0,1fr) 100px;gap:9px; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-composer label small { display:block;margin:0; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .expression-result>header { flex-wrap:wrap;gap:4px; }
+  :root[data-ui-theme=xuan] #game-root .expression-workspace .thought-notice { left:22px;max-width:calc(100vw - 44px); }
+}
+
+/* Every expression page uses the same in-flow inspection layout. Positioned
+   chapter-one source previews retain their measured anchor placement. */
+:root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .thought-detail-popover:not([data-side]) { position:relative;inset:auto;margin:0; }
+:root[data-ui-theme=xuan] #game-root .expression-workspace .thought-detail-popover h3 { margin:0;font:inherit; }
+@media(max-width:700px) {
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-heading { flex-direction:column;gap:12px; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-current-reply { max-width:100%;margin:0; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot { flex-direction:column; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .expression-inspection-slot>:is(.thought-inventory,.thought-detail-popover) { width:100%;max-width:100%; }
+}
+
+@media(max-width:700px) {
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher { position:static;inset:auto;display:inline-flex;flex-direction:row;gap:4px;width:auto;min-height:30px;padding:2px 6px;border-radius:3px;font-size:16px;box-shadow:none; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher svg { width:14px;height:20px; }
+ :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace .game-hud nav .phone-launcher small { display:none; }
+}

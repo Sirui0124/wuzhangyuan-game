@@ -1,0 +1,75 @@
+{
+  "id": "CH2-V23",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V23-10bf783982-20261025.mp4",
+  "oldSha256": "10bf78398293bd72fcea5933d29b1a18df78d6635120716ef40283a531780979",
+  "oldSubtitles": "/video/subtitles/CH2-V23-10bf783982-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V23-7e906b1d.mp4",
+  "sha256": "1d0c8070646f3fa199a967780c77300290c16d53ea462b46549bd6e49fba1079",
+  "bytes": 13140681,
+  "duration": 17.375,
+  "containerDuration": 17.416016,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 417,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V23",
+    "src": "/video/current/PV27-CH2-V23-7e906b1d.mp4",
+    "title": "获准访村的连续见闻",
+    "subtitles": "/video/subtitles/PV27-CH2-V23-7e906b1d.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY06-012",
+      "node": "CH2-LY06-012",
+      "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY06-012.wav",
+      "oldCorrelation": 0.9996367414604345,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY06-012-v1.wav",
+      "newVoiceSha256": "7d22ceef33aed8c1bd425102f81f6151c2a05efc2ec3a85c1b85d561bab20088",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        6.58,
+        11.899999999999999
+      ],
+      "insertAt": 6.58,
+      "voiceSeconds": 5.18,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1774109601974487,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 7.06,
+      "end": 11.77,
+      "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

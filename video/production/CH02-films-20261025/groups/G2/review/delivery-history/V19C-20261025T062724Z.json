@@ -1,0 +1,108 @@
+{
+  "delivery": {
+    "id": "V19C",
+    "name": "缺额判断C",
+    "entry": "UI-N3选C",
+    "next": [
+      "V20"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V19C-01",
+      "V19C-02"
+    ],
+    "subclips": [
+      "V19C-01",
+      "V19C-02"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19C-缺额判断C-画面候选-3c158200.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "6e4ced05f9e41c367485be4bc6111925aa9f4512658a997cb423a99a41a8f71c",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19C-缺额判断C-R2.mp4",
+    "technical": {
+      "duration": 14.31,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "6e4ced05f9e41c367485be4bc6111925aa9f4512658a997cb423a99a41a8f71c"
+    },
+    "visualReview": [
+      {
+        "id": "V19C-01",
+        "observation": "0–7.29秒已有账册、翻页及收拢，手部接触可用；末1.8秒额外开口，裁至5.25秒仍可承载3.57秒玩家原句与气口",
+        "version": "-R2",
+        "trimStart": 0,
+        "trimEnd": 5.25,
+        "review": "保留闭册与抬眼，裁末额外开口；5.25秒仍覆盖玩家原WAV3.57秒+1秒入声，不删原句",
+        "audioIssue": "原轨待统一处理，现有玩家WAV已保留"
+      },
+      {
+        "id": "V19C-02",
+        "observation": "0–9.4秒旧记录归拢、木封册落案、经手人回应，手纸接触可用；未新增报告或执行回报动作。原生伪字不作新增书证",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V19C-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "龙胆炼弹,射死陶穴,地遭赶家之痛。若地遭纵车打,敬于我赶金。",
+        "expected": ""
+      },
+      {
+        "id": "V19C-01",
+        "type": "原轨待统一处理，现有玩家WAV已保留"
+      },
+      {
+        "id": "V19C-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "国军真诚重绝技。先记下。前面的交付,入仓记录也带上。问人时一块何对。",
+        "expected": "先记下。前面的交付、入仓记录也带上，问人时一块核对。"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "3c15820052f98dec3236621ab52b280900cf53faaa2b09f8660b430f6706980b"
+  },
+  "usability": {
+    "id": "V19C",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19C-缺额判断C-画面候选-3c158200.mp4",
+    "sha256": "6e4ced05f9e41c367485be4bc6111925aa9f4512658a997cb423a99a41a8f71c",
+    "reviewState": "pending",
+    "pictureUsability": null,
+    "issues": [],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V19C-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "龙胆炼弹,射死陶穴,地遭赶家之痛。若地遭纵车打,敬于我赶金。",
+        "expected": ""
+      },
+      {
+        "id": "V19C-01",
+        "type": "原轨待统一处理，现有玩家WAV已保留"
+      },
+      {
+        "id": "V19C-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "国军真诚重绝技。先记下。前面的交付,入仓记录也带上。问人时一块何对。",
+        "expected": "先记下。前面的交付、入仓记录也带上，问人时一块核对。"
+      }
+    ],
+    "userApproved": false
+  }
+}

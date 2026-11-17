@@ -1,0 +1,52 @@
+{
+  "id": "V32R-01",
+  "slot": "V32R",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V32R-01.mp4",
+  "sha256": "002e89f723a66981240e61b21fcf273a50abda02c6d5f66ed711107c6523654b",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V32R-01.mp4",
+  "oldSha256": "9f2c52c621c8428bdc85b74dbfbaa9e03a8218e4e742008a29d8b5593a97e3fe",
+  "oldDuration": 8.0,
+  "sourceFrames": [
+    29,
+    192
+  ],
+  "sourceRange": [
+    1.2083333333333333,
+    8.0
+  ],
+  "newDuration": 6.791666666666667,
+  "technical": {
+    "duration": 6.791667,
+    "videoDuration": 6.791666666666667,
+    "frames": 163,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "002e89f723a66981240e61b21fcf273a50abda02c6d5f66ed711107c6523654b",
+    "bytes": 2020443
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY10-REFUSE",
+      "speaker": "苟安",
+      "text": "你说得容易。我现在不能把命押在这个办法上。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY10-REFUSE",
+      "roleControlOnly": "苟安",
+      "text": "你说得容易。我现在不能把命押在这个办法上。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

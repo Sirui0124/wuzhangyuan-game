@@ -1,12 +1,14 @@
-# 统一叙事运行核心
+# 旧版叙事运行核心（legacy）
 
-本目录实现 `content/schema/narrative.ts` 的唯一契约，没有第二套剧情格式。代码不依赖 Cocos API，Creator 3.8.8 UI 可以调用；当前主场景尚未挂载此核心。
+旧版网页已移除。本目录保留 Cocos 叙事核心、测试及当前结局卡册使用的条件求值和类型。下文为核心接口及历史实现说明。默认游戏使用 `web-demo/src/chapters/chapter-one/` 的独立会话；两者不互相恢复存档。代码不依赖 Cocos API，Creator 3.8.8 UI 可以调用；当前主场景尚未挂载此核心。
 
 ## 文件与调用顺序
 
 - `state.ts`：本轮状态、跨轮记忆、事件记录、同版本存档验证。
 - `conditions.ts`：all / any / not / flag / evidence / intent 的唯一求值器。
-- `engine.ts`：场景与人物选择、话题优先级、逐条确认、选择与行动、承诺预算、固定事件、回溯。
+- `engine.ts`：场景与人物选择、话题优先级、逐条确认、选择、回溯及事务边界。
+- `engine-effects.ts`：事务内的效果、行动、承诺预算和事件结算。
+- `engine-request.ts`：只读地组织本轮判定请求快照。
 - `judge.ts`：现有 GameApi 的适配器、有限返回校验、显式预设备用接口。
 - `weiyan-first.ts`：第一次交涉的完整判断 prompt 与 AI 调用入口。
 - `weiyan-second.ts`：第二次交涉的完整判断 prompt 与 AI 调用入口。

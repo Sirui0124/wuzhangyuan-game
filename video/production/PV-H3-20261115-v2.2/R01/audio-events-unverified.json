@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.711
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.2144
+        },
+        {
+          "label": "Car",
+          "p": 0.101
+        },
+        {
+          "label": "Motorboat, speedboat",
+          "p": 0.0597
+        },
+        {
+          "label": "Motor vehicle (road)",
+          "p": 0.0402
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "p": 0.0364
+        },
+        {
+          "label": "Theme music",
+          "p": 0.0312
+        },
+        {
+          "label": "Car passing by",
+          "p": 0.028
+        },
+        {
+          "label": "Wind",
+          "p": 0.0257
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0251
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0246
+        },
+        {
+          "label": "Speech",
+          "p": 0.0181
+        }
+      ],
+      "music": 0.711
+    }
+  ]
+}

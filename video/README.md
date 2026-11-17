@@ -1,9 +1,7 @@
 # 视频素材
 
-- `current/`：当前构建白名单的四段视频。两段 legacy-fallback 仍有实际引用。
-- `pending/`：14.25 秒开场前半，也是最新 SC01 剪辑的源片，保留。
-- `in-progress/raw/`：现用与在制的新原片。
-- `in-progress/references/`：当前在制视频的人物、场景参考图，不含生图 Prompt。
-- `in-progress/edits/`：最新优选的六段剪辑；`manifest.json` 记录现有相对路径、时间线、哈希及待听审状态。
+2026-11-04 按用户要求清理未采用的视频、旧版与检查截帧。`current` 仅保留游戏发布清单接入的 122 段视频；清理记录位于 `outputs/media-cleanup-20261104`，文件已移入回收站，回收站未清空。
 
-实际播放以 `GameStarter/web-demo/public/cinematics.json` 和 `public/video/media-manifest.json` 为准。在制素材不会自动进入游戏；六段剪辑仍需人工听审与接入验收。历史审片包、旧版序章与被替代的原片已移入本机废纸篓。
+实际播放以 `GameStarter/web-demo/public/cinematics.json` 与 `public/video/media-manifest.json` 为准。审核意见、制作记录和字幕文件保留用于追溯；它们引用的历史媒体可能已回收，不再作为可用素材入口。
+
+[当前视频资产索引](../docs/video/ASSET-INDEX.md) · [图片与视频素材清单](../source-art/asset-library/素材资产清单.html) · [最终人物与场景参考](../source-art/core/README.md)

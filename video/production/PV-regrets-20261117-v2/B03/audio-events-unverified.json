@@ -1,0 +1,61 @@
+{
+  "source_sha256": "ee1162136bf925a21331a666a84ad2fb65e1b67e1bd6694d02baccc32fcdb93c",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Snort",
+          "p": 0.1412
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1146
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0853
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0299
+        },
+        {
+          "label": "Speech",
+          "p": 0.0283
+        },
+        {
+          "label": "Animal",
+          "p": 0.0252
+        },
+        {
+          "label": "Purr",
+          "p": 0.0245
+        },
+        {
+          "label": "Cat",
+          "p": 0.0132
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0105
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0081
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0081
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0076
+        }
+      ],
+      "music": 0.0068
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "completedAt": "2026-10-25T18:10:07.3279522+08:00",
+  "deletedCount": 706,
+  "deletedLogicalBytes": 4665207427,
+  "roots": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two"
+  ],
+  "plan": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\current-library-cleanup\\deletion-plan.json",
+  "journal": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\current-library-cleanup\\deleted-video-files.jsonl",
+  "method": "Native PowerShell Remove-Item -LiteralPath, ordinary files only; exact root, dependency, SHA256, size and timestamp preflight",
+  "physicalDiskFreeSpaceClaimed": false,
+  "deletedLogicalGiB": 4.345,
+  "postCleanupCurrent70ShaUnchanged": true,
+  "protectedFilesExist": 791,
+  "reviewStateAndHistoryUnchanged": true
+}

@@ -25,6 +25,19 @@ test('统一代理按 Chat Completions 协议关闭思考，拒绝未完成输�
     const send=(text,extra={})=>fetch(`http://127.0.0.1:${port}/api/game/respond`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text,...extra})});
     const r=await send('hello');assert.equal(r.status,200);assert.deepEqual(await r.json(),{text:'测试回应',responseId:'fixture',usage:{total_tokens:8}});
     assert.equal(requests[0].path,'/chat/completions');assert.deepEqual(requests[0].payload.thinking,{type:'disabled'});assert.equal(requests[0].payload.model,'deepseek-flash');assert.deepEqual(requests[0].payload.messages,[{role:'user',content:'hello'}]);
+    assert.equal(Object.hasOwn(requests[0].payload,'temperature'),false);
+    // Classification and reply calls choose their temperature, but cannot enable reasoning.
+    for(const temperature of [0,0.2,2]) {
+      assert.equal((await send('temperature',{temperature,thinking:{type:'enabled'},stream:true})).status,200);
+      assert.equal(requests.at(-1).payload.temperature,temperature);
+      assert.deepEqual(requests.at(-1).payload.thinking,{type:'disabled'});
+      assert.equal(requests.at(-1).payload.stream,false);
+    }
+    const beforeInvalid=requests.length;
+    for(const temperature of [-0.01,2.01,'0',null,true,{},[]]) assert.equal((await send('invalid',{temperature})).status,400);
+    // JSON can contain an overflowing numeric literal; JSON.stringify(Infinity) would hide it as null.
+    const overflow=await fetch(`http://127.0.0.1:${port}/api/game/respond`,{method:'POST',headers:{'Content-Type':'application/json'},body:'{"text":"invalid","temperature":1e309}'});
+    assert.equal(overflow.status,400);assert.equal(requests.length,beforeInvalid);
     assert.equal((await send('partial')).status,502);assert.equal((await send('denied')).status,429);assert.equal((await send('history',{previousResponseId:'unknown'})).status,400);
     await send('image',{images:['https://example.com/test.png']});assert.deepEqual(requests.at(-1).payload.messages[0].content[0],{type:'image_url',image_url:{url:'https://example.com/test.png'}});
   } finally {child.kill('SIGTERM');await new Promise(r=>provider.close(r));await rm(temporary,{recursive:true,force:true});}
@@ -60,7 +73,9 @@ test('本机设置可无密钥启动，原子保存后立即生效，重启保�
     assert.equal((await post(supplied,{'Content-Type':'text/plain'})).status,415);
     for(const change of [{baseUrl:'file:///tmp/test'},{baseUrl:'invalid'},{model:' '},{apiKey:''},{apiKey:'line\nextra'}])assert.equal((await post({...supplied,...change})).status,400);
     assert.equal((await post(supplied)).status,200);
-    const stored=parseEnv(await readFile(file,'utf8'));assert.equal(stored.DEEPSEEK_API_KEY,supplied.apiKey);assert.equal((await stat(file)).mode&0o777,0o600);
+    const stored=parseEnv(await readFile(file,'utf8'));assert.equal(stored.DEEPSEEK_API_KEY,supplied.apiKey);
+    // Windows uses ACLs; Node's stat mode does not expose POSIX owner/group permissions.
+    if(process.platform!=='win32')assert.equal((await stat(file)).mode&0o777,0o600);
     await respond();assert.equal(requests.at(-1).path,'/v1/chat/completions');assert.equal(requests.at(-1).authorization,'Bearer fixture-key');assert.equal(requests.at(-1).payload.model,'fixture-model');assert.deepEqual(requests.at(-1).payload.thinking,{type:'disabled'});
     // Retain unrelated local options when updating API settings.
     await writeFile(file,(await readFile(file,'utf8'))+'EXTRA_OPTION=preserved\n');

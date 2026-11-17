@@ -1,0 +1,462 @@
+{
+  "errors": [],
+  "api": [
+    {
+      "text": "甲队接应傅肜，乙队走南侧路接冯习张南，丙队搜东沟，丁队留营待命。",
+      "status": 200,
+      "response": {
+        "kind": "order",
+        "reply": "请核对后传令。",
+        "commands": [
+          {
+            "units": [
+              "a"
+            ],
+            "action": "rescue",
+            "target": "rear",
+            "via": "normal",
+            "seconds": 0,
+            "quote": "甲队接应傅肜"
+          },
+          {
+            "units": [
+              "b"
+            ],
+            "action": "rescue",
+            "target": "campfire",
+            "via": "side",
+            "seconds": 0,
+            "quote": "乙队走南侧路接冯习张南"
+          },
+          {
+            "units": [
+              "c"
+            ],
+            "action": "rescue",
+            "target": "east",
+            "via": "normal",
+            "seconds": 0,
+            "quote": "丙队搜东沟"
+          },
+          {
+            "units": [
+              "d"
+            ],
+            "action": "hold",
+            "target": "camp",
+            "via": "normal",
+            "seconds": 0,
+            "quote": "丁队留营待命"
+          }
+        ],
+        "promptVersion": "yiling-radio-command-v4-20261116"
+      }
+    },
+    {
+      "text": "甲队突击后阵敌军，击退后继续接应傅肜。",
+      "status": 200,
+      "response": {
+        "kind": "order",
+        "reply": "请核对后传令。",
+        "commands": [
+          {
+            "units": [
+              "a"
+            ],
+            "action": "attack",
+            "target": "rear",
+            "via": "normal",
+            "seconds": 0,
+            "quote": "甲队突击后阵敌军，击退后继续接应傅肜。"
+          }
+        ],
+        "promptVersion": "yiling-radio-command-v4-20261116"
+      }
+    }
+  ],
+  "final": {
+    "version": 1,
+    "time": 321,
+    "revision": 23,
+    "started": true,
+    "ended": true,
+    "units": {
+      "a": {
+        "id": "a",
+        "men": 686,
+        "stamina": 84.98500000000053,
+        "at": "rear",
+        "pos": [
+          17.41460234925167,
+          82.73172789166068
+        ],
+        "status": "home",
+        "task": null,
+        "resume": null,
+        "path": [],
+        "pending": null,
+        "cargo": [],
+        "restTo": 0,
+        "reported": {
+          "at": "rear",
+          "time": 146,
+          "men": 686,
+          "stamina": 92.46000000000026,
+          "status": "正在接应",
+          "location": "后阵",
+          "pos": [
+            85,
+            39
+          ]
+        },
+        "damage": 0.6782170881279548,
+        "approach": "normal"
+      },
+      "b": {
+        "id": "b",
+        "men": 800,
+        "stamina": 100,
+        "at": "campfire",
+        "pos": [
+          17.734924341226712,
+          82.51005043918218
+        ],
+        "status": "home",
+        "task": null,
+        "resume": null,
+        "path": [],
+        "pending": null,
+        "cargo": [],
+        "restTo": 0,
+        "reported": {
+          "at": "campfire",
+          "time": 153,
+          "men": 800,
+          "stamina": 93.43500000000023,
+          "status": "正在接应",
+          "location": "旧营",
+          "pos": [
+            62,
+            53
+          ]
+        },
+        "damage": 0,
+        "approach": "normal"
+      },
+      "c": {
+        "id": "c",
+        "men": 600,
+        "stamina": 100,
+        "at": "west",
+        "pos": [
+          17.343826024266022,
+          82.22639144540148
+        ],
+        "status": "home",
+        "task": null,
+        "resume": null,
+        "path": [],
+        "pending": null,
+        "cargo": [],
+        "restTo": 0,
+        "reported": {
+          "at": "west",
+          "time": 105,
+          "men": 600,
+          "stamina": 95.84000000000015,
+          "status": "正在接应",
+          "location": "西沟",
+          "pos": [
+            29,
+            56
+          ]
+        },
+        "damage": 0,
+        "approach": "normal"
+      },
+      "d": {
+        "id": "d",
+        "men": 400,
+        "stamina": 100,
+        "at": "camp",
+        "pos": [
+          17,
+          83
+        ],
+        "status": "idle",
+        "task": null,
+        "resume": null,
+        "path": [],
+        "pending": null,
+        "cargo": [],
+        "restTo": 0,
+        "reported": {
+          "at": "camp",
+          "time": 0,
+          "men": 400,
+          "stamina": 100,
+          "status": "待命",
+          "location": "接应营",
+          "pos": [
+            17,
+            83
+          ]
+        },
+        "damage": 0,
+        "approach": "normal"
+      }
+    },
+    "goals": {
+      "fu": {
+        "node": "rear",
+        "need": 55,
+        "deadline": 265,
+        "name": "傅肜及断后部众",
+        "work": 55.27258800000019,
+        "carrier": "a",
+        "safe": true,
+        "lost": false
+      },
+      "zhang": {
+        "node": "campfire",
+        "need": 45,
+        "deadline": 355,
+        "name": "张南与前队",
+        "work": 45.27593142857152,
+        "carrier": "b",
+        "safe": true,
+        "lost": false
+      },
+      "feng": {
+        "node": "campfire",
+        "need": 50,
+        "deadline": 355,
+        "name": "冯习及后队",
+        "work": 50.40150857142866,
+        "carrier": "b",
+        "safe": true,
+        "lost": false
+      },
+      "east": {
+        "node": "east",
+        "need": 35,
+        "deadline": 440,
+        "name": "沙摩柯与东沟部众",
+        "work": 35.087400000000024,
+        "carrier": "c",
+        "safe": true,
+        "lost": false
+      },
+      "west": {
+        "node": "west",
+        "need": 55,
+        "deadline": 440,
+        "name": "西沟伤兵",
+        "work": 55.039542857142884,
+        "carrier": "c",
+        "safe": true,
+        "lost": false
+      }
+    },
+    "enemy": {
+      "rear": {
+        "hp": 0,
+        "known": true
+      },
+      "campfire": {
+        "hp": 280,
+        "known": false
+      }
+    },
+    "logs": [
+      {
+        "time": 0,
+        "speaker": "军侯",
+        "text": "御驾已脱险。四支接应队听你调遣，先接上各路将士，再一同回营。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "断后军士",
+        "text": "傅将军还在后阵。回去换下他的人，还得有人替我们守退路。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "旧营军士",
+        "text": "张将军带前队，冯将军收后队，伤兵还在木栅后面。先把路接通，再分批带走。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "五溪向导",
+        "text": "沙将军在东沟认人。西沟的担架得走两个人抬，我带你们去找。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "甲队",
+        "text": "收到军令，开始执行。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "乙队",
+        "text": "收到军令，开始执行。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "丙队",
+        "text": "收到军令，开始执行。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "丁队",
+        "text": "收到军令，开始执行。",
+        "important": false
+      },
+      {
+        "time": 0,
+        "speaker": "我",
+        "text": "甲队接应傅肜，乙队走南侧路接冯习张南，丙队搜东沟，丁队留营待命。",
+        "important": false
+      },
+      {
+        "time": 39,
+        "speaker": "丙队",
+        "text": "已到东沟，开始接应。",
+        "important": false,
+        "node": "east"
+      },
+      {
+        "time": 80,
+        "speaker": "前线",
+        "text": "沙摩柯：东沟的人找到了，西沟还有伤兵。先去找他们。",
+        "important": false,
+        "node": "east"
+      },
+      {
+        "time": 101,
+        "speaker": "乙队",
+        "text": "已到旧营，开始接应。",
+        "important": false,
+        "node": "campfire"
+      },
+      {
+        "time": 101,
+        "speaker": "甲队",
+        "text": "收到军令，开始执行。",
+        "important": false
+      },
+      {
+        "time": 101,
+        "speaker": "我",
+        "text": "甲队突击后阵敌军，击退后继续接应傅肜。",
+        "important": false
+      },
+      {
+        "time": 105,
+        "speaker": "丙队",
+        "text": "已到西沟，开始接应。",
+        "important": false,
+        "node": "west"
+      },
+      {
+        "time": 116,
+        "speaker": "甲队",
+        "text": "傅肜：后阵正在接敌。接替的人守住阵脚，等后队过隘口再撤。",
+        "important": true,
+        "node": "rear"
+      },
+      {
+        "time": 146,
+        "speaker": "军侯",
+        "text": "后阵的敌军已退开，继续接应。",
+        "important": false,
+        "node": "rear"
+      },
+      {
+        "time": 146,
+        "speaker": "甲队",
+        "text": "敌军已退开，本队现有686人。",
+        "important": false,
+        "node": "rear"
+      },
+      {
+        "time": 153,
+        "speaker": "前线",
+        "text": "张南：前队已经接上，冯将军还在后面收最后的伤兵。接应队先别撤。",
+        "important": false,
+        "node": "campfire"
+      },
+      {
+        "time": 153,
+        "speaker": "乙队",
+        "text": "已到旧营，开始接应。",
+        "important": false,
+        "node": "campfire"
+      },
+      {
+        "time": 171,
+        "speaker": "前线",
+        "text": "军士：西沟的担架接出来了，正在往林口走。",
+        "important": false,
+        "node": "west"
+      },
+      {
+        "time": 206,
+        "speaker": "前线",
+        "text": "傅肜：后面还有换防的弟兄。让他们跟上，我最后走。",
+        "important": false,
+        "node": "rear"
+      },
+      {
+        "time": 212,
+        "speaker": "前线",
+        "text": "冯习：最后一副担架也过来了。让前队跟紧，别走散。",
+        "important": false,
+        "node": "campfire"
+      },
+      {
+        "time": 212,
+        "speaker": "军侯",
+        "text": "沙摩柯与东沟部众已归营。",
+        "important": false
+      },
+      {
+        "time": 212,
+        "speaker": "军侯",
+        "text": "西沟伤兵已归营。",
+        "important": false
+      },
+      {
+        "time": 288,
+        "speaker": "军侯",
+        "text": "张南与前队已归营。",
+        "important": false
+      },
+      {
+        "time": 288,
+        "speaker": "军侯",
+        "text": "冯习及后队已归营。",
+        "important": false
+      },
+      {
+        "time": 321,
+        "speaker": "军侯",
+        "text": "傅肜及断后部众已归营。",
+        "important": false
+      },
+      {
+        "time": 321,
+        "speaker": "军侯",
+        "text": "接应结束。将领4/4，部众3/3，接应兵减员14人。",
+        "important": true
+      }
+    ],
+    "radio": [],
+    "losses": 14
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "reviewDirectory": "video/review-ready",
+  "status": "unique-selected-clips-with-separate-chapter-two-repair-review",
+  "count": 8,
+  "entries": [
+    {
+      "id": "SC01",
+      "source": "video/review/20261018_v03/SC01-entry-sync-compatible-v03.mp4",
+      "filename": "01_SC01_借寿与魏延闯帐_v03.mp4",
+      "use": "古代序章：借寿、军情、魏延闯帐灭灯。",
+      "bytes": 13945700,
+      "sha256": "dfd35c2d9aa5cf943d73a35d8235c4982a645ba74a4d2b9ac16fe425e66f9753",
+      "containerDurationSeconds": 34.709,
+      "decodedFrames": 833,
+      "fullAVDecode": true,
+      "streamInfo": [
+        "Stream #0:0[0x1](und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 3048 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 161 kb/s (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)",
+        "Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)"
+      ],
+      "reviewPath": "video/review-ready/01_SC01_借寿与魏延闯帐_v03.mp4",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review",
+      "status": "已完成v03入门即灭灯"
+    },
+    {
+      "id": "PR01",
+      "source": "video/in-progress/edits/PR01-prologue-27s-clean-v02.mp4",
+      "filename": "02_PR01_现代序章片段_无字幕_v02.mp4",
+      "use": "现代序章原有片段；不是完整新序章，最终剪辑只按制作索引复用指定段。",
+      "bytes": 6083158,
+      "sha256": "2288206920cf45a5ada48b30d0eed8de0d100e05a4f443f1a55a701430420668",
+      "containerDurationSeconds": 27.0,
+      "decodedFrames": 648,
+      "fullAVDecode": true,
+      "streamInfo": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1599 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 196 kb/s (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)",
+        "Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)"
+      ],
+      "reviewPath": "video/review-ready/02_PR01_现代序章片段_无字幕_v02.mp4",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review",
+      "status": "现有素材保留；仅补A/B后整合"
+    },
+    {
+      "id": "SC03",
+      "source": "video/current/SC03-awaken-guard-20261016.mp4",
+      "filename": "03_SC03_醒来守营_20261016版.mp4",
+      "use": "穿越醒来，大帐外守营。",
+      "bytes": 4616993,
+      "sha256": "2da88c7ae0a09151e97d6b364fa25a769231ee2afd10349122c5953e98301178",
+      "containerDurationSeconds": 28.063990929705216,
+      "decodedFrames": 673,
+      "fullAVDecode": true,
+      "streamInfo": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1182 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)",
+        "Stream #0:1(und): Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s (default)"
+      ],
+      "reviewPath": "video/review-ready/03_SC03_醒来守营_20261016版.mp4",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review",
+      "status": "已可用成稿（待用户内容确认；不代表已接入）"
+    },
+    {
+      "id": "EN01",
+      "source": "video/current/EN01-seven-days-20261016.mp4",
+      "filename": "04_EN01_七日灯未灭_20261016版.mp4",
+      "use": "第二轮完成后七日期满，主灯守住。",
+      "bytes": 4697299,
+      "sha256": "75772b857f2903bcb2e459153d917ddef5c56eff6dc41d315f476b91741f9895",
+      "containerDurationSeconds": 21.25,
+      "decodedFrames": 510,
+      "fullAVDecode": true,
+      "streamInfo": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1567 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 194 kb/s (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)",
+        "Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)"
+      ],
+      "reviewPath": "video/review-ready/04_EN01_七日灯未灭_20261016版.mp4",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review",
+      "status": "内容认可，旧版稍加速已完成"
+    },
+    {
+      "id": "EN03-EN04",
+      "source": "video/in-progress/edits/EN03-EN04-ending-complete-review.mp4",
+      "filename": "05A_EN03-EN04_战机与姜维回应_组合_20261018版.mp4",
+      "use": "接EN01后的唯一组合结尾，内含新版姜维。",
+      "bytes": 7220923,
+      "sha256": "12889c16fae9d5b8d19003b2ad9ee4026f6ad1c4d0664d8a823affadf2c30f2a",
+      "containerDurationSeconds": 31.958333333333332,
+      "decodedFrames": 767,
+      "fullAVDecode": true,
+      "streamInfo": [
+        "Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 1606 kb/s, 24 fps, 24 tbr, 12288 tbn (default)",
+        "Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 195 kb/s (default)",
+        "Stream #0:0(und): Video: wrapped_avframe, yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)",
+        "Stream #0:1(und): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)"
+      ],
+      "reviewPath": "video/review-ready/05A_EN03-EN04_战机与姜维回应_组合_20261018版.mp4",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review",
+      "status": "新版姜维已认可，无需重拍"
+    },
+    {
+      "id": "LI01",
+      "source": "video/in-progress/edits/LI01-grain-road-rescue-review.mp4",
+      "filename": "06_LI01_运粮救人_旧动作待重拍_20261018版.mp4",
+      "reviewPath": "video/review-ready/第二章-待修审阅/06_LI01_运粮救人_旧动作待重拍_20261018版.mp4",
+      "bytes": 13641298,
+      "sha256": "91b4bcbceda6f0cfac59b23276e66abfeacd7019b38c10b687e475d5f3e5f467",
+      "durationSeconds": 24.625,
+      "status": "保留运粮开场，仅救人动作段待替换",
+      "copyHashVerified": true,
+      "editorialApproval": "awaiting-user-review"
+    },
+    {
+      "id": "LI02A",
+      "source": "video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4",
+      "reviewPath": "video/review-ready/第二章-可用成稿/07A_LI02A_粮仓听说苟安受罚_保留成稿.mp4",
+      "filename": "07A_LI02A_粮仓听说苟安受罚_保留成稿.mp4",
+      "sha256": "432e99d7e3e42f55431400967363bc7ddefedb9923af257f3bc2618c77101be6",
+      "bytes": 86318304,
+      "durationSeconds": 17.833333333333332,
+      "startFrame": 0,
+      "endFrameExclusive": 428,
+      "decodedVideoSHA256": "109d8450ff4c291e6e6054674eccb185a96748b0faeff246bdd9020658ac0394",
+      "decodedAudioS16SHA256": "9ab80af6a5d999d1bcdcf927b988cf808b4122064d47acb2031ba5ad53f49602",
+      "decodedPixelsAndAudioExact": true,
+      "encoding": "H.264 lossless CRF0 + ALAC; exact frame/sample trim; no AI generation or voice change",
+      "status": "已可用成稿，无需重拍"
+    },
+    {
+      "id": "LI02B",
+      "source": "video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4",
+      "reviewPath": "video/review-ready/第二章-待修审阅/07B_LI02B_探望认人_仅声修剪尾.mp4",
+      "filename": "07B_LI02B_探望认人_仅声修剪尾.mp4",
+      "sha256": "a6fb4ac7d0842ff6caed2edd18282bf0daa31027c44913eedb79ef014d1949c8",
+      "bytes": 42256064,
+      "durationSeconds": 11.0,
+      "startFrame": 428,
+      "endFrameExclusive": 692,
+      "decodedVideoSHA256": "16e849a439a30cccd11f06597d7b508309cd3155cff2d3e8ce645dabf060da27",
+      "decodedAudioS16SHA256": "71f7c96976f3c53f869cfbfa68d6d0d93b1c0512356b6900f62827722d761273",
+      "decodedPixelsAndAudioExact": true,
+      "encoding": "H.264 lossless CRF0 + ALAC; exact frame/sample trim; no AI generation or voice change",
+      "status": "画面保留，仅声修剪尾待完成"
+    }
+  ],
+  "originalVideosUnchanged": {
+    "video/current/EN01-seven-days-20261016.mp4": "75772b857f2903bcb2e459153d917ddef5c56eff6dc41d315f476b91741f9895",
+    "video/current/ending-legacy-fallback.mp4": "6e1d2cc9f62e675b123c0862cfb8854bcdbf59584a0e16eb46f60161c4855526",
+    "video/current/opening-legacy-fallback.mp4": "d7bbc93a3df76b883644c5ca49f9ba81b14cb9c34bcbcba189a0a4539aeebc77",
+    "video/current/SC03-awaken-guard-20261016.mp4": "2da88c7ae0a09151e97d6b364fa25a769231ee2afd10349122c5953e98301178",
+    "video/pending/SC01-prefix-PENDING-weiyan-20261016.mp4": "a6ba758b6c0a34bcc4cfdaff5b5e4ca7d5e6fd5579cd253f321a9271a3387fd5",
+    "video/in-progress/edits/EN03-EN04-ending-complete-review.mp4": "12889c16fae9d5b8d19003b2ad9ee4026f6ad1c4d0664d8a823affadf2c30f2a",
+    "video/in-progress/edits/EN04-jiangwei-response-review.mp4": "2e61cf5149b9464de32dc22669cc71f00ef0281bd66d3d1db3c06e81159a231e",
+    "video/in-progress/edits/LI01-grain-road-rescue-review.mp4": "91b4bcbceda6f0cfac59b23276e66abfeacd7019b38c10b687e475d5f3e5f467",
+    "video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4": "7a55b5875c1d9a0c42b6b4dfc6c2c77b4020a5967f0cb45068b0994448e34726",
+    "video/in-progress/edits/PR01-prologue-27s-clean-v02.mp4": "2288206920cf45a5ada48b30d0eed8de0d100e05a4f443f1a55a701430420668",
+    "video/in-progress/edits/SC01-lamps-weiyan-complete-review.mp4": "2a2efdba6d67989570ed760960c83ff22c1e495902b32e8e094b0c9310bef24a",
+    "video/in-progress/raw/01-粮仓探听-苟安受罚-20261018012502.mp4": "248c99f5aa7414ff2ef4b4874c70d6dfa4b93ff19150139500c23a5c922bafe2",
+    "video/in-progress/raw/01-若能早一步-20261018-012916.mp4": "fef60c1e5030d71b2b3f537409cae087667290ad39ed0e9f4c1b037f0f29357a",
+    "video/in-progress/raw/03 - 穿越醒来大帐外守营 - 20261016_2109.mp4": "d6cfab6a8571f08efaa877f7f89c00a54c1d422e303469621962acdc905ebe73",
+    "video/in-progress/raw/EN01_七日已满主灯未灭_20261016-211558.mp4": "d1a8534e9daf2729749d34b7773e8b41b3c6053c4fcf74e41fb24fe53e79e07e",
+    "video/in-progress/raw/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4": "49031de29a95df8a94baca106c93979c7a3e303a036818415247e9e2f78bfcfd",
+    "video/in-progress/raw/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4": "83c21908ad2999378057bcd2581898493606b013e9ac86ad56fa297657d77735",
+    "video/in-progress/raw/LI02B-入帐探望-20261018-012518.mp4": "56a7fd8adda6a49a4dd3997685556763fa09594a2c89ae0c5b91f541fbac2696",
+    "video/in-progress/raw/SC01A-点灯借寿与军情入营-202610162116.mp4": "bad904f44cf75141d732da7581625a7ea4ab66f8273d377ae2a0570e9ca9a743",
+    "video/in-progress/raw/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4": "d3b80a09a5de0d9c70f5d1d5404fe57a3b282940efbaac4f00e8c1dd3583853d",
+    "video/review/20261018_v03/SC01-entry-sync-compatible-v03.mp4": "dfd35c2d9aa5cf943d73a35d8235c4982a645ba74a4d2b9ac16fe425e66f9753"
+  },
+  "officialBindingsUnchanged": {
+    "GameStarter/web-demo/public/cinematics.json": "52621aaa30e752c6ac930c7503b4d0566bafe530dc70b26502a439d36b2ef55d",
+    "GameStarter/web-demo/public/video/media-manifest.json": "097ea54141afd82f44e8878d5e024ce39e4cc3153b48502b88293763fa26edb7"
+  },
+  "validation": "FFmpeg full audio/video decode; MP4 movie duration; extracted contact-sheet identity review; byte-identical copies",
+  "notEditorialApproval": true,
+  "archivedDuplicates": [
+    {
+      "id": "EN04",
+      "path": "video/review/history/20261018-duplicate-review/05B_EN04_姜维回应_独立_20261018版.mp4",
+      "source": "video/in-progress/edits/EN04-jiangwei-response-review.mp4",
+      "sha256": "2e61cf5149b9464de32dc22669cc71f00ef0281bd66d3d1db3c06e81159a231e",
+      "reason": "05A包含新版姜维，重复审阅副本移出；可恢复"
+    },
+    {
+      "id": "LI02",
+      "path": "video/review/history/20261018-duplicate-review/07_LI02A-LI02B_探望认人_声线与停顿待修_20261018版.mp4",
+      "source": "video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4",
+      "sha256": "7a55b5875c1d9a0c42b6b4dfc6c2c77b4020a5967f0cb45068b0994448e34726",
+      "reason": "已按原剪辑边界拆成A可用/B仅声修；合并副本移出避免重复观看"
+    }
+  ],
+  "organizationVerification": {
+    "date": "2026-10-18",
+    "copyHashesMatched": 7,
+    "protectedFilesUnchanged": 23,
+    "protectedBeforeAndAfterSha256": {
+      "video/current/EN01-seven-days-20261016.mp4": "75772b857f2903bcb2e459153d917ddef5c56eff6dc41d315f476b91741f9895",
+      "video/current/ending-legacy-fallback.mp4": "6e1d2cc9f62e675b123c0862cfb8854bcdbf59584a0e16eb46f60161c4855526",
+      "video/current/opening-legacy-fallback.mp4": "d7bbc93a3df76b883644c5ca49f9ba81b14cb9c34bcbcba189a0a4539aeebc77",
+      "video/current/SC03-awaken-guard-20261016.mp4": "2da88c7ae0a09151e97d6b364fa25a769231ee2afd10349122c5953e98301178",
+      "video/pending/SC01-prefix-PENDING-weiyan-20261016.mp4": "a6ba758b6c0a34bcc4cfdaff5b5e4ca7d5e6fd5579cd253f321a9271a3387fd5",
+      "video/in-progress/edits/EN03-EN04-ending-complete-review.mp4": "12889c16fae9d5b8d19003b2ad9ee4026f6ad1c4d0664d8a823affadf2c30f2a",
+      "video/in-progress/edits/EN04-jiangwei-response-review.mp4": "2e61cf5149b9464de32dc22669cc71f00ef0281bd66d3d1db3c06e81159a231e",
+      "video/in-progress/edits/LI01-grain-road-rescue-review.mp4": "91b4bcbceda6f0cfac59b23276e66abfeacd7019b38c10b687e475d5f3e5f467",
+      "video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4": "7a55b5875c1d9a0c42b6b4dfc6c2c77b4020a5967f0cb45068b0994448e34726",
+      "video/in-progress/edits/PR01-prologue-27s-clean-v02.mp4": "2288206920cf45a5ada48b30d0eed8de0d100e05a4f443f1a55a701430420668",
+      "video/in-progress/edits/SC01-lamps-weiyan-complete-review.mp4": "2a2efdba6d67989570ed760960c83ff22c1e495902b32e8e094b0c9310bef24a",
+      "video/in-progress/raw/01-粮仓探听-苟安受罚-20261018012502.mp4": "248c99f5aa7414ff2ef4b4874c70d6dfa4b93ff19150139500c23a5c922bafe2",
+      "video/in-progress/raw/01-若能早一步-20261018-012916.mp4": "fef60c1e5030d71b2b3f537409cae087667290ad39ed0e9f4c1b037f0f29357a",
+      "video/in-progress/raw/03 - 穿越醒来大帐外守营 - 20261016_2109.mp4": "d6cfab6a8571f08efaa877f7f89c00a54c1d422e303469621962acdc905ebe73",
+      "video/in-progress/raw/EN01_七日已满主灯未灭_20261016-211558.mp4": "d1a8534e9daf2729749d34b7773e8b41b3c6053c4fcf74e41fb24fe53e79e07e",
+      "video/in-progress/raw/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4": "49031de29a95df8a94baca106c93979c7a3e303a036818415247e9e2f78bfcfd",
+      "video/in-progress/raw/LI01 - 蜀道运粮苟安救人 - 20261018_012647.mp4": "83c21908ad2999378057bcd2581898493606b013e9ac86ad56fa297657d77735",
+      "video/in-progress/raw/LI02B-入帐探望-20261018-012518.mp4": "56a7fd8adda6a49a4dd3997685556763fa09594a2c89ae0c5b91f541fbac2696",
+      "video/in-progress/raw/SC01A-点灯借寿与军情入营-202610162116.mp4": "bad904f44cf75141d732da7581625a7ea4ab66f8273d377ae2a0570e9ca9a743",
+      "video/in-progress/raw/SC01B - 军情奔马与魏延闯帐 - 20261018012738.mp4": "d3b80a09a5de0d9c70f5d1d5404fe57a3b282940efbaac4f00e8c1dd3583853d",
+      "video/review/20261018_v03/SC01-entry-sync-compatible-v03.mp4": "dfd35c2d9aa5cf943d73a35d8235c4982a645ba74a4d2b9ac16fe425e66f9753",
+      "GameStarter/web-demo/public/cinematics.json": "52621aaa30e752c6ac930c7503b4d0566bafe530dc70b26502a439d36b2ef55d",
+      "GameStarter/web-demo/public/video/media-manifest.json": "097ea54141afd82f44e8878d5e024ce39e4cc3153b48502b88293763fa26edb7"
+    },
+    "scope": "本次验证文件哈希及引用文件未变；未重新播放或做内容验收。既有fullAVDecode字段来自前次验证。"
+  },
+  "scopeCorrection": "2026-10-18用户纠正：LI02A保留；LI02B只声修剪尾；LI01只替换救人段；prompt链接不代表重拍任务。",
+  "latestVerification": {
+    "originalCopiesHashMatched": 6,
+    "losslessDerivedClipsVerified": 2,
+    "protectedFilesUnchanged": 23,
+    "splitEvidence": "docs/migration/LI02-SPLIT-VERIFICATION-20261018.json",
+    "playbackReview": "未新做播放器主观试听；两片全片解码并逐像素/PCM样本比对通过"
+  }
+}

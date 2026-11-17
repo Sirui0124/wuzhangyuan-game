@@ -1,0 +1,13 @@
+import {chromium} from 'playwright';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const base='http://127.0.0.1:8812';const expected=JSON.parse(readFileSync('video/review/20261023-opening-pace/final-delivery.json'));
+const config=await (await fetch(base+'/cinematics.json')).json();const src=config.opening[0].src;assert(src.includes('pace-five-years'));
+assert.equal(createHash('sha256').update(Buffer.from(await (await fetch(base+src)).arrayBuffer())).digest('hex'),expected.sha256);
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--autoplay-policy=no-user-gesture-required']});
+const page=await browser.newPage();await page.goto(base);await page.locator('[data-action=new]').click();await page.waitForFunction(()=>document.querySelector('video')?.readyState>=2);
+await page.locator('video').evaluate(v=>v.addEventListener('ended',()=>window.result={src:v.currentSrc,rate:v.playbackRate,duration:v.duration,audioBytes:v.webkitAudioDecodedByteCount,error:v.error?.message??null},{once:true}));
+await page.waitForFunction(()=>window.result,null,{timeout:70000});const r=await page.evaluate(()=>window.result);assert.equal(r.error,null);assert.equal(r.rate,1);assert(r.audioBytes>0);
+await page.waitForFunction(()=>document.querySelector('video')?.src.includes('SC03'));
+writeFileSync('video/review/20261023-opening-pace/browser.json',JSON.stringify({...r,servedHashMatches:true,next:'SC03',subjectiveListening:false},null,2));console.log(r);await browser.close();

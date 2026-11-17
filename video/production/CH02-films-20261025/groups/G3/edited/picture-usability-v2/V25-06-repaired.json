@@ -1,0 +1,56 @@
+{
+  "id": "V25-06",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V25-06-repaired.mp4",
+  "sha256": "08725a9dc1c1ca86e85005a066144ce93a80ed9a4d102129fb173345ea04d054",
+  "estimatedDuration": 7.0,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V25-06-raw.mp4",
+      "sha256": "34cff01c7df8ec49622de3edea63bae8ae21b0368ba7926cbef3bba788458463",
+      "sourceTime": [
+        0,
+        0.7
+      ],
+      "crop": [
+        0,
+        6,
+        1344,
+        756
+      ],
+      "playbackRate": 1
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V25-06-raw.mp4",
+      "sha256": "34cff01c7df8ec49622de3edea63bae8ae21b0368ba7926cbef3bba788458463",
+      "sourceTime": [
+        0.7,
+        7.0
+      ],
+      "crop": [
+        400,
+        436,
+        576,
+        324
+      ],
+      "playbackRate": 1
+    }
+  ],
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "existingCentralVoice": {
+    "node": "CH2-LY09-002",
+    "text": "你去了魏国，他们逼问粮道，你怎么应付？",
+    "speaker": "我",
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-002.wav",
+    "duration": 3.9745,
+    "sha256": "57ca37304e95d2b7b25ded448b3fdcf0b2094b44897decf2834741f5ae589db9",
+    "ready": true,
+    "source": "central_tts"
+  },
+  "audioIssues": [
+    "复用既有中央玩家音轨，无新增TTS；音色、逐字听审及环境混音仍待统一阶段"
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "previousAdoptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-06-16x9.mp4"
+}

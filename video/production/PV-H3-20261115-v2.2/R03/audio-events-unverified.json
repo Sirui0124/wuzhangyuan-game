@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Vehicle",
+          "p": 0.3468
+        },
+        {
+          "label": "Car",
+          "p": 0.1395
+        },
+        {
+          "label": "Rumble",
+          "p": 0.1154
+        },
+        {
+          "label": "White noise",
+          "p": 0.0583
+        },
+        {
+          "label": "Engine",
+          "p": 0.05
+        },
+        {
+          "label": "Aircraft",
+          "p": 0.0431
+        },
+        {
+          "label": "Medium engine (mid frequency)",
+          "p": 0.0306
+        },
+        {
+          "label": "Accelerating, revving, vroom",
+          "p": 0.0286
+        },
+        {
+          "label": "Vibration",
+          "p": 0.0247
+        },
+        {
+          "label": "Motorboat, speedboat",
+          "p": 0.023
+        },
+        {
+          "label": "Idling",
+          "p": 0.022
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0218
+        }
+      ],
+      "music": 0.0038
+    }
+  ]
+}

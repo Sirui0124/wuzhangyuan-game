@@ -1,0 +1,45 @@
+{
+  "id": "E1",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-60秒-V2.mp4",
+  "oldSha256": "a75c9ac47dca27ae5675103d371c579e753bbca6b72843c32781fbb08f2bc013",
+  "oldDuration": 60.0,
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-54秒-V3.mp4",
+  "sha256": "7bf506462c8d90e59eb1c9e3d7382e91b873c111f1c83773a5709446111dfe6e",
+  "duration": 54.041667,
+  "decodedFrames": 1297,
+  "decodePassed": true,
+  "removedRanges": [
+    {
+      "start": 0,
+      "end": 5.75,
+      "reason": "Confirmed director action text 先收齐才谈核实 and preceding excess reaction; whitelist starts around 6.01s"
+    },
+    {
+      "start": 59.791666666666664,
+      "end": 60,
+      "reason": "Remove audio-only container padding after final video frame"
+    }
+  ],
+  "essentialActionAudioCleanup": {
+    "originalRange": [
+      42.125,
+      45.791666666666664
+    ],
+    "newRange": [
+      36.375,
+      40.041666666666664
+    ],
+    "reason": "No dialogue allowed in V36-06; retain actual order handoff, remove unwanted voice. No frozen/looped filler."
+  },
+  "preserved": [
+    "All formal receipt and disposition dialogue",
+    "Happy Gou An greeting, smiling reaction and turning to cart",
+    "Final legal inner voice and shared cart action"
+  ],
+  "ownerEvidence": "G5 V36-02 and V36-06 confirmed source SHA and batch2 EDL supplied by owner",
+  "newGeneration": false,
+  "newTTS": false,
+  "audioListening": false,
+  "userApproved": false,
+  "gameIntegrated": false
+}

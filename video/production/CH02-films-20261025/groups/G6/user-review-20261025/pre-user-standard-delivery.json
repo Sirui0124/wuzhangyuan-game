@@ -1,0 +1,1142 @@
+{
+  "group": "G6",
+  "status": "picture-usable-with-integration-conditions-audio-pending",
+  "sourceSlots": [
+    "V38",
+    "V39",
+    "V40",
+    "V41E",
+    "V41L",
+    "V43"
+  ],
+  "sourceCoverage": "23/23节点原句在冻结分镜中精确覆盖；非成片声音转录",
+  "requests": {
+    "V38-01": "succeeded",
+    "V38-02": "succeeded",
+    "V38-03": "succeeded",
+    "V38-04": "succeeded",
+    "V39-01": "succeeded",
+    "V39-02": "succeeded",
+    "V40-01": "succeeded",
+    "V40-02": "succeeded",
+    "V40-03": "succeeded",
+    "V40-04": "succeeded",
+    "V40-05": "succeeded",
+    "V40-06": "succeeded",
+    "V41E-01": "succeeded",
+    "V41E-02": "succeeded",
+    "V41E-03": "succeeded",
+    "V41E-04": "succeeded",
+    "V41L-01": "succeeded",
+    "V41L-02": "failed",
+    "V41L-03": "failed",
+    "V41L-04": "failed",
+    "V43-01": "succeeded",
+    "V43-02": "succeeded"
+  },
+  "films": [
+    {
+      "id": "V38",
+      "name": "救下眼前的人",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V38-救下眼前的人-R2.mp4",
+      "subclips": [
+        "V38-01",
+        "V38-02",
+        "V38-03",
+        "V38-04"
+      ],
+      "entry": "Q假且UI-E2-FILE确认；苟安停手署名已实际发生",
+      "next": [
+        "END-E2"
+      ],
+      "endEvent": "个人补报实际核收，留营候查阶段结论已明确告知才E2",
+      "duration": 34.197,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "faf1a96218417af8c2b580596ffe30bee4523dadde87ecb6ebe03459d76e0590",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V38-01-16x9.mp4",
+          "trim": "none",
+          "duration": 9.42,
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "语音错乱/说话人待统一，未逐字听审；不据此重拍"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V38-02-ending-reuse.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V38-02-16x9.mp4",
+          "segments": [
+            {
+              "source": "V38-02",
+              "trim": [
+                0,
+                1
+              ],
+              "crop": [
+                160,
+                0,
+                1024,
+                576
+              ]
+            },
+            {
+              "source": "V38-02",
+              "trim": [
+                2.4,
+                5.42
+              ],
+              "crop": [
+                160,
+                0,
+                1024,
+                576
+              ]
+            },
+            {
+              "source": "V41E-01",
+              "trim": [
+                4.7,
+                10.1
+              ],
+              "purpose": "同一军吏无字闭合卷束，替代元文字纸面"
+            }
+          ],
+          "duration": 9.42,
+          "trim": "不裁原始完整音轨",
+          "audioPreserved": "complete original audio retained",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音"
+          ],
+          "scope": "结局专用，不改变普通交谈第一视角"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V38-03-R2-crop.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V38-03-R2-16x9.mp4",
+          "sourceTask": "V38-03-R2",
+          "crop": [
+            0,
+            0,
+            960,
+            540
+          ],
+          "trim": "none",
+          "duration": 7.29,
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "未逐字听审，暂不因音频重拍"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V38-04-alive-R2.mp4",
+          "duration": 8.0,
+          "trim": "none",
+          "pictureSources": [
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41E-03-crop.mp4",
+              "trim": [
+                0,
+                5.8
+              ]
+            },
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-04-16x9.mp4",
+              "trim": [
+                5.1,
+                7.3
+              ]
+            }
+          ],
+          "voiceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E2-003.wav",
+          "voiceTimelineStart": 0.4,
+          "newTTSRequests": 0,
+          "reason": "E2末镜必须明确苟安仍留营，替换原末尾空铺/离帐方向；只复用同一人同伤帐无声反应，不导入早E4信息",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "采用既有中央原句心声；仍未逐字听审，不声称声音通过"
+          ]
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V38-救下眼前的人-R2.mp4",
+        "containerDuration": 34.197,
+        "videoFrames": 819,
+        "firstPTS": 0.0,
+        "lastPTS": 34.083333333333336,
+        "videoEnd": 34.125,
+        "videoTimeBase": "1/24000",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.041666666666671404,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 34.197,
+        "audioDecodedSamples": 1641456,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V38"
+      },
+      "scriptNodes": [
+        "CH2-E2-001",
+        "CH2-E2-002",
+        "CH2-E2-003"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "语音错乱/说话人待统一，未逐字听审；不据此重拍",
+        "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音",
+        "未逐字听审，暂不因音频重拍",
+        "采用既有中央原句心声；仍未逐字听审，不声称声音通过"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "仅在停手署名已发生、个人材料提交被确认后接入；结论是留营候查，李严一节尚须核查",
+        "保留末镜睁眼到低头的连续反应，不仅截取闭眼末帧；不得套用E3死亡说明",
+        "我的CH2-E2-001现有4.183秒画外对白放在前段闭口听者/材料动作内，后段军吏发声画面只承载军吏回复；末镜心声不可由NPC口型承接"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    },
+    {
+      "id": "V39",
+      "name": "晚交案的共同收件",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+      "subclips": [
+        "V39-01",
+        "V39-02"
+      ],
+      "entry": "UI-CASE确认，交全部真实已知材料",
+      "next": [
+        "V40",
+        "V41L"
+      ],
+      "endEvent": "实际收件后按锁定Q分流",
+      "duration": 19.616,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V39-01-face-safe-R2.mp4",
+          "duration": 10.13,
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V39-01-16x9.mp4",
+          "trim": "full original audio retained",
+          "segments": [
+            {
+              "source": "V39-01",
+              "trim": [
+                0,
+                2.4
+              ]
+            },
+            {
+              "source": "V39-01",
+              "trim": [
+                2.4,
+                5.1
+              ],
+              "crop": [
+                450,
+                0,
+                848,
+                476
+              ]
+            },
+            {
+              "source": "V41E-01",
+              "trim": [
+                5.1,
+                10.13
+              ],
+              "purpose": "中性无字案头，避免文书元文字"
+            }
+          ],
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原音轨完整保留，未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V39-02-ending-reuse.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V39-02-16x9.mp4",
+          "segments": [
+            {
+              "source": "V39-02",
+              "trim": [
+                0,
+                4
+              ]
+            },
+            {
+              "source": "V41E-01",
+              "trim": [
+                4.7,
+                10.12
+              ],
+              "purpose": "替换背景搬粮袋及额外离场人物，不删原音轨"
+            }
+          ],
+          "duration": 9.42,
+          "trim": "不裁原始完整音轨",
+          "audioPreserved": "complete original audio retained",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音"
+          ],
+          "scope": "结局专用，不改变普通交谈第一视角"
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+        "containerDuration": 19.616,
+        "videoFrames": 468,
+        "firstPTS": 0.0,
+        "lastPTS": 19.458333333333332,
+        "videoEnd": 19.5,
+        "videoTimeBase": "1/12288",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.04166666666666785,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 19.616,
+        "audioDecodedSamples": 942080,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V39"
+      },
+      "scriptNodes": [
+        "CH2-LY12A-001",
+        "CH2-LY12A-003"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "原音轨完整保留，未逐字听审",
+        "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "只做V39共同收件，之后按已锁定Q进入V40或V41L，不把收件视为结案",
+        "我的原句由画外声承载，军吏回复另接；案头纸面不可作为可读证据进行放大解读"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    },
+    {
+      "id": "V40",
+      "name": "查办、苟安之死与空铺",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "subclips": [
+        "V40-01",
+        "V40-02",
+        "V40-03",
+        "V40-04",
+        "V40-05",
+        "V40-06"
+      ],
+      "entry": "V39实际收件且Q真",
+      "next": [
+        "V42"
+      ],
+      "endEvent": "实际查办裁处完成才E3",
+      "duration": 55.296,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-01-R2-16x9.mp4",
+          "duration": 11.54,
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "NPC原句未逐字听审，暂不因声音返拍"
+          ],
+          "sourceTask": "V40-01-R2"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V40-02-listener-reaction.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-02-16x9.mp4",
+          "duration": 8.0,
+          "trim": "原8秒音轨未裁",
+          "segments": [
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41E-03-crop.mp4",
+              "trim": [
+                0,
+                5.8
+              ]
+            },
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-04-16x9.mp4",
+              "trim": [
+                5.1,
+                7.3
+              ]
+            }
+          ],
+          "purpose": "同一苟安卧榻闭口听者反应；不导入早E4对白/事件，匹配前片V40-01-R2伤帐问话",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原临时音轨仍待统一；指定我的原句中央wav已备、3.80秒可完整容纳"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V40-03-closed-scroll.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-01-16x9.mp4",
+          "trim": [
+            4.7,
+            10.13
+          ],
+          "duration": 5.43,
+          "purpose": "同一军吏将闭合素卷放平，承载正式处置传来的纯演出；不展示伪造官文或字迹",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "本节点纯演出不朗读说明，现环境音未听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-04-R2-16x9.mp4",
+          "sourceTask": "V40-04-R2",
+          "trim": "none",
+          "duration": 6.58,
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V40-05-face-safe-R2.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-05-16x9.mp4",
+          "duration": 9.42,
+          "trim": "full original audio retained",
+          "segments": [
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-04-R2-16x9.mp4",
+              "trim": [
+                0,
+                3
+              ],
+              "purpose": "同一军吏正面，移除开头前景面部轮廓"
+            },
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-05-16x9.mp4",
+              "trim": [
+                3,
+                9.42
+              ],
+              "crop": [
+                320,
+                0,
+                1024,
+                576
+              ],
+              "purpose": "保留军吏回案动作，移除左前景可识别鼻嘴胡子"
+            }
+          ],
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原临时音轨完整保留，未逐字听审，待统一声音"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V40-06-empty-bed-and-cart.mp4",
+          "duration": 14.25,
+          "segments": [
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-06-16x9.mp4",
+              "trim": [
+                0,
+                6.25
+              ],
+              "purpose": "保留空铺，不进入后半错误满粮车或人物"
+            },
+            {
+              "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V40-06-R2-16x9.mp4",
+              "trim": [
+                0,
+                8
+              ],
+              "purpose": "R2裸木底板空粮车从帐外经过"
+            }
+          ],
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "三句中央心声已备，暂未混入；原环境音未逐字听审"
+          ],
+          "sourceTask": "V40-06-R2"
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+        "containerDuration": 55.296,
+        "videoFrames": 1325,
+        "firstPTS": 0.0,
+        "lastPTS": 55.166666666666664,
+        "videoEnd": 55.20833333333333,
+        "videoTimeBase": "1/24000",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.041666666666671404,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 55.296,
+        "audioDecodedSamples": 2654208,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V40"
+      },
+      "scriptNodes": [
+        "CH2-LY12A-004",
+        "CH2-LY12A-005",
+        "CH2-LY12A-006",
+        "CH2-LY12A-007",
+        "CH2-LY12A-008",
+        "CH2-LY12A-009",
+        "CH2-LY12A-010",
+        "CH2-LY12A-011",
+        "CH2-LY12A-012",
+        "CH2-LY12A-013"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "NPC原句未逐字听审，暂不因声音返拍",
+        "原临时音轨仍待统一；指定我的原句中央wav已备、3.80秒可完整容纳",
+        "本节点纯演出不朗读说明，现环境音未听审",
+        "未逐字听审",
+        "原临时音轨完整保留，未逐字听审，待统一声音",
+        "三句中央心声已备，暂未混入；原环境音未逐字听审"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "仅V39实际收件且Q真时进入；正式查办裁处消息须先于空铺",
+        "军吏两句裁处原文（李严革职、苟安已按军法处死）必须明确保留，空铺本身不能代替处死信息",
+        "我在伤帐的对白与末段三句心声使用既有正确画外声；空车段不混入其他分支声音",
+        "V42属于G5，须经原确认/继续边界再接，不在本片自动越过"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    },
+    {
+      "id": "V41E",
+      "name": "早停查版：认下来的罪",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+      "subclips": [
+        "V41E-01",
+        "V41E-02",
+        "V41E-03",
+        "V41E-04"
+      ],
+      "entry": "普通②B听认罪后，UI-EARLY-FILE明确确认",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "提交现有材料、收件查办与退军收束",
+      "duration": 26.91,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-01-16x9.mp4",
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-02-16x9.mp4",
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41E-03-crop.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-03-16x9.mp4",
+          "crop": [
+            120,
+            0,
+            1104,
+            620
+          ],
+          "trim": [
+            0,
+            5.8
+          ],
+          "duration": 5.8,
+          "reason": "裁去底部人物名并去掉末尾过近低头，保留5.8秒，足以承载中央第一半旁白5.25秒及前后气口",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "未逐字听审，暂不因音频重拍"
+          ],
+          "decode": "passed"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41E-04-silent-reaction-R2.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41E-04-16x9.mp4",
+          "trim": [
+            5.1,
+            9.42
+          ],
+          "duration": 4.32,
+          "reason": "旁白/心声时段只留无发声口型反应或无人物脸的闭卷动作；删除明显NPC发声画面",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "临时原音轨裁切保留，声音待统一；无新增TTS；完整中央旁白长度可容纳"
+          ]
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+        "containerDuration": 26.91,
+        "videoFrames": 644,
+        "firstPTS": 0.0,
+        "lastPTS": 26.791666666666668,
+        "videoEnd": 26.833333333333336,
+        "videoTimeBase": "1/24000",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.04166666666666785,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 26.91,
+        "audioDecodedSamples": 1291680,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V41E"
+      },
+      "scriptNodes": [
+        "CH2-LY07-BAD1",
+        "CH2-LY07-BAD2",
+        "CH2-LY07-BAD3"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "未逐字听审，暂不因音频重拍",
+        "临时原音轨裁切保留，声音待统一；无新增TTS；完整中央旁白长度可容纳"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "仅早停查提交确认后播放；旁白必须保留“他和李严究竟商量过什么，我始终没问出来”",
+        "BAD3完整既有旁白从约17.1秒开始，到26.1秒前结束；不得回用旧说话口型前段",
+        "只在苟安问“大军退了吗？”时保留他的发声/口型；两段旁白不能由他代说"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    },
+    {
+      "id": "V41L",
+      "name": "晚支撑不足版：认下来的罪",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "subclips": [
+        "V41L-01",
+        "V41L-02",
+        "V41L-03",
+        "V41L-04"
+      ],
+      "entry": "V39实际收件且Q假",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "本路线实际查办收束才E4",
+      "duration": 35.264,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41L-01-face-safe-R2.mp4",
+          "duration": 8.0,
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-01-16x9.mp4",
+          "trim": "full 8-second original audio retained",
+          "reason": "总控定位晚E4合辑24–29秒：V41L-01可识别侧鼻嘴胡子；使用独立脸部安全构图修版",
+          "segments": [
+            {
+              "source": "V41L-01",
+              "trim": [
+                0,
+                2.1
+              ],
+              "crop": [
+                300,
+                0,
+                704,
+                396
+              ]
+            },
+            {
+              "source": "V41E-01",
+              "trim": [
+                8.2,
+                9.25
+              ],
+              "purpose": "中性闭合卷束，不导入早E4事实"
+            },
+            {
+              "source": "V41L-01",
+              "trim": [
+                3.15,
+                8
+              ],
+              "crop": [
+                600,
+                0,
+                704,
+                396
+              ]
+            }
+          ],
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "完整原音轨未裁，未逐字听审"
+          ],
+          "previousAdoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-01-16x9.mp4"
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-02-R2-16x9.mp4",
+          "sourceTask": "V41L-02-R2",
+          "duration": 9.42,
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "NPC原句未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-03-R2-16x9.mp4",
+          "sourceTask": "V41L-03-R2",
+          "duration": 8.0,
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "NPC原句未逐字听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\edited\\V41L-04-silent-reaction-R4.mp4",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V41L-04-R2-16x9.mp4",
+          "trim": [
+            0,
+            9.8
+          ],
+          "duration": 9.8,
+          "reason": "旁白/心声时段只留无发声口型反应或无人物脸的闭卷动作；删除明显NPC发声画面",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "临时原音轨裁切保留，声音待统一；无新增TTS；完整中央旁白长度可容纳"
+          ]
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+        "containerDuration": 35.264,
+        "videoFrames": 845,
+        "firstPTS": 0.0,
+        "lastPTS": 35.166666666666664,
+        "videoEnd": 35.20833333333333,
+        "videoTimeBase": "1/24000",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.041666666666671404,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 35.263999999999996,
+        "audioDecodedSamples": 1692672,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V41L"
+      },
+      "scriptNodes": [
+        "CH2-E4-LATE-001",
+        "CH2-E4-LATE-002",
+        "CH2-E4-LATE-003"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "完整原音轨未裁，未逐字听审",
+        "NPC原句未逐字听审",
+        "临时原音轨裁切保留，声音待统一；无新增TTS；完整中央旁白长度可容纳"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "必须接V39实际收件后的Q假分支；本片不能当早停查版本，须保留已知李严线索但细节对不上的两句军吏原文",
+        "CH2-E4-LATE-003既有7.409秒心声可从约25.8秒放入至33.2秒；只作画外心声，不给军吏配这句口型",
+        "末镜是归拢现有卷束，不能被UI解释成已经核实全部材料/李严定罪"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    },
+    {
+      "id": "V43",
+      "name": "放行与赴魏散谣后果",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+      "subclips": [
+        "V43-01",
+        "V43-02"
+      ],
+      "entry": "UI-RELEASE确认",
+      "next": [
+        "END-E5"
+      ],
+      "endEvent": "实际放行后才E5；后果用清楚时间推进表现",
+      "duration": 21.024,
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioSampleRate": 48000,
+      "decode": "passed",
+      "sha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+      "adopted": [
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V43-01-16x9.mp4",
+          "trim": "none",
+          "duration": 9.42,
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "纯动作原声未听审"
+          ]
+        },
+        {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\generated\\V43-02-16x9.mp4",
+          "sourceTask": "V43-02",
+          "duration": 11.54,
+          "trim": "none",
+          "visualReview": "已在当前父片SHA动态复核，详见picture-usability.json；声音未逐字听审",
+          "audioIssues": [
+            "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+          ]
+        }
+      ],
+      "audioReview": "待统一声音；未逐字听审",
+      "userReview": "待review",
+      "videoTrack": {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+        "containerDuration": 21.024,
+        "videoFrames": 504,
+        "firstPTS": 0.0,
+        "lastPTS": 20.958333333333332,
+        "videoEnd": 21.0,
+        "videoTimeBase": "1/12288",
+        "averageRate": 24.0,
+        "maxFrameGap": 0.04166666666666785,
+        "ptsRegressions": 0,
+        "frameSizes": [
+          [
+            1280,
+            720
+          ]
+        ],
+        "audioEnd": 21.024,
+        "audioDecodedSamples": 1009664,
+        "audioSampleRate": 48000,
+        "fullVideoTrack": true,
+        "id": "V43"
+      },
+      "scriptNodes": [
+        "CH2-E5-001",
+        "CH2-E5-002"
+      ],
+      "visualReview": "当前SHA画面复核完成；有明确接入条件，非用户审核通过",
+      "audioIssues": [
+        "纯动作原声未听审",
+        "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+      ],
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "reviewState": "reviewed",
+      "integrationConditions": [
+        "必须在UI-RELEASE确认后先完整显示苟安离路，之后才显示散谣后果",
+        "9.42秒切后段时保留“后来”的时间推进；使用既有CH2-E5-002旁白明确赴魏及谣言传回，不让匿名士兵代说旁白",
+        "不能从兵士反应自行派生新的谣言内容或提前呈现正式查办结果"
+      ],
+      "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json"
+    }
+  ],
+  "unresolved": [
+    "六段接入条件见picture-usability.json；声音仍待统一与逐字听审",
+    "未获用户通过，未接入游戏"
+  ],
+  "userApproval": false,
+  "updatedUTC": "2026-10-25T04:58:08.677182+00:00",
+  "allGenerationTerminal": true,
+  "taskHistory": [
+    {
+      "id": "V38-01",
+      "task_id": "task_Xvxz8esbYZTZI4TGkkjwg3fncqxUAGyE",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V38-02",
+      "task_id": "task_yufv564eqeuelohDPiBtQAfnHCAj7wdS",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V38-03-R2",
+      "task_id": "task_ufuQ4B3AhzmJ8M12mVVnyIOyJFzPX98P",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V38-03",
+      "task_id": "task_ajtv5sbaCpvpL8PRoG18GdZsnvhXIiyC",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V38-04",
+      "task_id": "task_PO6HIdTo06oJlBiAN4EgRnYPavjWShoG",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V39-01",
+      "task_id": "task_dbeCaLuJoUqL0BNkp26y60bgx4qczmwd",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V39-02",
+      "task_id": "task_efNyL5MfCA05LjJ6SCkc6J4ez3d9LoOn",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-01-R2",
+      "task_id": "task_gVq4RkA9S2AicsSEIYu9JwPetCqC6OIx",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-01",
+      "task_id": "task_VrY2IaMC0woSmoQbgk7ffL6zr6tCuGi6",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-02",
+      "task_id": "task_67gtkA2ASGJOhBXvhzTBEJD9sZhDsHu1",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-03",
+      "task_id": "task_bS8kjt2BKYtiKEAsFrtNpEBx2wFh7XrP",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-04-R2",
+      "task_id": "task_Xr58M3epEDlpXqQbL9EAhDZfsL961cNf",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-04",
+      "task_id": "task_I55n7l5kwjyYZNEAwUb9UDTUEH2jrfTM",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-05",
+      "task_id": "task_r3erF3Azyfi3V1CA7IihGmG0eYmwrS5R",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-06-R2",
+      "task_id": "task_IuttO3pNQ6E7hGYadm5Zts77yH0HSKwj",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V40-06",
+      "task_id": "task_KU6xQp9BihEkuMD0EeM2Y10YfG3sbcyU",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41E-01",
+      "task_id": "task_4clmdizAbEZfvtTRjqx7ZxeKmvp0Gczs",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41E-02",
+      "task_id": "task_n0udJmuXpZvte9VRo0Qzjo40f7284X5S",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41E-03",
+      "task_id": "task_QcaTZPQ56raDVNTExRVqZlsK6LV9uj9P",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41E-04",
+      "task_id": "task_upS5FYcAxKvvTo8vcxwZD0LZGsYMss2W",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41L-01",
+      "task_id": "task_WcjPNwy1gUDC9EuTXbxqZuyxppNxMVqr",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41L-02-R2",
+      "task_id": "task_jx9s9jO6GX0ZEYnz3VhUAqf3xzPG2Uhu",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41L-02",
+      "task_id": "task_yA9uclpkR8fDuRcCQiuvmiB2kKyA5Gqb",
+      "status": "failed",
+      "recoveredBy": "V41L-02-R2"
+    },
+    {
+      "id": "V41L-03-R2",
+      "task_id": "task_T6XQukdbFOtezPucAreTvladL8J18WDn",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41L-03",
+      "task_id": "task_PMF3nBEgHcsKSgUGE9qvMlAxkjoDJ6I8",
+      "status": "failed",
+      "recoveredBy": "V41L-03-R2"
+    },
+    {
+      "id": "V41L-04-R2",
+      "task_id": "task_TcwzdnU4Miqv3ghB5WZ0bj3KrpDMUEfx",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V41L-04",
+      "task_id": "task_ZUppCp73qmaTSJ19qSTNh51rqpjABdB3",
+      "status": "failed",
+      "recoveredBy": "V41L-04-R2"
+    },
+    {
+      "id": "V43-01",
+      "task_id": "task_4RIB2PiLLSH9zR0nA9Hlk0CHaEMnJvWA",
+      "status": "succeeded",
+      "recoveredBy": null
+    },
+    {
+      "id": "V43-02",
+      "task_id": "task_mexr3gx731b7zx9zwWfrgLQX33T2bKDl",
+      "status": "succeeded",
+      "recoveredBy": null
+    }
+  ],
+  "taskCounts": {
+    "submitted": 29,
+    "succeeded": 26,
+    "failedRecovered": 3,
+    "skippedUnsubmitted": 7,
+    "pending": 0,
+    "unknown": 0
+  },
+  "skippedRequests": [
+    "V38-01-R2",
+    "V40-02-R2",
+    "V40-05-R2",
+    "V40-03-R2",
+    "V38-02-R2",
+    "V39-01-R2",
+    "V39-02-R2"
+  ],
+  "sourceCoverageEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\source-coverage-final.json",
+  "playbackEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json",
+  "newTTSRequests": 0,
+  "retiredVersions": [
+    {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R2.mp4",
+      "reason": "仅193帧/8.04秒画面但容器39.157秒，已由R3替代；旧文件保留，不可使用"
+    },
+    {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪.mp4",
+      "sha256": "c539a711f7d723c040cc997da6f2f74e0a5d7d59850186a1b079b1cf4ed787f3",
+      "reason": "旧旁白段含明显苟安说话口型，现用独立R2"
+    },
+    {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R3.mp4",
+      "sha256": "a1e5b1daf53f84f9a7abbfcb6ae169bad74b709670dc3062721ea472c3d76d12",
+      "reason": "完整视频轨已修，但心声结尾有军吏接话口型，现用独立R4"
+    }
+  ],
+  "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\review\\picture-usability.json",
+  "pictureUsabilityCounts": {
+    "usable": 0,
+    "usable-with-integration-condition": 6,
+    "needs-repair": 0,
+    "pending": 0
+  }
+}

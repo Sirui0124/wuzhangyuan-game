@@ -1,0 +1,25 @@
+{
+  "documentUrl": "https://my.feishu.cn/docx/MSdZd2H8IoWkXyxpkpNcgxRKn0b",
+  "documentId": "MSdZd2H8IoWkXyxpkpNcgxRKn0b",
+  "folderToken": "LnZpfTbX4lG1xVdJ1MccpHz1nog",
+  "localFile": "docs/design/COLLABORATION-PRINCIPLES.md",
+  "verifiedDate": "2026-10-27",
+  "verifiedRevision": 39,
+  "verification": "本次修复前通过飞书 CLI 读取在线 revision 39，与本地副本比较；仅移除本地过时的 revision 38 验证尾注，正文与在线一致。未修改在线正文。横屏适配和发布前修复的验证另记于修复报告，不代表用户试玩通过。",
+  "verificationRecord": "outputs/release-fixes-20261027/collaboration-live.json",
+  "syncMode": "Manual CLI read-compare-write-verify; no background synchronization",
+  "previousVerification": {
+    "verifiedDate": "2026-10-23",
+    "verifiedRevision": 17,
+    "verification": "CLI compared live revision 16, updated only the chapter-one UI implementation/validation status sentence, and verified revision 17 readback exactly matched that change with the remaining section preserved. Local status matches; build, type check, 73 game tests and four browser cases passed. No real model call this change; pending user review.",
+    "verificationRecord": "outputs/expression-cleanup-20261023/principles-status-verification.json"
+  },
+  "verificationHistory": [
+    {
+      "verifiedDate": "2026-10-23",
+      "verifiedRevision": 29,
+      "verification": "在线定点清理七列坐标、第一章旧列数与已删列指引，追加第二章两画布待审核入口；逐次比较原块并回读；其余章节保留。无游戏修改或运行测试。",
+      "verificationRecord": "docs/design/CHAPTER-TWO-CANVAS-EDITING.sync.json"
+    }
+  ]
+}

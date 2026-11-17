@@ -1,0 +1,158 @@
+{
+  "id": "CH2-V29",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V29-b55fb60eb2-20261025.mp4",
+  "oldSha256": "b55fb60eb2c4add3f3d75a3e26971e5f286a89ed89eb2849f5e96b8c8f2725ba",
+  "oldSubtitles": "/video/subtitles/CH2-V29-b55fb60eb2-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V29-797b8971.mp4",
+  "sha256": "65b2a37d6be074acfdb698f09c86c5793e22e7aad60435953ac9bc18b7e6e53c",
+  "bytes": 22026281,
+  "duration": 52.5,
+  "containerDuration": 52.5,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 1260,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V29",
+    "src": "/video/current/PV27-CH2-V29-797b8971.mp4",
+    "title": "问明补报途径与正式交案风险",
+    "subtitles": "/video/subtitles/PV27-CH2-V29-797b8971.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY10-002",
+      "node": "CH2-LY10-002",
+      "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY10-002.wav",
+      "oldCorrelation": 0.941371506419605,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-002-v1.wav",
+      "newVoiceSha256": "744d584cc7e8e8d6924ddde47f6fe600b6509825003451060163df942f227732",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        1.48925,
+        9.42925
+      ],
+      "insertAt": 1.48925,
+      "voiceSeconds": 7.8,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9040711522102356,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY10-007",
+      "node": "CH2-LY10-007",
+      "text": "李严做过什么，苟安做过什么，都得如实交代。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY10-007.wav",
+      "oldCorrelation": 0.9726345568623807,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-007-v1.wav",
+      "newVoiceSha256": "54c22c72a69f5037e9de9aad378da7af5053da0b0385fc9ee27cf8f60e0f572a",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        47.64475,
+        52.5
+      ],
+      "insertAt": 47.64475,
+      "voiceSeconds": 4.8,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.33407723903656,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 1.48925,
+      "end": 6.19925,
+      "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手"
+    },
+    {
+      "start": 6.24925,
+      "end": 9.31925,
+      "text": "现在停下，把实情补报上来，行吗？"
+    },
+    {
+      "start": 10.34,
+      "end": 17.4,
+      "text": "可以。停手的实据、补报和各自做过的事，一并交来"
+    },
+    {
+      "start": 18.5,
+      "end": 20.3,
+      "text": "该追的责任照样追"
+    },
+    {
+      "start": 21.36,
+      "end": 27.14,
+      "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮"
+    },
+    {
+      "start": 27.78,
+      "end": 28.92,
+      "text": "按欠缺查"
+    },
+    {
+      "start": 29.74,
+      "end": 34.82,
+      "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚"
+    },
+    {
+      "start": 34.82,
+      "end": 39.76,
+      "text": "甚至处死。最后如何处置，要等查办"
+    },
+    {
+      "start": 40.68,
+      "end": 47.16,
+      "text": "案子一交，就正式查办。换个说法也撤不回来"
+    },
+    {
+      "start": 47.96475,
+      "end": 52.47475,
+      "text": "李严做过什么，苟安做过什么，都得如实交代"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

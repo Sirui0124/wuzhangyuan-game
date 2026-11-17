@@ -1,0 +1,52 @@
+{
+  "id": "V30-01",
+  "slot": "V30",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V30-01.mp4",
+  "sha256": "56a73a0c03b967cce4a9c9696f998a77fc7e83b67c5b5d4516ce95096853cf12",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V30-01.mp4",
+  "oldSha256": "82e848901d5f44b8110d1fe14ac017eaa44153f1ac6b34e89e02688ef19edc78",
+  "oldDuration": 8.0,
+  "sourceFrames": [
+    32,
+    192
+  ],
+  "sourceRange": [
+    1.3333333333333333,
+    8.0
+  ],
+  "newDuration": 6.666666666666667,
+  "technical": {
+    "duration": 6.666667,
+    "videoDuration": 6.666666666666667,
+    "frames": 160,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "56a73a0c03b967cce4a9c9696f998a77fc7e83b67c5b5d4516ce95096853cf12",
+    "bytes": 2514457
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-O2-OPENING",
+      "speaker": "苟安",
+      "text": "该说的，我已经说了。你现在准备拿我怎么办？",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-O2-OPENING",
+      "roleControlOnly": "苟安",
+      "text": "该说的，我已经说了。你现在准备拿我怎么办？",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

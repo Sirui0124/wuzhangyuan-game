@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "status": "待review",
+  "runtimeEnabled": true,
+  "promptFile": "weiyan-prompt.txt",
+  "request": {
+    "thinking": {
+      "type": "disabled"
+    },
+    "classifierTemperature": 0,
+    "replyTemperature": 0.2,
+    "status": "已接入：代理强制关闭思考，分类温度0，回应温度0.2；固定接受跳过润色。"
+  },
+  "stages": {
+    "first": {
+      "goals": [
+        "首轮为入门交涉：尊重帐前禁令，并提出由我承担眼下的传报。",
+        "营门是否失守及不必闯帐的理由为可选补充；漏收斥候线索不阻止通过。"
+      ],
+      "fixedAcceptReply": "好，你即刻转呈，莫误军情。",
+      "checks": [
+        {
+          "id": "situation",
+          "meaning": "可选补充：有据的军情或不必闯帐的理由。没说、漏收营门线索或没展开因果均不影响首轮通过。"
+        },
+        {
+          "id": "ban",
+          "meaning": "尊重帐前禁令或明确不闯帐。帐前有禁令、不能违令、请勿闯帐等自然说法均可，不要求指定词语。"
+        },
+        {
+          "id": "relay",
+          "meaning": "提出由我承担眼下的传报。包括我来转达、我替您报、让我进去通传等；在当前紧急语境下无需额外说立即或保证不误军情，但明确拖到以后、拒绝传报不算。不得解释成许可闯入丞相帐。"
+        }
+      ],
+      "optionalChecks": [
+        "situation"
+      ]
+    },
+    "authorized": {
+      "goals": [
+        "说明姜维本人已答应接报；须有游戏内真实承诺。",
+        "说明今夜敌情相较此前的具体变化、随我军换向，以及可能试探的判断；不要求复述指定事例。",
+        "提出现在到帐外向姜维当面交报，不进入丞相帐。"
+      ],
+      "entryRequires": [
+        "姜维已经答应接报",
+        "亲兵随行"
+      ],
+      "checks": [
+        {
+          "id": "authorization",
+          "meaning": "明确说出姜维本人已经答应接报这一已发生事实，且有真实承诺。只提议去找他或交给他不算；facts有承诺也不能代替玩家说出。"
+        },
+        {
+          "id": "comparison",
+          "meaning": "说明今夜敌情相较前几夜的具体变化。可以说前夜闻号即退而今夜不退，也可以说今夜随我军调动变向、与前几夜不同；不要求复述号角或退兵。只说今夜不同、有变而没有交代任何具体变化不算。"
+        },
+        {
+          "id": "following",
+          "meaning": "说明敌军随我军调动换向。"
+        },
+        {
+          "id": "inference",
+          "meaning": "认为可能在试探反应或虚实，保留推测。"
+        },
+        {
+          "id": "handoff",
+          "meaning": "提出现在到帐外向姜维当面交报，不进丞相帐。"
+        }
+      ],
+      "fixedAcceptReply": "带路，我亲自问他。",
+      "optionalChecks": []
+    }
+  },
+  "input": [
+    "stage",
+    "checks",
+    "facts",
+    "spokenTurns",
+    "current"
+  ],
+  "output": [
+    "fatal",
+    "checks",
+    "unsupported"
+  ],
+  "validation": [
+    "结构和结果／原因组合匹配，原因仅限本轮编号或通用原因。",
+    "斩首必须引用current连续原话；引用存在不代表语义自动正确。",
+    "checks与unsupported核对按时间排序的完整spokenTurns；只认本轮实际说过的有效表达，未被撤回的内容无需每次重复；current仅限定fatal范围。",
+    "两轮接受使用固定台词，不调用润色；第二轮真实授权仍由游戏状态核验。",
+    "回应长度不超45字，不能换行动人、变成再犯警告或新增条件；不合格时用对应intent原句。",
+    "分类异常／格式错误只技术重试，不冒充剧情结果；取消、跨轮及迟到回复无效。",
+    "结构与原话引用有效但check与unsupported引用交叉时，清空交叉check并保留unsupported，进入继续解释；不把这种模型自相矛盾当成技术失败。"
+  ],
+  "replyPromptFile": "weiyan-reply-prompt.txt",
+  "pipeline": "compact acquired facts + chronological spokenTurns -> semantic assessment -> quote validation and conservative overlap normalization -> deterministic three-result mapping -> short reply; both acceptance lines fixed",
+  "replyOutput": [
+    "reply"
+  ],
+  "replyIntents": {
+    "off_topic": "军前胡言！拿下，处斩！",
+    "offense": "放肆！拿下，处斩！",
+    "situation": "眼下究竟有何军情，为什么还不必闯帐？",
+    "ban": "军情虽急，你是要守住禁令，还是执意闯帐？",
+    "relay": "帐门不能闯，这军报由谁去传？",
+    "authorization": "这是伯约亲口答应的？",
+    "comparison": "与前几夜相比，今夜敌军有何不同？",
+    "following": "我军调动时，敌军又如何应对？",
+    "inference": "这些变化，你看说明什么？",
+    "handoff": "既如此，军报现在如何当面交给伯约？",
+    "unsupported": "这话有何凭据？说清楚。",
+    "unclear": "你这话何意？说清楚。",
+    "authorized_accept": "带路，我亲自问他。"
+  },
+  "replyInput": "仅result与intent；仅斩首回应附current。解释不重读整段玩家发言，以免改问其他问题。",
+  "classification": {
+    "execute": "fatal为off_topic或offense，且原话与上下文有效。",
+    "clarify": "没有fatal，但有unsupported或本轮任一check为空。只问首个实际缺口。",
+    "accept": "没有fatal或unsupported，本轮checks都有可核验的有效发言引用。"
+  },
+  "quoteValidation": "checks与unsupported须引用本轮spokenTurns任意一条的连续原话；fatal只引用current。结构或引用错误属于技术失败；有据与无据引用交叉时保留unsupported并清掉交叉check，保守地要求解释。引用存在本身不证明语义正确。",
+  "replyAnchors": {
+    "following": [
+      [
+        "调动",
+        "换向",
+        "军动"
+      ],
+      [
+        "敌"
+      ]
+    ],
+    "relay": [
+      [
+        "军报",
+        "急报",
+        "传报"
+      ]
+    ],
+    "situation": [
+      [
+        "军情",
+        "敌情"
+      ],
+      [
+        "闯",
+        "紧急"
+      ]
+    ],
+    "authorization": [
+      [
+        "伯约",
+        "姜维"
+      ],
+      [
+        "亲口",
+        "答应",
+        "应下"
+      ]
+    ],
+    "handoff": [
+      [
+        "现在",
+        "眼下",
+        "即刻"
+      ],
+      [
+        "当面"
+      ],
+      [
+        "伯约",
+        "姜维"
+      ]
+    ]
+  },
+  "replyFallback": "只对生成的对白检查关键对象、行动人、当场处斩与定位信息；不合格或超长时使用对应intent原句，不改变分类，不再增加模型调用。anchors不用于匹配玩家发言。"
+}

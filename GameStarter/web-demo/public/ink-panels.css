@@ -1,0 +1,59 @@
+/* Warm ink and fine paper grain for the shared game dialogs. Phone keeps its own shell. */
+:root[data-ui-theme=xuan] #game-root .game-modal-shade:not(.phone-shade){background:radial-gradient(ellipse at center,#13110e30,#100f0d8a);backdrop-filter:blur(2px)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{
+ --panel-paper:#25231ff5;--panel-ink:#eee3cf;--panel-muted:#b9ad97;--panel-accent:#b89a68;--panel-jade:#c6b38c;--panel-edge:#b99b624d;
+ background-color:var(--panel-paper);background-image:url('/ui/panel-grain.svg'),radial-gradient(ellipse at 12% 0,#aa885c19,transparent 60%),linear-gradient(120deg,#302d27a6,#201f1cf2 80%);
+ border:1px solid var(--panel-edge);border-radius:3px;box-shadow:0 24px 80px #08070585,0 3px 10px #0004,inset 0 1px #e6cf9924,inset 0 0 30px #08070538;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel::before{content:'';inset:7px;width:auto;height:auto;transform:none;background:none;border:1px solid #c4a77717;opacity:1}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-emblem{display:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-header{min-height:64px;margin-bottom:22px;gap:12px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-header::after{height:1px;background:linear-gradient(90deg,#bd9f6b80,#bd9f6b18 75%,transparent);mask-image:none;opacity:1}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-header h1{font-size:27px;letter-spacing:3px;color:var(--panel-ink)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .modal-close{color:#b6a588}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .modal-close:hover{color:#fff0d3;background:#c2a57612}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-button{background:linear-gradient(120deg,#a2824e2b,#92714312);border-color:#b89a6859;color:#edddbc;border-radius:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-button::before,
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-button::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-button:hover:not(:disabled){background:#a2824e3b;border-color:#c3a36eaa}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .quiet-button{color:#c2b59b}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .quiet-button:hover:not(:disabled){color:#fff0d3;background:#c2a57612}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .service-settings::before{height:1px;background:linear-gradient(90deg,#bd9f6b55,transparent);mask-image:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .service-fields input{background:#14131080;border-color:#af977042;color:#eee3cf;caret-color:#eedbb6}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .service-fields input::placeholder{color:#aa9d84}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .range-control output{color:#cfbea0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .range-control input[type=range]::-webkit-slider-thumb{background:#d2b47d;border-color:#393126;outline-color:#c2a57680}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .range-control input[type=range]::-moz-range-thumb{background:#d2b47d;border-color:#393126;outline-color:#c2a57680}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .motion-switch{background:#15141180;border-color:#a18e635e}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .motion-switch::after{background:#9b917d}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .motion-switch:checked{background:#b5976033;border-color:#c2a5768a}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .motion-switch:checked::after{background:#dec28c}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-leaf{background:linear-gradient(150deg,#b7986210,#0a09051a);border-color:#b19a6930;box-shadow:0 4px 10px #0002}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-cover{background:#191713}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-leaf.is-empty{background:#15131033;border-color:#b19a6930}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-leaf.is-empty .save-cover{background:url('/ui/panel-grain.svg'),linear-gradient(145deg,#51483744,#1e1b1626);color:#a89b81}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .supply-card{background:linear-gradient(135deg,#aa885c12,#19171380);border-color:#b19a6944;border-radius:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .supply-card button{background:#cbb58a;color:#29251e;border-color:#b99b6270;border-radius:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-badge{background:#27231ce8;color:#e1cca1}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .save-location{color:#d1c4ab}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .history-content small{color:#c4a77a}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .history-content p{color:#e2d8c5}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause]{width:min(480px,100%);height:auto;padding:25px 38px 32px;--panel-paper:#25231ff5}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .folio-header{min-height:57px;margin-bottom:18px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-context{font-size:14px;letter-spacing:2px;color:#b9ad97;margin:0 0 26px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions{gap:8px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions button{min-height:56px;padding:13px 18px;border:0;border-bottom:1px solid #b89a6826;background:transparent;color:#d9ccb2;font:19px/1.5 var(--serif);letter-spacing:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions button:first-child{background:linear-gradient(105deg,#b2925d35,#b2925d0c);border:1px solid #b99b6266;color:#f1e3c6;box-shadow:inset 2px 0 #c3a06b}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions button:hover{background:#b2925d26;color:#fff1d4}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions span{font-size:16px;color:#baa17b}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]{height:auto;width:min(640px,100%)}
+@media(max-width:650px){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-header{min-height:54px;margin-bottom:17px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .folio-header h1{font-size:25px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause]{padding:20px 24px 26px}
+}
+@media(forced-colors:active){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel{background:Canvas;border:1px solid CanvasText;color:CanvasText}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel .pause-actions button{border:1px solid ButtonText;color:ButtonText}
+}

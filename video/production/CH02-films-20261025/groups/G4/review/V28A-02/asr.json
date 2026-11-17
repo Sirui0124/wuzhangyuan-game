@@ -1,0 +1,138 @@
+{
+  "id": "V28A-02",
+  "expected": "你总算去看过了。我不想下一回还把他们逼到这一步。",
+  "postVoiceText": null,
+  "actual": "你总算去看过了我不想下一回还把他们逼到这一步",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.16,
+      "end": 4.04,
+      "text": "你总算去看过了",
+      "words": [
+        {
+          "start": 2.16,
+          "end": 2.64,
+          "word": "你",
+          "probability": 0.8248491883277893
+        },
+        {
+          "start": 2.64,
+          "end": 2.84,
+          "word": "总",
+          "probability": 0.6803193688392639
+        },
+        {
+          "start": 2.84,
+          "end": 3.04,
+          "word": "算",
+          "probability": 0.9970836043357849
+        },
+        {
+          "start": 3.04,
+          "end": 3.18,
+          "word": "去",
+          "probability": 0.998638927936554
+        },
+        {
+          "start": 3.18,
+          "end": 3.38,
+          "word": "看",
+          "probability": 0.9979674220085144
+        },
+        {
+          "start": 3.38,
+          "end": 3.6,
+          "word": "过",
+          "probability": 0.9944557547569275
+        },
+        {
+          "start": 3.6,
+          "end": 4.04,
+          "word": "了",
+          "probability": 0.9829581379890442
+        }
+      ]
+    },
+    {
+      "start": 6.38,
+      "end": 9.06,
+      "text": "我不想下一回还把他们逼到这一步",
+      "words": [
+        {
+          "start": 6.38,
+          "end": 6.92,
+          "word": "我不",
+          "probability": 0.9940164089202881
+        },
+        {
+          "start": 6.92,
+          "end": 7.16,
+          "word": "想",
+          "probability": 0.9977424144744873
+        },
+        {
+          "start": 7.16,
+          "end": 7.44,
+          "word": "下一",
+          "probability": 0.9727219343185425
+        },
+        {
+          "start": 7.44,
+          "end": 7.7,
+          "word": "回",
+          "probability": 0.9970544576644897
+        },
+        {
+          "start": 7.7,
+          "end": 7.9,
+          "word": "还",
+          "probability": 0.9814465045928955
+        },
+        {
+          "start": 7.9,
+          "end": 8.04,
+          "word": "把",
+          "probability": 0.9705232381820679
+        },
+        {
+          "start": 8.04,
+          "end": 8.24,
+          "word": "他们",
+          "probability": 0.8823345899581909
+        },
+        {
+          "start": 8.24,
+          "end": 8.42,
+          "word": "逼",
+          "probability": 0.9979080557823181
+        },
+        {
+          "start": 8.42,
+          "end": 8.6,
+          "word": "到",
+          "probability": 0.9956503510475159
+        },
+        {
+          "start": 8.6,
+          "end": 8.76,
+          "word": "这",
+          "probability": 0.9880891442298889
+        },
+        {
+          "start": 8.76,
+          "end": 8.88,
+          "word": "一",
+          "probability": 0.993627667427063
+        },
+        {
+          "start": 8.88,
+          "end": 9.06,
+          "word": "步",
+          "probability": 0.9889771342277527
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

@@ -1,0 +1,30 @@
+{
+  "pictureUsability": "usable-with-integration-condition",
+  "evidence": [
+    {
+      "method": "directly inspected every 0.5-second sample from SHA-bound current sequence; browser natural playback is logged separately",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review"
+    }
+  ],
+  "audioIssues": [
+    "音频未作主观逐字听审；不把ASR或播放ended当听审。"
+  ],
+  "unresolved": [
+    "修改版待用户重新审核"
+  ],
+  "id": "V16A",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V16A-f65489a535.mp4",
+  "sha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+  "observations": [
+    "0–1.75秒管事闭口听问，后接真实闭合卷束核看与归拢。已检查完整0–6.125秒半秒序列，清楚保留持握，没有字幕列、字卡、方框模糊或暗影。"
+  ],
+  "repairs": [
+    "撤旧D01/D02字幕式并列正文",
+    "去旧模糊层，换未叠层原始反应/卷束动作",
+    "去除原片脏人声，只复用既有玩家原句WAV，0.35秒后入声"
+  ],
+  "integrationConditions": [
+    "只表示核看已经取得材料，不提前授予入仓/地方实收/应征等后续正文，也不替玩家自动判定。"
+  ],
+  "audioReview": "仅既有固定玩家原句WAV，无原片混入；ASR辅助识别无元标签，不代表听审"
+}

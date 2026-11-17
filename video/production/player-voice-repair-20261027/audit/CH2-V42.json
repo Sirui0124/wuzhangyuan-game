@@ -1,0 +1,89 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V42",
+  "src": "/video/current/CH2-V42-8abbd6b608-20261025.mp4",
+  "title": "共同旧卷尾声",
+  "subtitles": "/video/subtitles/CH2-V42-8abbd6b608-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V42-8abbd6b608-20261025.mp4",
+  "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+  "duration": 15.104,
+  "cues": [
+    {
+      "start": 1.87,
+      "end": 5.51,
+      "text": "魏地广人众，蜀中这些年，却一再折损"
+    },
+    {
+      "start": 6.27,
+      "end": 9.37,
+      "text": "光改这趟运粮，补不上这些缺口"
+    },
+    {
+      "start": 10.21,
+      "end": 11.81,
+      "text": "还得往更早的时候去"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY13-002",
+      "node": "CH2-LY13-002",
+      "text": "魏地广人众，蜀中这些年，却一再折损。",
+      "speaker": "视频（LI07，我（心声））",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-002.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "0b5c7e64ac3f709d2de4cd06eb208ed947cca40af213aaa5eb35a3bb5771fbb1",
+      "duration": 3.80475,
+      "speechRange": [
+        0.2,
+        3.42
+      ],
+      "correlation": 0.8777604798127232,
+      "insertAt": 2.0,
+      "speechStart": 2.2,
+      "speechEnd": 5.42
+    },
+    {
+      "id": "CH2-LY13-003",
+      "node": "CH2-LY13-003",
+      "text": "光改这趟运粮，补不上这些缺口。",
+      "speaker": "视频（LI07，我（心声））",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-003.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "ee4462ee453db196a968b9073fb577eb0212221c81b46a07116ceefa7a6829f7",
+      "duration": 3.39775,
+      "speechRange": [
+        0.3,
+        3.14
+      ],
+      "correlation": 0.9014879594622054,
+      "insertAt": 6.2,
+      "speechStart": 6.5,
+      "speechEnd": 9.34
+    },
+    {
+      "id": "CH2-LY13-004",
+      "node": "CH2-LY13-004",
+      "text": "还得往更早的时候去。",
+      "speaker": "视频（LI07，我（心声））",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-004.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "33bbd3790ce857627df5e4e4ce89dfcaef726eda4012f6959df22dd3bae81c40",
+      "duration": 1.9715,
+      "speechRange": [
+        0.26,
+        1.68
+      ],
+      "correlation": 0.8867853351953028,
+      "insertAt": 10.2,
+      "speechStart": 10.46,
+      "speechEnd": 11.88
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

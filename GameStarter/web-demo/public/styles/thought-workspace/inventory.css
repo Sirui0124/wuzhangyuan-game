@@ -1,0 +1,90 @@
+/* Warm paper and KaiTi remain shared with the approved art review.
+   Canvas component geometry is scoped above global material skins.
+   Navigation, portraits and scene art still use the shared material assets. */
+:root #game-root .workspace-screen{
+--mind-ink:#293e34;--mind-red:#a23d2f;--mind-muted:#717761;--mind-line:#688a7c;--mind-paper:#f0e8d6;--glass:rgba(255,255,255,.55);--conclusion:#e1eee4;color:var(--mind-ink)}
+
+:root[data-art-style] .workspace-screen .paper-atmosphere{
+opacity:.8}
+:root[data-art-style] .workspace-screen .thought-landscape{
+opacity:.035}
+
+.workspace-screen button:hover:not(:disabled){
+color:var(--mind-red)}
+.workspace-screen button:focus-visible,.workspace-screen textarea:focus-visible{
+outline:2px solid #a23d2f88;outline-offset:4px}
+.workspace-screen button:disabled{
+opacity:.42;cursor:default}
+
+.workspace-screen .light-hud nav{
+font-size:12px}
+.workspace-screen .game-mark{
+font-size:19px}
+
+.inventory-tab{
+position:absolute;left:30px;top:145px;z-index:24;display:flex;flex-direction:column;align-items:center;gap:13px;width:62px;padding:23px 8px 17px;border:1px solid #89907866;background:#f7efdddb;color:var(--mind-ink);box-shadow:4px 4px 0 #8f987616}
+
+.inventory-tab>span{
+font-size:22px;writing-mode:vertical-rl;letter-spacing:9px}
+.inventory-tab b{
+font:15px Georgia,serif;color:var(--mind-red);font-weight:400}
+.inventory-tab small{
+font:10px 'Microsoft YaHei',sans-serif;white-space:nowrap}
+
+.inventory-open .inventory-tab{
+left:293px;width:38px;border-left:0;box-shadow:none}
+.inventory-open .inventory-tab>span{
+font-size:17px}
+.inventory-open .inventory-tab small{
+font-size:9px}
+
+.thought-inventory{
+position:absolute;z-index:23;left:24px;top:124px;bottom:30px;width:270px;display:flex;flex-direction:column;background:#f9f2e2f5;border:1px solid #9c9c7c66;box-shadow:12px 18px 40px #423c2810;animation:inventory-unfold .18s ease-out}
+
+.thought-inventory>header{
+display:flex;justify-content:space-between;align-items:center;padding:22px 20px 8px}
+.thought-inventory h2{
+font-size:24px;font-weight:400;margin:5px 0;letter-spacing:2px}
+.thought-inventory header small{
+font:10px 'Microsoft YaHei',sans-serif;letter-spacing:3px;color:var(--mind-muted)}
+.thought-inventory header button{
+font-size:30px;padding:0 0 0 12px}
+
+.inventory-caption{
+font:11px/1.9 'Microsoft YaHei',sans-serif;color:var(--mind-muted);margin:0;padding:5px 20px 17px;border-bottom:1px solid #a7a18244}
+.inventory-scroll{
+overflow-y:auto;overscroll-behavior:contain;flex:1;scrollbar-width:thin;padding:7px 12px}
+.inventory-entry{
+border-bottom:1px solid #ada78833}
+.inventory-row{
+display:flex;align-items:center;width:100%;gap:9px;text-align:left;padding:18px 2px;line-height:1.5;font-size:19px;touch-action:pan-y;user-select:none}
+.inventory-row>span:nth-child(2){
+flex:1}
+.inventory-row>small{
+font:9px 'Microsoft YaHei',sans-serif;white-space:nowrap;color:#838572}
+.inventory-grip{
+font:20px sans-serif;color:#a7a18a;touch-action:none;cursor:grab}
+.is-placed .inventory-row>small{
+color:var(--mind-red)}
+.is-stale .inventory-row{
+opacity:.5}
+.inventory-row:hover .inventory-grip{
+color:var(--mind-red)}
+
+.inventory-detail{
+padding:0 8px 18px 23px;color:#566251}
+.inventory-detail p{
+font-size:16px;line-height:1.8;margin:4px 0 14px}
+.inventory-detail blockquote{
+margin:0 0 15px;font-size:17px;line-height:1.8}
+.inventory-detail blockquote small{
+display:block;font:10px/1.7 'Microsoft YaHei',sans-serif;color:#838572;margin:8px 0}
+.inventory-detail .source-boundary,.inventory-detail>small{
+font:10px/1.8 'Microsoft YaHei',sans-serif;color:#838572}
+.inventory-detail .source-links{
+display:flex;flex-direction:column;align-items:start;margin-bottom:12px;gap:9px;font-size:14px}
+.inventory-place{
+font:11px 'Microsoft YaHei',sans-serif;border-bottom:1px solid #a23d2f55;padding:8px 0;color:var(--mind-red)}
+.thought-inventory>footer{
+font:10px 'Microsoft YaHei',sans-serif;padding:16px 20px;border-top:1px solid #a7a18244;color:var(--mind-muted)}
+

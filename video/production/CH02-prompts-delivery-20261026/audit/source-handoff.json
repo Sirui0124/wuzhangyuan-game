@@ -1,0 +1,3101 @@
+{
+  "version": "ch2-story-review-20261026-review1",
+  "status": "待用户审台词；未生成；未接游戏",
+  "authoritativeFiles": {
+    "review": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\01-复审与分段规划.md",
+    "dialogue": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\02-台词单独审阅.md",
+    "mapping": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\制作映射.json"
+  },
+  "sourceRevisions": {
+    "script": 223,
+    "novel": 1286,
+    "unifiedReview": 11,
+    "collaboration": 38
+  },
+  "totalCandidatePrompts": 18,
+  "mainRoutePromptIds": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "C12",
+    "C13"
+  ],
+  "mainRouteSeconds": 348,
+  "alternatePromptIds": [
+    "C05R",
+    "C05C",
+    "C09A",
+    "C09C"
+  ],
+  "supplementalPromptIds": [
+    "E01"
+  ],
+  "userApprovalRequiredBeforeGeneration": true,
+  "generationSubmitted": false,
+  "audioReview": "未完成实际逐字听审；ASR与旧评论不作为通过",
+  "pictureReview": {
+    "resources": 73,
+    "sampleFrames": 455,
+    "coverage": "每资源4帧，查粮11段每秒抽帧；非逐帧运动验收"
+  },
+  "retainExactApprovedCurrent": [
+    {
+      "id": "V01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V01-358295773f-20261025.mp4",
+      "sha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+      "durationSeconds": 18.125
+    },
+    {
+      "id": "V05",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V05-037fce3f72-20261025.mp4",
+      "sha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+      "durationSeconds": 16.333333333333332
+    },
+    {
+      "id": "V11R",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V11R-4dc69223e0-20261025.mp4",
+      "sha256": "4dc69223e0a2187b58ff1b8e9fbef640090b49b339f07998be5febee544f8589",
+      "durationSeconds": 9.416666666666666
+    },
+    {
+      "id": "V11A",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V11A-6853314cf9-20261025.mp4",
+      "sha256": "6853314cf9134a25d83a9ae2772c84894d8e32b9e6a26e9a9bab782985aff6c0",
+      "durationSeconds": 6.041666666666667
+    },
+    {
+      "id": "V16B",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V16B-33fbd077e2-20261025.mp4",
+      "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "durationSeconds": 12.041666666666666
+    }
+  ],
+  "reuseCandidates": [
+    "V12",
+    "V13",
+    "V15",
+    "V17",
+    "V20",
+    "V21a",
+    "V21b",
+    "V23",
+    "V24"
+  ],
+  "audioHoldIds": [
+    "V11T",
+    "V11D"
+  ],
+  "v25Plan": {
+    "status": "文字规划待用户review；未生成、未替换原片",
+    "scope": "V25 赴魏计划的两处静态缺口与连续风险问答",
+    "sourcePreservation": "保留用户已通过的75.08秒旧V25完整文件、审批记录及六段现用拆片；新文字不继承旧通过。",
+    "segments": [
+      {
+        "id": "V25-PLAN-30",
+        "title": "把赴魏的打算说清楚",
+        "seconds": 30,
+        "oldSourceNodes": [
+          "CH2-LY09-P01",
+          "CH2-LY09-P02",
+          "CH2-LY09-P03",
+          "CH2-LY09-P04"
+        ],
+        "reason": "P02 缺已确认完成的参考音频，P04 存在未完成听审的疑点；将连续问答规划成一段自然对白。P04 的ASR疑点本身不构成重拍结论。",
+        "kind": "缺口整段改写备选；待用户选择是否采用",
+        "lines": [
+          {
+            "speaker": "苟安",
+            "text": "要是退军以后还继续征粮，我们还有一个打算。",
+            "start": 0,
+            "end": 7
+          },
+          {
+            "speaker": "苟安",
+            "text": "我去魏国，求他们放我回来，再传丞相要篡位的谣言，逼朝廷召回大军。",
+            "start": 7,
+            "end": 20
+          },
+          {
+            "speaker": "我",
+            "text": "李严知道这事？",
+            "start": 20,
+            "end": 23
+          },
+          {
+            "speaker": "苟安",
+            "text": "知道。李丰也在劝我们住手。",
+            "start": 23,
+            "end": 30
+          }
+        ],
+        "originalPiecesPreservedAsSource": [
+          "video/current/CH2-V25-01-4fa1ca0809-20261025.mp4",
+          "video/current/CH2-V25-03-2c2de78ebd-20261025.mp4"
+        ],
+        "continuity": "第一视角同一伤帐，苟安低声说出尚未实行的计划；无出发、入魏、传谣已发生的画面。后接下一段开头“眼下还没有赴魏……”进一步明确未实行。",
+        "minimalAlternative": "若用户只确认补原句而不采纳新对白，优先保留V25-01/V25-03并只处理P02、复听P04，不强行把旧短片拉成30秒。",
+        "unknownRequest": {
+          "node": "CH2-LY09-P02",
+          "requestId": "a31dbf42-96db-420d-a263-a7aaa00bdacd",
+          "taskId": null,
+          "status": "unknown-no-repost"
+        },
+        "oldUnsubmittedPrompt": "video/production/CH02-films-20261025/groups/G3/re-generation-md/G3-V25-02-赴魏散谣设想-13秒-Seedance.md"
+      },
+      {
+        "id": "V25-RISK-24",
+        "title": "还没出发，风险已经拦在面前",
+        "seconds": 24,
+        "existingDurationSeconds": 23.625,
+        "oldSourceNodes": [
+          "CH2-LY09-P05",
+          "CH2-LY09-001",
+          "CH2-LY09-002",
+          "CH2-LY09-003",
+          "CH2-LY09-004",
+          "CH2-LY09-005"
+        ],
+        "kind": "原片保留组；24秒为规划近似值，实际23.625秒，不补静音或冻帧，不作为新生成任务",
+        "lines": [
+          {
+            "speaker": "苟安",
+            "text": "眼下还没有赴魏，也没有把谣言传出去。",
+            "sourceNodes": [
+              "CH2-LY09-P05"
+            ]
+          },
+          {
+            "speaker": "苟安",
+            "text": "只要把军召回来，先让这些人活过这一回。",
+            "sourceNodes": [
+              "CH2-LY09-001"
+            ]
+          },
+          {
+            "speaker": "我",
+            "text": "你去了魏国，他们逼问粮道，你怎么应付？",
+            "sourceNodes": [
+              "CH2-LY09-002"
+            ]
+          },
+          {
+            "speaker": "我",
+            "text": "他们要是趁缺粮追击呢？谣言传开了，你又怎么收场？",
+            "sourceNodes": [
+              "CH2-LY09-003"
+            ]
+          },
+          {
+            "speaker": "苟安",
+            "text": "我没有这个把握。",
+            "sourceNodes": [
+              "CH2-LY09-004"
+            ]
+          },
+          {
+            "speaker": "苟安",
+            "text": "可再这么征下去，后方撑得住吗？",
+            "sourceNodes": [
+              "CH2-LY09-005"
+            ]
+          }
+        ],
+        "retainOriginalPieces": [
+          {
+            "file": "video/current/CH2-V25-05-da3c1b3b15-20261025.mp4",
+            "seconds": 7.416666666666667
+          },
+          {
+            "file": "video/current/CH2-V25-06-8818a8fa23-20261025.mp4",
+            "seconds": 4.375
+          },
+          {
+            "file": "video/current/CH2-V25-07-5bfff06b5e-20261025.mp4",
+            "seconds": 5.583333333333333
+          },
+          {
+            "file": "video/current/CH2-V25-08-bbc443227b-20261025.mp4",
+            "seconds": 6.25
+          }
+        ],
+        "boundary": "无新增互动，也不吞掉后续返营节点；这只是审阅时的连续分段，不代表已剪片或改游戏。",
+        "reviewLimit": "保留建议依据现有素材与历史通过记录；本代理未完成新的逐字听审，仍需结合本轮实际画面审查。"
+      }
+    ],
+    "v11Holds": [
+      {
+        "id": "V11T",
+        "speaker": "苟安",
+        "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+        "currentHandling": "暂留静态对白，定位原片听审",
+        "historicalApprovalPreserved": true,
+        "regenerate": false
+      },
+      {
+        "id": "V11D",
+        "speaker": "苟安",
+        "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+        "currentHandling": "暂留静态对白，定位原片听审",
+        "historicalApprovalPreserved": true,
+        "regenerate": false
+      }
+    ]
+  },
+  "segments": [
+    {
+      "id": "C01",
+      "title": "苟安把我引向李严",
+      "seconds": 24,
+      "old": "V12",
+      "nodes": [
+        "CH2-LY03-021",
+        "CH2-LY03-022",
+        "CH2-LY03-023",
+        "CH2-LY03-024"
+      ],
+      "refs": [
+        "苟安",
+        "伤帐"
+      ],
+      "entry": "第一轮表达及相应回应完成之后。",
+      "end": "接C02；凭据在真实递交后取得，不把凭据当缺粮证据。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 5,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安保持伏卧养伤姿势，听完我的话，伸手从榻边取出折好的本队凭据。",
+          "camera": "榻边第一视角中近景；跟随取纸动作略低头，不切掉取出过程。",
+          "ttsText": "好，我先不走。",
+          "onlyAllowedSpokenSentence": "好，我先不走。",
+          "sourceNodes": [
+            "CH2-LY03-021",
+            "CH2-LY03-022",
+            "CH2-LY03-023",
+            "CH2-LY03-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 5,
+          "endSeconds": 16,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他把凭据转向我，以指尖点村名、批次与日期所在的位置；纸面斜对镜头，不能读到模型伪字。",
+          "camera": "不换人物，不插仓中已经有足粮的画面；小幅抬眼看他把话说完。",
+          "ttsText": "就是这批。纸上写的那天之前，粮已经备好了，是李严扣着没发。",
+          "onlyAllowedSpokenSentence": "就是这批。纸上写的那天之前，粮已经备好了，是李严扣着没发。",
+          "sourceNodes": [
+            "CH2-LY03-021",
+            "CH2-LY03-022",
+            "CH2-LY03-023",
+            "CH2-LY03-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 16,
+          "endSeconds": 24,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他递出凭据，我接稳后他才松手。我将凭据收至画外，他仍留在榻上。",
+          "camera": "略向下跟随交接，再回到苟安；在手彻底分开后收镜。",
+          "ttsText": "凭这个去领本队的材料，别拿着乱闯。",
+          "onlyAllowedSpokenSentence": "凭这个去领本队的材料，别拿着乱闯。",
+          "sourceNodes": [
+            "CH2-LY03-021",
+            "CH2-LY03-022",
+            "CH2-LY03-023",
+            "CH2-LY03-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "保留原谎言的准确范围：同村、同批、指定当日之前已备齐。旧V12干净交付动作可作剪辑素材；若整段新声音与口型不能匹配，按本稿另做候选。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C01-苟安把我引向李严-24秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY03-021",
+          "speaker": "苟安",
+          "text": "好，我先不走。"
+        },
+        {
+          "node": "CH2-LY03-022",
+          "speaker": "演出",
+          "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。"
+        },
+        {
+          "node": "CH2-LY03-023",
+          "speaker": "苟安",
+          "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。"
+        },
+        {
+          "node": "CH2-LY03-024",
+          "speaker": "苟安",
+          "text": "凭这个能领本队材料，别拿着它乱闯。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C02",
+      "title": "拿凭据获准查这一批",
+      "seconds": 24,
+      "old": "V13",
+      "nodes": [
+        "CH2-LY04-001",
+        "CH2-LY04-002",
+        "CH2-LY04-003"
+      ],
+      "refs": [
+        "粮队管事",
+        "仓吏",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "持有C01真实拿到的本队凭据。",
+      "end": "仓吏准查本批之后接C03。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓外，我从画外递出凭据；管事接过，低头核对，再看向我。",
+          "camera": "第一视角在仓门通道停步；管事闭口听我说话。",
+          "ttsText": "我来领本队这批粮的交接记录。",
+          "onlyAllowedSpokenSentence": "我来领本队这批粮的交接记录。",
+          "sourceNodes": [
+            "CH2-LY04-001",
+            "CH2-LY04-002",
+            "CH2-LY04-003"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 16,
+          "speaker": "粮队管事",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "粮队管事",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "管事核对后把凭据还给我，转身带我沿同一通道走向右侧仓案。",
+          "camera": "连续跟随两三步，明确人从仓门走到仓案；不以瞬移换人。",
+          "ttsText": "是这一批。我陪你进去，找仓吏核对。",
+          "onlyAllowedSpokenSentence": "是这一批。我陪你进去，找仓吏核对。",
+          "sourceNodes": [
+            "CH2-LY04-001",
+            "CH2-LY04-002",
+            "CH2-LY04-003"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 16,
+          "endSeconds": 24,
+          "speaker": "仓吏",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓吏",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓吏站在仓案另一侧，取出这一批记录，其他成束账册留在架上。管事在左侧旁观。",
+          "camera": "以到达停步为切点，保持仓吏右、管事左；仓吏说话时管事闭口。",
+          "ttsText": "这批粮的收发账可以查。其他队的账，先别动。",
+          "onlyAllowedSpokenSentence": "这批粮的收发账可以查。其他队的账，先别动。",
+          "sourceNodes": [
+            "CH2-LY04-001",
+            "CH2-LY04-002",
+            "CH2-LY04-003"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "把核凭据、实际陪同、准查范围拍成一次完整行动；不增加翻阅全仓账目的权限。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C02-拿凭据获准查这一批-24秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "粮队管事",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "38f37cbd1dc4858218fdf1546e76240104c7431f542b55a5081e3f97cfc75c1e",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "仓吏",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 4,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-001",
+          "speaker": "我",
+          "text": "我来领取本队这批粮的交接材料。"
+        },
+        {
+          "node": "CH2-LY04-002",
+          "speaker": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。"
+        },
+        {
+          "node": "CH2-LY04-003",
+          "speaker": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C03",
+      "title": "先看懂粮是怎么交到手里的",
+      "seconds": 28,
+      "old": "V14",
+      "nodes": [
+        "CH2-LY04-004"
+      ],
+      "refs": [
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "仓吏已经准查。",
+      "end": "回到同一仓案接C04；不授任何本批结论。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "我（心声）",
+          "addressee": "无（心声或静默）",
+          "voicePosition": "画外心声",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "案头纹理自然接一张无字的平面粮路画卷：画面左端是量粮装袋，粮袋由人搬过仓门。",
+          "camera": "一条平面画卷上从左向右平移；所有人物为画卷示意，不当本批实况或新证据。",
+          "ttsText": "先在地方收粮，再把收来的粮送进仓里。",
+          "onlyAllowedSpokenSentence": "先在地方收粮，再把收来的粮送进仓里。",
+          "sourceNodes": [
+            "CH2-LY04-004"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 14,
+          "speaker": "我（心声）",
+          "addressee": "无（心声或静默）",
+          "voicePosition": "画外心声",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "镜头从仓内保管区移向仓外发粮口，粮袋交到粮队手中，接收者点验后在小册上作签收动作。",
+          "camera": "同一方向展现入仓与出仓的区别。领取端就在仓外交接，不拍成前线营门收粮。",
+          "ttsText": "仓里按批交给粮队，粮队点清以后签收。",
+          "onlyAllowedSpokenSentence": "仓里按批交给粮队，粮队点清以后签收。",
+          "sourceNodes": [
+            "CH2-LY04-004"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 14,
+          "endSeconds": 21,
+          "speaker": "我（心声）",
+          "addressee": "无（心声或静默）",
+          "voicePosition": "画外心声",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "画卷上方只出现一名官吏递出无字文书的动作，下方仍是收粮动作。文书不变成粮袋，也不显示任何数量。",
+          "camera": "略拉远交代要求与实粮是两件事；不生成文字、表格、标签或箭头字幕。",
+          "ttsText": "纸上要求交多少，和真正收到多少，要分开看。",
+          "onlyAllowedSpokenSentence": "纸上要求交多少，和真正收到多少，要分开看。",
+          "sourceNodes": [
+            "CH2-LY04-004"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 21,
+          "endSeconds": 28,
+          "speaker": "我（心声）",
+          "addressee": "无（心声或静默）",
+          "voicePosition": "画外心声",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "视线从最右的领取处沿原路向左回望，最后自然落回现实仓案上的本队凭据。画卷中的人继续正常行动，不倒放。",
+          "camera": "平稳回移后用纸张落案动作接现实，留出完整落案，不用长黑场。",
+          "ttsText": "我就从我们领粮的地方，一步一步往前查。",
+          "onlyAllowedSpokenSentence": "我就从我们领粮的地方，一步一步往前查。",
+          "sourceNodes": [
+            "CH2-LY04-004"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "本轮明确改写：旧无声画卷新增我的心声，帮助第一次接触粮路的玩家理解；从领取端逆查，纠正旧画面把领取混为前线接收。需用户同意后才替换旧版。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C03-先看懂粮是怎么交到手里的-28秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C04",
+      "title": "先把三份记录分清",
+      "seconds": 26,
+      "old": "V15",
+      "nodes": [
+        "CH2-LY04-F01",
+        "CH2-LY04-D01",
+        "CH2-LY04-D02",
+        "CH2-LY04-D03"
+      ],
+      "refs": [
+        "粮队管事",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "粮路说明结束。",
+      "end": "停在原普通选择N2；原件可阅读，尚不播放核对结论。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我将凭据放在案角；管事把本队材料从束带里取出，依次展开。",
+          "camera": "第一视角中近景；我发声时管事自然闭口看我，随后看向材料。",
+          "ttsText": "苟安说粮早就备好了。我先看看，我们领粮那天，仓里到底交了多少。",
+          "onlyAllowedSpokenSentence": "苟安说粮早就备好了。我先看看，我们领粮那天，仓里到底交了多少。",
+          "sourceNodes": [
+            "CH2-LY04-F01",
+            "CH2-LY04-D01",
+            "CH2-LY04-D02",
+            "CH2-LY04-D03"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 18,
+          "speaker": "粮队管事",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "粮队管事",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他先放下仓里交粮记录，再把本队签收放到旁边；每份放稳后才指下一份。",
+          "camera": "略低头看两份材料的位置关系，不用字卡替代原件，不提前拍核对成功反应。",
+          "ttsText": "这是仓里交粮的记录，这是我们领粮时签的。",
+          "onlyAllowedSpokenSentence": "这是仓里交粮的记录，这是我们领粮时签的。",
+          "sourceNodes": [
+            "CH2-LY04-F01",
+            "CH2-LY04-D01",
+            "CH2-LY04-D02",
+            "CH2-LY04-D03"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 18,
+          "endSeconds": 26,
+          "speaker": "粮队管事",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "粮队管事",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他取来行程册，放在两份交接材料旁边，手指在册边停一下，然后收回。",
+          "camera": "保留三份材料同时在场的中近景；镜头结束后由游戏展示准确原文及选择。",
+          "ttsText": "路上损耗另记在这一本，别和领粮的账混在一起。",
+          "onlyAllowedSpokenSentence": "路上损耗另记在这一本，别和领粮的账混在一起。",
+          "sourceNodes": [
+            "CH2-LY04-F01",
+            "CH2-LY04-D01",
+            "CH2-LY04-D02",
+            "CH2-LY04-D03"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "每份记录只说明是什么，避免在N2之前替玩家作出完整判断；现片的短取账动作可复用，但不足以独立承担说明。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C04-先把三份记录分清-26秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "粮队管事",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "38f37cbd1dc4858218fdf1546e76240104c7431f542b55a5081e3f97cfc75c1e",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-F01",
+          "speaker": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。"
+        },
+        {
+          "node": "CH2-LY04-D01",
+          "speaker": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。"
+        },
+        {
+          "node": "CH2-LY04-D02",
+          "speaker": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C05",
+      "title": "第一步 领粮时就没交够",
+      "seconds": 30,
+      "old": "V16A＋V17",
+      "nodes": [
+        "CH2-LY04-Q1A",
+        "CH2-LY04-F02",
+        "CH2-LY04-T01"
+      ],
+      "refs": [
+        "前线接收人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "N2实际选择A后；选择文字只展示，实际发声一次，由本段首句承担。不再另播V16A。",
+      "end": "接C06；仅完成领取与出仓核对，未免除苟安其他责任。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 10,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把出仓记录和本队签收放到一起，接收人听完后低头开始核对。",
+          "camera": "第一视角同案中近景；对方不替我做口型。",
+          "ttsText": "先对一对仓里交了多少，我们又领了多少。看看粮是领之前就少，还是路上少的。",
+          "onlyAllowedSpokenSentence": "先对一对仓里交了多少，我们又领了多少。看看粮是领之前就少，还是路上少的。",
+          "sourceNodes": [
+            "CH2-LY04-Q1A",
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 10,
+          "endSeconds": 22,
+          "speaker": "前线接收人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "前线接收人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "接收人依次核对两份记录，再把另列的行程册移到旁边。",
+          "camera": "以核对动作为中心，保持三份材料真实存在；不拍前线到货。",
+          "ttsText": "对上了。仓里交给我们多少，我们就领走了多少。没交够的那一笔，当时就记着。",
+          "onlyAllowedSpokenSentence": "对上了。仓里交给我们多少，我们就领走了多少。没交够的那一笔，当时就记着。",
+          "sourceNodes": [
+            "CH2-LY04-Q1A",
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 22,
+          "endSeconds": 30,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我看向仓吏所在方向；接收人闭口听完，侧身让出案边。",
+          "camera": "视线转向下一位，接C06，不重复播C05R。",
+          "ttsText": "路上的损耗另算。那就往前查，仓里为什么没交够。",
+          "onlyAllowedSpokenSentence": "路上的损耗另算。那就往前查，仓里为什么没交够。",
+          "sourceNodes": [
+            "CH2-LY04-Q1A",
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "将领取前欠交与领取后损耗分清。沿用原角色资产及证言身份，内部前线接收人标签不读出，画面不另拍前线到货数量。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C05-第一步 领粮时就没交够-30秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "前线接收人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "554d25d17ba1c661dd1791ef4e1fc168c84b146be598a510a95bfaff4395f9d8",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "speaker": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。"
+        },
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+        },
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C06",
+      "title": "第二步 仓里有没有扣着粮",
+      "seconds": 26,
+      "old": "V18前段",
+      "nodes": [
+        "CH2-LY04-T01",
+        "CH2-LY04-D04"
+      ],
+      "refs": [
+        "仓吏",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "第一步已经核清。",
+      "end": "接C07；不新增一次选择。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 8,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓吏从案右取出本批入仓账，解开束带，摆到已核的出仓记录旁边。",
+          "camera": "第一视角从上一段望向仓吏的方向接入；仓吏听完才答。",
+          "ttsText": "苟安说粮已经备好了。送进仓里的这些，后来都发到哪儿了？",
+          "onlyAllowedSpokenSentence": "苟安说粮已经备好了。送进仓里的这些，后来都发到哪儿了？",
+          "sourceNodes": [
+            "CH2-LY04-T01",
+            "CH2-LY04-D04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 8,
+          "endSeconds": 19,
+          "speaker": "仓吏",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓吏",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓吏沿两份记录分别核对，回头指向这一批的存放位置，再回到案边。仓中背景仍有其他粮袋。",
+          "camera": "小幅随他回望一次，只建立仓内外关系；不以空仓画面当作无粮证据。",
+          "ttsText": "这一批收进来多少，就给你们发了多少。欠交的那些，仓里没收到，也没另外存着。",
+          "onlyAllowedSpokenSentence": "这一批收进来多少，就给你们发了多少。欠交的那些，仓里没收到，也没另外存着。",
+          "sourceNodes": [
+            "CH2-LY04-T01",
+            "CH2-LY04-D04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 19,
+          "endSeconds": 26,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把已核对的两份账放到一起，留出一处给下一份记录；仓吏转向等候的地方经手人。",
+          "camera": "保持人物和案头左右位置，切在对方递来新记录的动作开始之前。",
+          "ttsText": "那就再往前查。地方收来的粮，都送进仓了吗？",
+          "onlyAllowedSpokenSentence": "那就再往前查。地方收来的粮，都送进仓了吗？",
+          "sourceNodes": [
+            "CH2-LY04-T01",
+            "CH2-LY04-D04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "补上原V18缺失的明确回答，再自然提出下一问。这里只排除这一批足额现粮被扣，不能说李严没有责任。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C06-第二步 仓里有没有扣着粮-26秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "仓吏",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。"
+        },
+        {
+          "node": "CH2-LY04-D04",
+          "speaker": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C07",
+      "title": "第三步 地方收来的有没有少送",
+      "seconds": 24,
+      "old": "V18中段",
+      "nodes": [
+        "CH2-LY04-W01",
+        "CH2-LY04-D05"
+      ],
+      "refs": [
+        "地方经手人",
+        "仓吏",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "已核本批入仓与发出。",
+      "end": "接C08；不新增选择或画布。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人从画面左侧送来原件，仓吏接稳后放在入仓账旁；不突然生成一张纸。",
+          "camera": "先交代人带着材料走到案前，再跟随递交，接物动作完整。",
+          "ttsText": "这是地方收粮的记录，村名和批次都在这里。",
+          "onlyAllowedSpokenSentence": "这是地方收粮的记录，村名和批次都在这里。",
+          "sourceNodes": [
+            "CH2-LY04-W01",
+            "CH2-LY04-D05"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 16,
+          "speaker": "仓吏",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓吏",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓吏先核村名批次，再对照两份记录；地方经手人闭口等待，目光随指示移动。",
+          "camera": "同一视轴中近景，插入短手部核对镜头，避免给纸面独立长特写。",
+          "ttsText": "数目对得上。地方收到的这些，都送进仓了，没有在这一步少下来。",
+          "onlyAllowedSpokenSentence": "数目对得上。地方收到的这些，都送进仓了，没有在这一步少下来。",
+          "sourceNodes": [
+            "CH2-LY04-W01",
+            "CH2-LY04-D05"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 16,
+          "endSeconds": 24,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我抬眼问地方经手人。他从手中余下的材料里取出原定要求，准备翻开。",
+          "camera": "转向地方经手人，下一段从翻开动作继续；不切去提前展示村民饥困。",
+          "ttsText": "收来的都送到了。那最初要求收多少，实际又收了多少？",
+          "onlyAllowedSpokenSentence": "收来的都送到了。那最初要求收多少，实际又收了多少？",
+          "sourceNodes": [
+            "CH2-LY04-W01",
+            "CH2-LY04-D05"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "增加实收记录的真实来源和一条听得懂的回答，不提前解释百姓为什么交不出粮。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C07-第三步 地方收来的有没有少送-24秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "地方经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "仓吏",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 4,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-W01",
+          "speaker": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？"
+        },
+        {
+          "node": "CH2-LY04-D05",
+          "speaker": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C08",
+      "title": "第四步 要交的和收到的",
+      "seconds": 22,
+      "old": "V18后段",
+      "nodes": [
+        "CH2-LY04-C01",
+        "CH2-LY04-D06"
+      ],
+      "refs": [
+        "地方经手人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "地方实收与入仓已经核过。",
+      "end": "停在原普通选择N3，玩家作完整判断。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 8,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人展开要求记录，分别指向两处；我面前仍留着上一段的地方实收记录。",
+          "camera": "先看人再看手；纸面斜置、自然景深，不生成可读伪字。",
+          "ttsText": "这边写的是原来要交多少，旁边才是实际收到多少。",
+          "onlyAllowedSpokenSentence": "这边写的是原来要交多少，旁边才是实际收到多少。",
+          "sourceNodes": [
+            "CH2-LY04-C01",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 8,
+          "endSeconds": 15,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他把本批实收记录移近对应位置，再收回手，让我自己看。",
+          "camera": "连续近景完成两份材料对照；不插粮袋突然消失的示意。",
+          "ttsText": "收到的没那么多，差的这部分，还记着欠交。",
+          "onlyAllowedSpokenSentence": "收到的没那么多，差的这部分，还记着欠交。",
+          "sourceNodes": [
+            "CH2-LY04-C01",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 15,
+          "endSeconds": 22,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我将已核记录按来路排在案边，停在最后这份要求和实收记录上，手自然离开。",
+          "camera": "镜头结束于静稳但仍有纸边与衣料的真实细动；随后进入游戏阅读与N3。",
+          "ttsText": "把这两栏，和前面核过的记录放在一起。",
+          "onlyAllowedSpokenSentence": "把这两栏，和前面核过的记录放在一起。",
+          "sourceNodes": [
+            "CH2-LY04-C01",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "事实说清、结论留给玩家。原来要求交多少不是已经有多少粮；题前不预告停催命令。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C08-第四步 要交的和收到的-22秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "地方经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-C01",
+          "speaker": "我",
+          "text": "收到的粮对上了。原定要交多少？"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C09",
+      "title": "为什么交粮数一直没改",
+      "seconds": 30,
+      "old": "V19B＋V20前段",
+      "nodes": [
+        "CH2-LY04-Q4B",
+        "CH2-LY04-C04"
+      ],
+      "refs": [
+        "地方经手人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "N3实际选择B后；选择文字只展示，实际发声一次，由本段首句承担。不再另播V19B。",
+      "end": "汇合到C10查签认。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 12,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把核过的材料依次整理，停在最初的要求与实收两份上，抬眼看地方经手人。",
+          "camera": "保持原案和人物位置，我说完后地方经手人才答；不能提前说出停催事实。",
+          "ttsText": "后面几笔都对得上，粮是一开始就没收齐。再问问，当时怎么催粮，又是怎么定交粮数的。",
+          "onlyAllowedSpokenSentence": "后面几笔都对得上，粮是一开始就没收齐。再问问，当时怎么催粮，又是怎么定交粮数的。",
+          "sourceNodes": [
+            "CH2-LY04-Q4B",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 12,
+          "endSeconds": 23,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人指着已有的交粮要求与实收记录，口头说明停催情况；不取出额外调度文书。",
+          "camera": "按手的移动作一次近景切入，再回脸部说完；无想象中的李严发令画面。",
+          "ttsText": "李严叫停了追加催征，可交粮的数目没改。要交的还是那么多，收到的却不够。",
+          "onlyAllowedSpokenSentence": "李严叫停了追加催征，可交粮的数目没改。要交的还是那么多，收到的却不够。",
+          "sourceNodes": [
+            "CH2-LY04-Q4B",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 23,
+          "endSeconds": 30,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我收起刚核过的记录，留出缺粮报告的位置。地方经手人望向管事，管事走向存档处。",
+          "camera": "镜头跟随视线交代下一份材料从哪里来，不提前表现苟安有罪。",
+          "ttsText": "这批粮没收齐，苟安当时知道吗？",
+          "onlyAllowedSpokenSentence": "这批粮没收齐，苟安当时知道吗？",
+          "sourceNodes": [
+            "CH2-LY04-Q4B",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "从粮去了哪里转向调度与知情时间。停催原因和合谋都留到后文。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C09-为什么交粮数一直没改-30秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "地方经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "speaker": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。"
+        },
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C10",
+      "title": "苟安早就签过字",
+      "seconds": 30,
+      "old": "V20后段",
+      "nodes": [
+        "CH2-LY06-014",
+        "CH2-LY06-015",
+        "CH2-LY06-016",
+        "CH2-LY06-017",
+        "CH2-LY06-018",
+        "CH2-LY06-019",
+        "CH2-LY06-021"
+      ],
+      "refs": [
+        "仓中经手人",
+        "仓吏",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "三种N3反馈和停催事实已经呈现。",
+      "end": "保留报告与送达记录阅读，停在原回伤帐行动确认；不直接到伤帐。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 11,
+          "speaker": "仓中经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓中经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "经手人把存档报告取出，先与本队交接记录核村名和批次，再翻到签字处；签字不由模型生成可读文字。",
+          "camera": "人物中近景进入报告手部近景；一镜完成取出、核对、翻页，不伪造旧日签署闪回。",
+          "ttsText": "这份缺粮报告，村名、批次都对得上。苟安亲笔签的，我当时就在场。",
+          "onlyAllowedSpokenSentence": "这份缺粮报告，村名、批次都对得上。苟安亲笔签的，我当时就在场。",
+          "sourceNodes": [
+            "CH2-LY06-014",
+            "CH2-LY06-015",
+            "CH2-LY06-016",
+            "CH2-LY06-017",
+            "CH2-LY06-018",
+            "CH2-LY06-019",
+            "CH2-LY06-021"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 11,
+          "endSeconds": 17,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我将苟安交出的凭据与报告送达记录放在一起，抬眼求证。经手人闭口听完。",
+          "camera": "近景上抬到经手人，问题中的同日仍须由他下一句确认。",
+          "ttsText": "签字就是他指的那天，还在挨杖之前？",
+          "onlyAllowedSpokenSentence": "签字就是他指的那天，还在挨杖之前？",
+          "sourceNodes": [
+            "CH2-LY06-014",
+            "CH2-LY06-015",
+            "CH2-LY06-016",
+            "CH2-LY06-017",
+            "CH2-LY06-018",
+            "CH2-LY06-019",
+            "CH2-LY06-021"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 17,
+          "endSeconds": 23,
+          "speaker": "仓中经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓中经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "经手人再核送达与签收的位置，轻点一次，移开手。",
+          "camera": "保持同一侧，不让仓吏替经手人做口型。",
+          "ttsText": "对，送到和签字都是那天。他那时还没挨杖。",
+          "onlyAllowedSpokenSentence": "对，送到和签字都是那天。他那时还没挨杖。",
+          "sourceNodes": [
+            "CH2-LY06-014",
+            "CH2-LY06-015",
+            "CH2-LY06-016",
+            "CH2-LY06-017",
+            "CH2-LY06-018",
+            "CH2-LY06-019",
+            "CH2-LY06-021"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 23,
+          "endSeconds": 30,
+          "speaker": "仓吏",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "仓吏",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "仓吏从右侧把当天仓账展开并核对，最后将三份材料并排留给我。",
+          "camera": "切到右侧仓吏说完，再看案上材料；留给后续阅读及回帐按钮，不拍我已经出发。",
+          "ttsText": "当天的仓账也核过了，那天后来仍没补齐。",
+          "onlyAllowedSpokenSentence": "当天的仓账也核过了，那天后来仍没补齐。",
+          "sourceNodes": [
+            "CH2-LY06-014",
+            "CH2-LY06-015",
+            "CH2-LY06-016",
+            "CH2-LY06-017",
+            "CH2-LY06-018",
+            "CH2-LY06-019",
+            "CH2-LY06-021"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "同村、同批、同日、亲笔与在场者、受杖前、当天后来未补齐必须一并保留。不能把缺粮报告本身直接当合谋证明。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C10-苟安早就签过字-30秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "仓中经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓中经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "e3bac2c07c367de832b627edbc9661cf3dcd1bbf7a1d7338beb13b73f83295df",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "仓吏",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\仓吏\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "852fe34abd388a3f24836aa4426edd91220f577d8b4189c3d246381d8a645664",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 4,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY06-014",
+          "speaker": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。"
+        },
+        {
+          "node": "CH2-LY06-015",
+          "speaker": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。"
+        },
+        {
+          "node": "CH2-LY06-016",
+          "speaker": "我",
+          "text": "这份确认是谁写的？"
+        },
+        {
+          "node": "CH2-LY06-017",
+          "speaker": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。"
+        },
+        {
+          "node": "CH2-LY06-018",
+          "speaker": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。"
+        },
+        {
+          "node": "CH2-LY06-019",
+          "speaker": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。"
+        },
+        {
+          "node": "CH2-LY06-021",
+          "speaker": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C11",
+      "title": "你明明知道为什么骗我",
+      "seconds": 28,
+      "old": "V21a",
+      "nodes": [
+        "CH2-LY07-E02",
+        "CH2-LY07-004",
+        "CH2-LY07-005"
+      ],
+      "refs": [
+        "苟安",
+        "伤帐"
+      ],
+      "entry": "玩家已确认带材料回帐，完整核清报告和同日仓账。",
+      "end": "第二封信真实交付后停在读信界面，不提前播C12。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 12,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把报告和当天仓账放到榻边。苟安先看纸，再看我，听完前不开口。",
+          "camera": "榻侧第一视角，报告只作真实递放动作；始终留住苟安的反应。",
+          "ttsText": "你那天就签字确认粮没收齐，当天也没补齐。为什么还告诉我，粮早就备好了，是李严扣着没发？",
+          "onlyAllowedSpokenSentence": "你那天就签字确认粮没收齐，当天也没补齐。为什么还告诉我，粮早就备好了，是李严扣着没发？",
+          "sourceNodes": [
+            "CH2-LY07-E02",
+            "CH2-LY07-004",
+            "CH2-LY07-005"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 12,
+          "endSeconds": 24,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安看向我，说到后半句时声音压低，手从榻边取出另一封折信；不突然坐起。",
+          "camera": "固定中近景，只在取信时稍向下跟手，不加愤怒甩纸或反派笑。",
+          "ttsText": "你想让我留下，也想让大军继续打。我若说，我就是想让它停下来，你还会替我查吗？",
+          "onlyAllowedSpokenSentence": "你想让我留下，也想让大军继续打。我若说，我就是想让它停下来，你还会替我查吗？",
+          "sourceNodes": [
+            "CH2-LY07-E02",
+            "CH2-LY07-004",
+            "CH2-LY07-005"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 24,
+          "endSeconds": 28,
+          "speaker": "无",
+          "addressee": "无（心声或静默）",
+          "voicePosition": "无声",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安把第二封信推过来，我接住。他松手后看着我等待读信。",
+          "camera": "第一视角交接近景；信封纸背朝镜头，真实接稳后结束。",
+          "ttsText": "",
+          "onlyAllowedSpokenSentence": "",
+          "sourceNodes": [
+            "CH2-LY07-E02",
+            "CH2-LY07-004",
+            "CH2-LY07-005"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "让对质紧接刚查到的矛盾；信件阅读保留交互边界。该段为拟替换候选，已有画面不自动判废。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C11-你明明知道为什么骗我-28秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY07-E02",
+          "speaker": "我",
+          "text": "你已确认没征齐，为什么还说粮早已备好、被李严扣住？"
+        },
+        {
+          "node": "CH2-LY07-004",
+          "speaker": "苟安",
+          "text": "因为你想让大军继续打。我若告诉你，我想让它停下来，你还肯替我查吗？"
+        },
+        {
+          "node": "CH2-LY07-005",
+          "speaker": "演出",
+          "text": "苟安取出另一封李丰来信，推到我面前。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C12",
+      "title": "他们为什么借我查粮",
+      "seconds": 30,
+      "old": "V21b前段",
+      "nodes": [
+        "CH2-LY07-010",
+        "CH2-LY07-011",
+        "CH2-LY07-012",
+        "CH2-LY07-013",
+        "CH2-LY07-014"
+      ],
+      "refs": [
+        "苟安",
+        "伤帐"
+      ],
+      "entry": "玩家已经实际读完第二封信。",
+      "end": "接C13；到本段供述完成才确立双方安排。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把读过的第二封信折回，放到报告旁边，视线回到苟安。",
+          "camera": "从读信后的同一座位接入；不再次拍交信。",
+          "ttsText": "李丰劝你和李严停手。你们到底商量了什么？",
+          "onlyAllowedSpokenSentence": "李丰劝你和李严停手。你们到底商量了什么？",
+          "sourceNodes": [
+            "CH2-LY07-010",
+            "CH2-LY07-011",
+            "CH2-LY07-012",
+            "CH2-LY07-013",
+            "CH2-LY07-014"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 17,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安看着案边材料，说完才抬眼看我。他的手留在榻侧，不去抢材料。",
+          "camera": "稳定中近景，让完整句子说完，不用断句连跳镜头。",
+          "ttsText": "让一个跟李家无关的人，把缺粮的事报上去，逼这一回退军。",
+          "onlyAllowedSpokenSentence": "让一个跟李家无关的人，把缺粮的事报上去，逼这一回退军。",
+          "sourceNodes": [
+            "CH2-LY07-010",
+            "CH2-LY07-011",
+            "CH2-LY07-012",
+            "CH2-LY07-013",
+            "CH2-LY07-014"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 17,
+          "endSeconds": 27,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安指尖碰到第一封信又收回，说明时保持疲惫克制，不摆出得意表情。",
+          "camera": "轻微向信的位置跟一次，回到脸上结束这一句。",
+          "ttsText": "李严肯担一部分责任，我就装成被他推出来顶罪的人。",
+          "onlyAllowedSpokenSentence": "李严肯担一部分责任，我就装成被他推出来顶罪的人。",
+          "sourceNodes": [
+            "CH2-LY07-010",
+            "CH2-LY07-011",
+            "CH2-LY07-012",
+            "CH2-LY07-013",
+            "CH2-LY07-014"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 27,
+          "endSeconds": 30,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我停住收材料的手；苟安闭口面对我。",
+          "camera": "无第三人称反打，留在我的视线位置。",
+          "ttsText": "所以，你挑中了我。",
+          "onlyAllowedSpokenSentence": "所以，你挑中了我。",
+          "sourceNodes": [
+            "CH2-LY07-010",
+            "CH2-LY07-011",
+            "CH2-LY07-012",
+            "CH2-LY07-013",
+            "CH2-LY07-014"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "只到此刻明确双方事先安排。保留李严承担一部分责任的限定；不拍尚未实施的赴魏散谣。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C12-他们为什么借我查粮-30秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY07-010",
+          "speaker": "我",
+          "text": "李丰劝你和李严停手。你们究竟安排了什么？"
+        },
+        {
+          "node": "CH2-LY07-011",
+          "speaker": "苟安",
+          "text": "把缺粮的事捅上去，逼他们查，逼这一回退军。"
+        },
+        {
+          "node": "CH2-LY07-012",
+          "speaker": "苟安",
+          "text": "李严肯担一部分责任，我装成被他推出去顶罪的人，让外人把材料送上去。"
+        },
+        {
+          "node": "CH2-LY07-013",
+          "speaker": "我",
+          "text": "你知道我想留住你。"
+        },
+        {
+          "node": "CH2-LY07-014",
+          "speaker": "苟安",
+          "text": "你想扳倒李严，让大军继续打。我就给了你一个往下查的理由。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C13",
+      "title": "救我是真的骗我也是",
+      "seconds": 26,
+      "old": "V21b后段",
+      "nodes": [
+        "CH2-LY07-014",
+        "CH2-LY07-016",
+        "CH2-LY07-017",
+        "CH2-LY07-018",
+        "CH2-LY07-024"
+      ],
+      "refs": [
+        "苟安",
+        "伤帐"
+      ],
+      "entry": "已听到共同安排。",
+      "end": "接保留候选V22访村邀请；不提前进入村庄见闻。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安看着我，停下摆弄纸角的手，承认误导。",
+          "camera": "同一榻侧机位，以手停下作为情绪变化，不骤推脸。",
+          "ttsText": "你想查李严，想让大军继续打。我就顺着你的想法，让你往下查。",
+          "onlyAllowedSpokenSentence": "你想查李严，想让大军继续打。我就顺着你的想法，让你往下查。",
+          "sourceNodes": [
+            "CH2-LY07-014",
+            "CH2-LY07-016",
+            "CH2-LY07-017",
+            "CH2-LY07-018",
+            "CH2-LY07-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 16,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把手从案上收回。苟安听完才抬起眼，没有跟着我的声音开口。",
+          "camera": "中近景保持，不插新的崖边素材改写救援过程。",
+          "ttsText": "那天在崖边救我，你也算过这些？",
+          "onlyAllowedSpokenSentence": "那天在崖边救我，你也算过这些？",
+          "sourceNodes": [
+            "CH2-LY07-014",
+            "CH2-LY07-016",
+            "CH2-LY07-017",
+            "CH2-LY07-018",
+            "CH2-LY07-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 16,
+          "endSeconds": 26,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安先答救援，再短停后承认骗我；说完看向案上报告，手不遮住它。",
+          "camera": "停顿发生在两句之间，末尾保留自然呼吸与视线落下；不冻结、不补总结旁白。",
+          "ttsText": "那时候你快掉下去了，我只想先把人拉上来。骗你，是后来的事。",
+          "onlyAllowedSpokenSentence": "那时候你快掉下去了，我只想先把人拉上来。骗你，是后来的事。",
+          "sourceNodes": [
+            "CH2-LY07-014",
+            "CH2-LY07-016",
+            "CH2-LY07-017",
+            "CH2-LY07-018",
+            "CH2-LY07-024"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "保留真实救命与后来利用的两面；删除重复总结心声的提案只影响演出，不删除事件事实。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C13-救我是真的骗我也是-26秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY07-014",
+          "speaker": "苟安",
+          "text": "你想扳倒李严，让大军继续打。我就给了你一个往下查的理由。"
+        },
+        {
+          "node": "CH2-LY07-016",
+          "speaker": "我",
+          "text": "那天在崖边救我，你也算过我会替你做这些？"
+        },
+        {
+          "node": "CH2-LY07-017",
+          "speaker": "苟安",
+          "text": "那时候你快掉下去了，我只想着先把人拉上来。"
+        },
+        {
+          "node": "CH2-LY07-018",
+          "speaker": "苟安",
+          "text": "骗你，是后来的事。"
+        },
+        {
+          "node": "CH2-LY07-024",
+          "speaker": "我（心声）",
+          "text": "救命是真的，利用也是真的。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C05R",
+      "title": "问过损耗后回来继续查",
+      "seconds": 24,
+      "old": "V17（有限核问返回）",
+      "nodes": [
+        "CH2-LY04-F02",
+        "CH2-LY04-T01"
+      ],
+      "refs": [
+        "前线接收人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "N2-B听完保留原片V16B后，玩家明确选择回去接着查；本题仍为严谨+1。",
+      "end": "接C06；仅完成领取与出仓核对，未免除苟安其他责任。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 9,
+          "speaker": "前线接收人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "前线接收人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "原接收人核对相邻两份材料，先按住仓里交粮记录，再移指到本队签收；不另造新经手人。",
+          "camera": "同案第一视角，先看对方眼神落到两份原件，再略低头跟手。",
+          "ttsText": "对上了。仓里交给我们多少，我们就领走了多少。",
+          "onlyAllowedSpokenSentence": "对上了。仓里交给我们多少，我们就领走了多少。",
+          "sourceNodes": [
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 9,
+          "endSeconds": 15,
+          "speaker": "前线接收人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "前线接收人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "他停在交付记录的一处，随后把行程册轻轻移到旁边；没有把途中损耗划掉。",
+          "camera": "短插镜只看真实指示和移册动作，不依靠可读数字判断。",
+          "ttsText": "没交够的那一笔，领粮时就记在这里了。",
+          "onlyAllowedSpokenSentence": "没交够的那一笔，领粮时就记在这里了。",
+          "sourceNodes": [
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 15,
+          "endSeconds": 24,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我把两份交接材料并在一起，抬眼望向仓吏所在的右侧。接收人闭口听完，把下一处位置让出来。",
+          "camera": "视线由纸面转向仓吏方向，下一段沿同一方向接入，不拍运输倒放。",
+          "ttsText": "路上的损耗是后来的事。那就往前查，看看仓里为什么没交够。",
+          "onlyAllowedSpokenSentence": "路上的损耗是后来的事。那就往前查，看看仓里为什么没交够。",
+          "sourceNodes": [
+            "CH2-LY04-F02",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "将领取前欠交与领取后损耗分清。沿用原角色资产及证言身份，内部前线接收人标签不读出，画面不另拍前线到货数量。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C05R-问过损耗后回来继续查-24秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "前线接收人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "554d25d17ba1c661dd1791ef4e1fc168c84b146be598a510a95bfaff4395f9d8",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+        },
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C05C",
+      "title": "先归责苟安，听纠正后核清交接",
+      "seconds": 28,
+      "old": "V16C＋V17",
+      "nodes": [
+        "CH2-LY04-Q1C",
+        "CH2-LY04-Q1FB0",
+        "CH2-LY04-F02",
+        "CH2-LY04-D03",
+        "CH2-LY04-T01"
+      ],
+      "refs": [
+        "粮队管事",
+        "前线接收人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "UI-N2实际选择N2-C之后。选择文字只展示，本片首句实际说出一次；不再播放旧独立选项视频。",
+      "end": "接C06，不再播C05或C05R。核清领取与出仓相合；不洗白饮酒、不提前取得入仓及地方实收原件；不重播共同B/V17。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我指着损耗册说出所选判断；管事抬眼，接收人继续闭口等待。",
+          "camera": "第一视角，不以选项字幕替代画面。",
+          "ttsText": "苟安都认了喝酒误事，这笔缺粮也先算在他头上。",
+          "onlyAllowedSpokenSentence": "苟安都认了喝酒误事，这笔缺粮也先算在他头上。",
+          "sourceNodes": [
+            "CH2-LY04-Q1C",
+            "CH2-LY04-Q1FB0",
+            "CH2-LY04-F02",
+            "CH2-LY04-D03",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 14,
+          "speaker": "粮队管事",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "粮队管事",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "管事把交付与签收两份记录并排推到我面前，手停在欠交的位置。",
+          "camera": "跟手看清两份不同原件，保持时间连续。",
+          "ttsText": "领粮的时候就没给够的，怎么能算成他路上丢的？先把这两份账对清楚。",
+          "onlyAllowedSpokenSentence": "领粮的时候就没给够的，怎么能算成他路上丢的？先把这两份账对清楚。",
+          "sourceNodes": [
+            "CH2-LY04-Q1C",
+            "CH2-LY04-Q1FB0",
+            "CH2-LY04-F02",
+            "CH2-LY04-D03",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 14,
+          "endSeconds": 24,
+          "speaker": "前线接收人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "前线接收人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "接收人依次核对同批两行，随后把行程册移到旁边，保留途中损耗原件。",
+          "camera": "按一次完整核对拍，不拼反复开卷合卷填时长。",
+          "ttsText": "仓里交的和我们领的对上了。欠交的当时就记着，路上损耗在另一本里。",
+          "onlyAllowedSpokenSentence": "仓里交的和我们领的对上了。欠交的当时就记着，路上损耗在另一本里。",
+          "sourceNodes": [
+            "CH2-LY04-Q1C",
+            "CH2-LY04-Q1FB0",
+            "CH2-LY04-F02",
+            "CH2-LY04-D03",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 24,
+          "endSeconds": 28,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我看向仓吏方向，管事把已核记录留在案上。",
+          "camera": "视线自然转向下一步，接C06。",
+          "ttsText": "那就再往前查。",
+          "onlyAllowedSpokenSentence": "那就再往前查。",
+          "sourceNodes": [
+            "CH2-LY04-Q1C",
+            "CH2-LY04-Q1FB0",
+            "CH2-LY04-F02",
+            "CH2-LY04-D03",
+            "CH2-LY04-T01"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "互斥分支融合版；核清领取与出仓相合；不洗白饮酒、不提前取得入仓及地方实收原件；不重播共同B/V17。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "score": {
+        "trust": 0,
+        "rigor": 0,
+        "responsibility": 0,
+        "once": true
+      },
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C05C-先归责苟安，听纠正后核清交接-28秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "粮队管事",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮队管事\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "38f37cbd1dc4858218fdf1546e76240104c7431f542b55a5081e3f97cfc75c1e",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "前线接收人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\前线接收人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "554d25d17ba1c661dd1791ef4e1fc168c84b146be598a510a95bfaff4395f9d8",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 4,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "speaker": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。"
+        },
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "speaker": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。"
+        },
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。"
+        },
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C09A",
+      "title": "误把要求当现粮，纠正后追问停催",
+      "seconds": 28,
+      "old": "V19A＋V20调度说明部分",
+      "nodes": [
+        "CH2-LY04-Q4A",
+        "CH2-LY04-Q4FB0",
+        "CH2-LY04-C04"
+      ],
+      "refs": [
+        "地方经手人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "UI-N3实际选择N3-A之后。选择文字只展示，本片首句实际说出一次；不再播放旧独立选项视频。",
+      "end": "接C10，不再播C09。只在选择后实际说出李严停追加催征且交粮要求未改；补入M06调度说明；不重播共同F。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我指着原定要求与实收记录，说出所选判断。地方经手人闭口听。",
+          "camera": "第一视角面对经手人，不生成选项文字。",
+          "ttsText": "原来要交这么多，粮应该已经备好了。我还是查谁扣着没给。",
+          "onlyAllowedSpokenSentence": "原来要交这么多，粮应该已经备好了。我还是查谁扣着没给。",
+          "sourceNodes": [
+            "CH2-LY04-Q4A",
+            "CH2-LY04-Q4FB0",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 16,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人分别指示两处记录，必要原件仍留在案上，回答完收回手。",
+          "camera": "近景随手移动，再回脸部；不要求可读伪字。",
+          "ttsText": "那是要求交的数，不是已经收来的粮。这一批根本没收齐。",
+          "onlyAllowedSpokenSentence": "那是要求交的数，不是已经收来的粮。这一批根本没收齐。",
+          "sourceNodes": [
+            "CH2-LY04-Q4A",
+            "CH2-LY04-Q4FB0",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 16,
+          "endSeconds": 20,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我抬眼追问；地方经手人听完后拉近已有交粮要求与实收记录。",
+          "camera": "保持方向，不拍李严下令的虚构闪回。",
+          "ttsText": "没收齐，为什么还按原数交？",
+          "onlyAllowedSpokenSentence": "没收齐，为什么还按原数交？",
+          "sourceNodes": [
+            "CH2-LY04-Q4A",
+            "CH2-LY04-Q4FB0",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 20,
+          "endSeconds": 28,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人指着已有要求与实收记录，口头说明停催；不新增独立调度文书。最后转向存档处，示意取报告。",
+          "camera": "在话说完后顺视线交代取材料方向，接C10。",
+          "ttsText": "李严叫停了追加催征，可交粮的数目没改，还是原来那么多。",
+          "onlyAllowedSpokenSentence": "李严叫停了追加催征，可交粮的数目没改，还是原来那么多。",
+          "sourceNodes": [
+            "CH2-LY04-Q4A",
+            "CH2-LY04-Q4FB0",
+            "CH2-LY04-C04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "互斥分支融合版；只在选择后实际说出李严停追加催征且交粮要求未改；补入M06调度说明；不重播共同F。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "score": {
+        "trust": 0,
+        "rigor": 0,
+        "responsibility": 0,
+        "once": true
+      },
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C09A-误把要求当现粮，纠正后追问停催-28秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "地方经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "speaker": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。"
+        },
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "speaker": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？"
+        },
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "C09C",
+      "title": "先记清没收齐，再问交粮要求",
+      "seconds": 26,
+      "old": "V19C＋V20调度说明部分",
+      "nodes": [
+        "CH2-LY04-Q4C",
+        "CH2-LY04-Q4FB1",
+        "CH2-LY04-C04",
+        "CH2-LY04-D06"
+      ],
+      "refs": [
+        "地方经手人",
+        "粮仓",
+        "查粮案头"
+      ],
+      "entry": "UI-N3实际选择N3-C之后。选择文字只展示，本片首句实际说出一次；不再播放旧独立选项视频。",
+      "end": "接C10，不再播C09。保留局部判断+1，不因为听到提醒与调度解释补成+2；实际补M06停催说明后接报告，不重播共同F。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 6,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我指着原定要求与实收记录，说出所选判断。地方经手人闭口听。",
+          "camera": "第一视角面对经手人，不生成选项文字。",
+          "ttsText": "这批粮没收齐，先把这件事记清。别的还得接着查。",
+          "onlyAllowedSpokenSentence": "这批粮没收齐，先把这件事记清。别的还得接着查。",
+          "sourceNodes": [
+            "CH2-LY04-Q4C",
+            "CH2-LY04-Q4FB1",
+            "CH2-LY04-C04",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 6,
+          "endSeconds": 12,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人分别指示两处记录，必要原件仍留在案上，回答完收回手。",
+          "camera": "近景随手移动，再回脸部；不要求可读伪字。",
+          "ttsText": "好。前面核过的账也留着，问人时一起拿出来。",
+          "onlyAllowedSpokenSentence": "好。前面核过的账也留着，问人时一起拿出来。",
+          "sourceNodes": [
+            "CH2-LY04-Q4C",
+            "CH2-LY04-Q4FB1",
+            "CH2-LY04-C04",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 12,
+          "endSeconds": 17,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我抬眼追问；地方经手人听完后拉近已有交粮要求与实收记录。",
+          "camera": "保持方向，不拍李严下令的虚构闪回。",
+          "ttsText": "那没收齐的这一笔，后来怎么处理的？",
+          "onlyAllowedSpokenSentence": "那没收齐的这一笔，后来怎么处理的？",
+          "sourceNodes": [
+            "CH2-LY04-Q4C",
+            "CH2-LY04-Q4FB1",
+            "CH2-LY04-C04",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 17,
+          "endSeconds": 26,
+          "speaker": "地方经手人",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "地方经手人",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "地方经手人指着已有要求与实收记录，口头说明停催；不新增独立调度文书。最后转向存档处，示意取报告。",
+          "camera": "在话说完后顺视线交代取材料方向，接C10。",
+          "ttsText": "李严叫停了追加催征，可交粮的数目没改。要交的还是那么多，收到的却不够。",
+          "onlyAllowedSpokenSentence": "李严叫停了追加催征，可交粮的数目没改。要交的还是那么多，收到的却不够。",
+          "sourceNodes": [
+            "CH2-LY04-Q4C",
+            "CH2-LY04-Q4FB1",
+            "CH2-LY04-C04",
+            "CH2-LY04-D06"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "互斥分支融合版；保留局部判断+1，不因为听到提醒与调度解释补成+2；实际补M06停催说明后接报告，不重播共同F。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "score": {
+        "trust": 0,
+        "rigor": 1,
+        "responsibility": 0,
+        "once": true
+      },
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\C09C-先记清没收齐，再问交粮要求-26秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "地方经手人",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\地方经手人\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "7089b171581dafdc87de6762fc039671c4b133329914f03f9190017dbf6cd327",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "粮仓",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\粮仓\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "0bfdbf9229a844ca779bb3bee2bca39c943df6eeab3323eda1deb110fb533522",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 3,
+          "name": "查粮案头",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\查粮案头\\image-01.png",
+          "purpose": "空间/光线/案头材质；不证明本批数量，不把空白纸当已读原文",
+          "exists": true,
+          "sha256": "fc26edec50f615fe0fac2e77417a5b275019dd6b29914a171f7e5fc270c30aff",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "speaker": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。"
+        },
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "speaker": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。"
+        },
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    },
+    {
+      "id": "E01",
+      "title": "把赴魏的打算说清楚",
+      "seconds": 30,
+      "old": "V25-P01至P04",
+      "nodes": [
+        "CH2-LY09-P01",
+        "CH2-LY09-P02",
+        "CH2-LY09-P03",
+        "CH2-LY09-P04"
+      ],
+      "refs": [
+        "苟安",
+        "伤帐"
+      ],
+      "entry": "访村及李严夜谈回忆之后，到原V25赴魏计划节点；不能提前接在C13后。",
+      "end": "接保留候选V25-P05及风险问答，实际合计23.625秒；随后沿原流程继续。",
+      "shots": [
+        {
+          "startSeconds": 0,
+          "endSeconds": 7,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "夜间伤帐，苟安仍伏卧在榻边，手放在原信附近，把未实行的打算告诉我。",
+          "camera": "保持伤帐原空间，夜灯只作局部光，不让人物脸被压黑。",
+          "ttsText": "要是退军以后还继续征粮，我们还有一个打算。",
+          "onlyAllowedSpokenSentence": "要是退军以后还继续征粮，我们还有一个打算。",
+          "sourceNodes": [
+            "CH2-LY09-P01",
+            "CH2-LY09-P02",
+            "CH2-LY09-P03",
+            "CH2-LY09-P04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 7,
+          "endSeconds": 20,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安始终留在榻上对我说话；不出现出营、魏营或散谣已经发生的蒙太奇。",
+          "camera": "连续中近景，一句说完，不按每个短语硬切。",
+          "ttsText": "我去魏国，求他们放我回来，再传丞相要篡位的谣言，逼朝廷召回大军。",
+          "onlyAllowedSpokenSentence": "我去魏国，求他们放我回来，再传丞相要篡位的谣言，逼朝廷召回大军。",
+          "sourceNodes": [
+            "CH2-LY09-P01",
+            "CH2-LY09-P02",
+            "CH2-LY09-P03",
+            "CH2-LY09-P04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 20,
+          "endSeconds": 23,
+          "speaker": "我",
+          "addressee": "眼前对应NPC",
+          "voicePosition": "镜头位置画外对白",
+          "lipOwner": "无画内口型承担者",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "我从纸面抬眼，苟安闭口听完问题。",
+          "camera": "第一视角不反打我的脸；不让苟安代我发问。",
+          "ttsText": "李严知道这事？",
+          "onlyAllowedSpokenSentence": "李严知道这事？",
+          "sourceNodes": [
+            "CH2-LY09-P01",
+            "CH2-LY09-P02",
+            "CH2-LY09-P03",
+            "CH2-LY09-P04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        },
+        {
+          "startSeconds": 23,
+          "endSeconds": 30,
+          "speaker": "苟安",
+          "addressee": "镜头位置的我",
+          "voicePosition": "画内对白",
+          "lipOwner": "苟安",
+          "othersMouthClosed": true,
+          "listenerReactionAndAction": "苟安看向李丰的信，再看回我，保持真实呼吸；随后接还没赴魏的原句。",
+          "camera": "镜头稳定结束，接下一段同场景，不能冻结补时。",
+          "ttsText": "知道。李丰也在劝我们住手。",
+          "onlyAllowedSpokenSentence": "知道。李丰也在劝我们住手。",
+          "sourceNodes": [
+            "CH2-LY09-P01",
+            "CH2-LY09-P02",
+            "CH2-LY09-P03",
+            "CH2-LY09-P04"
+          ],
+          "sourceMappingScope": "段落对应；本句为待review白话改写，非原片转录"
+        }
+      ],
+      "reason": "P02实际缺可确认音轨，P04仍待听审。此为把连续四句重新组织的补缺候选，不据ASR要求全片重拍；保留已通过旧V25及所有现用分片，不重投结果未知请求。",
+      "status": "文字方案待review；未生成；未接游戏",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-story-review-20261026\\prompts\\E01-把赴魏的打算说清楚-30秒.md",
+      "referenceImages": [
+        {
+          "index": 1,
+          "name": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "人物身份：脸、年龄、发型、服装；不继承背景/站姿/表情",
+          "exists": true,
+          "sha256": "dcbbbfbc587e0a592ce7728482e757d9c0ab9f9787b1bb5212f9cfcf8172db22",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        },
+        {
+          "index": 2,
+          "name": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "只约束榻、案、门帘、挂甲的空间关系，不继承日光；保持现有V25夜间局部灯光和帐外暗部",
+          "exists": true,
+          "sha256": "2ee7ee7b0d27b6dfc1c92ef0d1a0ec54835102af442011448f30cf85cc0cc805",
+          "size": [
+            2048,
+            1152
+          ],
+          "uploaded": false,
+          "isFirstFrame": false
+        }
+      ],
+      "sourceOriginals": [
+        {
+          "node": "CH2-LY09-P01",
+          "speaker": "苟安",
+          "text": "要是退了军还接着征，我们还有一个打算。"
+        },
+        {
+          "node": "CH2-LY09-P02",
+          "speaker": "苟安",
+          "text": "我去魏国，求他们放我回来，散布丞相要篡位的谣言，逼朝廷召军。"
+        },
+        {
+          "node": "CH2-LY09-P03",
+          "speaker": "我",
+          "text": "李严知道？"
+        },
+        {
+          "node": "CH2-LY09-P04",
+          "speaker": "苟安",
+          "text": "知道，李丰也正是为这事劝我们住手。"
+        }
+      ],
+      "missingSourceNodes": [],
+      "generationApproved": false,
+      "generationState": "not_submitted",
+      "reviewState": "awaiting_user_dialogue_review",
+      "missingRequiredReferenceImages": [],
+      "referencePreparationNote": "现有身份/空间图均已实看。C03无专门画卷首帧；本方案不要求首帧。如制作时改用新构图或首帧，需另备实际图片并重新核图序。"
+    }
+  ],
+  "globalConstraints": [
+    "每条20—30秒仅约束本轮新制作候选；已通过短片不填充。",
+    "互斥版本不顺播；玩家选项只说一次。",
+    "任何声音只能取onlyAllowedSpokenSentence或ttsText，不把speaker/导演说明拼入。",
+    "我的普通对白画外发声，NPC闭口；我的心声不能被NPC听见。",
+    "无BGM；不烧字幕、工作正文、流程文字；不做矩形模糊或暗影补丁。",
+    "不重投P02未知请求a31dbf42-96db-420d-a263-a7aaa00bdacd。",
+    "保留用户原评论、通过版本和当前媒体；此稿不改变任何审核状态。"
+  ]
+}

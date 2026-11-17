@@ -1,0 +1,21 @@
+{
+  "id": "CH2-LY09-P02",
+  "status": "unknown-no-repost",
+  "requestId": "a31dbf42-96db-420d-a263-a7aaa00bdacd",
+  "stateFile": "video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\audio\\CH2-LY09-P02-state.json",
+  "stateSha256": "18de1bf501a93f1bfc316d120c20195c6fbdf53de66e041ca1a9dde5144fadfa",
+  "requestTime": {
+    "source": "exclusive wx状态文件在POST前创建，文件系统创建时间，不是服务端受理证明",
+    "stateFileCreatedUTC": "2026-10-25T09:05:04.313831+00:00",
+    "stateFileFinalizedUTC": "2026-10-25T09:05:15.100813+00:00",
+    "serviceAcceptedTime": null
+  },
+  "httpStatus": null,
+  "responseTaskId": null,
+  "responseBodyReceived": false,
+  "errorClass": "TypeError",
+  "error": "fetch failed",
+  "recovery": "同步create未返回响应task_id，现有适配器与已核官方资料无按客户端requestId查回路径；根与本组均未构造恢复GET/POST，不重投。",
+  "newV25Adopted": false,
+  "documentation": "https://docs.byteplus.com/ko/docs/byteplusvoice/seedaudio-01"
+}

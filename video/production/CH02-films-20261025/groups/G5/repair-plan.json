@@ -1,0 +1,707 @@
+{
+  "group": "G5",
+  "phase": "visual-repairs",
+  "clips": [
+    {
+      "id": "V32A-02-R2",
+      "slot": "V32A",
+      "duration": 4,
+      "nodes": [
+        "CH2-LY11-002"
+      ],
+      "scene": "伤帐夜内",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "苟安看着镜头位置说“那就把纸铺开。”随后视线落到低案空纸，尚未署名。",
+      "startState": "我已说完请求，苟安准备回答",
+      "endState": "纸尚未铺开，苟安视线落案",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-002",
+          "speaker": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "spokenLines": [
+        {
+          "node": "CH2-LY11-002",
+          "speaker": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [
+        {
+          "node": "CH2-LY11-002",
+          "speaker": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "苟安看着镜头位置说“那就把纸铺开。”随后视线落到低案空纸，尚未署名。"
+        }
+      ],
+      "status": "planned-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-02.md",
+      "parentId": "V32A-02",
+      "visualRepairReason": "原片约2.8秒后有旁人躯干并转第三视角；字幕需消除"
+    },
+    {
+      "id": "V32A-03-R2",
+      "slot": "V32A",
+      "duration": 8,
+      "nodes": [
+        "CH2-LY11-017"
+      ],
+      "scene": "伤帐夜内",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "苟安向案面轻伸手停住，抬眼对着镜头位置说完，保持克制。",
+      "startState": "低案待写",
+      "endState": "话音落定，等我回答",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-017",
+          "speaker": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "spokenLines": [
+        {
+          "node": "CH2-LY11-017",
+          "speaker": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [
+        {
+          "node": "CH2-LY11-017",
+          "speaker": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安向案面轻伸手停住，抬眼对着镜头位置说完，保持克制。"
+        }
+      ],
+      "status": "planned-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-03.md",
+      "parentId": "V32A-03",
+      "visualRepairReason": "原片提前动笔、右侧人物躯干与武器入镜、第一视角失败"
+    },
+    {
+      "id": "V32A-04-R2",
+      "slot": "V32A",
+      "duration": 8,
+      "nodes": [
+        "CH2-LY11-018"
+      ],
+      "scene": "伤帐夜内",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "苟安闭嘴听我问完，不点头抢答；视线留在镜头位置，自始至终不发声、不做说话口型。",
+      "startState": "苟安等待回答",
+      "endState": "我已问完，苟安待表态",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-018",
+          "speaker": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "spokenLines": [
+        {
+          "node": "CH2-LY11-018",
+          "speaker": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "postVoiceLines": [
+        {
+          "node": "CH2-LY11-018",
+          "speaker": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安闭嘴听我问完，不点头抢答；视线留在镜头位置，自始至终不发声、不做说话口型。"
+        }
+      ],
+      "status": "planned-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-04.md",
+      "parentId": "V32A-04",
+      "visualRepairReason": "原片约1秒后代玩家写字，并将制作提示画成纸面文字，无法作闭口听者"
+    },
+    {
+      "id": "V32A-05-R2",
+      "slot": "V32A",
+      "duration": 8,
+      "nodes": [
+        "CH2-LY11-019"
+      ],
+      "scene": "伤帐夜内",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "苟安看着我说原句，话音落下才伸手把低案空纸铺平。",
+      "startState": "我的询问已说完",
+      "endState": "苟安接受留下，不展示寄出或处分",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-019",
+          "speaker": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "spokenLines": [
+        {
+          "node": "CH2-LY11-019",
+          "speaker": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [
+        {
+          "node": "CH2-LY11-019",
+          "speaker": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安看着我说原句，话音落下才伸手把低案空纸铺平。"
+        }
+      ],
+      "status": "planned-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-05.md",
+      "parentId": "V32A-05",
+      "visualRepairReason": "原片提前成文并纸上生成制作编号、另一人躯干入镜"
+    },
+    {
+      "id": "V32A-06-R2",
+      "slot": "V32A",
+      "duration": 14,
+      "nodes": [
+        "CH2-LY11-020",
+        "CH2-LY11-021"
+      ],
+      "scene": "伤帐夜内案头",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "我略低头看苟安右手持毛笔在纸上缓慢写交代，只有苟安手部及袖口；不把文书读出。最后纸面停稳，给后期准确文书内容留白。",
+      "startState": "纸铺在低案上",
+      "endState": "交代已经成文，但尚未署名",
+      "post": [
+        {
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "start": 1,
+          "end": 7
+        },
+        {
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "start": 7,
+          "end": 14
+        }
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-020",
+          "speaker": "苟安·书信",
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-021",
+          "speaker": "苟安·书信",
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "spokenLines": [],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 14,
+          "action": "我略低头看苟安右手持毛笔在纸上缓慢写交代，只有苟安手部及袖口；不把文书读出。最后纸面停稳，给后期准确文书内容留白。"
+        }
+      ],
+      "status": "planned-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-06.md",
+      "parentId": "V32A-06",
+      "visualRepairReason": "原片书信制作信息与文字准确性需看出片后确认；仅在明确画面问题时采用返修"
+    },
+    {
+      "id": "V32A-07-R2",
+      "slot": "V32A",
+      "duration": 9,
+      "nodes": [
+        "CH2-LY11-022"
+      ],
+      "scene": "伤帐夜内案头",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "Historical live action, night inside a Han-era tent. The camera tilts down from Gou An at the low desk to a close view of his right hand and paper. He presses a brush onto one existing short row of faded ink and draws one firm horizontal stroke all the way across the row. He lifts the brush, moves below the crossed-out row, and writes his short signature. He lifts the brush and places it on the brush rest. A single continuous nine-second shot, warm small lamp light, grey linen sleeve, only paper, brush and cloth sounds. No speech or background music.",
+      "startState": "交代成文，纸上还有行险安排",
+      "endState": "苟安已划去赴魏安排并署名；不得先交给信使",
+      "post": [
+        {
+          "text": "若仍不听便赴魏",
+          "start": 0,
+          "end": 4,
+          "strike": true
+        },
+        {
+          "text": "苟安",
+          "start": 5,
+          "end": 9,
+          "signature": true
+        }
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-022",
+          "speaker": "演出",
+          "text": "苟安划去“若仍不听便赴魏”，在自己交代的经过下署名。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "spokenLines": [],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "我人眼位置低头看案面；苟安右手持笔划去一条既有短墨迹，再在下方签署，笔尖接触纸、提起、放回笔搁均真实；不写可读字，留后期字层。"
+        }
+      ],
+      "status": "necessary-visual-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "key": "gouan",
+          "id": "苟安",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "use": "只锁苟安脸、头巾短须及灰麻衣；受杖伤势不新增绷带，归途只为普通粮兵，不戴队长标识"
+        },
+        {
+          "key": "tent",
+          "id": "伤帐",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "use": "锁右侧木榻、榻头卷布、后悬旧甲与暗红布、左后小凳陶碗，低案在榻前；按本镜昼夜调整真实灯光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V32A-07.md",
+      "parentId": "V32A-07",
+      "visualRepairReason": "原片未清楚拍出先划去再署名，单独验证实际动作，不因音频重拍"
+    },
+    {
+      "id": "V37-02-R2",
+      "slot": "V37",
+      "duration": 6,
+      "nodes": [
+        "CH2-LY12B-020"
+      ],
+      "scene": "向南归途阴天",
+      "referenceKeys": [
+        "gouan",
+        "road"
+      ],
+      "action": "苟安在空车侧转头看向落后几步的我，说原句，随即转回车行方向；只他一人开口，无新增对白。",
+      "startState": "我站在空车后",
+      "endState": "苟安叫我搭手，我尚未伸手",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY12B-020",
+          "speaker": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "spokenLines": [
+        {
+          "node": "CH2-LY12B-020",
+          "speaker": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [
+        {
+          "node": "CH2-LY12B-020",
+          "speaker": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安在空车侧转头看向落后几步的我，说原句，随即转回车行方向；只他一人开口，无新增对白。"
+        }
+      ],
+      "status": "explicit-input-failure-recovery",
+      "entry": "E1实际裁处完成",
+      "next": [
+        "V42"
+      ],
+      "references": [
+        {
+          "key": "gouan-empty-cart-road",
+          "id": "gouan-empty-cart-road",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\references\\gouan-empty-cart-road\\image-01.png",
+          "use": "中央苟安同脸灰麻衣普通粮兵+阴天土路完全空车，锁横木车轴与角色位置"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V37-02.md",
+      "parentId": "V37-02",
+      "visualRepairReason": "原任务明确input_download_failed，按总控res-1同字节恢复"
+    },
+    {
+      "id": "V42-R2-clean",
+      "slot": "V42",
+      "duration": 15,
+      "nodes": [
+        "CH2-LY13-001",
+        "CH2-LY13-002",
+        "CH2-LY13-003",
+        "CH2-LY13-004"
+      ],
+      "scene": "旧卷案头室内",
+      "referenceKeys": [
+        "archive"
+      ],
+      "action": "A single continuous fifteen-second historical live-action close shot. Only the linen-sleeved hands, rough wooden desk and aged paper from the first frame. The camera stays very low and oblique, seeing the plain reverse of the paper held toward an unseen reader; the written side always faces away from the camera. From 0 to 5 seconds, the hands gently unroll the remaining curled ends and settle the sheet. From 5 to 12 seconds, the hands hold it steady while the camera glides slightly along its worn lower edge and backlit fibres. From 12 to 15 seconds, the right hand lifts one near corner, turns one sheet away toward the reader, then settles beside the paper. Preserve two normal hands and physical contact. The reverse remains plain fibrous paper. Only paper rustle, cloth and quiet room ambience, no voices or music.",
+      "startState": "E1或E3各自裁处完成后的独立尾声入口",
+      "endState": "旧卷已展开，无新增结局",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY13-001",
+          "speaker": "视频（LI07）",
+          "text": "旧卷摊开，户口、征发与历次损耗的记录逐一映入眼前。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY13-002",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "魏地广人众，蜀中这些年，却一再折损。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-003",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "光改这趟运粮，补不上这些缺口。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-004",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "还得往更早的时候去。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "spokenLines": [],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "玩家人眼俯看旧木案，双手把旧卷从近处向前摊开，露出户口、征发、损耗的留白栏目，仅有旧墨痕不生成精确数字；最后摊平停止。"
+        }
+      ],
+      "status": "necessary-picture-repair",
+      "entry": "仅E1或E3对应裁处完成",
+      "next": [
+        "END-E1",
+        "END-E3"
+      ],
+      "references": [
+        {
+          "id": "old-scroll-oblique-back",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\references\\old-scroll-oblique-back\\image-01.png",
+          "use": "本镜唯一首帧，锁定手、灰褐麻袖、旧木案、纸背与低斜角柔光"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V42-01.md",
+      "parentId": "V42",
+      "visualRepairReason": "当前V42三个源片有清晰伪文字；局部抹字/大块柔焦试修不可用。以低斜角纸背取景从几何上排除可读正面，一条15秒验证，未扩展批量。"
+    },
+    {
+      "id": "V35-R2-clean",
+      "slot": "V35",
+      "duration": 8,
+      "nodes": [
+        "CH2-LY12B-006",
+        "CH2-LY12B-007",
+        "CH2-LY12B-008",
+        "CH2-LY12B-009",
+        "CH2-LY12B-RECV02"
+      ],
+      "scene": "伤帐案前日间",
+      "referenceKeys": [
+        "tent"
+      ],
+      "action": "One continuous eight-second historical live-action insert, keeping exactly the grey-brown linen sleeves, two ordinary hands, rough wooden low desk, daylight and plain paper reverse from the first frame. Low oblique camera at the paper edge, no head or face. The inked fronts always face away from camera. From 0 to 2 seconds the hands finish opening the folded reply already being held, and lower it to the far part of the desk. From 2 to 6 seconds the hands draw exactly two separate loose paper sheets from beneath it, place one on the left and one on the right, side by side on the near desk. Keep the sheets distinct, their plain backs facing camera, with no text, symbols or captions. From 6 to 8 seconds both sheets settle flat, the fingertips release each edge and withdraw, leaving both papers visibly present and stationary. Preserve the physical paper contact and release, no morphing, duplication or extra hands. Only synchronized paper and cloth sounds, quiet room tone, no voice or music.",
+      "startState": "回信刚交到我手",
+      "endState": "我已读到据实请退与再战另议",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY12B-006",
+          "speaker": "李严·回信",
+          "text": "此次粮乏，应据实请退。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-007",
+          "speaker": "李严·回信",
+          "text": "日后是否再战，留待另议。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-008",
+          "speaker": "李严·回信",
+          "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-009",
+          "speaker": "李严·回信",
+          "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-RECV02",
+          "speaker": "演出·核阅补报",
+          "text": "我核过随信附送的更正粮情与李严本人责任说明；该说清的部分已经成文，原来的行险安排已经撤回。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "spokenLines": [],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "我把刚接回的信放在案上展开；由我眼睛低头看信，只出现真实手与留白纸，不生成可读字；停稳等待核读。"
+        }
+      ],
+      "status": "necessary-picture-repair",
+      "entry": "传信人真实带回签字说明",
+      "next": [
+        "UI-E1-FILE"
+      ],
+      "references": [
+        {
+          "id": "plain-paper-back",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\references\\old-scroll-oblique-back\\image-01.png",
+          "use": "唯一首帧，锁灰褐麻袖双手、粗木低案、低斜角纸背和日光；不带入V42史料身份"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\prompts\\V35-R2-clean.md",
+      "parentId": "V35",
+      "visualRepairReason": "旧核阅源有大面积清晰伪字；通用旧卷不能证明两附件整理。沿已通过V42纸背取景类单条扩展，必须实际放下两独立纸张并松手；保留准确阅读层和UI提交边界。"
+    },
+    {
+      "id": "V32A-06-UR1",
+      "slot": "V32A",
+      "duration": 4,
+      "nodes": [
+        "CH2-LY11-020",
+        "CH2-LY11-021"
+      ],
+      "scene": "伤帐夜内案头",
+      "referenceKeys": [
+        "gouan",
+        "tent"
+      ],
+      "action": "One continuous four-second historical live-action close shot from the supplied first frame. Only the same right writing hand, grey linen cuff, left fingertips, bamboo brush, blank paper edge and rough wooden desk in soft warm night lamp light. The brush tip stays visibly in physical contact with the paper as the wrist makes a few small natural writing strokes, pauses briefly, then lifts the brush at the end. The back of the hand occludes the written area behind it; the near blank paper margin, bristles, contact and a few short irregular ink traces are visible. No legible characters, words, symbols or numbers. Preserve the hand anatomy, wrist, brush and paper without morphing. Fixed low oblique view, no face, body or new person, no cut or transition. No subtitles, cards, tables, captions, text overlays, dark boxes, local blur patches or mosaic. There is no permitted speech: no dialogue, narration, extra human voice or metadata reading. No BGM or music. Only quiet synchronized brush-on-paper and cloth movement, soft room tone.",
+      "startState": "纸铺在低案上",
+      "endState": "交代已经成文，但尚未署名",
+      "post": [],
+      "sourceLines": [
+        {
+          "node": "CH2-LY11-020",
+          "speaker": "苟安·书信",
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-021",
+          "speaker": "苟安·书信",
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "spokenLines": [],
+      "postVoiceLines": [],
+      "generatedSpokenLines": [],
+      "shots": [
+        {
+          "start": 0,
+          "end": 14,
+          "action": "我略低头看苟安右手持毛笔在纸上缓慢写交代，只有苟安手部及袖口；不把文书读出。最后纸面停稳，给后期准确文书内容留白。"
+        }
+      ],
+      "status": "user-review-necessary-local-repair",
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "references": [
+        {
+          "id": "night-write-hand",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\references\\write-hand\\image-01.png",
+          "use": "唯一首帧：灰麻袖、夜灯、粗木案、手背遮写区而笔尖触纸清楚；不用可读汉字"
+        }
+      ],
+      "promptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\V32A-06-UR1.md",
+      "parentId": "V32A-06",
+      "speechWhitelist": [],
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "visualRepairReason": "Original writing shot exposes native pseudo-text; tighter text-free crop cuts bristle/contact and fails action readability. Only this four-second insert regenerated, no audio-only generation."
+    }
+  ]
+}

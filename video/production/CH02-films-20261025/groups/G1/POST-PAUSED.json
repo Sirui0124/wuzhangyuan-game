@@ -1,0 +1,11 @@
+{
+  "status": "video-api-post-disabled",
+  "checkedAt": "2026-10-25T19:11:54+08:00",
+  "reason": "用户通知视频生成API过期；后续确需重生成时只交本地Seedance Markdown，单请求最长30秒。",
+  "newVideoApiPostsAllowed": false,
+  "automaticVideoApiResubmissionsAllowed": false,
+  "maxNewMarkdownDurationSeconds": 30,
+  "submittedTaskStateFilesPreserved": true,
+  "sourceThreadId": "01a172be-0199-78c1-9a9b-3fbdc35cd033",
+  "scope": "G1 only; video generation API, not an audio API health conclusion"
+}

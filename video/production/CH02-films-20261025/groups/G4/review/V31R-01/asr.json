@@ -1,0 +1,144 @@
+{
+  "id": "V31R-01",
+  "expected": "你想帮我，我听见了。可说到案前，哪一句拿得出凭据？",
+  "postVoiceText": null,
+  "actual": "你想帮我,我听见了可说到暗前,哪一句拿得出评据",
+  "similarity": 0.9047619047619048,
+  "segments": [
+    {
+      "start": 0.72,
+      "end": 4.02,
+      "text": "你想帮我,我听见了",
+      "words": [
+        {
+          "start": 0.72,
+          "end": 1.3,
+          "word": "你想",
+          "probability": 0.5133789777755737
+        },
+        {
+          "start": 1.3,
+          "end": 1.66,
+          "word": "帮",
+          "probability": 0.8895038068294525
+        },
+        {
+          "start": 1.66,
+          "end": 2.76,
+          "word": "我,",
+          "probability": 0.9956259727478027
+        },
+        {
+          "start": 2.84,
+          "end": 3.04,
+          "word": "我",
+          "probability": 0.9492104053497314
+        },
+        {
+          "start": 3.04,
+          "end": 3.26,
+          "word": "听",
+          "probability": 0.9902196526527405
+        },
+        {
+          "start": 3.26,
+          "end": 3.52,
+          "word": "见",
+          "probability": 0.9981637597084045
+        },
+        {
+          "start": 3.52,
+          "end": 4.02,
+          "word": "了",
+          "probability": 0.9941797256469727
+        }
+      ]
+    },
+    {
+      "start": 5.1,
+      "end": 9.26,
+      "text": "可说到暗前,哪一句拿得出评据",
+      "words": [
+        {
+          "start": 5.1,
+          "end": 5.56,
+          "word": "可",
+          "probability": 0.4005001485347748
+        },
+        {
+          "start": 5.56,
+          "end": 5.76,
+          "word": "说",
+          "probability": 0.9942845702171326
+        },
+        {
+          "start": 5.76,
+          "end": 5.94,
+          "word": "到",
+          "probability": 0.9609504342079163
+        },
+        {
+          "start": 5.94,
+          "end": 6.14,
+          "word": "暗",
+          "probability": 0.753929078578949
+        },
+        {
+          "start": 6.14,
+          "end": 6.5,
+          "word": "前,",
+          "probability": 0.8003812432289124
+        },
+        {
+          "start": 7.3,
+          "end": 7.9,
+          "word": "哪",
+          "probability": 0.9705029129981995
+        },
+        {
+          "start": 7.9,
+          "end": 8.12,
+          "word": "一",
+          "probability": 0.9949274063110352
+        },
+        {
+          "start": 8.12,
+          "end": 8.28,
+          "word": "句",
+          "probability": 0.9974307417869568
+        },
+        {
+          "start": 8.28,
+          "end": 8.48,
+          "word": "拿",
+          "probability": 0.98988276720047
+        },
+        {
+          "start": 8.48,
+          "end": 8.6,
+          "word": "得",
+          "probability": 0.9222918748855591
+        },
+        {
+          "start": 8.6,
+          "end": 8.76,
+          "word": "出",
+          "probability": 0.99207603931427
+        },
+        {
+          "start": 8.76,
+          "end": 9.0,
+          "word": "评",
+          "probability": 0.8669855296611786
+        },
+        {
+          "start": 9.0,
+          "end": 9.26,
+          "word": "据",
+          "probability": 0.7702991664409637
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

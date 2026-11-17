@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.2817
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0542
+        },
+        {
+          "label": "Animal",
+          "p": 0.0395
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0381
+        },
+        {
+          "label": "White noise",
+          "p": 0.0363
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0294
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0264
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0245
+        },
+        {
+          "label": "Music",
+          "p": 0.0244
+        },
+        {
+          "label": "Rain",
+          "p": 0.0198
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.0187
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0184
+        }
+      ],
+      "music": 0.0244
+    }
+  ]
+}

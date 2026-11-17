@@ -1,0 +1,117 @@
+{
+  "delivery": {
+    "id": "V19B",
+    "name": "缺额判断B",
+    "entry": "UI-N3选B",
+    "next": [
+      "V20"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V19B-01"
+    ],
+    "subclips": [
+      "V19B-01"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+    "technical": {
+      "duration": 10.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "decodedVideoFrames": 241,
+      "videoTrackSeconds": 10.041666666666666,
+      "videoEndSeconds": 10.041667,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "0–1.2秒归拢核看，随后回看已取得D06；已去除玩家句期间NPC口型。复用其他分支仅限账页动作，没有带入其他选择结果或声音。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "只回看已取得D04/D05/D06；不带入其他分支声音、台词或判定结果。"
+    ]
+  },
+  "usability": {
+    "id": "V19B",
+    "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "0–1.2秒归拢核看，随后回看已取得D06；已去除玩家句期间NPC口型。复用其他分支仅限账页动作，没有带入其他选择结果或声音。"
+    ],
+    "issues": [
+      {
+        "type": "wrong-visible-speaker",
+        "state": "repaired",
+        "repair": "玩家选择改为归拢账页与D06回看"
+      }
+    ],
+    "integrationConditions": [
+      "只回看已取得D04/D05/D06；不带入其他分支声音、台词或判定结果。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          10.04
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V19B\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V19B",
+        "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+        "event": "ended",
+        "start": 0,
+        "end": 10.041667,
+        "duration": 10.041667,
+        "time": "2026-10-25T06:26:24.167Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 10.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732"
+    }
+  }
+}

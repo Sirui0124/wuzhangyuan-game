@@ -1,0 +1,82 @@
+{
+  "id": "V19B-01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01-replacement-source.mp4",
+  "sourceSha256": "7f764df9b15f81ad44a89dfc6490ea03a3fc39599f49b9879c4343eaf4191dc0",
+  "pictureChanges": {
+    "documentDefocusZones": [
+      [
+        0,
+        20,
+        0,
+        720,
+        110
+      ]
+    ],
+    "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+    "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+    "fullFrameExistingEvidence": true,
+    "trim": [
+      0,
+      10
+    ],
+    "tailHold": 0,
+    "sourceReuse": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19B-01-raw.mp4",
+        "sha256": "00a9569ca62ea2712205a12b978811fbcca8a32b72de177ff4f02498c9e87652",
+        "usedRange": [
+          0,
+          6
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D04",
+          "CH2-LY04-D05",
+          "CH2-LY04-D06"
+        ],
+        "context": "核看并归拢已取得账页；不携带其他分支声音或新事实"
+      },
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-01-raw.mp4",
+        "sha256": "8da4e1d14329af7d6eefccab9687730768096977d5a19e324fe097efeb9cbc67",
+        "usedRange": [
+          0,
+          4
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D04",
+          "CH2-LY04-D05",
+          "CH2-LY04-D06"
+        ],
+        "context": "核看并归拢已取得账页；不携带其他分支声音或新事实"
+      }
+    ]
+  },
+  "sourceLines": [
+    {
+      "node": "CH2-LY04-Q4B",
+      "speaker": "我（普通选项）",
+      "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "voiceReused": {
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4B.wav",
+    "duration": 6.585333333333334,
+    "offset": 1.0,
+    "provider": "existing player TTS",
+    "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+    "listeningReview": "未听审",
+    "centralSource": "reused_G2_same_voice",
+    "sha256": "016f4ce844311ea973695dd71f60897250d0b93d1bc19b967a015d6ff1314a19"
+  },
+  "audioReview": "未听审、未新增TTS",
+  "duration": 10.0,
+  "sha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioHz": 48000
+}

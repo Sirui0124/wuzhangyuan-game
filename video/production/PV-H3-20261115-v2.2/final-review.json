@@ -1,0 +1,29 @@
+{
+  "version": "v2.2",
+  "date": "2026-11-15",
+  "film_sha256": "971d2d2f78487218f8fd921173aed02393cd21edcea1db93f40a686cb3999e1a",
+  "duration": 91.375,
+  "frames": 2193,
+  "full_decode": "pass",
+  "visual_check": "source2fps, critical8fps, finalevery2s contact sheets inspected",
+  "asr_segments": 14,
+  "asr_is_human_transcript": false,
+  "music_screen_max": 0.112,
+  "music_screen_is_absence_proof": false,
+  "added_bgm": false,
+  "user_review": "待review",
+  "unknown_requests_preserved": [
+    "M01",
+    "K01",
+    "K01R"
+  ],
+  "last_retry_result": "K01RR downloaded; K03 new corrective shot downloaded",
+  "visual_rejected": [
+    "R01",
+    "K02"
+  ],
+  "R03_limit": "onlyfirst1.5s establishingrain; not extinction result",
+  "final_rain_extinction": "R02source0.5-3.75forward",
+  "browser_playback": "pass",
+  "playback_method": "Headless Chrome muted playback at1x to end; technical only, not human visual/auditory approval."
+}

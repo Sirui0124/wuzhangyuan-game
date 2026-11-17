@@ -1,0 +1,33 @@
+{
+  "id": "V16A",
+  "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+  "reviewState": "reviewed",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "0–2.1秒管事闭口听问并低头，之后为此前已取得的D01/D02并列回看。没有NPC代我发言，没有新证据或新增答案；全文不透出原伪字。"
+  ],
+  "issues": [
+    {
+      "type": "fake-evidence-text",
+      "state": "repaired",
+      "repair": "改为此前已得D01/D02不透明回看"
+    }
+  ],
+  "integrationConditions": [
+    "仅在V15取得D01/D02后播放；并列层只回看，不授予新证据、不自动替玩家提交推理。"
+  ],
+  "audioIssues": [
+    "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+    "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+  ],
+  "dynamicReview": [
+    {
+      "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+      "range": [
+        0,
+        9.04
+      ],
+      "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V16A\\identity.json"
+    }
+  ]
+}

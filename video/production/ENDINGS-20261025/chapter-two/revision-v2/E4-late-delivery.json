@@ -1,0 +1,487 @@
+{
+  "id": "E4-late",
+  "title": "认下来的罪-晚支撑不足",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪-晚支撑不足-纯台词短版-V4.mp4",
+  "sha256": "3ff60d65a25de1787a4364086c1ec1f586a19478d911a8f37a357333b9136090",
+  "duration": 36.416667,
+  "decode": "passed",
+  "videoCoverage": {
+    "videoSeconds": 36.416666666666664,
+    "decodedFrames": 874,
+    "expectedSeconds": 36.416666666666664,
+    "passed": true
+  },
+  "editDecisionList": [
+    {
+      "slot": "V39",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+      "sourceSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "frames": 245,
+      "start": 0.0,
+      "end": 10.208333333333334,
+      "duration": 10.208333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              58
+            ],
+            [
+              139,
+              223
+            ]
+          ],
+          "node": "CH2-LY12A-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+          "timelineRange": [
+            0,
+            5.916666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              323,
+              426
+            ]
+          ],
+          "node": "CH2-LY12A-003",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.45,
+          "delay": 0,
+          "reason": "仅真实共同核收原句，不能提前宣布定案",
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+        "共同收件不提前判定李严责任或凭空补齐缺失证据",
+        "我的递交说明与军吏核收原句均保留，删掉元说明音画"
+      ]
+    },
+    {
+      "slot": "V41L",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+      "sourceSha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+      "frames": 629,
+      "start": 10.208333333333334,
+      "end": 36.416666666666664,
+      "duration": 26.208333333333332,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              34,
+              112
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 1.42,
+          "delay": 0,
+          "reason": "李严参与线索第一分句",
+          "timelineRange": [
+            0,
+            3.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              122,
+              192
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 5.08,
+          "delay": 0,
+          "reason": "材料里已有线索，缩停顿",
+          "timelineRange": [
+            3.25,
+            6.166666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              232,
+              316
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.65,
+          "delay": 0,
+          "reason": "细节尚不能对上",
+          "timelineRange": [
+            6.166666666666666,
+            9.666666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              332,
+              418
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.82,
+          "delay": 0,
+          "reason": "不能照结论认定",
+          "timelineRange": [
+            9.666666666666666,
+            13.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              478,
+              592
+            ]
+          ],
+          "node": "CH2-E4-LATE-002",
+          "audio": "seed-audio1-reference",
+          "audioStart": 19.9,
+          "delay": 0.125,
+          "reason": "句尾边界不稳的一句用冻结同军吏参考补齐，实际上传Seed-Audio1.0；连续案头近景承载军吏画外续答，避免新声音对应旧口型",
+          "crop": [
+            0,
+            360,
+            640,
+            360
+          ],
+          "timelineRange": [
+            13.25,
+            18.0
+          ]
+        },
+        {
+          "pictures": [
+            [
+              648,
+              845
+            ]
+          ],
+          "node": "CH2-E4-LATE-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "完整晚支撑不足心声，闭口低头归卷动作",
+          "timelineRange": [
+            18.0,
+            26.208333333333336
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅V39实际收件且Q假后播放；明确有李严线索但支撑不足",
+        "军吏两句结论与完整晚支撑不足心声保留，不能变成早停查或最终定罪",
+        "第二句实际上传同军吏冻结参考至Seed-Audio1.0，使用连续案头近景承载续答，避免给旧口型硬配新声"
+      ]
+    }
+  ],
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-late-overview-0.jpg",
+  "userApproved": false,
+  "gameIntegrated": false,
+  "executesGameState": false,
+  "artifactType": "edited-review-candidate",
+  "audioReview": "采用G6登记的纯台词短版及已核来源；实际逐字听审仍pending",
+  "visualReview": "已查看全时段有序抽帧及拼接切点，非连续全片观看",
+  "previousVersion": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪·晚支撑不足.mp4",
+    "sha256": "67ffbc58bc200fba7a35f5499849f37bbcc41d9ae9a8a5a5b28c95ad2e4ac9a2",
+    "duration": 58.76
+  },
+  "entryPrerequisite": "UI-CASE已确认且锁定Q假；先V39实际收件，再V41L支撑不足收束。",
+  "description": "已听过李严参与，但几处细节支撑不足；案上仍压着苟安的认罪。",
+  "slots": [
+    "V39",
+    "V41L"
+  ],
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\visual-review.json",
+  "sources": [
+    {
+      "slot": "V39",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+      "sourceSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "frames": 245,
+      "start": 0.0,
+      "end": 10.208333333333334,
+      "duration": 10.208333333333334,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              58
+            ],
+            [
+              139,
+              223
+            ]
+          ],
+          "node": "CH2-LY12A-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+          "timelineRange": [
+            0,
+            5.916666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              323,
+              426
+            ]
+          ],
+          "node": "CH2-LY12A-003",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.45,
+          "delay": 0,
+          "reason": "仅真实共同核收原句，不能提前宣布定案",
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+        "共同收件不提前判定李严责任或凭空补齐缺失证据",
+        "我的递交说明与军吏核收原句均保留，删掉元说明音画"
+      ]
+    },
+    {
+      "slot": "V41L",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+      "sourceSha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+      "frames": 629,
+      "start": 10.208333333333334,
+      "end": 36.416666666666664,
+      "duration": 26.208333333333332,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              34,
+              112
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 1.42,
+          "delay": 0,
+          "reason": "李严参与线索第一分句",
+          "timelineRange": [
+            0,
+            3.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              122,
+              192
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 5.08,
+          "delay": 0,
+          "reason": "材料里已有线索，缩停顿",
+          "timelineRange": [
+            3.25,
+            6.166666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              232,
+              316
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.65,
+          "delay": 0,
+          "reason": "细节尚不能对上",
+          "timelineRange": [
+            6.166666666666666,
+            9.666666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              332,
+              418
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.82,
+          "delay": 0,
+          "reason": "不能照结论认定",
+          "timelineRange": [
+            9.666666666666666,
+            13.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              478,
+              592
+            ]
+          ],
+          "node": "CH2-E4-LATE-002",
+          "audio": "seed-audio1-reference",
+          "audioStart": 19.9,
+          "delay": 0.125,
+          "reason": "句尾边界不稳的一句用冻结同军吏参考补齐，实际上传Seed-Audio1.0；连续案头近景承载军吏画外续答，避免新声音对应旧口型",
+          "crop": [
+            0,
+            360,
+            640,
+            360
+          ],
+          "timelineRange": [
+            13.25,
+            18.0
+          ]
+        },
+        {
+          "pictures": [
+            [
+              648,
+              845
+            ]
+          ],
+          "node": "CH2-E4-LATE-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "完整晚支撑不足心声，闭口低头归卷动作",
+          "timelineRange": [
+            18.0,
+            26.208333333333336
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅V39实际收件且Q假后播放；明确有李严线索但支撑不足",
+        "军吏两句结论与完整晚支撑不足心声保留，不能变成早停查或最终定罪",
+        "第二句实际上传同军吏冻结参考至Seed-Audio1.0，使用连续案头近景承载续答，避免给旧口型硬配新声"
+      ]
+    }
+  ],
+  "previousRevision": {
+    "id": "E4-late",
+    "title": "认下来的罪-晚支撑不足",
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪-晚支撑不足-V2.mp4",
+    "sha256": "9190ff9d2250905cfb761485dca72923af5f1e8babc1496218b0aec3f66c3fc7",
+    "duration": 54.875,
+    "decode": "passed",
+    "videoCoverage": {
+      "videoSeconds": 54.708,
+      "decodedFrames": 1313,
+      "expectedSeconds": 54.875,
+      "passed": true
+    },
+    "editDecisionList": [
+      {
+        "id": "V39-owner-repair",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+        "sourceSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+        "start": 0,
+        "frames": 471,
+        "duration": 19.625,
+        "reason": "采用原组本轮闭口反应/收卷修版；保持本支线事实，未导入别支线对白",
+        "audio": null,
+        "timelineStart": 0,
+        "timelineEnd": 19.625
+      },
+      {
+        "id": "V41L-owner-repair",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+        "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+        "start": 0,
+        "frames": 846,
+        "duration": 35.25,
+        "reason": "采用原组本轮闭口反应/收卷修版；保持本支线事实，未导入别支线对白",
+        "audio": null,
+        "timelineStart": 19.625,
+        "timelineEnd": 54.875
+      }
+    ],
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\pace-v2\\E4-late-V2.jpg",
+    "userApproved": false,
+    "gameIntegrated": false,
+    "executesGameState": false,
+    "artifactType": "edited-review-candidate",
+    "audioReview": "原声及已有心声沿用，未完成逐字听审",
+    "visualReview": "关键动作/切点有序抽帧复核完成；非完整连续人工观看，待用户review",
+    "previousVersion": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪·晚支撑不足.mp4",
+      "sha256": "67ffbc58bc200fba7a35f5499849f37bbcc41d9ae9a8a5a5b28c95ad2e4ac9a2",
+      "duration": 58.76
+    },
+    "entryPrerequisite": "UI-CASE已确认且锁定Q假；先V39实际收件，再V41L支撑不足收束。",
+    "description": "已听过李严参与，但几处细节支撑不足；案上仍压着苟安的认罪。",
+    "slots": [
+      "V39",
+      "V41L"
+    ],
+    "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+    "pictureUsability": "usable-with-integration-condition"
+  },
+  "overviewSheets": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-late-overview-0.jpg",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-late-overview-1.jpg",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-late-cuts-0.jpg"
+  ],
+  "adoptionMethod": "frame-exact-concat-of-registered-sources",
+  "sourceSignature": "3f7fa42fba30ad833eaaade4d05a5dd36277f902fc46fc41135ff939cc2992e9",
+  "postProcessing": {
+    "type": "registered-G6-batch2-short-source-integration",
+    "newGeneration": false
+  },
+  "joinFrames": [
+    245
+  ],
+  "integrationConditions": [
+    "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+    "共同收件不提前判定李严责任或凭空补齐缺失证据",
+    "我的递交说明与军吏核收原句均保留，删掉元说明音画",
+    "仅V39实际收件且Q假后播放；明确有李严线索但支撑不足",
+    "军吏两句结论与完整晚支撑不足心声保留，不能变成早停查或最终定罪",
+    "第二句实际上传同军吏冻结参考至Seed-Audio1.0，使用连续案头近景承载续答，避免给旧口型硬配新声"
+  ],
+  "sourceDuration": 36.416667,
+  "status": "registered-short-version-awaiting-user-review",
+  "sourceAudioNotes": [
+    {
+      "slot": "V39",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    },
+    {
+      "slot": "V41L",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    }
+  ]
+}

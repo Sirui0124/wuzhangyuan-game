@@ -1,0 +1,104 @@
+{
+  "id": "CH2-LY09-006",
+  "expected": "我先回去交差，把实收和欠缺的粮数报清楚。",
+  "sha256": "efb14d0470df8879f39a93f6c5f06149efde083ebb4bc6286554ee91d795728e",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-006-v1.wav",
+  "recognized": "我先過去交差,把時收和欠缺的良屬報清楚",
+  "similarity": 0.7222222222222222,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.32,
+      "text": "我先過去交差,把時收和欠缺的良屬報清楚",
+      "noSpeechProbability": 0.048486560583114624,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.56,
+          "text": "我"
+        },
+        {
+          "start": 0.56,
+          "end": 0.66,
+          "text": "先"
+        },
+        {
+          "start": 0.66,
+          "end": 0.84,
+          "text": "過去"
+        },
+        {
+          "start": 0.84,
+          "end": 1.04,
+          "text": "交"
+        },
+        {
+          "start": 1.04,
+          "end": 1.2,
+          "text": "差,"
+        },
+        {
+          "start": 1.44,
+          "end": 2.38,
+          "text": "把"
+        },
+        {
+          "start": 2.38,
+          "end": 2.58,
+          "text": "時"
+        },
+        {
+          "start": 2.58,
+          "end": 2.8,
+          "text": "收"
+        },
+        {
+          "start": 2.8,
+          "end": 3.26,
+          "text": "和"
+        },
+        {
+          "start": 3.26,
+          "end": 3.46,
+          "text": "欠"
+        },
+        {
+          "start": 3.46,
+          "end": 3.6,
+          "text": "缺"
+        },
+        {
+          "start": 3.6,
+          "end": 3.68,
+          "text": "的"
+        },
+        {
+          "start": 3.68,
+          "end": 3.82,
+          "text": "良"
+        },
+        {
+          "start": 3.82,
+          "end": 3.98,
+          "text": "屬"
+        },
+        {
+          "start": 3.98,
+          "end": 4.1,
+          "text": "報"
+        },
+        {
+          "start": 4.1,
+          "end": 4.32,
+          "text": "清楚"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 0.9649122807017544
+}

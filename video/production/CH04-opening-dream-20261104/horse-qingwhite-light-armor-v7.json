@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-05",
+  "status": "待review",
+  "tool": "built-in image_gen",
+  "latest": "references/R06-青白袍银灰轻甲-自然灰白马-v7.png",
+  "userDirection": "青白色衣袍，青年将领的精致轻甲，甲改银色；马为自然灰白、写实；腰囊可见，不露人脸；林道背景只见天空泛红。",
+  "historicalBasis": [
+    {
+      "url": "https://www.nywmuseum.org.cn/Collection/Details/dcjp?nid=148",
+      "use": "西汉铁铠由铁片与丝带穿结，参照编缀结构，不将西汉器物直接称为三国实物。"
+    },
+    {
+      "url": "https://www.dpm.org.cn/Uploads/File/pdf/ed/9a/26/ed9a263a82762a10d59b0efebd9952ab.pdf",
+      "use": "汉代札甲与东汉三国制甲研究；页面检索文本。"
+    }
+  ],
+  "designBoundary": "银灰为铁甲表面色泽的美术设计，不是纯银甲，也不是特定三国出土甲的完整复原。",
+  "images": [
+    {
+      "path": "references/R06-青白袍暗铁轻甲-自然灰白马-v6.png",
+      "prompt": "A believable live-action movie frame photographed outdoors, 16:9 landscape. A real light grey horse gallops urgently left to right on a dirt trail through woodland in ancient China at dusk. True lateral tracking view at horse shoulder height, entire horse and all four hooves visible with space ahead of nose and below hooves. The rider is cropped above the shoulders by the TOP edge, so absolutely no human face or head appears. A single rider.\nThe horse is a normal athletic riding horse, silver-grey / off-white coat with natural grey shadow, dark grey muzzle, dark hooves, slightly irregular white-grey mane streaming backward. Sleek smooth short summer coat, as in an ordinary real horse photograph. The flank surface is mostly simple soft continuous grey tone, with muscle volume and natural joints underneath, not textured ornament. No curls, patterns, embossed marks, visible scales, wool, elaborate stippling or surface decoration. The horse is slightly motion-softened rather than hyper-sharp. Natural muscular hindquarters and one coherent suspended galloping stride, a few dusty lower-leg spots. Skin and coat not glowing, not blown white, exposed for dusk. No horse armor.\nThe rider is a young Chinese military officer, but his head is outside frame. He wears a pale blue-white robe, almost off-white with a faint cool blue-grey tint, matte woven fabric, whole neat hems, gathered practical sleeves and robe tails streaming backward. NOT green or turquoise. Over it a refined compact dark iron lamellar armor vest drawing on Han-era construction: small thin rectangular iron plates, slightly rounded corners, closely spaced overlapping horizontal rows, tiny holes with dark reddish-brown lacing, sober leather-bound edges. Armor protects torso and ends at upper hip, modest shoulder coverage, no massive shoulder plates. Fine careful craftsmanship rather than decorative gold. Brown waist belt over armor, exactly one visible palm-sized grey-brown drawstring cloth pouch attached at left waist slightly forward of hip, entirely visible against pale robe, its mouth closed. Dark plain riding boots, simple brown saddle and reins, feet against horse sides without stirrups. No cape, no dragon ornament, no metal mirror breastplate, no European plate, no later imperial armor.\nForest trees and ground streak naturally sideways from panning. Near and middle background only trees, bushes and an earth slope; a small strip of dusk cloud above distant treetops is faintly dull red, reflected from a fire far away that is completely OUT OF SIGHT. No flame, no burning camp, no orange spots on ground. Dust is kicked backwards by hooves. Subdued neutral dusk light, soft highlights and readable shadows, real cloth weight, real practical armor highlights, restrained natural photographic detail. It must resemble a location shoot with a real stunt rider and real horse, no CG, no digital painting, no game engine, no stylized sculpture textures, no extreme microdetail, no text, no labels, no watermark, no border."
+    },
+    {
+      "path": "references/R06-青白袍银灰轻甲-自然灰白马-v7.png",
+      "prompt": "Edit this exact photograph. Preserve the realistic light grey horse, its natural short coat, galloping pose, forest path, dust and side-on camera. Preserve the anonymous rider with head completely out of frame, pale cool blue-white robe, clearly visible grey-brown closed pouch at left waist, and practical clothing silhouette.\nMain change: recolor/refinish the rider's existing DARK LAMELLAR IRON ARMOR to refined SILVERY-GREY IRON. Retain every practical feature of the small rectangular overlapping plates, narrow pierced holes and laced horizontal rows, modest torso coverage and short lower skirt. This is functional iron polished to a subdued silver-grey appearance, NOT armor made of precious silver, NOT bright chrome, NOT fantasy white plate armor. Plate faces medium-light cool steel-grey, small softly reflected dusk highlights on edges, slightly darker recesses and occasional tiny scratches. Matte/satin metal with restrained patina, individual plates clearly defined. Preserve dark reddish-brown lacing, dark narrow edge binding and brown waist belt to separate silver plates from pale blue-white cloth. Elegant fine craftsmanship, no jewels, gold decorations, mirror breastplate or oversized pauldrons, no extra armor on horse.\nSecondary continuity fixes: the reddish sky above trees is diffuse reflected light from an UNSEEN distant fire. Remove any small orange sun-like orb or visible fire point behind upper-right trees, leaving only subtle red-tinted clouds; no visible flame, camp or sun. Remove any foot-support loop or stirrup under the visible boot; boot rests against horse naturally, saddle girth stays functional.\nEverything else unchanged, especially the much more realistic horse surface: no embossed curls or sculptural texture. True live-action historical film photography, neutral subdued dusk, naturally exposed grey-white horse not glowing, realistic iron material rather than CGI, no text or watermark, full-frame 16:9."
+    }
+  ],
+  "integration": "独立图片候选，尚未替换游戏资源与现行Seedance文档；青绿色衣袍版本已被用户否定。"
+}

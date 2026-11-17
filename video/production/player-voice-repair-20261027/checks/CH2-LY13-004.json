@@ -1,0 +1,59 @@
+{
+  "id": "CH2-LY13-004",
+  "expected": "还得往更早的时候去。",
+  "sha256": "e10de7f2633bf9d8540fb9f567cc9e7caf3ba1367565dc17a6e5306b46405e89",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-004-v1.wav",
+  "recognized": "还得往更早的时候去",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.6399999999999997,
+      "end": 2.14,
+      "text": "还得往更早的时候去",
+      "noSpeechProbability": 0.3507392704486847,
+      "words": [
+        {
+          "start": 0.6399999999999997,
+          "end": 1.0,
+          "text": "还"
+        },
+        {
+          "start": 1.0,
+          "end": 1.1,
+          "text": "得"
+        },
+        {
+          "start": 1.1,
+          "end": 1.22,
+          "text": "往"
+        },
+        {
+          "start": 1.22,
+          "end": 1.4,
+          "text": "更"
+        },
+        {
+          "start": 1.4,
+          "end": 1.58,
+          "text": "早"
+        },
+        {
+          "start": 1.58,
+          "end": 1.86,
+          "text": "的时候"
+        },
+        {
+          "start": 1.86,
+          "end": 2.14,
+          "text": "去"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

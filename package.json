@@ -7,19 +7,50 @@
     "node": ">=22"
   },
   "scripts": {
-    "build": "npm --prefix GameStarter run build:demo",
-    "start": "npm --prefix GameStarter run start:demo",
+    "subtitles:check": "node tools/video/subtitles.mjs",
+    "subtitles:sync": "node tools/video/subtitles.mjs --sync --normalize",
+    "build": "npm run check:architecture && npm --prefix GameStarter run build:demo",
+    "start": "node tools/local-game/server.mjs",
+    "open": "node tools/local-game/launch.mjs",
+    "stop": "node tools/local-game/launch.mjs --stop",
+    "test:local": "node --test tools/local-game/builds.test.mjs",
+    "test:chapter-access": "node --test GameStarter/tests/chapter-progression.test.mjs && node tools/migration/chapter-progression-smoke.mjs",
+    "test:jingzhou": "node --test GameStarter/tests/chapter-five-session.test.mjs GameStarter/tests/chapter-five-inquiry.test.mjs && node tools/migration/chapter-five-smoke.mjs && node tools/migration/chapter-five-inquiry-smoke.mjs",
     "start:api": "npm --prefix GameStarter/server start",
-    "check": "npm --prefix GameStarter run check:narrative",
-    "test": "npm --prefix GameStarter run test:narrative",
-    "test:api": "node --test GameStarter/server/server.test.mjs",
+    "check": "npm run check:architecture && npm --prefix GameStarter run check:narrative && tsc -p GameStarter/web-demo/tsconfig.json --noEmit",
+    "test": "npm run build && npm run test:game",
+    "test:core": "npm --prefix GameStarter run test:narrative",
+    "test:api": "node --test GameStarter/server/*.test.mjs",
+    "test:voice": "node tools/ai/streaming-voice-smoke.mjs",
     "validate:story": "npm --prefix GameStarter run validate:story",
     "audit:migration": "python3 tools/migration/audit.py",
-    "test:smoke": "node tools/migration/smoke.mjs",
-    "check:assets": "node tools/migration/check-assets.mjs"
+    "test:game": "node --test GameStarter/tests/*.test.mjs",
+    "test:thoughts": "node tools/migration/thought-workspace-smoke.mjs",
+    "test:smoke": "node tools/migration/full-game-smoke.mjs",
+    "test:release": "node --test GameStarter/tests/chapter-two-save-recovery.test.mjs GameStarter/tests/audio-lifecycle.test.mjs",
+    "test:modes": "node tools/migration/runtime-modes-smoke.mjs",
+    "test:settings": "node tools/migration/game-settings-smoke.mjs",
+    "check:assets": "node tools/migration/check-assets.mjs",
+    "check:architecture": "node tools/architecture/check.mjs",
+    "test:architecture": "node --test tools/architecture/check.test.mjs",
+    "test:characters": "node tools/migration/characters-smoke.mjs",
+    "test:personality": "node --test GameStarter/tests/personality-core.test.mjs GameStarter/tests/personality-module.test.mjs GameStarter/tests/personality-assess.test.mjs GameStarter/server/personality.test.mjs",
+    "test:personality:browser": "node GameStarter/tests/personality.browser.mjs && node GameStarter/tests/chapter-three-personality.browser.mjs",
+    "test:pangtong": "node --test GameStarter/tests/chapter-seven-session.test.mjs && node tools/migration/chapter-seven-smoke.mjs",
+    "test:subtitles": "node --test tools/video/*.test.mjs",
+    "test:rescue": "npm --prefix demos/yiling-rescue test",
+    "test:stability": "npm run check && npm --prefix GameStarter run build:demo && npm run test:game && npm run test:core && npm run test:api && npm run test:subtitles && npm run test:architecture && npm run test:local && npm run test:rescue && npm run check:assets",
+    "test:stability:browser": "node tools/migration/stability-smoke.mjs && node tools/migration/cinematic-transition-smoke.mjs && node tools/migration/chapter-subtitles-smoke.mjs && node tools/migration/full-game-smoke.mjs && node tools/migration/mainline-rescue-smoke.mjs && node tools/migration/chapter-seven-smoke.mjs && node tools/migration/three-chapter-ui-smoke.mjs",
+    "test:chapters:browser": "node tools/migration/chapter-two-films-smoke.mjs && node tools/migration/chapter-three-endings-smoke.mjs && node tools/migration/jieting-deployment-smoke.mjs && node tools/migration/jieting-five-round-smoke.mjs",
+    "test:release:browser": "npm run test:stability:browser && npm run test:chapters:browser",
+    "verify:daily": "npm run check && npm --prefix GameStarter run build:demo && npm run test:smoke",
+    "test:ai-guidance": "node tools/migration/ai-guidance-smoke.mjs"
   },
   "devDependencies": {
-    "typescript": "5.9.3",
-    "playwright": "1.56.1"
+    "playwright": "1.56.1",
+    "typescript": "5.9.3"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
   }
 }

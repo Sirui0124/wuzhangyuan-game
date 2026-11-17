@@ -1,0 +1,119 @@
+{
+  "delivery": {
+    "id": "V14",
+    "name": "粮运画卷",
+    "entry": "获准查本批后",
+    "next": [
+      "V15"
+    ],
+    "endEvent": "无新增剧情状态",
+    "children": [
+      "V14-01",
+      "V14-02"
+    ],
+    "subclips": [
+      "V14-01",
+      "V14-02"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+    "technical": {
+      "duration": 14.0,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "decodedVideoFrames": 336,
+      "videoTrackSeconds": 14.0,
+      "videoEndSeconds": 14.0,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "已检查R5系裁去前1.25秒后的画卷展开；0–2.75秒手及卷面有明显柔化，只作展开过渡，不作手指接触细节证明。2.75秒后五环节图完全不透明，无底图伪字透出；无玩家脸、无缺额答案提前揭露。半秒完整序列覆盖0–14秒。"
+    ],
+    "audioIssues": [
+      "未逐字听审；无新增TTS。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "仅获准查本批后播放；五环节是流程认识，不提供任何缺额位置答案，不新增证据。",
+      "开头只作展开过渡；不宣称手指细节/全文核实。"
+    ]
+  },
+  "usability": {
+    "id": "V14",
+    "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "已检查R5系裁去前1.25秒后的画卷展开；0–2.75秒手及卷面有明显柔化，只作展开过渡，不作手指接触细节证明。2.75秒后五环节图完全不透明，无底图伪字透出；无玩家脸、无缺额答案提前揭露。半秒完整序列覆盖0–14秒。"
+    ],
+    "issues": [
+      {
+        "type": "readable-fake-map-text",
+        "state": "repaired",
+        "repair": "展开区局部柔化；五环节准确图完整不透明，不再透出底图伪字。"
+      }
+    ],
+    "integrationConditions": [
+      "仅获准查本批后播放；五环节是流程认识，不提供任何缺额位置答案，不新增证据。",
+      "开头只作展开过渡；不宣称手指细节/全文核实。"
+    ],
+    "audioIssues": [
+      "未逐字听审；无新增TTS。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "all half-second sequence + browser natural 1x mute",
+        "interval": [
+          0,
+          14
+        ],
+        "evidence": "review/latest-picture-sequences/V14"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V14",
+        "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+        "event": "ended",
+        "start": 0,
+        "end": 14,
+        "duration": 14,
+        "time": "2026-10-25T06:18:50.584Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 14.0,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129"
+    }
+  }
+}

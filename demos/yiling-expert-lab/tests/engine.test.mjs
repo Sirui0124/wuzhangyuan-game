@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {create,deploy,assess,execute,tick,validateAI,scenes} from '../.build/engine.js';
+function arrive(s){deploy(s,1);for(let i=0;i<4;i++)tick(s,2);assert.equal(s.phase,'event');}
+test('到场暂停，人物同意不等于已经执行或归营',()=>{const s=create('cheng','A');arrive(s);s.plan=assess(s,['cover','transfer']);tick(s,2);assert.equal(s.clock,8);assert.equal(s.fit,2500);assert.equal(s.phase,'event');execute(s);while(s.phase!=='done')tick(s,2);assert.equal(s.fit+s.wounded,2500);assert.equal(s.clock,32);assert.ok(s.wounded>0);});
+test('水路容量拒绝两队，资源不变',()=>{const s=create('cheng','A');assert.throws(()=>deploy(s,2),/客位/);assert.equal(s.phase,'camp');assert.equal(s.deployed,0);});
+test('四场三种固定策略均可执行且成本不同',()=>{for(const id of Object.keys(scenes)){const s=create(id,'A');arrive(s);const costs=new Set();for(const o of scenes[id].options){const p=assess(s,[...o[1]]);assert.ok(p.accepted);costs.add(p.minutes+':'+p.loss);}assert.equal(costs.size,3);}});
+test('动作与原话、资源、事实及前置条件由程序检查',()=>{const s=create('cheng','C');arrive(s);const valid={characterAccepted:true,reply:'我招呼同行的人登船，你的人守住后侧，我们一起撤。',actions:[{id:'cover',quote:'掩护'},{id:'transfer',quote:'转船'}],unsupported:[],factsUsed:[0],requiredSquads:1,requiredBoats:1};assert.ok(validateAI(s,valid,'掩护大家转船').accepted);for(const data of [{...valid,requiredSquads:2},{...valid,requiredBoats:2},{...valid,factsUsed:[99]},{...valid,unsupported:['造船']},{...valid,actions:[{id:'transfer',quote:'不存在的引文'}]}])assert.throws(()=>validateAI(s,data,'掩护大家转船'));assert.equal(assess(s,['transfer']).accepted,false);assert.throws(()=>assess(s,['teleport']));assert.equal(s.fit,2500);});
+test('已确认执行不可重复扣兵，暂停不耗时',()=>{const s=create('fu','A');arrive(s);s.plan=assess(s,['cover','escort']);execute(s);assert.throws(()=>execute(s));s.paused=true;tick(s,2);assert.equal(s.clock,8);});
+
+test('人物态度与程序可行性独立',()=>{const s=create('cheng','C');arrive(s);const p=validateAI(s,{characterAccepted:false,reply:'后船的人也得有去处，我不能答应只带我离开。',actions:[{id:'cover',quote:'掩护'},{id:'transfer',quote:'转船'}],unsupported:[],factsUsed:[0],requiredSquads:1,requiredBoats:1},'掩护转船');assert.equal(p.accepted,false);});

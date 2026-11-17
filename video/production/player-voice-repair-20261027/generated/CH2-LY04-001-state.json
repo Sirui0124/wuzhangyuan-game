@@ -1,0 +1,130 @@
+{
+  "id": "CH2-LY04-001",
+  "node": "CH2-LY04-001",
+  "text": "我来领取本队这批粮的交接材料。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 2.64,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。正在核查粮食交接，认真询问或说出下一步想法，不像播音员读报告。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "c6bd1d6e-17bb-4dcd-a2ec-1f2d0bb83ae2",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:16:27.322Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。正在核查粮食交接，认真询问或说出下一步想法，不像播音员读报告。唯一允许发声的原句：“我来领取本队这批粮的交接材料。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约2.64秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "27588a8ed6cd6dd7d3b2878b0994b3aaba655d52d4b72ed3afab90b5658bb8f3",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027191627890689EC85FAABBD911C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-001-v1.wav",
+  "sha256": "011d16efc706f294f7a157bced119460d44442bb0787b69f51435aac8262067a",
+  "duration": 2.58,
+  "originalDuration": 2.58,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2520,
+        "start_time": 200,
+        "text": "我来领取本队这批粮的交接材料。",
+        "words": [
+          {
+            "end_time": 360,
+            "start_time": 200,
+            "text": "我"
+          },
+          {
+            "end_time": 520,
+            "start_time": 360,
+            "text": "来"
+          },
+          {
+            "end_time": 720,
+            "start_time": 520,
+            "text": "领"
+          },
+          {
+            "end_time": 840,
+            "start_time": 720,
+            "text": "取"
+          },
+          {
+            "end_time": 1080,
+            "start_time": 920,
+            "text": "本"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1080,
+            "text": "队"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1280,
+            "text": "这"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1480,
+            "text": "批"
+          },
+          {
+            "end_time": 1760,
+            "start_time": 1720,
+            "text": "粮"
+          },
+          {
+            "end_time": 1960,
+            "start_time": 1840,
+            "text": "的"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 2000,
+            "text": "交"
+          },
+          {
+            "end_time": 2200,
+            "start_time": 2160,
+            "text": "接"
+          },
+          {
+            "end_time": 2480,
+            "start_time": 2320,
+            "text": "材"
+          },
+          {
+            "end_time": 2520,
+            "start_time": 2480,
+            "text": "料"
+          },
+          {
+            "end_time": 2520,
+            "start_time": 2520,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "我来领取本队这批粮的交接材料。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:17:00.784Z"
+}

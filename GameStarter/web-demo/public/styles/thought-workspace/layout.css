@@ -1,0 +1,39 @@
+
+.workspace-layout{
+position:absolute;inset:100px 5vw 35px 130px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a5ac9766 transparent}
+.inventory-open .workspace-layout{
+left:350px}
+
+.workspace-modes{
+display:flex;align-items:center;justify-content:center;gap:22px;margin:0 0 22px;color:#9b967b;font:15px/1.6 var(--serif)}
+.workspace-modes button{
+padding:5px 0;letter-spacing:3px}
+.workspace-modes button[aria-current]{
+color:var(--mind-red);border-bottom:1px solid var(--mind-red)}
+
+.reasoning-stage{
+max-width:1060px;margin:0 auto;padding:0 22px 28px;position:relative}
+.reasoning-heading{
+text-align:center}
+.reasoning-kicker{
+font:11px/1.7 'Microsoft YaHei',sans-serif;letter-spacing:3px;color:var(--mind-red);margin:0 0 10px}
+.reasoning-heading h1{
+font-size:32px;font-weight:400;letter-spacing:2px;line-height:1.45;margin:0;color:var(--mind-ink)}
+.canvas-invitation{
+font:11px/1.9 'Microsoft YaHei',sans-serif;color:#797d68;margin:16px 0 28px}
+
+.reasoning-timeline{
+position:relative;padding-bottom:10px}
+.thought-record{
+position:relative;margin-bottom:38px}
+:root #game-root .workspace-screen .thought-input-row{
+display:grid;grid-template-columns:minmax(0,1fr) 86px;align-items:center;gap:16px;position:relative}
+
+:root #game-root .workspace-screen .thought-dropzone,:root #game-root .workspace-screen .record-evidence,:root #game-root .workspace-screen .expression-input-block{
+position:relative;z-index:1;border:1px solid #ffffffcc;border-radius:16px;background:linear-gradient(130deg,#ffffff35,transparent 60%),repeating-linear-gradient(115deg,#ffffff12 0px,#ffffff12 1px,transparent 1px,transparent 6px),var(--glass);box-shadow:0 5px 20px #544b2b07,inset 0 0 0 1px #9c9f8520;backdrop-filter:blur(3px)}
+
+:root #game-root .workspace-screen .thought-dropzone,:root #game-root .workspace-screen .record-evidence{
+display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:16px;min-height:104px}
+:root #game-root .workspace-screen .thought-dropzone.is-drag-over,:root #game-root .workspace-screen .speech-evidence.is-drag-over{
+background:#fffaf0d9;box-shadow:0 0 0 2px #a23d2f55,inset 0 0 20px #a23d2f07}
+

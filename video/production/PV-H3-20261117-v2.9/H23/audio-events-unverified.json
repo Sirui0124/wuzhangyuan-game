@@ -1,0 +1,61 @@
+{
+  "source_sha256": "14bcffc9211665619d2295458ae48954c0498266da86e177db1f8e80fc589a0f",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Clip-clop",
+          "p": 0.7305
+        },
+        {
+          "label": "Horse",
+          "p": 0.5099
+        },
+        {
+          "label": "Animal",
+          "p": 0.2421
+        },
+        {
+          "label": "Chewing, mastication",
+          "p": 0.0802
+        },
+        {
+          "label": "Neigh, whinny",
+          "p": 0.0427
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0251
+        },
+        {
+          "label": "Music",
+          "p": 0.0249
+        },
+        {
+          "label": "Tap",
+          "p": 0.0133
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0132
+        },
+        {
+          "label": "Drip",
+          "p": 0.0123
+        },
+        {
+          "label": "Speech",
+          "p": 0.0121
+        },
+        {
+          "label": "Liquid",
+          "p": 0.0104
+        }
+      ],
+      "music": 0.0249
+    }
+  ]
+}

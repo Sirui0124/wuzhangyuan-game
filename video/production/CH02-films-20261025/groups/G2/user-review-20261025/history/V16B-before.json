@@ -1,0 +1,127 @@
+{
+  "delivery": {
+    "id": "V16B",
+    "name": "去问损耗与认罪",
+    "entry": "UI-N2选B",
+    "next": [
+      "UI-EARLY"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16B-01",
+      "V16B-02"
+    ],
+    "subclips": [
+      "V16B-01",
+      "V16B-02"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+    "technical": {
+      "duration": 12.12,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "decodedVideoFrames": 289,
+      "videoTrackSeconds": 12.041666666666666,
+      "videoEndSeconds": 12.083333,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "0–4.8秒同场灰袍苟安闭口倾听与低头反应；4.8秒后才切为苟安说话。半秒全序列覆盖全段，实际浏览器静音1x播放0–12.117秒，截图检查首尾。未见玩家露脸、伪证据或肢体异常。"
+    ],
+    "audioIssues": [
+      "玩家原句复用既有固定声音WAV，未新增TTS；NPC原声待逐字听审及统一处理。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+    "userApproved": false,
+    "pictureUsability": "usable",
+    "integrationConditions": [
+      "沿用UI-N2选B入口与UI-EARLY后续；不能因认罪句自动授予未取得文书或结论。"
+    ]
+  },
+  "usability": {
+    "id": "V16B",
+    "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable",
+    "observations": [
+      "0–4.8秒同场灰袍苟安闭口倾听与低头反应；4.8秒后才切为苟安说话。半秒全序列覆盖全段，实际浏览器静音1x播放0–12.117秒，截图检查首尾。未见玩家露脸、伪证据或肢体异常。"
+    ],
+    "issues": [
+      {
+        "type": "wrong-visible-speaker",
+        "state": "repaired",
+        "originalSubclip": "V16B-01",
+        "originalTime": [
+          0,
+          2.25
+        ],
+        "repair": "同SHA复用G1 L01连续0–4.8秒闭口反应，非定格和循环；既有玩家WAV复用，原声重复人声静音。"
+      },
+      {
+        "type": "native-tail-cut",
+        "state": "repaired",
+        "repair": "V16B-02保留原生7.291667秒，避免请求整数7秒截掉原句字尾；声音内容未听审。"
+      }
+    ],
+    "integrationConditions": [
+      "沿用UI-N2选B入口与UI-EARLY后续；不能因认罪句自动授予未取得文书或结论。"
+    ],
+    "audioIssues": [
+      "玩家原句复用既有固定声音WAV，未新增TTS；NPC原声待逐字听审及统一处理。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "0.5-second full sequence plus browser screenshots at first frame and actual end",
+        "interval": [
+          0,
+          12.117
+        ],
+        "sequence": "review/latest-picture-sequences/V16B/sequence-01.jpg"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V16B",
+        "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+        "event": "ended",
+        "start": 0,
+        "end": 12.117,
+        "duration": 12.117,
+        "time": "2026-10-25T06:12:33.508Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 12.12,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4"
+    }
+  }
+}

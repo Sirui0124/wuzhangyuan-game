@@ -1,0 +1,62 @@
+{
+  "id": "V01",
+  "name": "山路获救",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V01-山路获救.mp4",
+  "duration": 18.15,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "开章",
+  "next": [
+    "V02"
+  ],
+  "endEvent": "实际救援发生；尚未识别苟安",
+  "subclips": [
+    {
+      "id": "V01-existing",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V01-existing-normalized.mp4",
+      "slotStart": 0,
+      "slotEnd": 18.13,
+      "sourceTrim": [
+        0,
+        18.13
+      ],
+      "audioMode": "reused-native-source",
+      "review": {
+        "id": "V01-existing",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V01-existing-normalized.mp4",
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\LI01-slip-continuous-20261025.mp4",
+        "sourceSha256": "0ef660b0da6daf949bdfa623b7b08300b39f3f7458cd70b42cdfe991f464d9eb",
+        "sourceIntervals": [
+          [
+            0,
+            18.06
+          ]
+        ],
+        "visualReview": {
+          "status": "usable-candidate",
+          "method": "actual browser playback with screenshot checks plus ordered 2fps source sequence",
+          "checkedRange": [
+            0,
+            18.06
+          ],
+          "findings": "山路、扶袋、失足、握前臂、拉回与放手完整；未见玩家脸背或制作字幕；允许原有服装纹理细差"
+        },
+        "audioIssues": [
+          "保留现片原声，尚未逐字听审；可能含当前冻结源未指定的救援话语，留统一配音阶段处理"
+        ],
+        "userReview": "待review",
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V01-existing-normalized.mp4"
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "358295773f70bb15afc231f5050063a016a97496da019d20fb693ed31572caba",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending"
+}

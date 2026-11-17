@@ -1,0 +1,2102 @@
+{
+  "group": "G1",
+  "title": "伤帐初识与第一次交谈",
+  "source": "assignment.json (frozen online dialogue rev7 / logic rev11)",
+  "sourceSha256": "5c78d5174dc4cdee6a04b146d2b57a4424dfcd96cc359a38e3fd14e216ce48d2",
+  "status": "ready",
+  "clips": [
+    {
+      "id": "V01-01",
+      "slot": "V01",
+      "name": "山路获救",
+      "duration": 8,
+      "referenceKeys": [
+        "rescue_gouan",
+        "mountain_road"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-001",
+          "speaker": "视频（LI01）",
+          "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "entryState": "开章；苟安尚未受杖伤，不出现绷带或伤帐衣物。",
+      "endState": "粮袋停在车沿，视线跟着它下移。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "崎岖山路上，我跟着一辆木轮粮车走。车轮压过湿石，车向崖侧歪斜；一袋沉重的粮滑到车沿。先看到粮袋与崖边的距离，未出现救援。",
+          "camera": "第一视角跟车缓行；随车轮绊动轻晃，俯看粮袋，不拍我的身体。",
+          "lines": [
+            {
+              "node": "CH2-LY01-001",
+              "speaker": "视频（LI01）",
+              "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。",
+              "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "environment-only"
+    },
+    {
+      "id": "V01-02",
+      "slot": "V01",
+      "name": "山路获救",
+      "duration": 8,
+      "referenceKeys": [
+        "rescue_gouan",
+        "mountain_road"
+      ],
+      "sourceLines": [],
+      "entryState": "粮袋仍在车沿，车与岩壁方向不变。",
+      "endState": "我停在崖外，前臂靠近岩沿；没有已经被拉上去。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "接前片车沿粮袋，我右手扶袋；脚下湿岩打滑，摄影机失去重心向崖侧下降。右手及时攀住岩边，粮袋仍有实物重量，不飞起来；镜头停在崖外较低位置。",
+          "camera": "玩家视线先看袋再随失足下降；不显示我的全身或越轴侧面，不快切掩盖坠落。",
+          "lines": []
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "environment-only"
+    },
+    {
+      "id": "V01-03",
+      "slot": "V01",
+      "name": "山路获救",
+      "duration": 10,
+      "referenceKeys": [
+        "rescue_gouan",
+        "mountain_road",
+        "rescue_grip"
+      ],
+      "sourceLines": [],
+      "entryState": "我还在岩沿下，队长的手尚未接触我。",
+      "endState": "实际拉回山路后落稳；只知道他是救命队长，尚未认名。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "从崖外仰望，同一未受伤的队长在岩沿伏低，将右手牢牢握住我的右前臂，先稳住接触，再向后移重心，将视线拉回路面。末尾看到他闭口确认我站稳，衣甲泥痕与前片一致。",
+          "camera": "一镜完成握住、承重、拉起、站稳；双手接触处保持可见，不把抓手变拥抱，不出现第三只手。",
+          "lines": []
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "environment-only"
+    },
+    {
+      "id": "V02-01",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 7,
+      "referenceKeys": [
+        "camp_night"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-002",
+          "speaker": "我（心声）",
+          "text": "第四次北伐。这回，我成了运粮兵。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "获救后，尚未进伤帐。",
+      "endState": "视线落在通往伤帐的营道。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "山路之后的营地路口，第一视角低头看一次自己沾泥的运粮袖口，再抬眼望粮队；只听我的心声，远处兵卒不开口。",
+          "camera": "眼高稳定行走，轻俯仰；不看见我的脸、背影或现代物件。",
+          "lines": [
+            {
+              "node": "CH2-LY01-002",
+              "speaker": "我（心声）",
+              "text": "第四次北伐。这回，我成了运粮兵。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover"
+    },
+    {
+      "id": "V02-02",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 10,
+      "referenceKeys": [
+        "camp_night"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-007",
+          "speaker": "我（心声）",
+          "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "停在营道转角，远处伤帐门灯可见。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "我沿营道缓步，视线掠过空下来的木车与帐绳。心声回想苟安的旧事，只拍此刻营地；不重演受罚、不展示判罪文书或未来事件。",
+          "camera": "一段稳定的第一视角行进，前景帐绳掠过但不遮满画面。",
+          "lines": [
+            {
+              "node": "CH2-LY01-007",
+              "speaker": "我（心声）",
+              "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover"
+    },
+    {
+      "id": "V02-03",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 12,
+      "referenceKeys": [
+        "camp_night"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-008",
+          "speaker": "我（心声）",
+          "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "转向伤帐门前，尚未掀帘。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "延续同条营道，远处兵卒整理车绳、灯火在麻布上轻动。我的心声提及记忆里的降魏与谣言；这些只存在声音，不拍魏营、宫廷、谣言传播或丞相撤军。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY01-008",
+              "speaker": "我（心声）",
+              "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover"
+    },
+    {
+      "id": "V02-04",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 9,
+      "referenceKeys": [
+        "wound_tent"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-009",
+          "speaker": "我（心声）",
+          "text": "得先弄清苟安现在的打算，也许还来得及。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "我站在伤帐外，门帘挡住榻上伤者。",
+      "endState": "右手贴近帘边，句子结束。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "在伤帐前停一步，望着低垂门帘，心声说完后才抬起右手靠近帘边，手没有碰到里面的人。",
+          "camera": "第一视角看门帘与门侧灯，留正常停顿，不出现苟安对心声的回应。",
+          "lines": [
+            {
+              "node": "CH2-LY01-009",
+              "speaker": "我（心声）",
+              "text": "得先弄清苟安现在的打算，也许还来得及。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover"
+    },
+    {
+      "id": "V02-05",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 6,
+      "referenceKeys": [
+        "gouan",
+        "wound_tent"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-011",
+          "speaker": "视频（LI02）",
+          "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY01-012",
+          "speaker": "我（心声）",
+          "text": "原来你就是苟安？",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "门帘尚未掀开。",
+      "endState": "我停在榻前正常交谈距离，苟安看向来人。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "右手掀开帐帘，视线进入后抬向榻上；同一崖边队长如今穿伤后衣物卧坐在榻上，伤口遮蔽，闭口。认出身份的心声从画外传来，他不对心声点头或开口。",
+          "camera": "掀帘跟随动作入帐，慢抬视线落在苟安脸，不闪回救援。",
+          "lines": [
+            {
+              "node": "CH2-LY01-011",
+              "speaker": "视频（LI02）",
+              "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+              "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+            },
+            {
+              "node": "CH2-LY01-012",
+              "speaker": "我（心声）",
+              "text": "原来你就是苟安？",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover"
+    },
+    {
+      "id": "V02-06",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 7,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-013",
+          "speaker": "我",
+          "text": "你接下来打算降魏？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "我的问题完整说完；苟安准备回问。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "苟安原本看着我，听到冒失问话后眼神收紧，下颌轻抬。他全程闭嘴倾听，不抢说我的问题，不指向魏营。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY01-013",
+              "speaker": "我",
+              "text": "你接下来打算降魏？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V02-07",
+      "slot": "V02",
+      "name": "回忆与伤帐认人",
+      "duration": 7,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY01-014",
+          "speaker": "苟安",
+          "text": "你说什么？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-001",
+          "speaker": "苟安",
+          "text": "谁让你来问这个的？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "苟安闭口，保持警觉；停在UI-LIGHT选择之前。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "苟安先短促反问，停半秒，再盯住摄影机问是谁让来问的；他只微收身前衣襟，不站起、不抓住我。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY01-014",
+              "speaker": "苟安",
+              "text": "你说什么？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY02-001",
+              "speaker": "苟安",
+              "text": "谁让你来问这个的？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V03A-01",
+      "slot": "V03A",
+      "name": "开场说明来意A",
+      "duration": 10,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-003",
+          "speaker": "我（选项）",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "只有UI-LIGHT选A后才播放。",
+      "endState": "我解释完毕，苟安闭口等共同后续。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "苟安保持上一段警觉坐姿，听我解释；先盯着我，再略松开攥住的衣边，嘴唇始终闭合，没有提前原谅或点头。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-003",
+              "speaker": "我（选项）",
+              "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V03B-01",
+      "slot": "V03B",
+      "name": "开场说明来意B",
+      "duration": 6,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-004",
+          "speaker": "我（选项）",
+          "text": "你救过我，我来看看你。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "只有UI-LIGHT选B后才播放。",
+      "endState": "我说完来意，苟安闭口等共同后续。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安听到我提救命一事，视线停在我所在位置，肩膀稍落下，嘴唇闭合；不重演救援，不让我出镜。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-004",
+              "speaker": "我（选项）",
+              "text": "你救过我，我来看看你。",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V04-01",
+      "slot": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "duration": 9,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-005",
+          "speaker": "苟安",
+          "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "V03A或B结束，同一伤帐坐姿。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安将视线从我脸上挪开片刻，再说起永安五月喝酒。他只是叙述，不取酒、不饮酒，不生成回忆。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-005",
+              "speaker": "苟安",
+              "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V04-02",
+      "slot": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "duration": 4,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-006",
+          "speaker": "我",
+          "text": "那咱们确实是误了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "本句完整结束，镜头稳定，所有人闭口；同槽位下一子片续接另一位说话人。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "苟安闭口听我说话，低头整理膝上被布，不开口。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-006",
+              "speaker": "我",
+              "text": "那咱们确实是误了。",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V04-03",
+      "slot": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "duration": 8,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-007",
+          "speaker": "苟安",
+          "text": "我认栽，没什么委屈，养好伤就行了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接同槽位上一子片结束，前一位说话人已闭口；人物、道具、光线和位置不变。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安等前句结束后才回答认栽、没委屈，整理被布，最后抬眼闭口。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-007",
+              "speaker": "苟安",
+              "text": "我认栽，没什么委屈，养好伤就行了。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V04-04",
+      "slot": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "duration": 5,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-008",
+          "speaker": "苟安",
+          "text": "我没打算去魏国。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "本句完整结束，镜头稳定，所有人闭口；同槽位下一子片续接另一位说话人。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 5,
+          "action": "苟安看我，否认去魏国，说完自然闭口。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-008",
+              "speaker": "苟安",
+              "text": "我没打算去魏国。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V04-05",
+      "slot": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "duration": 4,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-009",
+          "speaker": "我",
+          "text": "那是我多心了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "承接同槽位上一子片结束，前一位说话人已闭口；人物、道具、光线和位置不变。",
+      "endState": "双方话音落下；片尾仍在伤帐，不提前到夜间。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "苟安保持前句结束的坐姿，闭口听我的回答，不代说。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-009",
+              "speaker": "我",
+              "text": "那是我多心了。",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V05-01",
+      "slot": "V05",
+      "name": "夜间取账",
+      "duration": 10,
+      "referenceKeys": [
+        "camp_night",
+        "grain_clerk"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-010",
+          "speaker": "演出",
+          "text": "此后几夜，我在营外留意粮队的动静。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-011",
+          "speaker": "演出",
+          "text": "第三夜，一队粮兵在灯下交接文书。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "entryState": "V04后经过数夜；服装保持我运粮兵袖口。",
+      "endState": "第三夜交接完成，管事面前留一本记录。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 3,
+          "action": "第一夜营外，看停在木栅旁的粮车。",
+          "camera": "玩家第一视角静观；镜间直切表示不同夜晚，不叠日期或新增旁白。",
+          "lines": [
+            {
+              "node": "CH2-LY02-010",
+              "speaker": "演出",
+              "text": "此后几夜，我在营外留意粮队的动静。",
+              "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+            },
+            {
+              "node": "CH2-LY02-011",
+              "speaker": "演出",
+              "text": "第三夜，一队粮兵在灯下交接文书。",
+              "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+            }
+          ]
+        },
+        {
+          "start": 3,
+          "end": 6,
+          "action": "第二夜另一帐绳边，看粮兵整理车绳。",
+          "camera": "玩家第一视角静观；镜间直切表示不同夜晚，不叠日期或新增旁白。",
+          "lines": []
+        },
+        {
+          "start": 6,
+          "end": 10,
+          "action": "第三夜走近灯下案边，两名粮兵将文书交到管事手里，交接结束手离开。",
+          "camera": "玩家第一视角静观；镜间直切表示不同夜晚，不叠日期或新增旁白。",
+          "lines": []
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "environment-only"
+    },
+    {
+      "id": "V05-02",
+      "slot": "V05",
+      "name": "夜间取账",
+      "duration": 9,
+      "referenceKeys": [
+        "grain_clerk"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-012",
+          "speaker": "我",
+          "text": "这份交接记录，可以让我看看吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-013",
+          "speaker": "粮队管事",
+          "text": "嗯，看吧。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "第三夜灯下案前，交接记录仍在管事身前。",
+      "endState": "获准查看记录，原件未被拿走；停UI-DATE之前。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "我从镜头位置开口请求查看交接记录；管事闭口听，随后只由管事回答，手掌把记录推到桌边许可查看。我的右手等他说完才扶住记录边，原件始终留在桌上。",
+          "camera": "先管事中近景，回答后顺视线俯看手与案面，墨迹不可辨读。",
+          "lines": [
+            {
+              "node": "CH2-LY02-012",
+              "speaker": "我",
+              "text": "这份交接记录，可以让我看看吗？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY02-013",
+              "speaker": "粮队管事",
+              "text": "嗯，看吧。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V06-01",
+      "slot": "V06",
+      "name": "日期疑点",
+      "duration": 8,
+      "referenceKeys": [
+        "grain_table"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-015",
+          "speaker": "我（心声）",
+          "text": "他说五月喝的酒，六月初二才领到粮。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "UI-DATE实际读完。",
+      "endState": "停在是否去找苟安的选择之前；不自动出发。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "读完日期后，第一视角俯看桌上原记录，我右手指尖从一行移到另一行但不变造文字；末尾收回手，纸面仍留在桌上。只有心声，不把日期推断拍成扣粮实锤。",
+          "camera": "稳定俯拍第一视角，只见袖口、指尖和模糊文书，不生成日期字幕。",
+          "lines": [
+            {
+              "node": "CH2-LY02-015",
+              "speaker": "我（心声）",
+              "text": "他说五月喝的酒，六月初二才领到粮。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "保持同一空间、服装、道具状态；不新增证据、人物或剧情结论。禁止字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V07-01",
+      "slot": "V07",
+      "name": "带记录回伤帐",
+      "duration": 12,
+      "referenceKeys": [
+        "gouan",
+        "wound_tent"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-016",
+          "speaker": "演出",
+          "text": "我带着获准抄取的记录回到伤帐。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-017",
+          "speaker": "苟安",
+          "text": "你这几夜总在外头走，是来看我，还是怕我跑了？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "UI-GO-GOUAN实际选去找后；抄件已获准抄取。",
+      "endState": "停UI-N1之前，苟安仍在榻上。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "我带着折好的抄件走入伤帐，右手把抄件放在自己一侧的矮案，不是拿走的原件。视线抬到苟安，他看我一眼后开口问来看他还是怕他跑了；说完嘴唇闭合。",
+          "camera": "0–3秒随视线进帐和放抄件，3–12秒眼高苟安中近景。",
+          "lines": [
+            {
+              "node": "CH2-LY02-016",
+              "speaker": "演出",
+              "text": "我带着获准抄取的记录回到伤帐。",
+              "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+            },
+            {
+              "node": "CH2-LY02-017",
+              "speaker": "苟安",
+              "text": "你这几夜总在外头走，是来看我，还是怕我跑了？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native"
+    },
+    {
+      "id": "V08A-01",
+      "slot": "V08A",
+      "name": "点出委屈分支",
+      "duration": 15,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-018",
+          "speaker": "我",
+          "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "UI-N1选A后，抄件在我的案侧。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 15,
+          "action": "苟安闭口听我点出日期和迟粮的疑问，目光从案上抄件回到摄影机，手停在被边。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-018",
+              "speaker": "我",
+              "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V08A-02",
+      "slot": "V08A",
+      "name": "点出委屈分支",
+      "duration": 12,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-018A",
+          "speaker": "我",
+          "text": "所以你上次在瞒我。你一定不想就这么算了",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-021",
+          "speaker": "苟安",
+          "text": "......",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-022",
+          "speaker": "苟安",
+          "text": "你说得对，我是委屈。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "苟安承认后闭口，接V09共同段。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "我先说他上次瞒我，苟安全程闭口听；我的句子结束后他沉默两秒，省略号只用沉默演出，不念出来；随后只有苟安承认委屈。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-018A",
+              "speaker": "我",
+              "text": "所以你上次在瞒我。你一定不想就这么算了",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY02-021",
+              "speaker": "苟安",
+              "text": "......",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY02-022",
+              "speaker": "苟安",
+              "text": "你说得对，我是委屈。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V08B-01",
+      "slot": "V08B",
+      "name": "关心伤势分支",
+      "duration": 13,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-B01",
+          "speaker": "我",
+          "text": "我还是怕你太难过",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B02",
+          "speaker": "我",
+          "text": "毕竟也不容易",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B03",
+          "speaker": "苟安",
+          "text": "伤总能养好。可这口气，没那么容易过去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "UI-N1选B后。",
+      "endState": "苟安说完闭口，接V09共同段。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 13,
+          "action": "我画外说怕他难过、毕竟不容易，两句之间短停；苟安闭口听。话音落下，他才回答伤能好但这口气难过去，手放松地落在被上。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-B01",
+              "speaker": "我",
+              "text": "我还是怕你太难过",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY02-B02",
+              "speaker": "我",
+              "text": "毕竟也不容易",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY02-B03",
+              "speaker": "苟安",
+              "text": "伤总能养好。可这口气，没那么容易过去。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V09-01",
+      "slot": "V09",
+      "name": "李严下属的顾虑",
+      "duration": 8,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-023",
+          "speaker": "我",
+          "text": "你不是李严的人吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-024",
+          "speaker": "我",
+          "text": "为什么不找他说明白？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "entryState": "V08A或B结束。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安听我连问两句，目光短暂落在帐口又收回，没有开口或替我发问，不出现李严实景。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-023",
+              "speaker": "我",
+              "text": "你不是李严的人吗？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY02-024",
+              "speaker": "我",
+              "text": "为什么不找他说明白？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "central-player-voiceover",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V09-02",
+      "slot": "V09",
+      "name": "李严下属的顾虑",
+      "duration": 13,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-025",
+          "speaker": "苟安",
+          "text": "我就是个替他跑腿的，他哪会替我说话。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-026",
+          "speaker": "苟安",
+          "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 13,
+          "action": "苟安先说自己只是跑腿，肩膀稍垮下，停一口气后说认酒误还能吃这碗饭；保持卧坐，不夸张捶床，不新增喝酒动作。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY02-025",
+              "speaker": "苟安",
+              "text": "我就是个替他跑腿的，他哪会替我说话。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY02-026",
+              "speaker": "苟安",
+              "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V09-03",
+      "slot": "V09",
+      "name": "李严下属的顾虑",
+      "duration": 12,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY02-027",
+          "speaker": "苟安",
+          "text": "真把话说明白，往后还在谁手底下领粮？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-001",
+          "speaker": "演出",
+          "text": "苟安取出一封李丰的信，放在榻边。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "信已放到榻边；停UI-FIRST-LETTER之前。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "苟安说完往后领粮的顾虑，缓慢从榻侧衣囊抽出一封折好的李丰信，放在榻边。信始终是一件物体，平放后手离开，不提前展开让玩家读到内容。",
+          "camera": "先眼高说话，再顺他的取信动作轻俯到榻边，不切第三人称。",
+          "lines": [
+            {
+              "node": "CH2-LY02-027",
+              "speaker": "苟安",
+              "text": "真把话说明白，往后还在谁手底下领粮？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY03-001",
+              "speaker": "演出",
+              "text": "苟安取出一封李丰的信，放在榻边。",
+              "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V10-01",
+      "slot": "V10",
+      "name": "第一封信后的交谈",
+      "duration": 10,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-004",
+          "speaker": "我",
+          "text": "你们先前议的是什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-005",
+          "speaker": "苟安",
+          "text": "迟粮的事，究竟要不要往上说。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "UI-FIRST-LETTER实际读完。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "已读信后，我在画外问先前议什么，苟安闭口听，随后只由他回答迟粮要不要往上说；信折好放在榻边，不重复读信。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY03-004",
+              "speaker": "我",
+              "text": "你们先前议的是什么？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY03-005",
+              "speaker": "苟安",
+              "text": "迟粮的事，究竟要不要往上说。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V10-02",
+      "slot": "V10",
+      "name": "第一封信后的交谈",
+      "duration": 14,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-006",
+          "speaker": "苟安",
+          "text": "我不想一直背着“饮酒误军”这几个字。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-010",
+          "speaker": "苟安",
+          "text": "我想把事情揭开，让这回北伐先停下来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 14,
+          "action": "苟安先说不想一直背饮酒误军，抬眼后继续说想揭开事情让北伐先停；不出现撤军画面，不把他说法当已实现。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY03-006",
+              "speaker": "苟安",
+              "text": "我不想一直背着“饮酒误军”这几个字。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY03-010",
+              "speaker": "苟安",
+              "text": "我想把事情揭开，让这回北伐先停下来。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V10-03",
+      "slot": "V10",
+      "name": "第一封信后的交谈",
+      "duration": 12,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-011",
+          "speaker": "我",
+          "text": "你想讨回公道，为什么一定要停北伐？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-012",
+          "speaker": "苟安",
+          "text": "这回把粮送到了，下一回呢？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "前半我画外追问为何要停北伐，苟安闭口；等我的问句结束，他才反问下一回呢，两人不重叠发声。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY03-011",
+              "speaker": "我",
+              "text": "你想讨回公道，为什么一定要停北伐？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY03-012",
+              "speaker": "苟安",
+              "text": "这回把粮送到了，下一回呢？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V10-04",
+      "slot": "V10",
+      "name": "第一封信后的交谈",
+      "duration": 14,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-013",
+          "speaker": "苟安",
+          "text": "难道换个人挨打，粮就自己长出来了？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-014",
+          "speaker": "我",
+          "text": "如果还是没人肯查呢？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-015",
+          "speaker": "苟安",
+          "text": "那我就换个肯听的地方。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "动作与句子均完整结束，留闭口反应，可在此切入同槽位下一片。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 14,
+          "action": "苟安先反问换个人挨打粮是否长出；说完闭口，我画外问没人查怎么办；停半秒，苟安才说换个肯听的地方。视线来回都在正常距离，不加魏军画面。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY03-013",
+              "speaker": "苟安",
+              "text": "难道换个人挨打，粮就自己长出来了？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY03-014",
+              "speaker": "我",
+              "text": "如果还是没人肯查呢？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY03-015",
+              "speaker": "苟安",
+              "text": "那我就换个肯听的地方。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V10-05",
+      "slot": "V10",
+      "name": "第一封信后的交谈",
+      "duration": 11,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-016",
+          "speaker": "我",
+          "text": "你就信得过魏国？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-017",
+          "speaker": "苟安",
+          "text": "我也没底。你想让我留下，就给我指条路。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "承接前一子片，同一苟安、伤帐、灯向和服装，人物不跳位。",
+      "endState": "停UI-O1自由输入之前，不生成任何玩家回答。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "我在画外问信不信得过魏国，苟安闭口听；他看我一会，坦承也没底并请我指路。说完合唇等待，不预演玩家回答。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-LY03-016",
+              "speaker": "我",
+              "text": "你就信得过魏国？",
+              "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+            },
+            {
+              "node": "CH2-LY03-017",
+              "speaker": "苟安",
+              "text": "我也没底。你想让我留下，就给我指条路。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "L01-01",
+      "slot": "L01",
+      "name": "定制①听者反应底片",
+      "duration": 10,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [],
+      "entryState": "只在玩家确认当次原话后供动态语音使用。",
+      "endState": "无状态变化；首尾闭口近似同姿态。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "苟安在同一榻上闭口安静倾听，呼吸平稳，偶尔自然眨眼，视线落在摄影机位置；头尾坐姿与手位置一致，适合柔和循环。不点头承诺，不嘟嘴、不动嘴、不说任何字。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": []
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "environment-only",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V11T-01",
+      "slot": "V11T",
+      "name": "定制①回应T",
+      "duration": 11,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "endState": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "苟安听完威胁或羞辱，眉头微收，先质问信任，再停一口气，将话题拉回粮；不威胁玩家，不站起。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-O1-RT",
+              "speaker": "苟安（定制回应）",
+              "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V11D-01",
+      "slot": "V11D",
+      "name": "定制①回应D",
+      "duration": 9,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "endState": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安短暂低头，说领情后抬眼追问下回，手不交出新物件；不预设玩家已做了其他承诺。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-O1-RD",
+              "speaker": "苟安（定制回应）",
+              "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V11R-01",
+      "slot": "V11R",
+      "name": "定制①回应R",
+      "duration": 9,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "endState": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安看我，先轻吸气再问拿什么让人认，不作认可判决，不新增证据。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-O1-RR",
+              "speaker": "苟安（定制回应）",
+              "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V11A-01",
+      "slot": "V11A",
+      "name": "定制①回应A",
+      "duration": 8,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "你去查。查到什么，你照实回来告诉我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "O1有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "endState": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安把目光稳定落在我脸的位置，要求查到什么照实告诉他；不递出物件，留给V12。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-O1-RA",
+              "speaker": "苟安（定制回应）",
+              "text": "你去查。查到什么，你照实回来告诉我。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V11N-01",
+      "slot": "V11N",
+      "name": "定制①回应N",
+      "duration": 6,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "先看看这批粮，再说往后。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "endState": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安语气平实，说先看这批粮；不补玩家的关心、承诺或动机，末尾闭嘴。",
+          "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+          "lines": [
+            {
+              "node": "CH2-O1-RN",
+              "speaker": "苟安（定制回应）",
+              "text": "先看看这批粮，再说往后。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V12-01",
+      "slot": "V12",
+      "name": "暂留与交付凭据",
+      "duration": 9,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-021",
+          "speaker": "苟安",
+          "text": "好，我先不走。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-022",
+          "speaker": "演出",
+          "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "entryState": "定制①一个安全回应结束。",
+      "endState": "凭据完整交到我的右手，苟安食指准备指示。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安说先不走，完整说完后，从榻侧取出本队领取凭据，伸到我右手可接范围；我的右手从镜头下方托住凭据后，他才放手。凭据墨迹不可辨，不凭镜头添写村名。",
+          "camera": "前半眼高中近景，接物时自然下视；双手接触和放手过程持续可见。",
+          "lines": [
+            {
+              "node": "CH2-LY03-021",
+              "speaker": "苟安",
+              "text": "好，我先不走。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY03-022",
+              "speaker": "演出",
+              "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+              "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V12-02",
+      "slot": "V12",
+      "name": "暂留与交付凭据",
+      "duration": 14,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-023",
+          "speaker": "苟安",
+          "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "entryState": "我的右手托住刚交来的凭据，苟安尚未指示。",
+      "endState": "苟安说完口供并闭口，我仍持同一凭据。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 14,
+          "action": "凭据已在我的手中，苟安指向其中一行后收回食指，向摄影机说早备好、被李严扣着不发的口供。只拍他说话与手中凭据，禁止出现满仓或李严扣押实景来替口供背书。",
+          "camera": "0–3秒第一视角俯看指示，3–14秒自然抬眼到苟安中近景。",
+          "lines": [
+            {
+              "node": "CH2-LY03-023",
+              "speaker": "苟安",
+              "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "npc-native",
+      "referenceRole": "first_frame"
+    },
+    {
+      "id": "V12-03",
+      "slot": "V12",
+      "name": "暂留与交付凭据",
+      "duration": 12,
+      "referenceKeys": [
+        "gouan_talk_frame"
+      ],
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-024",
+          "speaker": "苟安",
+          "text": "凭这个能领本队材料，别拿着它乱闯。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-025",
+          "speaker": "我（心声）",
+          "text": "先查清这批粮出了什么事。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "entryState": "同一凭据仍在我手中。",
+      "endState": "已交付凭据且暂留，口供仍未核实；接V13，非自由进入全部仓库。",
+      "shots": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "苟安先叮嘱凭这个领取本队材料，不可乱闯；他说完闭口，视线退回手中凭据，我用同一声线更轻的心声说先查清。苟安不对心声回应。",
+          "camera": "眼高苟安中近景，句末后下视凭据。",
+          "lines": [
+            {
+              "node": "CH2-LY03-024",
+              "speaker": "苟安",
+              "text": "凭这个能领本队材料，别拿着它乱闯。",
+              "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+            },
+            {
+              "node": "CH2-LY03-025",
+              "speaker": "我（心声）",
+              "text": "先查清这批粮出了什么事。",
+              "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+            }
+          ]
+        }
+      ],
+      "continuity": "苟安伤后只在榻上，灰麻衣黑巾短须，伤势与左右方位以中央伤帐图锁定；不添加新绷带，不站起走动。文书只见真实纤维与模糊墨迹，精确文字留游戏UI或后期；不生成字幕、水印、黑边。",
+      "status": "ready-local-request",
+      "audioMode": "mixed-picture-audio-pending",
+      "referenceRole": "first_frame"
+    }
+  ],
+  "slots": [
+    {
+      "id": "V01",
+      "entry": "开章",
+      "next": [
+        "V02"
+      ],
+      "endEvent": "实际救援发生；尚未识别苟安",
+      "subclips": [
+        "V01-01",
+        "V01-02",
+        "V01-03"
+      ],
+      "duration": 26,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V02",
+      "entry": "V01结束",
+      "next": [
+        "UI-LIGHT"
+      ],
+      "endEvent": "实际认人；记忆不是本轮事实",
+      "subclips": [
+        "V02-01",
+        "V02-02",
+        "V02-03",
+        "V02-04",
+        "V02-05",
+        "V02-06",
+        "V02-07"
+      ],
+      "duration": 58,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V03A",
+      "entry": "UI-LIGHT选A",
+      "next": [
+        "V04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V03A-01"
+      ],
+      "duration": 10,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V03B",
+      "entry": "UI-LIGHT选B",
+      "next": [
+        "V04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V03B-01"
+      ],
+      "duration": 6,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V04",
+      "entry": "V03A/B结束",
+      "next": [
+        "V05"
+      ],
+      "endEvent": "按原来源保存实际口供",
+      "subclips": [
+        "V04-01",
+        "V04-02",
+        "V04-03",
+        "V04-04",
+        "V04-05"
+      ],
+      "duration": 30,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V05",
+      "entry": "V04结束",
+      "next": [
+        "UI-DATE"
+      ],
+      "endEvent": "获准查看，不等于拿走原件",
+      "subclips": [
+        "V05-01",
+        "V05-02"
+      ],
+      "duration": 19,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V06",
+      "entry": "UI-DATE实际读完",
+      "next": [
+        "UI-GO-GOUAN"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V06-01"
+      ],
+      "duration": 8,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V07",
+      "entry": "UI-GO-GOUAN实际选择去找",
+      "next": [
+        "UI-N1"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V07-01"
+      ],
+      "duration": 12,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V08A",
+      "entry": "UI-N1选A",
+      "next": [
+        "V09"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "subclips": [
+        "V08A-01",
+        "V08A-02"
+      ],
+      "duration": 27,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V08B",
+      "entry": "UI-N1选B",
+      "next": [
+        "V09"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "subclips": [
+        "V08B-01"
+      ],
+      "duration": 13,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V09",
+      "entry": "V08A/B结束",
+      "next": [
+        "UI-FIRST-LETTER"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V09-01",
+        "V09-02",
+        "V09-03"
+      ],
+      "duration": 33,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V10",
+      "entry": "UI-FIRST-LETTER实际读完",
+      "next": [
+        "UI-O1"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V10-01",
+        "V10-02",
+        "V10-03",
+        "V10-04",
+        "V10-05"
+      ],
+      "duration": 61,
+      "mode": "固定视频"
+    },
+    {
+      "id": "L01",
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O1-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "L01-01"
+      ],
+      "duration": 10,
+      "mode": "动态语音＋无口型听者底片"
+    },
+    {
+      "id": "V11T",
+      "entry": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V11T-01"
+      ],
+      "duration": 11,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V11D",
+      "entry": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V11D-01"
+      ],
+      "duration": 9,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V11R",
+      "entry": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V11R-01"
+      ],
+      "duration": 9,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V11A",
+      "entry": "O1有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V11A-01"
+      ],
+      "duration": 8,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V11N",
+      "entry": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "subclips": [
+        "V11N-01"
+      ],
+      "duration": 6,
+      "mode": "固定视频"
+    },
+    {
+      "id": "V12",
+      "entry": "定制①一个安全回应结束",
+      "next": [
+        "V13"
+      ],
+      "endEvent": "实际暂留、交本队凭据；被扣粮说法仅是口供",
+      "subclips": [
+        "V12-01",
+        "V12-02",
+        "V12-03"
+      ],
+      "duration": 35,
+      "mode": "固定视频"
+    }
+  ],
+  "checks": {
+    "dialogueExactCoverage": true,
+    "allDurations4to15": true,
+    "timecodesContinuous": true,
+    "branchBoundariesPreserved": true
+  },
+  "totalCandidateSeconds": 391,
+  "notes": [
+    "18个互斥/交互逻辑槽位分别交付；累计时长不是单一路径时长。",
+    "L01只有闭口底片，动态回答不预录。",
+    "V01救援无伤后绷带；V02未来事件只作心声。",
+    "V08A日期推断保留冻结原句，不能作为扣粮事实。",
+    "制作候选待用户review；不改游戏或在线表。"
+  ]
+}

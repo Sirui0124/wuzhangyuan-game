@@ -1,0 +1,280 @@
+{
+  "generatedAt": "2026-10-22T12:04:30.993394+08:00",
+  "sourceManifestVersion": "wuzhang-assets-v1",
+  "bindings": [
+    {
+      "kind": "characters",
+      "id": "weiyan",
+      "source": "source-art/visuals/runtime/characters/weiyan.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "scout",
+      "source": "source-art/visuals/runtime/characters/scout-transparent-v02.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "guard",
+      "source": "source-art/visuals/runtime/characters/guard.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "relay",
+      "source": "source-art/visuals/runtime/characters/relay.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "jiangwei",
+      "source": "source-art/visuals/runtime/characters/jiangwei.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "zhugeliang",
+      "source": "source-art/visuals/runtime/characters/zhugeliang.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "not-in-dialogue-mapper"
+    },
+    {
+      "kind": "characters",
+      "id": "jiangwei_guard",
+      "source": "source-art/visuals/runtime/characters/guard.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "not-in-dialogue-mapper"
+    },
+    {
+      "kind": "scenes",
+      "id": "camp_gate",
+      "source": "source-art/visuals/runtime/scenes/camp_gate.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "chapter-flow"
+    },
+    {
+      "kind": "scenes",
+      "id": "report_post",
+      "source": "source-art/visuals/runtime/scenes/report_post.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "chapter-flow"
+    },
+    {
+      "kind": "scenes",
+      "id": "relay_tent",
+      "source": "source-art/visuals/runtime/scenes/relay_tent.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "not-in-current-flow"
+    },
+    {
+      "kind": "scenes",
+      "id": "waiting_area",
+      "source": "source-art/visuals/runtime/scenes/waiting_area.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "not-in-current-flow"
+    },
+    {
+      "kind": "scenes",
+      "id": "notice_front",
+      "source": "source-art/visuals/runtime/scenes/camp_gate.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "not-in-current-flow"
+    },
+    {
+      "kind": "scenes",
+      "id": "jiangwei_tent_front",
+      "source": "source-art/visuals/runtime/scenes/relay_tent.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "chapter-flow"
+    },
+    {
+      "kind": "cinematics",
+      "id": "weiyan_report_post",
+      "source": "source-art/visuals/runtime/cinematics/weiyan_report_post.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "cinematics",
+      "id": "report_post_people",
+      "source": "source-art/visuals/runtime/cinematics/report_post_people.png",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "scene_paper",
+      "source": "source-art/visuals/runtime/ui/scene-paper.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "scene_active",
+      "source": "source-art/visuals/runtime/ui/scene-active.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "title_ink",
+      "source": "source-art/visuals/runtime/ui/title-ink.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "evidence_tag",
+      "source": "source-art/visuals/runtime/ui/evidence-tag.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "evidence_notice",
+      "source": "source-art/visuals/runtime/ui/evidence-notice.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "evidence_report",
+      "source": "source-art/visuals/runtime/ui/evidence-report.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "evidence_testimony",
+      "source": "source-art/visuals/runtime/ui/evidence-testimony.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    },
+    {
+      "kind": "ui",
+      "id": "evidence_pass",
+      "source": "source-art/visuals/runtime/ui/evidence-pass.svg",
+      "exists": true,
+      "declaredBy": "GameStarter/web-demo/visual-assets.json",
+      "mainGameConsumption": "namespace-not-read-by-game-ts"
+    }
+  ],
+  "aliases": [
+    {
+      "kind": "characters",
+      "source": "runtime/characters/guard.png",
+      "ids": [
+        "guard",
+        "jiangwei_guard"
+      ]
+    },
+    {
+      "kind": "scenes",
+      "source": "runtime/scenes/camp_gate.png",
+      "ids": [
+        "camp_gate",
+        "notice_front"
+      ]
+    },
+    {
+      "kind": "scenes",
+      "source": "runtime/scenes/relay_tent.png",
+      "ids": [
+        "relay_tent",
+        "jiangwei_tent_front"
+      ]
+    }
+  ],
+  "primaryScenes": [
+    {
+      "id": "camp_gate",
+      "title": "中军帐前",
+      "description": "帐帘垂着，里面仍有灯光。",
+      "routes": [
+        "report_post",
+        "jiangwei_tent_front"
+      ]
+    },
+    {
+      "id": "report_post",
+      "title": "营前传报处",
+      "description": "号角声落了，远处仍有马蹄。",
+      "routes": [
+        "camp_gate",
+        "jiangwei_tent_front"
+      ]
+    },
+    {
+      "id": "jiangwei_tent_front",
+      "title": "姜维将军帐前",
+      "description": "亲兵识得通传规矩，乙正整理军中文书。",
+      "routes": [
+        "camp_gate",
+        "report_post"
+      ]
+    }
+  ],
+  "speakerCounts": {
+    "主角心声": 25,
+    "主角": 11,
+    "甲": 4,
+    "告示": 1,
+    "斥候": 5,
+    "主角（二选一）": 1,
+    "主角·选项": 1,
+    "系统·行动": 1,
+    "魏延": 13,
+    "系统·语言组织": 3,
+    "系统·预览示例": 2,
+    "主角·对白": 12,
+    "旁白": 6,
+    "结果文本": 5,
+    "甲·固定": 5,
+    "乙·固定": 7,
+    "斥候·固定": 6,
+    "主角·心声": 2,
+    "系统·线索推理": 1,
+    "系统·题目": 2,
+    "系统·动态推论": 4,
+    "系统·反馈": 7,
+    "主角·固定衔接": 6,
+    "亲兵·固定": 4,
+    "演出·固定": 10,
+    "姜维·固定": 13,
+    "主角·固定开场": 1,
+    "魏延·固定": 7,
+    "主角·玩家确认表达": 1,
+    "魏延·反馈": 6,
+    "主角·固定": 2,
+    "姜维·对白": 1,
+    "姜维": 2
+  }
+}

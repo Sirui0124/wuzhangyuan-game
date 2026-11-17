@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "policy": "A zero-cue file needs an explicit SHA-bound reason. This record does not confer listening or user approval.",
+  "entries": [
+    {
+      "id": "C1T01-02",
+      "videoSha256": "b4dbb07333ce537ebe648012344bea7c3ead9f21bf4a7678beec64fcaa2230e1",
+      "status": "planned-no-dialogue",
+      "reason": "按制作安排为无对白动作镜头，音轨定位未检出对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1T16-13",
+      "videoSha256": "9c89b4189d7eccab2326211220d4993fd77e323a1ae938e6814c3759be1909c8",
+      "status": "planned-no-dialogue",
+      "reason": "按制作安排为无对白动作镜头，音轨定位未检出对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1T18-walk-20261024",
+      "videoSha256": "b00ab7c219c9d0c03b1cfc42e140f803c4d04fefa84592bb7b8f2fbf6d6bc556",
+      "status": "planned-no-dialogue",
+      "reason": "行路镜头；不同识别轮次给出不稳定杂词，不据此编写对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH2-L01",
+      "videoSha256": "71195ba7331abe1bc8fa0717b2e90df25fb93c76c586ba66cbbbb091b1d09e18",
+      "status": "planned-no-dialogue",
+      "reason": "交谈等待时的听者镜头，无指定对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH2-V14",
+      "videoSha256": "eb1dd8584e771bad564aee46e2a8bfa9277fa62a9bd1f1bada863d8ba803d416",
+      "status": "planned-no-dialogue",
+      "reason": "粮运画卷旧版，无指定对白；新版 C03 另有心声，尚未替换本片。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH2-L02",
+      "videoSha256": "fe5e86520c33d33a60f24c839976a8f279daeab49916f10fa081af0eed0c3ed6",
+      "status": "planned-no-dialogue",
+      "reason": "听者反应镜头，无指定对白；末尾识别出疑似幻觉片语，不能当字幕。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH2-V35",
+      "videoSha256": "486c5c0cbf871e201aae26ed02d074779fb056a0503da42701410ba308bcb827",
+      "status": "planned-no-dialogue",
+      "reason": "回信到营与核阅，无指定对白，音轨定位未检出对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH2-LISTEN-STEADY",
+      "videoSha256": "15340556e8f8379b1e732e86fc37f1b6bfa165585d398018d8005b6932d0f687",
+      "status": "planned-no-dialogue",
+      "reason": "三秒听者画面，文件无音轨。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1END-EXEC",
+      "videoSha256": "1527298deed27f735cf66e95368c5c3891d012095681cbb5231a2e14d56782fe",
+      "status": "planned-no-dialogue",
+      "reason": "原稿要求无对白。本版移除原音轨，替换为单独合成的风声和动作拟音，无人声、无配乐；视频流原样复制。详见 video/production/ENDINGS-AUDIO-20261029/repair.json。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1END-TENT",
+      "videoSha256": "a233aadbab784bb501e74e1a1a9302d8f22cda18c059a366eddf0a2c9d902104",
+      "status": "planned-no-dialogue",
+      "reason": "1026 新版制作稿明确无对白；实际音轨定位未检出对白。原声保持不变，未以 ASR 代替逐字听审。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1END-RADIO",
+      "videoSha256": "151d2cc0612e387400175e9c39ad816e4e317dd7e3c7a59c9cb6b656d91f53e7",
+      "status": "planned-no-dialogue",
+      "reason": "原稿要求无对白。本版移除原音轨，替换为单独合成的风声和动作拟音，无人声、无配乐；视频流原样复制。详见 video/production/ENDINGS-AUDIO-20261029/repair.json。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1END-LIGHT",
+      "videoSha256": "45fa671cb1f6ed901f96a0e575f5b475ddcefd54bc04b15436abb595ee1b5274",
+      "status": "planned-no-dialogue",
+      "reason": "原定无对白结局镜头，音轨定位未检出对白。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "C1END-ITEM",
+      "videoSha256": "ac5941d4ff2bbf3c654c55f10028ad5f9f1841b5834f37c55c0027c4b5582b5b",
+      "status": "planned-no-dialogue",
+      "reason": "原稿要求无对白。本版移除原音轨，替换为单独合成的风声和动作拟音，无人声、无配乐；视频流原样复制。详见 video/production/ENDINGS-AUDIO-20261029/repair.json。",
+      "humanListeningReview": false
+    }
+  ]
+}

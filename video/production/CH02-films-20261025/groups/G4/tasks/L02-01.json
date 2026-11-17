@@ -1,0 +1,15 @@
+{
+  "status": "failed",
+  "task_id": "task_P8vMWMkap2egYdCAaUOmaIAS7rHZVVWb",
+  "request_sha256": "5f1bc111e68390e726fe8e561828dc66e6976fe116d82467a1361c3678e84cb6",
+  "idempotency_key": "parallel-world-4917c7daf5df48a6affcbc8ebe38e19a",
+  "request_path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\requests\\L02-01.json",
+  "submitted_epoch": 1792871766.653593,
+  "last_poll_epoch": 1792872032.5482106,
+  "updated_utc": "2026-10-24T20:00:46Z",
+  "progress": 1,
+  "error": {
+    "code": "input_download_failed",
+    "message": "download media: Get \"https://res.cloudinary.com/cpxdw5vd/image/upload/v1792869157/parallel-world/minimax-reference/d24f553d3bdc91e9e8a74ee2e606e7b67c9e1873223e3275f94370f5467684b9.png\": dial tcp [2a04:4e42:8c::393]:443: connect: network is unreachable"
+  }
+}

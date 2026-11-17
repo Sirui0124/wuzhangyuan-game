@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-15T14:35:40.021Z",
+  "modelAssignments": [
+    [
+      "astra",
+      "gpt-6-astra",
+      "medium"
+    ],
+    [
+      "terra",
+      "gpt-6.1-terra",
+      "medium"
+    ],
+    [
+      "sol",
+      "gpt-6.1-sol",
+      "medium"
+    ]
+  ],
+  "source": [
+    {
+      "path": "src/core.ts",
+      "sha256": "46b27fd85e6525a3bf09c9e04edac8c2679fe50f424b393927ea4cb4472e7dc5"
+    },
+    {
+      "path": "src/engine.ts",
+      "sha256": "b0229bd918233218121c5befbb6c45787b04c90d1b8b14e2f81de3ee37112dcc"
+    },
+    {
+      "path": "src/app.ts",
+      "sha256": "9ece031a0385e18f2e9ad20a16608a56a00b76033dedb7e1e1777eff92889da7"
+    },
+    {
+      "path": "src/presentation.ts",
+      "sha256": "9cba4b86f3e29cb3f6665b325a875b2c666e0eb61cfc2691361c31a31a04ac10"
+    },
+    {
+      "path": "ai.mjs",
+      "sha256": "b48d6d05893fa902542f5283a53e73438bb8dd8f10e2e1adb7df2eb8aeeb146e"
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "4071b339eb57012c8a761a70f4ab7643ed70af32eb5c9984d898a2df29f7f862"
+    },
+    {
+      "path": "public/style.css",
+      "sha256": "1dbf4e9d27191313b34cffbeff6f9b07fa048a10c868f9b2903947a0fc45d047"
+    },
+    {
+      "path": "public/atelier-v2.css",
+      "sha256": "5ccc4e6abc2e0a9809ae56793e4abab2b9976d126fa93816e0c8093f2f282e11"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "c900506a5c65843fe33f71c656cdef9cdc98b4b5824d95c6c2aa71c2dab4360e"
+    }
+  ],
+  "finalModelAssignments": [
+    {
+      "test": "terra",
+      "model": "gpt-6.1-terra",
+      "effort": "medium"
+    },
+    {
+      "test": "sol",
+      "model": "gpt-6.1-sol",
+      "effort": "medium"
+    },
+    {
+      "test": "gpt6-sol",
+      "model": "gpt-6-sol",
+      "effort": "medium"
+    }
+  ],
+  "replaced": {
+    "test": "astra",
+    "model": "gpt-6-astra",
+    "reason": "用户明确第三个用6-sol，已中止，已有记录不计最终三组比较"
+  },
+  "unchanged": true
+}

@@ -1,0 +1,67 @@
+{
+  "id": "V16C-01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-corrected\\V16C-01.mp4",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-03-raw.mp4",
+  "sourceSha256": "caa2aa2abc8784e8d58d8c5718abcac16a5d57a92d4658115bf2912ad55b6fe5",
+  "pictureChanges": {
+    "documentDefocusZones": [
+      [
+        0,
+        20,
+        120,
+        720,
+        180
+      ]
+    ],
+    "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+    "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+    "fullFrameExistingEvidence": true,
+    "trim": [
+      0,
+      8
+    ],
+    "tailHold": 0,
+    "sourceReuse": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-03-raw.mp4",
+        "sha256": "caa2aa2abc8784e8d58d8c5718abcac16a5d57a92d4658115bf2912ad55b6fe5",
+        "usedRange": [
+          0,
+          8
+        ],
+        "knownSourceNodes": [
+          "CH2-LY04-D01",
+          "CH2-LY04-D02"
+        ],
+        "context": "已经取得的签收与交付重新核看；不展示新认罪书"
+      }
+    ]
+  },
+  "sourceLines": [
+    {
+      "node": "CH2-LY04-Q1C",
+      "speaker": "我（普通选项）",
+      "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "voiceReused": {
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+    "duration": 4.589708333333333,
+    "offset": 1.0,
+    "provider": "existing player TTS",
+    "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+    "listeningReview": "未听审",
+    "centralSource": "reused_G2_same_voice",
+    "sha256": "d95543e4c3d5ba05b9bb7a5331c2d3781418ba86b6499ce40cd9a60c7cc87891"
+  },
+  "audioReview": "未听审、未新增TTS",
+  "duration": 8.0,
+  "sha256": "d5e7950032a3d5ee6fab0996e7c74a2ebad6b4bc62e582cdb54dbb4cbbff7643",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioHz": 48000
+}

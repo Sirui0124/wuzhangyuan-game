@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8499
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.077
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0544
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0422
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0306
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0179
+        },
+        {
+          "label": "Snort",
+          "p": 0.0177
+        },
+        {
+          "label": "Spray",
+          "p": 0.0099
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0087
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0062
+        },
+        {
+          "label": "Music",
+          "p": 0.0062
+        },
+        {
+          "label": "Animal",
+          "p": 0.006
+        }
+      ],
+      "music": 0.0062
+    }
+  ]
+}

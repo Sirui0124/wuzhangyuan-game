@@ -1,0 +1,134 @@
+{
+  "id": "CH2-LY02-RA",
+  "role": "gouan",
+  "text": "这些都有交接记录。我如今也不想争了。",
+  "seconds": 5,
+  "status": "succeeded",
+  "model": "seed-audio-1.0",
+  "requestId": "c6211dc3-0bdd-424b-9661-8aca45202106",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "reference": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\gouan-reference-user-approved-V10-14p4-17p6.wav",
+    "sha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+    "field": "references[0].audio_data"
+  },
+  "text_prompt": "仅采用@音频1中成年男性的音色，伤后克制、疲惫但清楚。只朗读引号内唯一原句：“这些都有交接记录。我如今也不想争了。”其余均为控制说明，绝不朗读姓名、角色标签、旁白、画外、编号或导演说明。不复述参考录音，不添加任何词。总长约5秒，开头留0.2秒气口，句末自然落音。无BGM、无背景音乐、无配乐、无音效，只有这一句干净人声。",
+  "bodySha256": "c21324fa42cfce73ba169162ec8009aff0d68e1a7c23522e556677c98c03a18f",
+  "humanListeningReview": false,
+  "noPresetSpeaker": true,
+  "httpStatus": 200,
+  "logId": "20261025195436FB17D99F9D1A1AFB0E1C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-bedside-choice-20261025\\CH2-LY02-RA.wav",
+  "sha256": "5151d1f3f3637c2de9b7fdc8a9fced0cf45292c264e82e4ca82cfd905ac0786e",
+  "duration": 5,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2080,
+        "start_time": 360,
+        "text": "这些都有交接记录。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 360,
+            "text": "这"
+          },
+          {
+            "end_time": 720,
+            "start_time": 520,
+            "text": "些"
+          },
+          {
+            "end_time": 880,
+            "start_time": 720,
+            "text": "都"
+          },
+          {
+            "end_time": 1040,
+            "start_time": 880,
+            "text": "有"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1160,
+            "text": "交"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1360,
+            "text": "接"
+          },
+          {
+            "end_time": 1760,
+            "start_time": 1640,
+            "text": "记"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 1760,
+            "text": "录"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 2080,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 4720,
+        "start_time": 3160,
+        "text": "我如今也不想争了。",
+        "words": [
+          {
+            "end_time": 3440,
+            "start_time": 3160,
+            "text": "我"
+          },
+          {
+            "end_time": 3640,
+            "start_time": 3440,
+            "text": "如"
+          },
+          {
+            "end_time": 3800,
+            "start_time": 3640,
+            "text": "今"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3800,
+            "text": "也"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 3960,
+            "text": "不"
+          },
+          {
+            "end_time": 4240,
+            "start_time": 4080,
+            "text": "想"
+          },
+          {
+            "end_time": 4400,
+            "start_time": 4320,
+            "text": "争"
+          },
+          {
+            "end_time": 4720,
+            "start_time": 4640,
+            "text": "了"
+          },
+          {
+            "end_time": 4720,
+            "start_time": 4720,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "这些都有交接记录。我如今也不想争了。"
+  },
+  "referenceUploaded": true
+}

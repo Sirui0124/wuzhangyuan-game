@@ -1,0 +1,61 @@
+{
+  "source_sha256": "9982d4b659462e13e9803bf00a7668e338d74dc8a204981865662e619ac525f0",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Boiling",
+          "p": 0.3051
+        },
+        {
+          "label": "Liquid",
+          "p": 0.098
+        },
+        {
+          "label": "Static",
+          "p": 0.056
+        },
+        {
+          "label": "Sizzle",
+          "p": 0.0437
+        },
+        {
+          "label": "Squish",
+          "p": 0.0426
+        },
+        {
+          "label": "White noise",
+          "p": 0.0363
+        },
+        {
+          "label": "Fire",
+          "p": 0.0352
+        },
+        {
+          "label": "Flap",
+          "p": 0.0339
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0219
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0211
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0211
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0187
+        }
+      ],
+      "music": 0.003
+    }
+  ]
+}

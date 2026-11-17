@@ -1,0 +1,41 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V03A",
+  "src": "/video/current/CH2-V03A-same-camera-20261025.mp4",
+  "title": "开场说明来意A",
+  "subtitles": "/video/subtitles/CH2-V03A-same-camera-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V03A-same-camera-20261025.mp4",
+  "sha256": "f1a0850bca5d45cf6daa8628d625477713ff1d98f466d2338444b684a139fb69",
+  "duration": 6.6775,
+  "cues": [
+    {
+      "start": 0.62,
+      "end": 5.02,
+      "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-003",
+      "node": "CH2-LY02-003",
+      "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+      "speaker": "我（选项）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-003.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "301b07cc90899be6dae28355bb32048e31a26bf14ad42a38c2024672b070758f",
+      "duration": 5.1635,
+      "speechRange": [
+        0.34,
+        4.92
+      ],
+      "correlation": 0.9990499742551484,
+      "insertAt": 0.3,
+      "speechStart": 0.64,
+      "speechEnd": 5.22
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

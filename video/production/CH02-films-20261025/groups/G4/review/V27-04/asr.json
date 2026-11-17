@@ -1,0 +1,114 @@
+{
+  "id": "V27-04",
+  "expected": "",
+  "postVoiceText": "先把实数报上去，请他重新算算这仗还打得起吗。",
+  "actual": "玛大使求不至高强之后平翁 细君旗",
+  "similarity": 0,
+  "segments": [
+    {
+      "start": 1.39,
+      "end": 4.69,
+      "text": "玛大使求不至高强之后",
+      "words": [
+        {
+          "start": 1.39,
+          "end": 1.93,
+          "word": "玛",
+          "probability": 0.5617498457431793
+        },
+        {
+          "start": 1.93,
+          "end": 2.11,
+          "word": "大",
+          "probability": 0.9707933664321899
+        },
+        {
+          "start": 2.11,
+          "end": 2.39,
+          "word": "使",
+          "probability": 0.8983927965164185
+        },
+        {
+          "start": 2.39,
+          "end": 3.53,
+          "word": "求",
+          "probability": 0.8033720254898071
+        },
+        {
+          "start": 3.53,
+          "end": 3.67,
+          "word": "不",
+          "probability": 0.9855436086654663
+        },
+        {
+          "start": 3.67,
+          "end": 3.77,
+          "word": "至",
+          "probability": 0.5817801356315613
+        },
+        {
+          "start": 3.77,
+          "end": 3.95,
+          "word": "高",
+          "probability": 0.9936231970787048
+        },
+        {
+          "start": 3.95,
+          "end": 4.31,
+          "word": "强",
+          "probability": 0.7962659299373627
+        },
+        {
+          "start": 4.31,
+          "end": 4.51,
+          "word": "之",
+          "probability": 0.9678745269775391
+        },
+        {
+          "start": 4.51,
+          "end": 4.69,
+          "word": "后",
+          "probability": 0.9472315907478333
+        }
+      ]
+    },
+    {
+      "start": 4.69,
+      "end": 7.73,
+      "text": "平翁 细君旗",
+      "words": [
+        {
+          "start": 4.69,
+          "end": 5.47,
+          "word": "平",
+          "probability": 0.6795117855072021
+        },
+        {
+          "start": 5.47,
+          "end": 6.03,
+          "word": "翁",
+          "probability": 0.9744964838027954
+        },
+        {
+          "start": 6.67,
+          "end": 7.05,
+          "word": " 细",
+          "probability": 0.7980700731277466
+        },
+        {
+          "start": 7.05,
+          "end": 7.35,
+          "word": "君",
+          "probability": 0.7431809902191162
+        },
+        {
+          "start": 7.35,
+          "end": 7.73,
+          "word": "旗",
+          "probability": 0.652511477470398
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

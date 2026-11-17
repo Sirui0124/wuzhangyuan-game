@@ -1,0 +1,187 @@
+{
+  "id": "CH2-LY01-007",
+  "node": "CH2-LY01-007",
+  "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 5.47,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "49d21c0c-83c1-4690-b401-474cd6e23e3e",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:10:04.048Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约5.47秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "899dffefae070e99506eb2d578cda56faa967e90fa00d632b8c647c3c42ffe34",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "202610271910042E57746D0419BE573271",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-007-v1.wav",
+  "sha256": "a8769eca19def604cf418a5cacac53138e4695e1dcc3497dfad764d429518800",
+  "duration": 5.5,
+  "originalDuration": 5.5,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2840,
+        "start_time": 440,
+        "text": "我记得，苟安是李严的部下。",
+        "words": [
+          {
+            "end_time": 640,
+            "start_time": 440,
+            "text": "我"
+          },
+          {
+            "end_time": 800,
+            "start_time": 640,
+            "text": "记"
+          },
+          {
+            "end_time": 960,
+            "start_time": 800,
+            "text": "得"
+          },
+          {
+            "end_time": 960,
+            "start_time": 960,
+            "text": "，"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1320,
+            "text": "苟"
+          },
+          {
+            "end_time": 1800,
+            "start_time": 1600,
+            "text": "安"
+          },
+          {
+            "end_time": 1960,
+            "start_time": 1800,
+            "text": "是"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 1960,
+            "text": "李"
+          },
+          {
+            "end_time": 2240,
+            "start_time": 2200,
+            "text": "严"
+          },
+          {
+            "end_time": 2520,
+            "start_time": 2360,
+            "text": "的"
+          },
+          {
+            "end_time": 2600,
+            "start_time": 2520,
+            "text": "部"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2760,
+            "text": "下"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2840,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 5440,
+        "start_time": 3320,
+        "text": "他因运粮受罚，怀恨在心。",
+        "words": [
+          {
+            "end_time": 3360,
+            "start_time": 3320,
+            "text": "他"
+          },
+          {
+            "end_time": 3600,
+            "start_time": 3520,
+            "text": "因"
+          },
+          {
+            "end_time": 3800,
+            "start_time": 3760,
+            "text": "运"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3960,
+            "text": "粮"
+          },
+          {
+            "end_time": 4240,
+            "start_time": 4160,
+            "text": "受"
+          },
+          {
+            "end_time": 4520,
+            "start_time": 4400,
+            "text": "罚"
+          },
+          {
+            "end_time": 4520,
+            "start_time": 4520,
+            "text": "，"
+          },
+          {
+            "end_time": 4920,
+            "start_time": 4800,
+            "text": "怀"
+          },
+          {
+            "end_time": 5160,
+            "start_time": 5000,
+            "text": "恨"
+          },
+          {
+            "end_time": 5400,
+            "start_time": 5240,
+            "text": "在"
+          },
+          {
+            "end_time": 5440,
+            "start_time": 5400,
+            "text": "心"
+          },
+          {
+            "end_time": 5440,
+            "start_time": 5440,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:10:28.652Z"
+}

@@ -1,0 +1,75 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V08A",
+  "src": "/video/current/CH2-V08A-981991ba0a-20261025.mp4",
+  "title": "点出委屈分支",
+  "subtitles": "/video/subtitles/CH2-V08A-981991ba0a-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V08A-981991ba0a-20261025.mp4",
+  "sha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+  "duration": 18.112,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 4.64,
+      "text": "你心里就是委屈。我查了记录，你五月喝酒"
+    },
+    {
+      "start": 4.64,
+      "end": 9.44,
+      "text": "六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？"
+    },
+    {
+      "start": 10.48,
+      "end": 14.68,
+      "text": "所以你上次在瞒我。你一定不想就这么算了"
+    },
+    {
+      "start": 15.48,
+      "end": 17.78,
+      "text": "你说得对，我是委屈"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-018",
+      "node": "CH2-LY02-018",
+      "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "e48a0a25685af31df1465335d0eb179b92aa7575fb5ecb237f203ea8da45428b",
+      "duration": 9.394,
+      "speechRange": [
+        0.22,
+        9.1
+      ],
+      "correlation": 0.9980892294529791,
+      "insertAt": 0.3,
+      "speechStart": 0.52,
+      "speechEnd": 9.4
+    },
+    {
+      "id": "CH2-LY02-018A",
+      "node": "CH2-LY02-018A",
+      "text": "所以你上次在瞒我。你一定不想就这么算了",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018A.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "d6437df56eb46c3619ca07f5502a6a7af19721d429bb7398550624f887c729d0",
+      "duration": 4.3805,
+      "speechRange": [
+        0.36,
+        4.14
+      ],
+      "correlation": 0.9807223635881674,
+      "insertAt": 10.3308,
+      "speechStart": 10.69075,
+      "speechEnd": 14.47075
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

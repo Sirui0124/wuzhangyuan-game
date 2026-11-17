@@ -1,0 +1,135 @@
+{
+  "id": "C1FIX06B",
+  "group": "chapterDialogue",
+  "oldSrc": "/video/current/C1FIX06B-QA-20261025.mp4",
+  "oldSha256": "d1f0f23b6db86c1ab30dfeadb52d7940fe820f2e2a4e985c4de69df504bc2172",
+  "oldSubtitles": "/video/subtitles/C1FIX06B-QA-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX06B-2553e78e.mp4",
+  "sha256": "89202fd6c5d31273cc089f51ac2edc9bf9bbab24c627e2b4bb064a9752ff82bb",
+  "bytes": 4927212,
+  "duration": 12.25,
+  "containerDuration": 12.25,
+  "width": 1344,
+  "height": 756,
+  "fps": "24/1",
+  "frames": 294,
+  "videoCodec": "h264",
+  "current": {
+    "id": "C1FIX06B",
+    "src": "/video/current/PV27-C1FIX06B-2553e78e.mp4",
+    "title": "未询问营门的转呈",
+    "rows": [
+      "A-42",
+      "A-43",
+      "A-44",
+      "A-45"
+    ],
+    "firstLineText": "小甲，营前急报：魏兵逼近，来意未明。",
+    "subtitles": "/video/subtitles/PV27-C1FIX06B-2553e78e.vtt"
+  },
+  "replacements": [
+    {
+      "id": "C1-A42-variant",
+      "node": "A42-variant",
+      "text": "小甲，营前急报：魏兵逼近，来意未明。魏将军让我转呈，请你递进去。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A42-variant.wav",
+      "oldCorrelation": 0.9820973987523129,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A42-variant-v1.wav",
+      "newVoiceSha256": "6e7a8522dae2ce7687fcb22efad0b1db385c59e8fff9c12ef7bd53b108bde06b",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.23600000000000002,
+        7.06
+      ],
+      "insertAt": 0.23600000000000002,
+      "voiceSeconds": 6.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.143336534500122,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "C1-A-45",
+      "node": "A-45",
+      "text": "知道了，交给你了。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A-45.wav",
+      "oldCorrelation": 0.9990150436469108,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A-45-v1.wav",
+      "newVoiceSha256": "1f2e745e0620f375218f14ae7a7d79b4976dd791a4bb5ddefbfbe1621e08bd0a",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        9.616999999999999,
+        11.857
+      ],
+      "insertAt": 9.616999999999999,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.2194547653198242,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.08,
+      "end": 4.5,
+      "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破"
+    },
+    {
+      "start": 4.676,
+      "end": 6.866,
+      "text": "魏将军让我转呈，请你递进去"
+    },
+    {
+      "start": 7.1,
+      "end": 8.9,
+      "text": "我只能递话，作不得主"
+    },
+    {
+      "start": 9.616999999999999,
+      "end": 11.527,
+      "text": "知道了，交给你了"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

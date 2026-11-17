@@ -1,0 +1,185 @@
+{
+  "id": "CH2-LY04-Q1A",
+  "node": "CH2-LY04-Q1A",
+  "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 5.2,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。正在核查粮食交接，认真询问或说出下一步想法，不像播音员读报告。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "d2e88ca7-02e9-46af-a067-36bcf411aa48",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:16:40.860Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。正在核查粮食交接，认真询问或说出下一步想法，不像播音员读报告。唯一允许发声的原句：“先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约5.2秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "278428abe71c858269cf3930c0ce4fcc02b782b0e36d6c178d6eb97f5196f2bf",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "20261027191641414F4B979F0552690895",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1A-v1.wav",
+  "sha256": "43450ccfd72c632ba3c3e7b7c7ec6c56c9d0244d9e18cf90e89f1ab5b29cba5d",
+  "duration": 5.3,
+  "originalDuration": 5.3,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 5120,
+        "start_time": 280,
+        "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 280,
+            "text": "先"
+          },
+          {
+            "end_time": 680,
+            "start_time": 520,
+            "text": "把"
+          },
+          {
+            "end_time": 800,
+            "start_time": 680,
+            "text": "出"
+          },
+          {
+            "end_time": 1000,
+            "start_time": 960,
+            "text": "仓"
+          },
+          {
+            "end_time": 1240,
+            "start_time": 1080,
+            "text": "和"
+          },
+          {
+            "end_time": 1320,
+            "start_time": 1280,
+            "text": "签"
+          },
+          {
+            "end_time": 1560,
+            "start_time": 1480,
+            "text": "收"
+          },
+          {
+            "end_time": 1880,
+            "start_time": 1720,
+            "text": "对"
+          },
+          {
+            "end_time": 2000,
+            "start_time": 1880,
+            "text": "一"
+          },
+          {
+            "end_time": 2200,
+            "start_time": 2000,
+            "text": "遍"
+          },
+          {
+            "end_time": 2200,
+            "start_time": 2200,
+            "text": "，"
+          },
+          {
+            "end_time": 2640,
+            "start_time": 2400,
+            "text": "看"
+          },
+          {
+            "end_time": 2800,
+            "start_time": 2640,
+            "text": "缺"
+          },
+          {
+            "end_time": 3080,
+            "start_time": 2920,
+            "text": "口"
+          },
+          {
+            "end_time": 3200,
+            "start_time": 3080,
+            "text": "是"
+          },
+          {
+            "end_time": 3320,
+            "start_time": 3200,
+            "text": "在"
+          },
+          {
+            "end_time": 3520,
+            "start_time": 3360,
+            "text": "领"
+          },
+          {
+            "end_time": 3680,
+            "start_time": 3640,
+            "text": "粮"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 3880,
+            "text": "前"
+          },
+          {
+            "end_time": 4080,
+            "start_time": 4080,
+            "text": "，"
+          },
+          {
+            "end_time": 4480,
+            "start_time": 4280,
+            "text": "还"
+          },
+          {
+            "end_time": 4560,
+            "start_time": 4480,
+            "text": "是"
+          },
+          {
+            "end_time": 4720,
+            "start_time": 4560,
+            "text": "在"
+          },
+          {
+            "end_time": 4920,
+            "start_time": 4720,
+            "text": "路"
+          },
+          {
+            "end_time": 5120,
+            "start_time": 4920,
+            "text": "上"
+          },
+          {
+            "end_time": 5120,
+            "start_time": 5120,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:17:32.480Z"
+}

@@ -1,0 +1,127 @@
+{
+  "id": "V28B-02",
+  "expected": "这话我听见了。可真说出去，会落个什么下场？",
+  "postVoiceText": null,
+  "actual": "这话我听见了可真说出去会落个什么下场",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.03,
+      "end": 3.75,
+      "text": "这话我听见了",
+      "words": [
+        {
+          "start": 2.03,
+          "end": 2.49,
+          "word": "这",
+          "probability": 0.8249301314353943
+        },
+        {
+          "start": 2.49,
+          "end": 2.69,
+          "word": "话",
+          "probability": 0.9948884844779968
+        },
+        {
+          "start": 2.69,
+          "end": 2.85,
+          "word": "我",
+          "probability": 0.997448742389679
+        },
+        {
+          "start": 2.85,
+          "end": 3.05,
+          "word": "听",
+          "probability": 0.9988880753517151
+        },
+        {
+          "start": 3.05,
+          "end": 3.23,
+          "word": "见",
+          "probability": 0.9991850256919861
+        },
+        {
+          "start": 3.23,
+          "end": 3.75,
+          "word": "了",
+          "probability": 0.9948504567146301
+        }
+      ]
+    },
+    {
+      "start": 4.73,
+      "end": 5.81,
+      "text": "可真说出去",
+      "words": [
+        {
+          "start": 4.73,
+          "end": 5.13,
+          "word": "可",
+          "probability": 0.9983737468719482
+        },
+        {
+          "start": 5.13,
+          "end": 5.31,
+          "word": "真",
+          "probability": 0.9964863061904907
+        },
+        {
+          "start": 5.31,
+          "end": 5.49,
+          "word": "说",
+          "probability": 0.999010443687439
+        },
+        {
+          "start": 5.49,
+          "end": 5.81,
+          "word": "出去",
+          "probability": 0.994695246219635
+        }
+      ]
+    },
+    {
+      "start": 6.31,
+      "end": 7.57,
+      "text": "会落个什么下场",
+      "words": [
+        {
+          "start": 6.31,
+          "end": 6.71,
+          "word": "会",
+          "probability": 0.8311707973480225
+        },
+        {
+          "start": 6.71,
+          "end": 6.87,
+          "word": "落",
+          "probability": 0.9784525036811829
+        },
+        {
+          "start": 6.87,
+          "end": 6.99,
+          "word": "个",
+          "probability": 0.8370593786239624
+        },
+        {
+          "start": 6.99,
+          "end": 7.15,
+          "word": "什么",
+          "probability": 0.9979367256164551
+        },
+        {
+          "start": 7.15,
+          "end": 7.35,
+          "word": "下",
+          "probability": 0.9951097369194031
+        },
+        {
+          "start": 7.35,
+          "end": 7.57,
+          "word": "场",
+          "probability": 0.9993126392364502
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

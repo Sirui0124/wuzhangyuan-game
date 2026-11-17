@@ -1,0 +1,274 @@
+/* Two independent directions for the phone Agent concept study. */
+.concept[data-theme="b"] {
+  --screen: #171c1b;
+  --ink: #ede4ce;
+  --muted: #b8b19e;
+  --accent: #d0b482;
+  --line: #72654b;
+  --bubble: #242b28;
+  --user: #3a3830;
+  --user-ink: #f4e5c9;
+  --card: #242923;
+  --frame: #242822;
+  --cta: #d7bc8b;
+  --cta-ink: #222820;
+}
+
+.concept[data-theme="b"] .phone {
+  border-color: #93836a;
+  background: var(--screen);
+  box-shadow: 0 20px 46px #15201e38, inset 0 0 0 3px #080e0c;
+}
+.concept[data-theme="b"] .statusbar { color: #c2b59b; }
+.concept[data-theme="b"] .phone-head {
+  position: relative;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #a9915d66;
+  background: linear-gradient(135deg, #40473d22, transparent 70%);
+}
+.concept[data-theme="b"] .assistant-mark {
+  color: #f4d7b0;
+  background: #8a4034;
+  border: 1px solid #cb86704d;
+  border-radius: 2px;
+  transform: rotate(-4deg);
+  box-shadow: inset 0 0 0 3px #792f2a;
+}
+.concept[data-theme="b"] .head-title small {
+  color: #bca989;
+  letter-spacing: 3px;
+}
+.concept[data-theme="b"] .head-title h2 { color: #f0e0bd; }
+.concept[data-theme="b"] .wallet strong { color: #e5c894; }
+.concept[data-theme="b"] .close { color: #c9bb9f; }
+.concept[data-theme="b"] .fund-note {
+  color: #c2b397;
+  border-color: #a9915d33;
+  background: #b6a16c08;
+  letter-spacing: 1px;
+}
+.concept[data-theme="b"] .chat {
+  background: radial-gradient(ellipse at 5% 0%, #66776412, transparent 60%);
+  scrollbar-color: #75674d transparent;
+}
+.concept[data-theme="b"] .speaker { color: #baaa89; }
+.concept[data-theme="b"] .message.assistant .bubble {
+  padding: 14px 16px;
+  border: 1px solid #c5ab7133;
+  border-radius: 2px 12px 12px 12px;
+  background: #242b28;
+}
+.concept[data-theme="b"] .message.user .bubble {
+  padding: 12px 16px;
+  color: #f1dec0;
+  border: 1px solid #b99b5c55;
+  border-radius: 12px 2px 12px 12px;
+  background: #3a3830;
+}
+.concept[data-theme="b"] .product {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #8e7b55;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #33372c, #222822 80%);
+  box-shadow: inset 0 0 0 4px #171c1b, inset 0 0 0 5px #c5ab711c;
+}
+.concept[data-theme="b"] .product-head { padding-bottom: 12px; border-bottom: 1px solid #baa06a33; }
+.concept[data-theme="b"] .product-mark {
+  color: #d9c093;
+  border-color: #927b50;
+  border-radius: 50%;
+  background: #c5ab710d;
+}
+.concept[data-theme="b"] .product-title h3 { color: #efdfbd; }
+.concept[data-theme="b"] .product-title small { color: #b7a582; }
+.concept[data-theme="b"] .product-price { color: #f0cf8e; }
+.concept[data-theme="b"] .price-note { color: #d2b787; }
+.concept[data-theme="b"] .product-boundary { color: #c5beaa; border-color: #a992624d; }
+.concept[data-theme="b"] details { color: #beb299; }
+.concept[data-theme="b"] details[open] { color: #e0d2b7; }
+.concept[data-theme="b"] .buy-btn {
+  color: #20271e;
+  border: 1px solid #e6ce9f;
+  border-radius: 3px;
+  background: #d7bc8b;
+  box-shadow: inset 0 0 0 3px #d7bc8b, inset 0 0 0 4px #6d5e3e55;
+  letter-spacing: 1px;
+}
+.concept[data-theme="b"] .composer {
+  border-top: 1px solid #a9915d55;
+  background: #1c221f;
+}
+.concept[data-theme="b"] .suggestions button {
+  color: #dfcda8;
+  border: 1px solid #a9915d55;
+  border-radius: 3px;
+  background: transparent;
+}
+.concept[data-theme="b"] .input-row {
+  border: 1px solid #9c8961;
+  border-radius: 5px;
+  background: #121a15;
+}
+.concept[data-theme="b"] .input-row:focus-within { border-color: #edcc8f; }
+.concept[data-theme="b"] .input-row textarea { color: #eee4d0; }
+.concept[data-theme="b"] .input-row textarea::placeholder { color: #b3ad99; }
+.concept[data-theme="b"] .send {
+  color: #252c21;
+  border-radius: 3px;
+  background: #d7bc8b;
+}
+.concept[data-theme="b"] .composer-note { color: #b7ab91; }
+.concept[data-theme="b"] .home-indicator { background: #a89979; }
+.concept[data-theme="b"] :is(button, summary):focus-visible { outline: 2px solid #f1cc84; outline-offset: 3px; }
+.concept[data-theme="b"] :is(.buy-btn, .send):not(:disabled):hover { background: #e7cfa7; }
+.concept[data-theme="b"] .suggestions button:hover { background: #b6a16c18; }
+
+/* D: a lacquer-red document case, with restrained manuscript rules. */
+.concept[data-theme="d"] {
+  --screen: #f2e7d3;
+  --ink: #382e28;
+  --muted: #766653;
+  --accent: #8d392b;
+  --line: #c6ad87;
+  --bubble: #f8efdf;
+  --user: #e7d2af;
+  --user-ink: #493725;
+  --card: #fbf3e3;
+  --frame: #542f29;
+  --cta: #863c30;
+  --cta-ink: #fff2d8;
+}
+.concept[data-theme="d"] .phone {
+  border-color: #74463c;
+  background: #f2e7d3;
+  box-shadow: 0 20px 46px #442b2030, inset 0 0 0 3px #d3b891;
+}
+.concept[data-theme="d"] .statusbar {
+  color: #ead3b1;
+  background: #652f28;
+}
+.concept[data-theme="d"] .phone-head {
+  margin-top: -1px;
+  padding-top: 20px;
+  padding-bottom: 21px;
+  color: #faecd0;
+  border-bottom: 4px double #d2ad75;
+  background: #652f28;
+}
+.concept[data-theme="d"] .assistant-mark {
+  color: #652f28;
+  border: 1px solid #f3d7a4;
+  border-radius: 1px;
+  background: #e9cca0;
+  box-shadow: inset 0 0 0 3px #e9cca0, inset 0 0 0 4px #8d392b;
+}
+.concept[data-theme="d"] .head-title small { color: #e1bd97; letter-spacing: 3px; }
+.concept[data-theme="d"] .head-title h2 { color: #fff1d8; }
+.concept[data-theme="d"] .wallet small { color: #e5c4a0; }
+.concept[data-theme="d"] .wallet strong { color: #ffe2a8; }
+.concept[data-theme="d"] .close { color: #efd9b7; }
+.concept[data-theme="d"] .fund-note {
+  margin-top: 0;
+  color: #79624b;
+  border-bottom: 1px solid #bf9b694d;
+  background: #e6d3b529;
+}
+.concept[data-theme="d"] .chat {
+  background-image: linear-gradient(90deg, transparent 20px, #9e46371c 20px, #9e46371c 21px, transparent 21px);
+  scrollbar-color: #b08b66 transparent;
+}
+.concept[data-theme="d"] .message.assistant .speaker { color: #8d392b; letter-spacing: 2px; }
+.concept[data-theme="d"] .message.assistant .bubble {
+  color: #382e28;
+  border: 0;
+  border-left: 2px solid #b75f4666;
+  border-radius: 0;
+  background: #f8efdf;
+  box-shadow: 0 2px 0 #a0825612;
+}
+.concept[data-theme="d"] .message.user .speaker { color: #79604a; }
+.concept[data-theme="d"] .message.user .bubble {
+  color: #493725;
+  border: 1px solid #b5976c;
+  border-right: 3px solid #9c6044;
+  border-radius: 1px;
+  background: #e7d2af;
+  box-shadow: 2px 2px 0 #c3a67e33;
+}
+.concept[data-theme="d"] .product {
+  position: relative;
+  border: 1px solid #b18a61;
+  border-top: 3px solid #883b2e;
+  border-radius: 1px;
+  background: #fbf3e3;
+  box-shadow: 3px 3px 0 #d6bea03d;
+}
+.concept[data-theme="d"] .product-head {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #b28c65;
+}
+.concept[data-theme="d"] .product-mark {
+  color: #8a3a2c;
+  border: 1px solid #ad5c45;
+  border-radius: 0;
+  background: #f0dfc2;
+}
+.concept[data-theme="d"] .product-title h3 { color: #583626; }
+.concept[data-theme="d"] .product-title small { color: #7a5f46; letter-spacing: 2px; }
+.concept[data-theme="d"] .product-price { color: #823e2d; }
+.concept[data-theme="d"] .price-note { color: #92502e; }
+.concept[data-theme="d"] .product-description { color: #47372a; }
+.concept[data-theme="d"] .product-boundary {
+  color: #735d48;
+  border-color: #cba47b;
+  background: #e4cfaf26;
+}
+.concept[data-theme="d"] details { color: #805d40; }
+.concept[data-theme="d"] details[open] { color: #58402c; }
+.concept[data-theme="d"] .buy-btn {
+  color: #fff2d8;
+  border: 1px solid #723025;
+  border-radius: 1px;
+  background: #863c30;
+  letter-spacing: 1px;
+  box-shadow: inset 0 0 0 3px #863c30, inset 0 0 0 4px #e7c3974d;
+}
+.concept[data-theme="d"] .composer {
+  border-top: 3px double #bca17a;
+  background: #eadabf;
+}
+.concept[data-theme="d"] .suggestions button {
+  color: #713c2d;
+  border: 1px solid #bd9870;
+  border-radius: 0;
+  background: #f3e5ce;
+  box-shadow: 2px 2px 0 #bda07b2b;
+}
+.concept[data-theme="d"] .input-row {
+  border: 1px solid #b58a60;
+  border-radius: 1px;
+  background: #fbf3e3;
+}
+.concept[data-theme="d"] .input-row:focus-within { border-color: #8d392b; }
+.concept[data-theme="d"] .input-row textarea { color: #453226; }
+.concept[data-theme="d"] .input-row textarea::placeholder { color: #8a725b; }
+.concept[data-theme="d"] .send {
+  color: #fff2d8;
+  border-radius: 1px;
+  background: #863c30;
+}
+.concept[data-theme="d"] .composer-note { color: #7d644b; }
+.concept[data-theme="d"] .home-indicator { background: #875d47; }
+.concept[data-theme="d"] :is(button, summary):focus-visible { outline: 2px solid #a6462e; outline-offset: 3px; }
+.concept[data-theme="d"] :is(.buy-btn, .send):not(:disabled):hover { background: #a24a38; }
+.concept[data-theme="d"] .suggestions button:hover { background: #fff3df; }
+
+@media (max-width: 420px) {
+  .concept[data-theme="b"] .phone-head,
+  .concept[data-theme="d"] .phone-head { padding-top: 15px; padding-bottom: 15px; }
+}
+
+/* Preserve clear disabled semantics in the two material directions. */
+.concept[data-theme="b"] .buy-btn:disabled,.concept[data-theme="d"] .buy-btn:disabled { background:transparent;color:var(--muted);border-color:var(--line);box-shadow:none; }

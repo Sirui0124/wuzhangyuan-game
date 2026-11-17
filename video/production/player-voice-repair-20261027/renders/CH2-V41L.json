@@ -1,0 +1,95 @@
+{
+  "id": "CH2-V41L",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V41L-7b46501850-20261025.mp4",
+  "oldSha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+  "oldSubtitles": "/video/subtitles/CH2-V41L-7b46501850-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V41L-454d69eb.mp4",
+  "sha256": "ccbf99b07489128c1d6f183ca0d1563922b73fe48e520cdeda22e200c2e2678e",
+  "bytes": 12948110,
+  "duration": 26.208333333333332,
+  "containerDuration": 26.208333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 629,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V41L",
+    "src": "/video/current/PV27-CH2-V41L-454d69eb.mp4",
+    "title": "晚支撑不足版：认下来的罪",
+    "subtitles": "/video/subtitles/PV27-CH2-V41L-454d69eb.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-E4-LATE-003",
+      "node": "CH2-E4-LATE-003",
+      "text": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E4-LATE-003.wav",
+      "oldCorrelation": 0.9999918964144986,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E4-LATE-003-v1.wav",
+      "newVoiceSha256": "26a365bebf0dfd36b6ebf8f8dcf17d8a38e2e2d31fbce84b088bf937830481b2",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        18.26,
+        26.02
+      ],
+      "insertAt": 18.26,
+      "voiceSeconds": 7.68,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9896158576011658,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.18,
+      "end": 6.02,
+      "text": "你说李严参与，材料里也有这些线索"
+    },
+    {
+      "start": 6.58,
+      "end": 13.22,
+      "text": "可几处细节还对不上，眼下不能照你的结论认定"
+    },
+    {
+      "start": 13.22,
+      "end": 17.84,
+      "text": "苟安认下的责任先录在案，其他的还要核"
+    },
+    {
+      "start": 18.46,
+      "end": 22.57,
+      "text": "我知道事情不止他说的那些。可几处查得不清"
+    },
+    {
+      "start": 23.220000000000002,
+      "end": 25.970000000000002,
+      "text": "最后压在案上的，还是他的认罪"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

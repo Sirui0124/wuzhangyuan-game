@@ -1,0 +1,72 @@
+{
+  "id": "V03B",
+  "name": "开场说明来意B",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V03B-开场说明来意B_画面修正V2.mp4",
+  "duration": 6.67,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-LIGHT选B",
+  "next": [
+    "V04"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V03B-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\picture-v2\\V03B-01-listener.mp4",
+      "duration": 6.59,
+      "centralVoiceCues": [
+        {
+          "node": "CH2-LY02-004",
+          "speaker": "我（选项）",
+          "text": "你救过我，我来看看你。",
+          "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-004.wav",
+          "centralSha256": "6912595e632bbfb870532db2d88e656a5a7f7e68799fed382edf0d7896956044",
+          "slotStart": 0.3,
+          "slotEnd": 2.6715416666666667
+        }
+      ],
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+      "sourceSha256": "6c3f8cacee9d8a028fd7126f1e862111d26242473015b2c96aa3336437e5f3b1",
+      "method": "verified closed-mouth source plays once then last frame holds; original player WAV only; no NPC mouth/voice in player phase",
+      "slotStart": 0,
+      "slotEnd": 6.63,
+      "review": {
+        "visualReview": "pending final dynamic check",
+        "actualDynamicReview": false,
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+        "sourceSha256": "6c3f8cacee9d8a028fd7126f1e862111d26242473015b2c96aa3336437e5f3b1",
+        "findings": "verified closed-mouth source plays once then last frame holds; original player WAV only; no NPC mouth/voice in player phase",
+        "audioIssues": [
+          "NPC临时音轨逐字/音色/BGM未审；我的阶段仅原玩家音轨和闭口倾听画面。"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-004",
+      "speaker": "我（选项）",
+      "text": "你救过我，我来看看你。",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-004.wav",
+      "centralSha256": "6912595e632bbfb870532db2d88e656a5a7f7e68799fed382edf0d7896956044",
+      "slotStart": 0.3,
+      "slotEnd": 2.6715416666666667
+    }
+  ],
+  "sha256": "02957a1a0b8cbc76fbed28a5e44454bc928fc4a237fe1188a7d7c13a1da97387",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "pending final dynamic review",
+  "audioIssues": [
+    "既有玩家音轨按角色独立排时，无新TTS。NPC原音保留；错词、音色、BGM或声口不同步仅列音频问题。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V03B-开场说明来意B.mp4",
+  "previousSha256": "0ee058094c3177136e8a8fa1fe36a09f6876a3d96a272d22764507b5654b90e9",
+  "pictureRevision": 2
+}

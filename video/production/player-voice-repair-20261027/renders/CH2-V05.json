@@ -1,0 +1,80 @@
+{
+  "id": "CH2-V05",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V05-037fce3f72-20261025.mp4",
+  "oldSha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+  "oldSubtitles": "/video/subtitles/CH2-V05-037fce3f72-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V05-64e12e57.mp4",
+  "sha256": "3c17913c2ca85ac126ae659f201dd0d1fcb5825dba893902c5dca065a61a8ab4",
+  "bytes": 8307325,
+  "duration": 16.333333333333332,
+  "containerDuration": 16.333333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 392,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V05",
+    "src": "/video/current/PV27-CH2-V05-64e12e57.mp4",
+    "title": "夜间取账",
+    "subtitles": "/video/subtitles/PV27-CH2-V05-64e12e57.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY02-012",
+      "node": "CH2-LY02-012",
+      "text": "这份交接记录，可以让我看看吗？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-012.wav",
+      "oldCorrelation": 0.9773882095164528,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-012-v1.wav",
+      "newVoiceSha256": "27fcb76e8ed058fb0bdc7f65fae0e461f22e8152a97dda5e37862c2a7a4a551b",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        6.69925,
+        10.22
+      ],
+      "insertAt": 6.69925,
+      "voiceSeconds": 3.4,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1469610929489136,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 6.89925,
+      "end": 10.12925,
+      "text": "这份交接记录，可以让我看看吗？"
+    },
+    {
+      "start": 10.26,
+      "end": 11.06,
+      "text": "嗯，看吧"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

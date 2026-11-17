@@ -1,0 +1,54 @@
+{
+  "id": "CH2-LY02-024",
+  "expected": "为什么不找他说明白？",
+  "sha256": "d866f3003314f965c3605813448c5565b871cf5cd821e9c2a3f7ec59f24bc61f",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-024-v1.wav",
+  "recognized": "为什么不找他说明白",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.47999999999999987,
+      "end": 1.46,
+      "text": "为什么不找他说明白",
+      "noSpeechProbability": 0.07339927554130554,
+      "words": [
+        {
+          "start": 0.47999999999999987,
+          "end": 0.74,
+          "text": "为什么"
+        },
+        {
+          "start": 0.74,
+          "end": 0.88,
+          "text": "不"
+        },
+        {
+          "start": 0.88,
+          "end": 1.0,
+          "text": "找"
+        },
+        {
+          "start": 1.0,
+          "end": 1.12,
+          "text": "他"
+        },
+        {
+          "start": 1.12,
+          "end": 1.24,
+          "text": "说"
+        },
+        {
+          "start": 1.24,
+          "end": 1.46,
+          "text": "明白"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

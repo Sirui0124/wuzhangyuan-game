@@ -1,0 +1,54 @@
+{
+  "id": "CH2-LY03-004",
+  "expected": "你们先前议的是什么？",
+  "sha256": "b148c40b5cf0c30e1d1530dce51e35097f79e0d97ba7c5c06b7eab1f319ea5d3",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-004-v1.wav",
+  "recognized": "你們先前意的是什麼",
+  "similarity": 0.6666666666666666,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.62,
+      "text": "你們先前意的是什麼",
+      "noSpeechProbability": 0.028809260576963425,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.6,
+          "text": "你們"
+        },
+        {
+          "start": 0.6,
+          "end": 0.82,
+          "text": "先"
+        },
+        {
+          "start": 0.82,
+          "end": 1.02,
+          "text": "前"
+        },
+        {
+          "start": 1.02,
+          "end": 1.16,
+          "text": "意"
+        },
+        {
+          "start": 1.16,
+          "end": 1.34,
+          "text": "的是"
+        },
+        {
+          "start": 1.34,
+          "end": 1.62,
+          "text": "什麼"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

@@ -1,0 +1,115 @@
+{
+  "source_sha256": "f80c1363c34afda1b5be1aa06da0b7922cd57513bc77862a1a856a5d5134be3b",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Static",
+          "p": 0.0735
+        },
+        {
+          "label": "Fire",
+          "p": 0.0627
+        },
+        {
+          "label": "Buzz",
+          "p": 0.0545
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0476
+        },
+        {
+          "label": "Noise",
+          "p": 0.0448
+        },
+        {
+          "label": "Squish",
+          "p": 0.0447
+        },
+        {
+          "label": "Flap",
+          "p": 0.0355
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0344
+        },
+        {
+          "label": "Eruption",
+          "p": 0.034
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0338
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0275
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0253
+        }
+      ],
+      "music": 0.0059
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Sound effect",
+          "p": 0.0778
+        },
+        {
+          "label": "Static",
+          "p": 0.0631
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0627
+        },
+        {
+          "label": "Whir",
+          "p": 0.0588
+        },
+        {
+          "label": "Speech",
+          "p": 0.0461
+        },
+        {
+          "label": "Car",
+          "p": 0.0444
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0289
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0227
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0186
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0182
+        },
+        {
+          "label": "Music",
+          "p": 0.0176
+        },
+        {
+          "label": "Rain",
+          "p": 0.0163
+        }
+      ],
+      "music": 0.0176
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "delivery": {
+    "id": "V17",
+    "name": "共同交付核对",
+    "entry": "V16A/C或B后明确继续返回仓中",
+    "next": [
+      "V18"
+    ],
+    "endEvent": "保留B+1，不补成A+2",
+    "children": [
+      "V17-01"
+    ],
+    "subclips": [
+      "V17-01"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+    "technical": {
+      "duration": 12.27,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "decodedVideoFrames": 294,
+      "videoTrackSeconds": 12.25,
+      "videoEndSeconds": 12.25,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "首2.25秒管事开口，随后拿起册页并翻看；新版保留纸面局部柔化及清楚的持握边缘，11.35秒册页离画后停止柔化，末帧没有停留的虚化块。只展示既有材料核看与原节点口述，不引入新正文。完整原生12.25秒保留；当前整段12.266秒已复核。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "只复核已取得的本队签收与交付，不授予新文书；镜头里的册页核看不等于仓内原件带离。",
+      "纸面正文不可读，不能以它声称完成逐字视觉核验；口述确认以原节点为准，正式使用仍须音频处理。"
+    ]
+  },
+  "usability": {
+    "id": "V17",
+    "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "首2.25秒管事开口，随后拿起册页并翻看；新版保留纸面局部柔化及清楚的持握边缘，11.35秒册页离画后停止柔化，末帧没有停留的虚化块。只展示既有材料核看与原节点口述，不引入新正文。完整原生12.25秒保留；当前整段12.266秒已复核。"
+    ],
+    "issues": [
+      {
+        "type": "mask-after-object-left",
+        "state": "repaired",
+        "repair": "纸面离画后的虚化范围停止；须用paper-detail新版"
+      }
+    ],
+    "integrationConditions": [
+      "只复核已取得的本队签收与交付，不授予新文书；镜头里的册页核看不等于仓内原件带离。",
+      "纸面正文不可读，不能以它声称完成逐字视觉核验；口述确认以原节点为准，正式使用仍须音频处理。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          12.27
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V17\\identity.json"
+      },
+      {
+        "method": "browser screenshot at no-seek initial frame and actual natural-play end; 0.5-second whole sequence directly viewed",
+        "times": [
+          0,
+          12.266
+        ]
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V17",
+        "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+        "event": "ended",
+        "start": 0,
+        "end": 12.266,
+        "duration": 12.266,
+        "time": "2026-10-25T06:28:12.196Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 12.27,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b"
+    }
+  }
+}

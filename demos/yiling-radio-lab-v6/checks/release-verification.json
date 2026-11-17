@@ -1,0 +1,110 @@
+{
+  "date": "2026-11-17",
+  "status": "implemented; developer visual inspection; user approval pending",
+  "health": {
+    "demo": "yiling-radio-lab-v6",
+    "version": 6
+  },
+  "tests": {
+    "passed": 22,
+    "failed": 0
+  },
+  "realApiBrowserFlow": {
+    "requests": 7,
+    "errors": [],
+    "returnedGenerals": 4,
+    "returnedObjectiveGroups": 5,
+    "checks": [
+      "three named contacts",
+      "questions do not deploy or advance time",
+      "contact-page order redirects",
+      "dispatch confirmation required",
+      "confirm returns to frontline",
+      "full rescue",
+      "returned contact report",
+      "per-page drafts survive navigation and refresh",
+      "no top tab",
+      "dispatch entry inside report heading"
+    ]
+  },
+  "v5Preservation": {
+    "files": 9,
+    "changed": []
+  },
+  "unchangedGameplayModules": {
+    "src/engine.ts": true,
+    "src/frontline.ts": true,
+    "ai.mjs": true
+  },
+  "officialChapter4Touched": false,
+  "art": {
+    "method": "built-in image_gen.imagegen",
+    "source": "source-art/yiling-night-command-v6-20261117/terrain-night-v1.png",
+    "prompt": "source-art/yiling-night-command-v6-20261117/terrain-night-v1.prompt.txt",
+    "runtime": "demos/yiling-radio-lab-v6/public/terrain-night-v1.png"
+  },
+  "sourceHashes": {
+    "src\\app.ts": "9e2c22531af42c07c2f79d41324d7804f9ec657ea9ea59d57d08e5df5eab17bd",
+    "public\\style.css": "70c49e894ab4f4410ad52f45c591bdac06f3190fec013fc13d8533670843c894",
+    "public\\terrain-night-v1.png": "53249efedac375a99b01082b59416736ef0b4e46112bd49535af868da56d0f41",
+    "server.mjs": "7c9e3a6e41d5ab1b603f776b19f7e6ea07eebf879112601b5ac9b5d52126a85c"
+  },
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 402
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 402
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 286
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 286
+    },
+    {
+      "width": 681,
+      "height": 688,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 350
+    },
+    {
+      "width": 681,
+      "height": 688,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 350
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "frontline",
+      "overflow": false,
+      "mapHeight": 350
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "view": "dispatch",
+      "overflow": false,
+      "mapHeight": 350
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+> **2026-10-22 开篇新增返修：** 用户要求整段重做祈福与魏延入帐，并进一步降低饱和度、增强水墨实拍质感；[低饱和新图与Prompt提交稿](../../video/production/PR01-ink-realism-20261022/README.md)登记为待review。原A/B/C影片待更新，游戏暂保留现片；原灭灯尾镜及DEF手机、原心声混音保留。下方先前“采用版本核验一致”只说明当时文件对应，不代表后来被要求返修的画面获通过。
+
+> **2026-10-22 先前采用版本核验：** 13条云端当时版本与1条用户保留现片，对应游戏10个实际播放文件，核验一致。采用理由与返修项见[全量选片核验](SELECTION-AUDIT-20261022.md)。
+
+> **2026-10-21 历史制作状态：** 本文下方制作状态与数量均为当时快照，其中“待生成”不能作为今天是否已产出的依据。最新事实见[2026-10-22版本复核](RECHECK-20261022.md)、[接入记录](INTEGRATION-20261022.md)与游戏播放清单；在线 Prompt 仍以实时台账链接正文为准。
+
+# Windows 项目视频资产统一索引
+
+> **2026-10-22 最新接入：** 以下旧数量和采用状态为历史快照。首批9条之后已补齐4份原片；当前采用13条本轮/指定源片并保留LI02A，游戏共绑定10个播放文件。最新采用、速度、保留段落及验证见[视频接入记录](INTEGRATION-20261022.md)和游戏`cinematics.json`；不再使用下方7片统计作为当前结果。
+
+更新：2026-10-19。正确项目：`C:\Users\zhousirui\Documents\ChatGPT\逆转五丈原`。本索引整合当前 dot 对话已落地视频，不另立制作任务台账：任务状态沿用 [RETAKE-QUEUE](RETAKE-QUEUE.md)，精确剪辑/接入证据见 [INTEGRATION](INTEGRATION-20261018.md)。下列为代码、文件与现有台账的同日核对快照，历史版本不算新增采用项。
+
+登记 **16 个剧情/源片/取消项**，其中 **7 个唯一实际播放文件**（第一章5个、第二章预览2个）。[同一索引的数据与完整实物清单](ASSET-INDEX.json) 收录 `video/` 下 **44 个 MP4**（含重复副本、旧版、取消原片），记录路径、SHA-256、音视频轨时长和实际绑定；全部引用文件存在，7个采用文件哈希与媒体清单一致。
+
+时长注明画面/浏览器/容器口径；不能把AAC尾延迟当剪辑时码。本文不重新剪辑、生成、上传或改游戏代码。飞书链接来自既有项目文档，本轮未联网核验可访问性；它们是制作参考，不是重拍任务。
+
+## 当前观看与绑定
+
+运行 `npm start`：游戏 `http://127.0.0.1:8811/`；主菜单“视频审阅 / 第二章开场预览”，或 `/video-review.html`。按 **ID + 当前采用片内时间 + 问题** 反馈到 [反馈记录](../../video/review-ready/反馈记录.md)。
+
+| ID | 章节 | 唯一采用文件 | 状态 |
+| --- | --- | --- | --- |
+| PR01 | 第一章·序章 | `video/current/PR01-opening-complete-20261018.mp4` | 正式采用，替代旧开篇 |
+| SC01 | 第一章·序章 | `video/current/PR01-opening-complete-20261018.mp4` | 已合成 |
+| PR01A | 第一章·序章 | `video/current/PR01-opening-complete-20261018.mp4` | 已合成；独立兼容版仅历史中间文件 |
+| PR01B | 第一章·序章 | `video/current/PR01-opening-complete-20261018.mp4` | 已合成；末帧延长一帧 |
+| PR01-SOURCE | 第一章·序章 | `video/current/PR01-opening-complete-20261018.mp4` | 旧源复用，不单独采用 |
+| SC03 | 第一章·醒来守营 | `video/current/SC03-awaken-guard-20261016.mp4` | 保留现成稿 |
+| EN02B-A | 第一章·首轮问责 | `video/current/EN02B-A-accountability-20261018.mp4` | 正式采用，HEVC转H.264/AAC |
+| EN02B-B | 第一章·取消的押走死亡 | 无正式采用；见下方保留源/待修说明 | 用户取消；原件保留 |
+| EN01 | 第一章·成功轮 | `video/current/EN01-seven-days-20261016.mp4` | 保留现成稿 |
+| EN03-EN04 | 第一章·组合结尾 | `video/current/EN03-EN04-ending-20261018.mp4` | 唯一05A组合正式采用 |
+| EN04 | 第一章·组合结尾子段 | `video/current/EN03-EN04-ending-20261018.mp4` | 独立版不采用，历史保留 |
+| LI01 | 第二章·运粮开场预览 | `video/current/LI01-cliff-rescue-20261018.mp4` | 可访问预览；完整章节交互制作中 |
+| LI01R | 第二章·救人替换子段 | `video/current/LI01-cliff-rescue-20261018.mp4` | 已合成；仅源2.250—3.500秒2× |
+| LI02A | 第二章·粮仓预览 | `video/current/LI02A-granary-20261018.mp4` | 现片保留、不重拍；另做AAC兼容版 |
+| LI02B | 第二章·入帐相认（待修） | 无正式采用；见下方保留源/待修说明 | 保留画面；未换声、未再裁尾 |
+| EN02A | 第一章·已弃用 | 无正式采用；见下方保留源/待修说明 | 已弃用，不恢复 |
+
+## 各片来源、插入位置与审阅要求
+
+### PR01 · 第一章·序章
+
+- 时长：成片54.541667秒。
+- 绑定/插入：opening[0]；新游戏→完整开篇→SC03。
+- 源片：`video/review/20261018_v03/SC01-entry-sync-compatible-v03.mp4`；`video/raw/PR01A-手机揭示-20261018231045.mp4`；`video/raw/PR01B - 时代遗憾 - 20261018231117.mp4`；`video/in-progress/edits/PR01-prologue-27s-clean-v02.mp4`；`video/in-progress/generation-current-20261018/当前五条视频生成包/02-PR01B-时代遗憾多场景回忆-7.5秒/声音/hero-opening-original.wav`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/XxpcdxaSio1ccExUHdAcP5Pdnyc) · [参考2](https://my.feishu.cn/docx/NB3xdQvUHo2REoxQhNAcV8jEnZk) · [参考3](https://my.feishu.cn/docx/D40Gde7upoaFH1xic6ScoKsfnih) · [参考4](https://my.feishu.cn/docx/CYUhdzmuGoKiZBxBRCucBTu4n1G)。
+- Review：核30.625、35.666667、42.750、49.500秒接点；不重复灭灯，原许愿音画保留；B只有原心声。
+- 剩余：全片主观听审仍待完成。
+
+### SC01 · 第一章·序章
+
+- 时长：源34.708333秒；采用前30.625秒。
+- 绑定/插入：嵌入PR01 0—30.625秒，不另播。
+- 源片：`video/review/20261018_v03/SC01-entry-sync-compatible-v03.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/XxpcdxaSio1ccExUHdAcP5Pdnyc)。
+- Review：魏延喊丞相入门即灭灯；避免重复点亮/熄灭。
+- 剩余：全片主观听审仍待完成。
+
+### PR01A · 第一章·序章
+
+- 时长：源画面5.041667秒；容器约5.06秒。
+- 绑定/插入：嵌入PR01 30.625—35.666667秒，不另播。
+- 源片：`video/raw/PR01A-手机揭示-20261018231045.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/NB3xdQvUHo2REoxQhNAcV8jEnZk)。
+- Review：手机揭示、暂停/锁屏与叹气；主角不露脸。
+- 剩余：全片主观听审仍待完成。
+
+### PR01B · 第一章·序章
+
+- 时长：源画面7.041667秒；输出段7.083333秒。
+- 绑定/插入：嵌入PR01 35.666667—42.750秒，不另播。
+- 源片：`video/raw/PR01B - 时代遗憾 - 20261018231117.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/D40Gde7upoaFH1xic6ScoKsfnih)。
+- Review：通勤/加班/AI发布/行情/工位；原6.85秒心声放B内0.2—7.05秒，生成音轨弃用。
+- 剩余：全片主观听审仍待完成。
+
+### PR01-SOURCE · 第一章·序章
+
+- 时长：剪辑源27秒；采用6.750+5.041667秒。
+- 绑定/插入：源8.875—15.625→成片42.750—49.500；源21.958333—27→成片49.500—54.541667。
+- 源片：`video/in-progress/edits/PR01-prologue-27s-clean-v02.mp4`；`video/in-progress/raw/01-若能早一步-20261018-012916.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/CYUhdzmuGoKiZBxBRCucBTu4n1G)。
+- Review：原拿手机及原许愿不重配；15.625—21.958333重复古代段弃用。
+- 剩余：全片主观听审仍待完成。
+
+### SC03 · 第一章·醒来守营
+
+- 时长：画面28.041667秒；容器28.063991秒。
+- 绑定/插入：opening[1]；PR01结束后进入守营。
+- 源片：`video/in-progress/raw/03 - 穿越醒来大帐外守营 - 20261016_2109.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/NEP1dBh7sosdYfxSnlecwzx9nBg)。
+- Review：检查与开篇结束、游戏调查开始衔接。
+- 剩余：全片主观听审仍待完成。
+
+### EN02B-A · 第一章·首轮问责
+
+- 时长：浏览器22.059秒。
+- 绑定/插入：sacrifice[0]；app.ts tutorial.execution.question触发→黑场死亡→continue-teaching复活。
+- 源片：`video/raw/01 - EN02B-A 次日问责 - 20261018231428.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/GO9od5zbFokdFZxpvRNccSL7nyc)。
+- Review：收走唯一木矛；不重复图文问责；死亡仍为死亡，不改放逐。
+- 剩余：全片主观听审仍待完成。
+
+### EN02B-B · 第一章·取消的押走死亡
+
+- 时长：源容器约7.07秒。
+- 绑定/插入：无绑定；由游戏黑场死亡代替。
+- 源片：`video/raw/04 - EN02B-B-押走死亡 - 20261018231153.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/NLbOdsTWCoSsiKxdO5qcxaUPnLd)。
+- Review：不将穿帮画面重新加入、不再取A末帧。
+- 剩余：无补拍任务；末帧依赖已停止。
+
+### EN01 · 第一章·成功轮
+
+- 时长：21.250秒。
+- 绑定/插入：safe[0]；completeSafe确认灯亮、存活、教学完成及章节成功后。
+- 源片：`video/in-progress/raw/EN01_七日已满主灯未灭_20261016-211558.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/Qi0fdZksVoRVrHxLNsBchYWInVe)。
+- Review：只能成功轮出现；不可被EN03-EN04替代。
+- 剩余：全片主观听审仍待完成。
+
+### EN03-EN04 · 第一章·组合结尾
+
+- 时长：31.958333秒。
+- 绑定/插入：safe[1]；EN01之后；ending-video.json备用也指此文件。
+- 源片：`video/in-progress/edits/EN03-EN04-ending-complete-review.mp4`；`video/current/ending-legacy-fallback.mp4`；`video/in-progress/raw/EN04 - 姜维叹战机那我有办法 - 20261018012727.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/TcHXdpgFRoPogQxGvDDcm1F9nec) · [参考2](https://my.feishu.cn/docx/Y8NXdnKgJo1eh1xVklvch1HRnab)。
+- Review：0—12.625秒战机未改；12.625秒起新版姜维；不再叠独立05B。
+- 剩余：全片主观听审仍待完成。
+
+### EN04 · 第一章·组合结尾子段
+
+- 时长：独立历史剪辑19.333333秒。
+- 绑定/插入：仅嵌入EN03-EN04 12.625—31.958333秒；无独立绑定。
+- 源片：`video/in-progress/edits/EN04-jiangwei-response-review.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/Y8NXdnKgJo1eh1xVklvch1HRnab)。
+- Review：以组合结尾审阅姜维回应和主角画外声，不列第二选项。
+- 剩余：全片主观听审仍待完成。
+
+### LI01 · 第二章·运粮开场预览
+
+- 时长：26.666667秒。
+- 绑定/插入：chapterPreview[0]；主菜单→video-review.html独立按钮。
+- 源片：`video/in-progress/edits/LI01-grain-road-rescue-review.mp4`；`video/raw/01 - 悬崖救人替换段 - 20261018231431.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/Vg3IdBf7woJDSSx9MslcPXy2nRf)。
+- Review：旧前10.25秒保留；成片12.500—13.125秒局部2×；崖外抓前臂、无提前姓名字幕。
+- 剩余：主观听审；第二章交互未实现，不算完整可玩章节。
+
+### LI01R · 第二章·救人替换子段
+
+- 时长：源画面17.041667秒；采用后16.416667秒。
+- 绑定/插入：嵌入LI01 10.250—26.666667秒，不另播。
+- 源片：`video/raw/01 - 悬崖救人替换段 - 20261018231431.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/Vg3IdBf7woJDSSx9MslcPXy2nRf)。
+- Review：缩短0.625秒；其余抓握、拉回、队长整句对白正常速度。
+- 剩余：主观听审；不能把局部2×扩展整片。
+
+### LI02A · 第二章·粮仓预览
+
+- 时长：17.833333秒。
+- 绑定/插入：chapterPreview[1]；独立粮仓按钮；与LI01间保留未来互动。
+- 源片：`video/review-ready/第二章-可用成稿/07A_LI02A_粮仓听说苟安受罚_保留成稿.mp4`；`video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4`；`video/in-progress/raw/01-粮仓探听-苟安受罚-20261018012502.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/RkypdBsnXomUgIxhZQhcrqaVnN9)。
+- Review：完整问讯、受罚和去向；不把提示词链接解释为重拍任务。
+- 剩余：主观听审；第二章交互制作中，无新增重拍。
+
+### LI02B · 第二章·入帐相认（待修）
+
+- 时长：当前分离待修片11.000秒；源容器约15.07秒。
+- 绑定/插入：未正式绑定；计划粮仓后入帐相认，当前只在待修目录。
+- 源片：`video/review-ready/第二章-待修审阅/07B_LI02B_探望认人_仅声修剪尾.mp4`；`video/in-progress/edits/LI02A-LI02B-visit-complete-review.mp4`；`video/in-progress/raw/LI02B-入帐探望-20261018-012518.mp4`。
+- 飞书提示词：[参考1](https://my.feishu.cn/docx/RuZ1dNIYEoMbsJxzw3Tc3OJYn6O)。
+- Review：看清脸才认恩人；尾音不能只靠静音阈值判断。
+- 剩余：仅换声剪尾；待原先请求的字节API配置/生成，凭据位置未知；不要求用户必须另供新声。
+
+### EN02A · 第一章·已弃用
+
+- 时长：无现用视频。
+- 绑定/插入：无绑定。
+- 源片：无现用源；有意取消/弃用。
+- 飞书提示词：无现用链接，不补造。
+- Review：不从旧prompt恢复影片或扩写剧情。
+- 剩余：无制作任务；无现用文件/提示词链接属有意留空。
+
+## 核对证据与边界
+
+- 实际绑定：`GameStarter/web-demo/public/cinematics.json`、`video/media-manifest.json`；结尾备用 `ending-video.json` 也指唯一组合。
+- `app.ts` 632—641行：首轮 `tutorial.execution.question` 播问责A后确认原剧情死亡并进入复活；EN02B-B无引用。
+- `campaign.ts` 38—39行：成功、章节完成、教学完成、存活、灯亮同时满足才进入safe；safe顺序EN01→EN03-EN04。
+- `video-review.html` 的chapterPreview只有LI01/LI02A；第二章明确制作中，不改存档。LI02B无绑定，未误报声修完成。
+- 文件存在及7个源SHA-256与媒体清单一致；本轮不重复运行剪辑或游戏回归。此前完整播放/首轮复活回归证据在 `video/review/20261018-integration/browser-playback.json`、`browser-route.json`。
+- 主观听审、独立ffprobe检查仍未完成；LI02B待字节API配置/生成与可靠尾界确认。无文件缺失；EN02A无现用文件、EN02B-B取消、EN04无独立绑定均为有意状态。
+- 前导空格目录已完整合并、回收站可恢复，见 [目录合并记录](../migration/LEADING-SPACE-MERGE-20261018.md)。

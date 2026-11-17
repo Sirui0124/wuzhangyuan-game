@@ -1,0 +1,177 @@
+{
+  "id": "V38",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+  "sha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+  "oldSHA": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+  "oldDuration": 34.197,
+  "duration": 20.166667,
+  "removedSeconds": 14.030333000000002,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+    "containerDuration": 20.166667,
+    "videoFrames": 484,
+    "firstPTS": 0.0,
+    "lastPTS": 20.125,
+    "videoEnd": 20.166666666666668,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 20.166,
+    "audioDecodedSamples": 967968,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          0,
+          132
+        ]
+      ],
+      "node": "CH2-E2-001",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.25,
+      "reason": "实际交材料；NPC闭口听",
+      "timelineRange": [
+        0,
+        5.5
+      ]
+    },
+    {
+      "pictures": [
+        [
+          335,
+          424
+        ]
+      ],
+      "node": "CH2-E2-002",
+      "audio": "original-whitelist-window",
+      "audioStart": 13.94,
+      "delay": 0,
+      "reason": "只保留材料收到/停手补报已记下，前端标签截至真实材料原句",
+      "timelineRange": [
+        5.5,
+        9.208333333333334
+      ]
+    },
+    {
+      "pictures": [
+        [
+          514,
+          621
+        ]
+      ],
+      "node": "CH2-E2-002",
+      "audio": "original-whitelist-window",
+      "audioStart": 21.4,
+      "delay": 0,
+      "reason": "保留留营受查、李严仍待核，删前后空余",
+      "timelineRange": [
+        9.208333333333334,
+        13.666666666666668
+      ]
+    },
+    {
+      "pictures": [
+        [
+          629,
+          785
+        ]
+      ],
+      "node": "CH2-E2-003",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.2,
+      "reason": "苟安仍活着的闭口反应；完整心声",
+      "timelineRange": [
+        13.666666666666668,
+        20.166666666666668
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-E2-001",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E2-001.wav",
+      "sourceSha256": "341eb1a9e1768a2ba8d34678ef4324a9c062e2b15b7edf6e5b95652f285f2047",
+      "sourceRange": [
+        0,
+        4.183291666666666
+      ],
+      "timelineRange": [
+        0.25,
+        4.433291666666666
+      ],
+      "samples": 200798
+    },
+    {
+      "node": "CH2-E2-002",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+      "sourceSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+      "sourceRange": [
+        13.94,
+        17.648333333333333
+      ],
+      "timelineRange": [
+        5.5,
+        9.208333333333334
+      ],
+      "samples": 178000
+    },
+    {
+      "node": "CH2-E2-002",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+      "sourceSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+      "sourceRange": [
+        21.4,
+        25.85833333333333
+      ],
+      "timelineRange": [
+        9.208333333333334,
+        13.666666666666668
+      ],
+      "samples": 214000
+    },
+    {
+      "node": "CH2-E2-003",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E2-003.wav",
+      "sourceSha256": "0aae9d5da303d7ccaaafe84c17da4190af69d192af636f49eff1070471d08f7f",
+      "sourceRange": [
+        0,
+        5.971875
+      ],
+      "timelineRange": [
+        13.866666666666667,
+        19.838541666666668
+      ],
+      "samples": 286650
+    }
+  ],
+  "mixPeakBefore": 0.8973910808563232,
+  "mixScale": 1,
+  "newVideoRequests": 0,
+  "newAudioRequests": 0,
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-E2-001",
+    "CH2-E2-002",
+    "CH2-E2-003"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

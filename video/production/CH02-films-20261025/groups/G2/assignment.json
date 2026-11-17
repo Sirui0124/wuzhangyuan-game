@@ -1,0 +1,437 @@
+{
+  "group": "G2",
+  "title": "查粮取证与三种判断",
+  "clips": [
+    {
+      "id": "V13",
+      "name": "仓中核凭据、获准查账",
+      "scriptNodes": [
+        "CH2-LY04-001",
+        "CH2-LY04-002",
+        "CH2-LY04-003"
+      ],
+      "entry": "持真实本队凭据到仓",
+      "next": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-001",
+          "speaker": "我",
+          "text": "我来领取本队这批粮的交接材料。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-002",
+          "speaker": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY04-003",
+          "speaker": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V14",
+      "name": "粮运画卷",
+      "scriptNodes": [
+        "CH2-LY04-004"
+      ],
+      "entry": "获准查本批后",
+      "next": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "流程示意，不提前显示缺额答案；无旁白、无新增人声。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V15",
+      "name": "倒查起点与三份账页",
+      "scriptNodes": [
+        "CH2-LY04-F01",
+        "CH2-LY04-D01",
+        "CH2-LY04-D02",
+        "CH2-LY04-D03"
+      ],
+      "entry": "V14结束",
+      "next": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "mode": "固定视频",
+      "note": "文书由后期/游戏准确叠字，不让模型编字；无玩家选择的原件可连续展示，保存逐条来源。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-F01",
+          "speaker": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D01",
+          "speaker": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D02",
+          "speaker": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ]
+    },
+    {
+      "id": "V16A",
+      "name": "核交接选项",
+      "scriptNodes": [
+        "CH2-LY04-Q1A"
+      ],
+      "entry": "UI-N2选A",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "speaker": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "commitScore": "N2严谨+2一次"
+    },
+    {
+      "id": "V16B",
+      "name": "去问损耗与认罪",
+      "scriptNodes": [
+        "CH2-LY07-W01",
+        "CH2-LY07-W02"
+      ],
+      "entry": "UI-N2选B",
+      "next": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "Q1B为按钮、W01是实际说出口的展开句，只说一次，不把按钮再念一遍。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-W01",
+          "speaker": "我（选项）",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-W02",
+          "speaker": "苟安",
+          "text": "好，这笔罪，我认。你报上去吧，别再查了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N2严谨+1一次；实际听到有限认罪口供"
+    },
+    {
+      "id": "V16C",
+      "name": "先行归责与纠正",
+      "scriptNodes": [
+        "CH2-LY04-Q1C",
+        "CH2-LY04-Q1FB0"
+      ],
+      "entry": "UI-N2选C",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "speaker": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "speaker": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N2不加分"
+    },
+    {
+      "id": "V17",
+      "name": "共同交付核对",
+      "scriptNodes": [
+        "CH2-LY04-F02"
+      ],
+      "entry": "V16A/C或B后明确继续返回仓中",
+      "next": [
+        "V18"
+      ],
+      "endEvent": "保留B+1，不补成A+2",
+      "mode": "固定视频",
+      "note": "B返回入口可补中性到仓镜头，不说玩家已选A。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "scriptNodes": [
+        "CH2-LY04-T01",
+        "CH2-LY04-D04",
+        "CH2-LY04-W01",
+        "CH2-LY04-D05",
+        "CH2-LY04-C01",
+        "CH2-LY04-D06"
+      ],
+      "entry": "V17结束",
+      "next": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "mode": "固定视频",
+      "note": "三处账面展示连续完成，若制作需拆小段只能自动续播，不能新增考试。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D04",
+          "speaker": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-W01",
+          "speaker": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D05",
+          "speaker": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-C01",
+          "speaker": "我",
+          "text": "收到的粮对上了。原定要交多少？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ]
+    },
+    {
+      "id": "V19A",
+      "name": "缺额判断A",
+      "scriptNodes": [
+        "CH2-LY04-Q4A",
+        "CH2-LY04-Q4FB0"
+      ],
+      "entry": "UI-N3选A",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "speaker": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "speaker": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V19B",
+      "name": "缺额判断B",
+      "scriptNodes": [
+        "CH2-LY04-Q4B"
+      ],
+      "entry": "UI-N3选B",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "speaker": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V19C",
+      "name": "缺额判断C",
+      "scriptNodes": [
+        "CH2-LY04-Q4C",
+        "CH2-LY04-Q4FB1"
+      ],
+      "entry": "UI-N3选C",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "speaker": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "speaker": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V20",
+      "name": "调度决定与受杖前签认",
+      "scriptNodes": [
+        "CH2-LY04-C04",
+        "CH2-LY06-014",
+        "CH2-LY06-015",
+        "CH2-LY06-016",
+        "CH2-LY06-017",
+        "CH2-LY06-018",
+        "CH2-LY06-019",
+        "CH2-LY06-021"
+      ],
+      "entry": "V19A/B/C结束",
+      "next": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-014",
+          "speaker": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-015",
+          "speaker": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY06-016",
+          "speaker": "我",
+          "text": "这份确认是谁写的？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY06-017",
+          "speaker": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-018",
+          "speaker": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY06-019",
+          "speaker": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-021",
+          "speaker": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    }
+  ],
+  "contract": "../../制作总控.md",
+  "referenceManifest": "../../references/manifest.json"
+}

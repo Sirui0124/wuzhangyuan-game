@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-22T12:55:57+08:00",
+  "sourceManifest": "GameStarter/web-demo/visual-assets.json",
+  "sourceVersion": "wuzhang-art-v3-20261022",
+  "sourceSha256": "4a9baf4f8da0751b9ee7077594dd3bbe62b309b1ea520bc68eaac5e11ecef6a5",
+  "reviewStatus": "待review",
+  "approvalGenerated": false,
+  "characters": [
+    {
+      "id": "weiyan",
+      "name": "魏延",
+      "reviewStatus": "待review",
+      "note": "当前绑定是技术状态，视觉仍待用户审核。",
+      "source": {
+        "frame": "EN02B-A-reference.png",
+        "text": "身份母版实际输入：今日 EN02B-A 视频 4.9 秒抽帧；另外两表情由 neutral-v3.png 编辑。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "weiyan",
+          "path": "source-art/visuals/runtime/characters/weiyan/neutral-v3.png",
+          "exists": true,
+          "sha256": "4fe819dbda2f0999f2b31722dd3402e786d5e91dcb33380573b1d9bd778b97fb",
+          "modifiedAt": "2026-10-22T12:02:13.562336+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.37075360616048175
+        },
+        {
+          "mood": "alert",
+          "assetId": "weiyan_alert",
+          "path": "source-art/visuals/runtime/characters/weiyan/alert-v3.png",
+          "exists": true,
+          "sha256": "d08c3ebe5d3ec3de340a26c2d6a06f2166c40f01971949db93eb448938b3289d",
+          "modifiedAt": "2026-10-22T12:05:18.830267+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.3709265391031901
+        },
+        {
+          "mood": "resolved",
+          "assetId": "weiyan_resolved",
+          "path": "source-art/visuals/runtime/characters/weiyan/resolved-v3.png",
+          "exists": true,
+          "sha256": "0e03012bf36ba1c2efe7684f7540bad31887b78de1a11106b2dd9c8a26cad4e0",
+          "modifiedAt": "2026-10-22T12:05:54.397522+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.3721167246500651
+        }
+      ]
+    },
+    {
+      "id": "jiangwei",
+      "name": "姜维",
+      "reviewStatus": "待review",
+      "note": "当前绑定是技术状态，视觉仍待用户审核。",
+      "source": {
+        "frame": "EN04-reference.png",
+        "text": "身份母版实际输入：今日 EN04 视频 6.69 秒抽帧；另外两表情由 neutral-v3.png 编辑。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "jiangwei",
+          "path": "source-art/visuals/runtime/characters/jiangwei/neutral-v3.png",
+          "exists": true,
+          "sha256": "b546bafcfc1aa6257576df17f1b5ab73d41cdd2927022573a4c65057ab692117",
+          "modifiedAt": "2026-10-22T12:02:51.650874+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.44053014119466144
+        },
+        {
+          "mood": "concerned",
+          "assetId": "jiangwei_concerned",
+          "path": "source-art/visuals/runtime/characters/jiangwei/concerned-v3.png",
+          "exists": true,
+          "sha256": "65c9243b8f84e328e5776013cb7e6ad831ef0acba9fe3440587d1be01534554f",
+          "modifiedAt": "2026-10-22T12:06:33.487664+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.44062232971191406
+        },
+        {
+          "mood": "resolved",
+          "assetId": "jiangwei_resolved",
+          "path": "source-art/visuals/runtime/characters/jiangwei/resolved-v3.png",
+          "exists": true,
+          "sha256": "2805fc524198bdbbdd8e638aa5f08dacca9ab934fd8a8cb305daeaf2eb3e1edf",
+          "modifiedAt": "2026-10-22T12:07:18.010080+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4428456624348958
+        }
+      ]
+    },
+    {
+      "id": "zhugeliang",
+      "name": "诸葛亮",
+      "reviewStatus": "待review",
+      "note": "预备资源；第一章没有强插诸葛亮对白。",
+      "source": {
+        "frame": "EN03-reference.png",
+        "text": "身份母版实际输入：今日 EN03 视频 8.71 秒抽帧；另外两表情由 neutral-v3.png 编辑。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "zhugeliang",
+          "path": "source-art/visuals/runtime/characters/zhugeliang/neutral-v3.png",
+          "exists": true,
+          "sha256": "af7c8087e04c7734feae77c09bc8e5c610117ef62827e6c5beebf3272ebb564d",
+          "modifiedAt": "2026-10-22T12:03:27.249593+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4199225107828776
+        },
+        {
+          "mood": "weary",
+          "assetId": "zhugeliang_weary",
+          "path": "source-art/visuals/runtime/characters/zhugeliang/weary-v3.png",
+          "exists": true,
+          "sha256": "b0ad2251026cd9eb7364ff774db5e662cb9a0412a4d6114c8f00dd46d6d47b20",
+          "modifiedAt": "2026-10-22T12:07:53.607255+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4211419423421224
+        },
+        {
+          "mood": "resolved",
+          "assetId": "zhugeliang_resolved",
+          "path": "source-art/visuals/runtime/characters/zhugeliang/resolved-v3.png",
+          "exists": true,
+          "sha256": "6528f6794a049fbaa1b9b506be5f74712003ac47640b6226f3252824d316c200",
+          "modifiedAt": "2026-10-22T12:08:28.568671+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4200592041015625
+        }
+      ]
+    },
+    {
+      "id": "guard",
+      "name": "守帐卒甲",
+      "reviewStatus": "待review",
+      "note": "当前绑定是技术状态，视觉仍待用户审核。 姜维亲兵暂共用该立绘，身份复用明确保留。",
+      "source": {
+        "frame": null,
+        "text": "以既有 guard.png 锁定身份和衣甲进行透明化编辑；本图未使用新视频抽帧作为生成输入。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "guard",
+          "path": "source-art/visuals/runtime/characters/guard/neutral-v3.png",
+          "exists": true,
+          "sha256": "e9e72e9b8cea3b2f71c8ff7386a8a91b1ed8f2f1fa10c256d6e6497a1281b400",
+          "modifiedAt": "2026-10-22T12:05:51.350252+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4005247751871745
+        }
+      ]
+    },
+    {
+      "id": "relay",
+      "name": "传令卒乙",
+      "reviewStatus": "待review",
+      "note": "当前绑定是技术状态，视觉仍待用户审核。",
+      "source": {
+        "frame": null,
+        "text": "以既有 relay.png 锁定身份、粗麻衣装与文书进行透明化编辑；本图未使用新视频抽帧作为生成输入。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "relay",
+          "path": "source-art/visuals/runtime/characters/relay/neutral-v3.png",
+          "exists": true,
+          "sha256": "47d97fd19696edd5ed54ea4205d8b2263bae72217ba85ffd9d1495f90c1a4fae",
+          "modifiedAt": "2026-10-22T12:06:31.882806+08:00",
+          "size": [
+            1024,
+            1536
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            254
+          ],
+          "transparentRatio": 0.4378197987874349
+        }
+      ]
+    },
+    {
+      "id": "scout",
+      "name": "斥候",
+      "reviewStatus": "待review",
+      "note": "当前绑定是技术状态，视觉仍待用户审核。",
+      "source": {
+        "frame": null,
+        "text": "保留既有 scout-transparent-v02.png；已有真实 alpha，本轮未重生成人物。"
+      },
+      "variants": [
+        {
+          "mood": "neutral",
+          "assetId": "scout",
+          "path": "source-art/visuals/runtime/characters/scout-transparent-v02.png",
+          "exists": true,
+          "sha256": "50b47aee1581e69e71391ffdbba97045ca640f3345613e77e77046ef512b4663",
+          "modifiedAt": "2026-10-18T16:26:31.435819+08:00",
+          "size": [
+            1086,
+            1448
+          ],
+          "mode": "RGBA",
+          "alphaRange": [
+            0,
+            255
+          ],
+          "transparentRatio": 0.496259526062493
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "camp_gate",
+      "title": "中军帐前",
+      "reviewStatus": "待review",
+      "newVersionBound": true,
+      "sourceEvidence": "视频空间对照：SC03 的闭帘主帐、门侧灯与帐前空地。这里只是对照说明，不把生成底图称为视频精确复建。",
+      "path": "source-art/visuals/runtime/scenes/camp-v3/camp_gate.png",
+      "exists": true,
+      "sha256": "e1f328f0b0a77ba8407dfc270b7f7cabc679c4ee42b62a6620f85d9cfc23fa16",
+      "modifiedAt": "2026-10-22T12:12:05.033845+08:00",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "report_post",
+      "title": "营前传报处",
+      "reviewStatus": "待review",
+      "newVersionBound": true,
+      "sourceEvidence": "本轮生成实际输入：preview-report.png 空间样机。低矮开放传报棚在左，中低文书案可见，道路在右；没有将 SC03 主帐帧作为生成输入。",
+      "path": "source-art/visuals/runtime/scenes/camp-v3/report_post.png",
+      "exists": true,
+      "sha256": "1771e3b1c2e6dfd2ed501b7037f6b5a56f6efbfbf14d827735c27e754fa5a34c",
+      "modifiedAt": "2026-10-22T12:19:20.523818+08:00",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "jiangwei_tent_front",
+      "title": "姜维将军帐前",
+      "reviewStatus": "待review",
+      "newVersionBound": true,
+      "sourceEvidence": "本轮生成实际输入：preview-jiangwei.png 空间样机。独立较小闭帘帐，文书案与单灯在右；不是主帐复制，也不是从帐内朝外看。",
+      "path": "source-art/visuals/runtime/scenes/camp-v3/jiangwei_tent_front.png",
+      "exists": true,
+      "sha256": "b14f0aba2a85329e724ead5ea6765b1730e940413b2b97908607f837d407d653",
+      "modifiedAt": "2026-10-22T12:19:53.443419+08:00",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "uiScreenshots": [
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/awakening.png",
+      "exists": true,
+      "sha256": "c3b53ce05c9f1fcdcee2e640f6075e50eae4bbe276bcc6c71e0406974ee17c88",
+      "modifiedAt": "2026-10-22T12:54:06.004089+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/notice.png",
+      "exists": true,
+      "sha256": "ce7b8d8a69ebf1cd0098fcf990397c3ee59dba758c88d83e5a145c174b204baa",
+      "modifiedAt": "2026-10-22T12:54:07.267562+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/scout.png",
+      "exists": true,
+      "sha256": "4135875cf93f333e64a3ac7c01a57d2e774371be2d6527c3484c23f682bcd78b",
+      "modifiedAt": "2026-10-22T12:54:10.398757+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/choice.png",
+      "exists": true,
+      "sha256": "09434ef22d5828003cd3b33b47330e05c0191697593915ec84466a441c6309c5",
+      "modifiedAt": "2026-10-22T12:54:11.442401+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/weiyan.png",
+      "exists": true,
+      "sha256": "248eba5098dfd7ba6a84f6d366df4dbfbfa978a7ec5f80f147f9835b50bbf7e7",
+      "modifiedAt": "2026-10-22T12:54:14.349507+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/tablet.png",
+      "exists": true,
+      "sha256": "7f0c47299903b8bedcda6d8d864907e429253ef19c3adfbcd0ba2b7c4fc24fd0",
+      "modifiedAt": "2026-10-22T12:54:14.891505+08:00",
+      "size": [
+        768,
+        900
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "dialogue-light-latest-confirmed",
+      "reviewVersion": "latest-dialogue",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/dialogue-light/clue-in-flight.png",
+      "exists": true,
+      "sha256": "236816fc8b0216c05d366da8a89bcf2bc0495a2e1411e1b0fde3362047f3e5d5",
+      "modifiedAt": "2026-10-22T12:54:17.596176+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/menu.png",
+      "exists": true,
+      "sha256": "e1099130e12aab07f7cf4b8a7fe8a6709aec1b0a530d7586b36c14087528d1e8",
+      "modifiedAt": "2026-10-22T12:18:57.958671+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/thoughts.png",
+      "exists": true,
+      "sha256": "1caeeb21f7ed0d8d0edd7ea2f67c59d629ef56562d112fdf5080da3dd7512972",
+      "modifiedAt": "2026-10-22T12:25:50.544004+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/thoughts-developed.png",
+      "exists": true,
+      "sha256": "a1cc7c2345df5ae5a594f265ad70c360db43bd63497caa26e6e03abc2fbc409f",
+      "modifiedAt": "2026-10-22T12:25:52.135372+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/expression.png",
+      "exists": true,
+      "sha256": "00197178a5c835da05edde1ae49cd4221de83928dcc783354bd82502bdcc5f30",
+      "modifiedAt": "2026-10-22T12:25:54.532969+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/settings.png",
+      "exists": true,
+      "sha256": "c45f7276ed8b82b0cde87a06bdc8032d1784b9accf24bff758846c8b93696346",
+      "modifiedAt": "2026-10-22T12:19:26.601929+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "docs/art/review-20261022/ui/save.png",
+      "exists": true,
+      "sha256": "914c3f8e3d6d7aa1a2301151c052c11257afec3d69cc4690c5873326fb64efce",
+      "modifiedAt": "2026-10-22T12:25:16.852766+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/05-thoughts-q1.png",
+      "exists": true,
+      "sha256": "fa7f5e385acc3e75824914c4f918ad65a16966880cccb96440cbffad08560166",
+      "modifiedAt": "2026-10-22T12:53:16.614955+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/06-thoughts-q2.png",
+      "exists": true,
+      "sha256": "a7885554bd3c03a7eac1fb06bb4345366329773a698b053d5efc828b435daee5",
+      "modifiedAt": "2026-10-22T12:53:18.327239+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/07-expression.png",
+      "exists": true,
+      "sha256": "8a88302cff4e49c80ec7afd6ad68ed699b11b28060a28e8e4abd185ac906841a",
+      "modifiedAt": "2026-10-22T12:53:21.009660+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/08-player-speech.png",
+      "exists": true,
+      "sha256": "a685395b27c82d40c9205077765b09f3d6d6752cef38f349b0511ee619895840",
+      "modifiedAt": "2026-10-22T12:53:22.139306+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/09-returned-order.png",
+      "exists": true,
+      "sha256": "0f847766b360c192cab1b97664b2f86803a1de7216cb2d59403388fdc1be1a05",
+      "modifiedAt": "2026-10-22T12:53:24.411247+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/10-ending.png",
+      "exists": true,
+      "sha256": "759ee0f268e28e435ea08f29ca5c251061ae23433527cf26ffda0aa3fbaa1c48",
+      "modifiedAt": "2026-10-22T12:53:26.229867+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "full-game-fresh-confirmed",
+      "reviewVersion": "current-unchanged-page",
+      "reviewStatus": "待review",
+      "path": "outputs/full-game-20261022/12-settings-tablet.png",
+      "exists": true,
+      "sha256": "c8bf96905765666e6aa54d29a387b52d18040a4172184a64ee6b1f76c615e018",
+      "modifiedAt": "2026-10-22T12:53:26.958231+08:00",
+      "size": [
+        768,
+        900
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-historical",
+      "reviewVersion": "historical",
+      "reviewStatus": "历史对照",
+      "path": "docs/art/review-20261022/ui/dialogue.png",
+      "exists": true,
+      "sha256": "50dbfb61b99ff979a5c6253fcdc33b61b8a565ff9dee510edb0e5519bebb7fe9",
+      "modifiedAt": "2026-10-22T12:24:11.364365+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-historical",
+      "reviewVersion": "historical",
+      "reviewStatus": "历史对照",
+      "path": "docs/art/review-20261022/ui/dialogue-report.png",
+      "exists": true,
+      "sha256": "cbec4e23bb5c3163ec40691510150522ad5d9b841710b30b95970c372e182fed",
+      "modifiedAt": "2026-10-22T12:25:10.247572+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-historical",
+      "reviewVersion": "historical",
+      "reviewStatus": "历史对照",
+      "path": "docs/art/review-20261022/ui/weiyan.png",
+      "exists": true,
+      "sha256": "2fd51ae9ad87765419f9b8efa46b9a0aa528116f5dfe57d0a46886249e7b0ec4",
+      "modifiedAt": "2026-10-22T12:25:45.896217+08:00",
+      "size": [
+        1600,
+        1000
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-historical",
+      "reviewVersion": "historical",
+      "reviewStatus": "历史对照",
+      "path": "docs/art/review-20261022/ui/notice.png",
+      "exists": true,
+      "sha256": "0ac72174ef5fdd5fddd6568121f1ac4839cfe3a13fe71c08c202b462ec90b151",
+      "modifiedAt": "2026-10-22T12:24:38.194448+08:00",
+      "size": [
+        1280,
+        720
+      ],
+      "mode": "RGB"
+    },
+    {
+      "source": "ui-art-overview-historical",
+      "reviewVersion": "historical",
+      "reviewStatus": "历史对照",
+      "path": "docs/art/review-20261022/ui/six-pages-review.jpg",
+      "exists": true,
+      "sha256": "4cd53bb322c3db8e337b628f85e101fd7742f34c55d827fe61fefb45d822931d",
+      "modifiedAt": "2026-10-22T12:29:10.586069+08:00",
+      "size": [
+        1600,
+        1542
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "uiSamplesStatus": "本轮样品未采用，待整体UI审核",
+  "screenshotFreshnessGates": {
+    "include_ui": true,
+    "include_gameplay": true
+  }
+}

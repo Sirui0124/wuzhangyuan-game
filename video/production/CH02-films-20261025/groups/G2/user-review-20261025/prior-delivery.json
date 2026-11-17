@@ -1,0 +1,2542 @@
+{
+  "group": "G2",
+  "status": "12/12画面制作复核完成；1段可用、11段按接入条件可用；音频待统一处理；未获用户通过",
+  "sourceSlots": 12,
+  "sourceNodes": 33,
+  "plannedNodeCoverageComplete": true,
+  "coverageComplete": true,
+  "missingNodes": [],
+  "clips": [
+    {
+      "id": "V13",
+      "name": "仓中核凭据、获准查账",
+      "entry": "持真实本队凭据到仓",
+      "next": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "children": [
+        "V13-01",
+        "V13-02",
+        "V13-03",
+        "V13-04"
+      ],
+      "subclips": [
+        "V13-01",
+        "V13-02",
+        "V13-03",
+        "V13-04"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+      "technical": {
+        "duration": 22.91,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+        "decodedVideoFrames": 549,
+        "videoTrackSeconds": 22.875,
+        "videoEndSeconds": 22.875,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "0–5.8秒入仓出示凭据只作过渡；近景柔化，无法据此检查拇指接触细节。5.8秒后保留3.3秒纸凭据落案及退手，去除纸变木牍的后半异常。管事随后开口与案边核看；仓吏取账边界保留。V13-04新版按两个纸面区域局部柔化，持握边缘比旧大范围虚化清楚；仍有零散字迹，未见完整可辨的错误证据句子。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "开头仅作入仓和出示过渡，不声称凭据可读、他人已收妥或手指细节通过。",
+        "核验、陪同与查本批的边界依本节点管事/仓吏确认；不能从虚化正文取得任何新数值。展示账页不等于取得可带离原件或准许翻其他队账。"
+      ]
+    },
+    {
+      "id": "V14",
+      "name": "粮运画卷",
+      "entry": "获准查本批后",
+      "next": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "children": [
+        "V14-01",
+        "V14-02"
+      ],
+      "subclips": [
+        "V14-01",
+        "V14-02"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+      "technical": {
+        "duration": 14.0,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+        "decodedVideoFrames": 336,
+        "videoTrackSeconds": 14.0,
+        "videoEndSeconds": 14.0,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "已检查R5系裁去前1.25秒后的画卷展开；0–2.75秒手及卷面有明显柔化，只作展开过渡，不作手指接触细节证明。2.75秒后五环节图完全不透明，无底图伪字透出；无玩家脸、无缺额答案提前揭露。半秒完整序列覆盖0–14秒。"
+      ],
+      "audioIssues": [
+        "未逐字听审；无新增TTS。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "仅获准查本批后播放；五环节是流程认识，不提供任何缺额位置答案，不新增证据。",
+        "开头只作展开过渡；不宣称手指细节/全文核实。"
+      ]
+    },
+    {
+      "id": "V15",
+      "name": "倒查起点与三份账页",
+      "entry": "V14结束",
+      "next": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "children": [
+        "V15-01",
+        "V15-02",
+        "V15-03",
+        "V15-04"
+      ],
+      "subclips": [
+        "V15-01",
+        "V15-02",
+        "V15-03",
+        "V15-04"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+      "technical": {
+        "duration": 41.05,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+        "decodedVideoFrames": 985,
+        "videoTrackSeconds": 41.041666666666664,
+        "videoEndSeconds": 41.041667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "0–11秒为倒查起点的玩家发问与翻查过渡，纸面和部分手有明显柔化，不当作新文书正文。随后D01/D02/D03每条先展示约2秒接持或翻看，再切准确全文。D03按G6当前SHA协审可见递页、双手接持、对方松手及页角开始翻起；不把切卡说成连续完整翻页。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "D01/D02/D03仅在对应短操作及准确正文出现后登记；不得以V15-01先授予三文书。",
+        "D03接持成立，翻页仅为开始动作；不宣称无剪辑完整展开，不增加朗读。"
+      ]
+    },
+    {
+      "id": "V16A",
+      "name": "核交接选项",
+      "entry": "UI-N2选A",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16A-01"
+      ],
+      "subclips": [
+        "V16A-01"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+      "technical": {
+        "duration": 9.04,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+        "decodedVideoFrames": 217,
+        "videoTrackSeconds": 9.041666666666666,
+        "videoEndSeconds": 9.041667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "0–2.1秒管事闭口听问并低头，之后为此前已取得的D01/D02并列回看。没有NPC代我发言，没有新证据或新增答案；全文不透出原伪字。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "仅在V15取得D01/D02后播放；并列层只回看，不授予新证据、不自动替玩家提交推理。"
+      ]
+    },
+    {
+      "id": "V16B",
+      "name": "去问损耗与认罪",
+      "entry": "UI-N2选B",
+      "next": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16B-01",
+        "V16B-02"
+      ],
+      "subclips": [
+        "V16B-01",
+        "V16B-02"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+      "technical": {
+        "duration": 12.12,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+        "decodedVideoFrames": 289,
+        "videoTrackSeconds": 12.041666666666666,
+        "videoEndSeconds": 12.083333,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "0–4.8秒同场灰袍苟安闭口倾听与低头反应；4.8秒后才切为苟安说话。半秒全序列覆盖全段，实际浏览器静音1x播放0–12.117秒，截图检查首尾。未见玩家露脸、伪证据或肢体异常。"
+      ],
+      "audioIssues": [
+        "玩家原句复用既有固定声音WAV，未新增TTS；NPC原声待逐字听审及统一处理。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "userApproved": false,
+      "pictureUsability": "usable",
+      "integrationConditions": [
+        "沿用UI-N2选B入口与UI-EARLY后续；不能因认罪句自动授予未取得文书或结论。"
+      ]
+    },
+    {
+      "id": "V16C",
+      "name": "先行归责与纠正",
+      "entry": "UI-N2选C",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V16C-01",
+        "V16C-02"
+      ],
+      "subclips": [
+        "V16C-01",
+        "V16C-02"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+      "technical": {
+        "duration": 18.17,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+        "decodedVideoFrames": 436,
+        "videoTrackSeconds": 18.166666666666668,
+        "videoEndSeconds": 18.166667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "玩家归责句改用先前D01/D02账页核看0–2.1秒，再以准确D01/D02对照承载；避开原NPC代我说话与新认罪书样字。回应首2.1秒仓吏取材料，之后回看同两条已知文书，未新增认罪内容。NPC原片保留10.125秒原生时长，尾部不闪回伪字。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "仅回看此前D01/D02；指责是玩家当轮选择，不能将原片伪认罪字或对照卡当作新认罪书。",
+        "回应后仍按原V17后续；不增一次考试或自动结论。"
+      ]
+    },
+    {
+      "id": "V17",
+      "name": "共同交付核对",
+      "entry": "V16A/C或B后明确继续返回仓中",
+      "next": [
+        "V18"
+      ],
+      "endEvent": "保留B+1，不补成A+2",
+      "children": [
+        "V17-01"
+      ],
+      "subclips": [
+        "V17-01"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+      "technical": {
+        "duration": 12.27,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+        "decodedVideoFrames": 294,
+        "videoTrackSeconds": 12.25,
+        "videoEndSeconds": 12.25,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "首2.25秒管事开口，随后拿起册页并翻看；新版保留纸面局部柔化及清楚的持握边缘，11.35秒册页离画后停止柔化，末帧没有停留的虚化块。只展示既有材料核看与原节点口述，不引入新正文。完整原生12.25秒保留；当前整段12.266秒已复核。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "只复核已取得的本队签收与交付，不授予新文书；镜头里的册页核看不等于仓内原件带离。",
+        "纸面正文不可读，不能以它声称完成逐字视觉核验；口述确认以原节点为准，正式使用仍须音频处理。"
+      ]
+    },
+    {
+      "id": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "entry": "V17结束",
+      "next": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "children": [
+        "V18-01",
+        "V18-02",
+        "V18-03",
+        "V18-04",
+        "V18-05",
+        "V18-06"
+      ],
+      "subclips": [
+        "V18-01",
+        "V18-02",
+        "V18-03",
+        "V18-04",
+        "V18-05",
+        "V18-06"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+      "technical": {
+        "duration": 53.63,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+        "decodedVideoFrames": 1287,
+        "videoTrackSeconds": 53.625,
+        "videoEndSeconds": 53.625,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "入仓、地方实收、应征/实收按D04→D05→D06次序。D04/D05先短操作再准确正文；D05当前SHA经G6协审：递接竹卷成立，约1.6秒跳切案头翻查，2秒切正文，可作有剪辑核对插镜。玩家追问改用刚取得D05回看，不提前出D06；D06先连续2.8秒指向账栏，再显示准确正文，留7.2秒阅读。未见新数值、份额或定罪词。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "D04和D05各在本子片2秒正文出现后登记；D06为本子片2.8秒后，不能在追问D05时提前授予。",
+        "D05约1.6秒有剪辑，不宣称连续完整展开。回看D05不新增证据；文书不默认已带离仓案。"
+      ]
+    },
+    {
+      "id": "V19A",
+      "name": "缺额判断A",
+      "entry": "UI-N3选A",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19A-01",
+        "V19A-02"
+      ],
+      "subclips": [
+        "V19A-01",
+        "V19A-02"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A-92eaf5912b.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A-92eaf5912b.mp4",
+      "technical": {
+        "duration": 19.54,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+        "decodedVideoFrames": 469,
+        "videoTrackSeconds": 19.541666666666668,
+        "videoEndSeconds": 19.541667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "玩家选择改用既有账页动作及D06回看，去除两个NPC代玩家发言。9.4秒后为地方里正原回应；原片完整10.125秒保留。纸面有零散仿字，未在采样中见完整可辨的新增证据句子；该回应只作口述反馈，不承担新书证。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "A/B/C互斥；本分支不带入其他分支结论。已知D06回看不授予新线索；里正说法仅为此节点口述，不变成书证。"
+      ]
+    },
+    {
+      "id": "V19B",
+      "name": "缺额判断B",
+      "entry": "UI-N3选B",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19B-01"
+      ],
+      "subclips": [
+        "V19B-01"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+      "technical": {
+        "duration": 10.04,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+        "decodedVideoFrames": 241,
+        "videoTrackSeconds": 10.041666666666666,
+        "videoEndSeconds": 10.041667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "0–1.2秒归拢核看，随后回看已取得D06；已去除玩家句期间NPC口型。复用其他分支仅限账页动作，没有带入其他选择结果或声音。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "只回看已取得D04/D05/D06；不带入其他分支声音、台词或判定结果。"
+      ]
+    },
+    {
+      "id": "V19C",
+      "name": "缺额判断C",
+      "entry": "UI-N3选C",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "children": [
+        "V19C-01",
+        "V19C-02"
+      ],
+      "subclips": [
+        "V19C-01",
+        "V19C-02"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C-85920cb12a.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C-85920cb12a.mp4",
+      "technical": {
+        "duration": 14.7,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+        "decodedVideoFrames": 352,
+        "videoTrackSeconds": 14.666666666666666,
+        "videoEndSeconds": 14.666667,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "前5.3秒查看并归拢账页，没有可辨玩家脸或NPC代我发言。随后里正核看与开口，保留原生9.417秒句尾。文书保留零散仿字，不把此处当作新书证或原件带离；判断依据仍来自此前D04/D05/D06。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "A/B/C互斥；纸面零散字迹不承担新正文，原件归拢不等于销毁、没收或带离。"
+      ]
+    },
+    {
+      "id": "V20",
+      "name": "调度决定与受杖前签认",
+      "entry": "V19A/B/C结束",
+      "next": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "children": [
+        "V20-01",
+        "V20-02",
+        "V20-03",
+        "V20-04",
+        "V20-05",
+        "V20-06",
+        "V20-07",
+        "V20-08"
+      ],
+      "subclips": [
+        "V20-01",
+        "V20-02",
+        "V20-03",
+        "V20-04",
+        "V20-05",
+        "V20-06",
+        "V20-07",
+        "V20-08"
+      ],
+      "status": "picture_reviewed_audio_pending",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+      "decode": "passed",
+      "size": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+      "technical": {
+        "duration": 67.84,
+        "size": [
+          1280,
+          720
+        ],
+        "fps24": true,
+        "audio48000": true,
+        "audioTrack": true,
+        "decodeExitCode": 0,
+        "decodeWarnings": "",
+        "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+        "decodedVideoFrames": 1628,
+        "videoTrackSeconds": 67.83333333333333,
+        "videoEndSeconds": 67.833333,
+        "videoTrackComplete": true
+      },
+      "visualReview": [
+        "全序列核查管事/仓吏/里正口述、报告查看及签认时序，未见玩家脸或新增签名落笔。LY06-015报告正文和LY06-018送达记录各在操作2秒后显示。V20-05前3.95秒回看已知015正文，后接NPC口述；G6仅审旧7秒同画面前缀，本版另保留原生7.292秒尾部。V20-07的已知018回看不证明受杖前这一新口述；V20-08先取旧账再口述，3.3秒起回看旧D04，裁去7.3秒后生成假菜单，准确卡承载尾部，未新增游戏按钮。"
+      ],
+      "audioIssues": [
+        "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+        "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+      ],
+      "audioReview": "未逐字听审；未新增TTS",
+      "assemblySha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "userApproved": false,
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "LY06-015与LY06-018仅在各自2秒准确正文显示后取得；V20-05回看015不重复授予。",
+        "V20-07回看018只含同日送达/签认；签字在受杖前的新信息仅来自LY06-019口述，不伪造签名动作或杖责回放。",
+        "V20-08回看D04不是新当天仓账证据；当天仍记缺额的新信息仅来自LY06-021口述。结束只回UI-RETURN-ACCOUNT，不把生成假菜单接为按钮。"
+      ]
+    }
+  ],
+  "subclips": [
+    {
+      "id": "V13-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-01-raw.mp4",
+      "sourceSha256": "e2f62e1a8cb4281227a9172aee2229d154a0e9830581652f44991346e939ec7b",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          5.8
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 5.8,
+      "sha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4"
+    },
+    {
+      "id": "V13-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-02-raw.mp4",
+      "sourceSha256": "cbd60b40353405b108b0138c712dfebf3ec46837015f2aee9eea28255aa1323d",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          3.3
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-02-raw.mp4",
+            "sha256": "cbd60b40353405b108b0138c712dfebf3ec46837015f2aee9eea28255aa1323d",
+            "usedRange": [
+              0,
+              3.3
+            ],
+            "context": "保留原纸凭据落案及退手，去3.5秒起变木牍异常；原玩家音轨2.597秒加0.4秒入声及0.3秒句尾均保留，不定格、不循环"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-001",
+          "speaker": "我",
+          "text": "我来领取本队这批粮的交接材料。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+        "duration": 2.5969583333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "32e16de691e80f723bda186620d53a0d171f85554b0621ed83d233371f493a01"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 3.3,
+      "sha256": "917c160ddd2ca6829f43db37ebab733b4ed0cdc0ca1b27351587574fd4ead70d",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-02.mp4"
+    },
+    {
+      "id": "V13-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V13-03.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-03-raw.mp4",
+      "sourceSha256": "8d81c546cbeffb98198eb97284e96db0f3f68762b09d8144db8d84fa2cd7a758",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            1.8,
+            420,
+            720,
+            180
+          ],
+          [
+            1.8,
+            20,
+            100,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          6.583333333333333
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-002",
+          "speaker": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 6.57,
+      "sha256": "e7691d2f292f74e1b3844a31c3d2cf7e1d9bb4c86b60ca342a526b986a2f5410",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V13-03.mp4"
+    },
+    {
+      "id": "V13-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V13-04.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-04-raw.mp4",
+      "sourceSha256": "bff5a7bbfdbfed07b3bca9384bd31b6a16760e26855dfa25f609e2a5a40a0df7",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            120,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "e0ffae72e34055ea96f82618564a18adffadf1761c0c4f3e572448ecc83221f1",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          7.2
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-003",
+          "speaker": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 7.2,
+      "sha256": "1775602146bd0170da7329f32756d4bf20ab6b8afa4653b2004a038b75bba143",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V13-04.mp4"
+    },
+    {
+      "id": "V14-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-01-raw.mp4",
+      "sourceSha256": "ef930d617dde48e5c3760a56d0cac2d8f33db71e0dc59c19e7264900b24e78ed",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            1.25,
+            4,
+            50,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          1.25,
+          10.0
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 8.75,
+      "sha256": "ff12e5f2bf98aa1013253943fd4cee3c6a61ca8a2c736b03b1ee24368765cad3",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-01.mp4"
+    },
+    {
+      "id": "V14-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V14-02-raw.mp4",
+      "sourceSha256": "b690dffb6ae69d28f3f91410a1bb70322ececd45052c92921ec1f8863f883feb",
+      "pictureChanges": {
+        "documentDefocusZones": [],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          4.8,
+          10.0
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 5.21,
+      "sha256": "04f3db7da886ab5c1e03d38757e58e2edc44e843c062c4922d364294df79b78d",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-02.mp4"
+    },
+    {
+      "id": "V15-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-01-raw.mp4",
+      "sourceSha256": "5918e4b5d5947b34311bfdba6e3351093f8ed7fae322c3b7d72fa315f6546291",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            100,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          11
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-F01",
+          "speaker": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-F01.wav",
+        "duration": 5.983291666666666,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "7a21eed2fedd5266c0b52f1764bf2d02c7d00498c268d3da0d30e7e162370484"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 11.0,
+      "sha256": "a10137c2a6040f42e5354407b4e4c7c8c756fe8ac7c88477dab041aa81777365",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-01.mp4"
+    },
+    {
+      "id": "V15-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-02-raw.mp4",
+      "sourceSha256": "9bd88c3885737dcb269b7ae02c99361a85063d5371f47d3387998e9b53873f2a",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D01",
+          "speaker": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.mp4"
+    },
+    {
+      "id": "V15-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-03-raw.mp4",
+      "sourceSha256": "caa2aa2abc8784e8d58d8c5718abcac16a5d57a92d4658115bf2912ad55b6fe5",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            120,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D02",
+          "speaker": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.mp4"
+    },
+    {
+      "id": "V15-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-04-raw.mp4",
+      "sourceSha256": "b707211b20b0b51d062b8ac9d9ef183b14e3f66248c3801173d09f2f0cfde5fc",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            50,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4"
+    },
+    {
+      "id": "V16A-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V16A-01-raw.mp4",
+      "sourceSha256": "18ee18b7b21b2d589eada27d294eda23568af86c52356e1e8da7657ababd9c0d",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            1.8,
+            450,
+            720,
+            110
+          ],
+          [
+            1.8,
+            20,
+            100,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          9
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "speaker": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.0,
+      "sha256": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.mp4"
+    },
+    {
+      "id": "V16B-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V16B-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\reuse-candidates\\G1-L01.mp4",
+      "sourceSha256": "9a0c513b3124245265c6ec67785d4cbbc4f634959523579ad6d134181bae38a3",
+      "pictureChanges": {
+        "documentDefocusZones": [],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          4.8
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "group": "G1",
+            "id": "L01",
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\L01-定制①听者反应底片.mp4",
+            "reviewCopy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\reuse-candidates\\G1-L01.mp4",
+            "sha256": "9a0c513b3124245265c6ec67785d4cbbc4f634959523579ad6d134181bae38a3",
+            "mtimeUtc": "2026-10-25T03:52:04.759059+00:00",
+            "usedRange": [
+              0,
+              4.8
+            ],
+            "context": "同一灰衣苟安、伤帐木榻、半趴闭口听者，无新状态"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY07-W01",
+          "speaker": "我（选项）",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-W01.wav",
+        "duration": 3.793875,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "961d2b7c33605cfc03b83efbf33bfe8bb964c63d9e9c386edc3c687eee6f2dcc"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 4.8,
+      "sha256": "6d20ea2cf6a2942261eab77220cda15d2a631929e5531d761a35e4c2605540c5",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V16B-01.mp4"
+    },
+    {
+      "id": "V16B-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16B-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V16B-02-raw.mp4",
+      "sourceSha256": "c35482c773ee04bf281336e010f0c47ed2410e9b54b0e0ad02a27894c278fe79",
+      "pictureChanges": {
+        "documentDefocusZones": [],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          7.291666666666667
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY07-W02",
+          "speaker": "苟安",
+          "text": "好，这笔罪，我认。你报上去吧，别再查了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 7.29,
+      "sha256": "5110d6de401d76b286e9b63a20cb39360fe6e826dbbbfd6a53a085b90448583c",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16B-02.mp4"
+    },
+    {
+      "id": "V16C-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-03-raw.mp4",
+      "sourceSha256": "caa2aa2abc8784e8d58d8c5718abcac16a5d57a92d4658115bf2912ad55b6fe5",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            120,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          8
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-03-raw.mp4",
+            "sha256": "caa2aa2abc8784e8d58d8c5718abcac16a5d57a92d4658115bf2912ad55b6fe5",
+            "usedRange": [
+              0,
+              8
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D01",
+              "CH2-LY04-D02"
+            ],
+            "context": "已经取得的签收与交付重新核看；不展示新认罪书"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "speaker": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+        "duration": 4.589708333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "d95543e4c3d5ba05b9bb7a5331c2d3781418ba86b6499ce40cd9a60c7cc87891"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 8.0,
+      "sha256": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.mp4"
+    },
+    {
+      "id": "V16C-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16C-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V16C-02-raw.mp4",
+      "sourceSha256": "8b769c6ea4673de585143dda90aa15542de03b3be1ff8961ac32b62f698dac71",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            2.1,
+            400,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          10.125
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "speaker": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.13,
+      "sha256": "865fdd58ece52c40aad0233776bb3892f1b2a33cffaf457bf2ad071d2940bec8",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16C-02.mp4"
+    },
+    {
+      "id": "V17-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V17-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V17-01-raw.mp4",
+      "sourceSha256": "7f0596593965fee3b5799e6ee24c639641d60f5b5029b9299e1608b5bb2f4257",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            2.3,
+            450,
+            720,
+            110
+          ],
+          [
+            2.3,
+            20,
+            30,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "59595bd14b6720d559768d1a0aee1e0969814949e5255f49403b4070fbfc4359",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          12.25
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 12.25,
+      "sha256": "8271c53363aca26836e314c2e097a7d9c7e6f547a54c51c6471e618483170143",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V17-01.mp4"
+    },
+    {
+      "id": "V18-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-01-raw.mp4",
+      "sourceSha256": "36411f48c5a969f6584b4da78f5346555e50c26d8fca955fcf35c980985f1065",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            80,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          9
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.0,
+      "sha256": "89042d1f7aa9a1130272587fa51e974e6358416b1e403c59d1bfa0b8dfc03fa2",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-01.mp4"
+    },
+    {
+      "id": "V18-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-02-raw.mp4",
+      "sourceSha256": "e4cd3416e8c2703a78b135672cff6f19e3234791c6eabff15b11790ccac811ff",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            30,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D04",
+          "speaker": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.mp4"
+    },
+    {
+      "id": "V18-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-03.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-03-raw.mp4",
+      "sourceSha256": "c29fb33875bb74c4852555b2264f657d4b3e0b650d19f60f949b430b3ac43920",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            2.5,
+            350,
+            720,
+            180
+          ],
+          [
+            2.5,
+            5.4,
+            600,
+            720,
+            110
+          ],
+          [
+            5.4,
+            20,
+            100,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          8
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-W01",
+          "speaker": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-W01.wav",
+        "duration": 4.598416666666667,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "9ccb14dd2a7e363bab59bfd28335c8381fc03611bfd4b26aded969ad07673f31"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 8.0,
+      "sha256": "a49a297acd79a9ca0e1f22eff13ca886c196248314304ac2611cdc33fee62bef",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-03.mp4"
+    },
+    {
+      "id": "V18-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+      "sourceSha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            80,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D05",
+          "speaker": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4"
+    },
+    {
+      "id": "V18-05",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+      "sourceSha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            80,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          3,
+          9.58
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+            "sha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955",
+            "usedRange": [
+              3,
+              9.58
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D05"
+            ],
+            "context": "只回看刚取得的地方实收账，不提前展示D06应征及欠交"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-C01",
+          "speaker": "我",
+          "text": "收到的粮对上了。原定要交多少？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-C01.wav",
+        "duration": 3.397666666666667,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "83b48a44fa42dfae87f227a62604ff626aa94398e5415149c6249168e0ed1fae"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 6.58,
+      "sha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4"
+    },
+    {
+      "id": "V18-06",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-06-raw.mp4",
+      "sourceSha256": "15ea53d49d57b1bb1e0dfdde0bbb71010f8aee74ccde73289433c52a09ec7e2a",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            7,
+            20,
+            0,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          7,
+          10
+        ],
+        "tailHold": 7,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.mp4"
+    },
+    {
+      "id": "V19A-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01-replacement-source.mp4",
+      "sourceSha256": "b84665f216b36c5f486cd86eb328bb034bc1d9d1a174c9e869c3496d3a4a0c41",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          9.4
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-01-raw.mp4",
+            "sha256": "6bf4d8a8777c0c25c269f31afc440faa405e4694349a12c68c925c23c0dfbe37",
+            "usedRange": [
+              0,
+              3.4
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D06"
+            ],
+            "context": "仅复用既有账页核看动作，无NPC讲话、无其他分支选择结果"
+          },
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19B-01-raw.mp4",
+            "sha256": "00a9569ca62ea2712205a12b978811fbcca8a32b72de177ff4f02498c9e87652",
+            "usedRange": [
+              0,
+              6
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D06"
+            ],
+            "context": "仅复用既有账页核看动作，无NPC讲话、无其他分支选择结果"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "speaker": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4A.wav",
+        "duration": 5.810833333333333,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "72bb4e44e2af46ea5dd6cbbe3d595e81b82731d910d4f8881253ae6bcd6cc8ab"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.42,
+      "sha256": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.mp4"
+    },
+    {
+      "id": "V19A-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19A-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19A-02-raw.mp4",
+      "sourceSha256": "181c2945e873377cfafc313864053e4031f1c079ac1772c63df01402bc93d173",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            250,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10.125
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "speaker": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.11,
+      "sha256": "5369e59de12185c5bdf3ead05c05ab3c224fd7d99bc9a794a5a39d3c3a2ec372",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19A-02.mp4"
+    },
+    {
+      "id": "V19B-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01-replacement-source.mp4",
+      "sourceSha256": "7f764df9b15f81ad44a89dfc6490ea03a3fc39599f49b9879c4343eaf4191dc0",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": [
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19B-01-raw.mp4",
+            "sha256": "00a9569ca62ea2712205a12b978811fbcca8a32b72de177ff4f02498c9e87652",
+            "usedRange": [
+              0,
+              6
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D04",
+              "CH2-LY04-D05",
+              "CH2-LY04-D06"
+            ],
+            "context": "核看并归拢已取得账页；不携带其他分支声音或新事实"
+          },
+          {
+            "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-01-raw.mp4",
+            "sha256": "8da4e1d14329af7d6eefccab9687730768096977d5a19e324fe097efeb9cbc67",
+            "usedRange": [
+              0,
+              4
+            ],
+            "knownSourceNodes": [
+              "CH2-LY04-D04",
+              "CH2-LY04-D05",
+              "CH2-LY04-D06"
+            ],
+            "context": "核看并归拢已取得账页；不携带其他分支声音或新事实"
+          }
+        ]
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "speaker": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": {
+        "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q4B.wav",
+        "duration": 6.585333333333334,
+        "offset": 1.0,
+        "provider": "existing player TTS",
+        "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+        "listeningReview": "未听审",
+        "centralSource": "reused_G2_same_voice",
+        "sha256": "016f4ce844311ea973695dd71f60897250d0b93d1bc19b967a015d6ff1314a19"
+      },
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4"
+    },
+    {
+      "id": "V19C-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V19C-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-01-raw.mp4",
+      "sourceSha256": "8da4e1d14329af7d6eefccab9687730768096977d5a19e324fe097efeb9cbc67",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            100,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          5.25
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "speaker": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 5.25,
+      "sha256": "4ef05861bda8d106fdb68357f2711091fcb44a388520cbf7d2b2e7a69e1338fc",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V19C-01.mp4"
+    },
+    {
+      "id": "V19C-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19C-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V19C-02-raw.mp4",
+      "sourceSha256": "4a886a277d084dd77fd6e123b0d460fab92bd4e534d7cc673f272a6aa9cdf3fb",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            300,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          9.416666666666666
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "speaker": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.41,
+      "sha256": "581609f74902306feab921c89fbce976b41e2583c8665ed5bc9888900d5149c6",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19C-02.mp4"
+    },
+    {
+      "id": "V20-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-01.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-01-raw.mp4",
+      "sourceSha256": "5e6a5671fb6a8030a5ff9dcb4950488c81096da27797b53af582c2f8d723e74d",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            4.5,
+            50,
+            720,
+            180
+          ],
+          [
+            4.5,
+            20,
+            500,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          9.416666666666666
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.41,
+      "sha256": "a43dc645684f19cf377348c2ea36bb370b93b7bbb50abaa90ab3f8db77930893",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-01.mp4"
+    },
+    {
+      "id": "V20-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-02.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-02-raw.mp4",
+      "sourceSha256": "892a0cf573f5727b4e944dd3a882afdefbc01d19219951e3bcdb01b42cf6859e",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            1.4,
+            480,
+            720,
+            110
+          ],
+          [
+            1.4,
+            20,
+            80,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          9.416666666666666
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-014",
+          "speaker": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.41,
+      "sha256": "12d2152667943381b37a53f99ca769efa71749c6e725ed251f8e9b9a9de30e7f",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-02.mp4"
+    },
+    {
+      "id": "V20-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-03-raw.mp4",
+      "sourceSha256": "cbf6fb7246b5419d455c7d0688a6f1f60eb2910b4432faa3919470330c39a90b",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-015",
+          "speaker": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.mp4"
+    },
+    {
+      "id": "V20-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-04.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-04-raw.mp4",
+      "sourceSha256": "e2df91d823d859fe7cf8530a3356c33c6d7649cd2db15d14645b317dbb12d9b8",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            3.2,
+            0,
+            720,
+            110
+          ],
+          [
+            3.2,
+            20,
+            550,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          4.7
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-016",
+          "speaker": "我",
+          "text": "这份确认是谁写的？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 4.7,
+      "sha256": "4a19d79563944aa7237def41b43b7168b4de6390751c5f4c74bcc4b73d6cde08",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-04.mp4"
+    },
+    {
+      "id": "V20-05",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-05.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-05-raw.mp4",
+      "sourceSha256": "e0f823c56b6c9b40544a4e934098f7acf23914f2fdb18f3a993892e95a4e0fac",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            3.95,
+            20,
+            550,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          7.291666666666667
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-017",
+          "speaker": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 7.29,
+      "sha256": "26285272e18d17d731bc6c952807fb165e8d847c5481a67ace416d16fcfca5a7",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-05.mp4"
+    },
+    {
+      "id": "V20-06",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-06-raw.mp4",
+      "sourceSha256": "44aa9da832f87d1fafb9534e7f72ec73c6ed8dbe45152760712e01481eee87c6",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            20,
+            0,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": false,
+        "trim": [
+          0,
+          10
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-018",
+          "speaker": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 10.0,
+      "sha256": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.mp4"
+    },
+    {
+      "id": "V20-07",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-07-raw.mp4",
+      "sourceSha256": "00db93ebb3652f31ff0225ebc6f0a17713e7777f09beeab6eb331c5a67063889",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            4.25,
+            200,
+            720,
+            110
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          8
+        ],
+        "tailHold": 0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-019",
+          "speaker": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 8.0,
+      "sha256": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.mp4"
+    },
+    {
+      "id": "V20-08",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-08.mp4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+      "sourceSha256": "dd32106380f49b16d40cd5415de1c9e2b553eb127da9611aa3a3c78d7440169a",
+      "pictureChanges": {
+        "documentDefocusZones": [
+          [
+            0,
+            3.3,
+            300,
+            720,
+            180
+          ]
+        ],
+        "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+        "manualMasksSha256": "a1d7aac633240f31bf77b9d18952a75bc82425de33bdd42f4a3939896e9fe67d",
+        "fullFrameExistingEvidence": true,
+        "trim": [
+          0,
+          7.0
+        ],
+        "tailHold": 2.0,
+        "sourceReuse": []
+      },
+      "sourceLines": [
+        {
+          "node": "CH2-LY06-021",
+          "speaker": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "voiceReused": null,
+      "audioReview": "未逐字听审；旧原片ASR仅历史定位，不代表当前复用轨",
+      "duration": 9.0,
+      "sha256": "6b6e4eb982feba7d64e77e336840782f3aa99856504a4602cf52deddb957427f",
+      "resolution": [
+        1280,
+        720
+      ],
+      "fps": 24,
+      "audioHz": 48000,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-08.mp4"
+    }
+  ],
+  "validation": {
+    "decode": "per completed subclip and assembled file",
+    "visual": "当前SHA绑定的画面可用性/已修问题/接入条件见review/picture-usability.json；半秒有序帧直接视觉复核与静音实际播放分别记录",
+    "audio": "未完成主观逐字听审，TTS/ASR不代表用户通过",
+    "videoTrack": "12段视频轨完整，实际帧长与容器差小于一帧；见review/current-picture-integrity.json",
+    "source": "35子片源文本逐项一致，33唯一节点，17正文/回看层顺序及原文已核"
+  },
+  "unresolved": [
+    "音频未逐字听审、BGM未听审，统一音频阶段处理",
+    "11段须遵守已记录入口、文书取得与回看条件；不自动改游戏状态或带离原件",
+    "未获用户审核通过；未导入游戏"
+  ],
+  "visualReview": "以当前SHA对应的picture-usability.json为准；历史制作自查不代替当前复核",
+  "audioIssues": "原片部分存在额外人声/错词/音色与音乐待听审；按用户指示保留画面，不因纯音频付费重拍",
+  "reviewApproval": "待用户review",
+  "userApproved": false
+}

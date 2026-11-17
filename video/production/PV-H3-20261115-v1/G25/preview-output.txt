@@ -1,0 +1,34 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "text": "生成一条6秒历史战争真人电影镜头，横向16:9，MiniMax-H3，768P。真实演员、实物衣甲与自然受力，50mm正常透视，适当景深。自然中性色温，无整体黄偏，火光只局部照暖；保持参考里的时段、气候和角色身份。\r\n\r\n参考图1使用上一条实际生成末帧作为当前状态；其后图片按下面动作说明分别控制身份、材质或结束动作。所有图片通过reference_image传入，文字分工不是严格首尾帧锁定。\r\n\r\n参考图1是上一镜我蹲到伤兵面前的实际末帧，锁定距离和双方位置；参考图2是互握前臂的动作终点与伤兵身份；参考图3只锁我的青白衣袖、银灰轻甲护腕，不复制马或第三人称。严格第一视角，0至2秒我的右手从画面右下向伤兵伸出，他先看手、再伸左手；2至3秒我的右手握住他左前臂，他的左手回握我的右前臂；3至5秒双方开始真实用力，袖口绷紧，伤兵肩背从车轮离开、身子上移准备站起。最后1秒延续向上受力，不冻结或淡黑，留给剪辑切断。恰好两只参与握持的手、两条前臂，五指正确、腕肘连贯、皮肤接触和重心可信，不能穿插、多指或互换左右。伤兵不说话、嘴自然闭合，无实际声音，不突然健步跑走。\r\n\r\n无音频，禁止生成对白、旁白、音乐、音效或其他声音；提示中台词仅规定可见说话口型，不将角色名和导演说明做成画面文字。无字幕、无可读说明卡、无工作文档、无水印、无黑边、无分屏。不开头淡入、不结尾淡出、不冻结，保持真实连续动作。禁止油画、游戏CG、概念插画、塑料皮肤、过度HDR、人物变脸、身体融合和兵器漂移。",
+      "type": "text"
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/7e49b1721ede705644a3c7727fb22ce8a0bbe3e3d5626837e26e6be2b4790d0f.jpg"
+      }
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/76f024363453e0ba8e0691622b4d200b5dc458b617189a0d21668be0286043a5.jpg"
+      }
+    },
+    {
+      "type": "image_url",
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/d94b477bf4a5ee2bd6f20c4fccd33db6df067a2707044885773abba579e3abf7.jpg"
+      }
+    }
+  ],
+  "resolution": "768P",
+  "duration": 6,
+  "ratio": "16:9"
+}

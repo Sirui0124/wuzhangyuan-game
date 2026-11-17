@@ -1,0 +1,44 @@
+{
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\sources\\V36-01-no-mask-no-list.mp4",
+  "sha256": "07319f6ce9b6b9bcbb5f9c293dc6f36c72ac40bf3fc6895fca3bdcae04b5d399",
+  "parts": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\generated\\V36-01-16x9.mp4",
+      "range": [
+        0,
+        3.15
+      ],
+      "crop": [
+        300,
+        0,
+        600,
+        338
+      ],
+      "speed": 0.85
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\sources\\V36-01-contact-unmasked.mp4",
+      "range": [
+        0.2,
+        3.4
+      ]
+    }
+  ],
+  "audioSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-01-final-07e9ecd15f.mp4",
+  "requiredAudioEnd": 5.775041666666667,
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 6.91,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\sources\\V36-01-no-mask-no-list.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:06.91, start: 0.000000, bitrate: 4058 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 3983 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 109 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "newPaidRequest": false,
+  "textOverlays": [],
+  "masks": [],
+  "blur": false,
+  "freeze": false,
+  "loop": false
+}

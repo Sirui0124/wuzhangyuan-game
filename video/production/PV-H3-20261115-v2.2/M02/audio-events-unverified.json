@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.772
+        },
+        {
+          "label": "Sigh",
+          "p": 0.3625
+        },
+        {
+          "label": "Gasp",
+          "p": 0.2876
+        },
+        {
+          "label": "Snort",
+          "p": 0.0918
+        },
+        {
+          "label": "Television",
+          "p": 0.083
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0546
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0212
+        },
+        {
+          "label": "Violin, fiddle",
+          "p": 0.0181
+        },
+        {
+          "label": "Speech",
+          "p": 0.0168
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0116
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0071
+        },
+        {
+          "label": "Sad music",
+          "p": 0.0056
+        }
+      ],
+      "music": 0.772
+    }
+  ]
+}

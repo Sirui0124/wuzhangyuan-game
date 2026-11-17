@@ -1,0 +1,2824 @@
+{
+  "group": "G4",
+  "status": "G4全部14逻辑槽位画面候选已拼接交付；音频待统一",
+  "sourceCoverage": {
+    "expectedSlots": 14,
+    "assembledSlots": 14,
+    "expectedSourceNodes": 36,
+    "deliveredSourceNodes": 36,
+    "requestCount": 37,
+    "originalTaskSucceeded": 36,
+    "originalTaskFailed": 1,
+    "repairTaskSucceeded": 4
+  },
+  "clips": [
+    {
+      "id": "V26",
+      "name": "返营交差与军情说明",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V26-返营交差与军情说明.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V26-返营交差与军情说明.mp4",
+      "clipIds": [
+        "V26-01",
+        "V26-02",
+        "V26-03",
+        "V26-04",
+        "V26-05",
+        "V26-06",
+        "V26-07",
+        "V26-08",
+        "V26-09"
+      ],
+      "entry": "V25结束",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "technical": {
+        "duration": 56.98,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "46fc70bf9dcbf22995941773fd3e418b79608bc136d868e9bc9201b602c4eedc",
+        "bytes": 24113971,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过",
+        "本段无指定朗读，保留的生成环境音未听审，若有额外声音留统一配音阶段处理",
+        "来源V29-01疑似额外人声，需统一配音，当前只交画面候选",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V27",
+      "name": "带回消息后的分歧",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V27-带回消息后的分歧.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V27-带回消息后的分歧.mp4",
+      "clipIds": [
+        "V27-01",
+        "V27-02",
+        "V27-03",
+        "V27-04",
+        "V27-05",
+        "V27-06",
+        "V27-07"
+      ],
+      "entry": "V26结束",
+      "next": [
+        "UI-N4"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 47.87,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "3a1736deb9baf74c8933ffd990087dfc0e82f1dbf1864baf075f13bb33607174",
+        "bytes": 19885112,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [
+          "部分原玩家画面有口部活动，须结合最终配音复核，当前不声称口型通过"
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V28A",
+      "name": "访村后态度A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28A-访村后态度A.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28A-访村后态度A.mp4",
+      "clipIds": [
+        "V28A-01",
+        "V28A-02"
+      ],
+      "entry": "UI-N4选A",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 15.72,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "1e6d15a6222f63a4b1d28da9f6144b59bb3aa18a0241f8adb496b82a10d418a1",
+        "bytes": 6819968,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V28B",
+      "name": "访村后态度B",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28B-访村后态度B.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28B-访村后态度B.mp4",
+      "clipIds": [
+        "V28B-01",
+        "V28B-02"
+      ],
+      "entry": "UI-N4选B",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 15.83,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "8e35f72865ed7e023f36d2ca576783fac37fae0f6e62552ffc2288e9bf3e54bc",
+        "bytes": 5437447,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [
+          "背景人员有走动，未作为新剧情或证据使用"
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V28C",
+      "name": "访村后态度C",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28C-访村后态度C.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28C-访村后态度C.mp4",
+      "clipIds": [
+        "V28C-01",
+        "V28C-02"
+      ],
+      "entry": "UI-N4选C",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 17.46,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "befd95fa8e113ef594555686fcb60cbcda1bac2ad5d8890dcc23bdf7715d13af",
+        "bytes": 6058901,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [
+          "玩家段有少量口部活动，最终音轨关系待核"
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V29-问明补报途径与正式交案风险.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V29-问明补报途径与正式交案风险.mp4",
+      "clipIds": [
+        "V29-01",
+        "V29-02",
+        "V29-03",
+        "V29-04",
+        "V29-05",
+        "V29-06",
+        "V29-07"
+      ],
+      "entry": "UI-ASK-CHANNEL选择前往",
+      "next": [
+        "V30"
+      ],
+      "endEvent": "003至006实际听全才记渠道与风险已告知",
+      "technical": {
+        "duration": 63.54,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ce1f7e6c239a3a72960fa4108c29f40dde73da34fa0b2b93e87433e6c9d5994a",
+        "bytes": 26807054,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [
+          "玩家咨询段有可见口部活动，最终音轨关系待核"
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理",
+        "来源V29-01疑似额外词，保留标记待统一配音，不因此重拍"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V30",
+      "name": "第二次定制交谈的提问",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V30-第二次定制交谈的提问.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V30-第二次定制交谈的提问.mp4",
+      "clipIds": [
+        "V30-01"
+      ],
+      "entry": "返伤帐，途径风险已知",
+      "next": [
+        "UI-O2"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ecb3dcc5e090141c0471f749aaf75734d123fa2b470fc1112ef6a5c2b530b70d",
+        "bytes": 3418053,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "L02",
+      "name": "定制②听者反应底片",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+      "clipIds": [
+        "L02-01"
+      ],
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O2-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.46,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "fe5e86520c33d33a60f24c839976a8f279daeab49916f10fa081af0eed0c3ed6",
+        "bytes": 2609297,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [
+          "7.4秒日间闭口有效段；长自由输入续播方式留后续游戏整合，不能冒作夜景"
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过",
+        "不预录玩家自由句；环境声未听审；长输入续播方式留后续游戏整合"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V31T",
+      "name": "定制②回应T",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31T-定制②回应T.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31T-定制②回应T.mp4",
+      "clipIds": [
+        "V31T-01"
+      ],
+      "entry": "O2有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "9d69633a345cc98eeed42dfec84b40be0acbf66a3849967195f901302f6c47e2",
+        "bytes": 1909255,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V31D",
+      "name": "定制②回应D",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31D-定制②回应D.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31D-定制②回应D.mp4",
+      "clipIds": [
+        "V31D-01"
+      ],
+      "entry": "O2有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ed7727fdcc0ba0bb01af75347ae19ea89b1ce9ae4681c5515a7deb7f317b1f1f",
+        "bytes": 2419089,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V31R",
+      "name": "定制②回应R",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31R-定制②回应R.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31R-定制②回应R.mp4",
+      "clipIds": [
+        "V31R-01"
+      ],
+      "entry": "O2有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 9.47,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "b29e0f2da6acca589992c43b3e1abed47d7f85fa204a69c5c77ecc7450efc636",
+        "bytes": 3688321,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V31A",
+      "name": "定制②回应A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31A-定制②回应A.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31A-定制②回应A.mp4",
+      "clipIds": [
+        "V31A-01"
+      ],
+      "entry": "O2有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "565daf327e0af017c6a48cb2fd2df3de55e558990a794954962af059af4e85ec",
+        "bytes": 2064296,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V31N",
+      "name": "定制②回应N",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31N-定制②回应N.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31N-定制②回应N.mp4",
+      "clipIds": [
+        "V31N-01"
+      ],
+      "entry": "O2有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 6.63,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "87e9c29e45df91b3cc8645907d7ec488cb88411d8c8257c9b3284b126a1b55b7",
+        "bytes": 1907256,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    },
+    {
+      "id": "V32R",
+      "name": "补救遭拒",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V32R-补救遭拒.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V32R-补救遭拒.mp4",
+      "clipIds": [
+        "V32R-01"
+      ],
+      "entry": "最终选A但T<4或D<4",
+      "next": [
+        "UI-FALLBACK"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "d24b47b39b831ecdd35b05ce423c7b4ad3336a7d1254dff64f97fc10b1dacd7f",
+        "bytes": 2358117,
+        "decode": "passed"
+      },
+      "visualReview": {
+        "completed": true,
+        "method": "0.5秒连续时序图＋浏览器逐条完整动态播放＋成片真正第一解码帧核验",
+        "status": "制作自查候选，待用户review",
+        "remaining": [],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\assembled-playback-complete.png"
+      },
+      "audioIssues": [
+        "声音留统一配音阶段；未完成逐字听审、音色与BGM听审，ASR不能代替听审",
+        "未听审，不能宣称声音通过"
+      ],
+      "status": "制作候选，待用户review",
+      "userApproval": "待review"
+    }
+  ],
+  "slots": [
+    {
+      "id": "V26",
+      "name": "返营交差与军情说明",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V26-返营交差与军情说明.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V26-返营交差与军情说明.mp4",
+      "clipIds": [
+        "V26-01",
+        "V26-02",
+        "V26-03",
+        "V26-04",
+        "V26-05",
+        "V26-06",
+        "V26-07",
+        "V26-08",
+        "V26-09"
+      ],
+      "entry": "V25结束",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "technical": {
+        "duration": 56.98,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "46fc70bf9dcbf22995941773fd3e418b79608bc136d868e9bc9201b602c4eedc",
+        "bytes": 24113971
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V27",
+      "name": "带回消息后的分歧",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V27-带回消息后的分歧.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V27-带回消息后的分歧.mp4",
+      "clipIds": [
+        "V27-01",
+        "V27-02",
+        "V27-03",
+        "V27-04",
+        "V27-05",
+        "V27-06",
+        "V27-07"
+      ],
+      "entry": "V26结束",
+      "next": [
+        "UI-N4"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 47.87,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "3a1736deb9baf74c8933ffd990087dfc0e82f1dbf1864baf075f13bb33607174",
+        "bytes": 19885112
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V28A",
+      "name": "访村后态度A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28A-访村后态度A.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28A-访村后态度A.mp4",
+      "clipIds": [
+        "V28A-01",
+        "V28A-02"
+      ],
+      "entry": "UI-N4选A",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 15.72,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "1e6d15a6222f63a4b1d28da9f6144b59bb3aa18a0241f8adb496b82a10d418a1",
+        "bytes": 6819968
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V28B",
+      "name": "访村后态度B",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28B-访村后态度B.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28B-访村后态度B.mp4",
+      "clipIds": [
+        "V28B-01",
+        "V28B-02"
+      ],
+      "entry": "UI-N4选B",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 15.83,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "8e35f72865ed7e023f36d2ca576783fac37fae0f6e62552ffc2288e9bf3e54bc",
+        "bytes": 5437447
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V28C",
+      "name": "访村后态度C",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28C-访村后态度C.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V28C-访村后态度C.mp4",
+      "clipIds": [
+        "V28C-01",
+        "V28C-02"
+      ],
+      "entry": "UI-N4选C",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "technical": {
+        "duration": 17.46,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "befd95fa8e113ef594555686fcb60cbcda1bac2ad5d8890dcc23bdf7715d13af",
+        "bytes": 6058901
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V29-问明补报途径与正式交案风险.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V29-问明补报途径与正式交案风险.mp4",
+      "clipIds": [
+        "V29-01",
+        "V29-02",
+        "V29-03",
+        "V29-04",
+        "V29-05",
+        "V29-06",
+        "V29-07"
+      ],
+      "entry": "UI-ASK-CHANNEL选择前往",
+      "next": [
+        "V30"
+      ],
+      "endEvent": "003至006实际听全才记渠道与风险已告知",
+      "technical": {
+        "duration": 63.54,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ce1f7e6c239a3a72960fa4108c29f40dde73da34fa0b2b93e87433e6c9d5994a",
+        "bytes": 26807054
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V30",
+      "name": "第二次定制交谈的提问",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V30-第二次定制交谈的提问.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V30-第二次定制交谈的提问.mp4",
+      "clipIds": [
+        "V30-01"
+      ],
+      "entry": "返伤帐，途径风险已知",
+      "next": [
+        "UI-O2"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ecb3dcc5e090141c0471f749aaf75734d123fa2b470fc1112ef6a5c2b530b70d",
+        "bytes": 3418053
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "L02",
+      "name": "定制②听者反应底片",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+      "clipIds": [
+        "L02-01"
+      ],
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O2-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.46,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "fe5e86520c33d33a60f24c839976a8f279daeab49916f10fa081af0eed0c3ed6",
+        "bytes": 2609297
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V31T",
+      "name": "定制②回应T",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31T-定制②回应T.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31T-定制②回应T.mp4",
+      "clipIds": [
+        "V31T-01"
+      ],
+      "entry": "O2有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "9d69633a345cc98eeed42dfec84b40be0acbf66a3849967195f901302f6c47e2",
+        "bytes": 1909255
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V31D",
+      "name": "定制②回应D",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31D-定制②回应D.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31D-定制②回应D.mp4",
+      "clipIds": [
+        "V31D-01"
+      ],
+      "entry": "O2有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ed7727fdcc0ba0bb01af75347ae19ea89b1ce9ae4681c5515a7deb7f317b1f1f",
+        "bytes": 2419089
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V31R",
+      "name": "定制②回应R",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31R-定制②回应R.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31R-定制②回应R.mp4",
+      "clipIds": [
+        "V31R-01"
+      ],
+      "entry": "O2有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 9.47,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "b29e0f2da6acca589992c43b3e1abed47d7f85fa204a69c5c77ecc7450efc636",
+        "bytes": 3688321
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V31A",
+      "name": "定制②回应A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31A-定制②回应A.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31A-定制②回应A.mp4",
+      "clipIds": [
+        "V31A-01"
+      ],
+      "entry": "O2有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 7.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "565daf327e0af017c6a48cb2fd2df3de55e558990a794954962af059af4e85ec",
+        "bytes": 2064296
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V31N",
+      "name": "定制②回应N",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31N-定制②回应N.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31N-定制②回应N.mp4",
+      "clipIds": [
+        "V31N-01"
+      ],
+      "entry": "O2有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 6.63,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "87e9c29e45df91b3cc8645907d7ec488cb88411d8c8257c9b3284b126a1b55b7",
+        "bytes": 1907256
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    },
+    {
+      "id": "V32R",
+      "name": "补救遭拒",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V32R-补救遭拒.mp4",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V32R-补救遭拒.mp4",
+      "clipIds": [
+        "V32R-01"
+      ],
+      "entry": "最终选A但T<4或D<4",
+      "next": [
+        "UI-FALLBACK"
+      ],
+      "endEvent": "无新增剧情状态",
+      "technical": {
+        "duration": 8.04,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "d24b47b39b831ecdd35b05ce423c7b4ad3336a7d1254dff64f97fc10b1dacd7f",
+        "bytes": 2358117
+      },
+      "visualReview": {
+        "status": "制作自查候选；待拼接后动态复核",
+        "evidence": "review/visual-audio-review.json"
+      },
+      "audioIssues": [
+        "未听审；ASR仅辅助；音频异常留统一配音阶段处理"
+      ],
+      "status": "制作候选，待用户review"
+    }
+  ],
+  "subclips": [
+    {
+      "id": "V26-01",
+      "slot": "V26",
+      "generationKey": "b5c3b6739f9588feaf35b2dc47638e2c01323102812469857d7a81703d69be0f",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 5.9
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY09-006.wav",
+      "voiceOffset": 0.4,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 5.92,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "647efe5d0a79ef0d03298d02c9cb368f2ac11784801db4798090fe5221bd4d81",
+        "bytes": 2368509
+      },
+      "visualReview": "只读复用同日间同伤帐同姿势V28A01闭口0–5.9秒，去掉原版越肩字纸；已有原玩家音轨完整配入。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-006",
+          "speaker": "我",
+          "text": "我先回去交差，把实收和欠缺的粮数报清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V26-02",
+      "slot": "V26",
+      "generationKey": "ab329b872cc509df7f45558d540da7bc005e3ffc653b66f975d7ee69166ad357",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-02-R2-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.58
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 6.58,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ca2683a179dc7310423e1c50b1e42102dc6e625436c961c385fb84ebd26eb5c0",
+        "bytes": 3155990
+      },
+      "visualReview": "R2核收闭合竹木卷束：手指接触、移动与落稳连贯，没有展开文字或提前正式交案；声音未听审。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_imXOCBkGLplK9MR6Ubu8GX9Mo3x1k7VP",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-007",
+          "speaker": "演出",
+          "text": "我返营交差，军吏核收本次获准查阅的粮情材料。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V26-03",
+      "slot": "V26",
+      "generationKey": "438b1ac3155942cb88f21a03f99a9ffacde7c8ef02c48b9495f66261f3ba1dbf",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-03-16x9.mp4",
+      "trim": {
+        "start": 3.15,
+        "end": 7.29
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 4.13,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "9f536b5634133c2441f5979a08c7b52352800a33c768e23c56f92a785d3060ae",
+        "bytes": 1847590
+      },
+      "visualReview": "原片0–3.15秒是多余案头与乱码，保留3.15后军吏原身份中近景；完整原句在3.67–6.91秒，ASR仅定位。待裁幅动态复核。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_6ybdDH9jCIM2QOZcybSBCF2jXRvjJ351",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-008",
+          "speaker": "军吏",
+          "text": "缺额、民食和种粮的情况，一并列明。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V26-04",
+      "slot": "V26",
+      "generationKey": "6d58fe8332d66c8f1587e81abe2feb629df498821aab814b961a23955ef547dc",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\derived\\V26-04-准确转运简报.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 6.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "5231f1f1603b5641e0b15b0e9dceb25e2dbf14e1f439ec07584c256b12c74f37",
+        "bytes": 2858379
+      },
+      "visualReview": "采用R2原空白纸面0–3秒，0.5倍自然放慢，逐帧跟踪纸面透视叠冻结原文，未由模型拼写。来源/坐标见document-overlay-placement.json。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "本段无指定朗读，保留的生成环境音未听审，若有额外声音留统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_K3cY2lbT6H1esMYpuYmmQACPCU5fPe11",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-009",
+          "speaker": "转运简报·正文",
+          "text": "敌方正在修整粮道、筹集军资，并恢复屯田。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ]
+    },
+    {
+      "id": "V26-05",
+      "slot": "V26",
+      "generationKey": "d91957c6ccbefa7fc4937e6cd7de128df43d6fa24071b57256d63f0691b046cf",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 4.46
+      },
+      "speed": 1,
+      "crop": [
+        320,
+        360,
+        640,
+        360
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 4.46,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "08110b6c7b90b3cd3056b6fb2e44d1bb84f0eb51ecf141b96fa66643cdb48cbe",
+        "bytes": 1550729
+      },
+      "visualReview": "复用同场无字案头第一视角，不露军吏口部，原玩家问句保留于配音索引；不是交案动作。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "来源V29-01疑似额外人声，需统一配音，当前只交画面候选",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_uJDJZPMvEpV5sq3Oei0Eh5udHhSoDW1z",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-010",
+          "speaker": "我",
+          "text": "那我们退了，他们也还会继续准备？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V26-06",
+      "slot": "V26",
+      "generationKey": "0c663f64e775421134d1d92af3ad1fe52502b3b9a04f67541bb243a0ac0b3601",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-06-16x9.mp4",
+      "trim": {
+        "start": 2.48,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 5.52,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "020de968649e447dcae4869b8fe8552a6a4c9273aa3f6aee7d9d2afd8e993ef1",
+        "bytes": 2359319
+      },
+      "visualReview": "去除开头多余递卷，保留军吏完整说话段；裁掉画面底部烧录字幕，不改原声音。待裁幅动态复核。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_KwijgrjEVnoPfVcF2S3yNQkek7dOCfVz",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-011",
+          "speaker": "军吏",
+          "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V26-07",
+      "slot": "V26",
+      "generationKey": "35c08af4da3370f461d4784b02c758ca13f008a50760111c04805a9f3ced4248",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-07-16x9.mp4",
+      "trim": {
+        "start": 2.48,
+        "end": 7.29
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 4.81,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "df8ba2b2495e2eb611e3d37d0db95ecb824863f2c20961da99a41595b56482bd",
+        "bytes": 2550762
+      },
+      "visualReview": "去除2.1秒乱码账页插镜，保留从2.58秒开始完整军吏原句；裁掉底部烧录字幕。待裁幅动态复核。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_G4MDvXI0jPNAPNjsK4ZyffatkclyE0FB",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-012",
+          "speaker": "军吏",
+          "text": "丞相看过这批粮情，答的是此次粮乏，当退。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V26-08",
+      "slot": "V26",
+      "generationKey": "26c5062ee05c506df9d5bbd84e14d81b2f27ef89399135041968413e2293b1be",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-08-R2-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "147e1fed97ca9ae93d0674d613076131f735eba216e9e37e376c4aa128617c00",
+        "bytes": 3436132
+      },
+      "visualReview": "R2单首帧最简试片0–8秒浏览器动态完整播放并逐0.5秒时序检查：同人同案头、纸面空白、无额外人物/越肩/字幕/切镜，采用。声音未听审。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_jEqTlVKq4GHeMoqk4Bjp8Cb1OleJqRvy",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-013",
+          "speaker": "军吏",
+          "text": "他担心休兵这段日子，魏军修田积粮，将来更难打。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V26-09",
+      "slot": "V26",
+      "generationKey": "bcd4f748f1721872f3eb5a38cf2b7d4e9ec6ed854b7cb76097d72f1993e7b617",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-09-R2-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 11.54
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 11.54,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "513bc7fa922563be9a32863bc4216ed0aa7dee9773430580be069c2615c41c0e",
+        "bytes": 4582915
+      },
+      "visualReview": "R2完整稳定军吏长句；仅裁掉底部烧录字幕，不删任何句子或反应，首尾同身份同案头。声音未听审。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_xuH8Et5WnTED5AkPkMrJCBQBHqpZOdIC",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-014",
+          "speaker": "军吏",
+          "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V27-01",
+      "slot": "V27",
+      "generationKey": "5fd879f20b89c55fed763fc3ec137b55b38765a2cf7cfcb8d088d0ffca048613",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V27-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 1.32
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 1.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "8292c09420f60aa6980249c804c8a7122cfae9a734e4132adb0327fc9aa2835b",
+        "bytes": 1397682
+      },
+      "visualReview": "原片后半苟安起身搬走被褥，改变剧情；裁去1.32秒后多余动作，只留我返回伤帐的建立镜头，无原台词被删。需动态复核。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_jjR56XdA79Nss8gAX2TgOwGU7VNXLHMF",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-017",
+          "speaker": "演出",
+          "text": "我将简报中可转述的消息带回伤帐。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V27-02",
+      "slot": "V27",
+      "generationKey": "3c9477fdd7deca7d9986f4fa7db25bb6bfbbb3b6e606dfc08fbc9f0b76b3687c",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.25
+      },
+      "speed": 0.75,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY09-018.wav",
+      "voiceOffset": 0.4,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.33,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "feb9f6ca6e3a658088758bd0eb594e2baf48c16e75a135f8828018dd71c75058",
+        "bytes": 3068809
+      },
+      "visualReview": "同场同脸日间卧榻闭口段0–6.25秒，0.75倍均匀放慢为8.33秒，不循环、不新增剧情，承载6.62秒既有玩家原句。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-018",
+          "speaker": "我",
+          "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V27-03",
+      "slot": "V27",
+      "generationKey": "01616d15abee61c2362d79461741c9bb84a0bd96ddfeda8f387c6a57876bf3a0",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V27-03-16x9.mp4",
+      "trim": {
+        "start": 3.3,
+        "end": 6.58
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 3.27,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "1d75c8ac2e28b1f66b3b88e6496be49ab3ef7b00d0bade3348a7c2ffd13f19ec",
+        "bytes": 1883125
+      },
+      "visualReview": "裁去坐起入镜的多余前段；保留原句3.95–6.31秒完整口型与句末自然停顿，画面3.28秒承载13字。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_AyKZDf9t3Tzr0Ni2omdfQ8Lydnv5ZBte",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-020",
+          "speaker": "苟安",
+          "text": "所以百姓还得一直这样撑下去？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V27-04",
+      "slot": "V27",
+      "generationKey": "00b3c4fa7a1a43208701ea9244a16f6e94a54c8918d0c780237310a4f80728f2",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 5.9
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY09-021.wav",
+      "voiceOffset": 0.4,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 5.92,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "58d1bdc440f75e933537842c01224271385ed6874b7af19f543aa086b3ee7a71",
+        "bytes": 2437755
+      },
+      "visualReview": "复用同场完整闭口段并收紧景别；移除原越肩递乱码纸动作，完整原玩家音轨4.60秒。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-021",
+          "speaker": "我",
+          "text": "先把实数报上去，请他重新算算这仗还打得起吗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V27-05",
+      "slot": "V27",
+      "generationKey": "86313e98b091763178c916eadaa7e0f6f5d2c3e4de7c75dbecb2574ade3c5770",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V27-05-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 10.14
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 10.13,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "71ae64716740b43590f19ea2df79af38f50ccd46ac8c4c08353dcec563977d7f",
+        "bytes": 4063648
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_If6V4uPYXFydEEEFKschFUe4tfT8rdGk",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-022",
+          "speaker": "我",
+          "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V27-06",
+      "slot": "V27",
+      "generationKey": "f8f35afc01a718389cbb5cd6503aa946d78277f419fe674b775360b7e1bb6a6b",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V27-06-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.59
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 6.59,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "e3a90b70b710d11e810762db661b758340a6a95d202fda96f97e65adbaf77cef",
+        "bytes": 2798977
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_vuwJkkEKOppcldLzWOwAL8PFZhmeG4wX",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-023",
+          "speaker": "苟安",
+          "text": "真话送上去，就一定有人肯听？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V27-07",
+      "slot": "V27",
+      "generationKey": "691d5031083aec1145107c50a111e8e19e46e3a40158fe4f4bfe36268c82d85a",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V27-07-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 12.26
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 12.26,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "98a515498908894747e9a7b86fe9c2a40f81d26490cacafe38342c2df8c59a22",
+        "bytes": 5006316
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_WgvvX4DCzTK0Yml4K6uHGJQTIsdStq2v",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-024",
+          "speaker": "我",
+          "text": "我也说不准。我能做的是把查到的事、补救的办法写清楚，亲自核实送到了没有。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V28A-01",
+      "slot": "V28A",
+      "generationKey": "7fe95db265e3a6010610bbc25ce9a38a6acf72454268cafca75281d81b81cd13",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.25
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY09-QA.wav",
+      "voiceOffset": 0.4,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 6.25,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "de4de9a60fb4be06f3c7af516f1732da27da859b0a6b26a5ecded0855ffd4da2",
+        "bytes": 2479876
+      },
+      "visualReview": "前0–6.25秒闭口倾听，6.61秒后出现疑似额外人声及口部动作，保留足长无字听者段；既有玩家音轨4.60秒可完整配入。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-QA",
+          "speaker": "我（普通选项）",
+          "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V28A-02",
+      "slot": "V28A",
+      "generationKey": "dcba4ed6dae7089f5603b692eeed27a58c946ba7d0ed7cba4f5689ce2228815d",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-02-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 9.44
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 9.43,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "4ffe0a324eb07f6a31957bd261acdee607e54aca05924596ab48cbac56620176",
+        "bytes": 4204385
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_vkakuRI0jpBU6qvnSrzAQShsiIIPckVB",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-RA",
+          "speaker": "苟安",
+          "text": "你总算去看过了。我不想下一回还把他们逼到这一步。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V28B-01",
+      "slot": "V28B",
+      "generationKey": "9882ce5b02529ebd003a2caaa3c9c453d7f70374ec246b6653815963755d6fcf",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.25
+      },
+      "speed": 0.8,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY09-QB.wav",
+      "voiceOffset": 0.4,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 7.8,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "dc947d8eaffa671422f38f550645fcb6174d6f87d93306a514918c2c110cbc1e",
+        "bytes": 2818851
+      },
+      "visualReview": "同场闭口段0.8倍均匀放慢为7.81秒，承载6.19秒原玩家句；没有原版递字纸/新增人物。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-QB",
+          "speaker": "我（普通选项）",
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V28B-02",
+      "slot": "V28B",
+      "generationKey": "928a12e9163c46fc7f69a526f67c11bb5a64548934a5c1cd4c622392353d6a27",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28B-02-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "513ccda22eb808979500bf3c7055e8d2bd8b9c5bd556e792d246f76bc3dd53a1",
+        "bytes": 2744738
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_tSeqOOT6U8wmUfQfhAOHF7Gz1dBgytuS",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-RB",
+          "speaker": "苟安",
+          "text": "这话我听见了。可真说出去，会落个什么下场？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V28C-01",
+      "slot": "V28C",
+      "generationKey": "b1342d375715a406bb4acadc1047dcce96fbc9e0c309dddebc217857ade8ca1f",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28C-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 9.44
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 9.44,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "baca701427c2254e1baeda921b402825a23f0593a616d2d92c78b4ec74765712",
+        "bytes": 2782113
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_4ZkivfsvL37b0OzQLKTzAjcYybo1JA3e",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-QC",
+          "speaker": "我（普通选项）",
+          "text": "只要能让他们少受些苦，你们隐瞒的事，我就不往上说了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V28C-02",
+      "slot": "V28C",
+      "generationKey": "7f2bdcfb4f79a5ddb17d21f286b78f258142d4a5a1c115878a7e09c8c8c16104",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28C-02-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "1a328ff5700cd5d536713945e530c9b8e840bf31969a56d92aa90c88118c48ec",
+        "bytes": 3197935
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_OG9xhJU2bOjXQj774RfJDXW6UtuMPFFz",
+      "targetLines": [
+        {
+          "node": "CH2-LY09-RC",
+          "speaker": "苟安",
+          "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V29-01",
+      "slot": "V29",
+      "generationKey": "2b2d5a0d7f1ae4403436c1eb746e5540d838e115279e610ab6f992297059ea2c",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 4.48
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 4.48,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ef6b92e77b196e87bcce6e3c0ad3179f89a188fa6b67995b66d00d4212df2a1e",
+        "bytes": 1640786
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_uJDJZPMvEpV5sq3Oei0Eh5udHhSoDW1z",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-001",
+          "speaker": "演出",
+          "text": "我向收件军吏问明补报与查办的途径。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V29-02",
+      "slot": "V29",
+      "generationKey": "0df8618657ea7c969425f8678e3d2272664fde8e979875673deaf9982b485bd0",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-02-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 12.26
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 12.25,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "0eb30ca79f5d5832aa0026737e4b458e6d29a0a84f192ccd739dcdfa65e74084",
+        "bytes": 4934382
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_mKYTmn19SbjYtYq4CkJzzsYIgc4CGthr",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-002",
+          "speaker": "我",
+          "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V29-03",
+      "slot": "V29",
+      "generationKey": "494496d23967efca0ee62ae0053ab9b8b788aeb410fd7c77cd800ac872125e16",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-03-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 11.55
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 11.54,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "55173085fb4c2e7e6f918575e67d560d8af1482d7b555ad70775d3215106bfa9",
+        "bytes": 5431528
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_4sDjCnuEvoPxI769QcdvtJl5OHRWW0WN",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-003",
+          "speaker": "军吏",
+          "text": "可以。停手的实据、补报和各自做过的事，一并交来。该追的责任照样追。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V29-04",
+      "slot": "V29",
+      "generationKey": "2138cbca4f19f5014b342c1b1eb804b6040b5104daa68719676a3a77a8139966",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-04-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 10.14
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 10.14,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "4fe45fc25ced131d398ec7786dfc281fa7058461b77fa89a096c2b143aa099a6",
+        "bytes": 5837608
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_J9qe5cBzdkPOhHFegcIRGacfjBI8MYo1",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-004",
+          "speaker": "军吏",
+          "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V29-05",
+      "slot": "V29",
+      "generationKey": "3e22239c1ebd0fc79e96e692174f3f33b2544a27d76aa47f1025609b3077d8c0",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-05-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 11.55
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 11.54,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "e79b75eecba6b67a9ab6d3b6e0dcf384a3ae4a41d0a723c59006135e7e9c38cf",
+        "bytes": 5356707
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_VCRiAqE9UoDiLfJCW70GYvlviGETV5r7",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-005",
+          "speaker": "军吏",
+          "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚，甚至处死。最后如何处置，要等查办。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V29-06",
+      "slot": "V29",
+      "generationKey": "5bfc97c21f48c886b3992b548de4bbeff3358687c74323e9f39a69ca7efaffbb",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-06-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8
+      },
+      "speed": 1,
+      "crop": [
+        112,
+        0,
+        1056,
+        594
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "b28a6f59d0ac0401250097d741c9b16368ee0ac170f5738cf66b0a4e37117039",
+        "bytes": 2862965
+      },
+      "visualReview": "仅裁掉底部烧录字幕，保留军吏完整句子和脸部动作，不删追责/撤案风险。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_xqFmdJAH78vqbbSGZtSArkRZjOJR6klx",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-006",
+          "speaker": "军吏",
+          "text": "案子一交，就正式查办。换个说法也撤不回来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V29-07",
+      "slot": "V29",
+      "generationKey": "763db748d18c5e2b913b0a87a03a5d16ec36726622ef8350d544bbacd6c11305",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V29-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 4.46
+      },
+      "speed": 0.8,
+      "crop": [
+        320,
+        360,
+        640,
+        360
+      ],
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 5.58,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "492b8f0dd50f94ec4928b7e9e0a38af41192f5e23b82adf4aa4a2d3dba849cd2",
+        "bytes": 1703249
+      },
+      "visualReview": "同场无字案头画面0.8倍为5.58秒；去掉原纸面乱写，NPC不对心声作反应。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "来源V29-01疑似额外词，保留标记待统一配音，不因此重拍",
+        "玩家环境片ASR检出疑似额外人声，保留现音轨并标注，未混双重人声；统一配音阶段处理"
+      ],
+      "sourceTaskId": "task_uJDJZPMvEpV5sq3Oei0Eh5udHhSoDW1z",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-007",
+          "speaker": "我（心声）",
+          "text": "李严做过什么，苟安做过什么，都得如实交代。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V30-01",
+      "slot": "V30",
+      "generationKey": "1ab8f136c341d367f78432531faa65d30eaeb06459f0977b694b3895f2c4d60c",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V30-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "82e848901d5f44b8110d1fe14ac017eaa44153f1ac6b34e89e02688ef19edc78",
+        "bytes": 3088332
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_CijkJkQU3i3A0QhcedOIgvldUfSWmmME",
+      "targetLines": [
+        {
+          "node": "CH2-O2-OPENING",
+          "speaker": "苟安",
+          "text": "该说的，我已经说了。你现在准备拿我怎么办？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "L02-01",
+      "slot": "L02",
+      "generationKey": "d0e8d2a4c37bbb544389a40a620893e2dee7464ccd8f3753d9db09b78048f4a4",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V28A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 5.55
+      },
+      "speed": 0.75,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 7.42,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "ce2f77bac6089b7bdae889b06c1dc5243adb00fb21cb1922f7d59b1d350b1077",
+        "bytes": 2773718
+      },
+      "visualReview": "原失败任务保留；复用同场日间V28A01的0–5.55秒完整闭口段，0.75倍均匀放慢为7.40秒，不循环。旧8.38秒备选保留供已引用方按0–7.4秒使用，主索引指向此整片闭口有效段。",
+      "audioIssues": [
+        "未听审，不能宣称声音通过",
+        "不预录玩家自由句；环境声未听审；长输入续播方式留后续游戏整合"
+      ],
+      "sourceTaskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "targetLines": []
+    },
+    {
+      "id": "V31T-01",
+      "slot": "V31T",
+      "generationKey": "22b53432dbe875269896ee339a0c0d074592899404aa82d4e0245f4835b65c5c",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V31T-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 7.3
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 7.29,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "46bd91d9e260f8d40b480b8ab6ecfa3831a6d86ff1c86fb882e617257e8d88b4",
+        "bytes": 1936768
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_NjDB7tovWxLjSJB7Qqs6jFhXGT2ScaZ1",
+      "targetLines": [
+        {
+          "node": "CH2-O2-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "那你何必还来问我。要怎么做，你自己定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V31D-01",
+      "slot": "V31D",
+      "generationKey": "520f6df61474b37fb77bae5742bd266123ca24c5444fa04a42791f7d1fadf07c",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V31D-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "0cba0a20eb4f07e17bc69820326c168939019242f914eac5710b50a2b5d34317",
+        "bytes": 2490074
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_ZUFFKk4r9fxeVDNrDpKok2TMPL8N7PoF",
+      "targetLines": [
+        {
+          "node": "CH2-O2-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯护我，我记着。可压下这些，就真能把事情停住？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V31R-01",
+      "slot": "V31R",
+      "generationKey": "addf99b1e2bf5343a4235a8699c80f984489f17565839130ee79054eda4f7c49",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V31R-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 9.44
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 9.44,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "4671e3870a52638a57ef47423ebae43aebb65d5a3a854825a6d291a7ae86b990",
+        "bytes": 3492524
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_VoGkB0qu0ZDcotPUtcLqGMgPR1bdPwPX",
+      "targetLines": [
+        {
+          "node": "CH2-O2-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "你想帮我，我听见了。可说到案前，哪一句拿得出凭据？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V31A-01",
+      "slot": "V31A",
+      "generationKey": "86f218453dc5a58393695a9f76dc347e4cf4df2d36bff342714714606efa29c8",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V31A-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 7.3
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 7.29,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "a3876bd87df02e4e4ae8aebd1be36b35ad11dd89fdba56a60320e2b01aaa516e",
+        "bytes": 2089077
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_OZZnqg9bPRe4gbVYmnMIywli5t5LBpuo",
+      "targetLines": [
+        {
+          "node": "CH2-O2-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "办法我听见了。接下来怎么做，你来定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V31N-01",
+      "slot": "V31N",
+      "generationKey": "bb108b48a391626ee6650c594ac7c948a182ca41980b1843b624b90794aedb0f",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V31N-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 6.59
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 6.59,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "d21f9c0299dc3c19497e100a29e9e2da0a994be7109a51ec93e0b97734eefd61",
+        "bytes": 1953526
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_kuurdwCYYgLSMbXX3GVAentJglYoHKWo",
+      "targetLines": [
+        {
+          "node": "CH2-O2-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "你想怎么做，说吧。我听着。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V32R-01",
+      "slot": "V32R",
+      "generationKey": "27bcd8f6cc559e8092df49d229f9a22195aedc61768393228b7be58ffc085a05",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V32R-01-16x9.mp4",
+      "trim": {
+        "start": 0,
+        "end": 8.0
+      },
+      "speed": 1,
+      "crop": null,
+      "textOverlay": null,
+      "centralVoice": null,
+      "voiceOffset": null,
+      "environment": "保留原片环境声；ASR范围内未检出额外词的玩家环境片混入既有中央音轨，仍待听审；未新增合成",
+      "technical": {
+        "duration": 8.0,
+        "width": 1280,
+        "height": 720,
+        "audioTrack": true,
+        "fps": 24,
+        "sampleRate": 48000,
+        "sha256": "9f2c52c621c8428bdc85b74dbfbaa9e03a8218e4e742008a29d8b5593a97e3fe",
+        "bytes": 2410488
+      },
+      "visualReview": "待动态审查",
+      "audioIssues": [
+        "未听审，不能宣称声音通过"
+      ],
+      "sourceTaskId": "task_ovGYBPQg92VqGiZkAEnnBaGDmjsqmXCa",
+      "targetLines": [
+        {
+          "node": "CH2-LY10-REFUSE",
+          "speaker": "苟安",
+          "text": "你说得容易。我现在不能把命押在这个办法上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "L02-01",
+      "task_id": "task_P8vMWMkap2egYdCAaUOmaIAS7rHZVVWb",
+      "status": "failed",
+      "error": {
+        "code": "input_download_failed",
+        "message": "download media: Get \"https://res.cloudinary.com/cpxdw5vd/image/upload/v1792869157/parallel-world/minimax-reference/d24f553d3bdc91e9e8a74ee2e606e7b67c9e1873223e3275f94370f5467684b9.png\": dial tcp [2a04:4e42:8c::393]:443: connect: network is unreachable"
+      }
+    },
+    {
+      "id": "V26-01",
+      "task_id": "task_3jP0zxx03iClPq5YRJnxzERnafntabJo",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-02-R2",
+      "task_id": "task_imXOCBkGLplK9MR6Ubu8GX9Mo3x1k7VP",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-02",
+      "task_id": "task_HK1hGZp0EomznSxfs4mpmLoLO3X0wlN9",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-03",
+      "task_id": "task_6ybdDH9jCIM2QOZcybSBCF2jXRvjJ351",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-04-R2",
+      "task_id": "task_K3cY2lbT6H1esMYpuYmmQACPCU5fPe11",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-04",
+      "task_id": "task_bwO6DJPkGQn1OHEL8sdnBqeY3uP9M3c9",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-05",
+      "task_id": "task_1NyMH2ne54HmKNWte8vvsYSpqbQpY00Q",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-06",
+      "task_id": "task_KwijgrjEVnoPfVcF2S3yNQkek7dOCfVz",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-07",
+      "task_id": "task_G4MDvXI0jPNAPNjsK4ZyffatkclyE0FB",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-08-R2",
+      "task_id": "task_jEqTlVKq4GHeMoqk4Bjp8Cb1OleJqRvy",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-08",
+      "task_id": "task_lsacslWOlezqSSOslNZDDB6ZfF4JAOta",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-09-R2",
+      "task_id": "task_xuH8Et5WnTED5AkPkMrJCBQBHqpZOdIC",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V26-09",
+      "task_id": "task_yCXbEWr8Hvg79Fk2sJQaLYMkywmPgSMd",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-01",
+      "task_id": "task_jjR56XdA79Nss8gAX2TgOwGU7VNXLHMF",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-02",
+      "task_id": "task_NiS7yyqL7vDkQp2FFycrZtvv7GXKvLPF",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-03",
+      "task_id": "task_AyKZDf9t3Tzr0Ni2omdfQ8Lydnv5ZBte",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-04",
+      "task_id": "task_3RgdaKYQ8ur4KDZk0iL6mJ1Asa8CtQc2",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-05",
+      "task_id": "task_If6V4uPYXFydEEEFKschFUe4tfT8rdGk",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-06",
+      "task_id": "task_vuwJkkEKOppcldLzWOwAL8PFZhmeG4wX",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V27-07",
+      "task_id": "task_WgvvX4DCzTK0Yml4K6uHGJQTIsdStq2v",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28A-01",
+      "task_id": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28A-02",
+      "task_id": "task_vkakuRI0jpBU6qvnSrzAQShsiIIPckVB",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28B-01",
+      "task_id": "task_I2FTM964ELZQ8FZMZAfGazHrxz2UMv5W",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28B-02",
+      "task_id": "task_tSeqOOT6U8wmUfQfhAOHF7Gz1dBgytuS",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28C-01",
+      "task_id": "task_4ZkivfsvL37b0OzQLKTzAjcYybo1JA3e",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V28C-02",
+      "task_id": "task_OG9xhJU2bOjXQj774RfJDXW6UtuMPFFz",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-01",
+      "task_id": "task_uJDJZPMvEpV5sq3Oei0Eh5udHhSoDW1z",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-02",
+      "task_id": "task_mKYTmn19SbjYtYq4CkJzzsYIgc4CGthr",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-03",
+      "task_id": "task_4sDjCnuEvoPxI769QcdvtJl5OHRWW0WN",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-04",
+      "task_id": "task_J9qe5cBzdkPOhHFegcIRGacfjBI8MYo1",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-05",
+      "task_id": "task_VCRiAqE9UoDiLfJCW70GYvlviGETV5r7",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-06",
+      "task_id": "task_xqFmdJAH78vqbbSGZtSArkRZjOJR6klx",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V29-07",
+      "task_id": "task_4jeVYZMMRcU7gXQe3xF5b8TDhdtuhHu1",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V30-01",
+      "task_id": "task_CijkJkQU3i3A0QhcedOIgvldUfSWmmME",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V31A-01",
+      "task_id": "task_OZZnqg9bPRe4gbVYmnMIywli5t5LBpuo",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V31D-01",
+      "task_id": "task_ZUFFKk4r9fxeVDNrDpKok2TMPL8N7PoF",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V31N-01",
+      "task_id": "task_kuurdwCYYgLSMbXX3GVAentJglYoHKWo",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V31R-01",
+      "task_id": "task_VoGkB0qu0ZDcotPUtcLqGMgPR1bdPwPX",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V31T-01",
+      "task_id": "task_NjDB7tovWxLjSJB7Qqs6jFhXGT2ScaZ1",
+      "status": "succeeded",
+      "error": null
+    },
+    {
+      "id": "V32R-01",
+      "task_id": "task_ovGYBPQg92VqGiZkAEnnBaGDmjsqmXCa",
+      "status": "succeeded",
+      "error": null
+    }
+  ],
+  "missingSlots": [],
+  "submissionPaused": false,
+  "unresolved": [
+    "所有成片仍待用户review，不等于用户通过",
+    "声音未完成逐字听审、统一配音/音色及无BGM确认；实际异常见各段audioIssues",
+    "V27/V28C/V29部分玩家画面口部活动留最终音画关系核查",
+    "部分安静听者段复用了同组同日间同姿势素材并均匀变速，来源与区间已逐片记录；无一秒口型循环"
+  ],
+  "visualReview": {
+    "completed": true,
+    "rawApiVideos": 40,
+    "rawTemporalEvidence": "review/*/timeline.jpg",
+    "assembledSlotsPlayed": 14,
+    "firstDecodedFramesChecked": 14,
+    "actualPlaybackEvidence": "review/assembled-playback-complete.png"
+  },
+  "newTTSRequests": 0,
+  "audioReview": "未听审；音频不作为本轮画面通过条件，留后续统一配音"
+}

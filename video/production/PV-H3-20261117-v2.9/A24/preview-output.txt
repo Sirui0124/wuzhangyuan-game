@@ -1,0 +1,20 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "text": "Four-second single static wide landscape shot. Light RAIN falls across this vacant outdoor timber structure. Water drips from the rafters into small muddy puddles, creating small ripples. The damp dark cloth hangs from the timber beams and stirs gently. The composition stays exactly like the reference photo: locked tripod, unchanged framing from beginning to end. Empty landscape, wet wooden frames, baskets, wheel and box remain at their original positions, distant green hillside beneath gray cloudy daylight. Only rain and falling water drops move. Sound consists solely of soft rainfall and sparse water drips. Silent of human voices. No music or soundtrack, no text, no cuts.",
+      "type": "text"
+    },
+    {
+      "role": "reference_image",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/7f771867bdb1802307e30a559543d150287f8c3ced311be07ac75399bada7db4.jpg"
+      },
+      "type": "image_url"
+    }
+  ],
+  "resolution": "768P",
+  "duration": 4,
+  "ratio": "16:9"
+}

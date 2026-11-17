@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="source-sha256" content="420a22181bc64aefbd886ae2c82be3f249c91e346f626d3739249e2de12a8a92"><title>第二幕完整策划 · 逆转五丈原</title><style>
+:root { color-scheme: dark; --bg:#102426; --paper:#152d2e; --text:#e3e7d9; --muted:#a8bbb0; --gold:#e2c58a; --line:#a8aa7b3d; font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif; font-synthesis:none; }
+* { box-sizing:border-box; } html { scroll-behavior:smooth; scroll-padding-top:28px; } body { margin:0; background:radial-gradient(ellipse at 0 0,#38524870,transparent 65%),var(--bg); color:var(--text); font-size:16px; line-height:1.9; }
+a { color:var(--gold); text-underline-offset:.22em; overflow-wrap:anywhere; } a:hover { color:#ffe4ad; } a:focus-visible,button:focus-visible,summary:focus-visible,.table-scroll:focus-visible { outline:2px solid var(--gold); outline-offset:4px; }
+.skip { position:absolute;left:12px;top:-80px;padding:8px 16px;background:var(--paper);z-index:10; }.skip:focus { top:12px; }
+.page { max-width:1480px; margin:0 auto; padding:32px 36px 80px; display:grid; grid-template-columns:220px minmax(0,1fr); gap:44px; align-items:start; }
+.navigation { position:sticky;top:24px;max-height:calc(100dvh - 48px);overflow:auto;scrollbar-width:thin;scrollbar-color:#698272 transparent; }
+.brand { font-family:KaiTi,STKaiti,"楷体",serif;color:var(--gold);letter-spacing:.18em;font-size:25px;border-bottom:1px solid var(--line);padding:4px 0 20px;margin-bottom:22px; }
+.brand span { display:block;font-family:"Microsoft YaHei",sans-serif;font-size:12px;color:var(--muted);letter-spacing:.12em;margin-top:7px; }
+.navigation summary { display:none; }.navigation nav { display:flex;flex-direction:column;gap:5px; }.navigation nav a { display:block;padding:9px 12px;text-decoration:none;color:#b7c4b4;border-left:2px solid transparent;font-size:14px;line-height:1.7; }.navigation nav a:hover,.navigation nav a[aria-current=true] { background:#b5bb8f0c;border-color:var(--gold);color:var(--gold); }
+.nav-end { display:block;margin:22px 12px;color:var(--muted);font-size:12px; }
+main { min-width:0; }.reader-meta { display:flex;gap:12px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:12px;letter-spacing:.08em;border-bottom:1px solid var(--line);padding:3px 0 14px;margin-bottom:24px; }.reader-meta .tag { color:var(--gold);border:1px solid #b59b6766;padding:2px 9px; }.reader-meta a { margin-left:auto; }
+article { min-width:0; }.intro { color:var(--muted); } h1,h2,h3 { font-family:KaiTi,STKaiti,"楷体",serif;font-weight:400;color:#e9ce91;line-height:1.5;overflow-wrap:anywhere;scroll-margin-top:28px; } h1 { font-size:36px;margin:12px 0 26px;letter-spacing:.08em; } h2 { font-size:28px;border-top:1px solid var(--line);margin:54px 0 22px;padding-top:28px; } h3 { font-size:23px;margin:32px 0 16px;color:#d8c491; }
+p { margin:16px 0; } strong { font-weight:600;color:#f1e4bf; } em { color:#c8d1bc; } code { font-family:"Cascadia Code",Consolas,monospace;font-size:.86em;color:#d5d9be;background:#b5bd9c0a;border:1px solid #b5bd9c14;padding:2px 5px;border-radius:3px;overflow-wrap:anywhere; } pre { overflow:auto;background:#0b1d1f;padding:16px; } pre code { border:0;padding:0; } blockquote { margin:24px 0;padding:2px 20px;border-left:2px solid var(--gold);color:var(--muted); } ul,ol { padding-left:24px; } li { padding-left:4px;margin:9px 0; }
+.table-scroll { max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#7d8970 #13292a;border:1px solid var(--line);border-radius:3px;margin:22px 0 28px;background:#162e2eb3; } table { border-collapse:collapse;width:100%;min-width:760px;table-layout:auto;font-size:14px;line-height:1.9; } th,td { padding:13px 16px;border-bottom:1px solid #a8aa7b26;border-right:1px solid #a8aa7b1a;text-align:left;vertical-align:top;overflow-wrap:anywhere; } th { background:#253e38;color:var(--gold);font-weight:500; } td:first-child { color:#d4d6ba; } tr:nth-child(even) td { background:#b7bd9304; } tr:last-child td { border-bottom:0; } th:last-child,td:last-child { border-right:0; } td code { font-size:12px; }
+.reader-footer { border-top:1px solid var(--line);padding:28px 0;margin-top:46px;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:20px; }.reader-footer span { overflow-wrap:anywhere; }
+@media(min-width:1150px) { table { font-size:15px; } }
+@media(max-width:850px) { .page { display:block;padding:16px 18px 50px; }.navigation { position:relative;top:auto;max-height:none;overflow:visible;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:22px; }.brand { font-size:23px;border:0;padding:0;margin:0 0 14px; }.brand span { display:inline;margin-left:10px;font-size:11px; }.navigation summary { display:flex;align-items:center;justify-content:space-between;list-style:none;cursor:pointer;min-height:44px;border:1px solid var(--line);padding:7px 12px;color:var(--gold);font-size:14px; }.navigation summary::-webkit-details-marker {display:none;}.navigation summary:after { content:'＋'; }.navigation details[open] summary:after {content:'−';}.navigation nav {margin-top:10px;max-height:55dvh;overflow:auto;}.navigation nav a {padding:11px 12px;}.nav-end {display:none;}.reader-meta {font-size:11px;gap:8px;margin-bottom:18px;}.reader-meta a {margin-left:0;}.reader-meta .hint {width:100%;}body {font-size:16px;line-height:1.95;}h1 {font-size:29px;letter-spacing:.04em;margin:8px 0 22px;}h2 {font-size:26px;margin-top:40px;padding-top:24px;}h3 {font-size:23px;margin-top:28px;}table {min-width:730px;font-size:14px;}th,td {padding:12px 14px;}.reader-footer {flex-direction:column;gap:8px;}.table-scroll {margin:18px 0 24px;}}
+@media(prefers-reduced-motion:reduce) { html {scroll-behavior:auto;} }
+@media print { :root {color-scheme:light;}body {background:white;color:#222;font-size:11pt;}.page {display:block;max-width:none;padding:0;}.navigation,.reader-meta,.reader-footer {display:none;}h1,h2,h3,strong {color:#111;}table {min-width:0;font-size:9pt;}th,td {border:1px solid #ccc;color:#222!important;}th {background:#eee;}.table-scroll {overflow:visible;}a {color:#222;} }
+</style></head>
+<body><a class="skip" href="#document-title">跳到正文</a><div class="page">
+<aside class="navigation" aria-label="文档导航"><div class="brand">逆转五丈原<span>第二幕 · 策划审阅</span></div><details id="navigation" open><summary>全幕目录 · 十个部分</summary><nav aria-label="章节目录"><a href="#section-1">一、这版依据什么，改了什么</a>
+<a href="#section-2">二、全幕流程与画布结构</a>
+<a href="#section-3">三、提交规则：检查支持，不检查选项序号</a>
+<a href="#section-4">四、证据从哪里来</a>
+<a href="#section-8">五、前半幕逐步策划</a>
+<a href="#section-21">六、后半幕逐步策划</a>
+<a href="#section-29">七、结局条件与恢复规则</a>
+<a href="#section-30">八、文案表同步与人工review结构</a>
+<a href="#section-31">九、逐路线验收用例</a>
+<a href="#section-32">十、本轮交付状态与审阅重点</a></nav></details><span class="nav-end">全文保留 · 可使用浏览器查找<br>宽表在表格内左右滑动</span></aside>
+<main><div class="reader-meta"><span class="tag">完整策划已同步 · 细化待 review</span><span class="hint">上下阅读 · 表格左右滑动</span><a href="file:///C:/Users/zhousirui/Documents/ChatGPT/%E9%80%86%E8%BD%AC%E4%BA%94%E4%B8%88%E5%8E%9F/docs/design/CHAPTER-TWO-FULL-PLAN.md">查看 Markdown 原稿 ↗</a></div>
+<article id="plan-content"><h1 id="document-title">第二幕完整策划｜查粮、问人、送出真相</h1>
+<p>版本：2026-10-22。状态：用户已认可本版完整结构并授权同步；第二章文案策划表、机制稿与书稿已同步并完成回读核验。新增执行文案、反馈与具体演出细化仍待review。本文中的“第二幕”对应现有文档的“第二章”。已结合在线文案表、书稿及用户认可的纵向思绪画布结构整理；完整章节尚未按本文实现或试玩。</p>
+<p>本幕让玩家先查清粮为什么不够，再识破苟安怎样利用自己的判断，最后决定如何把真相与补救一同送出去。操作统一为：<strong>先选择回答，主动引用已得证据，点击“提交判断”；有依据的判断开放相应行动，玩家确认行动后才发生剧情。</strong></p>
+<p>三条结局保留原稿方向：调查失败“认下来的罪”、查清事实后进入查办的A“扳倒了李严”、争取双方停手并完整送核的B“人还在”。A、B均退军。B保住人，不凭空补出粮；A不是答错题的惩罚。</p>
+<h2 id="section-1">一、这版依据什么，改了什么</h2>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>初稿核对基线与本轮同步状态</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://my.feishu.cn/docx/X6jtdb1ywoacW9xU0PEcFDfMnlc">第二章小说剧情</a></td>
+<td>初稿基线修订1271；本轮回读修订1283，十四节与执行对照完整核验</td>
+<td>人物关系、事实顺序、动机与结局</td>
+</tr>
+<tr>
+<td><a href="https://my.feishu.cn/sheets/HDuhsadNNhnzgBtG6vScRQo0nEc">第二章文案策划表</a></td>
+<td>初稿基线修订5：最终文案306行、笔记字典52行、执行规则33行，均含表头；写前修订24已发现并合并用户开场改动；已迁移8／5／5结构并回读修订42；逐句342条、线索60条、规则47条（不含表头）</td>
+<td>具体对白、稳定编号、证据来源与跳转</td>
+</tr>
+<tr>
+<td><a href="https://my.feishu.cn/docx/WYtDdItyfoK208xQDrocboxenpf">第二章机制策划</a></td>
+<td>初稿基线修订6；本轮回读修订7</td>
+<td>四步倒查、先对质后访村、原有分支边界</td>
+</tr>
+<tr>
+<td><a href="https://my.feishu.cn/docx/BloVdzBIKogBDmxAIEQcqvZInke">全局游戏机制规则</a>／<a href="https://my.feishu.cn/docx/MSdZd2H8IoWkXyxpkpNcgxRKn0b">协作原则</a></td>
+<td>全局规则沿用初稿修订3；协作原则补全各章统一人工review结构，回读修订11</td>
+<td>事实、推论、实际行动及审阅状态的区别</td>
+</tr>
+<tr>
+<td>本次聊天与<a href="file:///C:/Users/zhousirui/Documents/ChatGPT/%E9%80%86%E8%BD%AC%E4%BA%94%E4%B8%88%E5%8E%9F/docs/design/CHAPTER-TWO-CHAIN-STRUCTURE-DRAFT.md">纵向画布结构记录</a></td>
+<td>用户已认可样稿结构</td>
+<td>上下滚动、先选再引、提交有门槛、错误行动产生后果</td>
+</tr>
+</tbody></table>
+</div>
+<p>初稿以上述修订和完整三张表为核对基线，不把这些历史修订号当作当前在线版本。本轮写前再次读取时，发现用户已删去开场兵卒传话、问路等段落，并改写第四次北伐、苟安往事与不知当前进度的心声；本稿已按新稿合并，不恢复被删内容。用户随后要求各章统一人工review结构，本稿第八节据此覆盖旧第二章五／五／四例外。三份在线内容已逐项回读，版本与核验记录见 <code>CHAPTER-TWO-FULL-PLAN.sync.json</code>。</p>
+<p>本次以最新用户要求覆盖旧表“选错也直接继续”的安排。用户已认可完整结构并授权同步；本轮新落文字、反馈与具体演出仍保留待review，不能用执行者自查替代用户对这些细化内容的审核。</p>
+<p><strong>原稿保留</strong>：同一批粮、四组相邻环节、仓中完成签认核验、对质成功后连续访村、原夜访与战略讨论、完整呈报、A/B处置和旧卷尾声。不加混批、算术、找物、笔迹鉴定、隐藏倒计时。</p>
+<p><strong>本轮细化</strong>：每步支持条件、证据卡的取得时点、提交与行动分开、修正后的错误路线入口、书信修补与收件闭环；另合并用户新开场、统一人工review表结构、原件先于提交而摘要后于解释的时序，以及已经完成停手署名后的重入行为。后文“本轮新增／调整”不冒称原书稿已有原句；对应执行文案按本次同步稿维护。</p>
+<p><strong>必须改的旧逻辑</strong>：账证已经否定的“苟安弄丢整笔缺粮”“足粮被扣”“应征即现粮”不能通过提交。错路改为有依据的有限核问，通过后苟安顺势认罪；玩家把这份口供当作调查终点，主动停止核查并确认结案，才进入原失败方向。保留失败结果，不保留违反证据门槛的入口。</p>
+<h2 id="section-2">二、全幕流程与画布结构</h2>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>场景与玩家任务</th>
+<th>进入下一段的条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S00 获救、认人</td>
+<td>山路救援→主角回忆→伤帐；认出救命恩人</td>
+<td>固定演出完成，不设证据题</td>
+</tr>
+<tr>
+<td>S01 说明来意</td>
+<td>伤帐；修补冒失的投魏质问</td>
+<td>提交有依据的来意，确认说出，苟安回应</td>
+</tr>
+<tr>
+<td>S02 追问迟交</td>
+<td>第三夜本队交接→伤帐；指出领粮前已有等待</td>
+<td>实际获准抄录，提交问题并发言</td>
+</tr>
+<tr>
+<td>S03 请他暂留</td>
+<td>伤帐；读第一封信，提出可行的查报办法</td>
+<td>苟安实际同意暂留并交出凭据</td>
+</tr>
+<tr>
+<td>S04 调取材料</td>
+<td>本队管事陪同仓中查账</td>
+<td>核对凭据、管事陪同、仓吏允许核本批记录</td>
+</tr>
+<tr>
+<td>Q1 领取与发出</td>
+<td>画布第一步；缺口从哪里追问</td>
+<td>合理提交后，继续查账或先核问损耗</td>
+</tr>
+<tr>
+<td>Q2 发出与入仓</td>
+<td>画布第二步；本批实粮是否发出</td>
+<td>支持成立后确认继续核查</td>
+</tr>
+<tr>
+<td>Q3 入仓与实收</td>
+<td>画布第三步；实收是否入仓</td>
+<td>支持成立后确认继续核查</td>
+</tr>
+<tr>
+<td>Q4 实收与应征</td>
+<td>画布第四步；应交是否等于已有</td>
+<td>形成有来源的本批未备齐判断</td>
+</tr>
+<tr>
+<td>S05 核签认</td>
+<td>仓中；管事取缺额报告，经手人核验</td>
+<td>一段连续对白，取得同批同日、知情与未补足材料</td>
+</tr>
+<tr>
+<td>S06 当面对质</td>
+<td>伤帐；问清明知缺粮却称已备好的矛盾</td>
+<td>提交依据，确认质问，实际取得第二封信与供述</td>
+</tr>
+<tr>
+<td>W 停查错路</td>
+<td>伤帐；面对过快的认罪</td>
+<td>继续核查返回；明确结案进入调查失败，不接下半幕</td>
+</tr>
+<tr>
+<td>S07 访村</td>
+<td>批准返程→村庄→返营</td>
+<td>对质成功、正式差遣获准；连续视频，不插题</td>
+</tr>
+<tr>
+<td>S08 夜访与军情</td>
+<td>伤帐回忆→交差处→伤帐</td>
+<td>实际听到计划、看到简报、听到军吏转述</td>
+</tr>
+<tr>
+<td>S09 整理处境</td>
+<td>原画布继续向下；理解苦处是否等于接受办法</td>
+<td>可整理局部判断，也可带原始资料继续询问呈报途径</td>
+</tr>
+<tr>
+<td>S10 决定送案方式</td>
+<td>军吏说明风险→伤帐</td>
+<td>完整预警后选择直接交案，或先争取双方停手</td>
+</tr>
+<tr>
+<td>S11 共同写信</td>
+<td>伤帐；把可行补救写清并商量</td>
+<td>方案补齐，苟安实际撤回后手、说明责任、署名</td>
+</tr>
+<tr>
+<td>S12 寄信、回信与送核</td>
+<td>传信→李严读信→回信到营→收件处</td>
+<td>李严实际停手补报；玩家确认正式交件并核收补充说明</td>
+</tr>
+<tr>
+<td>S13 处置与退军</td>
+<td>A官印与空帐／B归途推车</td>
+<td>相应路线裁处实际告知后，取得本路线处置笔记</td>
+</tr>
+<tr>
+<td>S14 旧卷</td>
+<td>书库；眼前缺粮还有怎样的来处</td>
+<td>A或B完成后观看尾声，开放回看；不预设下一幕结论</td>
+</tr>
+</tbody></table>
+</div>
+<p>画布以“粮队领取↓调拨发出↓入仓↓实际征收↓地方应征”纵向倒查。宽屏每步左右放问题与证据，手机上下排；固定视窗内滚动，保留历史。新判断在下方展开，玩家回看时不强拉到底。国画简笔与线条动画只说明环节，不暗示答案。</p>
+<p>只有推理、拟定行动的节点使用提交判断。实际取证、连续视频、寄信、收件和裁处是剧情事件，不再各加一道重复考试。S09整理可选；S11复用同一画布，不另弹一套空画布。</p>
+<h2 id="section-3">三、提交规则：检查支持，不检查选项序号</h2>
+<p>每条提交保存“回答原文、引用、来源版本、支持范围”。正式按钮旁提示：“放入依据后，提交这个判断。”证据未选时按钮仍可点击并提示缺失，不默默放行。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>状态</th>
+<th>判定</th>
+<th>页面结果</th>
+<th>是否发生剧情</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>草稿</td>
+<td>只选了回答，尚未主动引用</td>
+<td>展开证据区，保存草稿</td>
+<td>否</td>
+</tr>
+<tr>
+<td>不能提交</td>
+<td>无依据、缺关键支持、材料尚未取得、引用无关或与已得直接反证冲突</td>
+<td>说明具体不足，保留选择、材料与滚动位置</td>
+<td>否</td>
+</tr>
+<tr>
+<td>可据此追问</td>
+<td>材料能支持有限怀疑、询问或拟议方案，但不足以定责或承诺结果</td>
+<td>显示支持范围，开放对应核问／商谈行动</td>
+<td>仍须确认行动</td>
+</tr>
+<tr>
+<td>依据相合</td>
+<td>所选判断与材料相称，关键支持齐全</td>
+<td>记录有来源的判断，开放下一步查阅／质问</td>
+<td>仍须确认行动</td>
+</tr>
+<tr>
+<td>行动已发生</td>
+<td>玩家确认说出、取件、送信、交案等</td>
+<td>记录事件与真实回应；到来源末尾才收录新材料</td>
+<td>是</td>
+</tr>
+</tbody></table>
+</div>
+<p>提交不足只产生界面反馈，不新增NPC发言或口供。FB001、FB002、FB003等带角色口吻的文字可作为提示引用，未确认说出时不执行角色回应；只有玩家实际确认商谈后，缺项追问才作为真实对白发生。</p>
+<p>本章以明确规则检查证据与事实，语言组织可协助表达；不能仅靠生成模型觉得一句话“像对的”便授予剧情状态。检查已取得的直接反证，不允许故意不引用反证来通过强断言。相关但不足的联系可以留在草稿，不抹去它的局部意义。</p>
+<p>同一内容的原件、摘要、推论不重复计数。等价来源允许替代；不要求全选证据、固定卡数、固定口令或先生成某个推论编号。额外引用无关材料不能弥补缺项；引入相互冲突的断言则需修正。</p>
+<p>事实判断与处置选择分开：停止调查可以是一个明确而不妥的行动，系统允许玩家承担后果；但不能把“决定停查”改写成“已有证据证明苟安丢掉全部粮”。A/B也是知情选择，不由立场、礼貌或隐藏好感值判正误。</p>
+<h2 id="section-4">四、证据从哪里来</h2>
+<p>以下编号用于制作与核验，玩家只看短标题、原文、来源及性质。“读完”指完整来源已实际呈现；中途打开预览、选中回答或AI生成一句话均不算取得。</p>
+<h3 id="section-5">前半幕：口供与粮账</h3>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>编号与材料</th>
+<th>实际取得位置／来源行</th>
+<th>能支持什么；不能支持什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LY-X01 眼前苟安的伤情</td>
+<td>伤帐认人时实际看到，LY01-011</td>
+<td>只证明眼前有伤；不证明受罚缘由、受罚次数、迟粮天数或投魏事实</td>
+</tr>
+<tr>
+<td>LY-X02 记得的故事</td>
+<td>主角心声，LY01-007至008完整呈现</td>
+<td>关于受罚、身份与投魏传谣的个人回忆；009仍表明不知本轮到了哪一步，不作为当下事实证明</td>
+</tr>
+<tr>
+<td>LY-X03 救命与认人</td>
+<td>LY01-001实际获救，011至012伤帐认人后完整</td>
+<td>苟安曾救主角；不证明其余行为无辜</td>
+</tr>
+<tr>
+<td>LY-X04／05 饮酒自述／否认赴魏</td>
+<td>LY02-005／008</td>
+<td>人物当时说法；饮酒时间仍为口述</td>
+</tr>
+<tr>
+<td>LY-X06 领粮前等待</td>
+<td>管事先准看本队一笔，LY02-013至014</td>
+<td>交付晚于原定日；不证明已备足、扣粮者或动机</td>
+</tr>
+<tr>
+<td>LY-C01 苟安称已备妥被扣</td>
+<td>LY02-022先记迟发口供，LY03-023才补齐同批同日的强断言</td>
+<td>保存说话时间和版本；未到023不能显示后来的完整说法</td>
+</tr>
+<tr>
+<td>LY-C02 第一封李丰信</td>
+<td>实际取出后读LY03-002至003</td>
+<td>文本确有劝止和勿牵家父；“前议”含义未明</td>
+</tr>
+<tr>
+<td>LY-X07／08 想停本次北伐／另寻魏国出路</td>
+<td>LY03-010／017</td>
+<td>愿望与念头；不是已实行计划</td>
+</tr>
+<tr>
+<td>LY-X09 本队领取凭据</td>
+<td>苟安实际交给主角，LY03-022至024</td>
+<td>调取本队材料与批次指认；<strong>不等于实收签收账，也不是任意翻账权限</strong></td>
+</tr>
+<tr>
+<td>LY-C05A 本队签收与出仓相合</td>
+<td>管事陪同后，LY04-F02全部呈现</td>
+<td>本队领粮时已缺；已登记途中损耗不能解释这部分缺口</td>
+</tr>
+<tr>
+<td>LY-C05B 本批入仓粮已有发出记录</td>
+<td>LY04-T02至T03</td>
+<td>同批实粮已发出，无另存足额粮；不是所有仓库总账</td>
+</tr>
+<tr>
+<td>LY-C05 本批交收合并笔记</td>
+<td>C05A、C05B真实取得后才组成</td>
+<td>可展开两段来源；首题不得反过来要求先有C05</td>
+</tr>
+<tr>
+<td>LY-C04 实收未足、收到部分已入仓</td>
+<td>LY04-W02至W03</td>
+<td>同批实收与入仓相合；不推定全国粮情</td>
+</tr>
+<tr>
+<td>LY-C03 应征与实收两栏</td>
+<td>地方经手说明及原文，LY04-C02至C03</td>
+<td>要求数与已收到数不同；应征不是库存</td>
+</tr>
+<tr>
+<td>LY-X10 暂停追加催征、要求未改</td>
+<td>LY04-C04；LY08-N01后续回看</td>
+<td>当时的经手说明；不凭此确认善意、合谋或全部制度原因</td>
+</tr>
+<tr>
+<td>LY-C08 同村同批同日报告</td>
+<td>仓中LY06-014、015、018，保留旧编号</td>
+<td>材料确指本批与该日；不新增村中取件环节</td>
+</tr>
+<tr>
+<td>LY-C09 受杖前已确认未征齐</td>
+<td>仓中LY06-017、019</td>
+<td>经手人所见签认与时间；不是凭画面猜笔迹</td>
+</tr>
+<tr>
+<td>LY-C10 回执、日期与当日未补足</td>
+<td>仓中LY06-018、019、021完整核验</td>
+<td>排除说的是别批或先缺后补；021前不把该排除记为已知</td>
+</tr>
+</tbody></table>
+</div>
+<h3 id="section-6">账页怎样展示，避免把答案卡当原件</h3>
+<p>本版采用以下<strong>材料展示编号</strong>，都拆自已有取得场景，不新增搜证地点或凭空补数字。作为原始卡片供引用，原LY-C笔记继续保留为可展开的核对摘要。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>展示编号</th>
+<th>卡片</th>
+<th>来源与收录时机</th>
+<th>与原笔记关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LY-M01</td>
+<td>本队实收签收条目</td>
+<td>CH2-LY04-D01展示本队签收原件；拆自原F02</td>
+<td>C05A的领取端；不是X09凭据</td>
+</tr>
+<tr>
+<td>LY-M02</td>
+<td>本批出仓交付条目</td>
+<td>CH2-LY04-D02实际展示出仓原件；拆自原F02</td>
+<td>C05A的交付端、C05B的发出端</td>
+</tr>
+<tr>
+<td>LY-M03</td>
+<td>途中损耗登记</td>
+<td>CH2-LY04-D03实际展示另列损耗；拆自原F02</td>
+<td>支持核问已登记损耗，不能填补领粮前缺口</td>
+</tr>
+<tr>
+<td>LY-M04</td>
+<td>本批入仓收讫</td>
+<td>CH2-LY04-D04实际展示；原T02至T03核对解释在Q2提交后</td>
+<td>C05B的入仓端</td>
+</tr>
+<tr>
+<td>LY-M05</td>
+<td>地方实收摘录</td>
+<td>CH2-LY04-D05实际展示；原W02至W03核对解释在Q3提交后</td>
+<td>C04的实收端；与M04比对</td>
+</tr>
+<tr>
+<td>LY-M06</td>
+<td>应征及缺额栏</td>
+<td>CH2-LY04-D06实际展示两栏与栏义；原C02至C03核对解释在Q4提交后</td>
+<td>C03的应交端；与M05比对</td>
+</tr>
+<tr>
+<td>LY-M07</td>
+<td>缺额报告与签认</td>
+<td>仓中LY06-014至019依次呈现，019结束才完整</td>
+<td>C08、C09的原件视图</td>
+</tr>
+<tr>
+<td>LY-M08</td>
+<td>经手核验与同日仓账说明</td>
+<td>仓中LY06-018、019、021依次呈现，021结束才完整</td>
+<td>C10的核验视图；含当日未补足</td>
+</tr>
+</tbody></table>
+</div>
+<p>卡片先呈现条目内容与来源，再由玩家判断。原表F02等对白已直接给出核对结果，本版拆为“实际看见两端条目→选择并引用→提交后播放核对解释”，保留事实与原编号的来源联系。每题首次提交前先展示本题M类原始组；提交成立且对应核对说明实际发生后，才收录本题C类摘要。原F02、T02至T03、W02至W03、C02至C03是追溯锚点，须按“原件展示在前、核对解释在后”拆段执行，不能将整段提前发出。C05A在Q1解释结束后取得，C05B在Q2解释结束后取得，C04在Q3解释结束后取得，C03在Q4解释结束后取得；C05须C05A与C05B均真实取得后组成。表中C类等价支持组只供已取得后的回看和重新组织，不作为本题首次提交前提。未写明具体石数或确切日期的原稿，不虚构数字谜题；显示同批标识及文字关系即可。原件展示使用CH2-LY04-D01至D06；本次已明确制作编号，仍不能把M卡误称为已上线素材。</p>
+<h3 id="section-7">后半幕：供述、见闻与真实事件</h3>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>编号与材料</th>
+<th>实际取得位置／来源行</th>
+<th>能支持什么；不能支持什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LY-W01 认罪口供（本轮新增笔记）</td>
+<td>W路线实际播放CH2-LY07-W02后</td>
+<td>他承认并催结案；不是丢粮、扣粮的客观证明，不含合谋</td>
+</tr>
+<tr>
+<td>LY-C11 第二封信</td>
+<td>成功质问后实际取出、读到LY07-006</td>
+<td>李丰劝父亲与苟安停止计划；尚不能代替具体供述</td>
+</tr>
+<tr>
+<td>LY-C12 实际承认安排</td>
+<td>LY07-009至012全部说完</td>
+<td>借主角揭粮情推动退军；不提前包含后面才说明的投魏细节</td>
+</tr>
+<tr>
+<td>LY-X11 接待令牌／X12 正式差遣</td>
+<td>LY05-004实际递牌／010至011批准</td>
+<td>令牌供认人；出营权只由差遣授予</td>
+</tr>
+<tr>
+<td>LY-C07 老妇的粮／C06 村户余粮</td>
+<td>连续视频LY06-003、004、007／008至009</td>
+<td>亲见与听闻的村户困境；不是全国统计或前面对质的前提</td>
+</tr>
+<tr>
+<td>LY-C13 夜访动机</td>
+<td>LY08-003、004、011、N01</td>
+<td>苟安叙述的动机与回忆，不是主角亲见或免责依据</td>
+</tr>
+<tr>
+<td>LY-C14 借魏散谣计划及风险</td>
+<td>LY08-012只记疑问；LY09-P02、P04、P05实际说明后补齐计划；LY09-002至004补风险</td>
+<td>尚未实行；敌方利用与追击是风险，不是已发生事件</td>
+</tr>
+<tr>
+<td>LY-C15 敌方转运简报</td>
+<td>正式查粮差遣交差时，LY09-009、011</td>
+<td>已见修路、筹资、屯田；不能计算未来必胜或必败</td>
+</tr>
+<tr>
+<td>LY-C16 军吏转述丞相回应</td>
+<td>LY09-012至014</td>
+<td>此次缺粮应退，休兵也有风险；不是强迫赞成北伐</td>
+</tr>
+<tr>
+<td>LY-C17 查办风险与补报途径</td>
+<td>LY10-003至006完整说明，沿用C17并补全来源</td>
+<td>可送停止实据、补报与各人责任；可能重责，不能许诺免罪</td>
+</tr>
+<tr>
+<td>LY-C18 苟安停手、交代并署名</td>
+<td>LY11-019至022实际完成</td>
+<td>单方补救已发生；只说愿意尚不完成整条事件</td>
+</tr>
+<tr>
+<td>LY-C19 李严回信与补报</td>
+<td>原LY12B-004至009加本轮明确承接：ACT01实际撤回安排并写成补报；RECV01回信及署名补报到营；RECV02读完附送的更正粮情与本人责任说明</td>
+<td>完成行动、回信到达、补报附件可核后才完整；仅愿意写或观众看见远方镜头都不足</td>
+</tr>
+<tr>
+<td>LY-X14 正式收件</td>
+<td>A的LY12A-003，或B的LY12B-011</td>
+<td>本路线全部材料实际收讫；LY09交差不替代本项</td>
+</tr>
+<tr>
+<td>LY-X15 补充说明送达</td>
+<td>LY12B-013</td>
+<td>原材料未撤、后送说明确已核收；不是“信已写好”</td>
+</tr>
+<tr>
+<td>LY-C20 本路线裁处</td>
+<td>A的LY12A-008至009，或B的LY12B-014至016</td>
+<td>裁处实际告知后收录；两路线互斥，AI不能判刑</td>
+</tr>
+<tr>
+<td>LY-C21 旧卷</td>
+<td>章末LY13-001至004</td>
+<td>长期损耗与回溯方向；不把单一人口数当历史必然</td>
+</tr>
+</tbody></table>
+</div>
+<p>所有来源编号未写前缀时均指CH2-前缀。停用LY-X13与旧五入口继续停用。现有推论LY-I01至I13可保存，但只在其来源实际取得后形成，不作为唯一通关钥匙。</p>
+<h2 id="section-8">五、前半幕逐步策划</h2>
+<h3 id="section-9">S00 获救与认人：固定开场</h3>
+<p>按现行开场播放山路获救、主角想起故事、伤帐认人。保留用户补写的第四次北伐与运粮兵身份，以及“只是不知道这次到哪一步了”的心声，不恢复已删的兵卒传话和问路段。X01来自眼前所见伤情；X02只在两段回忆完整呈现后取得；X03由实际救命和认人共同构成。回忆保持“个人回忆”标签，不能据此认定本轮已经受了何种刑责、投魏或传谣。冒失问话后进入S01。山路失足是开场演出，不增加反应失败或新结局。</p>
+<h3 id="section-10">S01 怎样解释刚才那句冒失的质问</h3>
+<p><strong>题面</strong>：“他问你为何这样说。你要怎样说明来意？”依据在选择后手动放入，提交后是可编辑发言，确认说出才进入苟安回答。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>选择方向</th>
+<th>最低支持与提交条件</th>
+<th>行动与后果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>是我问得冒失。看你伤成这样，我怕你一气之下离营。</td>
+<td>X01；基于眼前伤情表达担心，不把受伤缘由或离营当作已证实事实</td>
+<td>确认说出→LY02-005至008，取得X04、X05</td>
+</tr>
+<tr>
+<td>你救过我，我来看看你，不该拿猜测问罪</td>
+<td>X03；承认刚才是猜测</td>
+<td>同上；两个短选都成立，无隐藏优劣</td>
+</tr>
+<tr>
+<td>我记得故事，所以你已经通魏</td>
+<td>X02不能证明本轮事实</td>
+<td>挡住提交：“记得的故事，还不能证明眼前发生了这件事。”留在本步</td>
+</tr>
+</tbody></table>
+</div>
+<p>沿用R02A与LY02-003、004的意图；新增提交与引用顺序。自由表述同义可过。语气直率不是失败。</p>
+<h3 id="section-11">S02 领粮前的等待说明什么</h3>
+<p>剧情转到第三夜，管事允许查阅并抄取本队一笔后取得X06；回帐后开放问题，不做三夜计时游戏。</p>
+<p><strong>题面</strong>：“这段等待，能向苟安追问什么？”</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>选择方向</th>
+<th>最低支持与提交条件</th>
+<th>行动与后果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>领粮前已有迟交，不能把误期全算成途中酒误</td>
+<td>X06；保留“不能全算”的强度</td>
+<td>开放追问交粮为何迟；确认发言→LY02-021至028</td>
+</tr>
+<tr>
+<td>按你说的饮酒时候，等待还在之前，为什么迟交</td>
+<td>X06＋X04；明确饮酒时间来自本人说法</td>
+<td>同上，取得迟发口供版本C01</td>
+</tr>
+<tr>
+<td>苟安全无责任／李严必定扣了足粮</td>
+<td>等待日期不足以证明免责、库存或动机</td>
+<td>挡住；提示“记录说明何时等粮，还没说明为何迟交。”</td>
+</tr>
+</tbody></table>
+</div>
+<p>发言承接他“怕我跑了”的当下问话并提出有据的等待问题即可，不要求固定句式、重复离营担忧或作留营承诺。X06单独可以支持等待先于领取，不强制把口述饮酒时间当客观时间。</p>
+<h3 id="section-12">S03 怎样让他愿意暂留</h3>
+<p>按LY03先实际读第一封信，收录C02和X07、X08。读信不另设谜题；“像封口”可留作怀疑，不能提交“已经证实李严合谋”。</p>
+<p><strong>题面</strong>：“要请他先留下，你能提出什么可实行的办法？”</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>选择方向</th>
+<th>最低支持与提交条件</th>
+<th>行动与后果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>先核本队迟交材料，请管事陪同，循正常渠道报告，请他暂留</td>
+<td>X06支持已有可查问题；方案必须含核本批、正式渠道、暂留请求，不假称已经获准</td>
+<td>提交方案→确认说出→苟安实际回答“先不走”→交出X09，补全C01同批同日口供</td>
+</tr>
+<tr>
+<td>我保证让你无罪／保证北伐继续</td>
+<td>无现有材料能支持结果保证</td>
+<td>不能提交这项保证；删改后再试</td>
+</tr>
+<tr>
+<td>只说“相信我，别走”</td>
+<td>请求可表达，但不足以形成本任务可执行方案</td>
+<td>反馈查什么、如何送出尚未说明；不触发离营或结局</td>
+</tr>
+</tbody></table>
+</div>
+<p>管事陪同及仓吏准查在S04实际发生，不作为本题额外措辞门槛；方案需核本批、正式渠道、暂留请求三项，不假称权限已经获得。</p>
+<p>“暂留”是当前约定，不等于已永久撤回计划。取得X09后到S04；不得反过来拿尚未获得的X09作为本题前提。</p>
+<h3 id="section-13">S04 在哪里查，能查哪些</h3>
+<p>按LY04-001至004：主角凭本队凭据领取材料，管事陪同向仓吏核问。仓吏只准看本批收发。主场景为仓中查账与交接案；前线接收人、督运经手人、地方经手人的核对，集中在这次获准查账中呈现，不恢复五个独立地图入口。</p>
+<p>第一次真实展示M01、M02、M03，展开Q1。后续每次“继续核查”先发生对应查阅对白、取得新记录，再开新问题。答对不直接掉落证据；没有读到材料不能引用。</p>
+<h3 id="section-14">Q1 领取与发出：这笔缺额，该从哪里追问</h3>
+<p>对应CH2-LY04-Q1。已得本队签收、出仓交付与途中损耗登记。这里比较的是领粮时已有的缺额和另列途中损耗，不否认途中存在任何损耗。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答</th>
+<th>可接受依据</th>
+<th>提交后开放的行动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>先核对领取之前的缺口</td>
+<td>M01＋M02，或来源齐全的C05A；结论限于本批领粮前已缺</td>
+<td>Q1A→原F02核对说明，完成后收录C05A；Q1GO“继续核入仓与发出”→确认后T01→D04取得M04→Q2</td>
+</tr>
+<tr>
+<td>先追问苟安经手后的已登记损耗</td>
+<td>M01＋M03；C05A可替代M01的经手核对，但仍须实际损耗登记；不能断言它解释整笔缺额</td>
+<td>显示“可据此追问，尚不能定责”；“去找苟安核问”→W路线。若改为继续核账，须改选上一项并用其充分依据重新提交，不能凭草稿直达Q2</td>
+</tr>
+<tr>
+<td>自由补充为“整笔缺额都是苟安途中弄丢”</td>
+<td>被已取得的交付与签收记录直接否定</td>
+<td>挡住提交，即使故意只引用损耗也不放行</td>
+</tr>
+</tbody></table>
+</div>
+<p>无关／不足反馈：“这份材料尚不能说明缺口出现在领取前还是领取后。”X09凭据不能替代M01。Q1不要求尚未取得的C05、C04或应征记录。</p>
+<h3 id="section-15">Q2 发出与入仓：入仓的这批粮，后来发往哪里</h3>
+<p>对应CH2-LY04-Q2。实际读完T段原件展示后，M04可用；本题提交成立并读完核对解释后才得C05B。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答</th>
+<th>可接受依据</th>
+<th>提交后开放的行动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>本批入仓实粮已有发运对应，继续查来粮</td>
+<td>M04＋M02，或C05B；同批对应及不存在另存足粮的信息齐备</td>
+<td>Q2A→原T02、T03解释，完成后收录C05B，并按已有来源组成C05；Q2GO“继续核地方实收与入仓”→确认后W01→D05取得M05→Q3</td>
+</tr>
+<tr>
+<td>足额粮仍被扣在仓里</td>
+<td>已得记录明确没有另存足额现粮；C01口供不能推翻仓账</td>
+<td>不通过；提示“本批入仓与发运已有对应，所引材料没有支持另存的足额粮。”</td>
+</tr>
+</tbody></table>
+</div>
+<p>只有签收或途中损耗不够证明仓内去向；重复放同一张卡不增加支持。</p>
+<h3 id="section-16">Q3 入仓与实收：地方收到的粮，是否都记入仓中</h3>
+<p>对应CH2-LY04-Q3。实际读完W段原件展示后，M05可用；本题提交成立并读完核对解释后才得C04。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答</th>
+<th>可接受依据</th>
+<th>提交后开放的行动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实收与入仓相合，缺口还应往征收端找</td>
+<td>M05＋M04，或来源完整的C04</td>
+<td>Q3A→原W02、W03解释，完成后收录C04；Q3GO“核对应征与实收”→确认后C01→D06取得M06→Q4</td>
+</tr>
+<tr>
+<td>地方已经收足，只是没有入仓</td>
+<td>实收记录已明确未足，且已收到部分与入仓相合</td>
+<td>不通过；提示“这些材料支持已收部分入仓，不能证明曾经收足。”</td>
+</tr>
+</tbody></table>
+</div>
+<p>不由此归罪某个村户，也不让玩家选择加征以凑齐数值。</p>
+<h3 id="section-17">Q4 实收与应征：应当交多少，便是已经收到多少吗</h3>
+<p>对应CH2-LY04-Q4。取得两栏原文与栏义说明后开题，不预先播放核对结论；本题提交成立并读完核对解释后才得C03，随后读到原LY04-C04才取得X10。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答</th>
+<th>可接受依据</th>
+<th>提交后开放的行动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>应征不等于实收，这批粮没有备齐</td>
+<td>M05＋M06，或C03＋C04；此前链路来源可展开回看</td>
+<td>Q4A→原C02、C03解释收录C03，再到C04收录X10；Q4GO“请管事核缺额报告与签认”→确认后LY06-014进入S05；可保存I01／I02，但不另考合成编号</td>
+</tr>
+<tr>
+<td>应征多少就是现粮多少，仍是有人扣粮</td>
+<td>把要求数当作已收到数，与两栏释义冲突</td>
+<td>不通过；提示“应征记录不能证明现粮已经存在。”</td>
+</tr>
+</tbody></table>
+</div>
+<p>I02若进一步表述“并非途中或仓中丢掉的一批足粮”，还须保留Q1至Q3的来源关系。不得仅凭末题答案补造前面未核的环节。</p>
+<h3 id="section-18">S05 核签认：用一段剧情把时间和知情核实</h3>
+<p>管事实际取出缺额报告，经手人完成LY06-014、015、017、018、019、021：同村同批；苟安在受杖前签认；对应其指认的日期；当日仓账未补齐。依序取得C08、C09、C10与M07、M08。</p>
+<p>这里不设笔迹辨认、日期连线或“猜签字是谁”。读完后提供“带材料回伤帐”，玩家确认返回，进入S06。仓中核验不能被访村视频或未来口供替代；M07、M08不是提交题，无须为取得它们再新增判断门槛。</p>
+<h3 id="section-19">S06 当面对质：该拿哪一处矛盾问他</h3>
+<p>题面改为较中性的：“他先前的说法，与查到的记录能对上吗？”对比由玩家完成后，行动预览再显示具体质问。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答方向</th>
+<th>提交条件</th>
+<th>发言与结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>他已确认未征齐，却仍告诉我早已备好；应问清缘由</td>
+<td>C01完整口供＋C08＋C09＋C10；或C01＋M07＋M08；或来源仍有效的I05</td>
+<td>提交只证明矛盾，开放“当面问清”；确认可编辑台词后→LY07-004；实际读第二封信才得C11，实际听完009至012才得C12</td>
+</tr>
+<tr>
+<td>先请他解释已经登记的经手损耗，不把它算作整笔缺口</td>
+<td>同Q1有限核问依据；须明确范围</td>
+<td>可进入W的责任核问；已知账证和签认保留，不退回未知状态</td>
+</tr>
+<tr>
+<td>已经证明他和李严合谋／他早已投魏</td>
+<td>此时尚无具体承认与已实施事实</td>
+<td>不通过；两封信尚未齐，第一封信和令牌也不能替代供述</td>
+</tr>
+<tr>
+<td>整批粮被他丢了或扣下了</td>
+<td>与已核材料直接冲突</td>
+<td>不通过，不再沿用旧W01强指控入口</td>
+</tr>
+</tbody></table>
+</div>
+<p>成功质问参考句沿用：“你已确认没征齐，为什么还说粮早已备好、被李严扣住？”接受同义短句，不强制先有I04、I05，不要求先知道合谋。一次指出矛盾后进入原坦白，不增加多轮攻防。对白确认前可取消，取消不让苟安提前回应。供述收录后仍完整播放LY07-013至018及024，保留“救命是真的，利用也是真的”的情感落点，再接LY05邀请，不能一取得C12便跳过。</p>
+<h3 id="section-20">W 核问、过快认罪、停止调查：唯一调查失败路线</h3>
+<p><strong>本轮调整旧LY07-W01的入口</strong>。从Q1或S06进入时，玩家真正说出的是有限核问，例如：“先把你经手后登记的损耗说清楚。你当时怎样交代的？”苟安以原W02回应：“好，这笔罪，我认。你报上去吧，别再查了。”</p>
+<p><strong>入口只在成功对质、进入坦白序列之前开放。</strong> 一旦已实际触发成功质问后的坦白，或已取得C12，回看Q1／S06的旧判断只能补充澄清，不能重进W认罪停查路线。否则会出现玩家已经知道合谋，结局却声称没查清的矛盾。分支权限按真实事件检查，不按当前滚动到哪一题决定。</p>
+<p>W02结束后才取得LY-W01口供。画布明确保留：“他认了罪，却没有解释领粮前已有的缺口。”这句提示不补出合谋答案。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>选择／动作</th>
+<th>条件与执行</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>继续核查粮账／继续问未解的矛盾</td>
+<td>不要求新证据；保留全部已得记录及这次口供</td>
+<td>Q1早入者返回尚未完成的粮账；S06入者返回对质。不能直接跳到只有后期材料才能答的节点</td>
+</tr>
+<tr>
+<td>把认罪当作调查终点，停止追查</td>
+<td>只能在实际核问且W02已说出后选择</td>
+<td>出现明确结案确认；这是行动草案，不新生成“丢粮已证实”判断</td>
+</tr>
+<tr>
+<td>确认结束调查并呈交现有材料</td>
+<td>确认框说明：缺口与其说法仍有未解之处；交付现有真实记录与认罪口供，由查办接管</td>
+<td>BAD1至BAD3：真实缺额上报，大军缺粮而退，苟安问“大军退了吗？”；调查失败“认下来的罪”</td>
+</tr>
+<tr>
+<td>返回再查</td>
+<td>结案确认前均可返回</td>
+<td>不消耗时间，不丢材料，不重播已发生认罪</td>
+</tr>
+</tbody></table>
+</div>
+<p>不得将相反账证从提交材料中隐去；不得把“不再追查”包装为系统认可的定罪结论。失败原因是停在了能被利用的口供上，没有查清并阻止安排。原稿失败结局不追加苟安死亡，不授予C11／C12，不接访村、A或B。</p>
+<p>失败后“从首次核问前重查”是明确读取检查点：早入者恢复首次实际核问前的全部资料与事件，包括M01至M03、先前口供、第一封信和领取凭据，不含之后才取得的账页、签认与供述；晚入者恢复当时已有的仓账与签认。检查点在首次实际执行W核问前保存，重复开关页面或回看不能覆盖；重试提示明确将回到这一时点。清除检查点之后的分支事件，不继承尚未取得的资料。普通回看与返回继续查不等于读档，不清除真实口供。</p>
+<h2 id="section-21">六、后半幕逐步策划</h2>
+<h3 id="section-22">S07 去看种粮的人：连续视频，不能再加证据考试</h3>
+<p>成功对质后接LY05邀请。令牌实际递出取得X11；管事在010至011说明差遣已批准才取得X12，开放随返程粮队出营。令牌单独不放行。</p>
+<p>村庄按LY06-001至012连续播放：老妇交粮、老运粮人带路、村户所剩口粮与种粮、劳力误农时。完整相关内容呈现后收录C06、C07；原视频可跳过时，也必须采用明确的剧情完成规则，不能仅打开播放器就授予资料。</p>
+<p>不设置“是否同情老妇”的正确选项。视频让账面缺口落到人身上，不用一户遭遇证明全国缺粮。结束返营接S08；不回村取得签认，不恢复停用的LY06-013及022至026。</p>
+<h3 id="section-23">S08 夜访、未实行的计划与军中回应</h3>
+<p>先播放苟安讲述的夜访回忆，按来源收录C13。画面标明这是他的叙述，不让主角突然成为当夜目击者。随后P01至P05才具体交代投魏、争取被放回、散谣逼召军，C14补齐且标“未实行”。</p>
+<p>按LY09-002至005讨论风险：交代粮道、敌方追击、谣言难控都是可能后果，不剪成魏军已实际行动的证据。</p>
+<p>再去获准交差处，实际提交粮情见闻，接触转运简报C15；军吏实际转述后取得C16。此处交差是报告本批粮情，尚不是LY10决定的完整案卷交办，不能提前授X14或锁定A。消息带回伤帐，进入S09。</p>
+<h3 id="section-24">S09 明白了他们的苦处，是否就能接受他们的办法</h3>
+<p>沿用LY09-C01，作为同一纵向画布的后半段。这里允许形成不同强度、不同立场的合理判断，不要求把所有推论连齐才见军吏。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>判断方向</th>
+<th>最低支持／允许的语义</th>
+<th>可开放的行动与限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>村户确实难以再承受，眼下这批粮应据实请退</td>
+<td>C03＋C04或I02，配C06或C07说明民生；C16可补转述回应</td>
+<td>可请求核明民食与粮情；不能由此宣布以后永不再战</td>
+</tr>
+<tr>
+<td>能理解不愿再征，仍应问清隐瞒与借敌的责任</td>
+<td>C13＋C12，谈借魏时再引完整C14</td>
+<td>可继续商谈替代办法；同情不授予无罪事实</td>
+</tr>
+<tr>
+<td>借魏停战的后果，他们未必收得住</td>
+<td>完整C14，含具体计划及无法保证敌方配合；谈敌恢复时须C15</td>
+<td>可要求停止这一步；不需先认同诸葛亮战略</td>
+</tr>
+<tr>
+<td>我仍主张休战，但不能保证魏军也停下</td>
+<td>C15；可配C16，明确这是风险与转述</td>
+<td>可保留休战立场进入补救方案，不算错误答案</td>
+</tr>
+<tr>
+<td>休战必定无风险／敌方必定按他们的计划行事</td>
+<td>C14、C15不能支持保证，已有反例风险</td>
+<td>挡住相应断言，保留其他成立部分</td>
+</tr>
+<tr>
+<td>既然护民，隐瞒和散谣都不用交代</td>
+<td>动机与行为不能互相抵销，不能形成完整呈报方案</td>
+<td>不给完整送案／寄信资格；提示仍缺责任与具体补救</td>
+</tr>
+</tbody></table>
+</div>
+<p>材料不足时可以回看或暂存，不触发失败。玩家也可直接带已有原始材料去S10询问途径；不要求先生成I08、I09、I10或I11。</p>
+<h3 id="section-25">S10 真相已明，要怎样送出去</h3>
+<p>先完整播放LY10-001至007，补全C17：可以将停手实据、补报及各人责任一同送核；也可正式交案；可能重责甚至处死；主角不能保证处分；完整交案经确认后按查办继续。</p>
+<p><strong>题面</strong>沿用：“真相已明，要怎样送出去？”这一步是知情处置选择，两个方向均可成立。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>选择</th>
+<th>提交方案的条件</th>
+<th>独立确认与后续</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>直接递交完整材料，请求正式查办</td>
+<td>已取得完整粮账、C01及C08至10、两封信、C12、完整C14；已实际听完C17风险。判断引用可以用来源完整的事实整理，不要求手选每张卡</td>
+<td>先显示完整材料目录和风险；再由LY10-011确认交案，才进A查办段</td>
+</tr>
+<tr>
+<td>先争取两人停下计划、补明责任，再共同呈报</td>
+<td>C14支持有未实行后手可停止；C17支持补报途径；不承诺免罪、不隐瞒材料、不假称双方已经同意</td>
+<td>确认“去与苟安商量”→S11；只是尝试B，不提前进入B结局</td>
+</tr>
+<tr>
+<td>回看材料，暂不决定</td>
+<td>随时可用</td>
+<td>不按停留时间、关闭页面或未写信默认选A</td>
+</tr>
+</tbody></table>
+</div>
+<p>所有送案均附上当前已经取得的真实材料与来源，事实、人物说法和推论分栏，不让玩家通过取消某张卡隐去责任。引用是说明“为什么这样选择”，案卷附件完整性是另一项检查。准备目录中若缺必要事实，应回相应取得节点；不是自动补发。</p>
+<p><strong>A的进入与结果</strong>：实际交案、X14收件后进入原LY12A查办。苟安仍把主责揽向自己，双方没有共同完成停手补报，主角不替李严删去责任；随后正式裁处告知，才出现李严革职、苟安被处死。这个具体结局是原稿待审的游戏改编，不从“未达B”一个条件自动生成，也不由AI判刑。结束接空帐、空粮车与S14。</p>
+<h3 id="section-26">S11 共同写信：每个主张都要接回依据</h3>
+<p>复用现有画布。玩家先选希望放进信中的主张，再逐项主动放入相关依据，也可直接写同义主张。提供短选，允许一句话补重点，不要求长文或六张卡全选。</p>
+<p><strong>题面</strong>：“怎样请他们停下，同时把实情与责任交出去？”</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>主张与短选方向</th>
+<th>支持材料／通过条件</th>
+<th>缺少时的修补反馈</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>据实报缺，这次不足便请退；不替所有未来战事作保证</td>
+<td>I02或C03＋C04及对应账链；不能写成已经补足</td>
+<td>回看本批缺额，不让漂亮措辞替代实数</td>
+</tr>
+<tr>
+<td>保留种粮民食，核明现粮与可支撑期限</td>
+<td>C06或C07，配真实缺额；“去核期限”是补救请求，不能编造具体天数</td>
+<td>LY11-011：村里的种粮、口粮怎么办；012：不能只保眼前两人</td>
+</tr>
+<tr>
+<td>撤回借魏散谣的后手</td>
+<td>完整C14；明确停止的是具体未实行计划，不只是口头“以后小心”</td>
+<td>留在商谈，补充要停止的具体行为</td>
+</tr>
+<tr>
+<td>各自说明隐瞒、误导与参与经过，接受核查</td>
+<td>C01与签认矛盾、C12、C14；责任如实，不把全部缺粮说成个人偷扣</td>
+<td>LY11-014：原来做过、准备做的事不能省去</td>
+</tr>
+<tr>
+<td>由正式渠道完整呈报，并核实回信、收件与补充说明</td>
+<td>C17途径，结合当前已核材料；不得假称已经收件</td>
+<td>LY11-015：实情准备送到谁手里，怎样确认到达</td>
+</tr>
+<tr>
+<td>承认敌方也在恢复，不能许诺休战毫无代价</td>
+<td>C15即可支持已见活动；C16可补回应，不能当必胜证明</td>
+<td>CH2-FB-011；允许继续主张休战，不要求赞战</td>
+</tr>
+</tbody></table>
+</div>
+<p>一次提交只检查本次各项判断是否有据。局部合理、方案尚不完整时，可标“可据此商谈”，确认向苟安说出后由对应追问补齐。<strong>正式寄信</strong>则须六项内容均得到表达或等价覆盖、无矛盾和无免罪保证；不把“商谈已成立”当“整封信足够”。</p>
+<p>任何“我保证你无罪”的句子均要求删改，不能作为有效承诺。提交时只显示界面不足反馈；未确认商谈前，LY11-013只能作提示文字引用，不执行新NPC回应。已确认的商谈中可由其提醒责任边界。生成预览没有剧情效力，玩家编辑后须重新核验，实际确认的版本才交给角色。取消、服务异常、答得短、不同意继续北伐，都不触发A或调查失败。</p>
+<p>方案完整并实际说出后，按017至022：苟安说出代价，主角承认不能保生；苟安明确留营待核，写明误导、参与经过，实际划去赴魏后手并署名。全部发生后C18才完成。此时“准备送出”的信与“已经送达”的信必须分开。</p>
+<p>C18已经完整后，取消寄信、返回改稿、再次提交都保留真实停手与署名。重提只核当前信稿或补充说明，完整后再次开放寄信确认，不重播017至022假装首次承诺，不抹去原责任说明及历史确认版本；缺项时仍可商谈修补，但不能以改稿撤回已经发生的补救。</p>
+<p>玩家若在B尝试中主动改为直接交案：<strong>本版仅在给李严的信实际寄出之前提供此入口</strong>。回S10风险与附件核对，保留已发生的商谈、单方署名等补救材料，再明确确认才进入查办；A裁处还须经过直到结案仍未形成双方共同停手补报的原稿过程。信实际寄出后，本版按既定回信剧情完成查收与补报，不新增中途切A或李严随机拒绝路线。双方停手已经完成后，返回只核对材料并继续B送核，不能用A按钮抹去补救。多次改稿、等信和返回均不自动切A。</p>
+<h3 id="section-27">S12 寄信、回信、正式收件：三个不能合并的事件</h3>
+<ol>
+<li><strong>寄给李严</strong>：玩家确认送出当前版本，按LY11-023至024实际交传信人。收件人、正文和附件快照固定。修改画布不会撤回已经寄出的信；后续修改作为补充说明，不覆写原信。</li>
+<li><strong>李严读信与回信</strong>：播放LY12B-001至005，观众看见他的反应；主角证据池暂不增加。本版将原稿“实际收手纠报”落实为三个明确承接节点：CH2-LY12B-ACT01呈现李严实际撤回原先安排、写成更正粮情及本人责任说明并署名；CH2-LY12B-RECV01呈现回信连同这份补报实际到营，再读原006至009；CH2-LY12B-RECV02核阅随信附送的补报，区别“愿意补报”与“补报已经形成并交回”。这些新增执行文案仍待review，不新增未有来源的涉事人物或军情。全部完成才形成完整C19。等待采用剧情转场，不是真实倒计时。</li>
+<li><strong>完整送核与核收</strong>：C18、C19真实完成后，CH2-LY12B-C01确认页列全部原材料和两人补充说明。选择返回只回看，不撤销停手、不重寄信。确认后010至011实际收件给X14；012至013核实后送说明给X15；之后才允许播B正式裁处。</li>
+</ol>
+<p>此段可选整理题：“现在已经完成了什么，还差什么？”</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>回答</th>
+<th>提交条件</th>
+<th>开放行动</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>两人都已停手说明，仍须把完整材料送核</td>
+<td>C18＋C19，原始事件均完成</td>
+<td>显示B正式交件确认；无需先生成I12</td>
+</tr>
+<tr>
+<td>信寄出了，所以李严已经收手</td>
+<td>仅寄信事件不足</td>
+<td>挡住；回到等待／查收回信，不假造C19</td>
+</tr>
+<tr>
+<td>双方同意，所以已经无罪或已获轻处</td>
+<td>停手不是免罪，裁处尚未告知</td>
+<td>挡住这项判断；仍可走完整送核</td>
+</tr>
+</tbody></table>
+</div>
+<p>整理题不替代真实事件。已满足事件条件的玩家可直接检查材料、确认送核，不再强迫做一次重复合成题。B的正式结果沿用LY12B-014至021：李严交出调度职责受处分；苟安免队长、留下做普通粮兵；退军令仍来，归途推空车。裁处来自剧情告知，不是信件评分。</p>
+<h3 id="section-28">S13、S14 处置与尾声</h3>
+<p>A或B的裁处只记本路线C20，不同时发两份结局。按各自演出结束后，接旧卷LY13-001至004，取得C21，开放全章来源回看。主角由这批粮的不足看到更早的人手、田地与征发损耗，但不新增人口计算或下一章必然结论。</p>
+<p>可选尾声整理：“换掉眼前的人，为什么仍没有补上粮？”已有本批不足、实际处置与C21可支持回溯方向；不必完成I13才能结束本幕。调查失败不播放这一段完整真相尾声。</p>
+<h2 id="section-29">七、结局条件与恢复规则</h2>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>路线</th>
+<th>必须真实发生</th>
+<th>不足以触发的情况</th>
+<th>最终结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>调查失败W</td>
+<td>有依据的有限核问已说出；苟安实际认罪；玩家选择停止追查；明确确认结束本次调查并交付现有材料</td>
+<td>选了错答案、提交被挡、只听到认罪、关闭画布、生成异常</td>
+<td>“认下来的罪”；缺粮退军；未查明合谋、未促成停手；不追加死刑</td>
+</tr>
+<tr>
+<td>A查办处置</td>
+<td>真相资料齐备；风险完整告知；玩家明确确认完整交案；正式收件；直到最终裁处，双方仍未共同完成停手、补报与各自交代责任；后续查办与裁处实际发生</td>
+<td>一次修补失败、B尚在商谈或等信、没有勾满卡片、选择休战；已有双方补救也不能硬切A</td>
+<td>李严革职、苟安死亡、仍因缺粮退军；结局事实沿用原稿待审设定</td>
+</tr>
+<tr>
+<td>B停手后送核</td>
+<td>完整方案；苟安实际撤回后手、交代、署名；李严回信到营且实际停手补报；完整正式收件；补充说明核收；裁处告知</td>
+<td>信写好、已寄信、只有一人承诺、观众看见远方镜头、仅会说好话</td>
+<td>两人受处分，苟安活着做粮兵；仍退军；不免除责任</td>
+</tr>
+</tbody></table>
+</div>
+<p>没有第四个“写得不够好”结局，没有隐形分数与倒计时。允许不赞同北伐，但必须正视已知风险和完整责任。</p>
+<p>修改前置判断时，只使依赖它的推论、未执行方案和旧预览失效；保留真实取得的账页、已说出的口供、已经批准的差遣、已寄信与已收手事件。后续资料已真实取得后，即使修改旧题，也不能把它们抹掉或要求NPC假装没说过；玩家可直接引用仍有效的原始充分组重新组织判断。</p>
+<p>正式交案后不能用普通返回按钮撤销。重试须明确提示加载哪个剧情检查点，并恢复那时的资料、判断、行动与信件状态。旧样稿“返回核查就清空行动阶段”的演示便利不进入正式章节。</p>
+<p>保存需区分：已得材料及来源片段、判断草稿、已提交判断及依赖、已确认发言、实际行动事件、当前分支、送信版本、收件记录。恢复后不把未完请求、未读完来源或未收到回信当完成；旧版无门槛判断不能直接继承为已通过。</p>
+<h2 id="section-30">八、文案表同步与人工review结构</h2>
+<p>本轮迁移与回读已完成。按用户最新指令，第二章及后续各章与第一章统一为“逐句执行”“线索字典”“规则与状态”，业务列分别为八／五／五列。原第二章“最终文案／笔记字典／执行规则”的五／五／四结构只作历史基线，本次迁移后不再作为例外恢复。保留稳定编号与已有用户修改，写前比较原值，写后回读内容及格式；不能整表覆盖用户并发编辑。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>页签</th>
+<th>固定表头与顺序</th>
+<th>人工review用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>逐句执行（8列）</td>
+<td>编号｜说话人／类型｜一句对白／界面文案｜文案说明｜线索录入／引用（人工）｜线索（编号）｜触发条件逻辑（人工）｜触发条件与逻辑衔接（编号）</td>
+<td>人工列直接说明问题、证据从哪里来、什么依据能提交、通过后做什么、未通过怎样返回；技术编号另列</td>
+</tr>
+<tr>
+<td>线索字典（5列）</td>
+<td>线索编号｜类型／来源｜内容｜录入触发｜边界／用途</td>
+<td>明确事实、人物说法、回忆与推论的性质，来源完整后才收录</td>
+</tr>
+<tr>
+<td>规则与状态（5列）</td>
+<td>编号｜角色或类型｜最终文案｜线索｜触发与关系</td>
+<td>维护第二章提交门槛、真实行动、分支与恢复条件，不重复抄成全局规则</td>
+</tr>
+</tbody></table>
+</div>
+<p>逐句执行B／C／D／E／G为浅黄人工内容列，A／F／H为浅蓝AI维护列；字典与规则页业务列为浅蓝。保留表头与说明，新增行沿用列色，不把颜色说明导入剧情。新增节点放在对应段落旁便于顺读，历史停用节点置后并明确不导入；实际播放仍按稳定编号和规则跳转，不按表尾Q／W／BAD等节点的物理行序推断。</p>
+<p>持续简化以人工可review为准：一题只问一个关键因果，证据只说明本题所需事实；已有材料和原画布足够时不增加取证或重复考试。允许有据的局部方案先商谈，完整寄信再核完整方案。简化不能删掉关键反证、真实责任、行动确认与结局差异。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>目标</th>
+<th>需修改内容</th>
+<th>保留内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LY01-002、007至009、011至012及LY02-003、009</td>
+<td>合并用户新开场；X01改实际所见伤情，X02仅回忆，X03为救命与认人；来意改基于眼前伤情，回应改“多心了”</td>
+<td>用户删除的003至006、010不恢复；原救命、认人及新心声保留</td>
+</tr>
+<tr>
+<td>LY02-002、018；LY03-018及各选项</td>
+<td>先选方向再引用，提交检查后开放确认发言；不足保留草稿</td>
+<td>原短选、角色回应、取得来源</td>
+</tr>
+<tr>
+<td>LY04-D01至D06及F02／T02至03／W02至03／C02至03</td>
+<td>D01至D06先展示M原件；相应Q提交通过后才播放原解释并收录C摘要；Q1GO确认后走T01→D04→Q2，不提前播T02／T03</td>
+<td>同批事实、经手人身份、C03／04／05A／05B及原编号追溯</td>
+</tr>
+<tr>
+<td>Q1A至Q4B、R04-RETURN、R04-CANVAS</td>
+<td>删除选项直接跳转；新增支持判定与行动确认；Q1B改有限损耗核问；其他强断言阻拦</td>
+<td>四步顺序、回看、无错误次数惩罚</td>
+</tr>
+<tr>
+<td>LY07-E01至E03、W01至W04、R07-EXPRESSION／BAD／RETRY</td>
+<td>中性题面；源证据或等价推论；W01改有限核问；按入口返回；明确停查确认与检查点</td>
+<td>原坦白、原认罪、唯一调查失败方向</td>
+</tr>
+<tr>
+<td>线索字典C01、C08至10、C14、C17至19</td>
+<td>补全分段取得条件与未完成状态；C17含途径，C19须回信到营</td>
+<td>原编号、证词与事件性质</td>
+</tr>
+<tr>
+<td>线索字典M01至M08、W01</td>
+<td>新增材料视图与认罪口供来源，不重复计数</td>
+<td>原C类核对摘要仍可展开引用</td>
+</tr>
+<tr>
+<td>LY09-C01、LY11-003至016、R09／R11</td>
+<td>支持局部判断与等价依据；商谈资格与完整寄信条件分开；不自动替玩家勾证据</td>
+<td>战略分歧可保留、六项方案内容、已有修补对白</td>
+</tr>
+<tr>
+<td>LY11-010、023至024</td>
+<td>010定位为玩家确认并向苟安呈现的信稿；023至024才真正发给李严</td>
+<td>所确认正文快照、真实署名与传信</td>
+</tr>
+<tr>
+<td>LY11-017至022及重入规则</td>
+<td>C18完整后取消寄信、改稿或再次提交，只核当前版本及补充说明，不重演首次停手署名；完整后重开寄信确认</td>
+<td>已完成停手、署名、责任说明与历史确认版本不抹去</td>
+</tr>
+<tr>
+<td>LY12B-001至009、C01、R12-AB</td>
+<td>新增ACT01实际撤回并完成署名补报、RECV01回信与附件到营、RECV02核阅补报；远方镜头不直接发玩家证据；齐备后另行送案确认</td>
+<td>李严读信内容、补报、X14及X15核收</td>
+</tr>
+<tr>
+<td>LY12A、LY12B裁处段</td>
+<td>A不由缺少B条件自动触发；补救材料如实保留；正式裁处后给C20</td>
+<td>原A/B方向与具体处分待review状态</td>
+</tr>
+<tr>
+<td>笔记X10、旧I01／02／04／05描述</td>
+<td>去除仍指向已停用村中二次核验的文字；旧“错误仅待核仍继续”改成提交门槛</td>
+<td>可选推论，不强制先合成编号</td>
+</tr>
+<tr>
+<td>小说一、二、四、五、十一、十三节及必要承接</td>
+<td>新开场、先看账页再判断、有限核问后误采认罪、寄信前可改交案保留补救、李严实际停手署名补报并到营</td>
+<td>十四节结构、主要对白、原来人物动机与结局情绪</td>
+</tr>
+</tbody></table>
+</div>
+<p>本轮维护各题提交反馈、继续核查确认、W早入／晚入返回、实际补报与回信到营、寄信前B尝试转直接交案的风险确认。原件展示使用CH2-LY04-D01至D06，提交使用Q1S至Q4S，动作确认使用Q1GO至Q4GO；ACT01、RECV01、RECV02均在CH2-LY12B下，与本轮机制稿和书稿保持同一事件边界。新增编号由执行者维护并核验，不要求用户填写。主角、苟安、管事、仓吏、经手人、军吏、李丰信件与李严镜头沿用原角色；不因图中有五环就扩成五处必须新建的场景。</p>
+<h2 id="section-31">九、逐路线验收用例</h2>
+<p>这是完整策划的待实现验收清单，不冒充游戏测试结果。已有网页样稿验证只覆盖四题与一条错路。</p>
+<div class="table-scroll" role="region" aria-label="表格，可左右滚动" tabindex="0"><table>
+<thead>
+<tr>
+<th>用例</th>
+<th>应有结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>看见伤情、读到往事回忆，但尚未取得本轮受罚或投魏事实</td>
+<td>X01只支持眼前有伤，X02仍为个人回忆；不恢复删除的旁人消息，不把伤情当受罚缘由</td>
+</tr>
+<tr>
+<td>只选答案／只放无关材料／重复同卡</td>
+<td>留在本步，说明不足，不新增资料或行动</td>
+</tr>
+<tr>
+<td>提交不足时出现带角色口吻的反馈</td>
+<td>只是界面反馈或引用，不算NPC实际发言、认罪或新口供；确认商谈后才可能发生真实追问</td>
+</tr>
+<tr>
+<td>用X09领取凭据替代本队实收签收</td>
+<td>不足；凭据只授调取本队材料的资格</td>
+</tr>
+<tr>
+<td>Q1初次用M01＋M02；回看时用已取得且来源齐备C05A</td>
+<td>均可提交；首次不要求本步解释后才取得的C05A，更不要求后续C05</td>
+</tr>
+<tr>
+<td>四题首次打开与提交后解释</td>
+<td>D01至D06先给本题原件，C05A／C05B／C04／C03分别在Q1／Q2／Q3／Q4通过且解释实际发生后才给；Q1GO后先T01→D04→Q2，不提前取得C05B</td>
+</tr>
+<tr>
+<td>Q1用M01＋M03追问损耗</td>
+<td>只开放核问，不证明整笔缺额由他造成</td>
+</tr>
+<tr>
+<td>已有交付反证却只引用损耗指控全部丢粮</td>
+<td>拒绝强断言；不允许靠不引用反证绕过</td>
+</tr>
+<tr>
+<td>Q2至Q4错误强断言，放全材料</td>
+<td>仍拒绝；不是卡片数量检查</td>
+</tr>
+<tr>
+<td>每步提交后取消“继续核查”</td>
+<td>下一批材料不授予；返回可再次确认</td>
+</tr>
+<tr>
+<td>C01只有早期“迟发”版本；C10尚未读到021</td>
+<td>不得提前引用完整同批备妥口供或排除先缺后补</td>
+</tr>
+<tr>
+<td>未有第二封信／供述，先写合谋</td>
+<td>挡住；不能把坦白结果当作引出坦白的条件</td>
+</tr>
+<tr>
+<td>S06原始充分组与有效I05</td>
+<td>都能质问；不强制先生成推论编号</td>
+</tr>
+<tr>
+<td>W早入继续查、W晚入继续问</td>
+<td>回正确取得阶段，保留已得认罪；不跳未解锁题，不清除真实事件</td>
+</tr>
+<tr>
+<td>已进入坦白或取得C12，再回看Q1选核问</td>
+<td>只允许回看／澄清，不重新打开W停查结局</td>
+</tr>
+<tr>
+<td>W认罪后返回／取消结案</td>
+<td>不进入失败；只有明确确认停查才进入BAD</td>
+</tr>
+<tr>
+<td>仅持令牌、尚无差遣</td>
+<td>不出营；批准后才接连续村庄视频</td>
+</tr>
+<tr>
+<td>村庄视频中或尚未访村</td>
+<td>没有额外问答；不得提前给C06／07或用于先前对质</td>
+</tr>
+<tr>
+<td>夜访镜头／未听完P05</td>
+<td>仅有对应已听内容，不将投魏记成完成事件</td>
+</tr>
+<tr>
+<td>玩家主张长期休战，同时承认敌恢复与责任</td>
+<td>可继续；不因战略立场挡B</td>
+</tr>
+<tr>
+<td>书信只含军情、漏民食／责任／途径</td>
+<td>合理部分可商谈，具体追问修补；不直接A、不允许正式寄出不完整方案</td>
+</tr>
+<tr>
+<td>信写好／已寄出／远方李严读信</td>
+<td>均不等于主角收到回信或B达成</td>
+</tr>
+<tr>
+<td>李严只表示愿意补报，尚无实际补报附件</td>
+<td>C19未完整；不得据此结算双方补救已完成</td>
+</tr>
+<tr>
+<td>B尚未寄信选择交案／已寄信或双方已补救再返回</td>
+<td>前者带已发生补救事实重新风险确认；后者只继续查收、回看和完整送核，不抹事件切A</td>
+</tr>
+<tr>
+<td>C18已完成后取消寄信、返回改稿或重提</td>
+<td>保留停手、署名与责任说明，只重核当前信稿；不重演017至022、不抹单方补救，完整后重开寄信确认</td>
+</tr>
+<tr>
+<td>C18、C19齐备，但无X14／X15</td>
+<td>可送核，不能播B裁处</td>
+</tr>
+<tr>
+<td>LY09只交粮情结果</td>
+<td>不发完整案卷X14，不锁A</td>
+</tr>
+<tr>
+<td>改旧判断或回看草稿</td>
+<td>失效未执行依赖，保留已读原件、已发言、已批准、已送信、已停手</td>
+</tr>
+<tr>
+<td>异常、取消、刷新、迟到生成结果</td>
+<td>保留可恢复输入，不产生口供、送件、裁处或结束调查</td>
+</tr>
+<tr>
+<td>A／B裁处</td>
+<td>只发本路线C20；均退军；W不混入A/B或旧卷尾声</td>
+</tr>
+</tbody></table>
+</div>
+<h2 id="section-32">十、本轮交付状态与审阅重点</h2>
+<p>已完成：初稿在线来源核对；全幕步骤、问题、证据取得、等价支持、行动和三条结局的整理；旧规则冲突及文案表改动清单；独立来源与机制审阅。本轮另合并用户并发修改的开场，统一各章人工review结构，修正原件／解释取得时序及C18完成后的重入规则。配套读取快照、审阅记录和核验结果保存在 <code>docs/design/second-act-planning-20261022/</code>。</p>
+<p>文案策划表、机制稿与书稿：<strong>已同步并回读一致</strong>。表格修订42、机制修订7、书稿修订1283；统一8／5／5表头、黄蓝分工和审核顺序，保留用户并发修改。协作规范修订11已同步本地。核验记录见 <code>CHAPTER-TWO-FULL-PLAN.sync.json</code>。</p>
+<p>新增落文字与演出细化继续待review，重点包括有限核问后苟安顺势认罪的衔接、直接交案与先补救两路的叙事分流、原稿A／B具体处分及相应演出。执行者核对一致性不替代用户对这些具体内容的审核。</p>
+<p>尚未执行：按本版完整策划进行正式游戏开发、视频重制及整幕试玩。本次文档同步与已验证的局部网页样稿分开记录。所有人物合谋、调查簿册和裁处仍为原稿标注的游戏改编，不宣称复原史实。</p>
+</article>
+<footer class="reader-footer"><span>正文与本地完整策划一致 · 420a22181bc6</span><a href="#document-title">回到开篇 ↑</a></footer></main></div>
+<script id="source-markdown" type="application/json">"# 第二幕完整策划｜查粮、问人、送出真相\r\n\r\n版本：2026-10-22。状态：用户已认可本版完整结构并授权同步；第二章文案策划表、机制稿与书稿已同步并完成回读核验。新增执行文案、反馈与具体演出细化仍待review。本文中的“第二幕”对应现有文档的“第二章”。已结合在线文案表、书稿及用户认可的纵向思绪画布结构整理；完整章节尚未按本文实现或试玩。\r\n\r\n本幕让玩家先查清粮为什么不够，再识破苟安怎样利用自己的判断，最后决定如何把真相与补救一同送出去。操作统一为：**先选择回答，主动引用已得证据，点击“提交判断”；有依据的判断开放相应行动，玩家确认行动后才发生剧情。**\r\n\r\n三条结局保留原稿方向：调查失败“认下来的罪”、查清事实后进入查办的A“扳倒了李严”、争取双方停手并完整送核的B“人还在”。A、B均退军。B保住人，不凭空补出粮；A不是答错题的惩罚。\r\n\r\n## 一、这版依据什么，改了什么\r\n\r\n| 来源 | 初稿核对基线与本轮同步状态 | 用途 |\r\n| --- | --- | --- |\r\n| [第二章小说剧情](https://my.feishu.cn/docx/X6jtdb1ywoacW9xU0PEcFDfMnlc) | 初稿基线修订1271；本轮回读修订1283，十四节与执行对照完整核验 | 人物关系、事实顺序、动机与结局 |\r\n| [第二章文案策划表](https://my.feishu.cn/sheets/HDuhsadNNhnzgBtG6vScRQo0nEc) | 初稿基线修订5：最终文案306行、笔记字典52行、执行规则33行，均含表头；写前修订24已发现并合并用户开场改动；已迁移8／5／5结构并回读修订42；逐句342条、线索60条、规则47条（不含表头） | 具体对白、稳定编号、证据来源与跳转 |\r\n| [第二章机制策划](https://my.feishu.cn/docx/WYtDdItyfoK208xQDrocboxenpf) | 初稿基线修订6；本轮回读修订7 | 四步倒查、先对质后访村、原有分支边界 |\r\n| [全局游戏机制规则](https://my.feishu.cn/docx/BloVdzBIKogBDmxAIEQcqvZInke)／[协作原则](https://my.feishu.cn/docx/MSdZd2H8IoWkXyxpkpNcgxRKn0b) | 全局规则沿用初稿修订3；协作原则补全各章统一人工review结构，回读修订11 | 事实、推论、实际行动及审阅状态的区别 |\r\n| 本次聊天与[纵向画布结构记录](CHAPTER-TWO-CHAIN-STRUCTURE-DRAFT.md) | 用户已认可样稿结构 | 上下滚动、先选再引、提交有门槛、错误行动产生后果 |\r\n\r\n初稿以上述修订和完整三张表为核对基线，不把这些历史修订号当作当前在线版本。本轮写前再次读取时，发现用户已删去开场兵卒传话、问路等段落，并改写第四次北伐、苟安往事与不知当前进度的心声；本稿已按新稿合并，不恢复被删内容。用户随后要求各章统一人工review结构，本稿第八节据此覆盖旧第二章五／五／四例外。三份在线内容已逐项回读，版本与核验记录见 `CHAPTER-TWO-FULL-PLAN.sync.json`。\r\n\r\n本次以最新用户要求覆盖旧表“选错也直接继续”的安排。用户已认可完整结构并授权同步；本轮新落文字、反馈与具体演出仍保留待review，不能用执行者自查替代用户对这些细化内容的审核。\r\n\r\n**原稿保留**：同一批粮、四组相邻环节、仓中完成签认核验、对质成功后连续访村、原夜访与战略讨论、完整呈报、A/B处置和旧卷尾声。不加混批、算术、找物、笔迹鉴定、隐藏倒计时。\r\n\r\n**本轮细化**：每步支持条件、证据卡的取得时点、提交与行动分开、修正后的错误路线入口、书信修补与收件闭环；另合并用户新开场、统一人工review表结构、原件先于提交而摘要后于解释的时序，以及已经完成停手署名后的重入行为。后文“本轮新增／调整”不冒称原书稿已有原句；对应执行文案按本次同步稿维护。\r\n\r\n**必须改的旧逻辑**：账证已经否定的“苟安弄丢整笔缺粮”“足粮被扣”“应征即现粮”不能通过提交。错路改为有依据的有限核问，通过后苟安顺势认罪；玩家把这份口供当作调查终点，主动停止核查并确认结案，才进入原失败方向。保留失败结果，不保留违反证据门槛的入口。\r\n\r\n## 二、全幕流程与画布结构\r\n\r\n| 步骤 | 场景与玩家任务 | 进入下一段的条件 |\r\n| --- | --- | --- |\r\n| S00 获救、认人 | 山路救援→主角回忆→伤帐；认出救命恩人 | 固定演出完成，不设证据题 |\r\n| S01 说明来意 | 伤帐；修补冒失的投魏质问 | 提交有依据的来意，确认说出，苟安回应 |\r\n| S02 追问迟交 | 第三夜本队交接→伤帐；指出领粮前已有等待 | 实际获准抄录，提交问题并发言 |\r\n| S03 请他暂留 | 伤帐；读第一封信，提出可行的查报办法 | 苟安实际同意暂留并交出凭据 |\r\n| S04 调取材料 | 本队管事陪同仓中查账 | 核对凭据、管事陪同、仓吏允许核本批记录 |\r\n| Q1 领取与发出 | 画布第一步；缺口从哪里追问 | 合理提交后，继续查账或先核问损耗 |\r\n| Q2 发出与入仓 | 画布第二步；本批实粮是否发出 | 支持成立后确认继续核查 |\r\n| Q3 入仓与实收 | 画布第三步；实收是否入仓 | 支持成立后确认继续核查 |\r\n| Q4 实收与应征 | 画布第四步；应交是否等于已有 | 形成有来源的本批未备齐判断 |\r\n| S05 核签认 | 仓中；管事取缺额报告，经手人核验 | 一段连续对白，取得同批同日、知情与未补足材料 |\r\n| S06 当面对质 | 伤帐；问清明知缺粮却称已备好的矛盾 | 提交依据，确认质问，实际取得第二封信与供述 |\r\n| W 停查错路 | 伤帐；面对过快的认罪 | 继续核查返回；明确结案进入调查失败，不接下半幕 |\r\n| S07 访村 | 批准返程→村庄→返营 | 对质成功、正式差遣获准；连续视频，不插题 |\r\n| S08 夜访与军情 | 伤帐回忆→交差处→伤帐 | 实际听到计划、看到简报、听到军吏转述 |\r\n| S09 整理处境 | 原画布继续向下；理解苦处是否等于接受办法 | 可整理局部判断，也可带原始资料继续询问呈报途径 |\r\n| S10 决定送案方式 | 军吏说明风险→伤帐 | 完整预警后选择直接交案，或先争取双方停手 |\r\n| S11 共同写信 | 伤帐；把可行补救写清并商量 | 方案补齐，苟安实际撤回后手、说明责任、署名 |\r\n| S12 寄信、回信与送核 | 传信→李严读信→回信到营→收件处 | 李严实际停手补报；玩家确认正式交件并核收补充说明 |\r\n| S13 处置与退军 | A官印与空帐／B归途推车 | 相应路线裁处实际告知后，取得本路线处置笔记 |\r\n| S14 旧卷 | 书库；眼前缺粮还有怎样的来处 | A或B完成后观看尾声，开放回看；不预设下一幕结论 |\r\n\r\n画布以“粮队领取↓调拨发出↓入仓↓实际征收↓地方应征”纵向倒查。宽屏每步左右放问题与证据，手机上下排；固定视窗内滚动，保留历史。新判断在下方展开，玩家回看时不强拉到底。国画简笔与线条动画只说明环节，不暗示答案。\r\n\r\n只有推理、拟定行动的节点使用提交判断。实际取证、连续视频、寄信、收件和裁处是剧情事件，不再各加一道重复考试。S09整理可选；S11复用同一画布，不另弹一套空画布。\r\n\r\n## 三、提交规则：检查支持，不检查选项序号\r\n\r\n每条提交保存“回答原文、引用、来源版本、支持范围”。正式按钮旁提示：“放入依据后，提交这个判断。”证据未选时按钮仍可点击并提示缺失，不默默放行。\r\n\r\n| 状态 | 判定 | 页面结果 | 是否发生剧情 |\r\n| --- | --- | --- | --- |\r\n| 草稿 | 只选了回答，尚未主动引用 | 展开证据区，保存草稿 | 否 |\r\n| 不能提交 | 无依据、缺关键支持、材料尚未取得、引用无关或与已得直接反证冲突 | 说明具体不足，保留选择、材料与滚动位置 | 否 |\r\n| 可据此追问 | 材料能支持有限怀疑、询问或拟议方案，但不足以定责或承诺结果 | 显示支持范围，开放对应核问／商谈行动 | 仍须确认行动 |\r\n| 依据相合 | 所选判断与材料相称，关键支持齐全 | 记录有来源的判断，开放下一步查阅／质问 | 仍须确认行动 |\r\n| 行动已发生 | 玩家确认说出、取件、送信、交案等 | 记录事件与真实回应；到来源末尾才收录新材料 | 是 |\r\n\r\n提交不足只产生界面反馈，不新增NPC发言或口供。FB001、FB002、FB003等带角色口吻的文字可作为提示引用，未确认说出时不执行角色回应；只有玩家实际确认商谈后，缺项追问才作为真实对白发生。\r\n\r\n本章以明确规则检查证据与事实，语言组织可协助表达；不能仅靠生成模型觉得一句话“像对的”便授予剧情状态。检查已取得的直接反证，不允许故意不引用反证来通过强断言。相关但不足的联系可以留在草稿，不抹去它的局部意义。\r\n\r\n同一内容的原件、摘要、推论不重复计数。等价来源允许替代；不要求全选证据、固定卡数、固定口令或先生成某个推论编号。额外引用无关材料不能弥补缺项；引入相互冲突的断言则需修正。\r\n\r\n事实判断与处置选择分开：停止调查可以是一个明确而不妥的行动，系统允许玩家承担后果；但不能把“决定停查”改写成“已有证据证明苟安丢掉全部粮”。A/B也是知情选择，不由立场、礼貌或隐藏好感值判正误。\r\n\r\n## 四、证据从哪里来\r\n\r\n以下编号用于制作与核验，玩家只看短标题、原文、来源及性质。“读完”指完整来源已实际呈现；中途打开预览、选中回答或AI生成一句话均不算取得。\r\n\r\n### 前半幕：口供与粮账\r\n\r\n| 编号与材料 | 实际取得位置／来源行 | 能支持什么；不能支持什么 |\r\n| --- | --- | --- |\r\n| LY-X01 眼前苟安的伤情 | 伤帐认人时实际看到，LY01-011 | 只证明眼前有伤；不证明受罚缘由、受罚次数、迟粮天数或投魏事实 |\r\n| LY-X02 记得的故事 | 主角心声，LY01-007至008完整呈现 | 关于受罚、身份与投魏传谣的个人回忆；009仍表明不知本轮到了哪一步，不作为当下事实证明 |\r\n| LY-X03 救命与认人 | LY01-001实际获救，011至012伤帐认人后完整 | 苟安曾救主角；不证明其余行为无辜 |\r\n| LY-X04／05 饮酒自述／否认赴魏 | LY02-005／008 | 人物当时说法；饮酒时间仍为口述 |\r\n| LY-X06 领粮前等待 | 管事先准看本队一笔，LY02-013至014 | 交付晚于原定日；不证明已备足、扣粮者或动机 |\r\n| LY-C01 苟安称已备妥被扣 | LY02-022先记迟发口供，LY03-023才补齐同批同日的强断言 | 保存说话时间和版本；未到023不能显示后来的完整说法 |\r\n| LY-C02 第一封李丰信 | 实际取出后读LY03-002至003 | 文本确有劝止和勿牵家父；“前议”含义未明 |\r\n| LY-X07／08 想停本次北伐／另寻魏国出路 | LY03-010／017 | 愿望与念头；不是已实行计划 |\r\n| LY-X09 本队领取凭据 | 苟安实际交给主角，LY03-022至024 | 调取本队材料与批次指认；**不等于实收签收账，也不是任意翻账权限** |\r\n| LY-C05A 本队签收与出仓相合 | 管事陪同后，LY04-F02全部呈现 | 本队领粮时已缺；已登记途中损耗不能解释这部分缺口 |\r\n| LY-C05B 本批入仓粮已有发出记录 | LY04-T02至T03 | 同批实粮已发出，无另存足额粮；不是所有仓库总账 |\r\n| LY-C05 本批交收合并笔记 | C05A、C05B真实取得后才组成 | 可展开两段来源；首题不得反过来要求先有C05 |\r\n| LY-C04 实收未足、收到部分已入仓 | LY04-W02至W03 | 同批实收与入仓相合；不推定全国粮情 |\r\n| LY-C03 应征与实收两栏 | 地方经手说明及原文，LY04-C02至C03 | 要求数与已收到数不同；应征不是库存 |\r\n| LY-X10 暂停追加催征、要求未改 | LY04-C04；LY08-N01后续回看 | 当时的经手说明；不凭此确认善意、合谋或全部制度原因 |\r\n| LY-C08 同村同批同日报告 | 仓中LY06-014、015、018，保留旧编号 | 材料确指本批与该日；不新增村中取件环节 |\r\n| LY-C09 受杖前已确认未征齐 | 仓中LY06-017、019 | 经手人所见签认与时间；不是凭画面猜笔迹 |\r\n| LY-C10 回执、日期与当日未补足 | 仓中LY06-018、019、021完整核验 | 排除说的是别批或先缺后补；021前不把该排除记为已知 |\r\n\r\n### 账页怎样展示，避免把答案卡当原件\r\n\r\n本版采用以下**材料展示编号**，都拆自已有取得场景，不新增搜证地点或凭空补数字。作为原始卡片供引用，原LY-C笔记继续保留为可展开的核对摘要。\r\n\r\n| 展示编号 | 卡片 | 来源与收录时机 | 与原笔记关系 |\r\n| --- | --- | --- | --- |\r\n| LY-M01 | 本队实收签收条目 | CH2-LY04-D01展示本队签收原件；拆自原F02 | C05A的领取端；不是X09凭据 |\r\n| LY-M02 | 本批出仓交付条目 | CH2-LY04-D02实际展示出仓原件；拆自原F02 | C05A的交付端、C05B的发出端 |\r\n| LY-M03 | 途中损耗登记 | CH2-LY04-D03实际展示另列损耗；拆自原F02 | 支持核问已登记损耗，不能填补领粮前缺口 |\r\n| LY-M04 | 本批入仓收讫 | CH2-LY04-D04实际展示；原T02至T03核对解释在Q2提交后 | C05B的入仓端 |\r\n| LY-M05 | 地方实收摘录 | CH2-LY04-D05实际展示；原W02至W03核对解释在Q3提交后 | C04的实收端；与M04比对 |\r\n| LY-M06 | 应征及缺额栏 | CH2-LY04-D06实际展示两栏与栏义；原C02至C03核对解释在Q4提交后 | C03的应交端；与M05比对 |\r\n| LY-M07 | 缺额报告与签认 | 仓中LY06-014至019依次呈现，019结束才完整 | C08、C09的原件视图 |\r\n| LY-M08 | 经手核验与同日仓账说明 | 仓中LY06-018、019、021依次呈现，021结束才完整 | C10的核验视图；含当日未补足 |\r\n\r\n卡片先呈现条目内容与来源，再由玩家判断。原表F02等对白已直接给出核对结果，本版拆为“实际看见两端条目→选择并引用→提交后播放核对解释”，保留事实与原编号的来源联系。每题首次提交前先展示本题M类原始组；提交成立且对应核对说明实际发生后，才收录本题C类摘要。原F02、T02至T03、W02至W03、C02至C03是追溯锚点，须按“原件展示在前、核对解释在后”拆段执行，不能将整段提前发出。C05A在Q1解释结束后取得，C05B在Q2解释结束后取得，C04在Q3解释结束后取得，C03在Q4解释结束后取得；C05须C05A与C05B均真实取得后组成。表中C类等价支持组只供已取得后的回看和重新组织，不作为本题首次提交前提。未写明具体石数或确切日期的原稿，不虚构数字谜题；显示同批标识及文字关系即可。原件展示使用CH2-LY04-D01至D06；本次已明确制作编号，仍不能把M卡误称为已上线素材。\r\n\r\n### 后半幕：供述、见闻与真实事件\r\n\r\n| 编号与材料 | 实际取得位置／来源行 | 能支持什么；不能支持什么 |\r\n| --- | --- | --- |\r\n| LY-W01 认罪口供（本轮新增笔记） | W路线实际播放CH2-LY07-W02后 | 他承认并催结案；不是丢粮、扣粮的客观证明，不含合谋 |\r\n| LY-C11 第二封信 | 成功质问后实际取出、读到LY07-006 | 李丰劝父亲与苟安停止计划；尚不能代替具体供述 |\r\n| LY-C12 实际承认安排 | LY07-009至012全部说完 | 借主角揭粮情推动退军；不提前包含后面才说明的投魏细节 |\r\n| LY-X11 接待令牌／X12 正式差遣 | LY05-004实际递牌／010至011批准 | 令牌供认人；出营权只由差遣授予 |\r\n| LY-C07 老妇的粮／C06 村户余粮 | 连续视频LY06-003、004、007／008至009 | 亲见与听闻的村户困境；不是全国统计或前面对质的前提 |\r\n| LY-C13 夜访动机 | LY08-003、004、011、N01 | 苟安叙述的动机与回忆，不是主角亲见或免责依据 |\r\n| LY-C14 借魏散谣计划及风险 | LY08-012只记疑问；LY09-P02、P04、P05实际说明后补齐计划；LY09-002至004补风险 | 尚未实行；敌方利用与追击是风险，不是已发生事件 |\r\n| LY-C15 敌方转运简报 | 正式查粮差遣交差时，LY09-009、011 | 已见修路、筹资、屯田；不能计算未来必胜或必败 |\r\n| LY-C16 军吏转述丞相回应 | LY09-012至014 | 此次缺粮应退，休兵也有风险；不是强迫赞成北伐 |\r\n| LY-C17 查办风险与补报途径 | LY10-003至006完整说明，沿用C17并补全来源 | 可送停止实据、补报与各人责任；可能重责，不能许诺免罪 |\r\n| LY-C18 苟安停手、交代并署名 | LY11-019至022实际完成 | 单方补救已发生；只说愿意尚不完成整条事件 |\r\n| LY-C19 李严回信与补报 | 原LY12B-004至009加本轮明确承接：ACT01实际撤回安排并写成补报；RECV01回信及署名补报到营；RECV02读完附送的更正粮情与本人责任说明 | 完成行动、回信到达、补报附件可核后才完整；仅愿意写或观众看见远方镜头都不足 |\r\n| LY-X14 正式收件 | A的LY12A-003，或B的LY12B-011 | 本路线全部材料实际收讫；LY09交差不替代本项 |\r\n| LY-X15 补充说明送达 | LY12B-013 | 原材料未撤、后送说明确已核收；不是“信已写好” |\r\n| LY-C20 本路线裁处 | A的LY12A-008至009，或B的LY12B-014至016 | 裁处实际告知后收录；两路线互斥，AI不能判刑 |\r\n| LY-C21 旧卷 | 章末LY13-001至004 | 长期损耗与回溯方向；不把单一人口数当历史必然 |\r\n\r\n所有来源编号未写前缀时均指CH2-前缀。停用LY-X13与旧五入口继续停用。现有推论LY-I01至I13可保存，但只在其来源实际取得后形成，不作为唯一通关钥匙。\r\n\r\n## 五、前半幕逐步策划\r\n\r\n### S00 获救与认人：固定开场\r\n\r\n按现行开场播放山路获救、主角想起故事、伤帐认人。保留用户补写的第四次北伐与运粮兵身份，以及“只是不知道这次到哪一步了”的心声，不恢复已删的兵卒传话和问路段。X01来自眼前所见伤情；X02只在两段回忆完整呈现后取得；X03由实际救命和认人共同构成。回忆保持“个人回忆”标签，不能据此认定本轮已经受了何种刑责、投魏或传谣。冒失问话后进入S01。山路失足是开场演出，不增加反应失败或新结局。\r\n\r\n### S01 怎样解释刚才那句冒失的质问\r\n\r\n**题面**：“他问你为何这样说。你要怎样说明来意？”依据在选择后手动放入，提交后是可编辑发言，确认说出才进入苟安回答。\r\n\r\n| 选择方向 | 最低支持与提交条件 | 行动与后果 |\r\n| --- | --- | --- |\r\n| 是我问得冒失。看你伤成这样，我怕你一气之下离营。 | X01；基于眼前伤情表达担心，不把受伤缘由或离营当作已证实事实 | 确认说出→LY02-005至008，取得X04、X05 |\r\n| 你救过我，我来看看你，不该拿猜测问罪 | X03；承认刚才是猜测 | 同上；两个短选都成立，无隐藏优劣 |\r\n| 我记得故事，所以你已经通魏 | X02不能证明本轮事实 | 挡住提交：“记得的故事，还不能证明眼前发生了这件事。”留在本步 |\r\n\r\n沿用R02A与LY02-003、004的意图；新增提交与引用顺序。自由表述同义可过。语气直率不是失败。\r\n\r\n### S02 领粮前的等待说明什么\r\n\r\n剧情转到第三夜，管事允许查阅并抄取本队一笔后取得X06；回帐后开放问题，不做三夜计时游戏。\r\n\r\n**题面**：“这段等待，能向苟安追问什么？”\r\n\r\n| 选择方向 | 最低支持与提交条件 | 行动与后果 |\r\n| --- | --- | --- |\r\n| 领粮前已有迟交，不能把误期全算成途中酒误 | X06；保留“不能全算”的强度 | 开放追问交粮为何迟；确认发言→LY02-021至028 |\r\n| 按你说的饮酒时候，等待还在之前，为什么迟交 | X06＋X04；明确饮酒时间来自本人说法 | 同上，取得迟发口供版本C01 |\r\n| 苟安全无责任／李严必定扣了足粮 | 等待日期不足以证明免责、库存或动机 | 挡住；提示“记录说明何时等粮，还没说明为何迟交。” |\r\n\r\n发言承接他“怕我跑了”的当下问话并提出有据的等待问题即可，不要求固定句式、重复离营担忧或作留营承诺。X06单独可以支持等待先于领取，不强制把口述饮酒时间当客观时间。\r\n\r\n### S03 怎样让他愿意暂留\r\n\r\n按LY03先实际读第一封信，收录C02和X07、X08。读信不另设谜题；“像封口”可留作怀疑，不能提交“已经证实李严合谋”。\r\n\r\n**题面**：“要请他先留下，你能提出什么可实行的办法？”\r\n\r\n| 选择方向 | 最低支持与提交条件 | 行动与后果 |\r\n| --- | --- | --- |\r\n| 先核本队迟交材料，请管事陪同，循正常渠道报告，请他暂留 | X06支持已有可查问题；方案必须含核本批、正式渠道、暂留请求，不假称已经获准 | 提交方案→确认说出→苟安实际回答“先不走”→交出X09，补全C01同批同日口供 |\r\n| 我保证让你无罪／保证北伐继续 | 无现有材料能支持结果保证 | 不能提交这项保证；删改后再试 |\r\n| 只说“相信我，别走” | 请求可表达，但不足以形成本任务可执行方案 | 反馈查什么、如何送出尚未说明；不触发离营或结局 |\r\n\r\n管事陪同及仓吏准查在S04实际发生，不作为本题额外措辞门槛；方案需核本批、正式渠道、暂留请求三项，不假称权限已经获得。\r\n\r\n“暂留”是当前约定，不等于已永久撤回计划。取得X09后到S04；不得反过来拿尚未获得的X09作为本题前提。\r\n\r\n### S04 在哪里查，能查哪些\r\n\r\n按LY04-001至004：主角凭本队凭据领取材料，管事陪同向仓吏核问。仓吏只准看本批收发。主场景为仓中查账与交接案；前线接收人、督运经手人、地方经手人的核对，集中在这次获准查账中呈现，不恢复五个独立地图入口。\r\n\r\n第一次真实展示M01、M02、M03，展开Q1。后续每次“继续核查”先发生对应查阅对白、取得新记录，再开新问题。答对不直接掉落证据；没有读到材料不能引用。\r\n\r\n### Q1 领取与发出：这笔缺额，该从哪里追问\r\n\r\n对应CH2-LY04-Q1。已得本队签收、出仓交付与途中损耗登记。这里比较的是领粮时已有的缺额和另列途中损耗，不否认途中存在任何损耗。\r\n\r\n| 回答 | 可接受依据 | 提交后开放的行动 |\r\n| --- | --- | --- |\r\n| 先核对领取之前的缺口 | M01＋M02，或来源齐全的C05A；结论限于本批领粮前已缺 | Q1A→原F02核对说明，完成后收录C05A；Q1GO“继续核入仓与发出”→确认后T01→D04取得M04→Q2 |\r\n| 先追问苟安经手后的已登记损耗 | M01＋M03；C05A可替代M01的经手核对，但仍须实际损耗登记；不能断言它解释整笔缺额 | 显示“可据此追问，尚不能定责”；“去找苟安核问”→W路线。若改为继续核账，须改选上一项并用其充分依据重新提交，不能凭草稿直达Q2 |\r\n| 自由补充为“整笔缺额都是苟安途中弄丢” | 被已取得的交付与签收记录直接否定 | 挡住提交，即使故意只引用损耗也不放行 |\r\n\r\n无关／不足反馈：“这份材料尚不能说明缺口出现在领取前还是领取后。”X09凭据不能替代M01。Q1不要求尚未取得的C05、C04或应征记录。\r\n\r\n### Q2 发出与入仓：入仓的这批粮，后来发往哪里\r\n\r\n对应CH2-LY04-Q2。实际读完T段原件展示后，M04可用；本题提交成立并读完核对解释后才得C05B。\r\n\r\n| 回答 | 可接受依据 | 提交后开放的行动 |\r\n| --- | --- | --- |\r\n| 本批入仓实粮已有发运对应，继续查来粮 | M04＋M02，或C05B；同批对应及不存在另存足粮的信息齐备 | Q2A→原T02、T03解释，完成后收录C05B，并按已有来源组成C05；Q2GO“继续核地方实收与入仓”→确认后W01→D05取得M05→Q3 |\r\n| 足额粮仍被扣在仓里 | 已得记录明确没有另存足额现粮；C01口供不能推翻仓账 | 不通过；提示“本批入仓与发运已有对应，所引材料没有支持另存的足额粮。” |\r\n\r\n只有签收或途中损耗不够证明仓内去向；重复放同一张卡不增加支持。\r\n\r\n### Q3 入仓与实收：地方收到的粮，是否都记入仓中\r\n\r\n对应CH2-LY04-Q3。实际读完W段原件展示后，M05可用；本题提交成立并读完核对解释后才得C04。\r\n\r\n| 回答 | 可接受依据 | 提交后开放的行动 |\r\n| --- | --- | --- |\r\n| 实收与入仓相合，缺口还应往征收端找 | M05＋M04，或来源完整的C04 | Q3A→原W02、W03解释，完成后收录C04；Q3GO“核对应征与实收”→确认后C01→D06取得M06→Q4 |\r\n| 地方已经收足，只是没有入仓 | 实收记录已明确未足，且已收到部分与入仓相合 | 不通过；提示“这些材料支持已收部分入仓，不能证明曾经收足。” |\r\n\r\n不由此归罪某个村户，也不让玩家选择加征以凑齐数值。\r\n\r\n### Q4 实收与应征：应当交多少，便是已经收到多少吗\r\n\r\n对应CH2-LY04-Q4。取得两栏原文与栏义说明后开题，不预先播放核对结论；本题提交成立并读完核对解释后才得C03，随后读到原LY04-C04才取得X10。\r\n\r\n| 回答 | 可接受依据 | 提交后开放的行动 |\r\n| --- | --- | --- |\r\n| 应征不等于实收，这批粮没有备齐 | M05＋M06，或C03＋C04；此前链路来源可展开回看 | Q4A→原C02、C03解释收录C03，再到C04收录X10；Q4GO“请管事核缺额报告与签认”→确认后LY06-014进入S05；可保存I01／I02，但不另考合成编号 |\r\n| 应征多少就是现粮多少，仍是有人扣粮 | 把要求数当作已收到数，与两栏释义冲突 | 不通过；提示“应征记录不能证明现粮已经存在。” |\r\n\r\nI02若进一步表述“并非途中或仓中丢掉的一批足粮”，还须保留Q1至Q3的来源关系。不得仅凭末题答案补造前面未核的环节。\r\n\r\n### S05 核签认：用一段剧情把时间和知情核实\r\n\r\n管事实际取出缺额报告，经手人完成LY06-014、015、017、018、019、021：同村同批；苟安在受杖前签认；对应其指认的日期；当日仓账未补齐。依序取得C08、C09、C10与M07、M08。\r\n\r\n这里不设笔迹辨认、日期连线或“猜签字是谁”。读完后提供“带材料回伤帐”，玩家确认返回，进入S06。仓中核验不能被访村视频或未来口供替代；M07、M08不是提交题，无须为取得它们再新增判断门槛。\r\n\r\n### S06 当面对质：该拿哪一处矛盾问他\r\n\r\n题面改为较中性的：“他先前的说法，与查到的记录能对上吗？”对比由玩家完成后，行动预览再显示具体质问。\r\n\r\n| 回答方向 | 提交条件 | 发言与结果 |\r\n| --- | --- | --- |\r\n| 他已确认未征齐，却仍告诉我早已备好；应问清缘由 | C01完整口供＋C08＋C09＋C10；或C01＋M07＋M08；或来源仍有效的I05 | 提交只证明矛盾，开放“当面问清”；确认可编辑台词后→LY07-004；实际读第二封信才得C11，实际听完009至012才得C12 |\r\n| 先请他解释已经登记的经手损耗，不把它算作整笔缺口 | 同Q1有限核问依据；须明确范围 | 可进入W的责任核问；已知账证和签认保留，不退回未知状态 |\r\n| 已经证明他和李严合谋／他早已投魏 | 此时尚无具体承认与已实施事实 | 不通过；两封信尚未齐，第一封信和令牌也不能替代供述 |\r\n| 整批粮被他丢了或扣下了 | 与已核材料直接冲突 | 不通过，不再沿用旧W01强指控入口 |\r\n\r\n成功质问参考句沿用：“你已确认没征齐，为什么还说粮早已备好、被李严扣住？”接受同义短句，不强制先有I04、I05，不要求先知道合谋。一次指出矛盾后进入原坦白，不增加多轮攻防。对白确认前可取消，取消不让苟安提前回应。供述收录后仍完整播放LY07-013至018及024，保留“救命是真的，利用也是真的”的情感落点，再接LY05邀请，不能一取得C12便跳过。\r\n\r\n### W 核问、过快认罪、停止调查：唯一调查失败路线\r\n\r\n**本轮调整旧LY07-W01的入口**。从Q1或S06进入时，玩家真正说出的是有限核问，例如：“先把你经手后登记的损耗说清楚。你当时怎样交代的？”苟安以原W02回应：“好，这笔罪，我认。你报上去吧，别再查了。”\r\n\r\n**入口只在成功对质、进入坦白序列之前开放。** 一旦已实际触发成功质问后的坦白，或已取得C12，回看Q1／S06的旧判断只能补充澄清，不能重进W认罪停查路线。否则会出现玩家已经知道合谋，结局却声称没查清的矛盾。分支权限按真实事件检查，不按当前滚动到哪一题决定。\r\n\r\nW02结束后才取得LY-W01口供。画布明确保留：“他认了罪，却没有解释领粮前已有的缺口。”这句提示不补出合谋答案。\r\n\r\n| 选择／动作 | 条件与执行 | 后果 |\r\n| --- | --- | --- |\r\n| 继续核查粮账／继续问未解的矛盾 | 不要求新证据；保留全部已得记录及这次口供 | Q1早入者返回尚未完成的粮账；S06入者返回对质。不能直接跳到只有后期材料才能答的节点 |\r\n| 把认罪当作调查终点，停止追查 | 只能在实际核问且W02已说出后选择 | 出现明确结案确认；这是行动草案，不新生成“丢粮已证实”判断 |\r\n| 确认结束调查并呈交现有材料 | 确认框说明：缺口与其说法仍有未解之处；交付现有真实记录与认罪口供，由查办接管 | BAD1至BAD3：真实缺额上报，大军缺粮而退，苟安问“大军退了吗？”；调查失败“认下来的罪” |\r\n| 返回再查 | 结案确认前均可返回 | 不消耗时间，不丢材料，不重播已发生认罪 |\r\n\r\n不得将相反账证从提交材料中隐去；不得把“不再追查”包装为系统认可的定罪结论。失败原因是停在了能被利用的口供上，没有查清并阻止安排。原稿失败结局不追加苟安死亡，不授予C11／C12，不接访村、A或B。\r\n\r\n失败后“从首次核问前重查”是明确读取检查点：早入者恢复首次实际核问前的全部资料与事件，包括M01至M03、先前口供、第一封信和领取凭据，不含之后才取得的账页、签认与供述；晚入者恢复当时已有的仓账与签认。检查点在首次实际执行W核问前保存，重复开关页面或回看不能覆盖；重试提示明确将回到这一时点。清除检查点之后的分支事件，不继承尚未取得的资料。普通回看与返回继续查不等于读档，不清除真实口供。\r\n\r\n## 六、后半幕逐步策划\r\n\r\n### S07 去看种粮的人：连续视频，不能再加证据考试\r\n\r\n成功对质后接LY05邀请。令牌实际递出取得X11；管事在010至011说明差遣已批准才取得X12，开放随返程粮队出营。令牌单独不放行。\r\n\r\n村庄按LY06-001至012连续播放：老妇交粮、老运粮人带路、村户所剩口粮与种粮、劳力误农时。完整相关内容呈现后收录C06、C07；原视频可跳过时，也必须采用明确的剧情完成规则，不能仅打开播放器就授予资料。\r\n\r\n不设置“是否同情老妇”的正确选项。视频让账面缺口落到人身上，不用一户遭遇证明全国缺粮。结束返营接S08；不回村取得签认，不恢复停用的LY06-013及022至026。\r\n\r\n### S08 夜访、未实行的计划与军中回应\r\n\r\n先播放苟安讲述的夜访回忆，按来源收录C13。画面标明这是他的叙述，不让主角突然成为当夜目击者。随后P01至P05才具体交代投魏、争取被放回、散谣逼召军，C14补齐且标“未实行”。\r\n\r\n按LY09-002至005讨论风险：交代粮道、敌方追击、谣言难控都是可能后果，不剪成魏军已实际行动的证据。\r\n\r\n再去获准交差处，实际提交粮情见闻，接触转运简报C15；军吏实际转述后取得C16。此处交差是报告本批粮情，尚不是LY10决定的完整案卷交办，不能提前授X14或锁定A。消息带回伤帐，进入S09。\r\n\r\n### S09 明白了他们的苦处，是否就能接受他们的办法\r\n\r\n沿用LY09-C01，作为同一纵向画布的后半段。这里允许形成不同强度、不同立场的合理判断，不要求把所有推论连齐才见军吏。\r\n\r\n| 判断方向 | 最低支持／允许的语义 | 可开放的行动与限制 |\r\n| --- | --- | --- |\r\n| 村户确实难以再承受，眼下这批粮应据实请退 | C03＋C04或I02，配C06或C07说明民生；C16可补转述回应 | 可请求核明民食与粮情；不能由此宣布以后永不再战 |\r\n| 能理解不愿再征，仍应问清隐瞒与借敌的责任 | C13＋C12，谈借魏时再引完整C14 | 可继续商谈替代办法；同情不授予无罪事实 |\r\n| 借魏停战的后果，他们未必收得住 | 完整C14，含具体计划及无法保证敌方配合；谈敌恢复时须C15 | 可要求停止这一步；不需先认同诸葛亮战略 |\r\n| 我仍主张休战，但不能保证魏军也停下 | C15；可配C16，明确这是风险与转述 | 可保留休战立场进入补救方案，不算错误答案 |\r\n| 休战必定无风险／敌方必定按他们的计划行事 | C14、C15不能支持保证，已有反例风险 | 挡住相应断言，保留其他成立部分 |\r\n| 既然护民，隐瞒和散谣都不用交代 | 动机与行为不能互相抵销，不能形成完整呈报方案 | 不给完整送案／寄信资格；提示仍缺责任与具体补救 |\r\n\r\n材料不足时可以回看或暂存，不触发失败。玩家也可直接带已有原始材料去S10询问途径；不要求先生成I08、I09、I10或I11。\r\n\r\n### S10 真相已明，要怎样送出去\r\n\r\n先完整播放LY10-001至007，补全C17：可以将停手实据、补报及各人责任一同送核；也可正式交案；可能重责甚至处死；主角不能保证处分；完整交案经确认后按查办继续。\r\n\r\n**题面**沿用：“真相已明，要怎样送出去？”这一步是知情处置选择，两个方向均可成立。\r\n\r\n| 选择 | 提交方案的条件 | 独立确认与后续 |\r\n| --- | --- | --- |\r\n| 直接递交完整材料，请求正式查办 | 已取得完整粮账、C01及C08至10、两封信、C12、完整C14；已实际听完C17风险。判断引用可以用来源完整的事实整理，不要求手选每张卡 | 先显示完整材料目录和风险；再由LY10-011确认交案，才进A查办段 |\r\n| 先争取两人停下计划、补明责任，再共同呈报 | C14支持有未实行后手可停止；C17支持补报途径；不承诺免罪、不隐瞒材料、不假称双方已经同意 | 确认“去与苟安商量”→S11；只是尝试B，不提前进入B结局 |\r\n| 回看材料，暂不决定 | 随时可用 | 不按停留时间、关闭页面或未写信默认选A |\r\n\r\n所有送案均附上当前已经取得的真实材料与来源，事实、人物说法和推论分栏，不让玩家通过取消某张卡隐去责任。引用是说明“为什么这样选择”，案卷附件完整性是另一项检查。准备目录中若缺必要事实，应回相应取得节点；不是自动补发。\r\n\r\n**A的进入与结果**：实际交案、X14收件后进入原LY12A查办。苟安仍把主责揽向自己，双方没有共同完成停手补报，主角不替李严删去责任；随后正式裁处告知，才出现李严革职、苟安被处死。这个具体结局是原稿待审的游戏改编，不从“未达B”一个条件自动生成，也不由AI判刑。结束接空帐、空粮车与S14。\r\n\r\n### S11 共同写信：每个主张都要接回依据\r\n\r\n复用现有画布。玩家先选希望放进信中的主张，再逐项主动放入相关依据，也可直接写同义主张。提供短选，允许一句话补重点，不要求长文或六张卡全选。\r\n\r\n**题面**：“怎样请他们停下，同时把实情与责任交出去？”\r\n\r\n| 主张与短选方向 | 支持材料／通过条件 | 缺少时的修补反馈 |\r\n| --- | --- | --- |\r\n| 据实报缺，这次不足便请退；不替所有未来战事作保证 | I02或C03＋C04及对应账链；不能写成已经补足 | 回看本批缺额，不让漂亮措辞替代实数 |\r\n| 保留种粮民食，核明现粮与可支撑期限 | C06或C07，配真实缺额；“去核期限”是补救请求，不能编造具体天数 | LY11-011：村里的种粮、口粮怎么办；012：不能只保眼前两人 |\r\n| 撤回借魏散谣的后手 | 完整C14；明确停止的是具体未实行计划，不只是口头“以后小心” | 留在商谈，补充要停止的具体行为 |\r\n| 各自说明隐瞒、误导与参与经过，接受核查 | C01与签认矛盾、C12、C14；责任如实，不把全部缺粮说成个人偷扣 | LY11-014：原来做过、准备做的事不能省去 |\r\n| 由正式渠道完整呈报，并核实回信、收件与补充说明 | C17途径，结合当前已核材料；不得假称已经收件 | LY11-015：实情准备送到谁手里，怎样确认到达 |\r\n| 承认敌方也在恢复，不能许诺休战毫无代价 | C15即可支持已见活动；C16可补回应，不能当必胜证明 | CH2-FB-011；允许继续主张休战，不要求赞战 |\r\n\r\n一次提交只检查本次各项判断是否有据。局部合理、方案尚不完整时，可标“可据此商谈”，确认向苟安说出后由对应追问补齐。**正式寄信**则须六项内容均得到表达或等价覆盖、无矛盾和无免罪保证；不把“商谈已成立”当“整封信足够”。\r\n\r\n任何“我保证你无罪”的句子均要求删改，不能作为有效承诺。提交时只显示界面不足反馈；未确认商谈前，LY11-013只能作提示文字引用，不执行新NPC回应。已确认的商谈中可由其提醒责任边界。生成预览没有剧情效力，玩家编辑后须重新核验，实际确认的版本才交给角色。取消、服务异常、答得短、不同意继续北伐，都不触发A或调查失败。\r\n\r\n方案完整并实际说出后，按017至022：苟安说出代价，主角承认不能保生；苟安明确留营待核，写明误导、参与经过，实际划去赴魏后手并署名。全部发生后C18才完成。此时“准备送出”的信与“已经送达”的信必须分开。\r\n\r\nC18已经完整后，取消寄信、返回改稿、再次提交都保留真实停手与署名。重提只核当前信稿或补充说明，完整后再次开放寄信确认，不重播017至022假装首次承诺，不抹去原责任说明及历史确认版本；缺项时仍可商谈修补，但不能以改稿撤回已经发生的补救。\r\n\r\n玩家若在B尝试中主动改为直接交案：**本版仅在给李严的信实际寄出之前提供此入口**。回S10风险与附件核对，保留已发生的商谈、单方署名等补救材料，再明确确认才进入查办；A裁处还须经过直到结案仍未形成双方共同停手补报的原稿过程。信实际寄出后，本版按既定回信剧情完成查收与补报，不新增中途切A或李严随机拒绝路线。双方停手已经完成后，返回只核对材料并继续B送核，不能用A按钮抹去补救。多次改稿、等信和返回均不自动切A。\r\n\r\n### S12 寄信、回信、正式收件：三个不能合并的事件\r\n\r\n1. **寄给李严**：玩家确认送出当前版本，按LY11-023至024实际交传信人。收件人、正文和附件快照固定。修改画布不会撤回已经寄出的信；后续修改作为补充说明，不覆写原信。\r\n2. **李严读信与回信**：播放LY12B-001至005，观众看见他的反应；主角证据池暂不增加。本版将原稿“实际收手纠报”落实为三个明确承接节点：CH2-LY12B-ACT01呈现李严实际撤回原先安排、写成更正粮情及本人责任说明并署名；CH2-LY12B-RECV01呈现回信连同这份补报实际到营，再读原006至009；CH2-LY12B-RECV02核阅随信附送的补报，区别“愿意补报”与“补报已经形成并交回”。这些新增执行文案仍待review，不新增未有来源的涉事人物或军情。全部完成才形成完整C19。等待采用剧情转场，不是真实倒计时。\r\n3. **完整送核与核收**：C18、C19真实完成后，CH2-LY12B-C01确认页列全部原材料和两人补充说明。选择返回只回看，不撤销停手、不重寄信。确认后010至011实际收件给X14；012至013核实后送说明给X15；之后才允许播B正式裁处。\r\n\r\n此段可选整理题：“现在已经完成了什么，还差什么？”\r\n\r\n| 回答 | 提交条件 | 开放行动 |\r\n| --- | --- | --- |\r\n| 两人都已停手说明，仍须把完整材料送核 | C18＋C19，原始事件均完成 | 显示B正式交件确认；无需先生成I12 |\r\n| 信寄出了，所以李严已经收手 | 仅寄信事件不足 | 挡住；回到等待／查收回信，不假造C19 |\r\n| 双方同意，所以已经无罪或已获轻处 | 停手不是免罪，裁处尚未告知 | 挡住这项判断；仍可走完整送核 |\r\n\r\n整理题不替代真实事件。已满足事件条件的玩家可直接检查材料、确认送核，不再强迫做一次重复合成题。B的正式结果沿用LY12B-014至021：李严交出调度职责受处分；苟安免队长、留下做普通粮兵；退军令仍来，归途推空车。裁处来自剧情告知，不是信件评分。\r\n\r\n### S13、S14 处置与尾声\r\n\r\nA或B的裁处只记本路线C20，不同时发两份结局。按各自演出结束后，接旧卷LY13-001至004，取得C21，开放全章来源回看。主角由这批粮的不足看到更早的人手、田地与征发损耗，但不新增人口计算或下一章必然结论。\r\n\r\n可选尾声整理：“换掉眼前的人，为什么仍没有补上粮？”已有本批不足、实际处置与C21可支持回溯方向；不必完成I13才能结束本幕。调查失败不播放这一段完整真相尾声。\r\n\r\n## 七、结局条件与恢复规则\r\n\r\n| 路线 | 必须真实发生 | 不足以触发的情况 | 最终结果 |\r\n| --- | --- | --- | --- |\r\n| 调查失败W | 有依据的有限核问已说出；苟安实际认罪；玩家选择停止追查；明确确认结束本次调查并交付现有材料 | 选了错答案、提交被挡、只听到认罪、关闭画布、生成异常 | “认下来的罪”；缺粮退军；未查明合谋、未促成停手；不追加死刑 |\r\n| A查办处置 | 真相资料齐备；风险完整告知；玩家明确确认完整交案；正式收件；直到最终裁处，双方仍未共同完成停手、补报与各自交代责任；后续查办与裁处实际发生 | 一次修补失败、B尚在商谈或等信、没有勾满卡片、选择休战；已有双方补救也不能硬切A | 李严革职、苟安死亡、仍因缺粮退军；结局事实沿用原稿待审设定 |\r\n| B停手后送核 | 完整方案；苟安实际撤回后手、交代、署名；李严回信到营且实际停手补报；完整正式收件；补充说明核收；裁处告知 | 信写好、已寄信、只有一人承诺、观众看见远方镜头、仅会说好话 | 两人受处分，苟安活着做粮兵；仍退军；不免除责任 |\r\n\r\n没有第四个“写得不够好”结局，没有隐形分数与倒计时。允许不赞同北伐，但必须正视已知风险和完整责任。\r\n\r\n修改前置判断时，只使依赖它的推论、未执行方案和旧预览失效；保留真实取得的账页、已说出的口供、已经批准的差遣、已寄信与已收手事件。后续资料已真实取得后，即使修改旧题，也不能把它们抹掉或要求NPC假装没说过；玩家可直接引用仍有效的原始充分组重新组织判断。\r\n\r\n正式交案后不能用普通返回按钮撤销。重试须明确提示加载哪个剧情检查点，并恢复那时的资料、判断、行动与信件状态。旧样稿“返回核查就清空行动阶段”的演示便利不进入正式章节。\r\n\r\n保存需区分：已得材料及来源片段、判断草稿、已提交判断及依赖、已确认发言、实际行动事件、当前分支、送信版本、收件记录。恢复后不把未完请求、未读完来源或未收到回信当完成；旧版无门槛判断不能直接继承为已通过。\r\n\r\n## 八、文案表同步与人工review结构\r\n\r\n本轮迁移与回读已完成。按用户最新指令，第二章及后续各章与第一章统一为“逐句执行”“线索字典”“规则与状态”，业务列分别为八／五／五列。原第二章“最终文案／笔记字典／执行规则”的五／五／四结构只作历史基线，本次迁移后不再作为例外恢复。保留稳定编号与已有用户修改，写前比较原值，写后回读内容及格式；不能整表覆盖用户并发编辑。\r\n\r\n| 页签 | 固定表头与顺序 | 人工review用途 |\r\n| --- | --- | --- |\r\n| 逐句执行（8列） | 编号｜说话人／类型｜一句对白／界面文案｜文案说明｜线索录入／引用（人工）｜线索（编号）｜触发条件逻辑（人工）｜触发条件与逻辑衔接（编号） | 人工列直接说明问题、证据从哪里来、什么依据能提交、通过后做什么、未通过怎样返回；技术编号另列 |\r\n| 线索字典（5列） | 线索编号｜类型／来源｜内容｜录入触发｜边界／用途 | 明确事实、人物说法、回忆与推论的性质，来源完整后才收录 |\r\n| 规则与状态（5列） | 编号｜角色或类型｜最终文案｜线索｜触发与关系 | 维护第二章提交门槛、真实行动、分支与恢复条件，不重复抄成全局规则 |\r\n\r\n逐句执行B／C／D／E／G为浅黄人工内容列，A／F／H为浅蓝AI维护列；字典与规则页业务列为浅蓝。保留表头与说明，新增行沿用列色，不把颜色说明导入剧情。新增节点放在对应段落旁便于顺读，历史停用节点置后并明确不导入；实际播放仍按稳定编号和规则跳转，不按表尾Q／W／BAD等节点的物理行序推断。\r\n\r\n持续简化以人工可review为准：一题只问一个关键因果，证据只说明本题所需事实；已有材料和原画布足够时不增加取证或重复考试。允许有据的局部方案先商谈，完整寄信再核完整方案。简化不能删掉关键反证、真实责任、行动确认与结局差异。\r\n\r\n| 目标 | 需修改内容 | 保留内容 |\r\n| --- | --- | --- |\r\n| LY01-002、007至009、011至012及LY02-003、009 | 合并用户新开场；X01改实际所见伤情，X02仅回忆，X03为救命与认人；来意改基于眼前伤情，回应改“多心了” | 用户删除的003至006、010不恢复；原救命、认人及新心声保留 |\r\n| LY02-002、018；LY03-018及各选项 | 先选方向再引用，提交检查后开放确认发言；不足保留草稿 | 原短选、角色回应、取得来源 |\r\n| LY04-D01至D06及F02／T02至03／W02至03／C02至03 | D01至D06先展示M原件；相应Q提交通过后才播放原解释并收录C摘要；Q1GO确认后走T01→D04→Q2，不提前播T02／T03 | 同批事实、经手人身份、C03／04／05A／05B及原编号追溯 |\r\n| Q1A至Q4B、R04-RETURN、R04-CANVAS | 删除选项直接跳转；新增支持判定与行动确认；Q1B改有限损耗核问；其他强断言阻拦 | 四步顺序、回看、无错误次数惩罚 |\r\n| LY07-E01至E03、W01至W04、R07-EXPRESSION／BAD／RETRY | 中性题面；源证据或等价推论；W01改有限核问；按入口返回；明确停查确认与检查点 | 原坦白、原认罪、唯一调查失败方向 |\r\n| 线索字典C01、C08至10、C14、C17至19 | 补全分段取得条件与未完成状态；C17含途径，C19须回信到营 | 原编号、证词与事件性质 |\r\n| 线索字典M01至M08、W01 | 新增材料视图与认罪口供来源，不重复计数 | 原C类核对摘要仍可展开引用 |\r\n| LY09-C01、LY11-003至016、R09／R11 | 支持局部判断与等价依据；商谈资格与完整寄信条件分开；不自动替玩家勾证据 | 战略分歧可保留、六项方案内容、已有修补对白 |\r\n| LY11-010、023至024 | 010定位为玩家确认并向苟安呈现的信稿；023至024才真正发给李严 | 所确认正文快照、真实署名与传信 |\r\n| LY11-017至022及重入规则 | C18完整后取消寄信、改稿或再次提交，只核当前版本及补充说明，不重演首次停手署名；完整后重开寄信确认 | 已完成停手、署名、责任说明与历史确认版本不抹去 |\r\n| LY12B-001至009、C01、R12-AB | 新增ACT01实际撤回并完成署名补报、RECV01回信与附件到营、RECV02核阅补报；远方镜头不直接发玩家证据；齐备后另行送案确认 | 李严读信内容、补报、X14及X15核收 |\r\n| LY12A、LY12B裁处段 | A不由缺少B条件自动触发；补救材料如实保留；正式裁处后给C20 | 原A/B方向与具体处分待review状态 |\r\n| 笔记X10、旧I01／02／04／05描述 | 去除仍指向已停用村中二次核验的文字；旧“错误仅待核仍继续”改成提交门槛 | 可选推论，不强制先合成编号 |\r\n| 小说一、二、四、五、十一、十三节及必要承接 | 新开场、先看账页再判断、有限核问后误采认罪、寄信前可改交案保留补救、李严实际停手署名补报并到营 | 十四节结构、主要对白、原来人物动机与结局情绪 |\r\n\r\n本轮维护各题提交反馈、继续核查确认、W早入／晚入返回、实际补报与回信到营、寄信前B尝试转直接交案的风险确认。原件展示使用CH2-LY04-D01至D06，提交使用Q1S至Q4S，动作确认使用Q1GO至Q4GO；ACT01、RECV01、RECV02均在CH2-LY12B下，与本轮机制稿和书稿保持同一事件边界。新增编号由执行者维护并核验，不要求用户填写。主角、苟安、管事、仓吏、经手人、军吏、李丰信件与李严镜头沿用原角色；不因图中有五环就扩成五处必须新建的场景。\r\n\r\n## 九、逐路线验收用例\r\n\r\n这是完整策划的待实现验收清单，不冒充游戏测试结果。已有网页样稿验证只覆盖四题与一条错路。\r\n\r\n| 用例 | 应有结果 |\r\n| --- | --- |\r\n| 看见伤情、读到往事回忆，但尚未取得本轮受罚或投魏事实 | X01只支持眼前有伤，X02仍为个人回忆；不恢复删除的旁人消息，不把伤情当受罚缘由 |\r\n| 只选答案／只放无关材料／重复同卡 | 留在本步，说明不足，不新增资料或行动 |\r\n| 提交不足时出现带角色口吻的反馈 | 只是界面反馈或引用，不算NPC实际发言、认罪或新口供；确认商谈后才可能发生真实追问 |\r\n| 用X09领取凭据替代本队实收签收 | 不足；凭据只授调取本队材料的资格 |\r\n| Q1初次用M01＋M02；回看时用已取得且来源齐备C05A | 均可提交；首次不要求本步解释后才取得的C05A，更不要求后续C05 |\r\n| 四题首次打开与提交后解释 | D01至D06先给本题原件，C05A／C05B／C04／C03分别在Q1／Q2／Q3／Q4通过且解释实际发生后才给；Q1GO后先T01→D04→Q2，不提前取得C05B |\r\n| Q1用M01＋M03追问损耗 | 只开放核问，不证明整笔缺额由他造成 |\r\n| 已有交付反证却只引用损耗指控全部丢粮 | 拒绝强断言；不允许靠不引用反证绕过 |\r\n| Q2至Q4错误强断言，放全材料 | 仍拒绝；不是卡片数量检查 |\r\n| 每步提交后取消“继续核查” | 下一批材料不授予；返回可再次确认 |\r\n| C01只有早期“迟发”版本；C10尚未读到021 | 不得提前引用完整同批备妥口供或排除先缺后补 |\r\n| 未有第二封信／供述，先写合谋 | 挡住；不能把坦白结果当作引出坦白的条件 |\r\n| S06原始充分组与有效I05 | 都能质问；不强制先生成推论编号 |\r\n| W早入继续查、W晚入继续问 | 回正确取得阶段，保留已得认罪；不跳未解锁题，不清除真实事件 |\r\n| 已进入坦白或取得C12，再回看Q1选核问 | 只允许回看／澄清，不重新打开W停查结局 |\r\n| W认罪后返回／取消结案 | 不进入失败；只有明确确认停查才进入BAD |\r\n| 仅持令牌、尚无差遣 | 不出营；批准后才接连续村庄视频 |\r\n| 村庄视频中或尚未访村 | 没有额外问答；不得提前给C06／07或用于先前对质 |\r\n| 夜访镜头／未听完P05 | 仅有对应已听内容，不将投魏记成完成事件 |\r\n| 玩家主张长期休战，同时承认敌恢复与责任 | 可继续；不因战略立场挡B |\r\n| 书信只含军情、漏民食／责任／途径 | 合理部分可商谈，具体追问修补；不直接A、不允许正式寄出不完整方案 |\r\n| 信写好／已寄出／远方李严读信 | 均不等于主角收到回信或B达成 |\r\n| 李严只表示愿意补报，尚无实际补报附件 | C19未完整；不得据此结算双方补救已完成 |\r\n| B尚未寄信选择交案／已寄信或双方已补救再返回 | 前者带已发生补救事实重新风险确认；后者只继续查收、回看和完整送核，不抹事件切A |\r\n| C18已完成后取消寄信、返回改稿或重提 | 保留停手、署名与责任说明，只重核当前信稿；不重演017至022、不抹单方补救，完整后重开寄信确认 |\r\n| C18、C19齐备，但无X14／X15 | 可送核，不能播B裁处 |\r\n| LY09只交粮情结果 | 不发完整案卷X14，不锁A |\r\n| 改旧判断或回看草稿 | 失效未执行依赖，保留已读原件、已发言、已批准、已送信、已停手 |\r\n| 异常、取消、刷新、迟到生成结果 | 保留可恢复输入，不产生口供、送件、裁处或结束调查 |\r\n| A／B裁处 | 只发本路线C20；均退军；W不混入A/B或旧卷尾声 |\r\n\r\n## 十、本轮交付状态与审阅重点\r\n\r\n已完成：初稿在线来源核对；全幕步骤、问题、证据取得、等价支持、行动和三条结局的整理；旧规则冲突及文案表改动清单；独立来源与机制审阅。本轮另合并用户并发修改的开场，统一各章人工review结构，修正原件／解释取得时序及C18完成后的重入规则。配套读取快照、审阅记录和核验结果保存在 `docs/design/second-act-planning-20261022/`。\r\n\r\n文案策划表、机制稿与书稿：**已同步并回读一致**。表格修订42、机制修订7、书稿修订1283；统一8／5／5表头、黄蓝分工和审核顺序，保留用户并发修改。协作规范修订11已同步本地。核验记录见 `CHAPTER-TWO-FULL-PLAN.sync.json`。\r\n\r\n新增落文字与演出细化继续待review，重点包括有限核问后苟安顺势认罪的衔接、直接交案与先补救两路的叙事分流、原稿A／B具体处分及相应演出。执行者核对一致性不替代用户对这些具体内容的审核。\r\n\r\n尚未执行：按本版完整策划进行正式游戏开发、视频重制及整幕试玩。本次文档同步与已验证的局部网页样稿分开记录。所有人物合谋、调查簿册和裁处仍为原稿标注的游戏改编，不宣称复原史实。\r\n"</script>
+<script>
+const panel=document.getElementById('navigation'), mobile=window.matchMedia('(max-width:850px)');
+const syncNav=()=>{panel.open=!mobile.matches;};syncNav();mobile.addEventListener('change',syncNav);
+document.querySelectorAll('nav a').forEach(link=>link.addEventListener('click',()=>{if(mobile.matches)panel.open=false;}));
+const sectionLinks=[...document.querySelectorAll('nav a')];
+const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){sectionLinks.forEach(a=>a.removeAttribute('aria-current'));document.querySelector('nav a[href="#'+entry.target.id+'"]')?.setAttribute('aria-current','true');}},{rootMargin:'-5% 0px -70% 0px',threshold:0});
+document.querySelectorAll('article h2').forEach(h=>observer.observe(h));
+</script></body></html>

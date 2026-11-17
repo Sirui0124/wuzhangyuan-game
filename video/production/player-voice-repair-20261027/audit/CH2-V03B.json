@@ -1,0 +1,41 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V03B",
+  "src": "/video/current/CH2-V03B-same-camera-20261025.mp4",
+  "title": "开场说明来意B",
+  "subtitles": "/video/subtitles/CH2-V03B-same-camera-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V03B-same-camera-20261025.mp4",
+  "sha256": "c155f09320f11bc8b4d64b05ba29da714bc2cd0fe2c245a2713b9081fc366073",
+  "duration": 6.6135,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "text": "你救过我，我来看看你"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-004",
+      "node": "CH2-LY02-004",
+      "text": "你救过我，我来看看你。",
+      "speaker": "我（选项）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-004.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "6912595e632bbfb870532db2d88e656a5a7f7e68799fed382edf0d7896956044",
+      "duration": 2.3715,
+      "speechRange": [
+        0.32,
+        2.02
+      ],
+      "correlation": 0.9666640395085269,
+      "insertAt": 0.3212,
+      "speechStart": 0.64125,
+      "speechEnd": 2.34125
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

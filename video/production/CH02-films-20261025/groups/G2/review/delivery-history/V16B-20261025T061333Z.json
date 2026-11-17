@@ -1,0 +1,118 @@
+{
+  "delivery": {
+    "id": "V16B",
+    "name": "去问损耗与认罪",
+    "entry": "UI-N2选B",
+    "next": [
+      "UI-EARLY"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16B-01",
+      "V16B-02"
+    ],
+    "subclips": [
+      "V16B-01",
+      "V16B-02"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16B-去问损耗与认罪-画面候选-1c53cc38.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "d3df2754c86abfd56cf9047823ab37a991ee40d3b4855698a6dcebbbd7304026",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16B-去问损耗与认罪-R4.mp4",
+    "technical": {
+      "duration": 11.86,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "d3df2754c86abfd56cf9047823ab37a991ee40d3b4855698a6dcebbbd7304026"
+    },
+    "visualReview": [
+      {
+        "id": "V16B-01",
+        "observation": "原片案头和坐姿不采用。改取同场V16B-02后段卧榻反应并末尾定格2秒，承载3.79秒原问题；保留补时与来源标记，非循环嘴动。",
+        "version": "-R4",
+        "sourceClip": "V16B-02",
+        "trimStart": 4.5,
+        "trimEnd": 7.29,
+        "tailHold": 2.0,
+        "useAvailableVoice": true,
+        "voiceOffset": 0.4,
+        "muteDuplicateSourceSpeech": true,
+        "review": "原片多出案头与坐姿；改取同场V16B-02卧榻反应4.5–7.29秒，末尾闭口静止延长2秒承载3.79秒原玩家问句；不是嘴动循环。原NPC发言在V16B-02完整保留，重复反应源音轨静音后复用已有玩家WAV，不新合成。",
+        "audioIssue": "候选已复用既有玩家原句，主观听审待统一阶段"
+      },
+      {
+        "id": "V16B-02",
+        "observation": "0–7.29秒单首帧原脸与原卧榻固定，呼吸、眼神、说话及低头，无坐起或文书动作。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V16B-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "防龙信定与成态有恨这种陈罢。",
+        "expected": ""
+      },
+      {
+        "id": "V16B-01",
+        "type": "候选已复用既有玩家原句，主观听审待统一阶段"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "1c53cc381832433da132f3e8cc42b7f9ec7ed1677d196a221fb5c0151ca97eeb"
+  },
+  "usability": {
+    "id": "V16B",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16B-去问损耗与认罪-画面候选-1c53cc38.mp4",
+    "sha256": "d3df2754c86abfd56cf9047823ab37a991ee40d3b4855698a6dcebbbd7304026",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "wrong-visible-speaker",
+        "subclip": "V16B-01",
+        "time": [
+          0,
+          2.25
+        ],
+        "description": "当前采用raw V16B-02的4.5–6.75秒仍有苟安张嘴讲话，实际承载玩家原问句；不是只差词/音色。原片没有足够长且自然的闭口反应。",
+        "repair": "已查得G1 L01同场连续闭口0–4.8秒，已同SHA复看，取自然运动覆盖3.79秒原句，不定格、不循环；未提交任何付费试片"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V16B-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "防龙信定与成态有恨这种陈罢。",
+        "expected": ""
+      },
+      {
+        "id": "V16B-01",
+        "type": "候选已复用既有玩家原句，主观听审待统一阶段"
+      }
+    ],
+    "userApproved": false,
+    "generationRepair": {
+      "submitted": false,
+      "reason": "已有足长同场源可复用",
+      "reviewSources": "review/reuse-candidates/sources.json"
+    }
+  }
+}

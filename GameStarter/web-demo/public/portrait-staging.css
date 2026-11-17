@@ -1,0 +1,24 @@
+/* One-to-one still portraits share an eye-line at approximately 65% of screen width.
+   Artwork faces the player; do not mirror costumes/weapons to simulate eye contact.
+   Explicit scene compositions and two-person stages retain their authored blocking. */
+:root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=conversation],
+:root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=center] {
+  left:65%;right:auto;bottom:0;width:43vw;height:calc(100dvh - 88px);
+  transform:translateX(-50%);overflow:visible;pointer-events:none;
+}
+:root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=center] { left:50%; }
+:root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition] .character-art {
+  object-fit:contain;object-position:center bottom;
+}
+@media(max-height:800px) {
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=conversation],
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=center] { height:calc(100dvh - 78px); }
+}
+@media(max-width:1000px) {
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=conversation],
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=center] { width:54vw; }
+}
+@media(max-width:650px) {
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=conversation],
+  :root[data-ui-theme=xuan] #game-root .game-scene .portrait-stage[data-composition=center] { bottom:25%;width:70vw;height:63dvh; }
+}

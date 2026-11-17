@@ -1,0 +1,44 @@
+{
+  "id": "V21-01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v3\\V21-01-shared-repaired.mp4",
+  "sha256": "78d874dc3c23c3a6d151c6c897b415fec6efae2ca0553c6ea02f6509a319618e",
+  "estimatedDuration": 7.4,
+  "sourceSegments": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\picture-repair\\reuse-sources\\G4-L02-fe5e86520c.mp4",
+      "sha256": "fe5e86520c33d33a60f24c839976a8f279daeab49916f10fa081af0eed0c3ed6",
+      "sourceTime": [
+        0,
+        7.4
+      ],
+      "playbackRate": 1,
+      "reuseRole": "仅复用同一人物视觉表演，不导入原节点剧情或声音"
+    }
+  ],
+  "fullSourceLinesPreserved": true,
+  "noLoop": true,
+  "noFrozenMouth": true,
+  "noAdditionalSlowdown": true,
+  "existingCentralVoice": {
+    "node": "CH2-LY07-E02",
+    "text": "你已确认没征齐，为什么还说粮早已备好、被李严扣住？",
+    "speaker": "我",
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-E02.wav",
+    "duration": 5.156791666666667,
+    "sha256": "da6cb54c042e4291186d5cc98452b0d3290a9132c6240e9b5eef5618c5d2fe62",
+    "ready": true,
+    "source": "central_tts"
+  },
+  "audioIssues": [
+    "复用既有中央玩家音轨，未新增TTS；逐字听审、音色与混音待统一。"
+  ],
+  "reviewState": "pending-final-dynamic-review",
+  "previousAdoptPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V21-01-visualcrop-v2.mp4",
+  "previousCandidates": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V21-01-repaired.mp4",
+      "sha256": "8fb662cc8d4d9c76fd521d4688fac11519da01459a19962873595e2a77615899",
+      "reviewState": "rejected-local-draft"
+    }
+  ]
+}

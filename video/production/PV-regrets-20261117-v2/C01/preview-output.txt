@@ -1,0 +1,20 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "type": "text",
+      "text": "Animate this exact photograph as a six-second restrained live-action shot, 16:9. Preserve the exact FOUR existing people and the original framing: the cropped executioner in the far LEFT foreground with his lowered diagonal dao, the bound kneeling man at CENTER, and the TWO distant spear guards behind. The right foreground remains EMPTY BARE EARTH throughout. Camera is locked with identical framing and scale. The kneeling man maintains the reference head angle and upward-right eye direction; his lips remain closed. One slight blink and a quiet nasal breath, with tiny cloth movement. The executioner waits motionless; his hand and lowered blade remain in their original positions. Distant flags move gently in the same breeze. Preserve every face, rope, hand, weapon, outfit, tent and fence. No entering people, no foreground additions, no head turn, no camera movement, no cuts, no text. Sound consists only of quiet nasal breathing, coarse cloth and camp wind. No words, no voice, no singing and no music.\r\n16:9，真人历史电影实拍质感，自然皮肤与旧材料，方向明确的实际光源，中性自然色温，不加整体黄滤镜。无对白、旁白、歌词、音乐、低频Drone、心跳节拍、字幕、水印或工作文字。人物嘴唇闭合，声音仅为现场环境、真实呼吸与动作声。不在单条内自动切换场景，不生成转场特效；转场由后期按实际素材完成。"
+    },
+    {
+      "role": "reference_image",
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/8af7c7d6a57b49cb1c4244a7015afce900a23411d93394f11880fb2d4db3ee46.jpg"
+      }
+    }
+  ],
+  "resolution": "768P",
+  "duration": 6,
+  "ratio": "16:9"
+}

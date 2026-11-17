@@ -1,0 +1,139 @@
+{
+  "group": "G3",
+  "updatedAt": "2026-10-25T19:15:54.531567+08:00",
+  "mode": "local-markdown-only-no-video-api",
+  "maxDurationSeconds": 30,
+  "confirmedMandatoryVideoRegenerationCount": 0,
+  "optionalReadyDocumentCount": 1,
+  "requests": [
+    {
+      "sceneId": "V25-02",
+      "parentSceneId": "V25",
+      "title": "伤帐供述赴魏散谣设想（未实行）",
+      "durationSeconds": 13,
+      "mdPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\re-generation-md\\G3-V25-02-赴魏散谣设想-13秒-Seedance.md",
+      "reason": "P02是尚无可靠音轨的补音缺口，不是已确认的画面错误。为选择以完整视频替换静帧回退时准备一份Seedance备选稿；原片/游戏静帧＋既定原句继续保留，不因音轨缺失自动认定必须重拍。",
+      "status": "ready",
+      "blockingReason": null,
+      "readyScope": "仅表示备选MD完整可用，非必须重拍、生成授权或用户通过",
+      "sourceNodes": [
+        "CH2-LY09-P02"
+      ],
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY09-P02",
+          "roleControlOnly": "苟安",
+          "text": "我去魏国，求他们放我回来，散布丞相要篡位的谣言，逼朝廷召军。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "shots": [
+        {
+          "index": 1,
+          "startSeconds": 0.0,
+          "endSeconds": 13.0,
+          "referenceImageNumbers": [
+            1
+          ]
+        }
+      ],
+      "mdSha256": "1e99052dfdaf123e6df2dbf4917dfb3e258892db9cf2e38d0b81c885f7d4b144",
+      "referenceImages": [
+        {
+          "order": 1,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\references\\gouan-night-prone\\image-01.png",
+          "sha256": "e1a7f3725ffb1e468c1d2c764ba2ce5cf4407569fe8f638be0d75f5120fb16a3",
+          "visuallyInspected": true,
+          "purpose": "夜间苟安单人伏榻身份/空间/构图/光照及唯一首帧"
+        }
+      ],
+      "promptReviewStatus": "待review",
+      "userApproved": false,
+      "generationSubmitted": false,
+      "commentsAndVersionsPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\re-generation-md\\review-and-version-relations.json",
+      "integrationSceneId": "CH2-LY09-P02",
+      "requestPurpose": "optional-video-alternative-for-audio-gap",
+      "mustRegenerateVideo": false,
+      "autoSubmitAllowed": false,
+      "gameFallback": "静帧/立绘＋既定完整原句，点击继续",
+      "requiresRegenerationConfirmationFromMediaReview": false
+    }
+  ],
+  "excludedFromRegeneration": [
+    {
+      "sceneId": "V21",
+      "reason": "已有batch2修复候选，原旧版问题不重复纳入",
+      "currentPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V21-拆穿、第二封信与合谋供述_纯台词精剪V1.mp4",
+      "currentSha256": "7b713bd8fbb593927704987bd300ac027ce21894595f8991081ed2badbf6298e"
+    },
+    {
+      "sceneId": "V22",
+      "reason": "已有batch2修复候选，原旧版问题不重复纳入",
+      "currentPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V22-邀请访村与正式出营批准_纯台词精剪V1.mp4",
+      "currentSha256": "a4f3411246d3ff8ed60628c84a00f8e2cb10761e6b2de6efd679a0b7c4b54b98"
+    },
+    {
+      "sceneId": "V23",
+      "reason": "已有batch2修复候选，原旧版问题不重复纳入",
+      "currentPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V23-获准访村的连续见闻_补合法心声V1.mp4",
+      "currentSha256": "10bf78398293bd72fcea5933d29b1a18df78d6635120716ef40283a531780979"
+    },
+    {
+      "sceneId": "V24",
+      "reason": "已有batch2修复候选，原旧版问题不重复纳入",
+      "currentPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V24-夜访回忆_纯台词精剪V1.mp4",
+      "currentSha256": "b3623f3c932c574e95825a4f144b4fccdb77420d892d862b956ffad6edddc22e"
+    },
+    {
+      "sceneId": "V25",
+      "reason": "P02为音频缺口，P04待听审；当前游戏已有静帧/立绘＋既定原句回退，未确认原画面必须重拍。P02稿仅备选。",
+      "currentPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V25-赴魏散谣的未实行计划与风险_画面修复V2.mp4",
+      "currentSha256": "0d463a52831df177bdd594d0f19f6cc7bbfa2329c717e5e9bd8e884cb58f8087"
+    }
+  ],
+  "notAdded": [
+    {
+      "sceneId": "V25-04",
+      "reason": "仅ASR疑似多我字，实际听审待确认，尚无证据确定需重生成；游戏静帧/立绘＋既定完整原句继续保留"
+    },
+    {
+      "sceneId": "V25-01/03/05/06/07/08",
+      "reason": "非缺口部件已备；不重复纳入新请求"
+    }
+  ],
+  "reviewRelationsPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\re-generation-md\\review-and-version-relations.json",
+  "preservedUnknownRequests": [
+    {
+      "node": "CH2-LY09-P02",
+      "requestId": "a31dbf42-96db-420d-a263-a7aaa00bdacd",
+      "status": "unknown-no-repost",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\audio\\CH2-LY09-P02-state.json",
+      "stateSha256": "18de1bf501a93f1bfc316d120c20195c6fbdf53de66e041ca1a9dde5144fadfa",
+      "responseTaskId": null,
+      "retrySubmitted": false
+    }
+  ],
+  "newVideoApiCalls": 0,
+  "automaticReposts": 0,
+  "existingCurrentVersionsUntouched": true,
+  "validation": {
+    "referencePathsExist": true,
+    "referenceOrderAndPerShotPurpose": true,
+    "allReferencesVisuallyInspected": true,
+    "integerDurationWithin30": true,
+    "timelineContiguous": true,
+    "onlyExactAllowedSpokenSentence": true,
+    "controlAndSpeechSeparated": true,
+    "lastParagraphSoundRequirements": true,
+    "noBGM": true,
+    "noBranchOrInteractionBoundaryMerged": true,
+    "placeholdersRemaining": false
+  },
+  "cinematographyResearch": {
+    "title": "American Cinematographer — Dual Nature: Shadow",
+    "url": "https://theasc.com/article/dual-nature-shadow/",
+    "checkedAt": "2026-10-25T19:15:54.531567+08:00",
+    "appliedTo": "V25-02分镜1的克制机位、有限色彩与自然肤色；具体时长/构图是本项目设计"
+  },
+  "userApproval": false
+}

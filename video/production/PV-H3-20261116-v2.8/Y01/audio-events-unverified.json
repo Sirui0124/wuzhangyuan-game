@@ -1,0 +1,61 @@
+{
+  "source_sha256": "18d9331cff57b7ffea131788160d74933b179b16f84eaa8e4ba8f37fe96ac9bc",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Rain",
+          "p": 0.4513
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.3742
+        },
+        {
+          "label": "Thunder",
+          "p": 0.36
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.271
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.1082
+        },
+        {
+          "label": "Fire",
+          "p": 0.0229
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0111
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0096
+        },
+        {
+          "label": "Wind",
+          "p": 0.0069
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0046
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0043
+        },
+        {
+          "label": "Music",
+          "p": 0.0042
+        }
+      ],
+      "music": 0.0042
+    }
+  ]
+}

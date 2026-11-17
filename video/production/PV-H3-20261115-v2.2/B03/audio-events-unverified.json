@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.3148
+        },
+        {
+          "label": "Tap",
+          "p": 0.0685
+        },
+        {
+          "label": "Knock",
+          "p": 0.0682
+        },
+        {
+          "label": "Explosion",
+          "p": 0.066
+        },
+        {
+          "label": "Percussion",
+          "p": 0.0526
+        },
+        {
+          "label": "Burst, pop",
+          "p": 0.047
+        },
+        {
+          "label": "Bang",
+          "p": 0.0445
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0433
+        },
+        {
+          "label": "Thunk",
+          "p": 0.036
+        },
+        {
+          "label": "Fireworks",
+          "p": 0.0351
+        },
+        {
+          "label": "Drum",
+          "p": 0.0342
+        },
+        {
+          "label": "Thump, thud",
+          "p": 0.0239
+        }
+      ],
+      "music": 0.3148
+    }
+  ]
+}

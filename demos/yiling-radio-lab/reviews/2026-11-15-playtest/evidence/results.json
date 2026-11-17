@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-15",
+  "game": "yiling-radio-lab",
+  "rules": "v1",
+  "art": "v2",
+  "scope": "审计及三个模型玩家的隔离真实API试玩，未修改游戏",
+  "models": [
+    {
+      "name": "Terra",
+      "model": "gpt-6.1-terra",
+      "dir": "terra",
+      "requests": 8,
+      "initial": [
+        800,
+        900,
+        800
+      ],
+      "reasoningEffort": "medium",
+      "seed": 731115,
+      "ended": true,
+      "settledPeriods": 6,
+      "headerNextPeriod": 7,
+      "saved": 4,
+      "full": 3,
+      "loss": 0,
+      "camp": 2500,
+      "grain": 0,
+      "eaten": 4600,
+      "relief": 400
+    },
+    {
+      "name": "Sol",
+      "model": "gpt-6.1-sol",
+      "dir": "sol-retry",
+      "requests": 16,
+      "replayedRequests": 3,
+      "initial": [
+        900,
+        900,
+        700
+      ],
+      "reasoningEffort": "medium",
+      "seed": 731115,
+      "ended": true,
+      "settledPeriods": 6,
+      "headerNextPeriod": 7,
+      "saved": 4,
+      "full": 3,
+      "loss": 0,
+      "camp": 2500,
+      "grain": 200,
+      "eaten": 4400,
+      "relief": 400
+    },
+    {
+      "name": "GPT-6 Sol",
+      "model": "gpt-6-sol",
+      "dir": "gpt6-sol-retry",
+      "requests": 9,
+      "initial": [
+        900,
+        800,
+        800
+      ],
+      "reasoningEffort": "medium",
+      "seed": 731115,
+      "ended": true,
+      "settledPeriods": 7,
+      "headerNextPeriod": 8,
+      "saved": 4,
+      "full": 3,
+      "loss": 0,
+      "camp": 2500,
+      "grain": 0,
+      "eaten": 5000,
+      "relief": 0
+    }
+  ],
+  "gameSourceUnchanged": true,
+  "ruleTests": {
+    "passed": 23,
+    "failed": 0
+  },
+  "numericComparisons": {
+    "legacy": 25,
+    "explicitValidResponses": 11
+  },
+  "limitations": [
+    "单一默认种子盲玩；另两种军情仅规则对照",
+    "Sol工具中断后重演续玩，非一次连续首局",
+    "工具故障不计游戏故障",
+    "Astra依用户更正中止并排除三组结果",
+    "模型玩家不代表真实用户样本或模型排名",
+    "实时速度、语音、全部语义和故障分支未由三组完整覆盖"
+  ],
+  "evidence": [
+    "terra-transcript.json",
+    "terra-final-state.json",
+    "sol-original-transcript.json",
+    "sol-replay-transcript.json",
+    "sol-final-state.json",
+    "gpt6-sol-transcript.json",
+    "gpt6-sol-final-state.json",
+    "baseline.json",
+    "numeric-audit.json",
+    "targeted-reproductions.json",
+    "details-overlap.png",
+    "terra-result.png",
+    "sol-result.png",
+    "gpt6-sol-result.png"
+  ]
+}

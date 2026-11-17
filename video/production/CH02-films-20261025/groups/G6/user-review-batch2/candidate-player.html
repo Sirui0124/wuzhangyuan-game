@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>G6 第二批修版核对</title><style>body{background:#181818;color:#eee;font:18px sans-serif;margin:20px}video{display:block;width:min(960px,95vw);background:#000}button{padding:9px;margin:4px}pre{white-space:pre-wrap}</style><h1>G6 第二批修版核对</h1><nav id="clips"></nav><h2 id="title"></h2><video id="v" controls muted preload="metadata"></video><p id="status"></p><button id="play">从头播放</button><button id="pause">暂停</button><pre id="log"></pre><script>
+let rows=[],current=null,history=[];const v=document.querySelector('#v'),status=document.querySelector('#status');
+fetch('playback-manifest.json').then(x=>x.json()).then(rs=>{rows=rs;for(const r of rows){let b=document.createElement('button');b.textContent=r.id;b.onclick=()=>load(r);document.querySelector('#clips').append(b);}load(rows[0]);});
+function load(r){current=r;v.src=r.url;document.querySelector('#title').textContent=r.id+' | SHA '+r.sha256;status.textContent='载入';}
+document.querySelector('#play').onclick=()=>{v.currentTime=0;v.play();history.push(current.id+' start=0');};document.querySelector('#pause').onclick=()=>v.pause();
+function state(){status.textContent=current?.id+' time='+v.currentTime.toFixed(3)+' / '+v.duration.toFixed(3)+' ended='+v.ended+' paused='+v.paused+' error='+(v.error?.code||0);document.querySelector('#log').textContent=history.join('\n');}
+v.ontimeupdate=state;v.onloadedmetadata=state;v.onended=()=>{history.push(current.id+' ended at '+v.currentTime.toFixed(3));state();};v.onerror=state;
+</script>

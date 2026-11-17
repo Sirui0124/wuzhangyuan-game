@@ -1,0 +1,140 @@
+{
+  "id": "CH2-LY12A-001",
+  "expected": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+  "sha256": "95c7e0f9046fe9a97e1867eed655b01aacd870b79ad85455f94f7a08e6f80be2",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-001-v1.wav",
+  "recognized": "这些是我拿到的材料查到的 他亲口说的都在里面",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.56,
+      "text": "这些是我拿到的材料",
+      "noSpeechProbability": 0.055240098387002945,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.56,
+          "text": "这"
+        },
+        {
+          "start": 0.56,
+          "end": 0.66,
+          "text": "些"
+        },
+        {
+          "start": 0.66,
+          "end": 0.82,
+          "text": "是我"
+        },
+        {
+          "start": 0.82,
+          "end": 1.02,
+          "text": "拿"
+        },
+        {
+          "start": 1.02,
+          "end": 1.12,
+          "text": "到"
+        },
+        {
+          "start": 1.12,
+          "end": 1.2,
+          "text": "的"
+        },
+        {
+          "start": 1.2,
+          "end": 1.34,
+          "text": "材"
+        },
+        {
+          "start": 1.34,
+          "end": 1.56,
+          "text": "料"
+        }
+      ]
+    },
+    {
+      "start": 2.3400000000000007,
+      "end": 4.02,
+      "text": "查到的 他亲口说的",
+      "noSpeechProbability": 0.055240098387002945,
+      "words": [
+        {
+          "start": 2.3400000000000007,
+          "end": 2.66,
+          "text": "查"
+        },
+        {
+          "start": 2.66,
+          "end": 2.82,
+          "text": "到"
+        },
+        {
+          "start": 2.82,
+          "end": 3.04,
+          "text": "的"
+        },
+        {
+          "start": 3.04,
+          "end": 3.34,
+          "text": " 他"
+        },
+        {
+          "start": 3.34,
+          "end": 3.48,
+          "text": "亲"
+        },
+        {
+          "start": 3.48,
+          "end": 3.6,
+          "text": "口"
+        },
+        {
+          "start": 3.6,
+          "end": 3.76,
+          "text": "说"
+        },
+        {
+          "start": 3.76,
+          "end": 4.02,
+          "text": "的"
+        }
+      ]
+    },
+    {
+      "start": 4.660000000000001,
+      "end": 5.4,
+      "text": "都在里面",
+      "noSpeechProbability": 0.055240098387002945,
+      "words": [
+        {
+          "start": 4.660000000000001,
+          "end": 4.98,
+          "text": "都"
+        },
+        {
+          "start": 4.98,
+          "end": 5.12,
+          "text": "在"
+        },
+        {
+          "start": 5.12,
+          "end": 5.24,
+          "text": "里"
+        },
+        {
+          "start": 5.24,
+          "end": 5.4,
+          "text": "面"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

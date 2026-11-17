@@ -1,0 +1,67 @@
+{
+  "id": "V06",
+  "name": "日期疑点",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V06-日期疑点.mp4",
+  "duration": 8.02,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-DATE实际读完",
+  "next": [
+    "UI-GO-GOUAN"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V06-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V06-01-voiced.mp4",
+      "slotStart": 0,
+      "slotEnd": 8.0,
+      "sourceTrim": [
+        0,
+        8.0
+      ],
+      "audioMode": "central-player-voiceover",
+      "review": {
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V06-01-document-softened.mp4",
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V06-01-normalized.mp4",
+        "sourceSha256": "23f6245dcf469469ebd73637082dc29d53bd4a24d2e6a99e27372734f2a9304c",
+        "visualReview": "usable-after-moving-document-defocus",
+        "actualDynamicReview": true,
+        "reviewedBy": "G2 1x source ended + G1 final edit sequence check",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\G1-assist-review.json",
+        "editEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\V06-01-document-edit.json",
+        "findings": "完整时长及手指/纸边动作保留；局部随动散焦文书，不制造或展示可采信伪日期。精确信息归既有UI/原文。",
+        "audioIssues": [
+          "既有中央玩家原句完整回填；原生成音轨静音，环境声待统一；未逐字听审。"
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-015",
+      "speaker": "我（心声）",
+      "text": "他说五月喝的酒，六月初二才领到粮。",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+      "centralSha256": "511fdfbcfc521fa25e027496aadb0d7cb89dd77cd2eed9c36c16af6819c43827",
+      "sourceAudioStart": 0,
+      "sourceAudioEnd": 3.9857916666666666,
+      "slotStart": 0.3,
+      "slotEnd": 4.285791666666666,
+      "subclip": "V06-01"
+    }
+  ],
+  "sha256": "173d1b12db8232de2587a5ee55d1a1fe4b60ecb516e8e44c52866130782e9ef3",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。",
+    "玩家纯画面段已复用中央既有音轨；生成原音轨静音以避免制作说明/额外人声混入，环境声待统一配音阶段恢复。"
+  ]
+}

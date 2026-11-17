@@ -1,0 +1,37 @@
+{
+  "url": "https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb",
+  "revision": 174,
+  "technicalReference": {
+    "url": "https://my.feishu.cn/docx/ZppQd4GicopTRBxeZ6DcIecjnwd",
+    "revision": 14,
+    "audience": "执行者；不是用户日常编辑入口",
+    "status": "开篇为当前精简Prompt与三结果规则，下方旧稿仅作历史。"
+  },
+  "mainAndAppendixReadbackVerified": true,
+  "presentationGroupsPerStage": 3,
+  "allOutcomeRowsMatchJson": true,
+  "status": "待review",
+  "runtimeEnabled": true,
+  "verification": "outputs/weiyan-tutorial-20261026/verification.json",
+  "jsonSha256": "8854dde5663e45c027e07af63171437bd37a7dc60ea50955751327a6c8c636fd",
+  "promptFilesSha256": {
+    "weiyan-prompt.txt": "0d15f768493811047126b06f688df26056b4d1786926b626781484bf7e57e484",
+    "weiyan-reply-prompt.txt": "0425207d1656a938851e7dabf6045303b8f3d2968d2754ba44c732e150547066",
+    "weiyan-prompt.stages.json": "3f2f7b15e5b616ff9db038c386e186e16145e3967def8c1f8926ded39e52e058",
+    "weiyan-reply-audit-prompt.txt": "185c7864f937625c0fd788d16b8ec31a4eafa7fc3bc097e6118c217ac1f269df"
+  },
+  "localRuntimeUpdate": {
+    "date": "2026-10-26",
+    "onlineMainRevisionRead": 174,
+    "onlineCollaborationRevisionRead": 37,
+    "onlineGlobalRulesRevisionRead": 5,
+    "onlineTechnicalAppendixRevisionRead": 14,
+    "onlineMainChanged": true,
+    "onlineTechnicalAppendixChanged": true,
+    "judgmentVersion": "weiyan-tutorial-help-20261026-v4",
+    "reason": "首轮军情改可选；两次解释后提供玩家主动确认的参考说法；两幕独立润色并分离来源元信息。",
+    "report": "docs/design/WEIYAN-TUTORIAL-POLISH-20261026.md",
+    "reviewStatus": "待用户试玩"
+  },
+  "onlineReadbackNote": "2026-10-26定点更新后回读主稿174、协作原则37、全局规则5、技术附录14；在线判定Prompt与本地原文逐字忽略空白比对一致。"
+}

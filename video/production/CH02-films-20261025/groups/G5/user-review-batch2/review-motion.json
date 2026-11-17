@@ -1,0 +1,74 @@
+{
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "method": "Current-SHA 1x muted playback from zero to ended; native-frame-zero 1fps full-range sheets inspected; 4fps critical contact/release sequences inspected. This is not actual audio listening or continuous frame-by-frame watching.",
+  "clips": [
+    {
+      "id": "V32A",
+      "sha256": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+      "range": [
+        0,
+        30.71
+      ],
+      "completed": true
+    },
+    {
+      "id": "V33",
+      "sha256": "a0455d1624ab7d0fff573ecd1af6a728dd2e2c924cb84a2c5f16a27196d96545",
+      "range": [
+        0,
+        8.38
+      ],
+      "completed": true
+    },
+    {
+      "id": "V34",
+      "sha256": "12881e6c1073f2952c587f39cb3cc9a790a0e9c12d5ce9a80a658fc35bf8cd88",
+      "range": [
+        0,
+        25.75
+      ],
+      "completed": true,
+      "evidence": "IAB ended log observed with 25.75/25.75 and current SHA"
+    },
+    {
+      "id": "V35",
+      "sha256": "486c5c0cbf871e201aae26ed02d074779fb056a0503da42701410ba308bcb827",
+      "range": [
+        0,
+        13.29
+      ],
+      "completed": true
+    },
+    {
+      "id": "V36",
+      "sha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+      "range": [
+        0,
+        37.29
+      ],
+      "completed": true
+    },
+    {
+      "id": "V37",
+      "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "range": [
+        0,
+        29.87
+      ],
+      "completed": true
+    },
+    {
+      "id": "V42",
+      "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "range": [
+        0,
+        15.1
+      ],
+      "completed": true
+    }
+  ],
+  "supersededV34PlaybackSHA": "655e87e2ea8939ee7bae2efe31da4e9db9e091e873fd1fea5bd3e55c1e8f3a5e",
+  "audioListening": false,
+  "checkedAt": "2026-10-25T17:09:14.920470+08:00",
+  "userApproved": false
+}

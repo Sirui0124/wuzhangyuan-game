@@ -1,0 +1,136 @@
+{
+  "status": "succeeded",
+  "node": "A-29",
+  "text": "将军留步，帐前有禁令，今夜非要事不得入。",
+  "text_prompt": "仅参考@音频1中成年男性本人的音色、声线和自然咬字，输出同一个人的干净中文对白。此人是年轻的守帐军士，正在克制而坚定地拦住一位将军，礼貌但不软弱，语气有紧迫感，不喊叫，不模仿参考音频的惊恐或自言自语。唯一允许发声的原句：“将军留步，帐前有禁令，今夜非要事不得入。”只朗读引号内的原句，不朗读角色名、某某说、旁白、画外、编号或任何控制说明，不复述参考录音。自然连贯，在约4.3秒内说完整句，句首只留约0.1秒呼吸，不拖尾。无BGM，无背景音乐，无配乐，无音效、无环境声，只有单人干净近讲人声。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "4821c88d-24a3-4ba8-9a36-e2bbd7948930",
+  "reference": {
+    "file": "source-art/audio/voice-clone/20261023/player-reference.wav",
+    "sha256": "c9ace1c9f2e272025dadd2cbc7ef166d9b52343faa5baf0d1ba55c6f507461aa",
+    "bytes": 681644,
+    "field": "references[0].audio_data"
+  },
+  "requestSha256": "a97996532b34eff004b024d820a326c76ab6288f4174f70d594dcebe63a2e7f8",
+  "reviewStatus": "待用户试听",
+  "documentation": "https://docs.volcengine.com/docs/DoubaoVoice/audio-generation-http?lang=zh",
+  "httpStatus": 200,
+  "logId": "2026102520190255400628BFAB7B1C1F36",
+  "file": "A-29-player-seed-audio-v1.wav",
+  "duration": 4.3,
+  "originalDuration": 4.3,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4040,
+        "start_time": 520,
+        "text": "将军留步，帐前有禁令，今夜非要事不得入。",
+        "words": [
+          {
+            "end_time": 760,
+            "start_time": 520,
+            "text": "将"
+          },
+          {
+            "end_time": 960,
+            "start_time": 760,
+            "text": "军"
+          },
+          {
+            "end_time": 1160,
+            "start_time": 1080,
+            "text": "留"
+          },
+          {
+            "end_time": 1360,
+            "start_time": 1320,
+            "text": "步"
+          },
+          {
+            "end_time": 1360,
+            "start_time": 1360,
+            "text": "，"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1640,
+            "text": "帐"
+          },
+          {
+            "end_time": 1920,
+            "start_time": 1840,
+            "text": "前"
+          },
+          {
+            "end_time": 2160,
+            "start_time": 2000,
+            "text": "有"
+          },
+          {
+            "end_time": 2240,
+            "start_time": 2200,
+            "text": "禁"
+          },
+          {
+            "end_time": 2520,
+            "start_time": 2400,
+            "text": "令"
+          },
+          {
+            "end_time": 2520,
+            "start_time": 2520,
+            "text": "，"
+          },
+          {
+            "end_time": 2720,
+            "start_time": 2640,
+            "text": "今"
+          },
+          {
+            "end_time": 2880,
+            "start_time": 2840,
+            "text": "夜"
+          },
+          {
+            "end_time": 3160,
+            "start_time": 3000,
+            "text": "非"
+          },
+          {
+            "end_time": 3280,
+            "start_time": 3200,
+            "text": "要"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3400,
+            "text": "事"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3560,
+            "text": "不"
+          },
+          {
+            "end_time": 3840,
+            "start_time": 3720,
+            "text": "得"
+          },
+          {
+            "end_time": 4040,
+            "start_time": 3840,
+            "text": "入"
+          },
+          {
+            "end_time": 4040,
+            "start_time": 4040,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "将军留步，帐前有禁令，今夜非要事不得入。"
+  },
+  "sha256": "bca4f19109c53056950abee0bea3240c4c438c585d8d1068636b97a0badccdcc"
+}

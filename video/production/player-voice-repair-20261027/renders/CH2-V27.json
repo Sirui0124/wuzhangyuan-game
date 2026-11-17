@@ -1,0 +1,229 @@
+{
+  "id": "CH2-V27",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V27-a3e5efdfe3-20261025.mp4",
+  "oldSha256": "a3e5efdfe3c1b065949c9cd44a08a0ec739b3bbe3aacb1f5519f84303827b9c9",
+  "oldSubtitles": "/video/subtitles/CH2-V27-a3e5efdfe3-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V27-a8efe294.mp4",
+  "sha256": "392cd2abcd91636a88bc2b1e976a247d6f5ac973b535eebeb9b3928b9d0c80c5",
+  "bytes": 16591729,
+  "duration": 40.958333333333336,
+  "containerDuration": 40.958333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 983,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V27",
+    "src": "/video/current/PV27-CH2-V27-a8efe294.mp4",
+    "title": "带回消息后的分歧",
+    "subtitles": "/video/subtitles/PV27-CH2-V27-a8efe294.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY09-018",
+      "node": "CH2-LY09-018",
+      "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-018.wav",
+      "oldCorrelation": 0.9992782646016989,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-018-v1.wav",
+      "newVoiceSha256": "141decff202b7b769f40ac12c3a4c89624c7d27befa361db6ea840402ea8e9d5",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        1.9440000000000002,
+        8.624
+      ],
+      "insertAt": 1.9440000000000002,
+      "voiceSeconds": 6.58,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.008076786994934,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY09-021",
+      "node": "CH2-LY09-021",
+      "text": "先把实数报上去，请他重新算算这仗还打得起吗。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-021.wav",
+      "oldCorrelation": 0.9633287927321852,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-021-v1.wav",
+      "newVoiceSha256": "e2de9cd697af4f8546a281725b0571ebfa6c57be8398d91443d29b5e026fd15d",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        13.469249999999999,
+        18.36925
+      ],
+      "insertAt": 13.469249999999999,
+      "voiceSeconds": 4.9,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1950559616088867,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY09-022",
+      "node": "CH2-LY09-022",
+      "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-022.wav",
+      "oldCorrelation": 0.968841879647911,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-022-v1.wav",
+      "newVoiceSha256": "e5da92ce1275a8b6be55de08d59aa550fe4bf09eeca896c9baf4e3dff4e4ab72",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        19.33875,
+        26.11875
+      ],
+      "insertAt": 19.33875,
+      "voiceSeconds": 6.375,
+      "trimmedLeadingSilence": 0.425,
+      "gain": 0.9192356467247009,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY09-024",
+      "node": "CH2-LY09-024",
+      "text": "我也说不准。我能做的是把查到的事、补救的办法写清楚，亲自核实送到了没有。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-024.wav",
+      "oldCorrelation": 0.9717778216427966,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-024-v1.wav",
+      "newVoiceSha256": "67b7126f5cc27371aff9d2de215a7778cc93b4f6a584b48a9e7603d2b531cc49",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        33.43875,
+        40.478750000000005
+      ],
+      "insertAt": 33.43875,
+      "voiceSeconds": 7.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0329115390777588,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 2.144,
+      "end": 6.174,
+      "text": "丞相答应这次退军了。魏军还在修路积粮"
+    },
+    {
+      "start": 6.704,
+      "end": 8.374,
+      "text": "往后的风险也得想"
+    },
+    {
+      "start": 10.48,
+      "end": 12.7,
+      "text": "所以百姓还得一直这样撑下去？"
+    },
+    {
+      "start": 13.66925,
+      "end": 18.36925,
+      "text": "先把实数报上去，请他重新算算这仗还打得起吗"
+    },
+    {
+      "start": 19.33875,
+      "end": 23.02375,
+      "text": "你瞒下缺粮，再拿篡位的谣言逼退军"
+    },
+    {
+      "start": 23.79375,
+      "end": 25.743750000000002,
+      "text": "最后受牵连的也有百姓"
+    },
+    {
+      "start": 28.59,
+      "end": 32.61,
+      "text": "真话送上去，就一定有人肯听？"
+    },
+    {
+      "start": 33.71875,
+      "end": 36.86875,
+      "text": "我也说不准。我能做的是把查到的事、"
+    },
+    {
+      "start": 36.91875,
+      "end": 40.34875,
+      "text": "补救的办法写清楚，亲自核实送到了没有"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

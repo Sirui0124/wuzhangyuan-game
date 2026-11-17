@@ -1,0 +1,52 @@
+{
+  "id": "V20",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V20-b78ca236de.mp4",
+  "sha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "逐帧实查同一补镜：8.875秒仍握边，8.958开始开指，9.041667–9.208333双手离纸，玩家双手持纸。最终连续采用6.7–9.25，保留接稳和松手，排除之后红闪、重新握边和带字翻面。",
+    "当前31.625秒成片全半秒序列没有工作字卡、字幕列或局部模糊方框；合法对白、报告和送达取证顺序完整。"
+  ],
+  "repairs": [
+    "首句采用真实角色参考Seed-Audio1.0；其他合法原句复用原声并剪元字段",
+    "移除报告、送达正文卡及遮挡；用新报告接触和木牍实物动作短接",
+    "剪错误前缀、重复句、额外闭嘴等，连带压缩音画与停顿",
+    "014原声起始3.45秒非对白停顿连同冗余画面删去，原句保留；追加的R1后段不用，未再付费生成。"
+  ],
+  "integrationConditions": [
+    "报告015、送达018的准确正文独立保留于source-realization.json；gamePresentationImplemented=false，后续接入者需独立呈现；不新增旁白朗读正文。",
+    "全部为当日旧报告、回执和仓账核查，不画成新供述、现场新签认或受杖闪回。"
+  ],
+  "audioReview": "原句/服务字幕与实际assembled ASR只作技术定位；声音、音色与口型仍待用户听审。",
+  "audioIssues": [
+    "工具不能实际听音；不把ASR或播放结束当作听审与BGM合格。"
+  ],
+  "unresolved": [
+    "修改版待用户重新审核"
+  ],
+  "evidence": [
+    {
+      "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V20",
+      "sha256": "e6620154601d217f7689fe80356aa1053497b1e7cc285aaa60f7ef2f5c0fe301"
+    },
+    {
+      "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+    },
+    {
+      "method": "exact original handoff-frame inspection",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\operator-release-precise.jpg",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-V20-OPERATOR-R1.mp4",
+      "sourceSha256": "41e4435693d4ff028bdccb1dcaa5e7f8d0f521ae66ca77a44ac754a36f39b762",
+      "sourceTimes": [
+        8.875,
+        8.958333,
+        9.041667,
+        9.083333,
+        9.166667,
+        9.208333
+      ]
+    }
+  ]
+}

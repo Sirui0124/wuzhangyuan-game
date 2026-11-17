@@ -1,0 +1,219 @@
+{
+  "id": "CH2-V40",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V40-8e3037a39a-20261025.mp4",
+  "oldSha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+  "oldSubtitles": "/video/subtitles/CH2-V40-8e3037a39a-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V40-c24eec3b.mp4",
+  "sha256": "1de31d8ad998a8824bc239ccea9e15d3725cbef4a4dbfb4bc07d1daf3831f935",
+  "bytes": 13222329,
+  "duration": 23.291666666666668,
+  "containerDuration": 23.291667,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 559,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V40",
+    "src": "/video/current/PV27-CH2-V40-c24eec3b.mp4",
+    "title": "查办、苟安之死与空铺",
+    "subtitles": "/video/subtitles/PV27-CH2-V40-c24eec3b.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY12A-006",
+      "node": "CH2-LY12A-006",
+      "text": "李严知情的事也写在材料里，该查就得查。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-006.wav",
+      "oldCorrelation": 0.9679645389741349,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-006-v1.wav",
+      "newVoiceSha256": "78f1b59e14be4d7205f2fd86f905900f88d357c9749814e86b5afe8fe248ceca",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        4.91675,
+        8.916749999999999
+      ],
+      "insertAt": 4.91675,
+      "voiceSeconds": 3.9,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1017941236495972,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY12A-011",
+      "node": "CH2-LY12A-011",
+      "text": "李严倒了。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-011.wav",
+      "oldCorrelation": 0.9547226696211805,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-011-v1.wav",
+      "newVoiceSha256": "a7f17ad2bf7f7894a03f6e4053d7dc87ef76f75c0d79b971e4920f5065c8d1c2",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        17.011750000000003,
+        18.65175
+      ],
+      "insertAt": 17.011750000000003,
+      "voiceSeconds": 1.6,
+      "trimmedLeadingSilence": 0,
+      "gain": 2.0050745010375977,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY12A-012",
+      "node": "CH2-LY12A-012",
+      "text": "苟安也死了。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-012.wav",
+      "oldCorrelation": 0.9674165144107929,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-012-v1.wav",
+      "newVoiceSha256": "ec87b207be3108dac1c72dae35ff9fa589b6f37ee96543011669ef42bf846a1a",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        18.79175,
+        20.51175
+      ],
+      "insertAt": 18.79175,
+      "voiceSeconds": 1.6,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.8750041127204895,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY12A-013",
+      "node": "CH2-LY12A-013",
+      "text": "可粮呢？",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-013.wav",
+      "oldCorrelation": 0.968166099067407,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-013-v1.wav",
+      "newVoiceSha256": "026af3ec9d6c19817072bb72b07f168981f5e61d13f7a5da4cb4c3ea1c8a4cb2",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        21.52175,
+        23.14175
+      ],
+      "insertAt": 21.52175,
+      "voiceSeconds": 1.6,
+      "trimmedLeadingSilence": 0,
+      "gain": 2.6293203830718994,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 1.26,
+      "end": 4.6,
+      "text": "往下推的人是我，要问就问我"
+    },
+    {
+      "start": 5.236750000000001,
+      "end": 8.82675,
+      "text": "李严知情的事也写在材料里，该查就得查"
+    },
+    {
+      "start": 9.92,
+      "end": 12.7,
+      "text": "李严革职，交回官印"
+    },
+    {
+      "start": 12.7,
+      "end": 16.54,
+      "text": "苟安参与阻挠运粮、欺瞒军情，已按军法处死"
+    },
+    {
+      "start": 17.251750000000005,
+      "end": 18.601750000000003,
+      "text": "李严倒了"
+    },
+    {
+      "start": 18.79175,
+      "end": 20.42175,
+      "text": "苟安也死了"
+    },
+    {
+      "start": 21.761750000000003,
+      "end": 22.79175,
+      "text": "可粮呢？"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

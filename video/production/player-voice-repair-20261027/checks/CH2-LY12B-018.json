@@ -1,0 +1,87 @@
+{
+  "id": "CH2-LY12B-018",
+  "expected": "他被免了队长，留下做粮兵。",
+  "sha256": "6a99e33431ec8f1f1c400beea5860fbb2dd8ff0f2a788f2161bb491e4c57f398",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-018-v1.wav",
+  "recognized": "他被免了队长留下做良兵",
+  "similarity": 0.9090909090909091,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.26,
+      "text": "他被免了队长",
+      "noSpeechProbability": 0.0017724483041092753,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.48,
+          "text": "他"
+        },
+        {
+          "start": 0.48,
+          "end": 0.64,
+          "text": "被"
+        },
+        {
+          "start": 0.64,
+          "end": 0.82,
+          "text": "免"
+        },
+        {
+          "start": 0.82,
+          "end": 0.94,
+          "text": "了"
+        },
+        {
+          "start": 0.94,
+          "end": 1.08,
+          "text": "队"
+        },
+        {
+          "start": 1.08,
+          "end": 1.26,
+          "text": "长"
+        }
+      ]
+    },
+    {
+      "start": 1.8600000000000003,
+      "end": 2.9,
+      "text": "留下做良兵",
+      "noSpeechProbability": 0.0017724483041092753,
+      "words": [
+        {
+          "start": 1.8600000000000003,
+          "end": 2.22,
+          "text": "留"
+        },
+        {
+          "start": 2.22,
+          "end": 2.42,
+          "text": "下"
+        },
+        {
+          "start": 2.42,
+          "end": 2.54,
+          "text": "做"
+        },
+        {
+          "start": 2.54,
+          "end": 2.7,
+          "text": "良"
+        },
+        {
+          "start": 2.7,
+          "end": 2.9,
+          "text": "兵"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

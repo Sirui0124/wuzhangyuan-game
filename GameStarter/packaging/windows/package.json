@@ -1,0 +1,16 @@
+{
+  "name": "wuzhangyuan",
+  "version": "0.1.0",
+  "private": true,
+  "description": "逆转五丈原 Windows 游戏",
+  "author": "逆转五丈原开发组",
+  "license": "UNLICENSED",
+  "main": "main.cjs",
+  "scripts": {
+    "package": "node build-release.mjs"
+  },
+  "devDependencies": {
+    "electron": "45.0.0",
+    "electron-builder": "26.18.0"
+  }
+}

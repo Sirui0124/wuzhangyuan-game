@@ -10,7 +10,6 @@
     "test:narrative": "node scripts/test-narrative.mjs",
     "validate:story": "node scripts/validate-story.mjs",
     "pack:story": "node scripts/pack-story.mjs",
-    "check:narrative": "tsc -p tsconfig.narrative.json --noEmit",
-    "package:mac": "node packaging/build-release.mjs"
+    "check:narrative": "tsc -p tsconfig.narrative.json --noEmit"
   }
 }

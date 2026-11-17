@@ -1,0 +1,48 @@
+{
+  "id": "V32A-06",
+  "sourceId": "V32A-06-C3-write-reading",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-06-C3-write-reading.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-06-final-707975c174.mp4",
+  "postVoice": [],
+  "textLayers": [
+    {
+      "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+      "start": 2,
+      "end": 8.5,
+      "fullFrame": true
+    },
+    {
+      "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+      "start": 8.5,
+      "end": 14.38,
+      "fullFrame": true
+    }
+  ],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "loop": false,
+    "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-06-C3-write-reading.json"
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "修正33.65秒后的日间侧视突变：只留真实笔尖/手/纸边微距，排除人物侧身、日光背景及旁人；局部书写为两秒连续动作，不循环",
+    "纸上残留局部墨迹不作可读事实；精确交代全文沿冻结阅读层；微距偏软，不再放大；未借用后续划线/署名动作充当前面的写交代"
+  ],
+  "audioIssues": [
+    "未逐字听审，纯音频不作为重拍理由"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 14.42,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-06-final-707975c174.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:14.42, start: 0.000000, bitrate: 976 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 771 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 198 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

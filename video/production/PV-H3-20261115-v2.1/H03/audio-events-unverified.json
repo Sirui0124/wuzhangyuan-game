@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.7194
+        },
+        {
+          "label": "Animal",
+          "p": 0.0429
+        },
+        {
+          "label": "Flap",
+          "p": 0.0424
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0418
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0408
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0371
+        },
+        {
+          "label": "Run",
+          "p": 0.0355
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0254
+        },
+        {
+          "label": "Fire",
+          "p": 0.0209
+        },
+        {
+          "label": "Rain",
+          "p": 0.0187
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.015
+        },
+        {
+          "label": "Horse",
+          "p": 0.0126
+        }
+      ],
+      "music": 0.0028
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.552
+        },
+        {
+          "label": "Gobble",
+          "p": 0.1816
+        },
+        {
+          "label": "Fowl",
+          "p": 0.1467
+        },
+        {
+          "label": "Turkey",
+          "p": 0.1324
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0334
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0333
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.027
+        },
+        {
+          "label": "Outside, urban or manmade",
+          "p": 0.013
+        },
+        {
+          "label": "Car",
+          "p": 0.0105
+        },
+        {
+          "label": "Slap, smack",
+          "p": 0.0104
+        },
+        {
+          "label": "Music",
+          "p": 0.0084
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0076
+        }
+      ],
+      "music": 0.0084
+    }
+  ]
+}

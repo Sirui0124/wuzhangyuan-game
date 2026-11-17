@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Pink noise",
+          "p": 0.4986
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.1938
+        },
+        {
+          "label": "Stream",
+          "p": 0.1747
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0555
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.0407
+        },
+        {
+          "label": "Rain",
+          "p": 0.0349
+        },
+        {
+          "label": "Ocean",
+          "p": 0.0338
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0296
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0164
+        },
+        {
+          "label": "Wind",
+          "p": 0.0132
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0124
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0115
+        }
+      ],
+      "music": 0.003
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Rain on surface",
+          "p": 0.0949
+        },
+        {
+          "label": "Speech",
+          "p": 0.0866
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0686
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0592
+        },
+        {
+          "label": "Rain",
+          "p": 0.0511
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0491
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.0328
+        },
+        {
+          "label": "White noise",
+          "p": 0.0217
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.02
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.0199
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0195
+        },
+        {
+          "label": "Ocean",
+          "p": 0.0178
+        }
+      ],
+      "music": 0.0149
+    }
+  ]
+}

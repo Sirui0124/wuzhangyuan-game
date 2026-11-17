@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "group": "G4",
+  "status": "ready",
+  "blockingReason": null,
+  "createdAt": "2026-10-25T19:11:56+08:00",
+  "deliveryMode": "local-seedance-markdown-only-for-confirmed-video-regeneration",
+  "videoAPISubmissionsAllowed": false,
+  "automaticVideoRetriesAllowed": false,
+  "maxDurationSecondsPerMD": 30,
+  "model": "seedance2.5",
+  "aspectRatio": "16:9",
+  "templatePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\docs\\video\\SEEDANCE-PROMPT-TEMPLATE.md",
+  "entries": [],
+  "pendingRegenerationCount": 0,
+  "generatedMarkdownCount": 0,
+  "noDocumentsReason": "逐条核对当前14个实际SHA：已有新版本修复的旧问题不重复纳入；当前没有确认的视频重生成缺口，因此未虚构新生成请求或重复撰写历史Prompt。",
+  "auditedScenes": [
+    {
+      "sceneId": "V26",
+      "title": "返营交差与军情说明",
+      "durationSeconds": 45.458333,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V26-纯台词与时长返修B2.mp4",
+      "currentSha256": "5b7f33da7cc67f4feaef75785c587ab121d112bc4c6b33a7702ad79d038f0e19",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "纸面正文、动作杂句和玩家问句缺失均已在既有V3/B2回源剪辑及原音复用修复，当前45.46秒版本不重复纳入视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V27",
+      "title": "带回消息后的分歧",
+      "durationSeconds": 40.966,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V27-纯台词与时长返修B2.mp4",
+      "currentSha256": "a3e5efdfe3c1b065949c9cd44a08a0ec739b3bbe3aacb1f5519f84303827b9c9",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "开头乱声已在B2清除，原32帧入帐动作及用户认为还好的后段保留，当前版本不重复纳入重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V28A",
+      "title": "访村后态度A",
+      "durationSeconds": 13.125,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V28A-纯台词与时长返修B2.mp4",
+      "currentSha256": "a45ad04086c85cdb56061cb1c785d7b1d02d3339fc9d443e330df948672f9ff1",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V28B",
+      "title": "访村后态度B",
+      "durationSeconds": 13.5,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V28B-纯台词与时长返修B2.mp4",
+      "currentSha256": "3655436d61d7cba1a441fb56bb9544dc1b3b4f8db08b316402bcba8247bf6912",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V28C",
+      "title": "访村后态度C",
+      "durationSeconds": 13.458333,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V28C-纯台词与时长返修B2.mp4",
+      "currentSha256": "c5f4cf60fbcd0de2efeca15af3dbf76a39943c69cb36e921379418e6d29ef99c",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V29",
+      "title": "问明补报途径与正式交案风险",
+      "durationSeconds": 52.5,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V29-纯台词与时长返修B2.mp4",
+      "currentSha256": "b55fb60eb2c4add3f3d75a3e26971e5f286a89ed89eb2849f5e96b8c8f2725ba",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已用既有无字案头/原句修复玩家段与合法心声，四条军吏渠道和风险对白保留；当前52.50秒版本不重复重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V30",
+      "title": "第二次定制交谈的提问",
+      "durationSeconds": 6.708333,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V30-纯台词与时长返修B2.mp4",
+      "currentSha256": "7d2a4f2718febccc3f3f9427abc23b937fc57dc9230911508114fd54f6ed45d8",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "L02",
+      "title": "定制②听者反应底片",
+      "durationSeconds": 7.46,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+      "currentSha256": "fe5e86520c33d33a60f24c839976a8f279daeab49916f10fa081af0eed0c3ed6",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "当前闭口听者7.46秒单次底片已有明确确认原话后播放/末帧等判定条件；游戏接入待验不自动转为补拍，禁止捏造固定玩家话。",
+      "pictureUsability": "usable-with-integration-condition",
+      "integrationConditions": [
+        "仅在玩家确认本次原话后，以CH2-O2-INPUT.confirmedText为动态声音来源，在已确认原话的播放及等待判定阶段单播；输入界面不播回应。",
+        "播放结束后保持真实末帧，或切到随交付提供的L02-last-frame.png；不得跳黑、自动循环、倒放、从头反复重播，也不得按本片时长自动推进流程。",
+        "已确认原话播放结束且取得判定/回应后，才进入相应V31；等待期间保持末帧。这是一项接入条件，本轮未改游戏程序或声称完成游戏内验证。"
+      ],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V31T",
+      "title": "定制②回应T",
+      "durationSeconds": 6.416667,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V31T-纯台词与时长返修B2.mp4",
+      "currentSha256": "1ef91221e6dc33ae6fc6c7c1b1bee21f17b89454d859629e24202a5e34e86c76",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V31D",
+      "title": "定制②回应D",
+      "durationSeconds": 8.04,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31D-定制②回应D.mp4",
+      "currentSha256": "ed7727fdcc0ba0bb01af75347ae19ea89b1ce9ae4681c5515a7deb7f317b1f1f",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "本轮逐条音画/文字/时长核查保留的原版本，没有确认未解决的画面生成缺口。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V31R",
+      "title": "定制②回应R",
+      "durationSeconds": 9.47,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\V31R-定制②回应R.mp4",
+      "currentSha256": "b29e0f2da6acca589992c43b3e1abed47d7f85fa204a69c5c77ecc7450efc636",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "本轮逐条音画/文字/时长核查保留的原版本，没有确认未解决的画面生成缺口。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V31A",
+      "title": "定制②回应A",
+      "durationSeconds": 6.208333,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V31A-纯台词与时长返修B2.mp4",
+      "currentSha256": "2500facca30640ba12a249176578e4f43962ef6bb2665d90dbcfbd02b2d4fae4",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V31N",
+      "title": "定制②回应N",
+      "durationSeconds": 5.125,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V31N-纯台词与时长返修B2.mp4",
+      "currentSha256": "ac61e8a56779346373cd2fb56214002d9484441f01b49b03159ee3a92efde2fa",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    },
+    {
+      "sceneId": "V32R",
+      "title": "补救遭拒",
+      "durationSeconds": 6.833333,
+      "currentFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\candidates\\V32R-纯台词与时长返修B2.mp4",
+      "currentSha256": "12967eeb7bd8b59d76d3bf0726dc57389d4a89932b229cc23c39fd5d855ed38d",
+      "requiresVideoRegeneration": false,
+      "auditOutcome": "no-confirmed-video-regeneration-gap",
+      "reason": "已完成B2免费剪辑、合法原句/归属、时长及画面/视频轨核查，当前版本无登记未解决画面缺口；待实际听审不等于必须视频重生成。",
+      "pictureUsability": "usable",
+      "integrationConditions": [],
+      "listeningReview": "pending",
+      "userApproved": false
+    }
+  ],
+  "remainingNonVideoItems": [
+    "全14条实际听审仍pending，包括音色、发音、BGM和最终声口听感；ASR/技术完成不能替代声音通过。",
+    "L02仍须确认原话后单播并末帧等判定；游戏内接入未改/未验证。"
+  ],
+  "existingTaskRecords": {
+    "total": 41,
+    "succeeded": 40,
+    "failed": 1,
+    "active": 0,
+    "unknown": 0,
+    "recordsRetained": true,
+    "records": [
+      {
+        "sceneId": "L02-01",
+        "taskId": "task_P8vMWMkap2egYdCAaUOmaIAS7rHZVVWb",
+        "status": "failed",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\L02-01.json"
+      },
+      {
+        "sceneId": "V26-01",
+        "taskId": "task_3jP0zxx03iClPq5YRJnxzERnafntabJo",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-01.json"
+      },
+      {
+        "sceneId": "V26-02-R2",
+        "taskId": "task_imXOCBkGLplK9MR6Ubu8GX9Mo3x1k7VP",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-02-R2.json"
+      },
+      {
+        "sceneId": "V26-02",
+        "taskId": "task_HK1hGZp0EomznSxfs4mpmLoLO3X0wlN9",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-02.json"
+      },
+      {
+        "sceneId": "V26-03",
+        "taskId": "task_6ybdDH9jCIM2QOZcybSBCF2jXRvjJ351",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-03.json"
+      },
+      {
+        "sceneId": "V26-04-R2",
+        "taskId": "task_K3cY2lbT6H1esMYpuYmmQACPCU5fPe11",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-04-R2.json"
+      },
+      {
+        "sceneId": "V26-04",
+        "taskId": "task_bwO6DJPkGQn1OHEL8sdnBqeY3uP9M3c9",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-04.json"
+      },
+      {
+        "sceneId": "V26-05",
+        "taskId": "task_1NyMH2ne54HmKNWte8vvsYSpqbQpY00Q",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-05.json"
+      },
+      {
+        "sceneId": "V26-06",
+        "taskId": "task_KwijgrjEVnoPfVcF2S3yNQkek7dOCfVz",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-06.json"
+      },
+      {
+        "sceneId": "V26-07",
+        "taskId": "task_G4MDvXI0jPNAPNjsK4ZyffatkclyE0FB",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-07.json"
+      },
+      {
+        "sceneId": "V26-08-R2",
+        "taskId": "task_jEqTlVKq4GHeMoqk4Bjp8Cb1OleJqRvy",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-08-R2.json"
+      },
+      {
+        "sceneId": "V26-08",
+        "taskId": "task_lsacslWOlezqSSOslNZDDB6ZfF4JAOta",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-08.json"
+      },
+      {
+        "sceneId": "V26-09-R2",
+        "taskId": "task_xuH8Et5WnTED5AkPkMrJCBQBHqpZOdIC",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-09-R2.json"
+      },
+      {
+        "sceneId": "V26-09",
+        "taskId": "task_yCXbEWr8Hvg79Fk2sJQaLYMkywmPgSMd",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V26-09.json"
+      },
+      {
+        "sceneId": "V27-01",
+        "taskId": "task_jjR56XdA79Nss8gAX2TgOwGU7VNXLHMF",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-01.json"
+      },
+      {
+        "sceneId": "V27-02",
+        "taskId": "task_NiS7yyqL7vDkQp2FFycrZtvv7GXKvLPF",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-02.json"
+      },
+      {
+        "sceneId": "V27-03",
+        "taskId": "task_AyKZDf9t3Tzr0Ni2omdfQ8Lydnv5ZBte",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-03.json"
+      },
+      {
+        "sceneId": "V27-04",
+        "taskId": "task_3RgdaKYQ8ur4KDZk0iL6mJ1Asa8CtQc2",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-04.json"
+      },
+      {
+        "sceneId": "V27-05",
+        "taskId": "task_If6V4uPYXFydEEEFKschFUe4tfT8rdGk",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-05.json"
+      },
+      {
+        "sceneId": "V27-06",
+        "taskId": "task_vuwJkkEKOppcldLzWOwAL8PFZhmeG4wX",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-06.json"
+      },
+      {
+        "sceneId": "V27-07",
+        "taskId": "task_WgvvX4DCzTK0Yml4K6uHGJQTIsdStq2v",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V27-07.json"
+      },
+      {
+        "sceneId": "V28A-01",
+        "taskId": "task_2LM68HcxfnNgggfvShdxtGYXsxyLYBBD",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28A-01.json"
+      },
+      {
+        "sceneId": "V28A-02",
+        "taskId": "task_vkakuRI0jpBU6qvnSrzAQShsiIIPckVB",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28A-02.json"
+      },
+      {
+        "sceneId": "V28B-01",
+        "taskId": "task_I2FTM964ELZQ8FZMZAfGazHrxz2UMv5W",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28B-01.json"
+      },
+      {
+        "sceneId": "V28B-02",
+        "taskId": "task_tSeqOOT6U8wmUfQfhAOHF7Gz1dBgytuS",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28B-02.json"
+      },
+      {
+        "sceneId": "V28C-01",
+        "taskId": "task_4ZkivfsvL37b0OzQLKTzAjcYybo1JA3e",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28C-01.json"
+      },
+      {
+        "sceneId": "V28C-02",
+        "taskId": "task_OG9xhJU2bOjXQj774RfJDXW6UtuMPFFz",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V28C-02.json"
+      },
+      {
+        "sceneId": "V29-01",
+        "taskId": "task_uJDJZPMvEpV5sq3Oei0Eh5udHhSoDW1z",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-01.json"
+      },
+      {
+        "sceneId": "V29-02",
+        "taskId": "task_mKYTmn19SbjYtYq4CkJzzsYIgc4CGthr",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-02.json"
+      },
+      {
+        "sceneId": "V29-03",
+        "taskId": "task_4sDjCnuEvoPxI769QcdvtJl5OHRWW0WN",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-03.json"
+      },
+      {
+        "sceneId": "V29-04",
+        "taskId": "task_J9qe5cBzdkPOhHFegcIRGacfjBI8MYo1",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-04.json"
+      },
+      {
+        "sceneId": "V29-05",
+        "taskId": "task_VCRiAqE9UoDiLfJCW70GYvlviGETV5r7",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-05.json"
+      },
+      {
+        "sceneId": "V29-06",
+        "taskId": "task_xqFmdJAH78vqbbSGZtSArkRZjOJR6klx",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-06.json"
+      },
+      {
+        "sceneId": "V29-07",
+        "taskId": "task_4jeVYZMMRcU7gXQe3xF5b8TDhdtuhHu1",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V29-07.json"
+      },
+      {
+        "sceneId": "V30-01",
+        "taskId": "task_CijkJkQU3i3A0QhcedOIgvldUfSWmmME",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V30-01.json"
+      },
+      {
+        "sceneId": "V31A-01",
+        "taskId": "task_OZZnqg9bPRe4gbVYmnMIywli5t5LBpuo",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V31A-01.json"
+      },
+      {
+        "sceneId": "V31D-01",
+        "taskId": "task_ZUFFKk4r9fxeVDNrDpKok2TMPL8N7PoF",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V31D-01.json"
+      },
+      {
+        "sceneId": "V31N-01",
+        "taskId": "task_kuurdwCYYgLSMbXX3GVAentJglYoHKWo",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V31N-01.json"
+      },
+      {
+        "sceneId": "V31R-01",
+        "taskId": "task_VoGkB0qu0ZDcotPUtcLqGMgPR1bdPwPX",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V31R-01.json"
+      },
+      {
+        "sceneId": "V31T-01",
+        "taskId": "task_NjDB7tovWxLjSJB7Qqs6jFhXGT2ScaZ1",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V31T-01.json"
+      },
+      {
+        "sceneId": "V32R-01",
+        "taskId": "task_ovGYBPQg92VqGiZkAEnnBaGDmjsqmXCa",
+        "status": "succeeded",
+        "recordPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\tasks\\V32R-01.json"
+      }
+    ]
+  },
+  "evidence": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\delivery.json",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2.json",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\review\\picture-usability.json",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\track-and-picture-verification.json"
+  ],
+  "futureDocumentRequirements": {
+    "separateRequestPerMD": true,
+    "integerDurationAtMost": 30,
+    "noRequirementToFill30Seconds": true,
+    "noCrossExclusiveBranchesOrInteractionStops": true,
+    "realReferencePathsAndPerShotRelations": true,
+    "continuousShotTimeline": true,
+    "spokenWhitelistSeparateFromControls": true,
+    "verifiedFilmmakingReferenceRequired": true,
+    "finalParagraphNoBGMAndSynchronousSound": true
+  },
+  "userApproved": false,
+  "newVideoAPIRequests": 0
+}

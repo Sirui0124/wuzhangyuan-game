@@ -1,0 +1,130 @@
+{
+  "delivery": {
+    "id": "V13",
+    "name": "仓中核凭据、获准查账",
+    "entry": "持真实本队凭据到仓",
+    "next": [
+      "V14"
+    ],
+    "endEvent": "实际核验及获准查本批",
+    "children": [
+      "V13-01",
+      "V13-02",
+      "V13-03",
+      "V13-04"
+    ],
+    "subclips": [
+      "V13-01",
+      "V13-02",
+      "V13-03",
+      "V13-04"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+    "technical": {
+      "duration": 22.91,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "decodedVideoFrames": 549,
+      "videoTrackSeconds": 22.875,
+      "videoEndSeconds": 22.875,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "0–5.8秒入仓出示凭据只作过渡；近景柔化，无法据此检查拇指接触细节。5.8秒后保留3.3秒纸凭据落案及退手，去除纸变木牍的后半异常。管事随后开口与案边核看；仓吏取账边界保留。V13-04新版按两个纸面区域局部柔化，持握边缘比旧大范围虚化清楚；仍有零散字迹，未见完整可辨的错误证据句子。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "开头仅作入仓和出示过渡，不声称凭据可读、他人已收妥或手指细节通过。",
+      "核验、陪同与查本批的边界依本节点管事/仓吏确认；不能从虚化正文取得任何新数值。展示账页不等于取得可带离原件或准许翻其他队账。"
+    ]
+  },
+  "usability": {
+    "id": "V13",
+    "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "0–5.8秒入仓出示凭据只作过渡；近景柔化，无法据此检查拇指接触细节。5.8秒后保留3.3秒纸凭据落案及退手，去除纸变木牍的后半异常。管事随后开口与案边核看；仓吏取账边界保留。V13-04新版按两个纸面区域局部柔化，持握边缘比旧大范围虚化清楚；仍有零散字迹，未见完整可辨的错误证据句子。"
+    ],
+    "issues": [
+      {
+        "type": "object-morph",
+        "state": "repaired",
+        "repair": "V13-02纸变木牍尾部裁去，保留落案退手和既有玩家句窗口"
+      },
+      {
+        "type": "readable-fake-text",
+        "state": "repaired",
+        "repair": "V13-04按物理纸面再次局部柔化，不把零散不可读字迹提升为书证"
+      }
+    ],
+    "integrationConditions": [
+      "开头仅作入仓和出示过渡，不声称凭据可读、他人已收妥或手指细节通过。",
+      "核验、陪同与查本批的边界依本节点管事/仓吏确认；不能从虚化正文取得任何新数值。展示账页不等于取得可带离原件或准许翻其他队账。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          22.91
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V13\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V13",
+        "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+        "event": "ended",
+        "start": 0,
+        "end": 22.912,
+        "duration": 22.912,
+        "time": "2026-10-25T06:23:12.147Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 22.91,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9"
+    }
+  }
+}

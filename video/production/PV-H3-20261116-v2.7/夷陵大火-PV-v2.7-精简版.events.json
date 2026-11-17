@@ -1,0 +1,169 @@
+{
+  "source_sha256": "74dd060805f6869b532af1f844215e7c5b943af28bf073be912de645388b4142",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8602
+        },
+        {
+          "label": "Sigh",
+          "p": 0.1937
+        },
+        {
+          "label": "Fire",
+          "p": 0.0437
+        },
+        {
+          "label": "Music",
+          "p": 0.0262
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0242
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.024
+        },
+        {
+          "label": "Breathing",
+          "p": 0.0185
+        },
+        {
+          "label": "Crack",
+          "p": 0.018
+        },
+        {
+          "label": "Crackle",
+          "p": 0.0152
+        },
+        {
+          "label": "Rumble",
+          "p": 0.0121
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0096
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0092
+        }
+      ],
+      "music": 0.0262
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6468
+        },
+        {
+          "label": "Sigh",
+          "p": 0.4054
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.1325
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0165
+        },
+        {
+          "label": "Whoosh, swoosh, swish",
+          "p": 0.0154
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0146
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0143
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0127
+        },
+        {
+          "label": "Gasp",
+          "p": 0.012
+        },
+        {
+          "label": "Horse",
+          "p": 0.0102
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0099
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0095
+        }
+      ],
+      "music": 0.0038
+    },
+    {
+      "start": 16.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.4922
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.169
+        },
+        {
+          "label": "White noise",
+          "p": 0.1007
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.0829
+        },
+        {
+          "label": "Ocean",
+          "p": 0.076
+        },
+        {
+          "label": "Waterfall",
+          "p": 0.0513
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0314
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0294
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0272
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0265
+        },
+        {
+          "label": "Wind",
+          "p": 0.026
+        },
+        {
+          "label": "Music",
+          "p": 0.0195
+        }
+      ],
+      "music": 0.0195
+    }
+  ]
+}

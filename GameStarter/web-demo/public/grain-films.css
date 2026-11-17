@@ -1,0 +1,32 @@
+.grain-document{position:absolute;inset:15% 18% 12%;overflow:auto;padding:36px;color:#e8dfcb;background:#151b1de8;border:1px solid #98897755;border-radius:4px;font:20px/1.9 KaiTi,serif;white-space:pre-line}.grain-document textarea{display:block;width:100%;min-height:180px;background:#ffffff08;color:inherit;font:inherit;border:1px solid #98897777;padding:16px;box-sizing:border-box}.grain-document button{float:right}
+
+.grain-listener{position:fixed;z-index:90;inset:0;background:#090b0c;display:grid;place-items:center}.grain-listener video{width:100%;height:100%;object-fit:contain}.grain-listener p{position:absolute;bottom:9%;left:15%;right:15%;text-align:center;color:white;font:22px/1.7 sans-serif;text-shadow:0 1px 5px black}.grain-listener button{position:absolute;right:3%;bottom:3%}.grain-fixed-speech{display:grid;gap:12px;padding:20px;max-height:65vh;overflow:auto}.grain-fixed-speech button{text-align:left;font:18px/1.7 KaiTi,serif;background:#111a;color:#e8dfcb;padding:12px 18px;border:1px solid #99886655;cursor:pointer}
+
+@media(max-width:650px){.grain-document{inset:14% 5% 8%;padding:20px;font-size:18px}.grain-fixed-speech{padding:8px}.grain-fixed-speech button{font-size:16px}}
+
+/* Match the video viewport while the player chooses, without a camera zoom. */
+.game-scene.grain-camera-hold{background:#000}
+.game-scene.grain-camera-hold .scene-image{bottom:0;background-size:contain;background-repeat:no-repeat;background-color:#000;animation:none}
+/* Keep the same full picture when a bedside film hands over to a choice. */
+[data-cinematic=chapter-two] .cinema-frame{grid-template-rows:minmax(0,1fr)}
+[data-cinematic=chapter-two] .cinema-frame>.cinema-controls{position:absolute;inset:auto 0 0;grid-area:auto}
+:root[data-ui-theme=xuan] #game-root .game-scene.grain-camera-hold .scene-image{filter:none;opacity:1;transform:none;animation:none}
+.game-scene.grain-camera-hold .scene-shade{display:none}
+
+/* Listening, the held reply, and the next film share the same uncropped viewport. */
+.grain-listener{display:block;background:#000}
+.grain-listener video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.grain-listener button{bottom:5px}
+.grain-listener-controls{position:absolute;bottom:0;left:0;right:0;min-height:34px;padding:3px 3%;display:flex;align-items:center;justify-content:flex-end;gap:20px;background:#090b0c;color:#e8dfcb;font:16px/1.5 var(--serif);box-sizing:border-box}
+.grain-listener .grain-listener-controls button{position:static;min-height:28px;padding:0 8px;color:inherit;font:inherit}
+.grain-listener-controls button:focus-visible{outline:1px solid #b6a077}
+:root[data-ui-theme=xuan] #game-root .game-scene.grain-reply .scene-image{filter:none;opacity:1;animation:none;transform:none}
+.grain-reply .grain-reply-frame{width:100%;height:100%;object-fit:contain}
+.grain-reply .scene-shade{display:none}
+.grain-reply-actions{position:absolute;bottom:4px;right:3%;display:flex;align-items:center;gap:24px;z-index:3}
+.grain-reply-actions button{font:16px/1.5 var(--serif);color:#e8dfcb;min-height:28px;padding:0 8px}
+.grain-reply-actions button:hover,.grain-reply-actions button:focus-visible{color:#fff3d7;outline:1px solid #b6a077}
+/* A manually opened notebook is a compact list, never a full-height stretched grid. */
+:root[data-ui-theme=xuan] #game-root .game-scene.workspace-screen .thought-inventory{position:absolute;inset:94px auto auto 3%;width:min(440px,94%);height:auto;min-height:0;max-height:55dvh;display:flex;flex-direction:column;z-index:6}
+:root[data-ui-theme=xuan] #game-root .game-scene.workspace-screen .inventory-scroll{display:flex;flex-direction:column;align-content:start;gap:2px;min-height:0;overflow-y:auto}
+:root[data-ui-theme=xuan] #game-root .game-scene.workspace-screen .inventory-entry{flex:none}

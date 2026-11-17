@@ -1,0 +1,79 @@
+{
+  "id": "C1FIX10Q",
+  "group": "chapterDialogue",
+  "oldSrc": "/video/current/C1FIX10Q-20261025.mp4",
+  "oldSha256": "5bcd51b77caa8571be7611ebe74407cc6ff8dcdf33dd11070c1f203982237544",
+  "oldSubtitles": "/video/subtitles/C1FIX10Q-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX10Q-475bc0df.mp4",
+  "sha256": "9ec850fa2da2a5a7b4e683923719281cdc3243c951c8fe1f01d57dea43646aa1",
+  "bytes": 2008507,
+  "duration": 4.0,
+  "containerDuration": 4.0,
+  "width": 1344,
+  "height": 756,
+  "fps": "24/1",
+  "frames": 96,
+  "videoCodec": "h264",
+  "current": {
+    "id": "C1FIX10Q",
+    "src": "/video/current/PV27-C1FIX10Q-475bc0df.mp4",
+    "title": "问今夜当值",
+    "rows": [
+      "D07"
+    ],
+    "afterPlayback": "advance",
+    "subtitles": "/video/subtitles/PV27-C1FIX10Q-475bc0df.vtt"
+  },
+  "replacements": [
+    {
+      "id": "C1-D07",
+      "node": "D07",
+      "text": "今夜军务是谁当值？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D07.wav",
+      "oldCorrelation": 0.9941293224735934,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D07-v1.wav",
+      "newVoiceSha256": "f59b5194e07adb5597082259290494b87d249aa9660fc93f502afd778a4eb3d6",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.6165,
+        3.0164999999999997
+      ],
+      "insertAt": 0.6165,
+      "voiceSeconds": 2.28,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0563836097717285,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.8565,
+      "end": 2.6065,
+      "text": "今夜军务是谁当值？"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

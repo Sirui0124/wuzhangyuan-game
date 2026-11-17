@@ -1,0 +1,114 @@
+{
+  "id": "V30-01",
+  "expected": "该说的，我已经说了。你现在准备拿我怎么办？",
+  "postVoiceText": null,
+  "actual": "该说的 我已经说了你现在准备拿我怎么办",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.03,
+      "end": 5.09,
+      "text": "该说的 我已经说了",
+      "words": [
+        {
+          "start": 2.03,
+          "end": 2.51,
+          "word": "该",
+          "probability": 0.513733446598053
+        },
+        {
+          "start": 2.51,
+          "end": 2.73,
+          "word": "说",
+          "probability": 0.9874539375305176
+        },
+        {
+          "start": 2.73,
+          "end": 2.95,
+          "word": "的",
+          "probability": 0.9965751767158508
+        },
+        {
+          "start": 2.95,
+          "end": 4.23,
+          "word": " 我",
+          "probability": 0.29308196902275085
+        },
+        {
+          "start": 4.23,
+          "end": 4.41,
+          "word": "已经",
+          "probability": 0.9969586133956909
+        },
+        {
+          "start": 4.41,
+          "end": 4.67,
+          "word": "说",
+          "probability": 0.9989985823631287
+        },
+        {
+          "start": 4.67,
+          "end": 5.09,
+          "word": "了",
+          "probability": 0.9983578324317932
+        }
+      ]
+    },
+    {
+      "start": 6.15,
+      "end": 7.75,
+      "text": "你现在准备拿我怎么办",
+      "words": [
+        {
+          "start": 6.15,
+          "end": 6.59,
+          "word": "你",
+          "probability": 0.9706605672836304
+        },
+        {
+          "start": 6.59,
+          "end": 6.77,
+          "word": "现在",
+          "probability": 0.9964781403541565
+        },
+        {
+          "start": 6.77,
+          "end": 6.99,
+          "word": "准",
+          "probability": 0.9997482001781464
+        },
+        {
+          "start": 6.99,
+          "end": 7.11,
+          "word": "备",
+          "probability": 0.9999704360961914
+        },
+        {
+          "start": 7.11,
+          "end": 7.23,
+          "word": "拿",
+          "probability": 0.987773597240448
+        },
+        {
+          "start": 7.23,
+          "end": 7.37,
+          "word": "我",
+          "probability": 0.9972757697105408
+        },
+        {
+          "start": 7.37,
+          "end": 7.55,
+          "word": "怎么",
+          "probability": 0.991878867149353
+        },
+        {
+          "start": 7.55,
+          "end": 7.75,
+          "word": "办",
+          "probability": 0.9997586607933044
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

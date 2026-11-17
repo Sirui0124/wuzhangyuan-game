@@ -1,0 +1,125 @@
+{
+  "sceneId": "era-arrest",
+  "version": "C1END-ERA-ARREST-R1",
+  "title": "妖孽现世",
+  "durationSeconds": 26,
+  "mdPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\prompts\\C1END-ERA-ARREST-妖孽现世-26秒-R1.md",
+  "mdSHA256": "8efdd3895afce45cf739a4a1bebdc8ecb6fac4f65d955c607be05d7911164544",
+  "requestType": "new-missing-ending-not-regeneration-of-existing-film",
+  "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\GameStarter\\web-demo\\src\\game\\era-ending.ts",
+  "sourceSHA256": "2a624016ad4813a15a00b005692d610ef832fde7f486b17c4ce53b12c62eae09",
+  "userConfirmedSourceParagraphs": [
+    "我把东西拿了出来，众人往后退了三步。",
+    "我又解释了两句，众人再退五步。",
+    "“听不懂就对了，这东西领先你们一千多年——”",
+    "话音未落，绳子已经领先一步，套在了我身上。",
+    "然后泼过来的，不是雨，是猪血。"
+  ],
+  "sourceDesignPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\docs\\design\\ERA-ARREST-20261025.md",
+  "upstreamHandoff": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\outputs\\ch1-video-integration-20261025\\re-generation-md-handoff.json",
+  "sourceMapping": [
+    {
+      "sourceLine": 1,
+      "range": [
+        0,
+        4
+      ],
+      "treatment": "出示动作与三步后退；动态物品置于真实构图外，不锁定商品"
+    },
+    {
+      "sourceLine": 2,
+      "range": [
+        4,
+        8.5
+      ],
+      "treatment": "两个解释手势及五步退让；不捏造原文未提供的两句解释"
+    },
+    {
+      "sourceLine": 3,
+      "range": [
+        8.5,
+        14.5
+      ],
+      "treatment": "唯一原句由我发声，NPC不代说，绳子在话末前进入"
+    },
+    {
+      "sourceLine": 4,
+      "range": [
+        13.8,
+        19
+      ],
+      "treatment": "麻绳绕上臂/腰腹衣外，仍活着；不拍处刑"
+    },
+    {
+      "sourceLine": 5,
+      "range": [
+        19,
+        23
+      ],
+      "treatment": "桶中猪血泼到衣背，无人体伤口；现有结局正文保留可说明猪血身份"
+    },
+    {
+      "sourceLine": "既有抓走后果",
+      "range": [
+        23,
+        26
+      ],
+      "treatment": "押走两步收束，不新增死亡结果"
+    }
+  ],
+  "integrationBoundary": {
+    "enter": "仅已有era-arrest双条件判断成立、对方起疑抓捕回应已显示、玩家继续后进入",
+    "leave": "原era-arrest结局与重试本次交谈；不自动重试或改状态",
+    "gameCodeModified": false,
+    "branchSpecific": "第一章夜营视觉版；不自动复用于第二章"
+  },
+  "references": [
+    {
+      "imageNumber": 1,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\core\\夜营.png",
+      "sha256": "a0b68e1be4046b309c80c2b334a05cea53a325b7d304782364acc539567bf0c6",
+      "visuallyInspected": true
+    },
+    {
+      "imageNumber": 2,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\core\\玩家衣袖.png",
+      "sha256": "d987f2a092d3773d75fe0c9b69dab60820d84f1df97de7d76924b9f7d079fd50",
+      "visuallyInspected": true
+    },
+    {
+      "imageNumber": 3,
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\references\\execution\\image-01.png",
+      "sha256": "9f9ee4a05d5142078dc3664885e71e463325528e8c05280138912c9b6fc2101b",
+      "visuallyInspected": true
+    }
+  ],
+  "referenceResearch": {
+    "title": "Dual Nature: Shadow",
+    "url": "https://theasc.com/article/dual-nature-shadow/",
+    "verifiedDate": "2026-10-25",
+    "verifiedClaims": [
+      "克制且有目的的运镜与直接清楚的身体动作",
+      "灰黑衣着场景中保留人体肤色及血液颜色"
+    ],
+    "notClaimed": "本片退步笑点及分镜为新设计，非影片既有镜头"
+  },
+  "userComments": [
+    {
+      "text": "当前游戏已有文字结局，但本轮第一章候选交付中没有对应成片",
+      "provenance": "第一章整合交接：新片缺口，不用处斩片代替"
+    },
+    {
+      "text": "单个md文档最长可以支持30s的视频（不再是15s）",
+      "provenance": "用户新交付要求，由汇总对话转达"
+    }
+  ],
+  "oldVersionRelation": "无对应旧视频；引用execution图仅作已有服装参考，不是用处斩片替代此结局；已有五条结局不改",
+  "status": "ready",
+  "blockingReason": null,
+  "formatValidationPassed": true,
+  "userApproved": false,
+  "generated": false,
+  "videoApiCalled": false,
+  "newImagesGenerated": false,
+  "existingTaskIdsModified": false
+}

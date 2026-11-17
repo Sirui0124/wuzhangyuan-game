@@ -1,0 +1,127 @@
+{
+  "id": "V26-07",
+  "expected": "丞相看过这批粮情，答的是此次粮乏，当退。",
+  "postVoiceText": null,
+  "actual": "丞相看过这批良情达的是此次良罚荡退",
+  "similarity": 0.7058823529411765,
+  "segments": [
+    {
+      "start": 2.58,
+      "end": 4.44,
+      "text": "丞相看过这批良情",
+      "words": [
+        {
+          "start": 2.58,
+          "end": 3.12,
+          "word": "丞",
+          "probability": 0.8277393281459808
+        },
+        {
+          "start": 3.12,
+          "end": 3.34,
+          "word": "相",
+          "probability": 0.9867032766342163
+        },
+        {
+          "start": 3.34,
+          "end": 3.56,
+          "word": "看",
+          "probability": 0.9098842740058899
+        },
+        {
+          "start": 3.56,
+          "end": 3.76,
+          "word": "过",
+          "probability": 0.9227704405784607
+        },
+        {
+          "start": 3.76,
+          "end": 3.9,
+          "word": "这",
+          "probability": 0.9920263886451721
+        },
+        {
+          "start": 3.9,
+          "end": 4.04,
+          "word": "批",
+          "probability": 0.9378689527511597
+        },
+        {
+          "start": 4.04,
+          "end": 4.2,
+          "word": "良",
+          "probability": 0.7368560433387756
+        },
+        {
+          "start": 4.2,
+          "end": 4.44,
+          "word": "情",
+          "probability": 0.9948922395706177
+        }
+      ]
+    },
+    {
+      "start": 4.44,
+      "end": 6.58,
+      "text": "达的是此次良罚",
+      "words": [
+        {
+          "start": 4.44,
+          "end": 5.06,
+          "word": "达",
+          "probability": 0.6942822337150574
+        },
+        {
+          "start": 5.06,
+          "end": 5.3,
+          "word": "的是",
+          "probability": 0.9094958901405334
+        },
+        {
+          "start": 5.3,
+          "end": 5.74,
+          "word": "此",
+          "probability": 0.9361750483512878
+        },
+        {
+          "start": 5.74,
+          "end": 5.98,
+          "word": "次",
+          "probability": 0.9956541061401367
+        },
+        {
+          "start": 5.98,
+          "end": 6.18,
+          "word": "良",
+          "probability": 0.914846658706665
+        },
+        {
+          "start": 6.18,
+          "end": 6.58,
+          "word": "罚",
+          "probability": 0.6752428263425827
+        }
+      ]
+    },
+    {
+      "start": 6.58,
+      "end": 7.16,
+      "text": "荡退",
+      "words": [
+        {
+          "start": 6.58,
+          "end": 6.98,
+          "word": "荡",
+          "probability": 0.5861386135220528
+        },
+        {
+          "start": 6.98,
+          "end": 7.16,
+          "word": "退",
+          "probability": 0.97501140832901
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

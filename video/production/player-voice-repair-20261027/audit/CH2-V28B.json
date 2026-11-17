@@ -1,0 +1,51 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V28B",
+  "src": "/video/current/CH2-V28B-3655436d61-20261025.mp4",
+  "title": "访村后态度B",
+  "subtitles": "/video/subtitles/CH2-V28B-3655436d61-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V28B-3655436d61-20261025.mp4",
+  "sha256": "3655436d61d7cba1a441fb56bb9544dc1b3b4f8db08b316402bcba8247bf6912",
+  "duration": 13.504,
+  "cues": [
+    {
+      "start": 0.5,
+      "end": 4.46,
+      "text": "你救过我，我还想帮你。但你隐瞒的那一份"
+    },
+    {
+      "start": 4.46,
+      "end": 6.28,
+      "text": "也得由你自己说清楚"
+    },
+    {
+      "start": 7.62,
+      "end": 13.06,
+      "text": "这话我听见了。可真说出去，会落个什么下场？"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY09-QB",
+      "node": "CH2-LY09-QB",
+      "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+      "speaker": "我（普通选项）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-QB.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "e3e951f8a2d52a50e12e1eb8a490d87eb6b476d97171fc3492592be50cdea8ad",
+      "duration": 6.19275,
+      "speechRange": [
+        0.42,
+        5.88
+      ],
+      "correlation": 0.9809756436762138,
+      "insertAt": 0.4213,
+      "speechStart": 0.84125,
+      "speechEnd": 6.30125
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

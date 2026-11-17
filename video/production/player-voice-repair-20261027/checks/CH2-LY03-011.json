@@ -1,0 +1,79 @@
+{
+  "id": "CH2-LY03-011",
+  "expected": "你想讨回公道，为什么一定要停北伐？",
+  "sha256": "552be4a02f5fb04021201c63eb252793e25cdb032957ed82f8cc06834a29ee0c",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-011-v1.wav",
+  "recognized": "你想討回公道嗎?為什麼一定要聽被罰?",
+  "similarity": 0.5806451612903226,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.46,
+      "text": "你想討回公道嗎?為什麼一定要聽被罰?",
+      "noSpeechProbability": 0.03657625615596771,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.62,
+          "text": "你想"
+        },
+        {
+          "start": 0.62,
+          "end": 0.84,
+          "text": "討"
+        },
+        {
+          "start": 0.84,
+          "end": 0.98,
+          "text": "回"
+        },
+        {
+          "start": 0.98,
+          "end": 1.14,
+          "text": "公"
+        },
+        {
+          "start": 1.14,
+          "end": 1.32,
+          "text": "道"
+        },
+        {
+          "start": 1.32,
+          "end": 1.5,
+          "text": "嗎?"
+        },
+        {
+          "start": 2.26,
+          "end": 2.62,
+          "text": "為什麼"
+        },
+        {
+          "start": 2.62,
+          "end": 2.94,
+          "text": "一定要"
+        },
+        {
+          "start": 2.94,
+          "end": 3.14,
+          "text": "聽"
+        },
+        {
+          "start": 3.14,
+          "end": 3.3,
+          "text": "被"
+        },
+        {
+          "start": 3.3,
+          "end": 3.46,
+          "text": "罰?"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 0.9791666666666666
+}

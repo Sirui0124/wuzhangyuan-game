@@ -1,0 +1,17 @@
+/* Dialogue, choices and portraits retain chapter-one/three shared typography. */
+.pt-scene .scene-image{filter:saturate(.85) brightness(.87)}
+:root[data-ui-theme=xuan] #game-root .pt-scene .scene-image{background-size:cover}
+.pt-status{position:absolute;z-index:30;bottom:6px;left:5%;right:5%;padding:8px 12px;background:#1d2927ed;color:#f5dec0;font:16px/1.6 var(--serif)}
+.pt-ending-scroll{position:absolute;inset:90px 0 0;overflow:auto;display:flex;justify-content:center;align-items:safe center;padding:24px;box-sizing:border-box;z-index:2}
+.pt-ending .scene-image{filter:brightness(.4)}
+.pt-ending .ending-copy{position:relative;max-width:700px;margin:auto;padding:28px 0;text-align:center}
+.pt-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.pt-actions button{cursor:pointer}
+.pt-history article{padding:12px 0;border-bottom:1px solid #91866e55}
+.pt-history p,.pt-records p{line-height:1.8}
+.pt-records article{margin-bottom:20px}
+.pt-slots{display:grid;gap:12px}
+.pt-slot{padding:12px;border:1px solid #91866e55;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pt-slot span{flex:1}
+.pt-modal-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+@media(max-width:700px){.pt-ending-scroll{inset:110px 0 0;padding:16px}.pt-ending .ending-copy{padding:12px 0}.pt-actions{gap:10px}.pt-scene .game-hud nav{gap:3px}}

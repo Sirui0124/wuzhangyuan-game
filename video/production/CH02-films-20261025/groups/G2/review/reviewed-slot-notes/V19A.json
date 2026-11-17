@@ -1,0 +1,33 @@
+{
+  "id": "V19A",
+  "sha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+  "reviewState": "reviewed",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "玩家选择改用既有账页动作及D06回看，去除两个NPC代玩家发言。9.4秒后为地方里正原回应；原片完整10.125秒保留。纸面有零散仿字，未在采样中见完整可辨的新增证据句子；该回应只作口述反馈，不承担新书证。"
+  ],
+  "issues": [
+    {
+      "type": "wrong-visible-speaker",
+      "state": "repaired",
+      "repair": "玩家选择改为既有账页动作与D06回看"
+    }
+  ],
+  "integrationConditions": [
+    "A/B/C互斥；本分支不带入其他分支结论。已知D06回看不授予新线索；里正说法仅为此节点口述，不变成书证。"
+  ],
+  "audioIssues": [
+    "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+    "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+  ],
+  "dynamicReview": [
+    {
+      "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+      "range": [
+        0,
+        19.54
+      ],
+      "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V19A\\identity.json"
+    }
+  ]
+}

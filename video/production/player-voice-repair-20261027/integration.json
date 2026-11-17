@@ -1,0 +1,4853 @@
+{
+  "changedFilms": 41,
+  "uniqueLines": 69,
+  "occurrences": 70,
+  "chapters": {
+    "1": 8,
+    "2": 61
+  },
+  "changes": [
+    {
+      "id": "C1T06-06",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1T06-06-QA-20261025.mp4",
+      "oldSha256": "78389b26ae5644e125fd9bbd68ff157b7ed03a8299356795f962ac0612875fe7",
+      "oldSubtitles": "/video/subtitles/C1T06-06-QA-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1T06-06-662f874c.mp4",
+      "sha256": "8313036f3ad540e7a228f13dcd73ea76cd552b55b73cf2fb04103904843e490d",
+      "bytes": 5161825,
+      "duration": 13.25,
+      "containerDuration": 13.25,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "frames": 318,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1T06-06",
+        "src": "/video/current/PV27-C1T06-06-662f874c.mp4",
+        "title": "交给甲",
+        "rows": [
+          "A-42",
+          "A-43",
+          "A-44",
+          "A-45"
+        ],
+        "subtitles": "/video/subtitles/PV27-C1T06-06-662f874c.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-A-45",
+          "node": "A-45",
+          "text": "知道了，交给你了。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A-45.wav",
+          "oldCorrelation": 0.9990366421088848,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A-45-v1.wav",
+          "newVoiceSha256": "1f2e745e0620f375218f14ae7a7d79b4976dd791a4bb5ddefbfbe1621e08bd0a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            10.257,
+            12.497
+          ],
+          "insertAt": 10.257,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.2207990884780884,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.21,
+          "end": 4.33,
+          "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破"
+        },
+        {
+          "start": 4.75,
+          "end": 6.89,
+          "text": "魏将军让我转呈，请你递进去"
+        },
+        {
+          "start": 7.79,
+          "end": 9.57,
+          "text": "我只能递话，作不得主"
+        },
+        {
+          "start": 10.257,
+          "end": 12.167,
+          "text": "知道了，交给你了"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "C1FIX09",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1FIX09-20261025.mp4",
+      "oldSha256": "bc4212fa7744ae4c154f225a244d4f2db0d63738b8fc2dba3ae2ca037c182aa3",
+      "oldSubtitles": "/video/subtitles/C1FIX09-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX09-559d3488.mp4",
+      "sha256": "0d90a1a2077ade5553da78d45de63c3b23096ebec5b6446bb2b496736389d18c",
+      "bytes": 7444594,
+      "duration": 17.333333333333332,
+      "containerDuration": 17.333333,
+      "width": 1344,
+      "height": 756,
+      "fps": "1245/52",
+      "frames": 415,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1FIX09",
+        "src": "/video/current/PV27-C1FIX09-559d3488.mp4",
+        "title": "向甲问禁令与责任",
+        "rows": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "subtitles": "/video/subtitles/PV27-C1FIX09-559d3488.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-D01",
+          "node": "D01",
+          "text": "今夜守帐怎么这么严？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D01.wav",
+          "oldCorrelation": 0.9283204013676557,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D01-v1.wav",
+          "newVoiceSha256": "15118f2090c3cff3aaa5d9419dcf5f3fc5b38536d92d13035abc6b11b05169a1",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.27675000000000005,
+            2.45675
+          ],
+          "insertAt": 0.27675000000000005,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1435725688934326,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "C1-D03",
+          "node": "D03",
+          "text": "可要是拦住不报，误了军情呢？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D03.wav",
+          "oldCorrelation": 0.9166674853116032,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D03-v1.wav",
+          "newVoiceSha256": "0b21424e87bc65a671fa32e0a761fa1da28ec265d06b69e5c1bcbfeb3e749fdd",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.17775,
+            9.21
+          ],
+          "insertAt": 6.17775,
+          "voiceSeconds": 2.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.013930320739746,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.59675,
+          "end": 1.98675,
+          "text": "今夜守帐怎么这么严？"
+        },
+        {
+          "start": 3.07,
+          "end": 5.85,
+          "text": "丞相有口谕，今夜谁也不得入帐求见"
+        },
+        {
+          "start": 6.29775,
+          "end": 8.92775,
+          "text": "可要是拦住不报，误了军情呢？"
+        },
+        {
+          "start": 9.25,
+          "end": 10.61,
+          "text": "那也要问罪"
+        },
+        {
+          "start": 11.15,
+          "end": 14.09,
+          "text": "急报得赶紧送到，禁令也不能擅改"
+        },
+        {
+          "start": 14.77,
+          "end": 17.29,
+          "text": "我只能守门递话，不能处置军情"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "C1FIX10Q",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1FIX10Q-20261025.mp4",
+      "oldSha256": "5bcd51b77caa8571be7611ebe74407cc6ff8dcdf33dd11070c1f203982237544",
+      "oldSubtitles": "/video/subtitles/C1FIX10Q-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX10Q-475bc0df.mp4",
+      "sha256": "9ec850fa2da2a5a7b4e683923719281cdc3243c951c8fe1f01d57dea43646aa1",
+      "bytes": 2008507,
+      "duration": 4.0,
+      "containerDuration": 4.0,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "frames": 96,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1FIX10Q",
+        "src": "/video/current/PV27-C1FIX10Q-475bc0df.mp4",
+        "title": "问今夜当值",
+        "rows": [
+          "D07"
+        ],
+        "afterPlayback": "advance",
+        "subtitles": "/video/subtitles/PV27-C1FIX10Q-475bc0df.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-D07",
+          "node": "D07",
+          "text": "今夜军务是谁当值？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D07.wav",
+          "oldCorrelation": 0.9941293224735934,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D07-v1.wav",
+          "newVoiceSha256": "f59b5194e07adb5597082259290494b87d249aa9660fc93f502afd778a4eb3d6",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.6165,
+            3.0164999999999997
+          ],
+          "insertAt": 0.6165,
+          "voiceSeconds": 2.28,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0563836097717285,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.8565,
+          "end": 2.6065,
+          "text": "今夜军务是谁当值？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "C1FIX14Q",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1FIX14Q-20261025.mp4",
+      "oldSha256": "fd36ed1ed8354a3e26d3552dbdadc32f85c3c888813278b5b74ddb62673eaf2b",
+      "oldSubtitles": "/video/subtitles/C1FIX14Q-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX14Q-0b5a01bf.mp4",
+      "sha256": "9acb7b861d821c08f7864a931fa6c2ac2e3bb6ec2a00457e4d2cc731510e40ea",
+      "bytes": 818430,
+      "duration": 4.0,
+      "containerDuration": 4.0,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "frames": 96,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1FIX14Q",
+        "src": "/video/current/PV27-C1FIX14Q-0b5a01bf.mp4",
+        "title": "请亲兵通传",
+        "rows": [
+          "J03"
+        ],
+        "afterPlayback": "advance",
+        "subtitles": "/video/subtitles/PV27-C1FIX14Q-0b5a01bf.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-J03",
+          "node": "J03",
+          "text": "营前有急报，请替我通传姜将军。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\J03.wav",
+          "oldCorrelation": 0.9717233110781012,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-J03-v1.wav",
+          "newVoiceSha256": "7b691aacdaf3aca2998bb89f3138baafc94645e437f56608cf43ee679fe08fee",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.35450000000000004,
+            3.7744999999999997
+          ],
+          "insertAt": 0.35450000000000004,
+          "voiceSeconds": 3.28,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9947015047073364,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.6345000000000001,
+          "end": 3.4644999999999997,
+          "text": "营前有急报，请替我通传姜将军"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "C1FIX20",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1FIX20-QA-20261025.mp4",
+      "oldSha256": "e842986623f68fbb703764465d7abaeec353be7ab926ee15b84fed9f12fc3c05",
+      "oldSubtitles": "/video/subtitles/C1FIX20-QA-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX20-a7b7b3a5.mp4",
+      "sha256": "52e96c3f6c42a5954dd2592aeb479dd98c3bea528ccf25121639686d249ce12a",
+      "bytes": 3276254,
+      "duration": 12.0,
+      "containerDuration": 12.0,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "frames": 288,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1FIX20",
+        "src": "/video/current/PV27-C1FIX20-a7b7b3a5.mp4",
+        "title": "天亮，没有人来收矛",
+        "rows": [
+          "B-03",
+          "B-04"
+        ],
+        "afterPlayback": "advance",
+        "subtitles": "/video/subtitles/PV27-C1FIX20-a7b7b3a5.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-B-03",
+          "node": "B-03",
+          "text": "帐内又传来咳嗽。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-03.wav",
+          "oldCorrelation": 0.9362115242826066,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-03-v1.wav",
+          "newVoiceSha256": "4dd53e17d61212a26aff98475799c3676d39d76a78b575f8d370cc20110b3356",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.6155,
+            2.8754999999999997
+          ],
+          "insertAt": 0.6155,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.2374897003173828,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "C1-B-04",
+          "node": "B-04",
+          "text": "天亮了。你握着长矛的手慢慢松开。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-04.wav",
+          "oldCorrelation": 0.7390403381526589,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-04-v1.wav",
+          "newVoiceSha256": "db8b0c266a113379610a202357ce2d51c9b3fa06a2ae69fb415ed28660fe9245",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            7.908,
+            11.908
+          ],
+          "insertAt": 7.908,
+          "voiceSeconds": 4.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1261812448501587,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.9355,
+          "end": 2.2855,
+          "text": "帐内又传来咳嗽"
+        },
+        {
+          "start": 7.988,
+          "end": 11.898,
+          "text": "天亮了。你握着长矛的手慢慢松开"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "C1FIX06B",
+      "group": "chapterDialogue",
+      "oldSrc": "/video/current/C1FIX06B-QA-20261025.mp4",
+      "oldSha256": "d1f0f23b6db86c1ab30dfeadb52d7940fe820f2e2a4e985c4de69df504bc2172",
+      "oldSubtitles": "/video/subtitles/C1FIX06B-QA-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX06B-2553e78e.mp4",
+      "sha256": "89202fd6c5d31273cc089f51ac2edc9bf9bbab24c627e2b4bb064a9752ff82bb",
+      "bytes": 4927212,
+      "duration": 12.25,
+      "containerDuration": 12.25,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "frames": 294,
+      "videoCodec": "h264",
+      "current": {
+        "id": "C1FIX06B",
+        "src": "/video/current/PV27-C1FIX06B-2553e78e.mp4",
+        "title": "未询问营门的转呈",
+        "rows": [
+          "A-42",
+          "A-43",
+          "A-44",
+          "A-45"
+        ],
+        "firstLineText": "小甲，营前急报：魏兵逼近，来意未明。",
+        "subtitles": "/video/subtitles/PV27-C1FIX06B-2553e78e.vtt"
+      },
+      "replacements": [
+        {
+          "id": "C1-A42-variant",
+          "node": "A42-variant",
+          "text": "小甲，营前急报：魏兵逼近，来意未明。魏将军让我转呈，请你递进去。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A42-variant.wav",
+          "oldCorrelation": 0.9820973987523129,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A42-variant-v1.wav",
+          "newVoiceSha256": "6e7a8522dae2ce7687fcb22efad0b1db385c59e8fff9c12ef7bd53b108bde06b",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.23600000000000002,
+            7.06
+          ],
+          "insertAt": 0.23600000000000002,
+          "voiceSeconds": 6.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.143336534500122,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "C1-A-45",
+          "node": "A-45",
+          "text": "知道了，交给你了。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A-45.wav",
+          "oldCorrelation": 0.9990150436469108,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-A-45-v1.wav",
+          "newVoiceSha256": "1f2e745e0620f375218f14ae7a7d79b4976dd791a4bb5ddefbfbe1621e08bd0a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            9.616999999999999,
+            11.857
+          ],
+          "insertAt": 9.616999999999999,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.2194547653198242,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.08,
+          "end": 4.5,
+          "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破"
+        },
+        {
+          "start": 4.676,
+          "end": 6.866,
+          "text": "魏将军让我转呈，请你递进去"
+        },
+        {
+          "start": 7.1,
+          "end": 8.9,
+          "text": "我只能递话，作不得主"
+        },
+        {
+          "start": 9.616999999999999,
+          "end": 11.527,
+          "text": "知道了，交给你了"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V02",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V02-tight-bedside-20261027.mp4",
+      "oldSha256": "5b35df9c90036f8ea63235c2eb1e6bafee55edee6ad21bae20fd48d6852f8af9",
+      "oldSubtitles": "/video/subtitles/CH2-V02-tight-bedside-20261027.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V02-4efa3fde.mp4",
+      "sha256": "29fdc69079a47e22660ae1e9f51a167dac70bc87f136e4a97a4a09f1e4b4432d",
+      "bytes": 25136151,
+      "duration": 44.374961,
+      "containerDuration": 44.374961,
+      "width": 1280,
+      "height": 720,
+      "fps": "1065000000/44374961",
+      "frames": 1065,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V02",
+        "src": "/video/current/PV27-CH2-V02-4efa3fde.mp4",
+        "title": "回忆与伤帐认人",
+        "subtitles": "/video/subtitles/PV27-CH2-V02-4efa3fde.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY01-002",
+          "node": "CH2-LY01-002",
+          "text": "第四次北伐。这回，我成了运粮兵。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-002.wav",
+          "oldCorrelation": 0.9997412196831078,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-002-v1.wav",
+          "newVoiceSha256": "7cb3d70927a837aa931f614a201b83b29e74c992c04a30fa9f8f41ee38c46c6f",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.44000000000000006,
+            4.793
+          ],
+          "insertAt": 0.44000000000000006,
+          "voiceSeconds": 4.055,
+          "trimmedLeadingSilence": 0.345,
+          "gain": 1.0457267761230469,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY01-007",
+          "node": "CH2-LY01-007",
+          "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-007.wav",
+          "oldCorrelation": 0.976400269040014,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-007-v1.wav",
+          "newVoiceSha256": "a8769eca19def604cf418a5cacac53138e4695e1dcc3497dfad764d429518800",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            20.30275,
+            25.89
+          ],
+          "insertAt": 20.30275,
+          "voiceSeconds": 5.5,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8158568143844604,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY01-008",
+          "node": "CH2-LY01-008",
+          "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-008.wav",
+          "oldCorrelation": 0.9683686770599991,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-008-v1.wav",
+          "newVoiceSha256": "c831f0c8b8b8e48a2ae25cae20d6eed271c5115c83eb3063d1ed47f32d7b5a65",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            25.89375,
+            31.89375
+          ],
+          "insertAt": 25.89375,
+          "voiceSeconds": 5.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0274568796157837,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY01-009",
+          "node": "CH2-LY01-009",
+          "text": "得先弄清苟安现在的打算，也许还来得及。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-009.wav",
+          "oldCorrelation": 0.9819372675747027,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-009-v1.wav",
+          "newVoiceSha256": "3fec627cdf39bdf62ff573d514e097168aac81c52198627c917abb302a467586",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            32.509750000000004,
+            36.40975
+          ],
+          "insertAt": 32.509750000000004,
+          "voiceSeconds": 3.78,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0248066186904907,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY01-012",
+          "node": "CH2-LY01-012",
+          "text": "原来你就是苟安？",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-012.wav",
+          "oldCorrelation": 0.9758401779117132,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-012-v1.wav",
+          "newVoiceSha256": "318094de42d72803af73e80365e9ae91d52b71a47711d625ae66a1d5fe603f58",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            36.98975,
+            39.223
+          ],
+          "insertAt": 36.98975,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.3061449527740479,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY01-013",
+          "node": "CH2-LY01-013",
+          "text": "你接下来打算降魏？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY01-013.wav",
+          "oldCorrelation": 0.9749353237016354,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-013-v1.wav",
+          "newVoiceSha256": "ab7e30275e494849835be7ebc3ac86c659ecb3e6afcb04c2133e41317b69bac0",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            39.250750000000004,
+            41.41075
+          ],
+          "insertAt": 39.250750000000004,
+          "voiceSeconds": 1.745,
+          "trimmedLeadingSilence": 0.445,
+          "gain": 1.0106104612350464,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.44000000000000006,
+          "end": 4.525000000000001,
+          "text": "第四次北伐。这回，我成了运粮兵"
+        },
+        {
+          "start": 4.833,
+          "end": 6.353,
+          "text": "现在，到哪一步了？"
+        },
+        {
+          "start": 7.113,
+          "end": 8.753,
+          "text": "这批粮，才送到？"
+        },
+        {
+          "start": 10.693,
+          "end": 14.253,
+          "text": "迟了十日。督粮的苟安，已被丞相杖责八十"
+        },
+        {
+          "start": 15.713,
+          "end": 17.853,
+          "text": "苟安……他在哪儿？"
+        },
+        {
+          "start": 18.773,
+          "end": 19.673,
+          "text": "那边帐里养伤"
+        },
+        {
+          "start": 20.70275,
+          "end": 24.89275,
+          "text": "我记得，苟安是李严的部下。他因运粮受罚"
+        },
+        {
+          "start": 25.06275,
+          "end": 25.81275,
+          "text": "怀恨在心"
+        },
+        {
+          "start": 26.25375,
+          "end": 30.16375,
+          "text": "后来他投了魏，又回来散布丞相篡位的谣言"
+        },
+        {
+          "start": 30.493750000000002,
+          "end": 31.723750000000003,
+          "text": "后主便召回了丞相"
+        },
+        {
+          "start": 32.509750000000004,
+          "end": 36.29975,
+          "text": "得先弄清苟安现在的打算，也许还来得及"
+        },
+        {
+          "start": 37.38975,
+          "end": 38.81975,
+          "text": "原来你就是苟安？"
+        },
+        {
+          "start": 39.250750000000004,
+          "end": 40.99575,
+          "text": "你接下来打算降魏？"
+        },
+        {
+          "start": 41.763,
+          "end": 42.563,
+          "text": "你说什么？"
+        },
+        {
+          "start": 42.94,
+          "end": 44.28,
+          "text": "谁让你来问这个的？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V03A",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V03A-same-camera-20261025.mp4",
+      "oldSha256": "f1a0850bca5d45cf6daa8628d625477713ff1d98f466d2338444b684a139fb69",
+      "oldSubtitles": "/video/subtitles/CH2-V03A-same-camera-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V03A-6f45d9b9.mp4",
+      "sha256": "67074c3e0b798e443373739effc2876488c88158252582c3d184b98beeb1763e",
+      "bytes": 353546,
+      "duration": 6.666666666666667,
+      "containerDuration": 6.666667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 160,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V03A",
+        "src": "/video/current/PV27-CH2-V03A-6f45d9b9.mp4",
+        "title": "开场说明来意A",
+        "subtitles": "/video/subtitles/PV27-CH2-V03A-6f45d9b9.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-003",
+          "node": "CH2-LY02-003",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-003.wav",
+          "oldCorrelation": 0.9990499742551484,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-003-v1.wav",
+          "newVoiceSha256": "bf5f271acdf67fd029ec1feb917676b81a75fdf9cbcebc4c48c50c531279e341",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.42000000000000004,
+            5.92
+          ],
+          "insertAt": 0.42000000000000004,
+          "voiceSeconds": 5.4,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8667321801185608,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.5800000000000001,
+          "end": 5.8100000000000005,
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V03B",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V03B-same-camera-20261025.mp4",
+      "oldSha256": "c155f09320f11bc8b4d64b05ba29da714bc2cd0fe2c245a2713b9081fc366073",
+      "oldSubtitles": "/video/subtitles/CH2-V03B-same-camera-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V03B-9c8f1f26.mp4",
+      "sha256": "ca4075eee1b7481b3ed9a8292017be8ee787b98ec1c7f51aee712f041fb255d3",
+      "bytes": 266211,
+      "duration": 6.666666666666667,
+      "containerDuration": 6.666667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 160,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V03B",
+        "src": "/video/current/PV27-CH2-V03B-9c8f1f26.mp4",
+        "title": "开场说明来意B",
+        "subtitles": "/video/subtitles/PV27-CH2-V03B-9c8f1f26.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-004",
+          "node": "CH2-LY02-004",
+          "text": "你救过我，我来看看你。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-004.wav",
+          "oldCorrelation": 0.9666640395085269,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-004-v1.wav",
+          "newVoiceSha256": "7a8203fbb05601cf14b220c2d70e6e38b0f5591b090f07b1e9370f79c73cff28",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.42125,
+            3.04125
+          ],
+          "insertAt": 0.42125,
+          "voiceSeconds": 2.5,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0761582851409912,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.62125,
+          "end": 2.73125,
+          "text": "你救过我，我来看看你"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V05",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V05-037fce3f72-20261025.mp4",
+      "oldSha256": "037fce3f726418c724f1d753cf6f0e9708f4ec890645abb29c7b41416e13b17a",
+      "oldSubtitles": "/video/subtitles/CH2-V05-037fce3f72-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V05-64e12e57.mp4",
+      "sha256": "3c17913c2ca85ac126ae659f201dd0d1fcb5825dba893902c5dca065a61a8ab4",
+      "bytes": 8307325,
+      "duration": 16.333333333333332,
+      "containerDuration": 16.333333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 392,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V05",
+        "src": "/video/current/PV27-CH2-V05-64e12e57.mp4",
+        "title": "夜间取账",
+        "subtitles": "/video/subtitles/PV27-CH2-V05-64e12e57.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-012",
+          "node": "CH2-LY02-012",
+          "text": "这份交接记录，可以让我看看吗？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-012.wav",
+          "oldCorrelation": 0.9773882095164528,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-012-v1.wav",
+          "newVoiceSha256": "27fcb76e8ed058fb0bdc7f65fae0e461f22e8152a97dda5e37862c2a7a4a551b",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.69925,
+            10.22
+          ],
+          "insertAt": 6.69925,
+          "voiceSeconds": 3.4,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1469610929489136,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 6.89925,
+          "end": 10.12925,
+          "text": "这份交接记录，可以让我看看吗？"
+        },
+        {
+          "start": 10.26,
+          "end": 11.06,
+          "text": "嗯，看吧"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V06",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V06-f75d224722-20261025.mp4",
+      "oldSha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+      "oldSubtitles": "/video/subtitles/CH2-V06-f75d224722-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V06-af3e6652.mp4",
+      "sha256": "dbb92d50560a0cb14e83d94973b49d41578da6149f6c5bef0da3f0f2cf6d64b5",
+      "bytes": 1876966,
+      "duration": 5.0,
+      "containerDuration": 5.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 120,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V06",
+        "src": "/video/current/PV27-CH2-V06-af3e6652.mp4",
+        "title": "日期疑点",
+        "subtitles": "/video/subtitles/PV27-CH2-V06-af3e6652.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-015",
+          "node": "CH2-LY02-015",
+          "text": "他说五月喝的酒，六月初二才领到粮。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+          "oldCorrelation": 0.9995792425247336,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-015-v1.wav",
+          "newVoiceSha256": "077f389770d670453988dd2eb56d9e82139a87d2e536461d5646d916d7f4f678",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.48,
+            4.62
+          ],
+          "insertAt": 0.48,
+          "voiceSeconds": 4.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1825116872787476,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.6799999999999999,
+          "end": 4.51,
+          "text": "他说五月喝的酒，六月初二才领到粮"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V08A",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V08A-981991ba0a-20261025.mp4",
+      "oldSha256": "981991ba0a9239cd930a98666b77e4d3624e744aca226fa898c6b3e76033fceb",
+      "oldSubtitles": "/video/subtitles/CH2-V08A-981991ba0a-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V08A-69a58792.mp4",
+      "sha256": "5cc0026ed8019af27dcb10c8bc0f038a7c9f57b8b4a2ddc4b24a1cf45da6118b",
+      "bytes": 7064425,
+      "duration": 18.083333333333332,
+      "containerDuration": 18.083333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 434,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V08A",
+        "src": "/video/current/PV27-CH2-V08A-69a58792.mp4",
+        "title": "点出委屈分支",
+        "subtitles": "/video/subtitles/PV27-CH2-V08A-69a58792.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-018",
+          "node": "CH2-LY02-018",
+          "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018.wav",
+          "oldCorrelation": 0.9980892294529791,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-018-v1.wav",
+          "newVoiceSha256": "a253a19f2aa87d48a7ad7f854c531037037ceefb771fece43b54db22acd72ad6",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.30000000000000004,
+            10.1
+          ],
+          "insertAt": 0.30000000000000004,
+          "voiceSeconds": 9.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9074259996414185,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY02-018A",
+          "node": "CH2-LY02-018A",
+          "text": "所以你上次在瞒我。你一定不想就这么算了",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-018A.wav",
+          "oldCorrelation": 0.9807223635881674,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-018A-v1.wav",
+          "newVoiceSha256": "dabe40c96a26eb30d680afed92a5f1e380af6411f33173eea79b77ecf52af0a2",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            10.470749999999999,
+            15.17075
+          ],
+          "insertAt": 10.470749999999999,
+          "voiceSeconds": 4.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.5886892080307007,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.5800000000000001,
+          "end": 5.41,
+          "text": "你心里就是委屈。我查了记录，你五月喝酒"
+        },
+        {
+          "start": 5.5,
+          "end": 10.010000000000002,
+          "text": "六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？"
+        },
+        {
+          "start": 10.710749999999999,
+          "end": 15.060749999999999,
+          "text": "所以你上次在瞒我。你一定不想就这么算了"
+        },
+        {
+          "start": 15.48,
+          "end": 17.78,
+          "text": "你说得对，我是委屈"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V08B",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V08B-10b75e1dc5-20261025.mp4",
+      "oldSha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+      "oldSubtitles": "/video/subtitles/CH2-V08B-10b75e1dc5-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V08B-4cb6e984.mp4",
+      "sha256": "626e294ed5a9df444b02f449ece72586f41e85b7d0aa40ed78ab8166bc13994e",
+      "bytes": 4394138,
+      "duration": 12.5,
+      "containerDuration": 12.5,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 300,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V08B",
+        "src": "/video/current/PV27-CH2-V08B-4cb6e984.mp4",
+        "title": "关心伤势分支",
+        "subtitles": "/video/subtitles/PV27-CH2-V08B-4cb6e984.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-B01",
+          "node": "CH2-LY02-B01",
+          "text": "我还是怕你太难过",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+          "oldCorrelation": 0.9701837803028586,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-B01-v1.wav",
+          "newVoiceSha256": "a9e9b23a903526032f6f7d2d6d1f673dc2c384682d270529f12b17d80b8875de",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.36125000000000007,
+            2.52
+          ],
+          "insertAt": 0.36125000000000007,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.014054775238037,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY02-B02",
+          "node": "CH2-LY02-B02",
+          "text": "毕竟也不容易",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+          "oldCorrelation": 0.9885107184329548,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-B02-v1.wav",
+          "newVoiceSha256": "81196d86a0f5824ba102b87ba07b0fb72caccf150b00558f0e4d9ed7524c4804",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            2.6342499999999998,
+            4.43425
+          ],
+          "insertAt": 2.6342499999999998,
+          "voiceSeconds": 1.7,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.2391918897628784,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.6412500000000001,
+          "end": 2.1512499999999997,
+          "text": "我还是怕你太难过"
+        },
+        {
+          "start": 3.1542499999999998,
+          "end": 4.34425,
+          "text": "毕竟也不容易"
+        },
+        {
+          "start": 6.32,
+          "end": 12.24,
+          "text": "伤总能养好。可这口气，没那么容易过去"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V09",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V09-8413b1ae38-20261025.mp4",
+      "oldSha256": "8413b1ae38ac85dfc8ea302887d78c9b05594bd9be5361e0780f74e30d58dab7",
+      "oldSubtitles": "/video/subtitles/CH2-V09-8413b1ae38-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V09-0eb8dd8c.mp4",
+      "sha256": "eda49961dbe214facb03a20c1af8b0f8775e9d6312f0342ec5b2cce5aad75257",
+      "bytes": 10507079,
+      "duration": 27.791666666666668,
+      "containerDuration": 27.791667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 667,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V09",
+        "src": "/video/current/PV27-CH2-V09-0eb8dd8c.mp4",
+        "title": "李严下属的顾虑",
+        "subtitles": "/video/subtitles/PV27-CH2-V09-0eb8dd8c.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY02-023",
+          "node": "CH2-LY02-023",
+          "text": "你不是李严的人吗？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-023.wav",
+          "oldCorrelation": 0.9791151530799778,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-023-v1.wav",
+          "newVoiceSha256": "e6407ff1fe9b4a5d15fee49147eaeaffdc5fe30b3e9e7299a99bde6216ed917a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.40125,
+            2.44125
+          ],
+          "insertAt": 0.40125,
+          "voiceSeconds": 2.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0084254741668701,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY02-024",
+          "node": "CH2-LY02-024",
+          "text": "为什么不找他说明白？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-024.wav",
+          "oldCorrelation": 0.9757133134399247,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-024-v1.wav",
+          "newVoiceSha256": "d866f3003314f965c3605813448c5565b871cf5cd821e9c2a3f7ec59f24bc61f",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            2.40725,
+            4.5272499999999996
+          ],
+          "insertAt": 2.40725,
+          "voiceSeconds": 2.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1956371068954468,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.76125,
+          "end": 2.43125,
+          "text": "你不是李严的人吗？"
+        },
+        {
+          "start": 2.7272499999999997,
+          "end": 4.19725,
+          "text": "为什么不找他说明白？"
+        },
+        {
+          "start": 4.86,
+          "end": 9.64,
+          "text": "我就是个替他跑腿的，他哪会替我说话"
+        },
+        {
+          "start": 11.12,
+          "end": 16.04,
+          "text": "认个酒误，养好伤，还能接着吃这碗饭"
+        },
+        {
+          "start": 16.6,
+          "end": 20.72,
+          "text": "真把话说明白，往后还在谁手底下领粮？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V10",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V10-4d6adcdc1b-20261025.mp4",
+      "oldSha256": "4d6adcdc1bbcb5f2a880247ed49d22c890caea499730cd83b0758a319e949c15",
+      "oldSubtitles": "/video/subtitles/CH2-V10-4d6adcdc1b-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V10-a894e734.mp4",
+      "sha256": "c9d11b659266c288e01f77b5ae76a4a231e012bd591739c7ba0241eaa26f10c9",
+      "bytes": 15631299,
+      "duration": 45.75,
+      "containerDuration": 45.75,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1098,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V10",
+        "src": "/video/current/PV27-CH2-V10-a894e734.mp4",
+        "title": "第一封信后的交谈",
+        "subtitles": "/video/subtitles/PV27-CH2-V10-a894e734.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY03-004",
+          "node": "CH2-LY03-004",
+          "text": "你们先前议的是什么？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-004.wav",
+          "oldCorrelation": 0.9999814036709034,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-004-v1.wav",
+          "newVoiceSha256": "b148c40b5cf0c30e1d1530dce51e35097f79e0d97ba7c5c06b7eab1f319ea5d3",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.28,
+            2.42
+          ],
+          "insertAt": 0.28,
+          "voiceSeconds": 2.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0788565874099731,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY03-011",
+          "node": "CH2-LY03-011",
+          "text": "你想讨回公道，为什么一定要停北伐？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-011.wav",
+          "oldCorrelation": 0.8748665118735289,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-011-v1.wav",
+          "newVoiceSha256": "552be4a02f5fb04021201c63eb252793e25cdb032957ed82f8cc06834a29ee0c",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            21.275000000000002,
+            24.955
+          ],
+          "insertAt": 21.275000000000002,
+          "voiceSeconds": 3.58,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8785274028778076,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY03-014",
+          "node": "CH2-LY03-014",
+          "text": "如果还是没人肯查呢？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-014.wav",
+          "oldCorrelation": 0.9999870885358085,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-014-v1.wav",
+          "newVoiceSha256": "81a5cb243ac784c9d6bc1371375273368d137758cf206af62a911a0b82f8bf31",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            33.18,
+            35.400000000000006
+          ],
+          "insertAt": 33.18,
+          "voiceSeconds": 2.2,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0837454795837402,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY03-016",
+          "node": "CH2-LY03-016",
+          "text": "你就信得过魏国？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-016.wav",
+          "oldCorrelation": 0.999993487101732,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY03-016-v1.wav",
+          "newVoiceSha256": "3b2dce55f0c029e477081da191383f553f67e18d55ac985c28b90418ddf44ebc",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            38.89,
+            41.050000000000004
+          ],
+          "insertAt": 38.89,
+          "voiceSeconds": 2.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9617166519165039,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.52,
+          "end": 2.19,
+          "text": "你们先前议的是什么？"
+        },
+        {
+          "start": 2.82,
+          "end": 6.22,
+          "text": "迟粮的事，究竟要不要往上说"
+        },
+        {
+          "start": 8.34,
+          "end": 10.98,
+          "text": "我不想一直背着“饮酒误军”这几个字"
+        },
+        {
+          "start": 16.24,
+          "end": 20.94,
+          "text": "我想把事情揭开，让这回北伐先停下来"
+        },
+        {
+          "start": 21.515000000000004,
+          "end": 24.865000000000002,
+          "text": "你想讨回公道，为什么一定要停北伐？"
+        },
+        {
+          "start": 25.0,
+          "end": 28.4,
+          "text": "这回把粮送到了，下一回呢？"
+        },
+        {
+          "start": 28.4,
+          "end": 32.2,
+          "text": "难道换个人挨打，粮就自己长出来了？"
+        },
+        {
+          "start": 33.54,
+          "end": 35.29,
+          "text": "如果还是没人肯查呢？"
+        },
+        {
+          "start": 35.52,
+          "end": 37.58,
+          "text": "那我就换个肯听的地方"
+        },
+        {
+          "start": 39.09,
+          "end": 40.6,
+          "text": "你就信得过魏国？"
+        },
+        {
+          "start": 41.24,
+          "end": 45.32,
+          "text": "我也没底。你想让我留下，就给我指条路"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V13",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V13-22a96a9c7c-20261025.mp4",
+      "oldSha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+      "oldSubtitles": "/video/subtitles/CH2-V13-22a96a9c7c-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V13-71351c07.mp4",
+      "sha256": "b9abdf650f542de73ac14c8510ca565f11d19035133429ef690dc3f693b35851",
+      "bytes": 11543420,
+      "duration": 15.666666666666666,
+      "containerDuration": 15.666667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 376,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V13",
+        "src": "/video/current/PV27-CH2-V13-71351c07.mp4",
+        "title": "仓中核凭据、获准查账",
+        "subtitles": "/video/subtitles/PV27-CH2-V13-71351c07.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY04-001",
+          "node": "CH2-LY04-001",
+          "text": "我来领取本队这批粮的交接材料。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+          "oldCorrelation": 0.9994599564763399,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-001-v1.wav",
+          "newVoiceSha256": "011d16efc706f294f7a157bced119460d44442bb0787b69f51435aac8262067a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            1.645,
+            4.405
+          ],
+          "insertAt": 1.645,
+          "voiceSeconds": 2.58,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9053437113761902,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 1.805,
+          "end": 4.235,
+          "text": "我来领取本队这批粮的交接材料"
+        },
+        {
+          "start": 5.26,
+          "end": 8.98,
+          "text": "凭据对得上，我陪你问仓吏"
+        },
+        {
+          "start": 9.82,
+          "end": 15.34,
+          "text": "这批粮的收发账可以查。其他队的账，先别动"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V16A",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V16A-f16c45272f-20261025.mp4",
+      "oldSha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+      "oldSubtitles": "/video/subtitles/CH2-V16A-f16c45272f-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V16A-620b3343.mp4",
+      "sha256": "02d17c5de3a6620781a0e21c8ba49773ad9e1d7ee06a002ec24235f043199a0a",
+      "bytes": 4460381,
+      "duration": 6.125,
+      "containerDuration": 6.125,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 147,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V16A",
+        "src": "/video/current/PV27-CH2-V16A-620b3343.mp4",
+        "title": "核交接选项",
+        "subtitles": "/video/subtitles/PV27-CH2-V16A-620b3343.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY04-Q1A",
+          "node": "CH2-LY04-Q1A",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1A.wav",
+          "oldCorrelation": 0.9995144091224908,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1A-v1.wav",
+          "newVoiceSha256": "43450ccfd72c632ba3c3e7b7c7ec6c56c9d0244d9e18cf90e89f1ab5b29cba5d",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.5700000000000001,
+            5.890000000000001
+          ],
+          "insertAt": 0.5700000000000001,
+          "voiceSeconds": 5.3,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0653330087661743,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.81,
+          "end": 4.720000000000001,
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前"
+        },
+        {
+          "start": 4.8100000000000005,
+          "end": 5.760000000000001,
+          "text": "还是在路上"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V16B",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V16B-33fbd077e2-20261025.mp4",
+      "oldSha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "oldSubtitles": "/video/subtitles/CH2-V16B-33fbd077e2-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V16B-b7c56d36.mp4",
+      "sha256": "ecf893450610e7e83ce0e52916727668c86eca6aac68737df60636c943c5d385",
+      "bytes": 3983477,
+      "duration": 12.041666666666666,
+      "containerDuration": 12.082683,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 289,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V16B",
+        "src": "/video/current/PV27-CH2-V16B-b7c56d36.mp4",
+        "title": "去问损耗与认罪",
+        "subtitles": "/video/subtitles/PV27-CH2-V16B-b7c56d36.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY07-W01",
+          "node": "CH2-LY07-W01",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-W01.wav",
+          "oldCorrelation": 0.9840855939837243,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-W01-v1.wav",
+          "newVoiceSha256": "e1f83000fa60547b12b58a0209d9787efda0ad484093260e3c8d75a570b92233",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.6062500000000001,
+            4.48625
+          ],
+          "insertAt": 0.6062500000000001,
+          "voiceSeconds": 3.78,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1269289255142212,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.92625,
+          "end": 3.87625,
+          "text": "先说说你经手后，账上记的那些损耗"
+        },
+        {
+          "start": 5.99,
+          "end": 11.99,
+          "text": "好，这笔罪，我认。你报上去吧，别再查了"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V16C",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V16C-ff9dda9365-20261025.mp4",
+      "oldSha256": "ff9dda9365ed73bdfc5426700933e9e5a59ab65a67de27aadb864afd3e87824a",
+      "oldSubtitles": "/video/subtitles/CH2-V16C-ff9dda9365-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V16C-8432cd1f.mp4",
+      "sha256": "8877755d43c586f68470664f06e376c4a5711c97aad8deba7c69e72dfa59c4bd",
+      "bytes": 11226228,
+      "duration": 16.0,
+      "containerDuration": 16.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 384,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V16C",
+        "src": "/video/current/PV27-CH2-V16C-8432cd1f.mp4",
+        "title": "先行归责与纠正",
+        "subtitles": "/video/subtitles/PV27-CH2-V16C-8432cd1f.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY04-Q1C",
+          "node": "CH2-LY04-Q1C",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1C.wav",
+          "oldCorrelation": 0.9993911364978403,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1C-v1.wav",
+          "newVoiceSha256": "25d9e1aec30923e782943be29be34178df883b085a036815b2f6b94969f6968c",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.45000000000000007,
+            5.21
+          ],
+          "insertAt": 0.45000000000000007,
+          "voiceSeconds": 4.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0032442808151245,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.65,
+          "end": 5.16,
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上"
+        },
+        {
+          "start": 9.49,
+          "end": 12.75,
+          "text": "领粮时就缺的那部分，你也算到他头上了？"
+        },
+        {
+          "start": 14.07,
+          "end": 15.41,
+          "text": "再对对交付记录"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V18",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V18-warehouse-retained-20261027-fda6b495.mp4",
+      "oldSha256": "8ffd6d2971457329ad4242202dc0e348578182e90fa6b5d88c283a1ff911983d",
+      "oldSubtitles": "/video/subtitles/CH2-V18-warehouse-retained-20261027-fda6b495.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V18-0cb82c10.mp4",
+      "sha256": "3bebddd286ea472ab1bcb56d6352d1336e59d4e8b341c9f409408fefc6e41f4c",
+      "bytes": 5101172,
+      "duration": 8.5,
+      "containerDuration": 8.5,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 204,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V18",
+        "src": "/video/current/PV27-CH2-V18-0cb82c10.mp4",
+        "title": "仓中核对（保留原版片段）",
+        "subtitles": "/video/subtitles/PV27-CH2-V18-0cb82c10.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY04-T01",
+          "node": "CH2-LY04-T01",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-T01.wav",
+          "oldCorrelation": 0.9994039474320979,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-T01-v1.wav",
+          "newVoiceSha256": "42c7596bce671cf2e59b2ebb93756770321e5de0c20063f2d1d88c5b4d6edab8",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.55,
+            5.53
+          ],
+          "insertAt": 0.55,
+          "voiceSeconds": 4.8,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9705328345298767,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.55,
+          "end": 3.4599999999999995,
+          "text": "苟安说粮早已备好。我得看看"
+        },
+        {
+          "start": 3.4699999999999998,
+          "end": 5.38,
+          "text": "入仓的粮后来发到哪儿了"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V22",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V22-a4f3411246-20261025.mp4",
+      "oldSha256": "a4f3411246d3ff8ed60628c84a00f8e2cb10761e6b2de6efd679a0b7c4b54b98",
+      "oldSubtitles": "/video/subtitles/CH2-V22-a4f3411246-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V22-ea27e0db.mp4",
+      "sha256": "69e71f77c3a2e09032d99539e7b9ae0ae47f6d9a40c6fad6396a44385a65248b",
+      "bytes": 13946922,
+      "duration": 31.625,
+      "containerDuration": 31.625,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 759,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V22",
+        "src": "/video/current/PV27-CH2-V22-ea27e0db.mp4",
+        "title": "邀请访村与正式出营批准",
+        "subtitles": "/video/subtitles/PV27-CH2-V22-ea27e0db.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY05-002",
+          "node": "CH2-LY05-002",
+          "text": "所以，你让我查了半天，到头来还是要退兵？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY05-002.wav",
+          "oldCorrelation": 0.9998350328578919,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY05-002-v1.wav",
+          "newVoiceSha256": "eea73734cc60409730e408b2b6bd7e092b3404472de45ac7fbfcb589935037ae",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.32000000000000006,
+            5.22
+          ],
+          "insertAt": 0.32000000000000006,
+          "voiceSeconds": 4.8,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9707483053207397,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY05-008",
+          "node": "CH2-LY05-008",
+          "text": "这令牌能做什么？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY05-008.wav",
+          "oldCorrelation": 0.9804688106771922,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY05-008-v1.wav",
+          "newVoiceSha256": "a93e180ae25249cc091ba32ad5d646bf91527350dfe8df04ba296a54bd3eb8c7",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            19.48675,
+            21.28
+          ],
+          "insertAt": 19.48675,
+          "voiceSeconds": 1.7,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0248522758483887,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.72,
+          "end": 5.15,
+          "text": "所以，你让我查了半天，到头来还是要退兵？"
+        },
+        {
+          "start": 5.26,
+          "end": 8.7,
+          "text": "你查了粮，可问过种粮的人吗？"
+        },
+        {
+          "start": 12.4,
+          "end": 13.2,
+          "text": "拿着"
+        },
+        {
+          "start": 13.66,
+          "end": 16.46,
+          "text": "出营的事，我替你禀明"
+        },
+        {
+          "start": 16.98,
+          "end": 19.12,
+          "text": "去村里看看，回来再骂我"
+        },
+        {
+          "start": 19.68675,
+          "end": 21.03675,
+          "text": "这令牌能做什么？"
+        },
+        {
+          "start": 21.32,
+          "end": 25.76,
+          "text": "那边的人认这块令牌，会接待你，让你核对材料"
+        },
+        {
+          "start": 26.2,
+          "end": 31.36,
+          "text": "出营已经报准，你随返程粮队去，回来向我交差"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V23",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V23-10bf783982-20261025.mp4",
+      "oldSha256": "10bf78398293bd72fcea5933d29b1a18df78d6635120716ef40283a531780979",
+      "oldSubtitles": "/video/subtitles/CH2-V23-10bf783982-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V23-7e906b1d.mp4",
+      "sha256": "1d0c8070646f3fa199a967780c77300290c16d53ea462b46549bd6e49fba1079",
+      "bytes": 13140681,
+      "duration": 17.375,
+      "containerDuration": 17.416016,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 417,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V23",
+        "src": "/video/current/PV27-CH2-V23-7e906b1d.mp4",
+        "title": "获准访村的连续见闻",
+        "subtitles": "/video/subtitles/PV27-CH2-V23-7e906b1d.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY06-012",
+          "node": "CH2-LY06-012",
+          "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY06-012.wav",
+          "oldCorrelation": 0.9996367414604345,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY06-012-v1.wav",
+          "newVoiceSha256": "7d22ceef33aed8c1bd425102f81f6151c2a05efc2ec3a85c1b85d561bab20088",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.58,
+            11.899999999999999
+          ],
+          "insertAt": 6.58,
+          "voiceSeconds": 5.18,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1774109601974487,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 7.06,
+          "end": 11.77,
+          "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V26",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V26-5b7f33da7c-20261025.mp4",
+      "oldSha256": "5b7f33da7cc67f4feaef75785c587ab121d112bc4c6b33a7702ad79d038f0e19",
+      "oldSubtitles": "/video/subtitles/CH2-V26-5b7f33da7c-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V26-e638871b.mp4",
+      "sha256": "5a61a48dfd27ed9e72462a3ccc7d02c34ae81dea4dacebfb3a0928145cf4e37f",
+      "bytes": 19032712,
+      "duration": 45.458333333333336,
+      "containerDuration": 45.458333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1091,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V26",
+        "src": "/video/current/PV27-CH2-V26-e638871b.mp4",
+        "title": "返营交差与军情说明",
+        "subtitles": "/video/subtitles/PV27-CH2-V26-e638871b.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-006",
+          "node": "CH2-LY09-006",
+          "text": "我先回去交差，把实收和欠缺的粮数报清楚。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-006.wav",
+          "oldCorrelation": 0.9652024720389248,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-006-v1.wav",
+          "newVoiceSha256": "efb14d0470df8879f39a93f6c5f06149efde083ebb4bc6286554ee91d795728e",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.46125000000000005,
+            5.36125
+          ],
+          "insertAt": 0.46125000000000005,
+          "voiceSeconds": 4.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8643279075622559,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY09-010",
+          "node": "CH2-LY09-010",
+          "text": "那我们退了，他们也还会继续准备？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-010.wav",
+          "oldCorrelation": 0.9660581050860338,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-010-v1.wav",
+          "newVoiceSha256": "4c7fceae21a80ce9e00a06fffadbe16557fa24a8368a0c367901c50a0795b1fb",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            15.58325,
+            19.02325
+          ],
+          "insertAt": 15.58325,
+          "voiceSeconds": 3.28,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8916333913803101,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.66125,
+          "end": 5.17125,
+          "text": "我先回去交差，把实收和欠缺的粮数报清楚"
+        },
+        {
+          "start": 9.66,
+          "end": 13.2,
+          "text": "缺额、民食和种粮的情况，一并列明"
+        },
+        {
+          "start": 15.66325,
+          "end": 18.85325,
+          "text": "那我们退了，他们也还会继续准备？"
+        },
+        {
+          "start": 19.28,
+          "end": 24.06,
+          "text": "眼下看到的是这些。来年谁强谁弱，还说不准"
+        },
+        {
+          "start": 24.06,
+          "end": 28.98,
+          "text": "丞相看过这批粮情，答的是此次粮乏，当退"
+        },
+        {
+          "start": 28.98,
+          "end": 35.5,
+          "text": "他担心休兵这段日子，魏军修田积粮，将来更难打"
+        },
+        {
+          "start": 36.26,
+          "end": 41.0,
+          "text": "兴复汉室是他许下的诺言。他也担心"
+        },
+        {
+          "start": 41.66,
+          "end": 45.32,
+          "text": "蜀汉守着这一隅，究竟能撑多久"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V27",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V27-a3e5efdfe3-20261025.mp4",
+      "oldSha256": "a3e5efdfe3c1b065949c9cd44a08a0ec739b3bbe3aacb1f5519f84303827b9c9",
+      "oldSubtitles": "/video/subtitles/CH2-V27-a3e5efdfe3-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V27-a8efe294.mp4",
+      "sha256": "392cd2abcd91636a88bc2b1e976a247d6f5ac973b535eebeb9b3928b9d0c80c5",
+      "bytes": 16591729,
+      "duration": 40.958333333333336,
+      "containerDuration": 40.958333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 983,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V27",
+        "src": "/video/current/PV27-CH2-V27-a8efe294.mp4",
+        "title": "带回消息后的分歧",
+        "subtitles": "/video/subtitles/PV27-CH2-V27-a8efe294.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-018",
+          "node": "CH2-LY09-018",
+          "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-018.wav",
+          "oldCorrelation": 0.9992782646016989,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-018-v1.wav",
+          "newVoiceSha256": "141decff202b7b769f40ac12c3a4c89624c7d27befa361db6ea840402ea8e9d5",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            1.9440000000000002,
+            8.624
+          ],
+          "insertAt": 1.9440000000000002,
+          "voiceSeconds": 6.58,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.008076786994934,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY09-021",
+          "node": "CH2-LY09-021",
+          "text": "先把实数报上去，请他重新算算这仗还打得起吗。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-021.wav",
+          "oldCorrelation": 0.9633287927321852,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-021-v1.wav",
+          "newVoiceSha256": "e2de9cd697af4f8546a281725b0571ebfa6c57be8398d91443d29b5e026fd15d",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            13.469249999999999,
+            18.36925
+          ],
+          "insertAt": 13.469249999999999,
+          "voiceSeconds": 4.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1950559616088867,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY09-022",
+          "node": "CH2-LY09-022",
+          "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-022.wav",
+          "oldCorrelation": 0.968841879647911,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-022-v1.wav",
+          "newVoiceSha256": "e5da92ce1275a8b6be55de08d59aa550fe4bf09eeca896c9baf4e3dff4e4ab72",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            19.33875,
+            26.11875
+          ],
+          "insertAt": 19.33875,
+          "voiceSeconds": 6.375,
+          "trimmedLeadingSilence": 0.425,
+          "gain": 0.9192356467247009,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY09-024",
+          "node": "CH2-LY09-024",
+          "text": "我也说不准。我能做的是把查到的事、补救的办法写清楚，亲自核实送到了没有。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-024.wav",
+          "oldCorrelation": 0.9717778216427966,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-024-v1.wav",
+          "newVoiceSha256": "67b7126f5cc27371aff9d2de215a7778cc93b4f6a584b48a9e7603d2b531cc49",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            33.43875,
+            40.478750000000005
+          ],
+          "insertAt": 33.43875,
+          "voiceSeconds": 7.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0329115390777588,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 2.144,
+          "end": 6.174,
+          "text": "丞相答应这次退军了。魏军还在修路积粮"
+        },
+        {
+          "start": 6.704,
+          "end": 8.374,
+          "text": "往后的风险也得想"
+        },
+        {
+          "start": 10.48,
+          "end": 12.7,
+          "text": "所以百姓还得一直这样撑下去？"
+        },
+        {
+          "start": 13.66925,
+          "end": 18.36925,
+          "text": "先把实数报上去，请他重新算算这仗还打得起吗"
+        },
+        {
+          "start": 19.33875,
+          "end": 23.02375,
+          "text": "你瞒下缺粮，再拿篡位的谣言逼退军"
+        },
+        {
+          "start": 23.79375,
+          "end": 25.743750000000002,
+          "text": "最后受牵连的也有百姓"
+        },
+        {
+          "start": 28.59,
+          "end": 32.61,
+          "text": "真话送上去，就一定有人肯听？"
+        },
+        {
+          "start": 33.71875,
+          "end": 36.86875,
+          "text": "我也说不准。我能做的是把查到的事、"
+        },
+        {
+          "start": 36.91875,
+          "end": 40.34875,
+          "text": "补救的办法写清楚，亲自核实送到了没有"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V28A",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V28A-a45ad04086-20261025.mp4",
+      "oldSha256": "a45ad04086c85cdb56061cb1c785d7b1d02d3339fc9d443e330df948672f9ff1",
+      "oldSubtitles": "/video/subtitles/CH2-V28A-a45ad04086-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V28A-9cec13a2.mp4",
+      "sha256": "440d739d5d00375b3590260c4defdfbe7c4ff94a60874c2275294a2239f9d190",
+      "bytes": 5458253,
+      "duration": 13.125,
+      "containerDuration": 13.125,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 315,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V28A",
+        "src": "/video/current/PV27-CH2-V28A-9cec13a2.mp4",
+        "title": "访村后态度A",
+        "subtitles": "/video/subtitles/PV27-CH2-V28A-9cec13a2.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-QA",
+          "node": "CH2-LY09-QA",
+          "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-QA.wav",
+          "oldCorrelation": 0.9824873709093084,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-QA-v1.wav",
+          "newVoiceSha256": "f211548ea6ae1e438cc620374136e933a5316bafd4b3c11ec806463238ff4e7b",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.56125,
+            5.36125
+          ],
+          "insertAt": 0.56125,
+          "voiceSeconds": 4.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.7883199453353882,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.84125,
+          "end": 5.111250000000001,
+          "text": "村里那些人已经很难了。我明白你为什么想停下来"
+        },
+        {
+          "start": 5.94,
+          "end": 12.77,
+          "text": "你总算去看过了。我不想下一回还把他们逼到这一步"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V28B",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V28B-3655436d61-20261025.mp4",
+      "oldSha256": "3655436d61d7cba1a441fb56bb9544dc1b3b4f8db08b316402bcba8247bf6912",
+      "oldSubtitles": "/video/subtitles/CH2-V28B-3655436d61-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V28B-a9bc2029.mp4",
+      "sha256": "cd97d6cc8ae1bbbbeeae594a28b1e132894c6fbd5de564dcc1c00cb90bd29cf3",
+      "bytes": 4496220,
+      "duration": 13.5,
+      "containerDuration": 13.5,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 324,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V28B",
+        "src": "/video/current/PV27-CH2-V28B-a9bc2029.mp4",
+        "title": "访村后态度B",
+        "subtitles": "/video/subtitles/PV27-CH2-V28B-a9bc2029.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-QB",
+          "node": "CH2-LY09-QB",
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-QB.wav",
+          "oldCorrelation": 0.9809756436762138,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-QB-v1.wav",
+          "newVoiceSha256": "c434b7a9dd5d4c3925f32916dd1a6884e7a93ab7813d956aa013605f27a2caea",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.6212500000000001,
+            7.00125
+          ],
+          "insertAt": 0.6212500000000001,
+          "voiceSeconds": 6.3,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0348974466323853,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.82125,
+          "end": 4.93125,
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份"
+        },
+        {
+          "start": 5.1812499999999995,
+          "end": 6.89125,
+          "text": "也得由你自己说清楚"
+        },
+        {
+          "start": 7.62,
+          "end": 13.06,
+          "text": "这话我听见了。可真说出去，会落个什么下场？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V28C",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V28C-c5f4cf60fb-20261025.mp4",
+      "oldSha256": "c5f4cf60fbcd0de2efeca15af3dbf76a39943c69cb36e921379418e6d29ef99c",
+      "oldSubtitles": "/video/subtitles/CH2-V28C-c5f4cf60fb-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V28C-0b27f00e.mp4",
+      "sha256": "59346acdaf4117ce4fd5f74db1b2ffaf2668ace1811782b32f8ddbde0e71cefd",
+      "bytes": 5157055,
+      "duration": 13.458333333333334,
+      "containerDuration": 13.458333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 323,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V28C",
+        "src": "/video/current/PV27-CH2-V28C-0b27f00e.mp4",
+        "title": "访村后态度C",
+        "subtitles": "/video/subtitles/PV27-CH2-V28C-0b27f00e.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-QC",
+          "node": "CH2-LY09-QC",
+          "text": "只要能让他们少受些苦，你们隐瞒的事，我就不往上说了。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-QC.wav",
+          "oldCorrelation": 0.9758854955462479,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-QC-v1.wav",
+          "newVoiceSha256": "51fce17818d4de29ea917614fcca95b5ab128f877a5e3d65d7d691ae0ad108d1",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.52125,
+            5.82125
+          ],
+          "insertAt": 0.52125,
+          "voiceSeconds": 5.18,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8823105692863464,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.8412499999999999,
+          "end": 4.23125,
+          "text": "只要能让他们少受些苦，你们隐瞒的事"
+        },
+        {
+          "start": 4.32125,
+          "end": 5.671250000000001,
+          "text": "我就不往上说了"
+        },
+        {
+          "start": 6.29,
+          "end": 13.2,
+          "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V29",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V29-b55fb60eb2-20261025.mp4",
+      "oldSha256": "b55fb60eb2c4add3f3d75a3e26971e5f286a89ed89eb2849f5e96b8c8f2725ba",
+      "oldSubtitles": "/video/subtitles/CH2-V29-b55fb60eb2-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V29-797b8971.mp4",
+      "sha256": "65b2a37d6be074acfdb698f09c86c5793e22e7aad60435953ac9bc18b7e6e53c",
+      "bytes": 22026281,
+      "duration": 52.5,
+      "containerDuration": 52.5,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 1260,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V29",
+        "src": "/video/current/PV27-CH2-V29-797b8971.mp4",
+        "title": "问明补报途径与正式交案风险",
+        "subtitles": "/video/subtitles/PV27-CH2-V29-797b8971.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY10-002",
+          "node": "CH2-LY10-002",
+          "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY10-002.wav",
+          "oldCorrelation": 0.941371506419605,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-002-v1.wav",
+          "newVoiceSha256": "744d584cc7e8e8d6924ddde47f6fe600b6509825003451060163df942f227732",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            1.48925,
+            9.42925
+          ],
+          "insertAt": 1.48925,
+          "voiceSeconds": 7.8,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9040711522102356,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY10-007",
+          "node": "CH2-LY10-007",
+          "text": "李严做过什么，苟安做过什么，都得如实交代。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY10-007.wav",
+          "oldCorrelation": 0.9726345568623807,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY10-007-v1.wav",
+          "newVoiceSha256": "54c22c72a69f5037e9de9aad378da7af5053da0b0385fc9ee27cf8f60e0f572a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            47.64475,
+            52.5
+          ],
+          "insertAt": 47.64475,
+          "voiceSeconds": 4.8,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.33407723903656,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 1.48925,
+          "end": 6.19925,
+          "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手"
+        },
+        {
+          "start": 6.24925,
+          "end": 9.31925,
+          "text": "现在停下，把实情补报上来，行吗？"
+        },
+        {
+          "start": 10.34,
+          "end": 17.4,
+          "text": "可以。停手的实据、补报和各自做过的事，一并交来"
+        },
+        {
+          "start": 18.5,
+          "end": 20.3,
+          "text": "该追的责任照样追"
+        },
+        {
+          "start": 21.36,
+          "end": 27.14,
+          "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮"
+        },
+        {
+          "start": 27.78,
+          "end": 28.92,
+          "text": "按欠缺查"
+        },
+        {
+          "start": 29.74,
+          "end": 34.82,
+          "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚"
+        },
+        {
+          "start": 34.82,
+          "end": 39.76,
+          "text": "甚至处死。最后如何处置，要等查办"
+        },
+        {
+          "start": 40.68,
+          "end": 47.16,
+          "text": "案子一交，就正式查办。换个说法也撤不回来"
+        },
+        {
+          "start": 47.96475,
+          "end": 52.47475,
+          "text": "李严做过什么，苟安做过什么，都得如实交代"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V32A",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V32A-bb21c6e9f5-20261025.mp4",
+      "oldSha256": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+      "oldSubtitles": "/video/subtitles/CH2-V32A-bb21c6e9f5-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V32A-a85d0ecd.mp4",
+      "sha256": "f0b129d12b77557fc9d1cef9359d90fba6be88b67c195d8e94baaeb9ca80f4f8",
+      "bytes": 10723854,
+      "duration": 30.708333333333332,
+      "containerDuration": 30.708333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 737,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V32A",
+        "src": "/video/current/PV27-CH2-V32A-a85d0ecd.mp4",
+        "title": "同意尝试、苟安实际停手署名",
+        "subtitles": "/video/subtitles/PV27-CH2-V32A-a85d0ecd.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY11-001",
+          "node": "CH2-LY11-001",
+          "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-001.wav",
+          "oldCorrelation": 0.9997515407922184,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-001-v1.wav",
+          "newVoiceSha256": "23029f2e2ce0cc0efd412e43f1a1ec49dce423ed5be772285979902f6d71dab7",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.12999999999999998,
+            6.11
+          ],
+          "insertAt": 0.12999999999999998,
+          "voiceSeconds": 5.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9657691121101379,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY11-018",
+          "node": "CH2-LY11-018",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-018.wav",
+          "oldCorrelation": 0.9998952507361845,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-018-v1.wav",
+          "newVoiceSha256": "a0d4ece155329d9b6c5aed35ce60297d2e5369635abfafabaae05fdfc03d860b",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            12.649999999999999,
+            17.07
+          ],
+          "insertAt": 12.649999999999999,
+          "voiceSeconds": 4.3,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9676690101623535,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.20999999999999996,
+          "end": 4.5600000000000005,
+          "text": "我陪你写。粮情、原来的计划、准备怎样补救"
+        },
+        {
+          "start": 4.6899999999999995,
+          "end": 5.92,
+          "text": "都如实写上去"
+        },
+        {
+          "start": 6.3,
+          "end": 7.26,
+          "text": "那就把纸铺开"
+        },
+        {
+          "start": 7.82,
+          "end": 12.06,
+          "text": "你救不了这次北伐，也不一定保得住我"
+        },
+        {
+          "start": 12.809999999999999,
+          "end": 16.96,
+          "text": "我知道。你愿意和我一起把真话送上去吗？"
+        },
+        {
+          "start": 17.14,
+          "end": 20.54,
+          "text": "愿意，我留下待核，不去魏国，也不散谣"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V36",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V36-3d25fb9f77-20261025.mp4",
+      "oldSha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+      "oldSubtitles": "/video/subtitles/CH2-V36-3d25fb9f77-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V36-507805c4.mp4",
+      "sha256": "9847ca89d76c620b5afd548b49667895317927319ffd0de735be3a7deec2a08f",
+      "bytes": 17080087,
+      "duration": 37.291666666666664,
+      "containerDuration": 37.291667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 895,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V36",
+        "src": "/video/current/PV27-CH2-V36-507805c4.mp4",
+        "title": "双方补报正式收件与裁处",
+        "subtitles": "/video/subtitles/PV27-CH2-V36-507805c4.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY12B-010",
+          "node": "CH2-LY12B-010",
+          "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-010.wav",
+          "oldCorrelation": 0.9997968606467473,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-010-v1.wav",
+          "newVoiceSha256": "3c709e8d7bf324458c354ef8b7296203d003ffa14bd8d40f05e79fd4422fa850",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.32000000000000006,
+            5.180000000000001
+          ],
+          "insertAt": 0.32000000000000006,
+          "voiceSeconds": 4.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8815770149230957,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.76,
+          "end": 5.03,
+          "text": "请将两人的补充说明、原信和查粮材料一同登记收件"
+        },
+        {
+          "start": 6.03,
+          "end": 10.03,
+          "text": "原信、查粮材料和两人的补充说明都已收齐"
+        },
+        {
+          "start": 10.79,
+          "end": 13.59,
+          "text": "停手和各自的责任，会一并核实"
+        },
+        {
+          "start": 13.59,
+          "end": 18.81,
+          "text": "李严交出此次粮运调度职责，受处分，仍须配合查问"
+        },
+        {
+          "start": 18.81,
+          "end": 24.01,
+          "text": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任"
+        },
+        {
+          "start": 24.01,
+          "end": 25.83,
+          "text": "留下做普通粮兵"
+        },
+        {
+          "start": 26.29,
+          "end": 30.53,
+          "text": "这次处置，已考虑两人停手补救的情节"
+        },
+        {
+          "start": 31.25,
+          "end": 33.37,
+          "text": "该担的责任仍要担"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V37",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V37-774d79f97b-20261025.mp4",
+      "oldSha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "oldSubtitles": "/video/subtitles/CH2-V37-774d79f97b-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V37-7b280920.mp4",
+      "sha256": "63c938829fee053e218a50eb0bc7017d82f78380c044adabd89a0b68a57f6071",
+      "bytes": 22768684,
+      "duration": 29.833333333333332,
+      "containerDuration": 29.833333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 716,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V37",
+        "src": "/video/current/PV27-CH2-V37-7b280920.mp4",
+        "title": "一起回头的归途",
+        "subtitles": "/video/subtitles/PV27-CH2-V37-7b280920.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY12B-018",
+          "node": "CH2-LY12B-018",
+          "text": "他被免了队长，留下做粮兵。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-018.wav",
+          "oldCorrelation": 0.9098419735117577,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-018-v1.wav",
+          "newVoiceSha256": "6a99e33431ec8f1f1c400beea5860fbb2dd8ff0f2a788f2161bb491e4c57f398",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            1.14125,
+            4.2
+          ],
+          "insertAt": 1.14125,
+          "voiceSeconds": 3.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1098111867904663,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY12B-019",
+          "node": "CH2-LY12B-019",
+          "text": "人活着，可这趟北伐，还是得退。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12B-019.wav",
+          "oldCorrelation": 0.886851429955929,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12B-019-v1.wav",
+          "newVoiceSha256": "e1fcd0cbb457247aaa7a5e2519165bc93a0ed318cad47dfdf974e56064893db0",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            4.25525,
+            9.45525
+          ],
+          "insertAt": 4.25525,
+          "voiceSeconds": 5.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0309553146362305,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 1.30125,
+          "end": 4.171250000000001,
+          "text": "他被免了队长，留下做粮兵"
+        },
+        {
+          "start": 4.5752500000000005,
+          "end": 9.36525,
+          "text": "人活着，可这趟北伐，还是得退"
+        },
+        {
+          "start": 16.5,
+          "end": 18.74,
+          "text": "别光看着，搭把手！"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V38",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V38-c454ac7e3b-20261025.mp4",
+      "oldSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "oldSubtitles": "/video/subtitles/CH2-V38-c454ac7e3b-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V38-c7639871.mp4",
+      "sha256": "21524c599e3150898fd674be6bec0167a8d15129436bf251cf918a8ea882d3f6",
+      "bytes": 9758269,
+      "duration": 20.166666666666668,
+      "containerDuration": 20.166667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 484,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V38",
+        "src": "/video/current/PV27-CH2-V38-c7639871.mp4",
+        "title": "救下眼前的人",
+        "subtitles": "/video/subtitles/PV27-CH2-V38-c7639871.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-E2-001",
+          "node": "CH2-E2-001",
+          "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-001.wav",
+          "oldCorrelation": 0.9999859127757331,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E2-001-v1.wav",
+          "newVoiceSha256": "eebae82a48254da931f8c97e53dadb476021add7a2325c332b21c4e3c91b70b9",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.33000000000000007,
+            4.79
+          ],
+          "insertAt": 0.33000000000000007,
+          "voiceSeconds": 4.3,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.7718645334243774,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-E2-003",
+          "node": "CH2-E2-003",
+          "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-003.wav",
+          "oldCorrelation": 0.9782145140695466,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E2-003-v1.wav",
+          "newVoiceSha256": "32d1625b2aa756ec1b2513d884759d1b82db6db319dd33a7d8e4ca7b4ba58e0c",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            13.86675,
+            20.1415
+          ],
+          "insertAt": 13.86675,
+          "voiceSeconds": 6.18,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.928234338760376,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.65,
+          "end": 4.640000000000001,
+          "text": "这些是我拿到的材料和苟安的停手说明，请一并收下"
+        },
+        {
+          "start": 5.73,
+          "end": 9.23,
+          "text": "材料收到了。苟安停手补报的经过已经记下"
+        },
+        {
+          "start": 9.23,
+          "end": 13.61,
+          "text": "人先留营受查。李严一节，还要继续核"
+        },
+        {
+          "start": 14.02675,
+          "end": 17.61675,
+          "text": "我留下了救过我的人。可我交出的结论"
+        },
+        {
+          "start": 17.82675,
+          "end": 19.97675,
+          "text": "还不足以把每一处责任说清"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V39",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V39-7456a80ac4-20261025.mp4",
+      "oldSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "oldSubtitles": "/video/subtitles/CH2-V39-7456a80ac4-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V39-39836415.mp4",
+      "sha256": "5a6b9e9e5809553c77d7c98a34b3cfd94bd1a9ca41484a5fd1dec10da90050dd",
+      "bytes": 6901956,
+      "duration": 10.208333333333334,
+      "containerDuration": 10.208333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 245,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V39",
+        "src": "/video/current/PV27-CH2-V39-39836415.mp4",
+        "title": "晚交案的共同收件",
+        "subtitles": "/video/subtitles/PV27-CH2-V39-39836415.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY12A-001",
+          "node": "CH2-LY12A-001",
+          "text": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-001.wav",
+          "oldCorrelation": 0.9999833929034859,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-001-v1.wav",
+          "newVoiceSha256": "95c7e0f9046fe9a97e1867eed655b01aacd870b79ad85455f94f7a08e6f80be2",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.31000000000000005,
+            5.95
+          ],
+          "insertAt": 0.31000000000000005,
+          "voiceSeconds": 5.5,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9437685608863831,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.55,
+          "end": 4.700000000000001,
+          "text": "这些是我拿到的材料。查到的、他亲口说的"
+        },
+        {
+          "start": 4.989999999999999,
+          "end": 5.74,
+          "text": "都在里面"
+        },
+        {
+          "start": 6.12,
+          "end": 10.2,
+          "text": "收下了。缺多少粮，各人做过什么，会分别查清"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V40",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V40-8e3037a39a-20261025.mp4",
+      "oldSha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+      "oldSubtitles": "/video/subtitles/CH2-V40-8e3037a39a-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V40-c24eec3b.mp4",
+      "sha256": "1de31d8ad998a8824bc239ccea9e15d3725cbef4a4dbfb4bc07d1daf3831f935",
+      "bytes": 13222329,
+      "duration": 23.291666666666668,
+      "containerDuration": 23.291667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 559,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V40",
+        "src": "/video/current/PV27-CH2-V40-c24eec3b.mp4",
+        "title": "查办、苟安之死与空铺",
+        "subtitles": "/video/subtitles/PV27-CH2-V40-c24eec3b.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY12A-006",
+          "node": "CH2-LY12A-006",
+          "text": "李严知情的事也写在材料里，该查就得查。",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-006.wav",
+          "oldCorrelation": 0.9679645389741349,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-006-v1.wav",
+          "newVoiceSha256": "78f1b59e14be4d7205f2fd86f905900f88d357c9749814e86b5afe8fe248ceca",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            4.91675,
+            8.916749999999999
+          ],
+          "insertAt": 4.91675,
+          "voiceSeconds": 3.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1017941236495972,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY12A-011",
+          "node": "CH2-LY12A-011",
+          "text": "李严倒了。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-011.wav",
+          "oldCorrelation": 0.9547226696211805,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-011-v1.wav",
+          "newVoiceSha256": "a7f17ad2bf7f7894a03f6e4053d7dc87ef76f75c0d79b971e4920f5065c8d1c2",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            17.011750000000003,
+            18.65175
+          ],
+          "insertAt": 17.011750000000003,
+          "voiceSeconds": 1.6,
+          "trimmedLeadingSilence": 0,
+          "gain": 2.0050745010375977,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY12A-012",
+          "node": "CH2-LY12A-012",
+          "text": "苟安也死了。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-012.wav",
+          "oldCorrelation": 0.9674165144107929,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-012-v1.wav",
+          "newVoiceSha256": "ec87b207be3108dac1c72dae35ff9fa589b6f37ee96543011669ef42bf846a1a",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            18.79175,
+            20.51175
+          ],
+          "insertAt": 18.79175,
+          "voiceSeconds": 1.6,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.8750041127204895,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY12A-013",
+          "node": "CH2-LY12A-013",
+          "text": "可粮呢？",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY12A-013.wav",
+          "oldCorrelation": 0.968166099067407,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-013-v1.wav",
+          "newVoiceSha256": "026af3ec9d6c19817072bb72b07f168981f5e61d13f7a5da4cb4c3ea1c8a4cb2",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            21.52175,
+            23.14175
+          ],
+          "insertAt": 21.52175,
+          "voiceSeconds": 1.6,
+          "trimmedLeadingSilence": 0,
+          "gain": 2.6293203830718994,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 1.26,
+          "end": 4.6,
+          "text": "往下推的人是我，要问就问我"
+        },
+        {
+          "start": 5.236750000000001,
+          "end": 8.82675,
+          "text": "李严知情的事也写在材料里，该查就得查"
+        },
+        {
+          "start": 9.92,
+          "end": 12.7,
+          "text": "李严革职，交回官印"
+        },
+        {
+          "start": 12.7,
+          "end": 16.54,
+          "text": "苟安参与阻挠运粮、欺瞒军情，已按军法处死"
+        },
+        {
+          "start": 17.251750000000005,
+          "end": 18.601750000000003,
+          "text": "李严倒了"
+        },
+        {
+          "start": 18.79175,
+          "end": 20.42175,
+          "text": "苟安也死了"
+        },
+        {
+          "start": 21.761750000000003,
+          "end": 22.79175,
+          "text": "可粮呢？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V41E",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V41E-0d1a10e001-20261025.mp4",
+      "oldSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "oldSubtitles": "/video/subtitles/CH2-V41E-0d1a10e001-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V41E-ca5d9302.mp4",
+      "sha256": "b0bb9069a55f9ac7cd400b1f543ab669bb6a728653ab9b7aa2b12b776d174c57",
+      "bytes": 7045490,
+      "duration": 16.0,
+      "containerDuration": 16.0,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 384,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V41E",
+        "src": "/video/current/PV27-CH2-V41E-ca5d9302.mp4",
+        "title": "早停查版：认下来的罪",
+        "subtitles": "/video/subtitles/PV27-CH2-V41E-ca5d9302.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY07-BAD1",
+          "node": "CH2-LY07-BAD1",
+          "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-BAD1.wav",
+          "oldCorrelation": 0.9999919570999783,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD1-v1.wav",
+          "newVoiceSha256": "21c3544a19f35c89bde1b42ce598e61e3c38c73af475f8b95dbe4b8d319d0a7e",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.37,
+            5.2700000000000005
+          ],
+          "insertAt": 0.37,
+          "voiceSeconds": 4.5,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.2278337478637695,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY07-BAD3",
+          "node": "CH2-LY07-BAD3",
+          "text": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY07-BAD3.wav",
+          "oldCorrelation": 0.9736705094071413,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD3-v1.wav",
+          "newVoiceSha256": "6f7b9b6e3a86f49acca375f407dba91ae472eed9b51083e0da058029fbf4cc6d",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.85675,
+            15.96
+          ],
+          "insertAt": 6.85675,
+          "voiceSeconds": 9.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9662072062492371,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.53,
+          "end": 4.880000000000001,
+          "text": "军吏接手查办。缺粮的实情报了上去，大军退了"
+        },
+        {
+          "start": 5.33,
+          "end": 6.57,
+          "text": "大军退了吗？"
+        },
+        {
+          "start": 7.13675,
+          "end": 11.68675,
+          "text": "他一认罪，我就停了查。他借我报出了缺粮的实情"
+        },
+        {
+          "start": 12.136750000000001,
+          "end": 15.726750000000001,
+          "text": "他和李严究竟商量过什么，我始终没问出来"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V41L",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V41L-7b46501850-20261025.mp4",
+      "oldSha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+      "oldSubtitles": "/video/subtitles/CH2-V41L-7b46501850-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V41L-454d69eb.mp4",
+      "sha256": "ccbf99b07489128c1d6f183ca0d1563922b73fe48e520cdeda22e200c2e2678e",
+      "bytes": 12948110,
+      "duration": 26.208333333333332,
+      "containerDuration": 26.208333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 629,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V41L",
+        "src": "/video/current/PV27-CH2-V41L-454d69eb.mp4",
+        "title": "晚支撑不足版：认下来的罪",
+        "subtitles": "/video/subtitles/PV27-CH2-V41L-454d69eb.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-E4-LATE-003",
+          "node": "CH2-E4-LATE-003",
+          "text": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E4-LATE-003.wav",
+          "oldCorrelation": 0.9999918964144986,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E4-LATE-003-v1.wav",
+          "newVoiceSha256": "26a365bebf0dfd36b6ebf8f8dcf17d8a38e2e2d31fbce84b088bf937830481b2",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            18.26,
+            26.02
+          ],
+          "insertAt": 18.26,
+          "voiceSeconds": 7.68,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9896158576011658,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.18,
+          "end": 6.02,
+          "text": "你说李严参与，材料里也有这些线索"
+        },
+        {
+          "start": 6.58,
+          "end": 13.22,
+          "text": "可几处细节还对不上，眼下不能照你的结论认定"
+        },
+        {
+          "start": 13.22,
+          "end": 17.84,
+          "text": "苟安认下的责任先录在案，其他的还要核"
+        },
+        {
+          "start": 18.46,
+          "end": 22.57,
+          "text": "我知道事情不止他说的那些。可几处查得不清"
+        },
+        {
+          "start": 23.220000000000002,
+          "end": 25.970000000000002,
+          "text": "最后压在案上的，还是他的认罪"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V42",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V42-8abbd6b608-20261025.mp4",
+      "oldSha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "oldSubtitles": "/video/subtitles/CH2-V42-8abbd6b608-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V42-9dcf71da.mp4",
+      "sha256": "b45485a27f7e34c5b273071b1b24f9e91115f34776a7bc827e0a9b8a8a838a1e",
+      "bytes": 10050737,
+      "duration": 15.041666666666666,
+      "containerDuration": 15.041667,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 361,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V42",
+        "src": "/video/current/PV27-CH2-V42-9dcf71da.mp4",
+        "title": "共同旧卷尾声",
+        "subtitles": "/video/subtitles/PV27-CH2-V42-9dcf71da.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY13-002",
+          "node": "CH2-LY13-002",
+          "text": "魏地广人众，蜀中这些年，却一再折损。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-002.wav",
+          "oldCorrelation": 0.8777604798127232,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-002-v1.wav",
+          "newVoiceSha256": "9e4d3ae6123d9ce8b7db812005b6ed352ea663f9cbefbfc0d07d7690837c0b6c",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            1.9800000000000002,
+            6.12
+          ],
+          "insertAt": 1.9800000000000002,
+          "voiceSeconds": 4.0,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.1610053777694702,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY13-003",
+          "node": "CH2-LY13-003",
+          "text": "光改这趟运粮，补不上这些缺口。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-003.wav",
+          "oldCorrelation": 0.9014879594622054,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-003-v1.wav",
+          "newVoiceSha256": "edaa0e1a9637f2e71f945e7546c4ac606c7020217291186c5d415f152a6675dc",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.28,
+            10.04
+          ],
+          "insertAt": 6.28,
+          "voiceSeconds": 3.7,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.4971028566360474,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        },
+        {
+          "id": "CH2-LY13-004",
+          "node": "CH2-LY13-004",
+          "text": "还得往更早的时候去。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY13-004.wav",
+          "oldCorrelation": 0.8867853351953028,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-004-v1.wav",
+          "newVoiceSha256": "e10de7f2633bf9d8540fb9f567cc9e7caf3ba1367565dc17a6e5306b46405e89",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            10.24,
+            12.58
+          ],
+          "insertAt": 10.24,
+          "voiceSeconds": 2.28,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0621846914291382,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 2.06,
+          "end": 6.010000000000001,
+          "text": "魏地广人众，蜀中这些年，却一再折损"
+        },
+        {
+          "start": 6.48,
+          "end": 9.99,
+          "text": "光改这趟运粮，补不上这些缺口"
+        },
+        {
+          "start": 10.88,
+          "end": 12.510000000000002,
+          "text": "还得往更早的时候去"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V43",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V43-6005ad8d3c-20261025.mp4",
+      "oldSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "oldSubtitles": "/video/subtitles/CH2-V43-6005ad8d3c-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V43-0e3ec6af.mp4",
+      "sha256": "5c353b8126c950d03e8a02aaa3ec043eb39fac56652b5c65186255e2fe3ab3e8",
+      "bytes": 9934120,
+      "duration": 12.333333333333334,
+      "containerDuration": 12.333333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 296,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V43",
+        "src": "/video/current/PV27-CH2-V43-0e3ec6af.mp4",
+        "title": "放行与赴魏散谣后果",
+        "subtitles": "/video/subtitles/PV27-CH2-V43-0e3ec6af.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-E5-002",
+          "node": "CH2-E5-002",
+          "text": "后来，苟安去了魏国。关于丞相的谣言，还是传回了营中。",
+          "kind": "thought-or-heavy",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E5-002.wav",
+          "oldCorrelation": 0.9701224354112692,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E5-002-v1.wav",
+          "newVoiceSha256": "8c66bb29ce9f16e4926058e6afd63823054488028b262d7c7ae66f035782c36e",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+              "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+              "bytes": 776284,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+              "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+              "bytes": 1287844,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            6.0367500000000005,
+            12.27675
+          ],
+          "insertAt": 6.0367500000000005,
+          "voiceSeconds": 6.08,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.0262407064437866,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 6.156750000000001,
+          "end": 10.66675,
+          "text": "后来，苟安去了魏国。关于丞相的谣言"
+        },
+        {
+          "start": 10.91675,
+          "end": 12.14675,
+          "text": "还是传回了营中"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V25-03",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V25-03-2c2de78ebd-20261025.mp4",
+      "oldSha256": "128c692922e0c9d4494caa9babd2821ed76aa56271274629ec10c19011522d30",
+      "oldSubtitles": "/video/subtitles/CH2-V25-03-2c2de78ebd-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V25-03-c0cf4c2d.mp4",
+      "sha256": "ef7448b2f6dc5b12372420a6774dce24b1988ba722501f29053658ae6f0c07ff",
+      "bytes": 649681,
+      "duration": 2.2083333333333335,
+      "containerDuration": 2.208333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 53,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V25-03",
+        "src": "/video/current/PV27-CH2-V25-03-c0cf4c2d.mp4",
+        "title": "未实行计划与风险",
+        "subtitles": "/video/subtitles/PV27-CH2-V25-03-c0cf4c2d.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-P03",
+          "node": "CH2-LY09-P03",
+          "text": "李严知道？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-P03.wav",
+          "oldCorrelation": 0.9996149837411925,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-P03-v1.wav",
+          "newVoiceSha256": "53c095e0c7b08ee9592a9251e582eb52851139369b459873ba37102a20e59fed",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.28,
+            2.17875
+          ],
+          "insertAt": 0.28,
+          "voiceSeconds": 1.78,
+          "trimmedLeadingSilence": 0,
+          "gain": 1.111992359161377,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.44000000000000006,
+          "end": 1.4700000000000002,
+          "text": "李严知道？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V25-06",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V25-06-8818a8fa23-20261025.mp4",
+      "oldSha256": "db71c109e30f63901aff3758dbd0eb8958f9a959dd716a7fc97a2430704a0bc4",
+      "oldSubtitles": "/video/subtitles/CH2-V25-06-8818a8fa23-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V25-06-953c955e.mp4",
+      "sha256": "a67a358172d9481212b7c8168088b8f0f3d6d7235cec28de8adcb0d0c50752e9",
+      "bytes": 1397108,
+      "duration": 4.375,
+      "containerDuration": 4.375,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 105,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V25-06",
+        "src": "/video/current/PV27-CH2-V25-06-953c955e.mp4",
+        "title": "未实行计划与风险",
+        "subtitles": "/video/subtitles/PV27-CH2-V25-06-953c955e.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-002",
+          "node": "CH2-LY09-002",
+          "text": "你去了魏国，他们逼问粮道，你怎么应付？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-002.wav",
+          "oldCorrelation": 0.9997789226333771,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-002-v1.wav",
+          "newVoiceSha256": "f218e8432634ff272cc9e39729ecf992f27766dfde0e89593b98c7e921a0ae47",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.26,
+            4.35475
+          ],
+          "insertAt": 0.26,
+          "voiceSeconds": 3.9,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.7608924508094788,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.54,
+          "end": 4.17,
+          "text": "你去了魏国，他们逼问粮道，你怎么应付？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    },
+    {
+      "id": "CH2-V25-07",
+      "group": "chapterTwo",
+      "oldSrc": "/video/current/CH2-V25-07-5bfff06b5e-20261025.mp4",
+      "oldSha256": "fce4f3eb6e5af73bfcdf4c1b6f0fdeca3c97dc0a46b8688b2d780c4c8c25506d",
+      "oldSubtitles": "/video/subtitles/CH2-V25-07-5bfff06b5e-20261025.vtt",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V25-07-1e1f513f.mp4",
+      "sha256": "31dd2dd2df4dad0bcf196ed1abed6f2e33d7ae29b4afb31fbfc450e59d823cf9",
+      "bytes": 1549761,
+      "duration": 5.583333333333333,
+      "containerDuration": 5.583333,
+      "width": 1280,
+      "height": 720,
+      "fps": "24/1",
+      "frames": 134,
+      "videoCodec": "h264",
+      "current": {
+        "id": "CH2-V25-07",
+        "src": "/video/current/PV27-CH2-V25-07-1e1f513f.mp4",
+        "title": "未实行计划与风险",
+        "subtitles": "/video/subtitles/PV27-CH2-V25-07-1e1f513f.vtt"
+      },
+      "replacements": [
+        {
+          "id": "CH2-LY09-003",
+          "node": "CH2-LY09-003",
+          "text": "他们要是趁缺粮追击呢？谣言传开了，你又怎么收场？",
+          "kind": "regular-dialogue",
+          "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-003.wav",
+          "oldCorrelation": 0.999574853287992,
+          "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-003-v1.wav",
+          "newVoiceSha256": "f80ff11122e14ba0221f8c507f43be997e5cbbd86abe2644b8df0d05a924627d",
+          "references": [
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+              "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+              "bytes": 1252564,
+              "field": "references[0].audio_data",
+              "userApproved": true
+            },
+            {
+              "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+              "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+              "bytes": 1084984,
+              "field": "references[1].audio_data",
+              "userApproved": true
+            }
+          ],
+          "window": [
+            0.19999999999999998,
+            5.5495
+          ],
+          "insertAt": 0.19999999999999998,
+          "voiceSeconds": 5.18,
+          "trimmedLeadingSilence": 0,
+          "gain": 0.9134973287582397,
+          "speed": 1,
+          "pitchUnchanged": true,
+          "model": "seed-audio-1.0",
+          "newUserApproved": false
+        }
+      ],
+      "cues": [
+        {
+          "start": 0.5199999999999999,
+          "end": 5.390000000000001,
+          "text": "他们要是趁缺粮追击呢？谣言传开了，你又怎么收场？"
+        }
+      ],
+      "videoPacketsIdentical": true,
+      "masterOutsideReplacementWindowsUnchanged": true,
+      "fullDecodePassed": true,
+      "humanListeningReview": false,
+      "userApproved": false
+    }
+  ],
+  "humanListeningReview": false,
+  "userApproved": false,
+  "referenceUserApproved": true,
+  "storyAndFlowChanged": false,
+  "model": "seed-audio-1.0",
+  "noVoiceRegistration": true
+}

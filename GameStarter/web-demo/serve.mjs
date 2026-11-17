@@ -1,18 +1,31 @@
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
-import { createReadStream, realpathSync } from 'node:fs';
+import { createReadStream, realpathSync, existsSync } from 'node:fs';
 import { dirname, resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), '.build');
-const port = Number(process.env.DEMO_PORT || 8811);
-const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm', '.ogv': 'video/ogg', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.woff2': 'font/woff2' };
-export function createStaticServer({ root = defaultRoot, onRequest } = {}) {
+const port = Number(process.env.DEMO_PORT || 8812);
+const mime = { '.vtt': 'text/vtt; charset=utf-8', '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm', '.ogv': 'video/ogg', '.wav': 'audio/wav', '.ogg': 'audio/ogg', '.mp3': 'audio/mpeg', '.m4a': 'audio/mp4', '.woff2': 'font/woff2' };
+export function createStaticServer({ root = defaultRoot, onRequest, rescueOptions } = {}) {
+let rescue;
 return createServer(async (req, res) => {
   try {
     if (onRequest && await onRequest(req, res)) return;
     const url = new URL(req.url, `http://127.0.0.1:${port}`);
-    const path = resolve(root, '.' + decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname));
-    if (!path.startsWith(root + sep)) { res.writeHead(404); return res.end('Not found'); }
+    if (url.pathname.startsWith('/api/yiling-rescue/')) {
+      rescue ??= import('../../demos/yiling-rescue/server.mjs').then(({createDemoServer}) => createDemoServer({
+        saveDir: process.env.GAME_RESCUE_SAVE_DIR || resolve(dirname(fileURLToPath(import.meta.url)), '../../.cache/yiling-campaign/saves'),
+        ...rescueOptions,
+      }));
+      const service = await rescue;
+      req.url = req.url.replace('/api/yiling-rescue/', '/api/');
+      service.emit('request', req, res);
+      return;
+    }
+    // Capture the active build once per request; managed local builds switch only after success.
+    const requestRoot = resolve(typeof root === 'function' ? root() : root);
+    const path = resolve(requestRoot, '.' + decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname));
+    if (!path.startsWith(requestRoot + sep)) { res.writeHead(404); return res.end('Not found'); }
     const info = await stat(path);
     if (!info.isFile()) { res.writeHead(404); return res.end('Not found'); }
     const headers = { 'Content-Type': mime[extname(path)] || 'application/octet-stream', 'Cache-Control': 'no-store' };
@@ -33,13 +46,18 @@ return createServer(async (req, res) => {
       const stream = createReadStream(path, { start, end });
       res.on('close', () => stream.destroy()); stream.on('error', () => res.destroy()); stream.pipe(res); return;
     }
+    const body = req.method === 'HEAD' ? undefined : await readFile(path);
+    if (res.destroyed) return;
     res.writeHead(200, headers);
-    if (req.method === 'HEAD') return res.end();
-    res.end(await readFile(path));
-  } catch { res.writeHead(404); res.end('Not found'); }
+    res.end(body);
+  } catch {
+    if (res.destroyed) return;
+    if (res.headersSent) { res.destroy(); return; }
+    res.writeHead(404); res.end('Not found');
+  }
 });
 }
-if (process.argv[1] && realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)) {
+if (process.argv[1] && existsSync(process.argv[1]) && realpathSync(process.argv[1]) === fileURLToPath(import.meta.url)) {
   createStaticServer().listen(port, '127.0.0.1', () => console.log(`五丈原 HTML 试玩：http://127.0.0.1:${port}`));
 }
 

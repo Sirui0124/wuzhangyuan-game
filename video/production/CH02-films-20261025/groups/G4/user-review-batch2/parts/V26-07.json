@@ -1,0 +1,52 @@
+{
+  "id": "V26-07",
+  "slot": "V26",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V26-07.mp4",
+  "sha256": "c025513ebd4766c1580f6bb2d1d1b2212c2c8a34e935842f917565ba9931628f",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V26-07.mp4",
+  "oldSha256": "df8ba2b2495e2eb611e3d37d0db95ecb824863f2c20961da99a41595b56482bd",
+  "oldDuration": 4.805,
+  "sourceFrames": [
+    0,
+    115
+  ],
+  "sourceRange": [
+    0.0,
+    4.791666666666667
+  ],
+  "newDuration": 4.791666666666667,
+  "technical": {
+    "duration": 4.791667,
+    "videoDuration": 4.791666666666667,
+    "frames": 115,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "c025513ebd4766c1580f6bb2d1d1b2212c2c8a34e935842f917565ba9931628f",
+    "bytes": 2423169
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-012",
+      "speaker": "军吏",
+      "text": "丞相看过这批粮情，答的是此次粮乏，当退。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-012",
+      "roleControlOnly": "军吏",
+      "text": "丞相看过这批粮情，答的是此次粮乏，当退。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

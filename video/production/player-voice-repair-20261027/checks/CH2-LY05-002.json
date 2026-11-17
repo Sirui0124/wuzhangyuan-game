@@ -1,0 +1,99 @@
+{
+  "id": "CH2-LY05-002",
+  "expected": "所以，你让我查了半天，到头来还是要退兵？",
+  "sha256": "eea73734cc60409730e408b2b6bd7e092b3404472de45ac7fbfcb589935037ae",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY05-002-v1.wav",
+  "recognized": "所以 你讓我查了半天 到頭來還是要退兵",
+  "similarity": 0.7647058823529411,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 1.2999999999999994,
+      "end": 4.78,
+      "text": "所以 你讓我查了半天 到頭來還是要退兵",
+      "noSpeechProbability": 0.1501627415418625,
+      "words": [
+        {
+          "start": 1.2999999999999994,
+          "end": 1.6399999999999997,
+          "text": "所以"
+        },
+        {
+          "start": 1.6399999999999997,
+          "end": 1.98,
+          "text": " 你"
+        },
+        {
+          "start": 1.98,
+          "end": 2.16,
+          "text": "讓"
+        },
+        {
+          "start": 2.16,
+          "end": 2.26,
+          "text": "我"
+        },
+        {
+          "start": 2.26,
+          "end": 2.4,
+          "text": "查"
+        },
+        {
+          "start": 2.4,
+          "end": 2.5,
+          "text": "了"
+        },
+        {
+          "start": 2.5,
+          "end": 2.62,
+          "text": "半"
+        },
+        {
+          "start": 2.62,
+          "end": 2.94,
+          "text": "天"
+        },
+        {
+          "start": 3.54,
+          "end": 3.76,
+          "text": " 到"
+        },
+        {
+          "start": 3.76,
+          "end": 3.92,
+          "text": "頭"
+        },
+        {
+          "start": 3.92,
+          "end": 4.06,
+          "text": "來"
+        },
+        {
+          "start": 4.06,
+          "end": 4.34,
+          "text": "還是"
+        },
+        {
+          "start": 4.34,
+          "end": 4.46,
+          "text": "要"
+        },
+        {
+          "start": 4.46,
+          "end": 4.58,
+          "text": "退"
+        },
+        {
+          "start": 4.58,
+          "end": 4.78,
+          "text": "兵"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

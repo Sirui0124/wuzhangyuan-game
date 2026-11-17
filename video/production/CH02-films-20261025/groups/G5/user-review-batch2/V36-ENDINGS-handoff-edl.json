@@ -1,0 +1,140 @@
+{
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "oldParent": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+    "sha256": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+    "duration": 54.18
+  },
+  "newParent": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V36-clean-speech-08ede9bf82.mp4",
+    "sha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+    "duration": 37.29
+  },
+  "exactParentEDL": [
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        0.0,
+        6.0
+      ],
+      "reason": "玩家完整原句用既有独立WAV，实际收件/松手动作保留",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12B-010.wav",
+      "audioRange": null,
+      "delay": 0.1,
+      "mute": false,
+      "timelineRange": [
+        0,
+        6.0
+      ]
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        12.0,
+        19.75
+      ],
+      "reason": "军吏实际收齐材料/核实责任的完整对白；删“先收齐才谈核实”动作说明误读及因此拖长画面",
+      "audio": null,
+      "audioRange": null,
+      "delay": 0,
+      "mute": false,
+      "timelineRange": [
+        6.0,
+        13.75
+      ]
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        24.541666666666668,
+        29.791666666666668
+      ],
+      "reason": "保留李严处分原句，删其前裁处导演说明误读",
+      "audio": null,
+      "audioRange": null,
+      "delay": 0,
+      "mute": false,
+      "timelineRange": [
+        13.75,
+        19.0
+      ]
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        30.625,
+        37.75
+      ],
+      "reason": "保留苟安免队长/责任/做粮兵原句",
+      "audio": null,
+      "audioRange": null,
+      "delay": 0,
+      "mute": false,
+      "timelineRange": [
+        19.0,
+        26.125
+      ]
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        42.833333333333336,
+        50.333333333333336
+      ],
+      "reason": "保留考虑停手补救但仍担责完整原句，删话前冗余反应",
+      "audio": null,
+      "audioRange": null,
+      "delay": 0,
+      "mute": false,
+      "timelineRange": [
+        26.125,
+        33.625
+      ]
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+      "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+      "range": [
+        50.5,
+        54.166666666666664
+      ],
+      "reason": "回令接触与接过完整动作，空台词白名单，清除演出说明误读",
+      "audio": null,
+      "audioRange": null,
+      "delay": 0,
+      "mute": true,
+      "timelineRange": [
+        33.625,
+        37.291666666666664
+      ]
+    }
+  ],
+  "source02": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-02-final-30f94a3f01.mp4",
+    "sha256": "a1debd5b217c93d821a3ef43dab7928220631c06dbddc0f4bba60094c1cce326",
+    "duration": 13.7,
+    "keepPictureAndLegalAudioApprox": [
+      5.98,
+      13.7
+    ],
+    "note": "Approx child mapping from hundredth-rounded manifest; exact actual edit above refers to baseline parent12.000–19.750. Do not mechanically replace entire E1."
+  },
+  "source06": {
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V36-06-final-53ddf10e06.mp4",
+    "sha256": "923089f9581e7f3e5685ddd35efe66f00486af7a07f6bdbb4820dfb933bd32b4",
+    "duration": 3.67,
+    "keepRealPicture": true,
+    "muteAudioWholeRange": [
+      0,
+      3.67
+    ],
+    "whitelist": []
+  },
+  "listening": "pending",
+  "protectHappyAndFinalInnerVoice": true
+}

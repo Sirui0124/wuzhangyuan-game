@@ -1,0 +1,587 @@
+{
+  "schemaVersion": 1,
+  "id": "wuzhang",
+  "title": "五丈原：守住灯之后",
+  "version": "ch1-flow-free-order-20261023",
+  "scriptVersion": "ch1-tutorial-free-order-20261023",
+  "entry": {
+    "kind": "cinematic",
+    "id": "opening"
+  },
+  "sections": [
+    {
+      "id": "awakening",
+      "title": "第六夜 · 醒来",
+      "scene": "camp_gate",
+      "round": 1,
+      "rows": [
+        "A-08",
+        "A-16"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "notice",
+      "title": "帐前的禁令",
+      "scene": "camp_gate",
+      "round": 1,
+      "rows": [
+        "A-17"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "first-scout",
+      "title": "急报将至",
+      "scene": "report_post",
+      "round": 1,
+      "rows": [
+        "A-19"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "choice"
+      }
+    },
+    {
+      "id": "first-weiyan",
+      "title": "拦住魏延",
+      "scene": "report_post",
+      "round": 1,
+      "rows": [
+        "A-28",
+        "A-29",
+        "A-30",
+        "A-33",
+        "A-34",
+        "A-37"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "expression"
+      }
+    },
+    {
+      "id": "first-handoff",
+      "title": "转呈未竟",
+      "scene": "camp_gate",
+      "round": 1,
+      "rows": [
+        "A-42",
+        "A-43",
+        "A-44",
+        "A-45"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "first-night",
+      "title": "等到天明",
+      "scene": "camp_gate",
+      "round": 1,
+      "rows": [
+        "A-48",
+        "A-49"
+      ],
+      "next": {
+        "kind": "cinematic",
+        "id": "accountability"
+      }
+    },
+    {
+      "id": "first-judgment",
+      "title": "清晨问责",
+      "scene": "camp_gate",
+      "round": 1,
+      "rows": [
+        "A-57",
+        "A-59",
+        "A-60"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "death"
+      }
+    },
+    {
+      "id": "rewind",
+      "title": "还是那一片夕阳",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "A-61",
+        "A-63",
+        "A-END"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "guard-investigation",
+      "title": "向守帐军士问清禁令",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "relay-investigation",
+      "title": "谁能接报作主",
+      "scene": "jiangwei_tent_front",
+      "round": 2,
+      "rows": [
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "scout-investigation",
+      "title": "今夜为何不同",
+      "scene": "report_post",
+      "round": 2,
+      "rows": [
+        "D17",
+        "D18",
+        "D19",
+        "D20",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "D26"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "thoughts"
+      }
+    },
+    {
+      "id": "jiang-commitment",
+      "title": "亲自问准",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "J03",
+        "J04",
+        "J08",
+        "J08A",
+        "J08E",
+        "J09",
+        "J09A",
+        "J10",
+        "J10A",
+        "J10B",
+        "J11",
+        "J13",
+        "J14"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      },
+      "rowScenes": {
+        "J03": "jiangwei_tent_front",
+        "J14": "report_post",
+        "J08": "camp_gate"
+      }
+    },
+    {
+      "id": "weiyan-approach",
+      "title": "禀将军……",
+      "scene": "report_post",
+      "round": 2,
+      "rows": [
+        "W02",
+        "W01A"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "expression"
+      }
+    },
+    {
+      "id": "weiyan-cooperation",
+      "title": "把来报者带回来",
+      "scene": "report_post",
+      "round": 2,
+      "rows": [
+        "W03",
+        "W04",
+        "W05",
+        "W07",
+        "W08",
+        "W09"
+      ],
+      "next": {
+        "kind": "section",
+        "id": "formal-report"
+      },
+      "rowScenes": {
+        "W08": "camp_gate"
+      }
+    },
+    {
+      "id": "formal-report",
+      "title": "军情交到有权者手中",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "E03",
+        "E04",
+        "E04C"
+      ],
+      "next": {
+        "kind": "section",
+        "id": "order-delivery"
+      }
+    },
+    {
+      "id": "order-delivery",
+      "title": "等到回令",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "E05",
+        "E08",
+        "E08B",
+        "E09",
+        "E10",
+        "E11"
+      ],
+      "next": {
+        "kind": "section",
+        "id": "after-report"
+      }
+    },
+    {
+      "id": "after-report",
+      "title": "天亮，无人来收矛",
+      "scene": "camp_gate",
+      "round": 2,
+      "rows": [
+        "B-03",
+        "B-04",
+        "B-06",
+        "B-07"
+      ],
+      "next": {
+        "kind": "cinematic",
+        "id": "seven-days"
+      }
+    },
+    {
+      "id": "scout-option-a",
+      "title": "向斥候问清",
+      "scene": "report_post",
+      "round": 1,
+      "rows": [
+        "A-23",
+        "A-24"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "scout-option-b",
+      "title": "向斥候问清",
+      "scene": "report_post",
+      "round": 1,
+      "rows": [
+        "A-23B",
+        "A-24B"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    },
+    {
+      "id": "first-accepted",
+      "title": "军情不能没着落",
+      "scene": "report_post",
+      "round": 1,
+      "rows": [
+        "A-40B"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "explore"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "id": "read-notice",
+      "label": "查看告示",
+      "description": "",
+      "scene": "camp_gate",
+      "round": 1,
+      "section": "notice",
+      "requires": [
+        "awakening"
+      ],
+      "x": 71,
+      "y": 40
+    },
+    {
+      "id": "meet-first-scout",
+      "label": "询问斥候",
+      "description": "营前有人带回急报。",
+      "scene": "report_post",
+      "round": 1,
+      "section": "first-scout",
+      "requires": [
+        "notice"
+      ],
+      "x": 30,
+      "y": 46
+    },
+    {
+      "id": "intercept-first",
+      "label": "迎上魏延",
+      "description": "魏延正要向中军帐走去。",
+      "scene": "report_post",
+      "round": 1,
+      "section": "first-weiyan",
+      "requires": [
+        "first-scout"
+      ],
+      "x": 72,
+      "y": 45
+    },
+    {
+      "id": "deliver-first",
+      "label": "把急报交给守帐军士",
+      "description": "先将魏将军的话送到帐前。",
+      "scene": "camp_gate",
+      "round": 1,
+      "section": "first-handoff",
+      "requires": [
+        "first-accepted"
+      ],
+      "x": 37,
+      "y": 48
+    },
+    {
+      "id": "stand-watch",
+      "label": "回到值守处",
+      "description": "这一夜，灯还亮着。",
+      "scene": "camp_gate",
+      "round": 1,
+      "section": "first-night",
+      "requires": [
+        "first-handoff"
+      ],
+      "x": 62,
+      "y": 68
+    },
+    {
+      "id": "ask-guard",
+      "label": "向守帐军士问清禁令",
+      "description": "这一次，要听清后半句话。",
+      "scene": "camp_gate",
+      "round": 2,
+      "section": "guard-investigation",
+      "requires": [
+        "rewind"
+      ],
+      "x": 35,
+      "y": 48
+    },
+    {
+      "id": "ask-relay",
+      "label": "向传报军士打听当值",
+      "description": "谁能接报，谁能决定？",
+      "scene": "jiangwei_tent_front",
+      "round": 2,
+      "section": "relay-investigation",
+      "requires": [
+        "rewind"
+      ],
+      "x": 55,
+      "y": 49
+    },
+    {
+      "id": "ask-scout",
+      "label": "核实今夜敌情",
+      "description": "把今夜与前几夜对照。",
+      "scene": "report_post",
+      "round": 2,
+      "section": "scout-investigation",
+      "requires": [
+        "guard-investigation",
+        "relay-investigation"
+      ],
+      "x": 30,
+      "y": 46
+    },
+    {
+      "id": "meet-jiang",
+      "label": "请亲兵通传",
+      "description": "当面问准，不能替将军作主。",
+      "scene": "camp_gate",
+      "round": 2,
+      "section": "jiang-commitment",
+      "requires": [
+        "scout-investigation"
+      ],
+      "x": 60,
+      "y": 42
+    },
+    {
+      "id": "intercept-weiyan",
+      "label": "迎上魏延",
+      "description": "带着姜维的真实答复回去。",
+      "scene": "report_post",
+      "round": 2,
+      "section": "weiyan-approach",
+      "requires": [
+        "jiang-commitment"
+      ],
+      "x": 72,
+      "y": 45
+    }
+  ],
+  "cinematics": [
+    {
+      "id": "opening",
+      "group": "opening",
+      "title": "若能早一步",
+      "coveredRows": [
+        "A-07"
+      ],
+      "next": {
+        "kind": "section",
+        "id": "awakening"
+      }
+    },
+    {
+      "id": "accountability",
+      "group": "sacrifice",
+      "title": "清晨问责",
+      "coveredRows": [
+        "A-50"
+      ],
+      "next": {
+        "kind": "section",
+        "id": "first-judgment"
+      }
+    },
+    {
+      "id": "seven-days",
+      "group": "safe",
+      "title": "七日期满",
+      "clipIds": [
+        "ending-en01-20261016"
+      ],
+      "coveredRows": [
+        "B-09"
+      ],
+      "next": {
+        "kind": "cinematic",
+        "id": "opportunity"
+      }
+    },
+    {
+      "id": "opportunity",
+      "group": "safe",
+      "title": "借不回战机",
+      "clipIds": [
+        "EN03-EN04"
+      ],
+      "coveredRows": [
+        "B-12"
+      ],
+      "next": {
+        "kind": "phase",
+        "id": "ending"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "camp_gate",
+      "title": "中军帐前",
+      "description": "帐帘垂着，里面仍有灯光。",
+      "routes": [
+        "report_post",
+        "jiangwei_tent_front"
+      ]
+    },
+    {
+      "id": "report_post",
+      "title": "营前传报处",
+      "description": "号角声落了，远处仍有马蹄。",
+      "routes": [
+        "camp_gate",
+        "jiangwei_tent_front"
+      ]
+    },
+    {
+      "id": "jiangwei_tent_front",
+      "title": "姜维将军帐前",
+      "description": "亲兵识得通传规矩，乙正整理军中文书。",
+      "routes": [
+        "camp_gate",
+        "report_post"
+      ]
+    }
+  ],
+  "endings": [
+    {
+      "id": "tutorial-sacrifice",
+      "number": "001",
+      "phase": "首轮 · 转呈未竟",
+      "result": "tutorial_execution",
+      "title": "诸葛亮活了，但你挂了。",
+      "description": "你守住了这一夜，却没有守住你的职责。",
+      "hint": "再来一次，问清谁能接报、作决定，并等到军令传回。",
+      "kind": "转呈未竟"
+    },
+    {
+      "id": "safe",
+      "number": "002",
+      "phase": "五丈原 · 守住灯之后",
+      "result": "safe",
+      "title": "灯没灭，你也活下来了。",
+      "description": "姜维亲自听清军报并作出决定，回令已传至魏延与前营。你守住了这一夜。",
+      "hint": "保住这一夜，还借不回此前错过的战机。",
+      "kind": "灯火未灭"
+    }
+  ]
+}

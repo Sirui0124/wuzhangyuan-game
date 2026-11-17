@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><title>G2 PRESENTABLE只读协审</title>
+<style>body{background:#121719;color:#eee;font:18px system-ui;margin:12px}video{width:100%;max-height:82vh}button,select{font:inherit;margin:8px}#time{font:18px monospace}</style>
+<select aria-label="新版协审子片"><option>V15-04</option><option>V18-04</option></select><button id="play">从头播放</button><button id="pause">暂停</button><div id="time"></div><video controls muted preload="auto"></video>
+<script>const v=document.querySelector('video'),s=document.querySelector('select');function load(){v.src='/groups/G2/edited/picture-review-presentable/'+s.value+'.mp4?assist=G6-presentable-20261025'}s.onchange=load;document.querySelector('#play').onclick=()=>{v.currentTime=0;v.play()};document.querySelector('#pause').onclick=()=>v.pause();load();setInterval(()=>document.querySelector('#time').textContent=s.value+' '+v.currentTime.toFixed(3)+' / '+v.duration+' '+(v.ended?'已结束':v.paused?'暂停':'播放中'),100)</script>

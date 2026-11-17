@@ -1,0 +1,79 @@
+{
+  "id": "V31N-01",
+  "expected": "你想怎么做，说吧。我听着。",
+  "postVoiceText": null,
+  "actual": "你想怎么做说吧我听着",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.22,
+      "end": 3.22,
+      "text": "你想怎么做",
+      "words": [
+        {
+          "start": 2.22,
+          "end": 2.7,
+          "word": "你想",
+          "probability": 0.7409974336624146
+        },
+        {
+          "start": 2.7,
+          "end": 3.0,
+          "word": "怎么",
+          "probability": 0.8850691318511963
+        },
+        {
+          "start": 3.0,
+          "end": 3.22,
+          "word": "做",
+          "probability": 0.9954749941825867
+        }
+      ]
+    },
+    {
+      "start": 3.96,
+      "end": 4.94,
+      "text": "说吧",
+      "words": [
+        {
+          "start": 3.96,
+          "end": 4.6,
+          "word": "说",
+          "probability": 0.8497823476791382
+        },
+        {
+          "start": 4.6,
+          "end": 4.94,
+          "word": "吧",
+          "probability": 0.9986264705657959
+        }
+      ]
+    },
+    {
+      "start": 5.54,
+      "end": 6.26,
+      "text": "我听着",
+      "words": [
+        {
+          "start": 5.54,
+          "end": 5.92,
+          "word": "我",
+          "probability": 0.7032040953636169
+        },
+        {
+          "start": 5.92,
+          "end": 6.1,
+          "word": "听",
+          "probability": 0.9854270219802856
+        },
+        {
+          "start": 6.1,
+          "end": 6.26,
+          "word": "着",
+          "probability": 0.996221661567688
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

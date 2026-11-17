@@ -1,0 +1,113 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1FIX09",
+  "src": "/video/current/C1FIX09-20261025.mp4",
+  "title": "向甲问禁令与责任",
+  "rows": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06"
+  ],
+  "subtitles": "/video/subtitles/C1FIX09-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1FIX09-20261025.mp4",
+  "sha256": "bc4212fa7744ae4c154f225a244d4f2db0d63738b8fc2dba3ae2ca037c182aa3",
+  "duration": 17.32275,
+  "cues": [
+    {
+      "start": 0.11,
+      "end": 1.67,
+      "text": "今夜守帐怎么这么严？"
+    },
+    {
+      "start": 3.07,
+      "end": 5.85,
+      "text": "丞相有口谕，今夜谁也不得入帐求见"
+    },
+    {
+      "start": 6.25,
+      "end": 9.25,
+      "text": "可要是拦住不报，误了军情呢？"
+    },
+    {
+      "start": 9.25,
+      "end": 10.61,
+      "text": "那也要问罪"
+    },
+    {
+      "start": 11.15,
+      "end": 14.09,
+      "text": "急报得赶紧送到，禁令也不能擅改"
+    },
+    {
+      "start": 14.77,
+      "end": 17.29,
+      "text": "我只能守门递话，不能处置军情"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-D01",
+      "node": "D01",
+      "text": "今夜守帐怎么这么严？",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D01.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "9d2f516a5916f1ee43dc2cb8f8045220d06d2d41cb7695aec9c9aebac9b453be",
+      "duration": 1.98325,
+      "speechRange": [
+        0.4,
+        1.66
+      ],
+      "correlation": 0.9283204013676557,
+      "insertAt": 0.0968,
+      "speechStart": 0.49675,
+      "speechEnd": 1.75675
+    },
+    {
+      "id": "C1-D03",
+      "node": "D03",
+      "text": "可要是拦住不报，误了军情呢？",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D03.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "52f0b201c208ca0b2c85a54892893b9dbf4346df6ce5da5bb5e778c10ce946f1",
+      "duration": 3.39775,
+      "speechRange": [
+        0.26,
+        3.12
+      ],
+      "correlation": 0.9166674853116032,
+      "insertAt": 6.1377,
+      "speechStart": 6.397749999999999,
+      "speechEnd": 9.25775,
+      "segmentedEvidence": [
+        {
+          "score": 0.971966507335707,
+          "offset": 6.13775
+        },
+        {
+          "score": 0.9166674853116032,
+          "offset": 6.13725
+        },
+        {
+          "score": 0.9916086815484259,
+          "offset": 6.141
+        }
+      ]
+    }
+  ],
+  "unmatchedTextCandidates": [
+    {
+      "id": "C1-D03",
+      "score": 0.4052807610260537,
+      "text": "可要是拦住不报，误了军情呢？"
+    }
+  ],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

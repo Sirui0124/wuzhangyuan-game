@@ -1,0 +1,49 @@
+{
+  "id": "CH2-LY02-B02",
+  "expected": "毕竟也不容易",
+  "sha256": "81196d86a0f5824ba102b87ba07b0fb72caccf150b00558f0e4d9ed7524c4804",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-B02-v1.wav",
+  "recognized": "毕竟也不容易",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.58,
+      "end": 1.36,
+      "text": "毕竟也不容易",
+      "noSpeechProbability": 0.4855327010154724,
+      "words": [
+        {
+          "start": 0.58,
+          "end": 0.82,
+          "text": "毕"
+        },
+        {
+          "start": 0.82,
+          "end": 0.94,
+          "text": "竟"
+        },
+        {
+          "start": 0.94,
+          "end": 1.04,
+          "text": "也"
+        },
+        {
+          "start": 1.04,
+          "end": 1.16,
+          "text": "不"
+        },
+        {
+          "start": 1.16,
+          "end": 1.36,
+          "text": "容易"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

@@ -1,0 +1,126 @@
+{
+  "id": "V08B",
+  "name": "关心伤势分支",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08B-关心伤势分支_画面修正V2.mp4",
+  "duration": 18.34,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-N1选B",
+  "next": [
+    "V09"
+  ],
+  "endEvent": "所选对白与本段演出实际完成；不重复加分",
+  "subclips": [
+    {
+      "id": "V08B-01-player0",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\picture-v2\\V08B-01-player0-listener.mp4",
+      "duration": 4.625,
+      "centralVoiceCues": [
+        {
+          "node": "CH2-LY02-B01",
+          "speaker": "我",
+          "text": "我还是怕你太难过",
+          "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+          "centralSha256": "9a9c70abb803b24cfc36094dc5e351cadd1c96152ab280e365bef23058b231ff",
+          "slotStart": 0.3,
+          "slotEnd": 2.2734166666666664
+        },
+        {
+          "node": "CH2-LY02-B02",
+          "speaker": "我",
+          "text": "毕竟也不容易",
+          "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+          "centralSha256": "37e1ead8e1657138840d00103b1251685330b0b495558817c94886ac6f850391",
+          "slotStart": 2.4934166666666666,
+          "slotEnd": 4.06525
+        }
+      ],
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+      "sourceSha256": "6c3f8cacee9d8a028fd7126f1e862111d26242473015b2c96aa3336437e5f3b1",
+      "method": "verified closed-mouth source plays once then last frame holds; original player WAV only; no NPC mouth/voice in player phase",
+      "slotStart": 0,
+      "slotEnd": 4.63,
+      "review": {
+        "visualReview": "picture pass reviewed usable",
+        "actualDynamicReview": true,
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\L01-01-usable-window.mp4",
+        "sourceSha256": "6c3f8cacee9d8a028fd7126f1e862111d26242473015b2c96aa3336437e5f3b1",
+        "findings": "verified closed-mouth source plays once then last frame holds; original player WAV only; no NPC mouth/voice in player phase",
+        "audioIssues": [
+          "NPC临时音轨逐字/音色/BGM未审；我的阶段仅原玩家音轨和闭口倾听画面。"
+        ],
+        "method": "本轮本地picture-audit-batch1.html完整静音实际播放到ended；逐阶段角色归属复核",
+        "checkedRange": [
+          0,
+          18.34
+        ]
+      }
+    },
+    {
+      "id": "V08B-01-npc1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\picture-v2\\V08B-01-npc1.mp4",
+      "duration": 13.7,
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08B-01-normalized.mp4",
+      "sourceIntervals": [
+        [
+          0.0,
+          13.708333333333334
+        ]
+      ],
+      "sourceSha256": "b47860eb38de19db4245d277ec0fe1c88044fbdf9ee07d6290db7e48ca278724",
+      "centralVoiceCues": [],
+      "slotStart": 4.63,
+      "slotEnd": 18.33,
+      "review": {
+        "visualReview": "picture pass reviewed usable",
+        "actualDynamicReview": true,
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V08B-01-normalized.mp4",
+        "sourceSha256": "b47860eb38de19db4245d277ec0fe1c88044fbdf9ee07d6290db7e48ca278724",
+        "findings": "source phase preserved",
+        "audioIssues": [
+          "NPC临时音轨逐字/音色/BGM未审；我的阶段仅原玩家音轨和闭口倾听画面。"
+        ],
+        "method": "本轮本地picture-audit-batch1.html完整静音实际播放到ended；逐阶段角色归属复核",
+        "checkedRange": [
+          0,
+          18.34
+        ]
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-B01",
+      "speaker": "我",
+      "text": "我还是怕你太难过",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+      "centralSha256": "9a9c70abb803b24cfc36094dc5e351cadd1c96152ab280e365bef23058b231ff",
+      "slotStart": 0.3,
+      "slotEnd": 2.2734166666666664
+    },
+    {
+      "node": "CH2-LY02-B02",
+      "speaker": "我",
+      "text": "毕竟也不容易",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+      "centralSha256": "37e1ead8e1657138840d00103b1251685330b0b495558817c94886ac6f850391",
+      "slotStart": 2.4934166666666666,
+      "slotEnd": 4.06525
+    }
+  ],
+  "sha256": "6ade3a84813e3189ba74e83c23591c6e04354484d156f4b9b350679c88d7f8a6",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮最终SHA完整动态播放复核；技术解码不替代画面审查。",
+  "audioIssues": [
+    "既有玩家音轨按角色独立排时，无新TTS。NPC原音保留；错词、音色、BGM或声口不同步仅列音频问题。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V08B-关心伤势分支.mp4",
+  "previousSha256": "0b1bcd5a90f5b87d31b77f49eb9a73d982b64266c5f965b4975220da9789d135",
+  "pictureRevision": 2
+}

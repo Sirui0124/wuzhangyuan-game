@@ -1,0 +1,121 @@
+{
+  "id": "V10",
+  "name": "第一封信后的交谈",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+  "duration": 75.11,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-FIRST-LETTER实际读完",
+  "next": [
+    "UI-O1"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V10-user-repair-r1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+      "slotStart": 0,
+      "slotEnd": 75.11,
+      "sourceTrim": [
+        0,
+        75.11
+      ],
+      "audioMode": "user-requested-repair",
+      "review": {
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-more.html",
+        "actualDynamicReview": true,
+        "visualReview": "浏览器播放至ended，结合关键帧核对画面；听审未完成",
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY03-004",
+      "speaker": "我",
+      "text": "你们先前议的是什么？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-004.wav",
+      "centralSha256": "4f0f5fd37a5c8c239e150dda6c6ec85bff3c52a70146eb87b77e6cc8ebc0dc05",
+      "slotStart": 0.3,
+      "slotEnd": 2.1054583333333334,
+      "subclip": "V10-user-repair-r1"
+    },
+    {
+      "node": "CH2-LY03-011",
+      "speaker": "我",
+      "text": "你想讨回公道，为什么一定要停北伐？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-011.wav",
+      "centralSha256": "79e317b91d2c0a277a58c74942c60c79ae766ae3dc9c781bc193a874722742e5",
+      "slotStart": 27.500000000000004,
+      "slotEnd": 30.899708333333336,
+      "subclip": "V10-user-repair-r1"
+    },
+    {
+      "node": "CH2-LY03-014",
+      "speaker": "我",
+      "text": "如果还是没人肯查呢？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-014.wav",
+      "centralSha256": "151d3a99a80bc306761305119f74cf897e5c55cee1bccc7616119aa7d3157574",
+      "slotStart": 52.75,
+      "slotEnd": 54.72729166666667,
+      "subclip": "V10-user-repair-r1"
+    },
+    {
+      "node": "CH2-LY03-016",
+      "speaker": "我",
+      "text": "你就信得过魏国？",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY03-016.wav",
+      "centralSha256": "0b48c4accc5ef04437df7f9fa032faebc4d8e3168ea96688821461a69268436b",
+      "slotStart": 61.23,
+      "slotEnd": 63.02579166666666,
+      "subclip": "V10-user-repair-r1"
+    }
+  ],
+  "sha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮用户返修：本地浏览器实际完整播放到ended，未见黑屏、文字卡或可见方框层。",
+  "audioIssues": [
+    "新预置TTS音频未采用；本条仅历史正确原声复用或按用户静音/删除。",
+    "制作核对不替代用户重新审核。",
+    "28秒后正确参考模型声音尚未替换。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V10-第一封信后的交谈_画面修正V2.mp4",
+  "previousSha256": "9084d3b2420652f048d300721a2cfc9aa8cf7d81bd03722723bdeb43b932a292",
+  "pictureRevision": 2,
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "前12s的音频是乱的，需要重新生成或者删掉视频这段，12-28s没问题；28s以后音频全乱，需要重新生成（豆包语音，用参考音色，和要求的旁白）",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V10-第一封信后的交谈_画面修正V2.mp4",
+    "oldSha256": "9084d3b2420652f048d300721a2cfc9aa8cf7d81bd03722723bdeb43b932a292",
+    "oldInterval": [
+      0,
+      12
+    ],
+    "repairs": [
+      {
+        "treatment": "开头错误元声音已免费静音，保留正确玩家提问和9.18秒后的原对白；12–28声音不动。28秒后必要新声音待正确参考模型。",
+        "oldRange": [
+          0,
+          12
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V10-撤遮字层开头声音去元说明-R1.mp4",
+        "newSha256": "1b009796be052f502c51ecdcd9e1d3197bcc5098d02f677346116634af2a331f",
+        "globalLayerRemoval": true,
+        "keptAudioRange": [
+          12,
+          28
+        ],
+        "unresolved": [
+          "28秒后缺失/脏NPC语音待参考模型，不采用隔离的预置TTS2。"
+        ]
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\old-assembly\\V10-9084d3b24206.json"
+}

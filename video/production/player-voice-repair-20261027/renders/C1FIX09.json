@@ -1,0 +1,146 @@
+{
+  "id": "C1FIX09",
+  "group": "chapterDialogue",
+  "oldSrc": "/video/current/C1FIX09-20261025.mp4",
+  "oldSha256": "bc4212fa7744ae4c154f225a244d4f2db0d63738b8fc2dba3ae2ca037c182aa3",
+  "oldSubtitles": "/video/subtitles/C1FIX09-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX09-559d3488.mp4",
+  "sha256": "0d90a1a2077ade5553da78d45de63c3b23096ebec5b6446bb2b496736389d18c",
+  "bytes": 7444594,
+  "duration": 17.333333333333332,
+  "containerDuration": 17.333333,
+  "width": 1344,
+  "height": 756,
+  "fps": "1245/52",
+  "frames": 415,
+  "videoCodec": "h264",
+  "current": {
+    "id": "C1FIX09",
+    "src": "/video/current/PV27-C1FIX09-559d3488.mp4",
+    "title": "向甲问禁令与责任",
+    "rows": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06"
+    ],
+    "subtitles": "/video/subtitles/PV27-C1FIX09-559d3488.vtt"
+  },
+  "replacements": [
+    {
+      "id": "C1-D01",
+      "node": "D01",
+      "text": "今夜守帐怎么这么严？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D01.wav",
+      "oldCorrelation": 0.9283204013676557,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D01-v1.wav",
+      "newVoiceSha256": "15118f2090c3cff3aaa5d9419dcf5f3fc5b38536d92d13035abc6b11b05169a1",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.27675000000000005,
+        2.45675
+      ],
+      "insertAt": 0.27675000000000005,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1435725688934326,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "C1-D03",
+      "node": "D03",
+      "text": "可要是拦住不报，误了军情呢？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\D03.wav",
+      "oldCorrelation": 0.9166674853116032,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-D03-v1.wav",
+      "newVoiceSha256": "0b21424e87bc65a671fa32e0a761fa1da28ec265d06b69e5c1bcbfeb3e749fdd",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        6.17775,
+        9.21
+      ],
+      "insertAt": 6.17775,
+      "voiceSeconds": 2.9,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.013930320739746,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.59675,
+      "end": 1.98675,
+      "text": "今夜守帐怎么这么严？"
+    },
+    {
+      "start": 3.07,
+      "end": 5.85,
+      "text": "丞相有口谕，今夜谁也不得入帐求见"
+    },
+    {
+      "start": 6.29775,
+      "end": 8.92775,
+      "text": "可要是拦住不报，误了军情呢？"
+    },
+    {
+      "start": 9.25,
+      "end": 10.61,
+      "text": "那也要问罪"
+    },
+    {
+      "start": 11.15,
+      "end": 14.09,
+      "text": "急报得赶紧送到，禁令也不能擅改"
+    },
+    {
+      "start": 14.77,
+      "end": 17.29,
+      "text": "我只能守门递话，不能处置军情"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

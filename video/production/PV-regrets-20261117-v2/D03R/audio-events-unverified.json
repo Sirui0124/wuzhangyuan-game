@@ -1,0 +1,61 @@
+{
+  "source_sha256": "bd4309001e9db13203ba028389657378c9af60dc9ff5114b9fff651e6b24d494",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.6843
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.4967
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.1148
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.076
+        },
+        {
+          "label": "Static",
+          "p": 0.0387
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0304
+        },
+        {
+          "label": "White noise",
+          "p": 0.0274
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0147
+        },
+        {
+          "label": "Rain",
+          "p": 0.0133
+        },
+        {
+          "label": "Silence",
+          "p": 0.0122
+        },
+        {
+          "label": "Sigh",
+          "p": 0.0113
+        },
+        {
+          "label": "Television",
+          "p": 0.011
+        }
+      ],
+      "music": 0.0047
+    }
+  ]
+}

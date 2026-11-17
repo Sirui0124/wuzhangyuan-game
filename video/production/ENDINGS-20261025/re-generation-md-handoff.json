@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "scope": "第一章缺片制作；第二章仅合辑缺口核查",
+  "maxRequestDurationSeconds": 30,
+  "videoApiGenerationEnabled": false,
+  "automaticVideoResubmissionEnabled": false,
+  "items": [
+    {
+      "sceneId": "era-arrest",
+      "title": "妖孽现世",
+      "durationSeconds": 26,
+      "mdPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\prompts\\C1END-ERA-ARREST-妖孽现世-26秒-R1.md",
+      "status": "ready",
+      "blockingReason": null,
+      "reason": "第一章era-arrest现有猪血版文字结局缺对应成片；按实际触发/后果新编26秒独立请求，不替换其他五条结局。",
+      "validationPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\review\\era-arrest-md\\source-mapping-and-validation.json"
+    }
+  ],
+  "secondChapterHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\re-generation-md-handoff.json",
+  "secondChapterConfirmedNewRequests": 0,
+  "preservedExistingFiveFirstChapterEndings": true,
+  "userApproved": false,
+  "newGenerationCalls": 0
+}

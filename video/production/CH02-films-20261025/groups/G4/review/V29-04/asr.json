@@ -1,0 +1,176 @@
+{
+  "id": "V29-04",
+  "expected": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+  "postVoiceText": null,
+  "actual": "直接交案也会把缺粮和欺瞒分开查没争来的粮暗欠缺查",
+  "similarity": 0.9166666666666666,
+  "segments": [
+    {
+      "start": 2.06,
+      "end": 3.28,
+      "text": "直接交案",
+      "words": [
+        {
+          "start": 2.06,
+          "end": 2.72,
+          "word": "直接",
+          "probability": 0.7786374092102051
+        },
+        {
+          "start": 2.72,
+          "end": 2.96,
+          "word": "交",
+          "probability": 0.8968358635902405
+        },
+        {
+          "start": 2.96,
+          "end": 3.28,
+          "word": "案",
+          "probability": 0.9102088809013367
+        }
+      ]
+    },
+    {
+      "start": 3.28,
+      "end": 6.26,
+      "text": "也会把缺粮和欺瞒分开查",
+      "words": [
+        {
+          "start": 3.28,
+          "end": 4.16,
+          "word": "也",
+          "probability": 0.8692659139633179
+        },
+        {
+          "start": 4.16,
+          "end": 4.3,
+          "word": "会",
+          "probability": 0.7378900647163391
+        },
+        {
+          "start": 4.3,
+          "end": 4.46,
+          "word": "把",
+          "probability": 0.9979494214057922
+        },
+        {
+          "start": 4.46,
+          "end": 4.72,
+          "word": "缺",
+          "probability": 0.9525048434734344
+        },
+        {
+          "start": 4.72,
+          "end": 4.96,
+          "word": "粮",
+          "probability": 0.8192266821861267
+        },
+        {
+          "start": 4.96,
+          "end": 5.12,
+          "word": "和",
+          "probability": 0.9980236291885376
+        },
+        {
+          "start": 5.12,
+          "end": 5.36,
+          "word": "欺",
+          "probability": 0.7620433270931244
+        },
+        {
+          "start": 5.36,
+          "end": 5.54,
+          "word": "瞒",
+          "probability": 0.9364276230335236
+        },
+        {
+          "start": 5.54,
+          "end": 5.76,
+          "word": "分",
+          "probability": 0.9923477172851562
+        },
+        {
+          "start": 5.76,
+          "end": 5.96,
+          "word": "开",
+          "probability": 0.9969292283058167
+        },
+        {
+          "start": 5.96,
+          "end": 6.26,
+          "word": "查",
+          "probability": 0.9522268176078796
+        }
+      ]
+    },
+    {
+      "start": 6.94,
+      "end": 8.2,
+      "text": "没争来的粮",
+      "words": [
+        {
+          "start": 6.94,
+          "end": 7.42,
+          "word": "没",
+          "probability": 0.9249443411827087
+        },
+        {
+          "start": 7.42,
+          "end": 7.62,
+          "word": "争",
+          "probability": 0.8066234588623047
+        },
+        {
+          "start": 7.62,
+          "end": 7.78,
+          "word": "来",
+          "probability": 0.9871082901954651
+        },
+        {
+          "start": 7.78,
+          "end": 7.9,
+          "word": "的",
+          "probability": 0.9891316890716553
+        },
+        {
+          "start": 7.9,
+          "end": 8.2,
+          "word": "粮",
+          "probability": 0.9986088871955872
+        }
+      ]
+    },
+    {
+      "start": 8.7,
+      "end": 9.82,
+      "text": "暗欠缺查",
+      "words": [
+        {
+          "start": 8.7,
+          "end": 9.12,
+          "word": "暗",
+          "probability": 0.6309116631746292
+        },
+        {
+          "start": 9.12,
+          "end": 9.38,
+          "word": "欠",
+          "probability": 0.9906235337257385
+        },
+        {
+          "start": 9.38,
+          "end": 9.56,
+          "word": "缺",
+          "probability": 0.9989664852619171
+        },
+        {
+          "start": 9.56,
+          "end": 9.82,
+          "word": "查",
+          "probability": 0.6759915351867676
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

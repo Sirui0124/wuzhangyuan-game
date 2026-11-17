@@ -1,0 +1,1154 @@
+{
+  "url": "https://my.feishu.cn/sheets/WtGwsSisshygCat8XkBc96oCnll",
+  "revision": 271,
+  "fetchedAt": "2026-10-30T03:32:18.674Z",
+  "headers": [
+    "编号",
+    "说话人／类型",
+    "一句对白／界面文案",
+    "线索录入／引用（人工）",
+    "线索（编号）",
+    "触发条件逻辑（人工）",
+    "触发条件与逻辑衔接（编号）"
+  ],
+  "rows": [
+    {
+      "id": "A-07",
+      "speaker": "视频",
+      "text": "",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "视频内容：借寿、赴帐、现代回忆与许愿；醒来守营、同袍提醒。新游戏先播放两段开场视频；结束或跳过后接“第六夜”的认知与行动意图，不再重复醒来、回神和灯未灭的文字。",
+      "transition": "cinematic:opening；clips:PR01/opening-sc03-20261016；→ A-08",
+      "sourceRow": 2
+    },
+    {
+      "id": "A-08",
+      "speaker": "我（心声）",
+      "text": "五丈原……第六夜。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "P-02｜醒来与一件小事；→A-16",
+      "sourceRow": 3
+    },
+    {
+      "id": "A-16",
+      "speaker": "我（心声）",
+      "text": "魏延还没来。先看看帐前的告示。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "P-02｜醒来与一件小事；→ A-17",
+      "sourceRow": 4
+    },
+    {
+      "id": "A-17",
+      "speaker": "告示",
+      "text": "今夜帐内有要事，闲人不得擅入。",
+      "clue": "获得“帐前禁令”的告示部分；本轮只知道告示内容。",
+      "clueIds": "C06",
+      "humanCondition": "",
+      "transition": "A-17读完取得C06首轮告示版本；不补第二轮职责；→A-19",
+      "sourceRow": 5
+    },
+    {
+      "id": "A-19",
+      "speaker": "斥候",
+      "text": "魏兵正在向营前逼近，魏将军马上就到，要入帐禀报。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-02｜斥候来报；→A-23",
+      "sourceRow": 6
+    },
+    {
+      "id": "A-23",
+      "speaker": "我（选项）",
+      "text": "营门失守了？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "RULE-CHOICE-R1｜选A→A-24；选B→A-24B；只执行所选分支",
+      "sourceRow": 7
+    },
+    {
+      "id": "A-24",
+      "speaker": "斥候",
+      "text": "敌骑还在营外，没碰鹿角，也没见步卒跟进。前哨守得住。",
+      "clue": "斥候：营门并未失守",
+      "clueIds": "T02",
+      "humanCondition": "接选项A",
+      "transition": "仅选A；A-24读完收录T02；→R1-GO",
+      "sourceRow": 8
+    },
+    {
+      "id": "A-23B",
+      "speaker": "我（选项）",
+      "text": "不行，今晚谁都不能进",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "RULE-CHOICE-R1｜选项B；→A-24B",
+      "sourceRow": 9
+    },
+    {
+      "id": "A-24B",
+      "speaker": "斥候",
+      "text": "那便请你向魏将军说清楚。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "接选项B",
+      "transition": "仅接选项B；→R1-GO；不收录营门未失守",
+      "sourceRow": 10
+    },
+    {
+      "id": "R1-GO",
+      "speaker": "行动按钮",
+      "text": "去找魏延",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "主角选择去找魏延",
+      "transition": "两分支汇合；玩家选择去找魏延→A-28",
+      "sourceRow": 11
+    },
+    {
+      "id": "A-28",
+      "speaker": "魏延",
+      "text": "军情紧急，我须入帐通报。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-03｜第一次拦魏延；→ A-29",
+      "sourceRow": 12
+    },
+    {
+      "id": "A-29",
+      "speaker": "我",
+      "text": "将军留步，帐前有禁令，今夜非要事不得入",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-03｜第一次拦魏延；→ A-30",
+      "sourceRow": 13
+    },
+    {
+      "id": "A-30",
+      "speaker": "魏延",
+      "text": "我就是要事。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-03｜第一次拦魏延；→A-33",
+      "sourceRow": 14
+    },
+    {
+      "id": "A-33",
+      "speaker": "魏延",
+      "text": "魏军都到营前了，他们还在阵前叫嚷：“诸葛亮怎么不出来了？”",
+      "clue": "魏军阵前叫嚷（1/2）",
+      "clueIds": "C05（1/2）",
+      "humanCondition": "",
+      "transition": "R1-03｜第一次拦魏延；→ A-34",
+      "sourceRow": 15
+    },
+    {
+      "id": "A-34",
+      "speaker": "魏延",
+      "text": "还在问：“蜀军如今是谁发令？”",
+      "clue": "魏军阵前叫嚷（2/2）",
+      "clueIds": "C05（2/2）",
+      "humanCondition": "",
+      "transition": "A-33/A-34均读完收录C05；→A-37",
+      "sourceRow": 16
+    },
+    {
+      "id": "A-37",
+      "speaker": "魏延",
+      "text": "你既要拦我，便说清如何不误通报。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "完成→R1-LANG；打开语言组织，不自动说出",
+      "sourceRow": 17
+    },
+    {
+      "id": "R1-LANG",
+      "speaker": "界面提示（语言组织）",
+      "text": "选好依据，可生成或自己写台词；确认后再说出口。",
+      "clue": "展示本轮已得C06/T02/C05；选B时不补造T02",
+      "clueIds": "C06/T02/C05",
+      "humanCondition": "确认发言后，按专用判断稿进入斩首失败、继续解释或答应；不强制先失败再修补。",
+      "transition": "来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；确认→R1-FAIL-EXECUTION / A-40（R1-clarify）/ A-40B（R1-accept）",
+      "sourceRow": 18
+    },
+    {
+      "id": "R1-FAIL-EXECUTION",
+      "speaker": "魏延（AI回应）",
+      "text": "勃然大怒。【AI润色】结合我的实际发言：“你在说什么，是活腻了吗？”保留愤怒与处置方向。",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R1-FAIL-EXECUTION",
+      "humanCondition": "直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试。",
+      "transition": "判定来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；outcome=R1-FAIL-EXECUTION；直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试。",
+      "sourceRow": 19
+    },
+    {
+      "id": "A-40",
+      "speaker": "魏延（AI回应）",
+      "text": "【AI润色】只问当前缺口，要求重新说明。例如：“不能入帐，那眼下的军报怎么办？给你个机会，重新说话。”或：“你了解军情吗你？给你个机会，重新说话。”",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R1-clarify",
+      "humanCondition": "我补充或改口，保留已说清的内容；不按解释次数自动判死。",
+      "transition": "判定来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；outcome=R1-clarify；我补充或改口，保留已说清的内容；不按解释次数自动判死。",
+      "sourceRow": 20
+    },
+    {
+      "id": "R1-REPAIR",
+      "speaker": "界面提示（语言组织）",
+      "text": "按魏延的反馈修改，再说一次。",
+      "clue": "保留本轮已得依据",
+      "clueIds": "C06/T02/C05",
+      "humanCondition": "仅“继续解释”时修改或补充；已说清的沿用，不要求固定口令。",
+      "transition": "R1-clarify→本面板；再次确认后按同一三结果判断；不增加新条件",
+      "sourceRow": 21
+    },
+    {
+      "id": "A-40B",
+      "speaker": "魏延",
+      "text": "好，你即刻转呈，莫误军情。",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R1-accept",
+      "humanCondition": "我去转呈，继续原有剧情；此时只是答应让我转呈，军报尚未完成交接。",
+      "transition": "R1-accept；置FIRST_TRANSFER_ACCEPTED；→A-42；未置FORMAL_REPORT_RECEIVED或REPORT_CLOSED",
+      "sourceRow": 22
+    },
+    {
+      "id": "A-42",
+      "speaker": "我",
+      "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→A-43；仅已得T02时说“营门未破”；选B未得T02时省略此句，不补造见闻",
+      "sourceRow": 23
+    },
+    {
+      "id": "A-43",
+      "speaker": "我",
+      "text": "魏将军让我转呈，请你递进去。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-04｜甲接过话，事情算完了吗；→ A-44",
+      "sourceRow": 24
+    },
+    {
+      "id": "A-44",
+      "speaker": "甲",
+      "text": "我只能递话，作不得主。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-04｜甲接过话，事情算完了吗；→ A-45",
+      "sourceRow": 25
+    },
+    {
+      "id": "A-45",
+      "speaker": "我",
+      "text": "知道了，交给你了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-04｜甲接过话，事情算完了吗；→A-48",
+      "sourceRow": 26
+    },
+    {
+      "id": "A-48",
+      "speaker": "我（心声）",
+      "text": "天亮就好了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-05｜灯亮过这一夜；→ A-49",
+      "sourceRow": 27
+    },
+    {
+      "id": "A-49",
+      "speaker": "旁白",
+      "text": "你回到值守处，没再关心军报。而是牵挂那一盏灯亮到天明",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-05｜灯亮过这一夜；→ A-50",
+      "sourceRow": 28
+    },
+    {
+      "id": "A-50",
+      "speaker": "视频",
+      "text": "",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "视频内容：次日问责与收矛，包括军报、回令及处置。首轮值守结束后播放；结束或跳过后接结果与未被视频表达的回溯心声，不再逐句重播问责。",
+      "transition": "cinematic:accountability；clip:EN02B-A；→ A-57",
+      "sourceRow": 29
+    },
+    {
+      "id": "A-57",
+      "speaker": "结算文字",
+      "text": "诸葛亮活了，但你挂了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "成就解锁",
+      "transition": "R1-06｜清晨问责与第一次死亡；→A-59",
+      "sourceRow": 30
+    },
+    {
+      "id": "A-59",
+      "speaker": "我（心声）",
+      "text": "等等……丞相还活着。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-06｜清晨问责与第一次死亡；→ A-60",
+      "sourceRow": 31
+    },
+    {
+      "id": "A-60",
+      "speaker": "我（心声）",
+      "text": "我明明——",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R1-06｜清晨问责与第一次死亡；→ A-61",
+      "sourceRow": 32
+    },
+    {
+      "id": "A-61",
+      "speaker": "甲",
+      "text": "怎么了？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-01｜还是那一片夕阳；→A-63",
+      "sourceRow": 33
+    },
+    {
+      "id": "A-63",
+      "speaker": "我（心声）",
+      "text": "……我这是重生回来了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-01｜还是那一片夕阳；→ A-END",
+      "sourceRow": 34
+    },
+    {
+      "id": "A-END",
+      "speaker": "我（心声）",
+      "text": "这次不能再冒进了，刚来到这个世界还是要搞清楚规则。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "读完回到营地。甲在中军帐前、乙在姜维帐前，两人同时可交谈，任选先后；每段结束回到场景。两人都聊完才开放斥候调查。",
+      "transition": "完成rewind；开放ask-guard与ask-relay（均requires:rewind）；不强制→D01",
+      "sourceRow": 35
+    },
+    {
+      "id": "D01",
+      "speaker": "我",
+      "text": "今夜守帐怎么这么严？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "回溯后即可向甲交谈，不依赖是否与乙交谈。",
+      "transition": "ask-guard requires:rewind；D01→D02",
+      "sourceRow": 36
+    },
+    {
+      "id": "D02",
+      "speaker": "甲",
+      "text": "丞相有口谕，今夜谁也不得入帐求见。",
+      "clue": "本轮重新获得帐前禁令；尚不补后面的职责说明。",
+      "clueIds": "C06",
+      "humanCondition": "",
+      "transition": "D02实际读完重新取得C06禁令部分；回溯不继承；→D03",
+      "sourceRow": 37
+    },
+    {
+      "id": "D03",
+      "speaker": "我",
+      "text": "可要是拦住不报，误了军情呢？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D04",
+      "sourceRow": 38
+    },
+    {
+      "id": "D04",
+      "speaker": "甲",
+      "text": "那也要问罪。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D05",
+      "sourceRow": 39
+    },
+    {
+      "id": "D05",
+      "speaker": "甲",
+      "text": "急报得赶紧送到，禁令也不能擅改。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D06",
+      "sourceRow": 40
+    },
+    {
+      "id": "D06",
+      "speaker": "甲",
+      "text": "我只能守门递话，不能处置军情。",
+      "clue": "把急报须递、守卫无处置权补入已有禁令；不新增一张线索。",
+      "clueIds": "C06（补充）",
+      "humanCondition": "甲的交谈结束，取得甲提供的线索后回到场景。若尚未聊乙，乙仍可交谈；两人都完成才开放斥候调查。",
+      "transition": "D05/D06均完成后补全C06职责；完成guard-investigation→explore；不自动→D07",
+      "sourceRow": 41
+    },
+    {
+      "id": "D07",
+      "speaker": "我",
+      "text": "今夜军务是谁当值？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "回溯后即可向乙交谈，不依赖是否与甲交谈。",
+      "transition": "ask-relay requires:rewind；D07→D08",
+      "sourceRow": 42
+    },
+    {
+      "id": "D08",
+      "speaker": "乙",
+      "text": "姜伯约，姜维将军。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D09",
+      "sourceRow": 43
+    },
+    {
+      "id": "D09",
+      "speaker": "乙",
+      "text": "入夜前，丞相吩咐过，今夜军务由他接报处置。",
+      "clue": "获得线索“姜维可以代为处理军务”，来源是乙转述丞相的吩咐。",
+      "clueIds": "C07",
+      "humanCondition": "",
+      "transition": "D08/D09完整后取得C07并置JIANG_DUTY_KNOWN；JIANG_AUTH_GRANTED仍false；→D10。",
+      "sourceRow": 44
+    },
+    {
+      "id": "D10",
+      "speaker": "我",
+      "text": "他在哪里？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D11",
+      "sourceRow": 45
+    },
+    {
+      "id": "D11",
+      "speaker": "乙",
+      "text": "在丞相的中军帐里。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D12",
+      "sourceRow": 46
+    },
+    {
+      "id": "D12",
+      "speaker": "乙",
+      "text": "他自己的将军帐就在那边，帐前有亲兵。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D13",
+      "sourceRow": 47
+    },
+    {
+      "id": "D13",
+      "speaker": "乙",
+      "text": "他认得传令规矩，能到中军帐外递话。",
+      "clue": "补充C07的通传路径，不另发线索。",
+      "clueIds": "C07（补充）",
+      "humanCondition": "",
+      "transition": "D11—D13完整后补入C07详情；→D14；不是姜维本人应允。",
+      "sourceRow": 48
+    },
+    {
+      "id": "D14",
+      "speaker": "我",
+      "text": "前几夜也有敌骑来么？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D15",
+      "sourceRow": 49
+    },
+    {
+      "id": "D15",
+      "speaker": "乙",
+      "text": "前几夜也来过，隔着老远鼓噪一阵。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D16",
+      "sourceRow": 50
+    },
+    {
+      "id": "D16",
+      "speaker": "乙",
+      "text": "咱们营里号角一响，他们就退了。",
+      "clue": "获得前几夜闻号即退的对照。",
+      "clueIds": "C02",
+      "humanCondition": "乙的交谈结束，取得乙提供的线索后回到场景。若尚未聊甲，甲仍可交谈；两人都完成才开放斥候调查。",
+      "transition": "D15+D16完整事实；完成relay-investigation→explore；不自动→D17",
+      "sourceRow": 51
+    },
+    {
+      "id": "D17",
+      "speaker": "我",
+      "text": "今夜也是听见号角就退？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "与甲、乙都聊完后，才开放核实敌情；只有实际完成的交谈才提供线索。",
+      "transition": "ask-scout requires:guard-investigation AND relay-investigation；→D18",
+      "sourceRow": 52
+    },
+    {
+      "id": "D18",
+      "speaker": "斥候",
+      "text": "今夜号角响过，他们没退。",
+      "clue": "今夜号角响了但没退（1/3）",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D19",
+      "sourceRow": 53
+    },
+    {
+      "id": "D19",
+      "speaker": "斥候",
+      "text": "东边一队逼近，见咱们调人过去，西边又来一队。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D20",
+      "sourceRow": 54
+    },
+    {
+      "id": "D20",
+      "speaker": "斥候",
+      "text": "我回来时，两边还在轮着动。",
+      "clue": "获得今夜闻号不退的现象。",
+      "clueIds": "C03",
+      "humanCondition": "",
+      "transition": "D18—D20完整事实；→ D21",
+      "sourceRow": 55
+    },
+    {
+      "id": "D21",
+      "speaker": "我",
+      "text": "他们是在往营里冲，还是在等咱们动？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ D22",
+      "sourceRow": 56
+    },
+    {
+      "id": "D22",
+      "speaker": "斥候",
+      "text": "奇怪的是，咱们不动，他们也不往前。",
+      "clue": "今夜军情的调兵观察片段，待下一句完整后补入同一条。",
+      "clueIds": "C03（片段）",
+      "humanCondition": "",
+      "transition": "→D23；本句尚未补齐完整调兵观察，不新增线索。",
+      "sourceRow": 57
+    },
+    {
+      "id": "D23",
+      "speaker": "斥候",
+      "text": "哪边一调兵，他们那边就换个方向。",
+      "clue": "把敌军随我军调兵变向的观察补入今夜军情，不新增线索。",
+      "clueIds": "C03（补充）",
+      "humanCondition": "",
+      "transition": "D22/D23完整后补入C03的实际调兵观察；→D24；不恢复已删除线索。",
+      "sourceRow": 58
+    },
+    {
+      "id": "D24",
+      "speaker": "斥候",
+      "text": "敌骑还在营外，没碰鹿角，也没见步卒跟进。",
+      "clue": "把尚未攻营的观察补入今夜军情；不新增线索。",
+      "clueIds": "C03（补充）",
+      "humanCondition": "",
+      "transition": "D24实际读完才补C03未攻营片段；不提前展示；→D26",
+      "sourceRow": 59
+    },
+    {
+      "id": "D26",
+      "speaker": "我（心声）",
+      "text": "上一回，魏延说敌军还在问：丞相为何不出、如今谁在发令。",
+      "clue": "实际回忆上一轮魏延的叫嚷口供后，本轮重新取得。",
+      "clueIds": "C05",
+      "humanCondition": "",
+      "transition": "须A-33/A-34曾实际发生且D26实际读完，本轮重新取得C05；不继承全库；→P1-01",
+      "sourceRow": 60
+    },
+    {
+      "id": "P1-01",
+      "speaker": "界面提示（推理）",
+      "text": "放入相关依据，点击「思考」。",
+      "clue": "只展示本轮已得的四条事实；画布结果不另发线索卡。",
+      "clueIds": "C02、C03、C05、C06",
+      "humanCondition": "本行是面板内提示，不单独增加点击对白；首次操作时展示。",
+      "transition": "前置调查实际完成，且P1_OPENED=false时展示持久画布；→P1-Q1；本轮独立事实只有C02/C03/C05/C06。",
+      "sourceRow": 61
+    },
+    {
+      "id": "P1-Q1",
+      "speaker": "问题",
+      "text": "这次军情与前几夜有何不同？",
+      "clue": "对照“此前袭扰，闻号即退”和“今夜闻号不退，交替试探两翼”；叫嚷只能有限补充。",
+      "clueIds": "C02、C03；C05可作补充",
+      "humanCondition": "",
+      "transition": "C02+C03共同支持R01，二者不能互相替代；本题手动最多2条，冗余0；充分后只形成当前答案。",
+      "sourceRow": 62
+    },
+    {
+      "id": "P1-N1",
+      "speaker": "推理结果",
+      "text": "{{inference_summary}}",
+      "clue": "引用玩家实际参与推理的线索，保留推论来源。",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "动态文本：以question_id、连接组与判定结果生成有依据的单句；自动生成短句节点并保存；尚未回答完整问题，不置Q1_DONE；留在P1-Q1继续连线，不新增面板；原E列约束：局部推论保留来源；不凭空补齐结论",
+      "sourceRow": 63
+    },
+    {
+      "id": "P1-F1",
+      "speaker": "界面提示",
+      "text": "这些线索还不足以说明今夜的变化。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "线索不足时提示缺少哪些依据，不补造结论。",
+      "transition": "保留连线与已有节点；→ P1-Q1；只显示未形成推论及具体缺口；原E列约束：不生成无依据结论",
+      "sourceRow": 64
+    },
+    {
+      "id": "P1-F2",
+      "speaker": "界面提示",
+      "text": "尚未攻营，不等于没有危险。",
+      "clue": "引用“敌军尚未攻营”。",
+      "clueIds": "C03",
+      "humanCondition": "玩家把“尚未攻营”理解成“没有危险”时，显示这条反馈。",
+      "transition": "仅在此类冲突时显示；保留有效节点→ P1-Q1；原E列约束：连接组将C03解释为无危险",
+      "sourceRow": 65
+    },
+    {
+      "id": "P1-F2B",
+      "speaker": "界面提示",
+      "text": "这些线索不能证明敌军已经攻破营门。",
+      "clue": "引用“敌军尚未攻营”。",
+      "clueIds": "C03",
+      "humanCondition": "玩家声称敌军已经攻破营门，与已知线索冲突时，显示这条反馈。",
+      "transition": "仅在此类冲突时显示；保留有效节点→ P1-Q1；原E列约束：连接组声称已破营且与C03冲突",
+      "sourceRow": 66
+    },
+    {
+      "id": "P1-R1",
+      "speaker": "推理结果",
+      "text": "{{inference_summary}}",
+      "clue": "形成军情判断，留在原画布，不新增线索。",
+      "clueIds": "R01；C02+C03",
+      "humanCondition": "",
+      "transition": "点击思考且C02/C03充分才形成R01；只是可能试探，不能确认已知病情。点击继续推理才显示后题。",
+      "sourceRow": 67
+    },
+    {
+      "id": "P1-Q2",
+      "speaker": "问题",
+      "text": "不能惊扰丞相，又不能耽误军情，怎么办？",
+      "clue": "沿用军情判断，再选择帐前禁令与乙告知的姜维职责，两条共同支持接报方案。",
+      "clueIds": "R01；C06+C07",
+      "humanCondition": "",
+      "transition": "须实际听完D08/D09及D11—D13；继承R01不占名额，本题须添C06与C07两条。不得使用尚未取得的C08，C07为职责依据，通传留详情。",
+      "sourceRow": 68
+    },
+    {
+      "id": "P1-N2",
+      "speaker": "推理结果",
+      "text": "{{inference_summary}}",
+      "clue": "沿用已有线索和局部推论，保留来源。",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "动态文本：以question_id、连接组与判定结果生成有依据的单句；不置Q2_DONE；原画布继续连线→P1-Q2；原E列约束：保留局部有效关系与来源",
+      "sourceRow": 69
+    },
+    {
+      "id": "P1-F3",
+      "speaker": "界面提示",
+      "text": "还缺少谁能负责处理今夜军务的依据。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "当前依据还不能说明谁有权处理今夜军务时，显示这条反馈。",
+      "transition": "保留连线与节点；→ P1-Q2；原E列约束：当前连接未含充分权限来源",
+      "sourceRow": 70
+    },
+    {
+      "id": "P1-F4",
+      "speaker": "界面提示",
+      "text": "这个办法仍会把军情压下。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "玩家提出的办法会压报或拖延军情时，显示这条反馈。",
+      "transition": "仅显示与当前办法相符的反馈；保留连线与节点→ P1-Q2；原E列约束：当前办法导致压报或拖延",
+      "sourceRow": 71
+    },
+    {
+      "id": "P1-F4B",
+      "speaker": "界面提示",
+      "text": "这个办法仍会绕过入帐禁令。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "玩家提出强行入帐、绕过禁令时，显示这条反馈。",
+      "transition": "仅在此类冲突时显示；保留连线与节点→ P1-Q2；原E列约束：当前办法主张强行入帐",
+      "sourceRow": 72
+    },
+    {
+      "id": "P1-R2",
+      "speaker": "推理结果",
+      "text": "{{inference_summary}}",
+      "clue": "形成去请姜维接报的方案；尚未亲口问准。",
+      "clueIds": "R02；R01+C06+C07",
+      "humanCondition": "",
+      "transition": "已得R01、C06和C07，并实际听过当值/通传说明后形成R02。点击行动才接J03；不授C08或军报完成状态。",
+      "sourceRow": 73
+    },
+    {
+      "id": "J03",
+      "speaker": "我",
+      "text": "营前有急报，请替我通传姜将军。",
+      "clue": "依乙已说过的当值与通传路径，执行去请求接报的方案。",
+      "clueIds": "R02",
+      "humanCondition": "",
+      "transition": "R02行动已确认→J04；C07来自乙实际对白。",
+      "sourceRow": 74
+    },
+    {
+      "id": "J04",
+      "speaker": "亲兵",
+      "text": "随我到中军帐外，把来意向将军说清。",
+      "clue": "亲兵实际带路；通传是剧情行动，不再发线索。",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→J08；不等于姜维本人已经答应。",
+      "sourceRow": 75
+    },
+    {
+      "id": "J08",
+      "speaker": "我",
+      "text": "请将军在帐外接报。",
+      "clue": "引用行动方案“向姜维请求接报”。",
+      "clueIds": "R02",
+      "humanCondition": "",
+      "transition": "→ J08A；原E列约束：引用R02",
+      "sourceRow": 76
+    },
+    {
+      "id": "J08A",
+      "speaker": "我",
+      "text": "敌军尚未攻营，但今夜有变，不能耽误。",
+      "clue": "引用“敌军尚未攻营”和“今夜有变，可能试探我军反应”。",
+      "clueIds": "C03、R01",
+      "humanCondition": "",
+      "transition": "→J08E；原E列约束：引用C03/R01",
+      "sourceRow": 77
+    },
+    {
+      "id": "J08E",
+      "speaker": "演出",
+      "text": "帐内传来低咳，姜维回头一望，又看向营前。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ J09；原E列约束：体现权衡，不增加第三次面板",
+      "sourceRow": 78
+    },
+    {
+      "id": "J09",
+      "speaker": "姜维",
+      "text": "禁令不能犯，军情也不能误。",
+      "clue": "引用“今夜不得入帐”及“今夜有变”的推论。",
+      "clueIds": "C06、R01",
+      "humanCondition": "",
+      "transition": "→ J09A；原E列约束：引用C06/R01",
+      "sourceRow": 79
+    },
+    {
+      "id": "J09A",
+      "speaker": "姜维",
+      "text": "今夜军务由我处置。",
+      "clue": "姜维本人确认处理军情的职责；须听完这次完整答复才取得线索。",
+      "clueIds": "C08（片段）",
+      "humanCondition": "确认既有职责，不新增权力。",
+      "transition": "本句只记本次答复片段；J09至J11完整后才授C08；→J10。",
+      "sourceRow": 80
+    },
+    {
+      "id": "J10",
+      "speaker": "姜维",
+      "text": "请魏将军到帐外报明军情，是否禀报丞相，由我判断。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "姜维明确接受请求，但须读完整段答复后才取得授权线索。",
+      "transition": "→ J10A；原E列约束：明确接受请求；尚待整段授权完成",
+      "sourceRow": 81
+    },
+    {
+      "id": "J10A",
+      "speaker": "姜维",
+      "text": "该我作的决定，我担责。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "这是完整授权答复的一部分，不能仅凭本句提前收录授权。",
+      "transition": "→ J10B；原E列约束：授权责任",
+      "sourceRow": 82
+    },
+    {
+      "id": "J10B",
+      "speaker": "我",
+      "text": "将军现在便去？",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ J11；原E列约束：确认立即接报",
+      "sourceRow": 83
+    },
+    {
+      "id": "J11",
+      "speaker": "姜维",
+      "text": "我就在这里等他。你把话传到。",
+      "clue": "获得“姜维已答应帐外接报”：本人已答应在帐外接报、判断并担责。",
+      "clueIds": "C08",
+      "humanCondition": "读完姜维这一整段答复后，才收录授权线索。",
+      "transition": "J09/J09A/J10/J10A/J10B/J11实际齐备才取得C08并置JIANG_AUTH_GRANTED、JIANG_WAITING；→J13。",
+      "sourceRow": 84
+    },
+    {
+      "id": "J13",
+      "speaker": "亲兵",
+      "text": "我随你同去。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "亲兵随我同行，见证姜维授权。",
+      "transition": "→ J14；原E列约束：授权见证人随行",
+      "sourceRow": 85
+    },
+    {
+      "id": "J14",
+      "speaker": "演出",
+      "text": "（我跟着亲兵去迎了魏延）",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "姜维留在帐外等候，主角与亲兵去迎魏延，不再重复申请授权。",
+      "transition": "COMPANION_PRESENT=true；→ RULE-AUTH-GUARD；原E列约束：不再去向姜维二次申请",
+      "sourceRow": 86
+    },
+    {
+      "id": "W00",
+      "speaker": "界面提示",
+      "text": "尚未取得姜维的明确答复，不能以他的名义传话。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "尚未取得姜维本人明确答复时，不能以他的名义传话。\n仅姜维尚未实际明确答应时显示，并回去取得答复；不能把“已经答应但我没向魏延说清”误当作本情况。",
+      "transition": "仅RULE-AUTH-GUARD判定未授权时显示；→ J09；原E列约束：JIANG_AUTH_GRANTED=false",
+      "sourceRow": 87
+    },
+    {
+      "id": "W02",
+      "speaker": "我",
+      "text": "禀将军……",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "读完后进入W01A；随后打开同一持久画布的表达浮层P2，不新建空白画布。",
+      "sourceRow": 88
+    },
+    {
+      "id": "W01A",
+      "speaker": "魏延",
+      "text": "军情有变，我要面见丞相！",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "魏延质疑显示于浮层对话区；→ P2-01",
+      "sourceRow": 89
+    },
+    {
+      "id": "P2-01",
+      "speaker": "界面提示（语言组织）",
+      "text": "说清你的判断和接报安排。",
+      "clue": "复用本轮已得事实和姜维本人实际答复，可引用已形成的军情判断；请求接报方案留在推理画布。",
+      "clueIds": "C02、C03、C05、C06、C07、C08；R01（仅已得）",
+      "humanCondition": "本行是面板内提示，不单独增加点击对白；首次操作时展示。",
+      "transition": "仅授权与亲兵同行真实齐备时进入；不恢复已删除线索，不把行动方案当承诺。",
+      "sourceRow": 90
+    },
+    {
+      "id": "P2-SAY",
+      "speaker": "我（玩家输入）",
+      "text": "{{player_confirmed_utterance}}",
+      "clue": "引用玩家本次选中的线索或推论。",
+      "clueIds": "",
+      "humanCondition": "说出已确认内容，再按专用判断稿进入斩首失败、继续解释或答应。",
+      "transition": "来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；确认→R2-FAIL-EXECUTION / P2-F1（R2-clarify）/ W03（R2-accept后见证）",
+      "sourceRow": 91
+    },
+    {
+      "id": "R2-FAIL-EXECUTION",
+      "speaker": "魏延（AI回应）",
+      "text": "勃然大怒。【AI润色】结合我的实际发言：“你在说什么，是活腻了吗？”不得编造姜维撤回承诺。",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R2-FAIL-EXECUTION",
+      "humanCondition": "直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试，保留此前取得的线索和姜维承诺。",
+      "transition": "判定来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；outcome=R2-FAIL-EXECUTION；直接进入斩首失败：军士将我带走，画面转黑，显示失败页；可从本轮对话前重试，保留此前取得的线索和姜维承诺。",
+      "sourceRow": 92
+    },
+    {
+      "id": "P2-F1",
+      "speaker": "魏延（AI回应）",
+      "text": "【AI】只问当前没说清的一点。例如：“这是伯约亲口答应的？”或：“与前几夜相比，今夜变在何处？”已经解释过的不重复问。",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R2-clarify",
+      "humanCondition": "我补充或改口，不用从头重说；保留真实授权、已有线索及有效发言。",
+      "transition": "判定来源：https://my.feishu.cn/docx/JA4ldOhMZo9X2ax0zyMcYPWXnBb；outcome=R2-clarify；我补充或改口，不用从头重说；保留真实授权、已有线索及有效发言。",
+      "sourceRow": 93
+    },
+    {
+      "id": "W03",
+      "speaker": "演出",
+      "text": "魏延停住脚步，看向随行亲兵。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "专用判断稿返回“答应去见姜维”后，进入亲兵证实和带路；不再按旧六类逐项检查。",
+      "transition": "R2-accept→W03；尚未见证→W04→W05→W07；已见证→W07",
+      "sourceRow": 94
+    },
+    {
+      "id": "W04",
+      "speaker": "亲兵",
+      "text": "是姜将军原话，他正在帐外等候。",
+      "clue": "由亲兵当面证实“姜维已答应帐外接报”的来源。",
+      "clueIds": "C08",
+      "humanCondition": "",
+      "transition": "→ W05；原E列约束：核验C08来源",
+      "sourceRow": 95
+    },
+    {
+      "id": "W05",
+      "speaker": "亲兵",
+      "text": "该他作的决定，由他担责。",
+      "clue": "继续核验姜维本人已经同意并承担责任。",
+      "clueIds": "C08",
+      "humanCondition": "",
+      "transition": "置AUTH_WITNESSED=true；→W07；原E列约束：核验C08",
+      "sourceRow": 96
+    },
+    {
+      "id": "W07",
+      "speaker": "魏延",
+      "text": "带路，我亲自问他。",
+      "clue": "沿用本轮已说清的内容和真实取得的依据；具体条件在专用判断稿编辑。",
+      "clueIds": "R2-accept",
+      "humanCondition": "亲兵证实后，魏延跟我去见姜维，由姜维接报处置；不能提前算作军报已处置完毕。",
+      "transition": "R2-accept后的固定对白；亲兵证实后→W08；此时尚未正式接报",
+      "sourceRow": 97
+    },
+    {
+      "id": "W08",
+      "speaker": "演出",
+      "text": "我侧身让路，与魏延和亲兵一同回到中军帐外。",
+      "clue": "引用姜维已经同意接报的事实。",
+      "clueIds": "C08",
+      "humanCondition": "姜维仍在等候；此行不是再次申请授权。",
+      "transition": "→ W09；不是再次请求姜维授权；原E列约束：姜维已授权且仍在等候",
+      "sourceRow": 98
+    },
+    {
+      "id": "W09",
+      "speaker": "演出",
+      "text": "姜维仍在原处等候，转身迎向魏延。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "确认姜维仍在原处等候接报。",
+      "transition": "→E03；原E列约束：检查JIANG_WAITING=true",
+      "sourceRow": 99
+    },
+    {
+      "id": "E03",
+      "speaker": "姜维",
+      "text": "魏将军，营前情势如何？",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "开始正式完整接报→E04",
+      "sourceRow": 100
+    },
+    {
+      "id": "E04",
+      "speaker": "演出",
+      "text": "魏延向姜维报明营前军情。",
+      "clue": "引用“敌军尚未攻营”。",
+      "clueIds": "C03",
+      "humanCondition": "魏延本人当面报告已有军情，不重新让玩家复述或判断。",
+      "transition": "承接E03；完整军报以演出概括→E04C；此行未置FORMAL_REPORT_RECEIVED",
+      "sourceRow": 101
+    },
+    {
+      "id": "E04C",
+      "speaker": "演出",
+      "text": "姜维听完军报，问清细节。",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "姜维听完魏延的完整军报并问清细节后，才算正式接报；守卒的简报不算。",
+      "transition": "E03/E04完成且姜维听完、问清细节后置FORMAL_REPORT_RECEIVED=true；→E05",
+      "sourceRow": 102
+    },
+    {
+      "id": "E05",
+      "speaker": "姜维",
+      "text": "严守营门，再探敌情，未明虚实不得追击。有新军情，立即报我。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "完整下令（合并原E06/E07内容）→E08",
+      "sourceRow": 103
+    },
+    {
+      "id": "E08",
+      "speaker": "姜维",
+      "text": "待丞相方便时，我自会禀明。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "择时禀明，非此刻扰动；→ E08B",
+      "sourceRow": 104
+    },
+    {
+      "id": "E08B",
+      "speaker": "姜维",
+      "text": "此令由我负责。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ E09",
+      "sourceRow": 105
+    },
+    {
+      "id": "E09",
+      "speaker": "我",
+      "text": "守营门，再探敌情，未明虚实不出营追击；有新军情，立即报姜将军。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→ E10",
+      "sourceRow": 106
+    },
+    {
+      "id": "E10",
+      "speaker": "魏延",
+      "text": "听见了，我这就去。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "FORMAL_REPORT_RECEIVED=true且命令已到执行者，置REPORT_CLOSED=true；→ E11",
+      "sourceRow": 107
+    },
+    {
+      "id": "E11",
+      "speaker": "我（心声）",
+      "text": "这回，我等到了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "→B-03；两次面板均隐藏，持久画布保留可回溯",
+      "sourceRow": 108
+    },
+    {
+      "id": "B-03",
+      "speaker": "旁白",
+      "text": "帐内又传来咳嗽。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-09｜天亮，没有人来收矛；→ B-04",
+      "sourceRow": 109
+    },
+    {
+      "id": "B-04",
+      "speaker": "旁白",
+      "text": "天亮了。你握着长矛的手慢慢松开。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-09｜天亮，没有人来收矛；→B-06",
+      "sourceRow": 110
+    },
+    {
+      "id": "B-06",
+      "speaker": "结算文字",
+      "text": "灯没灭，你也活下来了。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-09｜天亮，没有人来收矛；→ B-07",
+      "sourceRow": 111
+    },
+    {
+      "id": "B-07",
+      "speaker": "结算文字",
+      "text": "急报已由姜维接报处置，军令已传到执行者。",
+      "clue": "—",
+      "clueIds": "",
+      "humanCondition": "",
+      "transition": "R2-09｜天亮，没有人来收矛；→B-09",
+      "sourceRow": 112
+    },
+    {
+      "id": "B-09",
+      "speaker": "视频",
+      "text": "",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "视频内容：七日期满，主灯未灭。上一段守住这一夜结束后播放；视频结束或跳过后直接播放下一段视频，不弹出重复对白。",
+      "transition": "cinematic:seven-days；clip:ending-en01-20261016；→ B-12",
+      "sourceRow": 113
+    },
+    {
+      "id": "B-12",
+      "speaker": "视频",
+      "text": "",
+      "clue": "",
+      "clueIds": "",
+      "humanCondition": "视频内容：北伐未成、病重操劳、姜维交谈与我的回应。接上一段视频；播放结束或跳过后进入章节结算，不重复旁白、心声或人物对白。",
+      "transition": "cinematic:opportunity；clip:EN03-EN04；→ CHAPTER_END",
+      "sourceRow": 114
+    }
+  ],
+  "missingRuntimeRows": [
+    "P2-F2B",
+    "P2-F2",
+    "P2-F5",
+    "P2-F3",
+    "P2-F4"
+  ],
+  "extraOnlineRows": []
+}

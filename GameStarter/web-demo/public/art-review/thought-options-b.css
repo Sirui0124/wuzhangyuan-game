@@ -1,0 +1,605 @@
+/* Proposal B · 灯下绢图. Preview-only; all rules stay inside the silk workspace.
+   Desktop: separate evidence branches gather from left to right.
+   At 900px the same source → understanding → continuation returns to a vertical flow.
+   Text scale: question 28px, node/source text 20px, supporting controls 14px. */
+
+body[data-thought-theme="silk"] #game-root .workspace-screen {
+  --mind-ink: #3b3327;
+  --mind-muted: #76644d;
+  --mind-red: #8b562d;
+  --mind-line: #927148;
+  --mind-paper: #e7dac0;
+  --glass: transparent;
+  --conclusion: transparent;
+  background: #d9cdb2;
+  color: var(--mind-ink);
+  font-family: var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen::after {
+  content: "";
+  inset: 0;
+  border: 0;
+  box-shadow: none;
+  background: radial-gradient(ellipse at 13% 72%, #eecb7b1f, transparent 58%);
+  pointer-events: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-landscape {
+  opacity: .39;
+  filter: saturate(.5) sepia(.24) contrast(.9);
+  mask-image: none;
+  -webkit-mask-image: none;
+  mix-blend-mode: multiply;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .paper-atmosphere {
+  opacity: 1;
+  background: radial-gradient(ellipse at 57% 40%, #fff7e7b5 0%, #f6e8cb82 46%, #eee0c24d 78%),
+    linear-gradient(90deg, #f7ead4a3, transparent 28%, #e2cfa51f);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(button, a) {
+  font-size: 14px;
+  letter-spacing: .5px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen button:hover:not(:disabled) {
+  color: #854a25;
+  filter: none;
+  text-shadow: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(button, [tabindex]):focus-visible {
+  outline: 1px solid #95662d;
+  outline-offset: 5px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen button:disabled {
+  opacity: .43;
+  cursor: default;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.light-hud, .game-mark, .light-hud nav button) {
+  color: #574632;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .game-mark {
+  font-size: 20px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.game-mark small, .game-hud nav button, .game-hud nav small) {
+  font-size: 14px;
+  color: #75654d;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .chapter-seal {
+  background: transparent;
+  border-color: #92724b66;
+  color: #855d34;
+  box-shadow: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-layout {
+  inset: 128px 5vw 42px 210px;
+  scrollbar-color: #987c4d55 transparent;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen.inventory-open .workspace-layout {
+  left: 355px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-stage {
+  max-width: 1160px;
+  padding: 0 22px 36px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-heading {
+  text-align: left;
+  padding: 0 0 12px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-modes {
+  justify-content: flex-start;
+  gap: 20px;
+  margin: 0 0 12px;
+  color: #9b8665;
+  font: 14px/1.6 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-modes button {
+  padding: 6px 0;
+  letter-spacing: 1px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-modes button[aria-current] {
+  border: 0;
+  color: #88592d;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-heading h1 {
+  margin: 0;
+  font: 400 28px/1.55 var(--serif);
+  letter-spacing: 1px;
+  color: #403426;
+  text-shadow: 0 1px 10px #fff4df66;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.reasoning-kicker, .canvas-invitation) {
+  font: 14px/1.8 var(--serif);
+  color: #806b4d;
+  letter-spacing: 1px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-kicker {
+  margin: 0 0 8px;
+  color: #8b623b;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .canvas-invitation {
+  margin: 16px 0 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-timeline {
+  padding: 6px 0 12px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-record {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(70px, 7vw, 126px);
+  min-height: 160px;
+  margin: 0 0 30px;
+  padding: 8px 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-record .thought-input-row {
+  display: block;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.record-evidence, .thought-dropzone) {
+  min-height: 100px;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence .working-clue:nth-child(even) {
+  margin-left: 22px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence .working-clue {
+  width: fit-content;
+  max-width: min(330px, 100%);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue {
+  flex: 1 1 220px;
+  max-width: 330px;
+  min-width: 0;
+  margin: 0;
+  padding: 7px 27px 7px 0;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, #fff4db26, transparent 85%);
+  box-shadow: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue-title {
+  font: 400 20px/1.7 var(--serif);
+  color: #4b3d2b;
+  letter-spacing: .6px;
+  overflow-wrap: anywhere;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.working-clue > small, .unused-label, .thought-record-state) {
+  font: 14px/1.7 var(--serif);
+  color: #8a7456;
+  letter-spacing: .5px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue > small {
+  margin: 0 0 4px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue.is-understanding {
+  border: 0;
+  background: linear-gradient(90deg, #ead69c24, transparent 85%);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue.is-understanding .working-clue-title {
+  color: #76522f;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue.is-unused {
+  opacity: .52;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue-remove {
+  width: 30px;
+  height: 30px;
+  top: 6px;
+  right: 0;
+  color: #8f7a58;
+  font: 14px/1 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-record-state {
+  display: block;
+  margin-top: 12px;
+  text-align: left;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .record-outputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  margin: 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-outcome {
+  flex: auto;
+  min-height: 120px;
+  padding: 10px 0 12px 18px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, #fff1cb29, transparent 95%);
+  box-shadow: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-convergence {
+  left: -28px;
+  top: calc(50% - 2px);
+  width: 4px;
+  height: 4px;
+  border: 0;
+  background: #97703e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #b7934b12;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .outcome-kicker {
+  color: #967044;
+  font: 14px/1.7 var(--serif);
+  letter-spacing: 1px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-outcome h2 {
+  margin: 5px 0 8px;
+  font: 400 20px/1.6 var(--serif);
+  color: #77532f;
+  letter-spacing: .8px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .outcome-insight {
+  margin: 0;
+  font: 400 20px/1.8 var(--serif);
+  color: #64543e;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-curve {
+  stroke: #97744d;
+  stroke-width: 1;
+  opacity: .66;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .curve-origin {
+  fill: #a47d4e;
+  opacity: .6;
+  r: 1.75px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-curve.continuation-curve {
+  stroke-width: 1;
+  opacity: .3;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-editor {
+  margin: 28px 0 0;
+  padding: 14px 0 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-editor .thought-input-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 82px;
+  align-items: center;
+  gap: 30px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-dropzone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  align-items: center;
+  padding: 12px 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-dropzone.is-drag-over {
+  background: #fff3d52e;
+  box-shadow: none;
+  outline: 1px dashed #a17a4b80;
+  outline-offset: 8px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .drop-invitation {
+  flex: 0 1 160px;
+  min-height: 42px;
+  justify-content: flex-start;
+  padding: 8px 0;
+  border: 0;
+  border-radius: 0;
+  color: #92724b;
+  font: 14px/1.6 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .drop-invitation > span {
+  font: 14px/1 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .think-button {
+  min-height: 44px;
+  gap: 10px;
+  padding: 10px 6px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, #e8c98a17, #f9ebc929, transparent);
+  box-shadow: none;
+  color: #8b582b;
+  font: 14px/1.5 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .think-button:hover:not(:disabled) {
+  background: #f8e5b93d;
+  color: #74451e;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .think-button i {
+  font: 14px/1 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-await {
+  margin: 18px 112px 0 0;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.thought-await p, .thought-more, .continuation-heading > span, .continuation-heading > p) {
+  font: 14px/1.8 var(--serif);
+  color: #88724f;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-action {
+  margin: 24px 0 0;
+  padding: 16px 0 18px;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, #f9eac32b, transparent 75%);
+  box-shadow: none;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-action > p {
+  font: 400 20px/1.8 var(--serif);
+  color: #61492e;
+  margin: 10px 0;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.thought-action > small, .thought-action > span, .thought-action > button) {
+  font: 14px/1.8 var(--serif);
+  color: #826847;
+  letter-spacing: .7px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-action > button {
+  min-height: 44px;
+  margin-top: 12px;
+  padding: 8px 0;
+  color: #8b582b;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-revision {
+  margin: 22px 0 0;
+  text-align: left;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-revision button {
+  padding: 8px 0;
+  border: 0;
+  font: 14px/1.6 var(--serif);
+  color: #8b795e;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-footer {
+  border: 0;
+  margin-top: 34px;
+  padding-top: 12px;
+  font: 14px/1.8 var(--serif);
+  color: #867251;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-footer button {
+  min-height: 40px;
+  color: #775d3c;
+  font: 14px/1.8 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-tail-link {
+  right: 5vw;
+  bottom: 18px;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 0;
+  background: #eddfc282;
+  color: #7d633e;
+  font: 14px/1.6 var(--serif);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-notice {
+  color: #795e3a;
+  font: 14px/1.7 var(--serif);
+}
+
+/* The source inventory stays functional, but reads like a translucent margin. */
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-tab {
+  left: 34px;
+  top: 135px;
+  width: 132px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 10px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #795d38;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-tab > span {
+  writing-mode: horizontal-tb;
+  font: 20px/1.5 var(--serif);
+  letter-spacing: 3px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.inventory-tab b, .inventory-tab small) {
+  font: 14px/1.6 var(--serif);
+  color: #8d7551;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-tab small {
+  grid-column: 1 / -1;
+  text-align: left;
+  padding-left: 7px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-inventory {
+  left: 25px;
+  top: 220px;
+  bottom: 42px;
+  width: 280px;
+  border: 0;
+  background: linear-gradient(90deg, #fff0d65c, #fbefd249 70%, #f3e6c41c);
+  box-shadow: none;
+  backdrop-filter: blur(2px);
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-inventory > header {
+  padding: 14px 18px 6px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .thought-inventory h2 {
+  font: 400 20px/1.5 var(--serif);
+  color: #6a5234;
+  letter-spacing: 1px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.thought-inventory header small, .thought-inventory header button, .inventory-caption, .thought-inventory > footer) {
+  font: 14px/1.8 var(--serif);
+  color: #897352;
+  border: 0;
+  letter-spacing: .4px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-caption {
+  padding: 4px 18px 16px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-scroll {
+  padding: 0 14px;
+  scrollbar-color: #a4845155 transparent;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-entry {
+  border: 0;
+  margin-bottom: 5px;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-row {
+  gap: 8px;
+  padding: 12px 0;
+  font: 400 20px/1.6 var(--serif);
+  color: #665237;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-row:hover {
+  background: #fff3d626;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.inventory-row > small, .inventory-grip) {
+  font: 14px/1.6 var(--serif);
+  color: #9b825b;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .is-placed .inventory-row > small {
+  color: #966533;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-detail {
+  padding: 0 5px 16px 22px;
+  color: #786244;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.inventory-detail p, .inventory-detail blockquote) {
+  font: 400 20px/1.8 var(--serif);
+  color: #786244;
+}
+
+body[data-thought-theme="silk"] #game-root .workspace-screen :is(.inventory-detail small, .inventory-detail .source-boundary, .inventory-detail .source-links, .inventory-place) {
+  font: 14px/1.8 var(--serif);
+  color: #967c53;
+  border: 0;
+}
+
+@media (max-width: 1200px) {
+  body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-layout { left: 184px; right: 30px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen.inventory-open .workspace-layout { left: 330px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-stage { padding-right: 6px; padding-left: 6px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-record { column-gap: 64px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence .working-clue:nth-child(even) { margin-left: 0; }
+}
+
+@media (max-width: 900px) {
+  body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-layout { top: 132px; left: 184px; right: 24px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen.inventory-open .workspace-layout { left: 320px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-record { display: block; min-height: 0; margin-bottom: 32px; padding: 8px 0; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .working-clue { padding-right: 23px; max-width: none; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .record-outputs { margin: 40px 0 0; gap: 24px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-outcome { padding: 8px 0; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-convergence { left: calc(50% - 2px); top: -12px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-editor .thought-input-row { grid-template-columns: minmax(0, 1fr) 64px; gap: 20px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-await { margin-right: 84px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-footer { align-items: flex-start; gap: 18px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-inventory { width: 270px; background: linear-gradient(90deg, #fff0d673, #fbefd25c 80%, #f3e6c438); }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-tail-link { right: 24px; }
+}
+
+@media (max-width: 760px) {
+  body[data-thought-theme="silk"] #game-root .workspace-screen .workspace-layout,
+  body[data-thought-theme="silk"] #game-root .workspace-screen.inventory-open .workspace-layout { top: 180px; left: 28px; right: 24px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .inventory-tab { left: 28px; top: 105px; width: 150px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .thought-inventory { left: 20px; top: 180px; bottom: 38px; background: #f4e7cfed; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .record-evidence { grid-template-columns: minmax(0, 1fr); }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-heading h1 { font-size: 28px; }
+  body[data-thought-theme="silk"] #game-root .workspace-screen .reasoning-footer > span { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-thought-theme="silk"] #game-root .workspace-screen *,
+  body[data-thought-theme="silk"] #game-root .workspace-screen *::before,
+  body[data-thought-theme="silk"] #game-root .workspace-screen *::after { animation: none; transition: none; }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "CH2-LY12A-011",
+  "expected": "李严倒了。",
+  "sha256": "a7f17ad2bf7f7894a03f6e4053d7dc87ef76f75c0d79b971e4920f5065c8d1c2",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY12A-011-v1.wav",
+  "recognized": "禮言到了",
+  "similarity": 0.25,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.24,
+      "text": "禮言到了",
+      "noSpeechProbability": 0.10522131621837616,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.4,
+          "text": "禮"
+        },
+        {
+          "start": 0.4,
+          "end": 0.8,
+          "text": "言"
+        },
+        {
+          "start": 0.8,
+          "end": 1.24,
+          "text": "到了"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

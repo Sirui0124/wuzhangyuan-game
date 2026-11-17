@@ -1,0 +1,687 @@
+{
+  "V32A-02": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "0–0.9",
+        "issue": "空帐插镜"
+      },
+      {
+        "time": "约2.8–4.4",
+        "issue": "切至案头后出现旁人躯干，偏离玩家第一视角"
+      },
+      {
+        "time": "1.2–4.3",
+        "issue": "模型自加中文字幕"
+      }
+    ],
+    "audioIssues": [
+      "疑似重复原句，ASR辅助，未逐字听审"
+    ],
+    "dynamicReview": "IAB原片从头连续播放至片尾已核验；4fps全时段连续帧辅助定位；未声称逐字听审",
+    "trim": [
+      0,
+      2.8
+    ],
+    "spatialCrop": [
+      112,
+      0,
+      1120,
+      630
+    ],
+    "visualIssues": [
+      "为去掉后段旁人躯干与字幕保留0–2.8秒；不是因音频重复缩短"
+    ],
+    "dialogueTiming": {
+      "text": "那就把纸铺开。",
+      "hanCharacters": 6,
+      "visualDuration": 2.8,
+      "asrLocatedFullFirstRendition": [
+        0,
+        2.1
+      ],
+      "listening": "未逐字听审"
+    }
+  },
+  "V32A-03": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "0–5.3",
+        "issue": "承诺前提前写字，右侧出现另一人躯干和武器，转第三人称"
+      }
+    ],
+    "audioIssues": [
+      "生成了原句前额外人声，待统一声音阶段处理"
+    ],
+    "dynamicReview": "IAB原片从头连续播放至片尾已核验；4fps全时段连续帧辅助定位；未声称逐字听审",
+    "visualIssues": [
+      "保留原句完整8秒音轨，面部回应后接本场案面观察；两段各使用一次，无短循环",
+      "重新合成版待整V动态复核；原声未逐字听审"
+    ],
+    "sourceId": "V32A-03-C2",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-03-C2.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "sourceRecipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-03-C2.json"
+    },
+    "dialogueTiming": {
+      "requiredText": "你救不了这次北伐，也不一定保得住我。",
+      "visualDuration": 9.06,
+      "sourceAudioPreserved": true,
+      "asrIsAuxiliary": true,
+      "listening": "未逐字听审"
+    }
+  },
+  "V32A-05": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "3.5–8",
+        "issue": "提前拿出成文，纸上生成CH2-LY11制作编号，右侧出现旁人躯干"
+      }
+    ],
+    "audioIssues": [
+      "额外人声/原句音色待统一"
+    ],
+    "dynamicReview": "IAB原片从头连续播放至片尾已核验；4fps全时段连续帧辅助定位；未声称逐字听审",
+    "visualIssues": [
+      "取纸动作后接同场案面，保留8秒原音轨及气口；不再用3.38秒承担整句",
+      "重新合成版待整V动态复核；原声未逐字听审"
+    ],
+    "sourceId": "V32A-05-C2",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-05-C2.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "sourceRecipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-05-C2.json"
+    },
+    "dialogueTiming": {
+      "requiredText": "愿意，我留下待核，不去魏国，也不散谣。",
+      "visualDuration": 8.09,
+      "sourceAudioPreserved": true,
+      "asrIsAuxiliary": true,
+      "listening": "未逐字听审"
+    }
+  },
+  "V32A-07": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "约1.3–3.5",
+        "issue": "灰衣人肩背贴近摄影机，违背第一视角"
+      },
+      {
+        "time": "4–9.3",
+        "issue": "纸上生成大片可读乱码，实际划去赴魏安排不清楚"
+      }
+    ],
+    "audioIssues": [
+      "未逐字听审"
+    ],
+    "dynamicReview": "C12 5.58秒IAB从0到ended已动态复核，完整4fps序列已看；C13合入整V后再复看；未逐字听审",
+    "postOverride": [
+      {
+        "text": "若仍不听便赴魏",
+        "start": 0,
+        "end": 2.5,
+        "fullFrame": true
+      },
+      {
+        "text": "若仍不听便赴魏\n\n苟安",
+        "start": 7.4,
+        "end": 9.62,
+        "fullFrame": true,
+        "strike": true,
+        "strikeLine": 0
+      }
+    ],
+    "visualIssues": [
+      "上方原生大伪字已通过跟随笔尖裁幅排除，不再与撤回句并列；实际横划→提笔→下方署名→笔离纸/写字手退出顺序保留",
+      "撤回句是配准于真实墨线的后期字层；先有全句后横划，未把文字卡当作动作替代",
+      "局部448×252裁幅放大并旋转18度校正，有柔化；原生署名字形不能确认准确写出苟安，只作署名动作，准确姓名由前后核阅层说明"
+    ],
+    "sourceId": "V32A-07-R2 + C13 follow-brush local reconstruction",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-07-C13-follow-clause.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "paidRepairTask": "task_3EvIHe3Ddwdhin1uxLFICucERTF1fWb4",
+      "sourceRange": [
+        3.8,
+        9.42
+      ],
+      "liveActionSeconds": 5.58,
+      "temporalLoop": false,
+      "rotationDegrees": 18,
+      "sourceCrop": [
+        400,
+        325,
+        448,
+        252
+      ],
+      "signatureCrop": [
+        400,
+        370,
+        448,
+        252
+      ],
+      "panTime": [
+        5.25,
+        5.75
+      ],
+      "exactGlyphs": "postproduction composite; source text shifted9px to keep entire clause inside crop",
+      "unknownOriginalUntouched": true
+    }
+  },
+  "V33-01": {
+    "visualReview": "candidate-pass",
+    "observations": [
+      {
+        "time": "0–4.5",
+        "result": "第一人称手递卷，信使接触后我松手，接物完整"
+      },
+      {
+        "time": "4.5–9.4",
+        "result": "信使把纸卷收到腰间布囊，未见明显手/道具穿模"
+      }
+    ],
+    "audioIssues": [
+      "原声未逐字听审，留待统一配音；不因纯音频重拍"
+    ],
+    "dynamicReview": "IAB原片从头连续播放至片尾已核验；4fps全时段连续帧辅助定位；未声称逐字听审",
+    "visualIssues": []
+  },
+  "V32A-04": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "1–8",
+        "issue": "听者段提前替玩家写成大段制作提示，未保持闭口等候画面"
+      }
+    ],
+    "audioIssues": [
+      "未逐字听审"
+    ],
+    "dynamicReview": "全时段4fps序列已复核，最终V待复看",
+    "sourceId": "V32A-04-C2",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-04-C2.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "source": "V32A-04-R2 known succeeded task; no recovery or repost of unknown V32A-01",
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-04-C2.json"
+    },
+    "visualIssues": [
+      "本组既有夜帐镜头裁成闭口面部与案面观察，替换日间半趴借片；同一身份/衣着/空间/灯火",
+      "面部闭口段与无嘴案面段分镜补接，未把开口原段当闭口；无短循环"
+    ]
+  },
+  "V32A-06": {
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "4–14.3",
+        "issue": "纸面大段清晰乱码不可作为源书信内容，镜头持续靠纸且无法无损裁除；时段与最终采用夜间首帧需一致"
+      }
+    ],
+    "audioIssues": [
+      "未逐字听审，纯音频不作为重拍理由"
+    ],
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "postOverride": [
+      {
+        "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+        "start": 2,
+        "end": 8.5,
+        "fullFrame": true
+      },
+      {
+        "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+        "start": 8.5,
+        "end": 14.38,
+        "fullFrame": true
+      }
+    ],
+    "visualIssues": [
+      "修正33.65秒后的日间侧视突变：只留真实笔尖/手/纸边微距，排除人物侧身、日光背景及旁人；局部书写为两秒连续动作，不循环",
+      "纸上残留局部墨迹不作可读事实；精确交代全文沿冻结阅读层；微距偏软，不再放大；未借用后续划线/署名动作充当前面的写交代"
+    ],
+    "sourceId": "V32A-06-C3-write-reading",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-06-C3-write-reading.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-06-C3-write-reading.json"
+    }
+  },
+  "V34-01": {
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "0.25–15",
+        "issue": "生成字幕包含制作编号/NPC说明；3–9.7纸面大段不准确字；可剪保留宽景读信和脸部反应"
+      }
+    ],
+    "sourceId": "V34-01-C6-clean-response",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-01-C6-clean-response.mp4",
+    "visualIssues": [
+      "同场李严读信/回应清理版，裁去遮挡与原生字幕/伪字；同场回应素材跨句复用，不循环",
+      "完整原句音轨保留；临时口型与声音不一致单列音频；裁后不把看不到的纸卷放稳当动作证据"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-01-C6-clean-response.json"
+    },
+    "dialogueTiming": {
+      "requiredText": "我只怕再打下去，百姓撑不住……你说不打，往后又靠什么撑住？",
+      "visualDuration": 15.25,
+      "sourceAudioPreserved": true,
+      "asrIsAuxiliary": true,
+      "listening": "未逐字听审"
+    },
+    "postOverride": []
+  },
+  "V34-02": {
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "0.2–7.7",
+        "issue": "大面积出现送信人背影，不符信使目击第一视角"
+      }
+    ],
+    "visualIssues": [
+      "同场李严读信/回应清理版，裁去遮挡与原生字幕/伪字；同场回应素材跨句复用，不循环",
+      "完整原句音轨保留；临时口型与声音不一致单列音频；裁后不把看不到的纸卷放稳当动作证据"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V34-02-C5-clean-response",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-02-C5-clean-response.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-02-C5-clean-response.json"
+    },
+    "postOverride": []
+  },
+  "V34-03": {
+    "dynamicReview": "IAB原片从头连续播放至片尾已核验；4fps全时段连续帧辅助定位；未声称逐字听审",
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "约5.4–8.2",
+        "issue": "叠影转场产生两名同脸李严"
+      },
+      {
+        "time": "1.5–10.5",
+        "issue": "模型强加字幕"
+      }
+    ],
+    "sourceId": "V34-03-C1",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-03-C1.mp4",
+    "visualIssues": [
+      "已删除双李严叠影与生成字幕，保留先回应后动笔"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ]
+  },
+  "V34-04": {
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "0.5–4.2及10.25–12.2",
+        "issue": "出现信使背影，需避开/局部裁切"
+      },
+      {
+        "time": "4.3–10.1",
+        "result": "李严实际写、提笔、取件、递出动作可用"
+      }
+    ],
+    "postOverride": [
+      {
+        "text": "李严\n更正粮情、本人责任说明",
+        "start": 7.9,
+        "end": 9.4,
+        "fullFrame": true
+      }
+    ],
+    "visualIssues": [
+      "实际落笔/提笔、取件、递出及接收者握住纸边均保留；不同角度以剪辑省略整理材料，未伪称一镜到底",
+      "署名字形仅作为签署动作，准确李严姓名/标题由冻结源阅读层说明；微距裁幅偏软，不再放大"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V34-04-C3-write-handoff",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-04-C3-write-handoff.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V34-04-C3-write-handoff.json"
+    }
+  },
+  "V35-01": {
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "visualReview": "candidate-pass-with-limits",
+    "observations": [
+      {
+        "time": "2.3–6.1",
+        "issue": "由镜头右侧的人把信交给信使，方向拍反"
+      },
+      {
+        "time": "6.25–8",
+        "issue": "另增背景同装束人物，未完成信使交我"
+      }
+    ],
+    "sourceId": "V35-01-C2-return-complete",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-01-C2-return-complete.mp4",
+    "visualIssues": [
+      "完整复用V33 0–8.2秒倒放画面，回信纸包从囊取出、我接触、信使完全松手并退开，未倒放声音",
+      "同一纸包在我手中保持，之后才展开核阅；不是视频结束自动收件确认"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-01-C2-return-complete.json"
+    },
+    "postOverride": []
+  },
+  "V32A-01": {
+    "visualReview": "candidate-pass-with-limits",
+    "sourceId": "V32A-listener-C1",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-listener-C1.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "source": "V32A-04-R2 known succeeded task; no recovery or repost of unknown V32A-01",
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-listener-C1.json"
+    },
+    "visualIssues": [
+      "本组既有夜帐镜头裁成闭口面部与案面观察，替换日间半趴借片；同一身份/衣着/空间/灯火",
+      "面部闭口段与无嘴案面段分镜补接，未把开口原段当闭口；无短循环"
+    ],
+    "dynamicReview": "全时段4fps序列已复核，最终V待复看",
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ]
+  },
+  "V35-02": {
+    "visualReview": "candidate-pass-with-limits",
+    "postOverride": [
+      {
+        "text": "此次粮乏，应据实请退。",
+        "start": 2.65,
+        "end": 6.85,
+        "fullFrame": true
+      },
+      {
+        "text": "日后是否再战，留待另议。",
+        "start": 6.85,
+        "end": 11.1,
+        "fullFrame": true
+      }
+    ],
+    "visualIssues": [
+      "独立补镜的回信真实展开/放稳0–2.65秒；无伪字、无脸，局部机位只见右手与纸边，不伪造全景伤帐",
+      "随后的精确文书阅读层沿冻结源保留，不新增朗读、事实或提交动作；静态只在阅读层下"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V35-02-C2-clean-reply",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-02-C2-clean-reply.mp4",
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-02-C2-clean-reply.json"
+    }
+  },
+  "V35-03": {
+    "visualReview": "candidate-pass-with-limits",
+    "postOverride": [
+      {
+        "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+        "start": 5.35,
+        "end": 10.15,
+        "fullFrame": true
+      },
+      {
+        "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+        "start": 10.15,
+        "end": 16.23,
+        "fullFrame": true
+      }
+    ],
+    "visualIssues": [
+      "新8秒源的后5.35秒实际取出两张独立附件、左右分开、各自触案并松手，非通用旧卷假充",
+      "背面无字，不能当成可读署名证明；准确粮情/责任全文保留冻结阅读层；未交给军吏或提前结案"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V35-03-C2-two-attachments",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-03-C2-two-attachments.mp4",
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V35-03-C2-two-attachments.json"
+    }
+  },
+  "V36-01": {
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "保留首叠材料实际接触、放稳与松手；错误生成字作局部柔焦，效果可见，未伪称纸面已可精确阅读",
+      "放稳后准确材料名称为后期插入，尚未提前确认收齐/结案；其后V36-02才宣布收齐"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V36-01-C4-receipt",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-01-C4-receipt.mp4",
+    "postOverride": [
+      {
+        "text": "原信\n查粮材料\n苟安、李严各自的补充说明",
+        "start": 4.8,
+        "end": 7.8,
+        "fullFrame": true
+      }
+    ],
+    "reuse": {
+      "newPaidRequest": false,
+      "sourceRange": [
+        0,
+        4.8
+      ],
+      "hold": "末3秒静态文书插入，不循环交接动作"
+    }
+  },
+  "V36-02": {
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "收齐后的口头核实采用军吏中近景，裁掉原片案上错误文字；完整13.67秒保留"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "spatialCrop": [
+      200,
+      0,
+      896,
+      504
+    ],
+    "recipeChanged": true
+  },
+  "V36-03": {
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "同场同一军吏连续近景，案上原生文字全部裁出；无后期文字浮层、无全屏卡",
+      "同场观察素材有明确复用，不循环；完整原句音轨时窗保留，临时声口不同步单列音频"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "postOverride": [],
+    "recipeChanged": true,
+    "sourceId": "V36-03-C3-clean-clerk",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-03-C3-clean-clerk.mp4",
+    "dynamicReview": "新清理版待当前SHA动态复核"
+  },
+  "V36-04": {
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "同场同一军吏连续近景，案上原生文字全部裁出；无后期文字浮层、无全屏卡",
+      "同场观察素材有明确复用，不循环；完整原句音轨时窗保留，临时声口不同步单列音频"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ],
+    "sourceId": "V36-04-C4-clean-clerk",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-04-C4-clean-clerk.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "sourceRecipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V36-04-C2.json"
+    },
+    "dialogueTiming": {
+      "requiredText": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任，留下做普通粮兵。",
+      "visualDuration": 9.09,
+      "sourceAudioPreserved": true,
+      "asrIsAuxiliary": true,
+      "listening": "未逐字听审"
+    },
+    "postOverride": [],
+    "dynamicReview": "新清理版待当前SHA动态复核"
+  },
+  "V36-05": {
+    "visualReview": "candidate-pass-with-limits",
+    "spatialCrop": [
+      448,
+      0,
+      896,
+      504
+    ],
+    "visualIssues": [
+      "局部重新构图裁去生成字幕与接收者面部；保留军吏身份与担责说明，未新增玩家正脸"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ]
+  },
+  "V36-06": {
+    "visualReview": "candidate-pass-with-limits",
+    "trim": [
+      0,
+      3.65
+    ],
+    "visualIssues": [
+      "实际退军令交到军吏手中后收束；裁去无法确认内容的蒙布车，避免暗示粮已补足"
+    ],
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ]
+  },
+  "V37-01": {
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "新授权允许结局环绕镜头，空车与普通粮兵苟安可用；尚不代表我已搭手"
+    ],
+    "dynamicReview": "4fps全时段已检查，采用版待动态复核",
+    "audioIssues": [
+      "尚未逐字听审；按用户要求保留画面，统一配音阶段处理"
+    ]
+  },
+  "V37-02": {
+    "sourceId": "V37-02-C2-happy-gouan",
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "按用户最新快乐要求只读复用ENDINGS同SHA完整8秒；笑着招呼后转身，空车与普通粮兵装束保留",
+      "未动ENDINGS源/60秒版/配音；原苟安搭手台词音轨保留，临时口型只列音频；未新增玩家正脸"
+    ],
+    "audioIssues": [
+      "未逐字听审；音频问题独立留后期"
+    ],
+    "dynamicReview": "新局部版待当前SHA动态复核",
+    "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V37-02-C2-happy-gouan.mp4",
+    "reuse": {
+      "newPaidRequest": false,
+      "loop": false,
+      "recipe": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V37-02-C2-happy-gouan.json"
+    },
+    "postOverride": []
+  },
+  "V37-03": {
+    "sourceId": "V37-03",
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "切去重复回头/转身0–2秒，承接快乐镜转身后我靠近搭手；保留实际双人接触空车横木与推行",
+      "未新增玩家正脸；车轮越辙未入画，不把隐含动作声当画面证明"
+    ],
+    "audioIssues": [
+      "未逐字听审；音频问题独立留后期"
+    ],
+    "dynamicReview": "pending",
+    "trim": [
+      2,
+      9.44
+    ]
+  },
+  "V42-01": {
+    "sourceId": "V42-01",
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "已复核全时段4fps序列，待连续动态审",
+      "结局允许第三人称/背影，未新增玩家正脸",
+      "纸面仅作旧记录纹理，不作为精确数字/文字证据"
+    ],
+    "audioIssues": [
+      "未逐字听审；音频问题独立留后期"
+    ],
+    "dynamicReview": "pending"
+  },
+  "V42-03": {
+    "sourceId": "V42-03",
+    "visualReview": "candidate-pass-with-limits",
+    "visualIssues": [
+      "已复核全时段4fps序列，待连续动态审",
+      "结局允许第三人称/背影，未新增玩家正脸",
+      "纸面仅作旧记录纹理，不作为精确数字/文字证据",
+      "裁去开头重置空案的构图；保留翻页及停稳，未新增穿越特效"
+    ],
+    "audioIssues": [
+      "未逐字听审；音频问题独立留后期"
+    ],
+    "dynamicReview": "pending",
+    "trim": [
+      2.5,
+      7.29
+    ]
+  },
+  "V42-02": {
+    "visualReview": "candidate-pass-with-limits",
+    "trim": [
+      5.4,
+      15.08
+    ],
+    "visualIssues": [
+      "去掉案上旧卷到案下纸页的不连续下移，使用记录纸近景承载完整心声",
+      "旧墨字形仅作记录纹理，未引入精确数字或新增人口证据"
+    ],
+    "audioIssues": [
+      "未逐字听审，中央玩家声轨按原句覆盖"
+    ],
+    "dynamicReview": "连续4fps序列已检查，采用段待整V动态审"
+  }
+}

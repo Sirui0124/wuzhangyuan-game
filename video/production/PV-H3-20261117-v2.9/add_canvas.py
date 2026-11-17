@@ -1,0 +1,6 @@
+from pathlib import Path
+import json,shutil,subprocess,sys
+R=Path(__file__).resolve().parent
+ref=R/'references/F22.png';shutil.copy2('C:/Users/zhousirui/.codex/generated_images/01a1d983-5ada-7a93-b3bc-b154ad9ffdfe/exec-96ef9402-90db-45c2-bbe2-c569b75a8ba6.png',ref)
+s=dict(id='F22',title='火焰蚀穿帐布',duration=4,reference_paths=[str(ref)],prompt='Four-second fixed-camera live-action close shot of this exact burning canvas edge. Flames consume the lower frayed fibres; a SMALL loosened black strip burns through its support and drops downward out of frame by gravity, widening the existing opening slightly and revealing more empty road behind. Most cloth stays hanging from top beam. Gentle wind moves cloth only a little; no sudden huge tear, no whole tent collapse, no explosion or burst of sparks. Background tent continues burning, perspective and focus remain consistent. One real material event in continuous real time, no cut or camera zoom, no people. Sound exclusively close fire crackle, singeing cloth, tiny tear and soft wind. NO music, NO BGM, NO speech, no narration, no text. Tactile photographed coarse fibres and natural fire exposure, not CGI.')
+p=R/'F22-spec.json';p.write_text(json.dumps(s,ensure_ascii=False,indent=2),'utf-8');subprocess.run([sys.executable,str(R/'add_one_unit.py'),str(p)],check=True)

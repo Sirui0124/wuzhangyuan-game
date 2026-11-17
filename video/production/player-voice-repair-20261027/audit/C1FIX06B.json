@@ -1,0 +1,82 @@
+{
+  "group": "chapterDialogue",
+  "id": "C1FIX06B",
+  "src": "/video/current/C1FIX06B-QA-20261025.mp4",
+  "title": "未询问营门的转呈",
+  "rows": [
+    "A-42",
+    "A-43",
+    "A-44",
+    "A-45"
+  ],
+  "firstLineText": "小甲，营前急报：魏兵逼近，来意未明。",
+  "subtitles": "/video/subtitles/C1FIX06B-QA-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\C1FIX06B-QA-20261025.mp4",
+  "sha256": "d1f0f23b6db86c1ab30dfeadb52d7940fe820f2e2a4e985c4de69df504bc2172",
+  "duration": 12.288,
+  "cues": [
+    {
+      "start": 0.08,
+      "end": 4.5,
+      "text": "小甲，营前急报：魏兵逼近，来意未明。营门未破"
+    },
+    {
+      "start": 4.5,
+      "end": 6.56,
+      "text": "魏将军让我转呈，请你递进去"
+    },
+    {
+      "start": 7.1,
+      "end": 8.9,
+      "text": "我只能递话，作不得主"
+    },
+    {
+      "start": 9.8,
+      "end": 11.1,
+      "text": "知道了，交给你了"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "C1-A-45",
+      "node": "A-45",
+      "text": "知道了，交给你了。",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A-45.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "872308dd93482153ec170f98f59f51532bee583ba63d8fc598bf72c5e4a0b30d",
+      "duration": 1.9745,
+      "speechRange": [
+        0.4,
+        1.72
+      ],
+      "correlation": 0.9990150436469108,
+      "insertAt": 9.437,
+      "speechStart": 9.837,
+      "speechEnd": 11.157
+    },
+    {
+      "id": "C1-A42-variant",
+      "node": "A42-variant",
+      "text": "小甲，营前急报：魏兵逼近，来意未明。魏将军让我转呈，请你递进去。",
+      "speaker": "我",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\A42-variant.wav",
+      "chapter": 1,
+      "provider": "existing local /api/game/tts, seed-tts-2.0",
+      "sha256": "e05b5dfabe8e29b2cfeb04a76a6cfbc4729fadd928d7bb29dfabf04bf06f446a",
+      "duration": 6.58125,
+      "speechRange": [
+        0.36,
+        6.32
+      ],
+      "correlation": 0.9820973987523129,
+      "insertAt": 0.096,
+      "speechStart": 0.456,
+      "speechEnd": 6.416
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

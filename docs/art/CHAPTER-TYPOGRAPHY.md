@@ -1,0 +1,62 @@
+# 跨章节字号与字幕标准
+
+2026-10-26 用户要求：第二章全部按第一章看齐，第三章沿用同一恒定标准。
+
+## 视频字幕
+
+- 唯一维护入口：`GameStarter/web-demo/public/subtitles.css`，由公共 `cinematics.css` 导入，影像回看页也使用同一文件。
+- 基准为第一章当前的浏览器原生 WebVTT 字体与缩放方式、白字、透明底。相同视频显示尺寸下，各章字幕呈现必须一致；屏幕尺寸变化时一起自适应，不把第二章或第三章另设成固定 24px。
+- 所有章节复用 `CinematicPlayer`、`.cinema-frame` 和公共字幕 CSS。章节样式、内联样式与动态样式中不得另定义 `::cue` 或 `::cue-region`；字幕文件不写独立字体样式。
+- 字幕正文、时码与声画对应关系仍由原内容维护。本次只统一显示方式，不修改文案和视频。
+- `npm run build` / `npm run check:architecture` 会拒绝公共文件之外的字幕覆盖；第三章接入时也执行这一检查。
+
+## 非视频文字
+
+同一类内容复用第一章的公共组件和 CSS，不把“所有字号一致”理解成标题、正文、操作全部使用同一个大小：
+
+| 角色 | 第一章公共标准 | 维护入口 |
+| --- | --- | --- |
+| 对白正文 | 24px，行高 1.8，楷体字族 | `public/dialogue-ink.css` 的 `.dialogue-text` |
+| 说话人 / 普通选择题干 | 22px，行高 1.5 | 同上 `.dialogue-speaker` |
+| 普通选择按钮 | 20px，行高 1.7 | 同上 `.scout-choice button` |
+| 导航操作 | 16px，行高 1.6 | `public/game-navigation.css` |
+| 暂停 / 设置 / 回顾 | 共用 `frameModal`、`folio-dialogs.css` | `src/game-ui-panels.ts` / `public/folio-dialogs.css` |
+
+第三章使用同一语义结构和共享样式。新增内容类型先确认其角色，再复用相应等级，不复制整套章节字号。调整共同标准时同步更新所有章节及响应式规则。
+
+## 弹窗材质
+
+- 三章共用 `public/folio-materials.css` 的织物封面、铜边、装订绳与纸签。暂停页保留 `pause-art.css` 的灯火封面；其余弹窗使用无灯火的 `ui/folio-cover-neutral-v1.png`，避免装饰干扰阅读。
+- 回顾、已知线索和人物志正文采用浅纸页；设置、存档及确认操作采用暗色内页。字号继续由公共文字规范控制，不随材质另设章节大小。
+- 人物志与成就档案虽不使用 `frameModal`，也复用同一材质入口。成就卡片、长标题、内容及解锁状态保持原组件逻辑。
+- 新增确认操作使用游戏内弹窗，不调用浏览器原生 `confirm`。第三章弹窗与第二章重玩取消流程由 `tools/migration/shared-folio-smoke.mjs` 验证。
+
+## 线索与物品的添加、收回
+
+- 语言组织页面的线索、物品选择行统一使用 `src/inventory/selection-view.ts` 的 `selectionRowHTML`。章节只传内容、选中状态与事件绑定，不自写选中样式。
+- 沿用第一章：条目正文 16px；右侧操作 18px，未选中为 `＋`、已选中为 `✓`，点击已选中操作即收回。同步 `is-placed`、`aria-pressed` 和含具体条目名的“放入／收回”标签。
+- 已添加条目使用统一的 `working-clue` 结构及 `×` 移除入口。列表选中状态和上方条目由同一份章节状态驱动。
+- “添加线索”和“添加物品”统一使用 `dialogue-expression.css` 的 18px、44px 最小高度按钮，展开时更新 `aria-expanded`；不要把其中一个恢复成 16px 裸文字。
+- 第三章复用上述组件；物品数量限制、已失效条目限制仍由章节已有规则提供，样式统一不改变玩法。
+
+## 验证
+
+`node tools/migration/selection-consistency-smoke.mjs` 在第一、第二章验证添加、收回、详情不改变选择、搜索、物品数量限制及刷新后的状态保留，并比对两章控件的实际计算样式。桌面和窄屏截图保存在 `outputs/selection-consistency-20261026/`。
+
+`node tools/migration/chapter-subtitles-smoke.mjs` 用同一视频、同一字幕、同一时刻分别加载第一章、第二章样式与第三章公共播放器接入样例，在桌面、窄屏与横屏比较实际原生字幕截图。第三章样例仅验证共享显示契约，不代表第三章剧情已实现或试玩通过。
+
+## 第三章自由发言界面（2026-10-27）
+
+- 第三章五处马谡自由发言入口沿用 `dialogue-expression.css` 的左右布局、文字等级和输入底纹；不再维护独立的浅纸大卡片。
+- 左侧选择线索与物品，右侧编辑原话、润色、撤销并确认说出。选择列表复用 `inventory/panel-view.ts`、`inventory/selection-view.ts`；详情只查阅，收回由单独按钮执行。
+- 马谡当前的问题完整换行；桌面列表和详情并排，窄屏上下排列。物品详情保留帐侧试用入口。
+- AI 润色使用既有 `dialogue-polish.ts` 与第三章场景资料：结果写回草稿，确认说出才进入剧情判定；取消和失败保留原稿。
+- `node tools/migration/jieting-expression-smoke.mjs` 使用隔离存档与模拟 AI 响应，检查第二章两处、第三章五处入口的润色／撤销／取消、选择与搜索、物品试用入口和 1554／1024／390 宽度。模拟响应只验证界面与状态流，不代表真实模型的文案质量。
+
+## 三章表达界面共用结构（2026-10-27）
+
+- 三章自由发言共用 `src/game/expression-view.ts` 的标题、左右编辑区、左下润色、右下确认与底部详情区域。章节传入已有内容和操作，第一章补充说明及辅助提示继续按原流程显示。
+- `public/dialogue-expression.css` 统一维护字号、按钮尺寸、输入底纹、当前 NPC 问题换行和窄屏排列。第二、第三章不再维护独立的发言面板样式。
+- 线索与物品详情在选取栏旁展开，窄屏改为上下排列；点名称只查看，独立添加／收回按钮改变选择。
+- 手机入口共用 `src/phone/launcher-view.ts`，自由发言时统一显示图标、名称和“准备佐证”。桌面保留右侧入口，700px 以下收进顶部菜单，隐藏辅助文字，避免遮挡编辑区。
+- `node tools/migration/three-chapter-ui-smoke.mjs` 直接比较三章实际计算样式，同时验证线索与物品添加、收回、详情、搜索、存档保留与窄屏布局。截图和指标保存在 `outputs/three-chapter-ui-20261027/`。

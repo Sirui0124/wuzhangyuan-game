@@ -1,0 +1,85 @@
+{
+  "jobs": [
+    {
+      "id": "V13-03",
+      "node": "CH2-LY04-002",
+      "role": "粮队管事",
+      "text": "凭据对得上，我陪你问仓吏。",
+      "targetSeconds": 4,
+      "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V13-03-role-reference.wav",
+      "referenceSha256": "585b093e77ee4b4e4ceba0069c44b6fd00f345d9b16c27170bfbfc10d1b32410",
+      "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V16C-02-raw.mp4",
+      "referenceSourceSha256": "8b769c6ea4673de585143dda90aa15542de03b3be1ff8961ac32b62f698dac71",
+      "referenceRange": [
+        0.35,
+        4.15
+      ],
+      "referenceRoleDeclaredInFrozenPlan": "粮队管事",
+      "listeningReview": "not heard; source role and ASR only",
+      "model": "seed-audio-1.0",
+      "noClone": true,
+      "noPresetSpeaker": true
+    },
+    {
+      "id": "V13-04",
+      "node": "CH2-LY04-003",
+      "role": "仓吏",
+      "text": "这批粮的收发账可以查。其他队的账，先别动。",
+      "targetSeconds": 6,
+      "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V13-04-role-reference.wav",
+      "referenceSha256": "2b793b17bbd2f63f79c33f8463397521974c84d623ec64212d7430955a10588d",
+      "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+      "referenceSourceSha256": "dd32106380f49b16d40cd5415de1c9e2b553eb127da9611aa3a3c78d7440169a",
+      "referenceRange": [
+        2.0,
+        6.6
+      ],
+      "referenceRoleDeclaredInFrozenPlan": "仓吏",
+      "listeningReview": "not heard; source role and ASR only",
+      "model": "seed-audio-1.0",
+      "noClone": true,
+      "noPresetSpeaker": true
+    },
+    {
+      "id": "V17-01",
+      "node": "CH2-LY04-F02",
+      "role": "前线接收人",
+      "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+      "targetSeconds": 10,
+      "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V17-01-role-reference.wav",
+      "referenceSha256": "c19661dac8057f1f6a04980b230a5318720c456c7a9bc7cc37a438d3b2d58ce1",
+      "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V17-01-raw.mp4",
+      "referenceSourceSha256": "7f0596593965fee3b5799e6ee24c639641d60f5b5029b9299e1608b5bb2f4257",
+      "referenceRange": [
+        2.46,
+        7.8
+      ],
+      "referenceRoleDeclaredInFrozenPlan": "前线接收人",
+      "listeningReview": "not heard; role plan and ASR only",
+      "model": "seed-audio-1.0",
+      "noClone": true,
+      "noPresetSpeaker": true
+    },
+    {
+      "id": "V20-01",
+      "node": "CH2-LY04-C04",
+      "role": "地方经手人",
+      "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+      "targetSeconds": 5,
+      "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V20-01-role-reference.wav",
+      "referenceSha256": "73dabae354d964e6bccedf11e341f719171ffd49082f8cb3c591c7aae9b17b12",
+      "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-01-raw.mp4",
+      "referenceSourceSha256": "5e6a5671fb6a8030a5ff9dcb4950488c81096da27797b53af582c2f8d723e74d",
+      "referenceRange": [
+        4.96,
+        9.3
+      ],
+      "referenceRoleDeclaredInFrozenPlan": "地方经手人",
+      "listeningReview": "not heard; role plan and ASR only",
+      "model": "seed-audio-1.0",
+      "noClone": true,
+      "noPresetSpeaker": true
+    }
+  ],
+  "authorization": "user review V13 all garbled audio; necessary two missing NPC lines only; reuse correct player WAV"
+}

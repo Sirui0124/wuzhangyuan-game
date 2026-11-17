@@ -1,0 +1,148 @@
+{
+  "id": "CH2-V22",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V22-a4f3411246-20261025.mp4",
+  "oldSha256": "a4f3411246d3ff8ed60628c84a00f8e2cb10761e6b2de6efd679a0b7c4b54b98",
+  "oldSubtitles": "/video/subtitles/CH2-V22-a4f3411246-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V22-ea27e0db.mp4",
+  "sha256": "69e71f77c3a2e09032d99539e7b9ae0ae47f6d9a40c6fad6396a44385a65248b",
+  "bytes": 13946922,
+  "duration": 31.625,
+  "containerDuration": 31.625,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 759,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V22",
+    "src": "/video/current/PV27-CH2-V22-ea27e0db.mp4",
+    "title": "邀请访村与正式出营批准",
+    "subtitles": "/video/subtitles/PV27-CH2-V22-ea27e0db.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY05-002",
+      "node": "CH2-LY05-002",
+      "text": "所以，你让我查了半天，到头来还是要退兵？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY05-002.wav",
+      "oldCorrelation": 0.9998350328578919,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY05-002-v1.wav",
+      "newVoiceSha256": "eea73734cc60409730e408b2b6bd7e092b3404472de45ac7fbfcb589935037ae",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.32000000000000006,
+        5.22
+      ],
+      "insertAt": 0.32000000000000006,
+      "voiceSeconds": 4.8,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9707483053207397,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY05-008",
+      "node": "CH2-LY05-008",
+      "text": "这令牌能做什么？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY05-008.wav",
+      "oldCorrelation": 0.9804688106771922,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY05-008-v1.wav",
+      "newVoiceSha256": "a93e180ae25249cc091ba32ad5d646bf91527350dfe8df04ba296a54bd3eb8c7",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        19.48675,
+        21.28
+      ],
+      "insertAt": 19.48675,
+      "voiceSeconds": 1.7,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0248522758483887,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.72,
+      "end": 5.15,
+      "text": "所以，你让我查了半天，到头来还是要退兵？"
+    },
+    {
+      "start": 5.26,
+      "end": 8.7,
+      "text": "你查了粮，可问过种粮的人吗？"
+    },
+    {
+      "start": 12.4,
+      "end": 13.2,
+      "text": "拿着"
+    },
+    {
+      "start": 13.66,
+      "end": 16.46,
+      "text": "出营的事，我替你禀明"
+    },
+    {
+      "start": 16.98,
+      "end": 19.12,
+      "text": "去村里看看，回来再骂我"
+    },
+    {
+      "start": 19.68675,
+      "end": 21.03675,
+      "text": "这令牌能做什么？"
+    },
+    {
+      "start": 21.32,
+      "end": 25.76,
+      "text": "那边的人认这块令牌，会接待你，让你核对材料"
+    },
+    {
+      "start": 26.2,
+      "end": 31.36,
+      "text": "出营已经报准，你随返程粮队去，回来向我交差"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

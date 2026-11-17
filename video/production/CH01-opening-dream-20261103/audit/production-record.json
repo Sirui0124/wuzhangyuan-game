@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-03",
+  "status": "待review",
+  "scope": "三条本地Seedance生成准备稿；本聊天确认版本为本次对白来源",
+  "durations": [
+    12,
+    18,
+    14
+  ],
+  "total_generation_seconds": 44,
+  "edit_target": "三条共44秒生成素材，含动作与接镜余量；收到成片后只裁自然无对白余量，目标约38—40秒，不变速、不截断字音、不定格补长。",
+  "reference_count": 13,
+  "new_generated_reference_count": 7,
+  "references": [
+    {
+      "key": "menu",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\01-主界面军帐与灯光.jpg",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\GameStarter\\web-demo\\public\\main-menu-background-v01.jpg",
+      "generated": false,
+      "sha256": "12d40d5aaa9c085d8083ff3186ec1fe2aac78d6765ee8ebaa943d4b9ad238809"
+    },
+    {
+      "key": "zhu",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\02-诸葛亮单人身份.png",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PR01-ink-realism-20261022\\references\\I01-zhugeliang-identity.png",
+      "generated": false,
+      "sha256": "4f0082788366771a9fd989e3b24dd03964e0f0514d7edacd6366b741c9c744ae"
+    },
+    {
+      "key": "ritual",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\03-诸葛亮坐姿借寿与主灯.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-46186d41-33da-42d0-ab5d-5d9abc975cb5.png",
+      "generated": true,
+      "sha256": "20cba74c964842f3e18dc9abf41a00ba023cf9aca3bc2cecdb7702b3c81ebf48"
+    },
+    {
+      "key": "wei",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\04-魏延单人身份.png",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PR01-ink-realism-20261022\\references\\I02-weiyan-identity.png",
+      "generated": false,
+      "sha256": "0e1433e82c1bd0472f1518b537d25f83271262c127b97255de8e0dfe10dd974b"
+    },
+    {
+      "key": "curtain",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\05-魏延赴帐与触帘空间.png",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PR01-ink-realism-20261022\\references\\R04-weiyan-curtain.png",
+      "generated": false,
+      "sha256": "ca958c5753f07d3b5c12bb2aa1dd4b4d0aa3e969088a57faffeb7405a6fde34d"
+    },
+    {
+      "key": "lamp",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\06-熄灭主灯与后景.jpg",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-continuity-20261028\\opening-20261029\\references\\03-原片灭灯接镜.jpg",
+      "generated": false,
+      "sha256": "bcf2a4c0dfd1aa31676f39ce46e2440fdbd8e5f62c9968ba8c9af11b3f990e3c"
+    },
+    {
+      "key": "phone",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\07-普通办公室持机-v2-20261104.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-cc4ee0ba-642c-404f-936f-cda58f12339e.png",
+      "generated": true,
+      "sha256": "2db90747fb7c9e51df2b5df5d2e672d2f3c5f425b3f2433777d62d44f67822c7",
+      "version": "v2",
+      "status": "待review"
+    },
+    {
+      "key": "desk",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\08-普通办公室停手-v2-20261104.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-d300bcdc-0b9c-419c-b2f2-e65ec3cfac6f.png",
+      "generated": true,
+      "sha256": "1cbe22bc343dcca7f067df9f86052da4b7d36faec9486b9995a7cd14cb0ac0c3",
+      "version": "v2",
+      "status": "待review"
+    },
+    {
+      "key": "bitcoin",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\09-回忆朋友递来手机.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-cad9c991-da16-4243-8a0c-0dfc38d1f5ee.png",
+      "generated": true,
+      "sha256": "741aeb4de59a21d52f3c98ecb4e7d93f38af0f3ad48a9da0e2caf1f4395761c2"
+    },
+    {
+      "key": "ai",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\10-回忆同学在办公室门口.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-70a9fa28-94b7-4a6f-990c-c11875f32226.png",
+      "generated": true,
+      "sha256": "b475e48020de8c20ead6d595d3d457f5cedb3c21f72715852563296b35231025"
+    },
+    {
+      "key": "woman",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v8-自然窗光真实肤质.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-db334505-ee7c-4f16-8f7c-0c54c3ed93f1.png",
+      "generated": true,
+      "sha256": "0464334095f68e09845438ef4fef58d58c0fbdbd0499171a33426cdac25d8b46",
+      "version": "v8",
+      "status": "待review"
+    },
+    {
+      "key": "sunset",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\12-夕阳主帐与古代麻布袖.png",
+      "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-d27d1fdd-0237-4320-be0c-fb6e7dff1faf.png",
+      "generated": true,
+      "sha256": "854099c26db85d378dcdbd0067cb23539b4ab8c615a6de3ae42f921f2f531793"
+    },
+    {
+      "key": "guard",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\13-守卒甲单人身份.png",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-full-video-20261023\\参考图\\甲.png",
+      "generated": false,
+      "sha256": "e9e72e9b8cea3b2f71c8ff7386a8a91b1ed8f2f1fa10c256d6e6497a1281b400"
+    }
+  ],
+  "documents": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\01-五丈原借寿与军报灯灭-12秒.md",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\02-深夜工位与三段遗憾回忆-18秒.md",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\03-闭眼睡去与梦回五丈原-14秒.md"
+  ],
+  "collaboration_read": "飞书协作原则已只读读取revision 39，与本地副本去空白后相同。未更新在线文档或台账。",
+  "production_state": {
+    "reference_images_generated": true,
+    "reference_images_reviewed": true,
+    "video_generated": false,
+    "uploaded": false,
+    "submitted": false,
+    "game_binding_changed": false,
+    "user_approved_generated_media": false
+  },
+  "integration_notes": [
+    "保留现有成片与旧R00，不覆盖旧稿或用户评论。",
+    "未来三条依次替换旧PR01及SC03，不连续播放旧SC03。",
+    "OP-DREAM-03承载A-08的五丈原辨认心声，未来接入时抑制重复A-08，保留A-16。",
+    "菜单UI退出由游戏层处理，不把UI烧入视频；新片灯光匹配不冒充代码已经实现。",
+    "参考图生成和制作自查不是用户通过；成片须另行核对口型、实声、连续性与字幕时间码。"
+  ],
+  "research": [
+    {
+      "title": "ASC Dual Nature: Shadow",
+      "url": "https://theasc.com/article/dual-nature-shadow/",
+      "used": "限制且有明确动机的摄影机运动；其余转场标明为本项目设计"
+    }
+  ],
+  "reference_revisions": [
+    {
+      "key": "woman",
+      "version": "v2",
+      "user_request": "更清纯、白月光感，去掉眉毛左侧像脏印的痕迹",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-99d42bad-4d77-4811-987c-9c1ff5686a56.png",
+        "generated": true,
+        "sha256": "e15f313acec94ad927c5ccf517343c846fca6a8fcc1889a660d05898cc866321"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v2-清纯白月光.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v3",
+      "user_request": "再瘦一些、长发，脸上有自然纹路，更有特点",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v2-清纯白月光.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-defe61fc-d431-4104-8ba3-cf876b9b1542.png",
+        "generated": true,
+        "sha256": "3f4c1206a94186fcf45389c6ebe43319d1b481d23f11f1fbfb844c9de2e57400",
+        "version": "v2",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v3-长发清瘦自然纹路.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v4",
+      "user_request": "更清秀，眼睛更大和透彻，脸颊稍瘦且流畅",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v3-长发清瘦自然纹路.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-91b77129-a8be-4275-a2d9-16e346edc422.png",
+        "generated": true,
+        "sha256": "beb26cc88c39db7c4654a8e9c11f43ccbd763b67e39b23647da326731e30d2ca",
+        "version": "v3",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v4-清秀明眸流畅轮廓.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v5",
+      "user_request": "更清瘦、更清纯",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v4-清秀明眸流畅轮廓.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-8c6bfc02-be12-46d4-8974-61011df1dbce.png",
+        "generated": true,
+        "sha256": "7d496974fc0f86eb19592e7fd294c5d7a4a7e3a68adf40dc7eeb65e8dbc1392a",
+        "version": "v4",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v5-清瘦长脸清纯长发.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v6",
+      "date": "2026-11-04",
+      "user_request": "认可v5外貌，肩膀稍加宽，改善头肩比例",
+      "approved_previous_aspects": "v5清瘦清纯的脸与长发方向",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v5-清瘦长脸清纯长发.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-fec37a21-307d-4400-a05c-ed50101850fc.png",
+        "generated": true,
+        "sha256": "3800e0ddbafbee7676afb200a6d1dd12f8fa310aadb846bcf71678928e79460b",
+        "version": "v5",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v6-自然肩宽协调头身.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v7",
+      "date": "2026-11-04",
+      "user_request": "穿着稍土，简化配色；改素白衬衫",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v6-自然肩宽协调头身.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-41071b1b-ca9a-42d7-ade5-0a11d8aa3e6e.png",
+        "generated": true,
+        "sha256": "f8c01ea8d8225625420e6c4202e5f3be5a35c59c1c369187968b581e586cab7b",
+        "version": "v6",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v7-素白衬衫简洁配色.png",
+      "user_approved": false
+    },
+    {
+      "key": "woman",
+      "version": "v8",
+      "date": "2026-11-04",
+      "user_request": "以v7人物和白衬衫为准，加强真实感，调整光线",
+      "approved_previous_aspects": "v7人物造型与素白衬衫方向",
+      "previous": {
+        "key": "woman",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v7-素白衬衫简洁配色.png",
+        "source": "C:\\Users\\zhousirui\\.codex\\generated_images\\01a18b78-9a89-7ef3-ae12-ec7d4d7703b3\\exec-e8917967-1b9f-4dc7-a814-338eaed1592c.png",
+        "generated": true,
+        "sha256": "e2319528ba3c0bdc068ddd013303bc5c6397fa14caa2a2bf5860e8fb8d54bc1b",
+        "version": "v7",
+        "status": "待review"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\11-回忆她在桌对面-v8-自然窗光真实肤质.png",
+      "user_approved": false
+    },
+    {
+      "key": "phone",
+      "version": "v2",
+      "date": "2026-11-04",
+      "user_request": "工位图片质量差、场景缺少共鸣；改为普通办公室与日常使用细节",
+      "previous": {
+        "key": "phone",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\07-第一视角持机与工位.png",
+        "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-continuity-20261028\\opening-20261029\\references\\01-持机与灭灯画面.png",
+        "generated": false,
+        "sha256": "4e179f5624f14213e4dd3824ab16447aabbbbd96f6f9792d730e1bbf47273f7b"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\07-普通办公室持机-v2-20261104.png",
+      "user_approved": false
+    },
+    {
+      "key": "desk",
+      "version": "v2",
+      "date": "2026-11-04",
+      "user_request": "工位图片质量差、场景缺少共鸣；改为普通办公室与日常使用细节",
+      "previous": {
+        "key": "desk",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\08-落桌手机与停下来的手.png",
+        "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-continuity-20261028\\opening-20261029\\references\\02-深夜工位停下来的手.png",
+        "generated": false,
+        "sha256": "08bb715418ebbd374897b928ad2c1eb67cfbd3118983dcdd36cd7522d6d9a4cf"
+      },
+      "current": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-dream-20261103\\references\\08-普通办公室停手-v2-20261104.png",
+      "user_approved": false
+    }
+  ],
+  "scene_revisions": [
+    {
+      "date": "2026-11-04",
+      "scene": "当下场景改为普通小公司的深夜办公室：浅灰窄桌与旧灰布隔板，普通显示器在左侧斜放，键盘居前，鼠标与磨损鼠标垫在右，手机落点在鼠标右侧、水杯前方。左后角留一盒没吃完的晚饭，右侧相邻空椅背搭着黑色外套，包放在椅边。只保留当前一组普通顶灯与屏幕自然溢光，夜窗外是普通楼房少量亮窗。物件有使用痕迹但不脏乱，不再出现精致咖啡、装饰台灯、绿植或高楼夜景；不为了表现落魄额外堆满杂物。桌面、手和手机保留正常光学细节，显示器文字因观看角度与景深不需可读；不把代码大屏拍成视觉中心，不用方块模糊补丁。",
+      "scope": "OP-DREAM-02与03的当下工位段及两张参考图，台词和时长不变",
+      "video_generated": false,
+      "game_binding_changed": false
+    }
+  ]
+}

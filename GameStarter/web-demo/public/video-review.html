@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>逆转五丈原 · 视频审阅</title>
+<link rel="stylesheet" href="/subtitles.css">
+<style>body{background:#141410;color:#eee8da;font:17px/1.6 system-ui;margin:24px auto;max-width:1100px;padding:0 20px}a{color:#dfc590}select{background:#36372d;color:inherit;border:1px solid #777;padding:10px;max-width:100%;font:inherit}video{width:100%;max-height:65vh;background:#000}#status{color:#dfc590}</style>
+<a href="/">← 返回游戏</a><h1>视频审阅</h1>
+<p>影片与字幕使用游戏当前版本，观看不会改变游戏存档。</p>
+<label for="clips">选择影片</label> <select id="clips"></select>
+<h2 id="title"></h2><video controls playsinline preload="metadata"></video><p id="status" role="status"></p>
+<script type="module">
+const config=await fetch('/cinematics.json').then(r=>r.json());
+const groups=[['opening','开篇'],['execution','行刑'],['sacrifice','首轮问责'],['safe','第一章成功结尾'],['chapterDialogue','第一章对白'],['chapterEndings','第一章结局'],['chapterTwo','第二章'],['chapterPreview','章节预览'],['chapterScenes','场景影像'],['reviewOnly','待整合素材']];
+const video=document.querySelector('video'),status=document.querySelector('#status'),select=document.querySelector('#clips');
+const clips=new Map();let subtitleFailed=false;
+for(const [key,label] of groups){
+ if(!config[key]?.length)continue;
+ const group=document.createElement('optgroup');group.label=label;
+ for(const clip of config[key]){clips.set(clip.id,clip);const option=document.createElement('option');option.value=clip.id;option.textContent=clip.id+' · '+clip.title;group.append(option);}
+ select.append(group);
+}
+function show(id,autoplay=false){
+ const clip=clips.get(id);if(!clip)return;
+ select.value=id;document.querySelector('#title').textContent=clip.title;
+ video.pause();video.replaceChildren();subtitleFailed=false;video.src=clip.src;
+ if(clip.subtitles){
+  const track=document.createElement('track');track.kind='subtitles';track.srclang='zh';track.label='中文字幕';track.default=true;track.src=clip.subtitles;
+  track.onload=()=>{if(!track.isConnected)return;for(const cue of Array.from(track.track.cues??[])){if(cue.line==='auto'){cue.snapToLines=true;cue.line=-2;}}track.track.mode='showing';};
+  track.onerror=()=>{if(track.isConnected){subtitleFailed=true;status.textContent='字幕载入失败，请刷新后重试';}};
+  video.append(track);
+ }
+ const url=new URL(location.href);url.searchParams.set('clip',id);history.replaceState(null,'',url);
+ status.textContent='点击播放';if(autoplay)video.play().catch(()=>status.textContent='点击播放');
+}
+select.onchange=()=>show(select.value,true);
+const requested=new URL(location.href).searchParams.get('clip');
+show(clips.has(requested)?requested:clips.keys().next().value);
+video.onended=()=>{if(!subtitleFailed)status.textContent='本段播放完毕';};
+video.onerror=()=>status.textContent='视频载入失败';
+video.ontimeupdate=()=>{if(!video.ended&&!subtitleFailed&&Number.isFinite(video.duration))status.textContent=`${video.currentTime.toFixed(2)} / ${video.duration.toFixed(2)} 秒`;};
+</script></html>

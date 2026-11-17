@@ -1,0 +1,321 @@
+{
+  "version": "v2.1",
+  "authorization": {
+    "date": "2026-11-15",
+    "user_request": "可以，按v2.1整体重做，直接用指定的H3流程生成视频。不要BGM，保留人物声音和环境音，做好匹配，最后给我完整成片。",
+    "scope": "v2.1整体制作与必要重拍、声音匹配、整片交付",
+    "prompt_approval": "用户明确通过v2.1并要求直接生成",
+    "film_approval": "尚未发生",
+    "unknown_submission_policy": "有ID恢复同任务；未知POST不自动重投，旧G09不重投",
+    "SOP": "D:/AI视频/VJ-1106/api-tools/docs/MiniMax-H3-API视频生成SOP-20261114-v1.md"
+  },
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "ratio": "16:9",
+  "audio": "native voices and ambience retained; no BGM; output must be audited",
+  "units": [
+    {
+      "id": "H01",
+      "title": "江岸火线开场",
+      "version": "v2.1",
+      "duration": 5,
+      "edit_duration": 5,
+      "planned_adopt": 4,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-redesign-20261115-v2\\references\\R01-山河火线-v2.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "6bc927d316fed5f65f2403c5696321c8962493de8cad08432c28d0f461e45a41"
+    },
+    {
+      "id": "H02",
+      "title": "庞统脸与掌同时可读",
+      "version": "v2.1",
+      "duration": 7,
+      "edit_duration": 7,
+      "planned_adopt": 6,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E12-庞统托印.png",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E14-掌心铜印25毫米.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "5a9e7ad49e597be01197d3f9adabe7c32c0d5a9b470eafebc537d915839c10d8"
+    },
+    {
+      "id": "H09",
+      "title": "马谡诸葛亮同场连续表演",
+      "version": "v2.1",
+      "duration": 12,
+      "edit_duration": 12,
+      "planned_adopt": 10,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-redesign-20261115-v2\\references\\R03-马谡诸葛亮同场-v2.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "d508a50e32876cb93423609071b1181ae3a4d28c4279bd142da54f2470985f12"
+    },
+    {
+      "id": "H03",
+      "title": "冯习张南同场建立夹击",
+      "version": "v2.1",
+      "duration": 9,
+      "edit_duration": 9,
+      "planned_adopt": 7,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N01-冯习张南-救驾受阻-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "a77c4db28a67a120c270cc23f3a8fd9e98e4079bbfebfb7faaace2453f84c93d"
+    },
+    {
+      "id": "H04",
+      "title": "傅肜听答进完整表演",
+      "version": "v2.1",
+      "duration": 9,
+      "edit_duration": 9,
+      "planned_adopt": 7,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N02-傅肜-断后拒降-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "0d03cf2627565aee00cd8adb6221ffd6ac5f0d7940bab24bdcd143b4466e7006"
+    },
+    {
+      "id": "H05",
+      "title": "沙摩柯回望与中箭中断",
+      "version": "v2.1",
+      "duration": 5,
+      "edit_duration": 5,
+      "planned_adopt": 3,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N03-沙摩柯-孤骑回望-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "f0032649fd1b06d7de1638a50a79aa1e0d2bb4ddb65b69408ce0cbe38a700608"
+    },
+    {
+      "id": "H06",
+      "title": "骨朵与空鞍的结果",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "planned_adopt": 3,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-redesign-20261115-v2\\references\\R02-人去马还行-v2.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "f5a2ac6a4fd82323b3e76067112684e99f6575a9a21f29de0ecc2203d0ed54b6"
+    },
+    {
+      "id": "H07",
+      "title": "上方谷暴雨只压火",
+      "version": "v2.1",
+      "duration": 5,
+      "edit_duration": 5,
+      "planned_adopt": 4,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N08-上方谷-同一演员雨火-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "2fc245d1bc3e82b0a854bf70553400a5ce9b41c67d709a0a9fc5fd05f158e452"
+    },
+    {
+      "id": "H08",
+      "title": "雨中仰望闭口",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "planned_adopt": 3,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N08-上方谷-同一演员雨火-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "prompt_sha256": "4dfe4a919bbd992885cf1a58c321cccae8f500d0b6100d815eab15f213bc4fc6"
+    },
+    {
+      "id": "H10",
+      "title": "奔赴与梦中警告",
+      "version": "v2.1",
+      "duration": 9,
+      "edit_duration": 9,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E11-白马第一视角.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "cde1f3dab82d5e693e2808fdd08e11ee7b27d1a67023773a97e1413b406d3a68"
+    },
+    {
+      "id": "H11",
+      "title": "同一托付完成交印",
+      "version": "v2.1",
+      "duration": 9,
+      "edit_duration": 9,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E14-掌心铜印25毫米.png"
+      ],
+      "depends_on": "H02",
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "9a21742e4f526ef2f04065e28d8398038eed0803d1ea9ddd627c32072cd54fd2"
+    },
+    {
+      "id": "H12",
+      "title": "败营救伤兵",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E02-夷陵营内撤军-找回原图.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "f3c4d72aaa28af7d8d7a86450d9a3458338d43e4848c57e1d2afe1b957e66993"
+    },
+    {
+      "id": "H13",
+      "title": "汉旗焦裂",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E03-夷陵汉旗.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "57bf8f50c4638755c8f85006a4aa5d9610ae42e0f110db1f9ed8ee30078ca3d1"
+    },
+    {
+      "id": "H14",
+      "title": "雨压湿木余烬",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v1\\G14\\end-selected.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "5ea7fd39422823a4a2f1810a7cef62dc70d3f79c187f3fabb039860066ab0ad2"
+    },
+    {
+      "id": "H15",
+      "title": "关羽握刀到刀落地",
+      "version": "v2.1",
+      "duration": 8,
+      "edit_duration": 8,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\existing\\E05-关羽持刀.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "7ed8f0c7b9a657d4184d48374d3c19d0db387df1956e9f57184d6d4da00b0ad0"
+    },
+    {
+      "id": "H16",
+      "title": "五丈原地图前停手",
+      "version": "v2.1",
+      "duration": 8,
+      "edit_duration": 8,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N05-五丈原-灯前未竟-v1.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "292ca4b3586f47dbf9e5ee8f7e299717d6771af56a3f0b25ebf335b157420443"
+    },
+    {
+      "id": "H17",
+      "title": "同帐灯灭",
+      "version": "v2.1",
+      "duration": 4,
+      "edit_duration": 4,
+      "reference_paths": [],
+      "depends_on": "H16",
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "701ee769881d71eb9584affe13fd59c079ccb2b2cef789064ed0af311e655e75"
+    },
+    {
+      "id": "H18",
+      "title": "第一视角抓牢救人",
+      "version": "v2.1",
+      "duration": 10,
+      "edit_duration": 10,
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v1\\G24-25-v2\\P01-伤兵无接触起始图-v2.png"
+      ],
+      "depends_on": null,
+      "status": "prepared",
+      "reason": "整体重做：旧素材人声污染或跨镜动作需重新统一；沿用v2.1剧情与原句",
+      "prompt_sha256": "dd98ca7f44c07a3a785b6ae2b4be5a230811f551065d0e36f6b840a158e9da82"
+    },
+    {
+      "id": "H03B",
+      "title": "告急对白定点修正",
+      "duration": 5,
+      "edit_duration": 5,
+      "version": "v2.1-correction1",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N01-冯习张南-救驾受阻-v1.png"
+      ],
+      "depends_on": null,
+      "reason": "H03对白重复且混入无关喊话；独立补一个简短告急镜，旧H03保留作后续无对白战况画面。",
+      "prompt_sha256": "7a609ddfee2f9c7201bb62dfa40d9ea45dd5e4943e02c745272661d62a05b007"
+    },
+    {
+      "id": "H16B",
+      "title": "五丈原无对白手部修正",
+      "duration": 5,
+      "edit_duration": 5,
+      "version": "v2.1-correction1",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v2.1\\H16\\end-selected.png"
+      ],
+      "depends_on": null,
+      "reason": "H16擅加无关对白且嘴部持续动作；只拍既有末帧手部与灯，同一地图／衣袖不变，避免错口型。",
+      "prompt_sha256": "fe4110d3043fcf396a372686573daa6e6eda813aa28bc8c70b20a67d6b321c81"
+    },
+    {
+      "id": "H05B",
+      "title": "沙摩柯一次失力修正",
+      "duration": 5,
+      "edit_duration": 5,
+      "version": "v2.1-correction2",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-opening-20261114\\references\\new\\N03-沙摩柯-孤骑回望-v1.png"
+      ],
+      "depends_on": null,
+      "reason": "H05产生突兀血雾，改为一次短促受力，接空鞍结果；不展示箭体穿模。",
+      "prompt_sha256": "73c1c4b6a5f71a3b869ed87059026f0ccb2be0e826a919949c2af740ab6085a7"
+    },
+    {
+      "id": "H18B",
+      "title": "救人严格第一视角修正",
+      "duration": 9,
+      "edit_duration": 9,
+      "version": "v2.1-correction2",
+      "reference_paths": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-H3-20261115-v1\\G24-25-v2\\P01-伤兵无接触起始图-v2.png"
+      ],
+      "depends_on": null,
+      "reason": "H18画面右侧露出施救者腰部，违背第一视角；重做严格只有前臂进入画面。",
+      "prompt_sha256": "a488f8c81ab9f69d1ee40c90e449106feef9b908330a89f6e3896e9c673a9f01"
+    }
+  ]
+}

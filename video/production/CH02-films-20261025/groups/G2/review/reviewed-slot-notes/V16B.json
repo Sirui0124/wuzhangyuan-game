@@ -1,0 +1,42 @@
+{
+  "id": "V16B",
+  "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+  "reviewState": "reviewed",
+  "pictureUsability": "usable",
+  "observations": [
+    "0–4.8秒同场灰袍苟安闭口倾听与低头反应；4.8秒后才切为苟安说话。半秒全序列覆盖全段，实际浏览器静音1x播放0–12.117秒，截图检查首尾。未见玩家露脸、伪证据或肢体异常。"
+  ],
+  "issues": [
+    {
+      "type": "wrong-visible-speaker",
+      "state": "repaired",
+      "originalSubclip": "V16B-01",
+      "originalTime": [
+        0,
+        2.25
+      ],
+      "repair": "同SHA复用G1 L01连续0–4.8秒闭口反应，非定格和循环；既有玩家WAV复用，原声重复人声静音。"
+    },
+    {
+      "type": "native-tail-cut",
+      "state": "repaired",
+      "repair": "V16B-02保留原生7.291667秒，避免请求整数7秒截掉原句字尾；声音内容未听审。"
+    }
+  ],
+  "integrationConditions": [
+    "沿用UI-N2选B入口与UI-EARLY后续；不能因认罪句自动授予未取得文书或结论。"
+  ],
+  "audioIssues": [
+    "玩家原句复用既有固定声音WAV，未新增TTS；NPC原声待逐字听审及统一处理。"
+  ],
+  "dynamicReview": [
+    {
+      "method": "0.5-second full sequence plus browser screenshots at first frame and actual end",
+      "interval": [
+        0,
+        12.117
+      ],
+      "sequence": "review/latest-picture-sequences/V16B/sequence-01.jpg"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "updated": "2026-10-25 17:53:57",
+  "pictureProductionComplete": true,
+  "logicalCandidates": 63,
+  "expectedLogicalSlots": 63,
+  "endingRouteCompilations": 6,
+  "audioComplete": false,
+  "userApproved": false,
+  "gameIntegrated": false,
+  "reviewUrl": "http://127.0.0.1:8894/",
+  "endingReviewPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\审片.html",
+  "verification": [
+    "用户本轮24条原评论与本机持久化记录逐字符一致，旧版本15条通过观察保留",
+    "当前63逻辑槽文件齐；各次技术/画面检查仅适用于对应文件SHA，最新结论见audit报告",
+    "本轮后续6组报告按真实SHA聚合，不从历史完成状态继承",
+    "有序抽帧、切口逐帧和播放到末尾不等同逐字听审或用户通过",
+    "最终63现行独立成片视频轨完整且解码通过，7结局输出技术检查及所有G6源SHA匹配；这些均不代替逐字听审"
+  ],
+  "limitations": [
+    "实际逐字听审、音色、细口型和无BGM确认仍待审；ASR仅文字定位",
+    "V25缺失计划原句的请求结果未知，保留旧片不采用缺句版本",
+    "准确文书事实已保留来源映射，游戏信息层尚未实现，不烧入视频",
+    "L01/L02、互斥选择、确认、署名、收件、回令入口条件继续保留",
+    "无新克隆；未接入游戏；新版本不继承旧通过"
+  ],
+  "historicalUnknown": "G5 V32A-01 original submission outcome remains unknown; original record preserved and never rePOSTed; visual slot fulfilled by documented reuse",
+  "noNewTTS": false,
+  "candidateProductionComplete": true,
+  "pictureUsabilityComplete": true,
+  "pictureUsabilityStatus": "current-63-picture-reports-matched；batch2音画闭环62段，V25音频缺口保留",
+  "endingCompilationsStatus": "batch2-six-routes-and-one-epilogue-refreshed-and-root-verified",
+  "pictureUsabilityCounts": {
+    "usable": 21,
+    "usable-with-integration-condition": 42,
+    "needs-repair": 0,
+    "pending": 0
+  },
+  "pictureUsabilityReport": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\picture-usability\\current.json",
+  "standaloneEpilogues": 1,
+  "reviewEvidenceBoundary": "制作自查基于全时段有序抽帧、关键动作/切点密集序列及实播中实际观察到的时刻；播放器到ended仅证明可播放，不能冒称模型连续看见每一帧、人工逐帧审核或用户通过。",
+  "historicalVerification": [
+    {
+      "phase": "12:17候选生产阶段，后续新版需重新核验",
+      "statement": "6 ending compilations match final owning paths and SHA256"
+    }
+  ],
+  "endingKnownVisualRepair": {
+    "id": "E3",
+    "reportedVersion": "V2",
+    "issue": "末帧1797/74.875秒残留已拆出的V42桌面，空铺后闪一帧",
+    "owner": "补充第一二章结局视频",
+    "status": "closed-current-V3",
+    "scope": "仅替换末帧，保持总帧数/时长及音频；不覆盖逻辑片",
+    "sha256": "6e366d11bcbf9e71fa0a3b200fd7253f103552d3327623c808c74bf0e762c57d",
+    "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\E3-tail-repair.json"
+  },
+  "endingCurrentVerification": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\picture-usability\\ending-current-integrity.json",
+  "endingReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+  "pictureUsabilityCompletedAt": null,
+  "finalCurrentAcceptance": "audit/batch2/current.json",
+  "userFeedbackSnapshot": "reviews/user-20261025-batch2/comments-and-versions.json",
+  "latestUserReviewBoundary": "V27；V28A起未审",
+  "audioRepairScope": "全部63段自查角色/导演说明误读与冗长；优先原声和中央76条，仅缺句使用Seed-Audio1.0实际上传角色参考。未知P02不重投。",
+  "requiredPictureReviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "batch2Complete": false,
+  "audioProductionComplete": false,
+  "batch2UserReviewSnapshot": "reviews/user-20261025-batch2/comments-and-versions.json",
+  "noNewPresetTTS": true,
+  "batch2ResolvedSlots": 62,
+  "batch2UnresolvedSlots": [
+    "V25"
+  ],
+  "reviewDelivery": "reviews/user-20261025-batch2/第二批返修与复审说明.md"
+}

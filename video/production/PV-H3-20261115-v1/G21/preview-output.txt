@@ -1,0 +1,27 @@
+仅预览请求；未读取密钥、未联网、未提交。实际提交时添加 -Submit。
+{
+  "model": "MiniMax-H3",
+  "content": [
+    {
+      "text": "生成一条5秒历史战争真人电影镜头，横向16:9，MiniMax-H3，768P。真实演员、实物衣甲与自然受力，50mm正常透视，适当景深。自然中性色温，无整体黄偏，火光只局部照暖；保持参考里的时段、气候和角色身份。\r\n\r\n参考图1锁定监斩台中景、同一演员、黑冠、蓝灰袍、桌案、左手扶案和初始站姿；参考图2锁定羽扇正确展开宽度及掩面动作终点，不把掩面终点提前当成起始状态。起镜右手持同一把宽灰白羽扇于腰前，扇面从开始就约30厘米宽、总长46厘米，不使用参考图1旧的窄扇。0至2.5秒他慢慢举起右手，羽扇上移自然遮住眉眼和鼻部，头稍低，左手始终撑案；2.5至5秒动作落定、身体保留呼吸。手握真实单柄，五指不融化，羽毛数量和扇形在上举时稳定，不缩放扇子，不把人脸溶成羽毛。\r\n\r\n无音频，禁止生成对白、旁白、音乐、音效或其他声音；提示中台词仅规定可见说话口型，不将角色名和导演说明做成画面文字。无字幕、无可读说明卡、无工作文档、无水印、无黑边、无分屏。不开头淡入、不结尾淡出、不冻结，保持真实连续动作。禁止油画、游戏CG、概念插画、塑料皮肤、过度HDR、人物变脸、身体融合和兵器漂移。",
+      "type": "text"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/f6d27c8a99ff7ecb55e5c5a14f5c356f7448342ac489192b6a866d994085a196.jpg"
+      },
+      "role": "reference_image"
+    },
+    {
+      "type": "image_url",
+      "image_url": {
+        "url": "https://res.cloudinary.com/cpxdw5vd/image/upload/parallel-world/minimax-reference/9f8bdb01edb16072e7763ed1390776500704a7e98ae5967e59d7264fbba40488.jpg"
+      },
+      "role": "reference_image"
+    }
+  ],
+  "resolution": "768P",
+  "duration": 5,
+  "ratio": "16:9"
+}

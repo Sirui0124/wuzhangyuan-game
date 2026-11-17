@@ -1,0 +1,112 @@
+{
+  "id": "CH2-LY01-009",
+  "expected": "得先弄清苟安现在的打算，也许还来得及。",
+  "sha256": "3fec627cdf39bdf62ff573d514e097168aac81c52198627c917abb302a467586",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY01-009-v1.wav",
+  "recognized": "得先弄清苟安现在的打算也许还来得及",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.82,
+      "text": "得先弄清苟安现在的打算",
+      "noSpeechProbability": 0.19274018704891205,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.28,
+          "text": "得"
+        },
+        {
+          "start": 0.28,
+          "end": 0.42,
+          "text": "先"
+        },
+        {
+          "start": 0.42,
+          "end": 0.58,
+          "text": "弄"
+        },
+        {
+          "start": 0.58,
+          "end": 0.76,
+          "text": "清"
+        },
+        {
+          "start": 0.76,
+          "end": 0.92,
+          "text": "苟"
+        },
+        {
+          "start": 0.92,
+          "end": 1.08,
+          "text": "安"
+        },
+        {
+          "start": 1.08,
+          "end": 1.28,
+          "text": "现在"
+        },
+        {
+          "start": 1.28,
+          "end": 1.46,
+          "text": "的"
+        },
+        {
+          "start": 1.46,
+          "end": 1.62,
+          "text": "打"
+        },
+        {
+          "start": 1.62,
+          "end": 1.82,
+          "text": "算"
+        }
+      ]
+    },
+    {
+      "start": 2.76,
+      "end": 3.76,
+      "text": "也许还来得及",
+      "noSpeechProbability": 0.19274018704891205,
+      "words": [
+        {
+          "start": 2.76,
+          "end": 3.08,
+          "text": "也"
+        },
+        {
+          "start": 3.08,
+          "end": 3.22,
+          "text": "许"
+        },
+        {
+          "start": 3.22,
+          "end": 3.36,
+          "text": "还"
+        },
+        {
+          "start": 3.36,
+          "end": 3.5,
+          "text": "来"
+        },
+        {
+          "start": 3.5,
+          "end": 3.62,
+          "text": "得"
+        },
+        {
+          "start": 3.62,
+          "end": 3.76,
+          "text": "及"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

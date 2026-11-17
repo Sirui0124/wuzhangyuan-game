@@ -1,0 +1,44 @@
+{
+  "id": "CH2-LY09-P03",
+  "expected": "李严知道？",
+  "sha256": "53c095e0c7b08ee9592a9251e582eb52851139369b459873ba37102a20e59fed",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-P03-v1.wav",
+  "recognized": "李言之道",
+  "similarity": 0.5,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.02,
+      "text": "李言之道",
+      "noSpeechProbability": 0.15855419635772705,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.36,
+          "text": "李"
+        },
+        {
+          "start": 0.36,
+          "end": 0.64,
+          "text": "言"
+        },
+        {
+          "start": 0.64,
+          "end": 0.86,
+          "text": "之"
+        },
+        {
+          "start": 0.86,
+          "end": 1.02,
+          "text": "道"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

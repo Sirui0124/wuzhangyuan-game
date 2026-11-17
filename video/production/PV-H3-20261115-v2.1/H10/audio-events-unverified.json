@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.837
+        },
+        {
+          "label": "Horse",
+          "p": 0.6183
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.467
+        },
+        {
+          "label": "Animal",
+          "p": 0.1815
+        },
+        {
+          "label": "Music",
+          "p": 0.1741
+        },
+        {
+          "label": "Neigh, whinny",
+          "p": 0.1464
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0149
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0148
+        },
+        {
+          "label": "Run",
+          "p": 0.0107
+        },
+        {
+          "label": "Inside, large room or hall",
+          "p": 0.0084
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0084
+        },
+        {
+          "label": "Computer keyboard",
+          "p": 0.0083
+        }
+      ],
+      "music": 0.1741
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.868
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0315
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0295
+        },
+        {
+          "label": "Horse",
+          "p": 0.0255
+        },
+        {
+          "label": "Zipper (clothing)",
+          "p": 0.0214
+        },
+        {
+          "label": "Animal",
+          "p": 0.0186
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0181
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0139
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0112
+        },
+        {
+          "label": "Crunch",
+          "p": 0.0111
+        },
+        {
+          "label": "Scrape",
+          "p": 0.0095
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.0092
+        }
+      ],
+      "music": 0.0066
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "clips": [
+    {
+      "id": "V42",
+      "sha256": "1180ff7d86278d884b8cfc386567972e9cca11f0dc775348ddfd9195fea22405",
+      "pictureUsability": "needs-repair",
+      "userApproved": false,
+      "reviewMethod": "根任务静态关键帧独立复核；原组另已动态确认，不以此声称全片连续审查",
+      "evidence": "continuity/V42-paper-spot.jpg",
+      "issues": [
+        {
+          "time": [
+            8,
+            14
+          ],
+          "state": "confirmed",
+          "description": "纸面可辨大段无意义汉字；去后期浮层未处理原生伪字，须换净源。新源必须按新SHA复验。"
+        }
+      ]
+    },
+    {
+      "id": "V21",
+      "sha256": "25c22ab04e07e1e223e4b84fde11c836445e0c387c85814d6dcbb99a820ef59a",
+      "pictureUsability": "needs-repair",
+      "userApproved": false,
+      "reviewMethod": "独立完整视频轨解码与末PTS/容器时长核验，非视觉观看",
+      "issues": [
+        {
+          "state": "confirmed",
+          "description": "容器85.86秒，视频2029帧/末PTS84.583333秒，约1.28秒轨覆盖差异；须原组核查并修复，不能只凭播放器ended通过。"
+        }
+      ]
+    }
+  ]
+}

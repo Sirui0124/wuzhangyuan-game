@@ -1,0 +1,51 @@
+@import url('/ending-album.css');
+@import url('/achievement-cards.css');
+@import url('/folio-materials.css');
+/* Expanded archive continues the exact same card artwork and live title as the map. */
+.ending-album-host{background:#111715;color:#e2d5ba}
+.ending-album{background:radial-gradient(ellipse at 20% 30%,#50433222,transparent 65%),#111715}
+.ending-album:before{content:none}
+.album-header h1{font-size:27px;letter-spacing:3px}
+.album-header,.album-toolbar,.album-book,.album-footer{max-width:1180px}
+.album-toolbar{padding-top:12px;margin-bottom:18px}
+.album-book{border:0;background:transparent;box-shadow:none;border-radius:0}
+.album-spread{grid-template-columns:minmax(230px,.9fr) minmax(0,1.3fr);min-height:0;background:transparent;gap:clamp(24px,5vw,76px);align-items:center}
+.album-picture-page{padding:12px 20px;background:none;border:0}
+.album-collectible-cover{width:100%;max-width:320px;margin:auto;filter:drop-shadow(0 12px 18px #0008)}
+.album-page-number{color:#9e9279;font-size:12px;margin:16px 0 0}
+.album-story-page{padding:30px 24px;background:none;color:#d9cfb9;min-width:0}
+.album-story-page .album-eyebrow{color:#a7987b;font-size:12px}
+.album-story-page h2{font-family:WuzhangBrush,KaiTi,'Kaiti SC',serif;font-size:clamp(24px,2.5vw,36px);line-height:1.5;letter-spacing:1px;margin:14px 0 8px;text-wrap:balance;overflow-wrap:anywhere}
+.album-detail-title{font-size:14px;color:#a99b7c}
+.album-ink-rule{margin:22px 0;background:#9f8452}
+.album-description,.album-reflection{font-size:17px;line-height:1.9;white-space:pre-line}
+.album-reflection{color:#b7a788}
+.album-record{border-color:#9c89603d;margin-top:24px}
+.album-record dt{color:#9e9279}.album-record dd{color:#d2c3a4}
+.album-flip{background:transparent;border-color:#9c89603d;padding:16px 0;margin-top:20px;color:#c8b998}
+.album-flip button{border:0!important;padding:8px;background:transparent}
+.album-library{display:block;background:none}
+.album-book-intro{display:none}
+.album-shelf{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:28px;padding:12px 6px 24px;background:none;align-items:start}
+.album-card,.album-card.sealed{background:transparent!important;border:0!important;box-shadow:none;padding:0!important;color:inherit!important;filter:drop-shadow(0 6px 8px #0007)}
+.album-card:hover{transform:translateY(-3px);box-shadow:none;filter:brightness(1.12)}
+.album-card .album-collectible-cover{max-width:none}
+.album-footer{color:#8e8879;letter-spacing:0}
+@media(max-width:650px){
+ .ending-album{padding:18px 16px}
+ .album-spread{display:block}
+ .album-picture-page{padding:8px 20px 0;border:0}
+ .album-collectible-cover{max-width:230px}
+ .album-story-page{padding:24px 8px 8px}
+ .album-story-page h2{font-size:26px}
+ .album-description,.album-reflection{font-size:16px}
+ .album-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;padding:8px 0 20px}
+ .album-header h1{font-size:22px}.album-progress-track{display:none}
+ .album-flip{padding:12px 0}
+}
+@media(prefers-reduced-motion:reduce){.album-card:hover{transform:none}}
+
+.album-chapters{display:flex;flex-wrap:wrap;gap:10px 24px;max-width:1180px;margin:0 auto 18px;padding:0 6px;border-bottom:1px solid #9c896033}
+.album-chapters button{padding:8px 0;border:0;border-bottom:1px solid transparent;background:none;color:#a99b7c;font:17px/1.5 KaiTi,'Kaiti SC',serif;cursor:pointer}
+.album-chapters button[aria-pressed=true]{color:#eddbb4;border-bottom-color:#bd9c61}
+.album-chapters button:focus-visible{outline:1px solid #eddbb4;outline-offset:3px}

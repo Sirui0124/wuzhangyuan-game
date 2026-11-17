@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-06",
+  "tool": "built-in image_gen.imagegen",
+  "mode": "image editing with layout and style references",
+  "nativeBlenderRender": false,
+  "userApproval": true,
+  "images": [
+    {
+      "camera": "camp",
+      "file": "art/camp.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/camp.png",
+      "styleReference": "../../visuals/runtime/scenes/yiling/yiling_reception_camp-v1.png",
+      "prompt": "prompts/camp.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-e603dc0c-7ca9-4f2d-84f9-0f2bd6d5bec2.png",
+      "sha256": "364ab5a6828f948f906df0193b9e58dce4649de6ce9c0fed0513f4bfcbfd2abc"
+    },
+    {
+      "camera": "river",
+      "file": "art/river.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/river.png",
+      "styleReference": "art/camp.png",
+      "prompt": "prompts/river.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-be264cb6-c7e9-46d5-a294-2bb6cb499601.png",
+      "sha256": "e1d9d7a30d250a37ad719c3381d2ef18193810db426ccf07c4264085e9ff1e80"
+    },
+    {
+      "camera": "east",
+      "file": "art/east.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/east.png",
+      "styleReference": "art/camp.png",
+      "prompt": "prompts/east.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-160f7c90-b587-47d6-9c5c-337a7633051c.png",
+      "sha256": "a6229ab4a0c53c89299b16f463c6faa7cb1b22ddfa5e238a6e1db5b839fca892"
+    },
+    {
+      "camera": "south",
+      "file": "art/south.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/south.png",
+      "styleReference": "art/camp.png",
+      "prompt": "prompts/south.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-5fccda59-5918-4a5c-bba3-fd52f6558bef.png",
+      "sha256": "8034f9858004be9285c42232e601137a7b586260fc28c91d10c887cba1b82a19"
+    },
+    {
+      "camera": "imperial",
+      "file": "art/imperial.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/imperial.png",
+      "styleReference": "art/camp.png",
+      "prompt": "prompts/imperial.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-29f11101-cd5b-458c-b225-c3983b79885f.png",
+      "sha256": "9642ef67c3ed8e9515de32c498d9b142dcf0191582f6f775ac1d912ff022fe8a"
+    },
+    {
+      "camera": "overview",
+      "file": "art/overview.png",
+      "nativeSize": [
+        1672,
+        941
+      ],
+      "upscaled": false,
+      "sourceImage": "../yiling-camp-v2-20261106/overview.png",
+      "styleReference": "art/camp.png",
+      "prompt": "prompts/overview.txt",
+      "generatedSource": "C:/Users/zhousirui/.codex/generated_images/01a1b065-b511-7850-8bc1-8f7494573893/exec-3ba89708-02dd-4909-9871-7d458b8b1d10.png",
+      "sha256": "245427f5718f6c9a23a79fc17f4aadcb3a817de748b7d521ca0030dabd95cd6b"
+    }
+  ],
+  "userReview": {
+    "date": "2026-11-06",
+    "userQuote": "可以的，这个质感非常完美了。请你相应帮忙优化和完善，做完整。",
+    "approved": "六张v3精修图的结构与视觉质感。",
+    "scopeLimit": "本次新接入的场景试玩界面需用户继续试玩；原生Blender文件不等于最终精修PNG。"
+  }
+}

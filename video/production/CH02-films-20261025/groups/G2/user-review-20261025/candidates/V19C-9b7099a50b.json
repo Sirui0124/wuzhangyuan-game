@@ -1,0 +1,66 @@
+{
+  "id": "V19C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-9b7099a50b.mp4",
+  "sha256": "c144e492eec64198f929c38e8fbbd3d989c2f66878da18b80a0df7a4a826e87e",
+  "videoFrames": 246,
+  "videoSeconds": 10.25,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V19C",
+    "parts": [
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-player-cd0d1f84c1.mp4",
+        "range": [
+          0,
+          4.083333333333333
+        ]
+      },
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-response-e2f8b181df.mp4",
+        "range": [
+          0,
+          6.25
+        ]
+      }
+    ],
+    "audio": null,
+    "sourceNodes": [
+      "CH2-LY04-Q4C",
+      "CH2-LY04-Q4FB1"
+    ],
+    "audioMode": "parts",
+    "childIds": [
+      "V19C-player",
+      "V19C-response"
+    ]
+  },
+  "sourceParts": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-player-cd0d1f84c1.mp4",
+      "range": [
+        0,
+        4.083333333333333
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-player-cd0d1f84c1.mp4",
+      "sourceSha256": "6e4562cb0df65313529090fb9f08b9bb4e0dbab95063a81520a364a79596d218"
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-response-e2f8b181df.mp4",
+      "range": [
+        0,
+        6.25
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V19C-response-e2f8b181df.mp4",
+      "sourceSha256": "49ec399732592c2c7c3582fe4bd3864dfdfb1378611518b047efe77731df7e4a"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

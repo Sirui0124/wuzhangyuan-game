@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Eruption",
+          "p": 0.1897
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.111
+        },
+        {
+          "label": "Pink noise",
+          "p": 0.055
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0528
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0452
+        },
+        {
+          "label": "Wind",
+          "p": 0.044
+        },
+        {
+          "label": "White noise",
+          "p": 0.043
+        },
+        {
+          "label": "Waves, surf",
+          "p": 0.0383
+        },
+        {
+          "label": "Ocean",
+          "p": 0.031
+        },
+        {
+          "label": "Music",
+          "p": 0.0245
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "p": 0.0214
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0188
+        }
+      ],
+      "music": 0.0245
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.2652
+        },
+        {
+          "label": "Animal",
+          "p": 0.061
+        },
+        {
+          "label": "Eruption",
+          "p": 0.045
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0415
+        },
+        {
+          "label": "Rustling leaves",
+          "p": 0.0382
+        },
+        {
+          "label": "Music",
+          "p": 0.0351
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0345
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0234
+        },
+        {
+          "label": "Bird",
+          "p": 0.0214
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.0183
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0163
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0144
+        }
+      ],
+      "music": 0.0351
+    }
+  ]
+}

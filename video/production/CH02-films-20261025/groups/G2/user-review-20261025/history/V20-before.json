@@ -1,0 +1,140 @@
+{
+  "delivery": {
+    "id": "V20",
+    "name": "调度决定与受杖前签认",
+    "entry": "V19A/B/C结束",
+    "next": [
+      "UI-RETURN-ACCOUNT"
+    ],
+    "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+    "children": [
+      "V20-01",
+      "V20-02",
+      "V20-03",
+      "V20-04",
+      "V20-05",
+      "V20-06",
+      "V20-07",
+      "V20-08"
+    ],
+    "subclips": [
+      "V20-01",
+      "V20-02",
+      "V20-03",
+      "V20-04",
+      "V20-05",
+      "V20-06",
+      "V20-07",
+      "V20-08"
+    ],
+    "status": "picture_reviewed_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+    "technical": {
+      "duration": 67.84,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "decodedVideoFrames": 1628,
+      "videoTrackSeconds": 67.83333333333333,
+      "videoEndSeconds": 67.833333,
+      "videoTrackComplete": true
+    },
+    "visualReview": [
+      "全序列核查管事/仓吏/里正口述、报告查看及签认时序，未见玩家脸或新增签名落笔。LY06-015报告正文和LY06-018送达记录各在操作2秒后显示。V20-05前3.95秒回看已知015正文，后接NPC口述；G6仅审旧7秒同画面前缀，本版另保留原生7.292秒尾部。V20-07的已知018回看不证明受杖前这一新口述；V20-08先取旧账再口述，3.3秒起回看旧D04，裁去7.3秒后生成假菜单，准确卡承载尾部，未新增游戏按钮。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "audioReview": "未逐字听审；未新增TTS",
+    "assemblySha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+    "userApproved": false,
+    "pictureUsability": "usable-with-integration-condition",
+    "integrationConditions": [
+      "LY06-015与LY06-018仅在各自2秒准确正文显示后取得；V20-05回看015不重复授予。",
+      "V20-07回看018只含同日送达/签认；签字在受杖前的新信息仅来自LY06-019口述，不伪造签名动作或杖责回放。",
+      "V20-08回看D04不是新当天仓账证据；当天仍记缺额的新信息仅来自LY06-021口述。结束只回UI-RETURN-ACCOUNT，不把生成假菜单接为按钮。"
+    ]
+  },
+  "usability": {
+    "id": "V20",
+    "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+    "reviewState": "reviewed",
+    "pictureUsability": "usable-with-integration-condition",
+    "observations": [
+      "全序列核查管事/仓吏/里正口述、报告查看及签认时序，未见玩家脸或新增签名落笔。LY06-015报告正文和LY06-018送达记录各在操作2秒后显示。V20-05前3.95秒回看已知015正文，后接NPC口述；G6仅审旧7秒同画面前缀，本版另保留原生7.292秒尾部。V20-07的已知018回看不证明受杖前这一新口述；V20-08先取旧账再口述，3.3秒起回看旧D04，裁去7.3秒后生成假菜单，准确卡承载尾部，未新增游戏按钮。"
+    ],
+    "issues": [
+      {
+        "type": "fake-interface",
+        "state": "repaired",
+        "repair": "裁原片7.3秒后假菜单，以准确既有正文承载尾部"
+      },
+      {
+        "type": "oral-feedback-burned-as-document",
+        "state": "repaired",
+        "repair": "V20-05及07改为已取得015/018回看，不作新文书"
+      }
+    ],
+    "integrationConditions": [
+      "LY06-015与LY06-018仅在各自2秒准确正文显示后取得；V20-05回看015不重复授予。",
+      "V20-07回看018只含同日送达/签认；签字在受杖前的新信息仅来自LY06-019口述，不伪造签名动作或杖责回放。",
+      "V20-08回看D04不是新当天仓账证据；当天仍记缺额的新信息仅来自LY06-021口述。结束只回UI-RETURN-ACCOUNT，不把生成假菜单接为按钮。"
+    ],
+    "audioIssues": [
+      "未逐字听审及BGM听审；NPC原声可能错词/多词，统一音频阶段处理。",
+      "无新增TTS；玩家句仅复用已经存在的固定声线WAV。"
+    ],
+    "dynamicReview": [
+      {
+        "method": "direct visual inspection of every 0.5-second sampled sequence; not continuous frame-by-frame viewing",
+        "range": [
+          0,
+          67.84
+        ],
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\latest-picture-sequences\\V20\\identity.json"
+      },
+      {
+        "method": "1x muted natural playback; ended log only proves playback completion",
+        "id": "NEW-V20",
+        "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+        "event": "ended",
+        "start": 0,
+        "end": 67.84,
+        "duration": 67.84,
+        "time": "2026-10-25T06:27:46.931Z"
+      }
+    ],
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+    "userApproved": false,
+    "technical": {
+      "duration": 67.84,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca"
+    }
+  }
+}

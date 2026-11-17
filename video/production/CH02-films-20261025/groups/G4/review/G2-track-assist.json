@@ -1,0 +1,3030 @@
+{
+  "scope": "G4 read-only independent G2 video-track audit. No semantic visual or audio approval; no generation; does not alter G2 files/manifests/delivery.",
+  "startedAt": "2026-10-25T14:26:41+08:00",
+  "completedAt": "2026-10-25T14:26:41+08:00",
+  "timezone": "Asia/Shanghai",
+  "method": "PyAV libavformat metadata plus independent full sequential video decode counting every presented frame and PTS/duration; separate complete audio decode for codec-padding distinction. No OpenCV metadata frame-count shortcut. Incremental checks may reuse full-decode evidence only for identical SHA and file metadata, with a new identity check.",
+  "selection": {
+    "assembledBaseDraftsExcluded": [
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C.mp4",
+      "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20.mp4"
+    ],
+    "parentManifest": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+    "parentManifestSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+    "liveIndex": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-live-index.json",
+    "liveIndexSha256": "a5c9bef0e803088caffd00d1660f286489e77ebd1a181be31aad06664a27b14b",
+    "clarification": "整段只采用本次picture-repair-candidates.json及picture-live-index.json路径与SHA一致的有版本候选；不把无版本Vxx.mp4或旧assembled base当最终。presentable子片只按其当前同名JSON/SHA核对，不宣称覆盖G2其他更高优先级子片或用户通过。"
+  },
+  "parentManifestChangedDuringCheck": false,
+  "liveIndexChangedDuringCheck": false,
+  "summary": {
+    "total": 29,
+    "assembled": 12,
+    "presentableSubclips": 17,
+    "actualConcerns": [],
+    "supersededDuringAudit": [],
+    "parentCandidateAndLiveIndexAgree": true,
+    "maximumContainerTailWithoutVideoSeconds": 0.036999999999999034,
+    "maximumAudioMetadataTailWithoutVideoSeconds": 0.036999999999999034,
+    "allDecodedAtUniform24fps": true,
+    "allIdentitiesAndFilesStable": true
+  },
+  "files": [
+    {
+      "id": "V13",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V13-d3e1ecdffc.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 22.91,
+      "children": [
+        {
+          "id": "V13-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-01.mp4",
+          "sha256": "e92e8143a55ee3a2272e58144b7f62c18408be5ec566a7be75eda0ce8d5b3e19"
+        },
+        {
+          "id": "V13-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-02.mp4",
+          "sha256": "917c160ddd2ca6829f43db37ebab733b4ed0cdc0ca1b27351587574fd4ead70d"
+        },
+        {
+          "id": "V13-03",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V13-03.mp4",
+          "sha256": "e7691d2f292f74e1b3844a31c3d2cf7e1d9bb4c86b60ca342a526b986a2f5410"
+        },
+        {
+          "id": "V13-04",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V13-04.mp4",
+          "sha256": "1775602146bd0170da7329f32756d4bf20ab6b8afa4653b2004a038b75bba143"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:54+08:00",
+      "before": {
+        "bytes": 13307901,
+        "mtimeNs": 1792909228477044000,
+        "modifiedAt": "2026-10-25T14:20:28+08:00"
+      },
+      "sha256": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 22.912,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 22.875,
+        "startTime": 0.0,
+        "declaredFrames": 549,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 549,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 22.833333333333332,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 22.875,
+        "spanSeconds": 22.875,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.0416666666666643,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 22.912,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 22.912,
+          "decoded": {
+            "frameCount": 1074,
+            "samples": 1099776,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 22.890666666666668,
+            "endSeconds": 22.912000000000003,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 22.875,
+        "containerEndSeconds": 22.912,
+        "audioMetadataEndSeconds": 22.912,
+        "containerTailWithoutVideoSeconds": 0.036999999999999034,
+        "audioTailWithoutVideoSeconds": 0.036999999999999034,
+        "containerTailIn24fpsFrames": 0.8879999999999768,
+        "audioTailIn24fpsFrames": 0.8879999999999768,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 13307901,
+        "mtimeNs": 1792909228477044000,
+        "modifiedAt": "2026-10-25T14:20:28+08:00"
+      },
+      "sha256After": "f27f7bd526e99824afa13a03d22d7626719eb0ec7f51a340d497f11f49ed61a9",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:54+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:54+08:00"
+    },
+    {
+      "id": "V14",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V14-9876f85aca.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 14.0,
+      "children": [
+        {
+          "id": "V14-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-01.mp4",
+          "sha256": "ff12e5f2bf98aa1013253943fd4cee3c6a61ca8a2c736b03b1ee24368765cad3"
+        },
+        {
+          "id": "V14-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V14-02.mp4",
+          "sha256": "04f3db7da886ab5c1e03d38757e58e2edc44e843c062c4922d364294df79b78d"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:54+08:00",
+      "before": {
+        "bytes": 1480636,
+        "mtimeNs": 1792908891170437000,
+        "modifiedAt": "2026-10-25T14:14:51+08:00"
+      },
+      "sha256": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 14.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 14.0,
+        "startTime": 0.0,
+        "declaredFrames": 336,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 336,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 13.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 14.0,
+        "spanSeconds": 14.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 13.994,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 13.994,
+          "decoded": {
+            "frameCount": 656,
+            "samples": 671712,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 13.973333333333333,
+            "endSeconds": 13.994,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 14.0,
+        "containerEndSeconds": 14.0,
+        "audioMetadataEndSeconds": 13.994,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1480636,
+        "mtimeNs": 1792908891170437000,
+        "modifiedAt": "2026-10-25T14:14:51+08:00"
+      },
+      "sha256After": "7148ce45f6575fbd3138be39da563dc5d1ab3c0d8a530cdd3507b143b27bb129",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:54+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:54+08:00"
+    },
+    {
+      "id": "V15",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V15-9f5b4100fd.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 41.05,
+      "children": [
+        {
+          "id": "V15-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V15-01.mp4",
+          "sha256": "a10137c2a6040f42e5354407b4e4c7c8c756fe8ac7c88477dab041aa81777365"
+        },
+        {
+          "id": "V15-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.mp4",
+          "sha256": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263"
+        },
+        {
+          "id": "V15-03",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.mp4",
+          "sha256": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed"
+        },
+        {
+          "id": "V15-04",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4",
+          "sha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:54+08:00",
+      "before": {
+        "bytes": 7415420,
+        "mtimeNs": 1792908934870244800,
+        "modifiedAt": "2026-10-25T14:15:34+08:00"
+      },
+      "sha256": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 41.044999999999995,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 41.041666666666664,
+        "startTime": 0.0,
+        "declaredFrames": 985,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 985,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 41.0,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 41.041666666666664,
+        "spanSeconds": 41.041666666666664,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.0416666666666643,
+        "maxPtsStep": 0.041666666666671404,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 41.045,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 41.045,
+          "decoded": {
+            "frameCount": 1924,
+            "samples": 1970160,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 41.024,
+            "endSeconds": 41.045,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 41.041666666666664,
+        "containerEndSeconds": 41.044999999999995,
+        "audioMetadataEndSeconds": 41.045,
+        "containerTailWithoutVideoSeconds": 0.0033333333333303017,
+        "audioTailWithoutVideoSeconds": 0.003333333333337407,
+        "containerTailIn24fpsFrames": 0.07999999999992724,
+        "audioTailIn24fpsFrames": 0.08000000000009777,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 7415420,
+        "mtimeNs": 1792908934870244800,
+        "modifiedAt": "2026-10-25T14:15:34+08:00"
+      },
+      "sha256After": "99523e9a215e43ecb00ffa822e0f5984617ee06f7c0281a4ec1880d52a344c1b",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:54+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:54+08:00"
+    },
+    {
+      "id": "V16A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16A-524f9d9288.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 9.04,
+      "children": [
+        {
+          "id": "V16A-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.mp4",
+          "sha256": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:54+08:00",
+      "before": {
+        "bytes": 1099202,
+        "mtimeNs": 1792908952336001600,
+        "modifiedAt": "2026-10-25T14:15:52+08:00"
+      },
+      "sha256": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 9.041667,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 9.041666666666666,
+        "startTime": 0.0,
+        "declaredFrames": 217,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 217,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.0,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 9.041666666666666,
+        "spanSeconds": 9.041666666666666,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 9.024,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 9.024,
+          "decoded": {
+            "frameCount": 423,
+            "samples": 433152,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.002666666666666,
+            "endSeconds": 9.024,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 9.041666666666666,
+        "containerEndSeconds": 9.041667,
+        "audioMetadataEndSeconds": 9.024,
+        "containerTailWithoutVideoSeconds": 3.333333342681044e-07,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 8.000000022434506e-06,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1099202,
+        "mtimeNs": 1792908952336001600,
+        "modifiedAt": "2026-10-25T14:15:52+08:00"
+      },
+      "sha256After": "c28cbd6ca493e9e9a529b701155fcb7a6815446cecdbbb5b79f3168bb815b0ec",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V16B",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16B-06d787a7de.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 12.12,
+      "children": [
+        {
+          "id": "V16B-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V16B-01.mp4",
+          "sha256": "6d20ea2cf6a2942261eab77220cda15d2a631929e5531d761a35e4c2605540c5"
+        },
+        {
+          "id": "V16B-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16B-02.mp4",
+          "sha256": "5110d6de401d76b286e9b63a20cb39360fe6e826dbbbfd6a53a085b90448583c"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:54+08:00",
+      "before": {
+        "bytes": 3899595,
+        "mtimeNs": 1792908652533017100,
+        "modifiedAt": "2026-10-25T14:10:52+08:00"
+      },
+      "sha256": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 12.116999999999999,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 12.041666666666666,
+        "startTime": 0.041015625,
+        "declaredFrames": 289,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 289,
+        "firstPtsSeconds": 0.041015625,
+        "lastPtsSeconds": 12.041015625,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 12.082682291666666,
+        "spanSeconds": 12.041666666666666,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 12.117,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 12.117,
+          "decoded": {
+            "frameCount": 568,
+            "samples": 581616,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 12.096,
+            "endSeconds": 12.117,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 12.082682291666666,
+        "containerEndSeconds": 12.116999999999999,
+        "audioMetadataEndSeconds": 12.117,
+        "containerTailWithoutVideoSeconds": 0.03431770833333303,
+        "audioTailWithoutVideoSeconds": 0.034317708333334807,
+        "containerTailIn24fpsFrames": 0.8236249999999927,
+        "audioTailIn24fpsFrames": 0.8236250000000354,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 3899595,
+        "mtimeNs": 1792908652533017100,
+        "modifiedAt": "2026-10-25T14:10:52+08:00"
+      },
+      "sha256After": "33fbd077e2c946ac4964361b812b2a9bbe6dd408ff3628572ff600a3560bdce4",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V16C",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V16C-f2ce928d3b.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 18.17,
+      "children": [
+        {
+          "id": "V16C-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.mp4",
+          "sha256": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d"
+        },
+        {
+          "id": "V16C-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V16C-02.mp4",
+          "sha256": "865fdd58ece52c40aad0233776bb3892f1b2a33cffaf457bf2ad071d2940bec8"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 3738856,
+        "mtimeNs": 1792908960276660300,
+        "modifiedAt": "2026-10-25T14:16:00+08:00"
+      },
+      "sha256": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 18.166667,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 18.166666666666668,
+        "startTime": 0.0,
+        "declaredFrames": 436,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 436,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 18.125,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 18.166666666666668,
+        "spanSeconds": 18.166666666666668,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.0416666666666643,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 18.133,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 18.133,
+          "decoded": {
+            "frameCount": 850,
+            "samples": 870384,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 18.112,
+            "endSeconds": 18.133,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 18.166666666666668,
+        "containerEndSeconds": 18.166667,
+        "audioMetadataEndSeconds": 18.133,
+        "containerTailWithoutVideoSeconds": 3.3333333249174757e-07,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 7.999999979801942e-06,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 3738856,
+        "mtimeNs": 1792908960276660300,
+        "modifiedAt": "2026-10-25T14:16:00+08:00"
+      },
+      "sha256After": "d867731f5b38da4fc96c3bee3b12a0b0517d0ade2d07be6f5de2b9b1e3fc44cb",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V17",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V17-151abbb450.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 12.27,
+      "children": [
+        {
+          "id": "V17-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-paper-detail\\V17-01.mp4",
+          "sha256": "8271c53363aca26836e314c2e097a7d9c7e6f547a54c51c6471e618483170143"
+        }
+      ],
+      "startedAt": "2026-10-25T14:26:41+08:00",
+      "before": {
+        "bytes": 4324486,
+        "mtimeNs": 1792909501776399100,
+        "modifiedAt": "2026-10-25T14:25:01+08:00"
+      },
+      "sha256": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 12.266,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 12.25,
+        "startTime": 0.0,
+        "declaredFrames": 294,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 294,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 12.208333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 12.25,
+        "spanSeconds": 12.25,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 12.266,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 12.266,
+          "decoded": {
+            "frameCount": 575,
+            "samples": 588768,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 12.245333333333333,
+            "endSeconds": 12.266,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 12.25,
+        "containerEndSeconds": 12.266,
+        "audioMetadataEndSeconds": 12.266,
+        "containerTailWithoutVideoSeconds": 0.016000000000000014,
+        "audioTailWithoutVideoSeconds": 0.016000000000000014,
+        "containerTailIn24fpsFrames": 0.38400000000000034,
+        "audioTailIn24fpsFrames": 0.38400000000000034,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 4324486,
+        "mtimeNs": 1792909501776399100,
+        "modifiedAt": "2026-10-25T14:25:01+08:00"
+      },
+      "sha256After": "f448a11bdb16ea74198858a1481812752c4c42377f72c5e24e1fa5e0b7ae219b",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:26:41+08:00",
+      "stillCurrentIndexAtCompletion": true
+    },
+    {
+      "id": "V18",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V18-c00f9cabcb.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 53.63,
+      "children": [
+        {
+          "id": "V18-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-01.mp4",
+          "sha256": "89042d1f7aa9a1130272587fa51e974e6358416b1e403c59d1bfa0b8dfc03fa2"
+        },
+        {
+          "id": "V18-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.mp4",
+          "sha256": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5"
+        },
+        {
+          "id": "V18-03",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V18-03.mp4",
+          "sha256": "a49a297acd79a9ca0e1f22eff13ca886c196248314304ac2611cdc33fee62bef"
+        },
+        {
+          "id": "V18-04",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4",
+          "sha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c"
+        },
+        {
+          "id": "V18-05",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4",
+          "sha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602"
+        },
+        {
+          "id": "V18-06",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.mp4",
+          "sha256": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 12009711,
+        "mtimeNs": 1792909050620414700,
+        "modifiedAt": "2026-10-25T14:17:30+08:00"
+      },
+      "sha256": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 53.632,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 53.625,
+        "startTime": 0.0,
+        "declaredFrames": 1287,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 1287,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 53.583333333333336,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 53.625,
+        "spanSeconds": 53.625,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.0416666666666643,
+        "maxPtsStep": 0.041666666666671404,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 53.632,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 53.632,
+          "decoded": {
+            "frameCount": 2514,
+            "samples": 2574336,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 53.61066666666667,
+            "endSeconds": 53.632,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 53.625,
+        "containerEndSeconds": 53.632,
+        "audioMetadataEndSeconds": 53.632,
+        "containerTailWithoutVideoSeconds": 0.006999999999997897,
+        "audioTailWithoutVideoSeconds": 0.006999999999997897,
+        "containerTailIn24fpsFrames": 0.16799999999994952,
+        "audioTailIn24fpsFrames": 0.16799999999994952,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 12009711,
+        "mtimeNs": 1792909050620414700,
+        "modifiedAt": "2026-10-25T14:17:30+08:00"
+      },
+      "sha256After": "93b78b3629b929d49ca9411aa23074180c22089ab087e4494099bb223c3c90f6",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V19A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19A-92eaf5912b.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 19.54,
+      "children": [
+        {
+          "id": "V19A-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.mp4",
+          "sha256": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725"
+        },
+        {
+          "id": "V19A-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19A-02.mp4",
+          "sha256": "5369e59de12185c5bdf3ead05c05ab3c224fd7d99bc9a794a5a39d3c3a2ec372"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 4598778,
+        "mtimeNs": 1792909077008530900,
+        "modifiedAt": "2026-10-25T14:17:57+08:00"
+      },
+      "sha256": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 19.541667,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 19.541666666666668,
+        "startTime": 0.0,
+        "declaredFrames": 469,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 469,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 19.5,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 19.541666666666668,
+        "spanSeconds": 19.541666666666668,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.0416666666666643,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 19.52,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 19.52,
+          "decoded": {
+            "frameCount": 915,
+            "samples": 936960,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 19.498666666666665,
+            "endSeconds": 19.52,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 19.541666666666668,
+        "containerEndSeconds": 19.541667,
+        "audioMetadataEndSeconds": 19.52,
+        "containerTailWithoutVideoSeconds": 3.3333333249174757e-07,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 7.999999979801942e-06,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 4598778,
+        "mtimeNs": 1792909077008530900,
+        "modifiedAt": "2026-10-25T14:17:57+08:00"
+      },
+      "sha256After": "914e619fbb13e66268f393047afd7dd2d7c483f846e8465809d10f23a271d558",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V19B",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19B-c36aabc8d5.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 10.04,
+      "children": [
+        {
+          "id": "V19B-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4",
+          "sha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 639591,
+        "mtimeNs": 1792909084869578800,
+        "modifiedAt": "2026-10-25T14:18:04+08:00"
+      },
+      "sha256": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.041667,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.041666666666666,
+        "startTime": 0.0,
+        "declaredFrames": 241,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 241,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 10.0,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.041666666666666,
+        "spanSeconds": 10.041666666666666,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.005,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.005,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480240,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.005,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.041666666666666,
+        "containerEndSeconds": 10.041667,
+        "audioMetadataEndSeconds": 10.005,
+        "containerTailWithoutVideoSeconds": 3.333333342681044e-07,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 8.000000022434506e-06,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 639591,
+        "mtimeNs": 1792909084869578800,
+        "modifiedAt": "2026-10-25T14:18:04+08:00"
+      },
+      "sha256After": "3e8fd02df20d0b8d5a64becb6024bd6a2e9c0a34338ee90f2751ab9fc9360732",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:55+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:55+08:00"
+    },
+    {
+      "id": "V19C",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V19C-85920cb12a.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 14.7,
+      "children": [
+        {
+          "id": "V19C-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V19C-01.mp4",
+          "sha256": "4ef05861bda8d106fdb68357f2711091fcb44a388520cbf7d2b2e7a69e1338fc"
+        },
+        {
+          "id": "V19C-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V19C-02.mp4",
+          "sha256": "581609f74902306feab921c89fbce976b41e2583c8665ed5bc9888900d5149c6"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 5211041,
+        "mtimeNs": 1792909102342947100,
+        "modifiedAt": "2026-10-25T14:18:22+08:00"
+      },
+      "sha256": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 14.697999999999999,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 14.666666666666666,
+        "startTime": 0.0,
+        "declaredFrames": 352,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 352,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 14.625,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 14.666666666666666,
+        "spanSeconds": 14.666666666666666,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 14.698,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 14.698,
+          "decoded": {
+            "frameCount": 689,
+            "samples": 705504,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 14.677333333333333,
+            "endSeconds": 14.698,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 14.666666666666666,
+        "containerEndSeconds": 14.697999999999999,
+        "audioMetadataEndSeconds": 14.698,
+        "containerTailWithoutVideoSeconds": 0.03133333333333255,
+        "audioTailWithoutVideoSeconds": 0.03133333333333432,
+        "containerTailIn24fpsFrames": 0.7519999999999811,
+        "audioTailIn24fpsFrames": 0.7520000000000238,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 5211041,
+        "mtimeNs": 1792909102342947100,
+        "modifiedAt": "2026-10-25T14:18:22+08:00"
+      },
+      "sha256After": "f46dac7d690420787ba9fce1db1d20b30d0432a08af9debbfd7e43d44aada624",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:56+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:56+08:00"
+    },
+    {
+      "id": "V20",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\picture-review-final\\V20-439cda5b63.mp4",
+      "kind": "current-indexed-assembled-candidate",
+      "expectedSha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\review\\picture-repair-candidates.json",
+      "metadataFileSha256": "caed18bb43ba4fdb05310ba0ccb36df3e9a839179b1c2020be70124e17033e34",
+      "declaredDuration": 67.84,
+      "children": [
+        {
+          "id": "V20-01",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-01.mp4",
+          "sha256": "a43dc645684f19cf377348c2ea36bb370b93b7bbb50abaa90ab3f8db77930893"
+        },
+        {
+          "id": "V20-02",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-02.mp4",
+          "sha256": "12d2152667943381b37a53f99ca769efa71749c6e725ed251f8e9b9a9de30e7f"
+        },
+        {
+          "id": "V20-03",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.mp4",
+          "sha256": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72"
+        },
+        {
+          "id": "V20-04",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V20-04.mp4",
+          "sha256": "4a19d79563944aa7237def41b43b7168b4de6390751c5f4c74bcc4b73d6cde08"
+        },
+        {
+          "id": "V20-05",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-05.mp4",
+          "sha256": "26285272e18d17d731bc6c952807fb165e8d847c5481a67ace416d16fcfca5a7"
+        },
+        {
+          "id": "V20-06",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.mp4",
+          "sha256": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170"
+        },
+        {
+          "id": "V20-07",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.mp4",
+          "sha256": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9"
+        },
+        {
+          "id": "V20-08",
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-npc-tail\\V20-08.mp4",
+          "sha256": "6b6e4eb982feba7d64e77e336840782f3aa99856504a4602cf52deddb957427f"
+        }
+      ],
+      "startedAt": "2026-10-25T14:23:55+08:00",
+      "before": {
+        "bytes": 20412416,
+        "mtimeNs": 1792909175244583100,
+        "modifiedAt": "2026-10-25T14:19:35+08:00"
+      },
+      "sha256": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 67.84,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 67.83333333333333,
+        "startTime": 0.0,
+        "declaredFrames": 1628,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 1628,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 67.79166666666667,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 67.83333333333334,
+        "spanSeconds": 67.83333333333334,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.04166666666665719,
+        "maxPtsStep": 0.041666666666671404,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 67.84,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 67.84,
+          "decoded": {
+            "frameCount": 3180,
+            "samples": 3256320,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 67.81866666666667,
+            "endSeconds": 67.84,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 67.83333333333334,
+        "containerEndSeconds": 67.84,
+        "audioMetadataEndSeconds": 67.84,
+        "containerTailWithoutVideoSeconds": 0.006666666666660603,
+        "audioTailWithoutVideoSeconds": 0.006666666666660603,
+        "containerTailIn24fpsFrames": 0.15999999999985448,
+        "audioTailIn24fpsFrames": 0.15999999999985448,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 20412416,
+        "mtimeNs": 1792909175244583100,
+        "modifiedAt": "2026-10-25T14:19:35+08:00"
+      },
+      "sha256After": "e492b1e511c38a2b79b2835902fb100fdd6cedb602fcdc54c5dcff8a61999dca",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V15-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-02.json",
+      "metadataFileSha256": "b907c3f403c27ba4752719abc1a9f4ba51c0eed772169798eed3234a1a38c319",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:56+08:00",
+      "before": {
+        "bytes": 1006763,
+        "mtimeNs": 1792907720934232000,
+        "modifiedAt": "2026-10-25T13:55:20+08:00"
+      },
+      "sha256": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1006763,
+        "mtimeNs": 1792907720934232000,
+        "modifiedAt": "2026-10-25T13:55:20+08:00"
+      },
+      "sha256After": "a913468d50039982d64b2f375b7bc76fee3a0ec662f0ecee47749d8a6ab93263",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:56+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:56+08:00"
+    },
+    {
+      "id": "V15-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-03.json",
+      "metadataFileSha256": "7829cfbe1bba074cfc9926a8831cbf863f6fadbe4201bddbf2acff95f9bda14e",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:56+08:00",
+      "before": {
+        "bytes": 1186281,
+        "mtimeNs": 1792907757805268000,
+        "modifiedAt": "2026-10-25T13:55:57+08:00"
+      },
+      "sha256": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1186281,
+        "mtimeNs": 1792907757805268000,
+        "modifiedAt": "2026-10-25T13:55:57+08:00"
+      },
+      "sha256After": "a6340df311d6ad88daf750f166d650194fde224e1cd0de58d85d4de59fed74ed",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:56+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:56+08:00"
+    },
+    {
+      "id": "V15-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V15-04.json",
+      "metadataFileSha256": "38ab8ee1fe68ffa4d3498973d8cb3cc52a7053fc0fb493f5830a20d75556862c",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:56+08:00",
+      "before": {
+        "bytes": 1278085,
+        "mtimeNs": 1792907783579456700,
+        "modifiedAt": "2026-10-25T13:56:23+08:00"
+      },
+      "sha256": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1278085,
+        "mtimeNs": 1792907783579456700,
+        "modifiedAt": "2026-10-25T13:56:23+08:00"
+      },
+      "sha256After": "4076685307505e19d667edfb848491a6ba02c5584d1ac564eca99d3583e47d7b",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:56+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:56+08:00"
+    },
+    {
+      "id": "V16A-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16A-01.json",
+      "metadataFileSha256": "0a1a15c41b851c69bc976b945734cdf82da4ca8b7aa9424ede3edb88c408bc60",
+      "declaredDuration": 9.0,
+      "startedAt": "2026-10-25T14:23:56+08:00",
+      "before": {
+        "bytes": 1131824,
+        "mtimeNs": 1792907805735771000,
+        "modifiedAt": "2026-10-25T13:56:45+08:00"
+      },
+      "sha256": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 9.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 9.0,
+        "startTime": 0.0,
+        "declaredFrames": 216,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 216,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 8.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 9.0,
+        "spanSeconds": 9.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 9.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 9.0,
+          "decoded": {
+            "frameCount": 422,
+            "samples": 432000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 8.981333333333334,
+            "endSeconds": 9.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 9.0,
+        "containerEndSeconds": 9.0,
+        "audioMetadataEndSeconds": 9.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1131824,
+        "mtimeNs": 1792907805735771000,
+        "modifiedAt": "2026-10-25T13:56:45+08:00"
+      },
+      "sha256After": "557e51833ac137879dc7c7a1c395fc274460063771bc0dc66f9a71112eeabc58",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V16C-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-01.json",
+      "metadataFileSha256": "de00fdb5ffbfba89156ad29d0a552cc3ff1497d734a95fb30a304c50372664fd",
+      "declaredDuration": 8.0,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 1116101,
+        "mtimeNs": 1792907831600805400,
+        "modifiedAt": "2026-10-25T13:57:11+08:00"
+      },
+      "sha256": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 8.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 8.0,
+        "startTime": 0.0,
+        "declaredFrames": 192,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 192,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 7.958333333333333,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 8.0,
+        "spanSeconds": 8.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666696,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 8.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 8.0,
+          "decoded": {
+            "frameCount": 375,
+            "samples": 384000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 7.978666666666666,
+            "endSeconds": 8.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 8.0,
+        "containerEndSeconds": 8.0,
+        "audioMetadataEndSeconds": 8.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1116101,
+        "mtimeNs": 1792907831600805400,
+        "modifiedAt": "2026-10-25T13:57:11+08:00"
+      },
+      "sha256After": "81448d50a9c8278b251a0ac29cb31aaaaf496b2f14b060edcf76cbf40cd2fd0d",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V16C-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-02.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "7b4562a8e2c6612ad563b12a8c7e47ff23b3d22b1e7b7e1da267ac8dfa4da353",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V16C-02.json",
+      "metadataFileSha256": "bd3d06cfd913dd361e8a6a547971952c27fe0f77c0b28b0a43200a93fe69231e",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 2766864,
+        "mtimeNs": 1792907858964021500,
+        "modifiedAt": "2026-10-25T13:57:38+08:00"
+      },
+      "sha256": "7b4562a8e2c6612ad563b12a8c7e47ff23b3d22b1e7b7e1da267ac8dfa4da353",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 2766864,
+        "mtimeNs": 1792907858964021500,
+        "modifiedAt": "2026-10-25T13:57:38+08:00"
+      },
+      "sha256After": "7b4562a8e2c6612ad563b12a8c7e47ff23b3d22b1e7b7e1da267ac8dfa4da353",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V18-02",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-02.json",
+      "metadataFileSha256": "921b1869c15440042c41a5c72767a96231f8e3429d6d1f6699fba1100e283d43",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 1856829,
+        "mtimeNs": 1792907884431224700,
+        "modifiedAt": "2026-10-25T13:58:04+08:00"
+      },
+      "sha256": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1856829,
+        "mtimeNs": 1792907884431224700,
+        "modifiedAt": "2026-10-25T13:58:04+08:00"
+      },
+      "sha256After": "85a2dbfb1878e25f29a4db4c7c1a4252e13295d6d12741a094e60f7f52ce03c5",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V18-04",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-04.json",
+      "metadataFileSha256": "a30fe620b0a9402a9bc9a7ad713b644fc60b1fee44c40a14209d0c4fddaa2b5b",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 1527798,
+        "mtimeNs": 1792907910803763900,
+        "modifiedAt": "2026-10-25T13:58:30+08:00"
+      },
+      "sha256": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1527798,
+        "mtimeNs": 1792907910803763900,
+        "modifiedAt": "2026-10-25T13:58:30+08:00"
+      },
+      "sha256After": "493b35d4f2f96102830783c05dac98b662afda484db1480e8c42c63fdd43084c",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V18-05",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-05.json",
+      "metadataFileSha256": "e45e4e689bdce491d468083797d7fda472c4aad6908352a8e0b9e6a71bfeb341",
+      "declaredDuration": 6.58,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 754441,
+        "mtimeNs": 1792907931622411900,
+        "modifiedAt": "2026-10-25T13:58:51+08:00"
+      },
+      "sha256": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 6.583333,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 6.583333333333333,
+        "startTime": 0.0,
+        "declaredFrames": 158,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 158,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 6.541666666666667,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 6.583333333333334,
+        "spanSeconds": 6.583333333333334,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666696,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 6.58,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 6.58,
+          "decoded": {
+            "frameCount": 309,
+            "samples": 315840,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 6.570666666666667,
+            "endSeconds": 6.58,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 6.583333333333334,
+        "containerEndSeconds": 6.583333,
+        "audioMetadataEndSeconds": 6.58,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 754441,
+        "mtimeNs": 1792907931622411900,
+        "modifiedAt": "2026-10-25T13:58:51+08:00"
+      },
+      "sha256After": "5256565bc1c3a81b805d8ea1e71eb5a99fcc74d9035e5417de60a6a035d09602",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V18-06",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V18-06.json",
+      "metadataFileSha256": "6916ab1e9ccb09f04777afb066091b6094833534255787f8f5c66d625488c323",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 921670,
+        "mtimeNs": 1792907962384118100,
+        "modifiedAt": "2026-10-25T13:59:22+08:00"
+      },
+      "sha256": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 921670,
+        "mtimeNs": 1792907962384118100,
+        "modifiedAt": "2026-10-25T13:59:22+08:00"
+      },
+      "sha256After": "51f47c60600312388cb5e366fa3a80edda1e5121c4fb860c7b3c1ebad968dd8b",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:57+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:57+08:00"
+    },
+    {
+      "id": "V19A-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19A-01.json",
+      "metadataFileSha256": "079e4de48d2b89cf7a28a7ed780cc947aca10b59409ce2a1bca13d5236a6b3c7",
+      "declaredDuration": 9.42,
+      "startedAt": "2026-10-25T14:23:57+08:00",
+      "before": {
+        "bytes": 574645,
+        "mtimeNs": 1792908004800071300,
+        "modifiedAt": "2026-10-25T14:00:04+08:00"
+      },
+      "sha256": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 9.416667,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 9.416666666666666,
+        "startTime": 0.0,
+        "declaredFrames": 226,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 226,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.375,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 9.416666666666666,
+        "spanSeconds": 9.416666666666666,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 9.352,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 9.352,
+          "decoded": {
+            "frameCount": 440,
+            "samples": 450560,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.330666666666668,
+            "endSeconds": 9.352,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 9.416666666666666,
+        "containerEndSeconds": 9.416667,
+        "audioMetadataEndSeconds": 9.352,
+        "containerTailWithoutVideoSeconds": 3.333333342681044e-07,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 8.000000022434506e-06,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 574645,
+        "mtimeNs": 1792908004800071300,
+        "modifiedAt": "2026-10-25T14:00:04+08:00"
+      },
+      "sha256After": "e5d19a391e0aa9693d617a220f39a9b68005913da8f51a256922d3305d8aa725",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V19B-01",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V19B-01.json",
+      "metadataFileSha256": "1930739e07b7a46b8da57bba0d2e0128e5ca7ea849ada4a1f410f827b2186c2d",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 649950,
+        "mtimeNs": 1792908051386717700,
+        "modifiedAt": "2026-10-25T14:00:51+08:00"
+      },
+      "sha256": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 9.946,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 9.946,
+          "decoded": {
+            "frameCount": 468,
+            "samples": 479200,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.925333333333333,
+            "endSeconds": 9.946,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 9.946,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 649950,
+        "mtimeNs": 1792908051386717700,
+        "modifiedAt": "2026-10-25T14:00:51+08:00"
+      },
+      "sha256After": "c4347b2c80ac1f1642daa149a7b923bb024dfe0d2e7607ad53072dd8e0a2106a",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V20-03",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-03.json",
+      "metadataFileSha256": "d6082c782fe0e81a9ee899cd40abdd901bf1be715f71ab329f7dbe4ce828b292",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 948461,
+        "mtimeNs": 1792908090389204200,
+        "modifiedAt": "2026-10-25T14:01:30+08:00"
+      },
+      "sha256": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 948461,
+        "mtimeNs": 1792908090389204200,
+        "modifiedAt": "2026-10-25T14:01:30+08:00"
+      },
+      "sha256After": "2d1026657d7e5a8d52be6b67d774c13240f9a659adcc4fc73555ff65e7cd0a72",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V20-05",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-05.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-05.json",
+      "metadataFileSha256": "22506c496fbf4f92c7009c928d99f49d3cb3660001245abc7d59c2ce4414e088",
+      "declaredDuration": 7.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 1703599,
+        "mtimeNs": 1792908109554167000,
+        "modifiedAt": "2026-10-25T14:01:49+08:00"
+      },
+      "sha256": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 7.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 7.0,
+        "startTime": 0.0,
+        "declaredFrames": 168,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 168,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 6.958333333333333,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 7.0,
+        "spanSeconds": 7.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666696,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 7.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 7.0,
+          "decoded": {
+            "frameCount": 329,
+            "samples": 336000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 6.997333333333334,
+            "endSeconds": 7.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 7.0,
+        "containerEndSeconds": 7.0,
+        "audioMetadataEndSeconds": 7.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1703599,
+        "mtimeNs": 1792908109554167000,
+        "modifiedAt": "2026-10-25T14:01:49+08:00"
+      },
+      "sha256After": "970b24075e6901e630800e435a0ad73aab615e669f73605a7696aeb1757d8185",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V20-06",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-06.json",
+      "metadataFileSha256": "4ff4feb696713c11888ab28bb94110c6247d8588b8565ac789a1c56f93059f6d",
+      "declaredDuration": 10.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 1136429,
+        "mtimeNs": 1792908138812784200,
+        "modifiedAt": "2026-10-25T14:02:18+08:00"
+      },
+      "sha256": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 10.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 10.0,
+        "startTime": 0.0,
+        "declaredFrames": 240,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 240,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 9.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 10.0,
+        "spanSeconds": 10.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 10.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 10.0,
+          "decoded": {
+            "frameCount": 469,
+            "samples": 480000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 9.984,
+            "endSeconds": 10.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 10.0,
+        "containerEndSeconds": 10.0,
+        "audioMetadataEndSeconds": 10.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1136429,
+        "mtimeNs": 1792908138812784200,
+        "modifiedAt": "2026-10-25T14:02:18+08:00"
+      },
+      "sha256After": "37e4d63633fa9970b0da14c692977d254693cf04afb22bc72280db4ffb282170",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V20-07",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-07.json",
+      "metadataFileSha256": "db9889ebaac0be8acb8747a075c3b744f0ea795b323c0127df8af9898ec4a31f",
+      "declaredDuration": 8.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 2491393,
+        "mtimeNs": 1792908181543408600,
+        "modifiedAt": "2026-10-25T14:03:01+08:00"
+      },
+      "sha256": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 8.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 8.0,
+        "startTime": 0.0,
+        "declaredFrames": 192,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 192,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 7.958333333333333,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 8.0,
+        "spanSeconds": 8.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666696,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 8.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 8.0,
+          "decoded": {
+            "frameCount": 375,
+            "samples": 384000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 7.978666666666666,
+            "endSeconds": 8.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 8.0,
+        "containerEndSeconds": 8.0,
+        "audioMetadataEndSeconds": 8.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 2491393,
+        "mtimeNs": 1792908181543408600,
+        "modifiedAt": "2026-10-25T14:03:01+08:00"
+      },
+      "sha256After": "dea21f9d159a5355cfc02fb5c1d78b657764b83952310da1e99a9a5f7dff13d9",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    },
+    {
+      "id": "V20-08",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-08.mp4",
+      "kind": "current-same-name-presentable-subclip",
+      "expectedSha256": "bd03524dbdbbc7ca49e9e9733ebeac6758522c19d07550999707969c087c02f9",
+      "selectedBy": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-presentable\\V20-08.json",
+      "metadataFileSha256": "68c5544e458487e7d2e14620a8c6a02bbadbddf5d6c98e1ca5b52ab9e8f317e1",
+      "declaredDuration": 9.0,
+      "startedAt": "2026-10-25T14:23:58+08:00",
+      "before": {
+        "bytes": 1886727,
+        "mtimeNs": 1792908212814379900,
+        "modifiedAt": "2026-10-25T14:03:32+08:00"
+      },
+      "sha256": "bd03524dbdbbc7ca49e9e9733ebeac6758522c19d07550999707969c087c02f9",
+      "metadataShaMatches": true,
+      "container": {
+        "duration": 9.0,
+        "startTime": 0.0,
+        "format": "mov,mp4,m4a,3gp,3g2,mj2"
+      },
+      "videoMetadata": {
+        "timeBase": "1/12288",
+        "duration": 9.0,
+        "startTime": 0.0,
+        "declaredFrames": 216,
+        "averageRate": "24/1",
+        "baseRate": "24/1",
+        "resolution": [
+          1280,
+          720
+        ]
+      },
+      "videoDecoded": {
+        "actualFrameCount": 216,
+        "firstPtsSeconds": 0.0,
+        "lastPtsSeconds": 8.958333333333334,
+        "lastFrameDurationSeconds": 0.041666666666666664,
+        "lastFrameDurationInferred": false,
+        "endSeconds": 9.0,
+        "spanSeconds": 9.0,
+        "frameDurationValuesSeconds": [
+          0.041666667
+        ],
+        "minPtsStep": 0.041666666666666075,
+        "maxPtsStep": 0.04166666666666785,
+        "nonMonotonicPtsCount": 0,
+        "missingPtsCount": 0,
+        "allPtsSteps24fps": true,
+        "actualRateFromPts": 24.0
+      },
+      "audioStreams": [
+        {
+          "index": 1,
+          "timeBase": "1/48000",
+          "duration": 9.0,
+          "startTime": 0.0,
+          "sampleRate": 48000,
+          "channels": 2,
+          "metadataEndSeconds": 9.0,
+          "decoded": {
+            "frameCount": 422,
+            "samples": 432000,
+            "firstPtsSeconds": 0.0,
+            "lastPtsSeconds": 8.981333333333334,
+            "endSeconds": 9.0,
+            "paddingNote": "AAC decode can include trailing codec padding; compare metadata end separately, no listening conclusion."
+          }
+        }
+      ],
+      "coverage": {
+        "videoEndSeconds": 9.0,
+        "containerEndSeconds": 9.0,
+        "audioMetadataEndSeconds": 9.0,
+        "containerTailWithoutVideoSeconds": 0,
+        "audioTailWithoutVideoSeconds": 0,
+        "containerTailIn24fpsFrames": 0,
+        "audioTailIn24fpsFrames": 0,
+        "toleranceSeconds": 0.041666666666666664,
+        "interpretation": "Only actual decoded-frame temporal coverage is checked. An uncovered tail is not a claim of visible black frames; players may hold the last frame. Audio content/listening and picture semantics are out of scope."
+      },
+      "concerns": [],
+      "result": "track-coverage-ok-within-one-video-frame",
+      "after": {
+        "bytes": 1886727,
+        "mtimeNs": 1792908212814379900,
+        "modifiedAt": "2026-10-25T14:03:32+08:00"
+      },
+      "sha256After": "bd03524dbdbbc7ca49e9e9733ebeac6758522c19d07550999707969c087c02f9",
+      "fileStableDuringCheck": true,
+      "metadataStableDuringCheck": true,
+      "completedAt": "2026-10-25T14:23:58+08:00",
+      "stillCurrentIndexAtCompletion": true,
+      "identityRecheckedAt": "2026-10-25T14:26:41+08:00",
+      "fullDecodeEvidenceReusedFrom": "2026-10-25T14:23:58+08:00"
+    }
+  ],
+  "userApproved": false,
+  "newAPIRequests": 0,
+  "newTTSRequests": 0,
+  "writesToG2": false,
+  "freshnessNote": "初查后G2发布新版V17，本报告已替换为V17-151abbb450.mp4/f448a11b...的独立完整解码结果；其他相同SHA文件只重新核身份、复用先前完整解码证据。本报告是所列时间/SHA的快照，不自动覆盖之后新增版本。"
+}

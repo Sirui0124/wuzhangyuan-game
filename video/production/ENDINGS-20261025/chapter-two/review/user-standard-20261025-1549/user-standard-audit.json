@@ -1,0 +1,232 @@
+{
+  "status": "E2-picture-repair-adopted-audio-and-user-review-pending",
+  "createdEpoch": 1792915307.833187,
+  "policySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\返修要求.md",
+  "sourceSnapshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\delivery-snapshot.json",
+  "records": [
+    {
+      "id": "E1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-60秒-V2.mp4",
+      "sha256": "a75c9ac47dca27ae5675103d371c579e753bbca6b72843c32781fbb08f2bc013",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "当前60秒剪辑的军吏净镜、上半身构图及苟安快乐/推车段，未在本轮全时段抽帧见工作说明卡、字幕列表或硬边局部遮罩；不回用G5旧V36卡片。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E1-01.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E1-02.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E1-03.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "nextAction": "保留当前版本；任何将来源更新先比较实质内容，不把旧通过/制作自查等同本轮用户审核。"
+    },
+    {
+      "id": "E2",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人.mp4",
+      "sha256": "aafcb83c59cbb9d1b6f31e8aa5bddb1478be5337f18da0a4214bcc492f902a7a",
+      "reviewState": "needs-owner-source-repair",
+      "observation": "确认纸面两段露出制作元文本：10.208333/10.416667秒及12.833333/13.0/13.208333秒；13秒原尺寸图可见口型等控制描述，属于新标准明确不接受的文书内容。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E2-01.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E2-02.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E2-paper-sequence.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E2-paper-sequence-times.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E2-detail-13.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "confirmedHits": [
+        {
+          "category": "director-text-on-prop",
+          "observedPTS": [
+            10.208333333333334,
+            10.416666666666666
+          ],
+          "approxInspectionWindow": [
+            10.0,
+            10.5
+          ]
+        },
+        {
+          "category": "director-text-on-prop",
+          "observedPTS": [
+            12.833333333333334,
+            13.0,
+            13.208333333333334
+          ],
+          "approxInspectionWindow": [
+            12.625,
+            13.416666666666666
+          ]
+        }
+      ],
+      "nextAction": "G6正在拥有源V38返修；等待其新delivery后按实际净镜/语义只做必要E2合辑更新。当前不重复重剪同一源，不启动新请求。",
+      "resolution": {
+        "status": "replaced-and-frame-sampled-awaiting-user-review",
+        "newPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人-去元文书R3.mp4",
+        "newSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-user-repair-R3\\review.json",
+        "historicalHitPreserved": true
+      }
+    },
+    {
+      "id": "E3",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-V3.mp4",
+      "sha256": "6e366d11bcbf9e71fa0a3b200fd7253f103552d3327623c808c74bf0e762c57d",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "未见后期说明卡或硬边模糊补丁；约2.5秒递交纸面有成列墨迹，原尺寸看是斜向失焦纸面，本次未能辨认制作原句。作为V39观察项，不将其无依据认定为准确剧情文本或确定元文本。V3空铺末帧修正保留。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E3-01.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E3-02.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E3-03.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E3-04.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "watchItems": [
+        {
+          "time": 2.5,
+          "classification": "oblique-out-of-focus-prop-writing-not-confirmed-meta-text",
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E3-detail-2.5.jpg"
+        }
+      ],
+      "nextAction": "将V39观察项交总控与G6核对；只在源片有实质问题/净镜变更时评估合辑，不机械换片。"
+    },
+    {
+      "id": "E4-early",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪-早停查-V2.mp4",
+      "sha256": "176e4746a466f72d7203a1e1c098d6e97db3b855afd1fa22688a1021d681f90c",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "卷束收件与病榻人物反应中，未在本轮全时段抽帧见工作卡/可读制作正文/方框遮罩。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-early-01.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-early-02.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "nextAction": "保留当前版本；任何将来源更新先比较实质内容，不把旧通过/制作自查等同本轮用户审核。"
+    },
+    {
+      "id": "E4-late",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪-晚支撑不足-V2.mp4",
+      "sha256": "9190ff9d2250905cfb761485dca72923af5f1e8babc1496218b0aec3f66c3fc7",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "共同V39约2.5秒斜向失焦纸面与E3相同，列为观察项；后续军吏及收卷段未在本轮抽帧见说明卡、制作正文或硬边补丁。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-late-01.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-late-02.jpg",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-late-03.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "watchItems": [
+        {
+          "time": 2.5,
+          "classification": "oblique-out-of-focus-prop-writing-not-confirmed-meta-text",
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E4-late-detail-2.5.jpg"
+        }
+      ],
+      "nextAction": "将V39观察项交总控与G6核对；只在源片有实质问题/净镜变更时评估合辑，不机械换片。"
+    },
+    {
+      "id": "E5",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E5-还是走上了险路.mp4",
+      "sha256": "1e0c7b2fff10fda6cb04561941e7cdec1fe5f1808a9ce0ff4ae2003df7281808",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "离营与两名军士反应段未在本轮全时段抽帧见说明卡/制作正文/方框层。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\E5-01.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "nextAction": "保留当前版本；任何将来源更新先比较实质内容，不把旧通过/制作自查等同本轮用户审核。"
+    },
+    {
+      "id": "EPILOGUE",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\EPILOGUE-魏地广人众-V2.mp4",
+      "sha256": "ce067491fc135c66ee0bb6041982ec77660b5da3fc5af9ba0d36a0f950eb50b6",
+      "reviewState": "no-confirmed-hit-in-sampled-evidence",
+      "observation": "独立15秒纸背翻卷，纸面自然纹理和接触阴影，不是矩形遮盖；全时段抽帧及此前6fps动作序列未见工作文字或硬边补丁。",
+      "evidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\user-standard-20261025-1549\\EPILOGUE-01.jpg"
+      ],
+      "method": "本轮已查看所有16张1fps全时段有序抽帧拼图；重点段另加原尺寸图及5fps序列。非连续人工全片观看，不能排除帧间短暂问题。",
+      "audioReview": {
+        "status": "not-listened",
+        "metaSpeech": "unverified",
+        "BGM": "unverified",
+        "newTTS": false
+      },
+      "userApproved": false,
+      "continuousHumanReview": false,
+      "visibleRectangularMaskHit": false,
+      "fullFrameDocumentCardHit": false,
+      "mediaModified": false,
+      "nextAction": "保留当前版本；任何将来源更新先比较实质内容，不把旧通过/制作自查等同本轮用户审核。"
+    }
+  ],
+  "allCurrentMediaHashesUnchanged": true,
+  "deliveryModified": false,
+  "paidGenerationRequests": 0,
+  "newTTSRequests": 0,
+  "completionBoundary": "保留旧版普查发现，E2两处已由R3替换并抽帧复核；不代表全章返修完成、连续人工审片或用户通过。"
+}

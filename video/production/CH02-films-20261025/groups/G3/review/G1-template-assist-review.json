@@ -1,0 +1,786 @@
+{
+  "scope": "G1本地只读协助；不调用API，不改G1文件或运行器，无TTS或生成请求",
+  "clips": {
+    "L01-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\L01-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:38:54.271426+08:00",
+      "sourceSha256": "dc4159f019711d79463d643b35f909f233dfe09068872f8c1c0ff295c7caff9f",
+      "sourceBytes": 2778954,
+      "duration": 10.13,
+      "sourceLines": [],
+      "plannedState": {
+        "entry": "只在玩家确认当次原话后供动态语音使用。",
+        "end": "无状态变化；首尾闭口近似同姿态。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 10,
+            "action": "苟安在同一榻上闭口安静倾听，呼吸平稳，偶尔自然眨眼，视线落在摄影机位置；头尾坐姿与手位置一致，适合柔和循环。不点头承诺，不嘟嘴、不动嘴、不说任何字。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": []
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\L01-01-3fps.jpg",
+      "visualReview": "不能整段用作稳定闭口循环；可免费取前段",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "findings": [
+        {
+          "time": [
+            0,
+            4.5
+          ],
+          "issue": "闭口为主，但约1.5秒后镜头持续横移/推近，姿态和视线逐步下移；不是首尾同姿态。"
+        },
+        {
+          "time": [
+            4.7,
+            10.125
+          ],
+          "issue": "出现开口，后半转明显侧脸，帐外白帐篷和树景进入背景；不宜将完整10秒标成闭口循环。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 4.5,
+          "purpose": "非循环的短听者反应，允许自然低头和摄影移动；可评估适度慢放"
+        }
+      ],
+      "freeEditSuggestion": "只建议0–4.5秒非循环反应，或经G1核对后适度慢放；本轮不允许一两秒反复循环凑长。游戏若需循环玩法，需另设计自然完整循环，当前片不能当作完整循环交付。",
+      "loopReady": false,
+      "playback": {
+        "duration": 10.125,
+        "played": [
+          [
+            0,
+            10.125
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "recommendPaidRegeneration": false,
+      "withdrawnSuggestion": "已撤回0–1.5秒柔和往返/叠化循环建议；本轮不得以短循环凑时长。"
+    },
+    "V11T-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11T-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:39:01.732913+08:00",
+      "sourceSha256": "90a4086a31cbc839c50cdce39c4096d6ad65893ea0b249b1c8563f5ec9a0adf9",
+      "sourceBytes": 2850961,
+      "duration": 11.54,
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+        "end": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 11,
+            "action": "苟安听完威胁或羞辱，眉头微收，先质问信任，再停一口气，将话题拉回粮；不威胁玩家，不站起。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": [
+              {
+                "node": "CH2-O1-RT",
+                "speaker": "苟安（定制回应）",
+                "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11T-01-3fps.jpg",
+      "visualReview": "制作自查可用，待G1采用/用户review",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "findings": [
+        {
+          "time": [
+            0,
+            11.542
+          ],
+          "issue": "同一日间伤帐与人物，前倾和微推近自然；自然开口回应，无额外人脸、物件、伪字幕或站立离榻。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 11.542,
+          "purpose": "完整回应画面"
+        }
+      ],
+      "freeEditSuggestion": "保留全段，做中央16:9小幅裁边即可；只接V12，不拼其他V11互斥模板。",
+      "playback": {
+        "duration": 11.542,
+        "played": [
+          [
+            0,
+            11.542
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "recommendPaidRegeneration": false
+    },
+    "V11D-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11D-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:39:10.440985+08:00",
+      "sourceSha256": "679df6c4c279f7a2c99494a0a6f30be7f9f32511557cc25bed8f81d9bc9d6763",
+      "sourceBytes": 2176286,
+      "duration": 9.42,
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+        "end": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 9,
+            "action": "苟安短暂低头，说领情后抬眼追问下回，手不交出新物件；不预设玩家已做了其他承诺。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": [
+              {
+                "node": "CH2-O1-RD",
+                "speaker": "苟安（定制回应）",
+                "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11D-01-3fps.jpg",
+      "visualReview": "需免费裁掉取出计划外物件的尾部",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "findings": [
+        {
+          "time": [
+            0,
+            6.0
+          ],
+          "issue": "短暂低头、抬上身靠近说话，仍留榻上；身份/昼夜稳定，没有交付新物件。"
+        },
+        {
+          "time": [
+            6.2,
+            9.417
+          ],
+          "issue": "下方举起并保留黑色系绳小袋状物，源脚本没有该物件；改变该模板状态。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 6.0,
+          "purpose": "无新物件的完整表演窗口，待统一配音排句"
+        }
+      ],
+      "freeEditSuggestion": "优先取0–6.0秒；为完整保留“你肯替我遮掩，我领情。可遮过这一回，下回呢？”由G1结合最终统一配音核时，必要可轻缓速/短静帧接尾，不删原句。不要仅裁下沿而保留伸取动作。",
+      "playback": {
+        "duration": 9.417,
+        "played": [
+          [
+            0,
+            9.417
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "recommendPaidRegeneration": false
+    },
+    "V11A-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11A-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:44:47.530251+08:00",
+      "sourceSha256": "60968c6e9801e998d38dea3680c57626fa8b13a09797c2de1722aa93219fe815",
+      "sourceBytes": 2107302,
+      "duration": 8.0,
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "你去查。查到什么，你照实回来告诉我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "O1有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+        "end": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 8,
+            "action": "苟安把目光稳定落在我脸的位置，要求查到什么照实告诉他；不递出物件，留给V12。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": [
+              {
+                "node": "CH2-O1-RA",
+                "speaker": "苟安（定制回应）",
+                "text": "你去查。查到什么，你照实回来告诉我。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11A-01-3fps.jpg",
+      "visualReview": "需免费移除前段伸出计划外物件",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "findings": [
+        {
+          "time": [
+            0.8,
+            3.05
+          ],
+          "issue": "右前景伸出一个黑色棕色小物件并有手交接感，与本模板不递物/留V12交付的要求不符。"
+        },
+        {
+          "time": [
+            3.15,
+            8.0
+          ],
+          "issue": "物件退出后为清晰自然开口，人物和背景稳定，无额外人脸/伪字幕。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 3.15,
+          "end": 8.0,
+          "purpose": "自然开口回应，足够15字左右源句的常态配音时长，仍须G1核最终语速"
+        }
+      ],
+      "freeEditSuggestion": "优先取3.15–8.0秒作为回应底片，源句完整保留到统一配音；不要提前表现领取凭据。",
+      "playback": {
+        "duration": 8.0,
+        "played": [
+          [
+            0,
+            8.0
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "recommendPaidRegeneration": false
+    },
+    "V11R-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11R-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:47:00.873145+08:00",
+      "sourceSha256": "9225a8e7b7b207badd6523e8ed483bdbba75ddff5ba788514a6799bbfde847cb",
+      "sourceBytes": 2119844,
+      "duration": 9.42,
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+        "end": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 9,
+            "action": "苟安看我，先轻吸气再问拿什么让人认，不作认可判决，不新增证据。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": [
+              {
+                "node": "CH2-O1-RR",
+                "speaker": "苟安（定制回应）",
+                "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11R-01-3fps.jpg",
+      "visualReview": "制作自查可用，待G1采用/用户review",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "playback": {
+        "duration": 9.417,
+        "played": [
+          [
+            0,
+            9.417
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "findings": [
+        {
+          "time": [
+            0,
+            9.417
+          ],
+          "issue": "同一日间伤帐、灰衣黑巾苟安；约1–2.7秒调整前臂并稍抬上身，始终留榻上。无站起、额外人脸、新道具、伪字幕或新增证据。自然开口回应。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 9.417,
+          "purpose": "完整回应画面"
+        }
+      ],
+      "freeEditSuggestion": "保留整段并做常规16:9适配；仅接V12，不拼接其他V11互斥回应。",
+      "recommendPaidRegeneration": false
+    },
+    "V11N-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11N-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:51:24.896757+08:00",
+      "sourceSha256": "849f362d6a7685b1ea5a5f073ce3d9369b40f0598d50f6c48d078f613e4d436b",
+      "sourceBytes": 1807671,
+      "duration": 6.58,
+      "sourceLines": [
+        {
+          "node": "CH2-O1-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "先看看这批粮，再说往后。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+        "end": "本模板句子结束后闭口；仅接V12，不与其他V11模板拼接。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 6,
+            "action": "苟安语气平实，说先看这批粮；不补玩家的关心、承诺或动机，末尾闭嘴。",
+            "camera": "玩家眼高，正常交谈距离的稳定中近景；以视线的小幅变化代替无动机推拉，头顶留空间。",
+            "lines": [
+              {
+                "node": "CH2-O1-RN",
+                "speaker": "苟安（定制回应）",
+                "text": "先看看这批粮，再说往后。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11N-01-3fps.jpg",
+      "visualReview": "可免费裁为面部近景，待G1采用/用户review",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "playback": {
+        "duration": 6.583333,
+        "played": [
+          [
+            0,
+            6.583333
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "findings": [
+        {
+          "time": [
+            0,
+            6.583333
+          ],
+          "issue": "身份和昼夜稳定，无额外人脸或伪字幕。约1秒后伸手，约2.3秒起拿起黑碗并在4秒后抬碗；是计划外普通道具动作，不新增证据。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 6.583333,
+          "purpose": "面部近景可保留全段口型时间"
+        }
+      ],
+      "freeEditSuggestion": "建议源1344×768裁896×504，x448/y0后适配1280×720；全时段3fps裁框检查未见碗，脸部保持可读，较紧近景。须由G1对最终动态裁片复核；无需删源句或付费重拍。",
+      "suggestedCrop": {
+        "x": 448,
+        "y": 0,
+        "width": 896,
+        "height": 504,
+        "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V11N-crop-check.jpg",
+        "verification": "全时段3fps裁框预检；未替G1输出或批准最终裁片"
+      },
+      "recommendPaidRegeneration": false
+    },
+    "V12-01": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V12-01-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:53:39.289460+08:00",
+      "sourceSha256": "f3504f002a8fc5288aab982303b803f5bb6de06d927f712ec24e2d71d6ae7601",
+      "sourceBytes": 3332248,
+      "duration": 9.42,
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-021",
+          "speaker": "苟安",
+          "text": "好，我先不走。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-022",
+          "speaker": "演出",
+          "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "plannedState": {
+        "entry": "定制①一个安全回应结束。",
+        "end": "凭据完整交到我的右手，苟安食指准备指示。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 9,
+            "action": "苟安说先不走，完整说完后，从榻侧取出本队领取凭据，伸到我右手可接范围；我的右手从镜头下方托住凭据后，他才放手。凭据墨迹不可辨，不凭镜头添写村名。",
+            "camera": "前半眼高中近景，接物时自然下视；双手接触和放手过程持续可见。",
+            "lines": [
+              {
+                "node": "CH2-LY03-021",
+                "speaker": "苟安",
+                "text": "好，我先不走。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              },
+              {
+                "node": "CH2-LY03-022",
+                "speaker": "演出",
+                "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+                "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V12-01-3fps.jpg",
+      "visualReview": "交接动作可用；纸面乱字需免费后期处理",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "playback": {
+        "duration": 9.417,
+        "played": [
+          [
+            0,
+            9.417
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "findings": [
+        {
+          "time": [
+            0,
+            4.3
+          ],
+          "issue": "同一日间伤帐苟安留榻上，从榻侧取出纸质凭据后伸向镜头，未见新增人脸或站起。"
+        },
+        {
+          "time": [
+            4.3,
+            7.8
+          ],
+          "issue": "凭据递向前景，约6.2秒起玩家手进入并托住，苟安待接住后松手；动作连续、纸面没有明显瞬移。玩家双手接物，比计划仅右手略有差异，不改变获取结果。"
+        },
+        {
+          "time": [
+            2.0,
+            9.417
+          ],
+          "issue": "纸面出现清晰、随角度可读的模型乱字；约4.3秒后尤其突出。不能把该字当作已核实的领取凭据正文或新增村名。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 0,
+          "end": 9.417,
+          "purpose": "保留完整领取动作；先修纸面文字"
+        }
+      ],
+      "freeEditSuggestion": "由G1对纸内文字区做跟随纸面透视的柔化/纸纤维覆盖，保留纸边、折痕、手指及交接接触；沿用已有文书修复，不覆盖手，不另造整张准确公文。精确信息依原取得时点进入后期/UI，不能提前。若只裁尾部，会丢已接住结果，不推荐。",
+      "recommendPaidRegeneration": false
+    },
+    "V12-03": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V12-03-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:57:27.301220+08:00",
+      "sourceSha256": "d58cafa6858478162b2f35b7113e9521005da43cce2f8cd8677bf979b5b8dc21",
+      "sourceBytes": 3244393,
+      "duration": 12.25,
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-024",
+          "speaker": "苟安",
+          "text": "凭这个能领本队材料，别拿着它乱闯。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-025",
+          "speaker": "我（心声）",
+          "text": "先查清这批粮出了什么事。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "plannedState": {
+        "entry": "同一凭据仍在我手中。",
+        "end": "已交付凭据且暂留，口供仍未核实；接V13，非自由进入全部仓库。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 12,
+            "action": "苟安先叮嘱凭这个领取本队材料，不可乱闯；他说完闭口，视线退回手中凭据，我用同一声线更轻的心声说先查清。苟安不对心声回应。",
+            "camera": "眼高苟安中近景，句末后下视凭据。",
+            "lines": [
+              {
+                "node": "CH2-LY03-024",
+                "speaker": "苟安",
+                "text": "凭这个能领本队材料，别拿着它乱闯。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              },
+              {
+                "node": "CH2-LY03-025",
+                "speaker": "我（心声）",
+                "text": "先查清这批粮出了什么事。",
+                "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V12-03-3fps.jpg",
+      "visualReview": "需免费重排/裁框，避免把凭据交回苟安",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "playback": {
+        "duration": 12.25,
+        "played": [
+          [
+            0,
+            12.25
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "findings": [
+        {
+          "time": [
+            0.3,
+            4.5
+          ],
+          "issue": "玩家举着窄纸凭据，手部接触连续；纸面清晰乱字且版式不同于V12-01，须柔化文字并避免当作新证据。"
+        },
+        {
+          "time": [
+            5.2,
+            6.2
+          ],
+          "issue": "苟安伸手取回凭据，约5.7秒归其持有；与源结束状态“我仍持同一凭据”冲突，不可原样交付。"
+        },
+        {
+          "time": [
+            6.33,
+            12.25
+          ],
+          "issue": "苟安持纸低头并自然开口；其脸可裁为近景，手和纸位于下方。原片完整保留会显示凭据在他手中。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 6.333333,
+          "end": 12.25,
+          "purpose": "仅面部近景承接苟安叮嘱，必须裁去手和纸"
+        },
+        {
+          "start": 0.8,
+          "end": 4.5,
+          "purpose": "玩家持纸近景，柔化乱字后承接我的心声"
+        }
+      ],
+      "freeEditSuggestion": "推荐重排为：先6.333–12.25秒面部裁框（源1344×768裁704×396，x384/y48），后接0.8–4.5秒玩家持纸并柔化字区；合约9.617秒。前段供完整叮嘱，后段供完整心声，省去5.2–6.2秒收回动作，且无需跨V11互斥模板借画面或短循环凑时长。全时段3fps裁框预检未见手/纸；G1仍须动态复核最终裁片、语速与交付结果。",
+      "suggestedSequence": [
+        {
+          "sourceStart": 6.333333,
+          "sourceEnd": 12.25,
+          "crop": {
+            "x": 384,
+            "y": 48,
+            "width": 704,
+            "height": 396
+          },
+          "intendedLine": "凭这个能领本队材料，别拿着它乱闯。"
+        },
+        {
+          "sourceStart": 0.8,
+          "sourceEnd": 4.5,
+          "post": "保留玩家持纸，柔化纸面乱字",
+          "intendedLine": "先查清这批粮出了什么事。"
+        }
+      ],
+      "cropEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V12-03-face-crop-check-v2.jpg",
+      "recommendPaidRegeneration": false
+    },
+    "V12-02": {
+      "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V12-02-raw.mp4",
+      "sourceMtimeLocal": "2026-10-25T11:59:31.106909+08:00",
+      "sourceSha256": "46021fb105086f7ae0d6f6052a3e4938e5e3c477e81334f3f4f593e679991339",
+      "sourceBytes": 5110614,
+      "duration": 14.38,
+      "sourceLines": [
+        {
+          "node": "CH2-LY03-023",
+          "speaker": "苟安",
+          "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "plannedState": {
+        "entry": "我的右手托住刚交来的凭据，苟安尚未指示。",
+        "end": "苟安说完口供并闭口，我仍持同一凭据。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 14,
+            "action": "凭据已在我的手中，苟安指向其中一行后收回食指，向摄影机说早备好、被李严扣着不发的口供。只拍他说话与手中凭据，禁止出现满仓或李严扣押实景来替口供背书。",
+            "camera": "0–3秒第一视角俯看指示，3–14秒自然抬眼到苟安中近景。",
+            "lines": [
+              {
+                "node": "CH2-LY03-023",
+                "speaker": "苟安",
+                "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+                "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+              }
+            ]
+          }
+        ]
+      },
+      "contactSheet": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-assist\\V12-02-3fps.jpg",
+      "visualReview": "指示动作可用；需移除重复递纸并柔化乱字，末尾持纸归属需G1避歧义",
+      "actualPlayback": true,
+      "audioIssues": [
+        "本次不逐字听审；音频仅标记，纯音频不建议付费重拍"
+      ],
+      "playback": {
+        "duration": 14.375,
+        "played": [
+          [
+            0,
+            14.375
+          ]
+        ],
+        "ended": true,
+        "method": "本地浏览器完整静音播放＋3fps全时段序列＋动作点截图，非逐字听审"
+      },
+      "findings": [
+        {
+          "time": [
+            0,
+            3.2
+          ],
+          "issue": "苟安再次从前方拿纸并伸向镜头，重复V12-01已完成的交付；不宜连着再放一遍。"
+        },
+        {
+          "time": [
+            3.25,
+            8.25
+          ],
+          "issue": "纸面近景，左前景玩家手托纸；苟安约5.4–7.6秒用食指指行并收回，指示动作连续，未见明显指头增生或纸瞬移。右侧苟安手有扶持纸边，不等于玩家已放手。"
+        },
+        {
+          "time": [
+            8.25,
+            14.375
+          ],
+          "issue": "右侧苟安回握纸边、摄影机侧转，玩家左手退出构图；未见明确玩家松手转交动作，但末尾画面容易误读为苟安独持凭据。"
+        },
+        {
+          "time": [
+            2.0,
+            14.375
+          ],
+          "issue": "红栏纸内大量清晰模型乱字；必须做纸面随动柔化，不能把字样当新证据。"
+        },
+        {
+          "time": [
+            0,
+            14.375
+          ],
+          "issue": "同一日间灰衣黑巾人物，无额外人脸或伪字幕，后半侧向视角较大；未拍李严扣粮或满仓实景，保持口供而非事实背书。"
+        }
+      ],
+      "usableWindows": [
+        {
+          "start": 3.25,
+          "end": 8.25,
+          "purpose": "保留指行与收指的主要凭据动作，纸面字区需修"
+        },
+        {
+          "start": 11.333333,
+          "end": 14.375,
+          "purpose": "可评估只取面部近景，排除持纸归属歧义；须核最终裁框"
+        }
+      ],
+      "freeEditSuggestion": "先去掉0–3.2秒重复交付，保留3.25–8.25秒指示动作并随动柔化乱字。后段可用不带手/纸的同人面部画面承接完整口供；若G1复用V11R仅复用同一人物视觉表演，V12-02原句/音轨/状态保持本槽，不导入R分支对白或判定。当前原片末尾不宜不加说明地当作“玩家仍持”合格结果。无需为纯音频或可免费剪辑问题付费重拍。",
+      "recommendPaidRegeneration": false
+    }
+  },
+  "notYetDownloaded": [],
+  "updatedLocal": "2026-10-25T12:04:36.986461+08:00",
+  "batch1Complete": [
+    "L01-01",
+    "V11T-01",
+    "V11D-01",
+    "V11A-01"
+  ],
+  "batch2Complete": [
+    "V11R-01",
+    "V11N-01"
+  ],
+  "v12Reviewed": [
+    "V12-01",
+    "V12-02",
+    "V12-03"
+  ],
+  "status": "read_only_assist_complete",
+  "allAssignedRawClipsReviewed": true,
+  "scopeLimit": "本报告只审原片并提供免费后期建议；不代表G1最终裁片已验证，更不代表用户通过。",
+  "sourceIntegrityRecheck": {
+    "allSourcesUnchanged": true,
+    "mismatchIds": []
+  }
+}

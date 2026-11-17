@@ -1,0 +1,80 @@
+{
+  "id": "CH2-V43",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V43-6005ad8d3c-20261025.mp4",
+  "oldSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+  "oldSubtitles": "/video/subtitles/CH2-V43-6005ad8d3c-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V43-0e3ec6af.mp4",
+  "sha256": "5c353b8126c950d03e8a02aaa3ec043eb39fac56652b5c65186255e2fe3ab3e8",
+  "bytes": 9934120,
+  "duration": 12.333333333333334,
+  "containerDuration": 12.333333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 296,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V43",
+    "src": "/video/current/PV27-CH2-V43-0e3ec6af.mp4",
+    "title": "放行与赴魏散谣后果",
+    "subtitles": "/video/subtitles/PV27-CH2-V43-0e3ec6af.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-E5-002",
+      "node": "CH2-E5-002",
+      "text": "后来，苟安去了魏国。关于丞相的谣言，还是传回了营中。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E5-002.wav",
+      "oldCorrelation": 0.9701224354112692,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-E5-002-v1.wav",
+      "newVoiceSha256": "8c66bb29ce9f16e4926058e6afd63823054488028b262d7c7ae66f035782c36e",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        6.0367500000000005,
+        12.27675
+      ],
+      "insertAt": 6.0367500000000005,
+      "voiceSeconds": 6.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0262407064437866,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 6.156750000000001,
+      "end": 10.66675,
+      "text": "后来，苟安去了魏国。关于丞相的谣言"
+    },
+    {
+      "start": 10.91675,
+      "end": 12.14675,
+      "text": "还是传回了营中"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

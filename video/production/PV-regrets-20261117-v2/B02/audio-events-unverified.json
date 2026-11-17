@@ -1,0 +1,61 @@
+{
+  "source_sha256": "17c8d02ec3724492d8050010b92b231c1ef2ba85440b8ec6649d7017644a799f",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.8074
+        },
+        {
+          "label": "Television",
+          "p": 0.0776
+        },
+        {
+          "label": "Violin, fiddle",
+          "p": 0.031
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0229
+        },
+        {
+          "label": "Scrape",
+          "p": 0.0212
+        },
+        {
+          "label": "Speech",
+          "p": 0.021
+        },
+        {
+          "label": "Theme music",
+          "p": 0.0198
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0195
+        },
+        {
+          "label": "Sad music",
+          "p": 0.0167
+        },
+        {
+          "label": "Chink, clink",
+          "p": 0.0166
+        },
+        {
+          "label": "Bang",
+          "p": 0.0161
+        },
+        {
+          "label": "Breaking",
+          "p": 0.011
+        }
+      ],
+      "music": 0.8074
+    }
+  ]
+}

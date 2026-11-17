@@ -1,0 +1,63 @@
+{
+  "id": "V13-02",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\edited\\picture-review-final\\V13-02.mp4",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-02-raw.mp4",
+  "sourceSha256": "cbd60b40353405b108b0138c712dfebf3ec46837015f2aee9eea28255aa1323d",
+  "pictureChanges": {
+    "documentDefocusZones": [
+      [
+        0,
+        20,
+        0,
+        720,
+        180
+      ]
+    ],
+    "manualMasksSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\manual_document_masks.py",
+    "manualMasksSha256": "11f29d63f8b7d46c159da6c4a71a14cbe6e8623a77853d1ee3b7df24599c539b",
+    "fullFrameExistingEvidence": false,
+    "trim": [
+      0,
+      3.3
+    ],
+    "tailHold": 0,
+    "sourceReuse": [
+      {
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V13-02-raw.mp4",
+        "sha256": "cbd60b40353405b108b0138c712dfebf3ec46837015f2aee9eea28255aa1323d",
+        "usedRange": [
+          0,
+          3.3
+        ],
+        "context": "保留原纸凭据落案及退手，去3.5秒起变木牍异常；原玩家音轨2.597秒加0.4秒入声及0.3秒句尾均保留，不定格、不循环"
+      }
+    ]
+  },
+  "sourceLines": [
+    {
+      "node": "CH2-LY04-001",
+      "speaker": "我",
+      "text": "我来领取本队这批粮的交接材料。",
+      "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+    }
+  ],
+  "voiceReused": {
+    "path": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-001.wav",
+    "duration": 2.5969583333333333,
+    "offset": 1.0,
+    "provider": "existing player TTS",
+    "voice": "ICL_uranus_zh_male_xiaohouye_tob",
+    "listeningReview": "未听审",
+    "centralSource": "reused_G2_same_voice",
+    "sha256": "32e16de691e80f723bda186620d53a0d171f85554b0621ed83d233371f493a01"
+  },
+  "audioReview": "未听审、未新增TTS",
+  "duration": 3.3,
+  "sha256": "917c160ddd2ca6829f43db37ebab733b4ed0cdc0ca1b27351587574fd4ead70d",
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioHz": 48000
+}

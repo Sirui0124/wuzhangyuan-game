@@ -1,0 +1,21 @@
+{
+  "source_sha256": "62bcead0a9cecf818c606374926c8016abc4236fef81a3d96af3dab7f9e4a94b",
+  "method": "faster-whisper-base CPU int8; no expected script injected; VAD; automatic language",
+  "language": "zh",
+  "language_probability": 0.995000422000885,
+  "expected_lines": [
+    "你若见天际赤红，便须星夜速往救援。"
+  ],
+  "segments": [
+    {
+      "in": 3.25,
+      "out": 9.25,
+      "text": "你若见天计赤鸿,便许星夜速往救援。",
+      "no_speech_probability": 0.04687924310564995,
+      "logprob": -0.5042766685839053
+    }
+  ],
+  "rms_dbfs": -13.019577026367188,
+  "peak_dbfs": 2.2949440479278564,
+  "notice": "Machine locator only; not a transcript approval or proof of no music; inspect actual audio and lip/action timing."
+}

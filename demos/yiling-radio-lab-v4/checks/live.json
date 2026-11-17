@@ -1,0 +1,244 @@
+[
+  {
+    "name": "position",
+    "text": "甲队现在在哪里？只报位置，不用改变行动。",
+    "status": 200,
+    "result": {
+      "kind": "query",
+      "reply": "甲队现在在接应营，700人待命，尚有余力。",
+      "topic": "position",
+      "units": [
+        "a"
+      ],
+      "commands": [],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "names-and-numbers",
+    "text": "派700人接傅肜，800人去旧营，600人去东沟，400人留营。",
+    "status": 200,
+    "result": {
+      "kind": "order",
+      "reply": "请核对后传令。",
+      "commands": [
+        {
+          "units": [
+            "a"
+          ],
+          "action": "rescue",
+          "target": "rear",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "派700人接傅肜"
+        },
+        {
+          "units": [
+            "b"
+          ],
+          "action": "rescue",
+          "target": "campfire",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "800人去旧营"
+        },
+        {
+          "units": [
+            "c"
+          ],
+          "action": "rescue",
+          "target": "east",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "600人去东沟"
+        },
+        {
+          "units": [
+            "d"
+          ],
+          "action": "hold",
+          "target": "camp",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "400人留营"
+        }
+      ],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "four-units",
+    "text": "甲队接应傅肜，乙队走南侧路接冯习张南，丙队搜东沟，丁队留营待命。",
+    "status": 200,
+    "result": {
+      "kind": "order",
+      "reply": "请核对后传令。",
+      "commands": [
+        {
+          "units": [
+            "a"
+          ],
+          "action": "rescue",
+          "target": "rear",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "甲队接应傅肜"
+        },
+        {
+          "units": [
+            "b"
+          ],
+          "action": "rescue",
+          "target": "campfire",
+          "via": "side",
+          "seconds": 0,
+          "quote": "乙队走南侧路接冯习张南"
+        },
+        {
+          "units": [
+            "c"
+          ],
+          "action": "rescue",
+          "target": "east",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "丙队搜东沟"
+        },
+        {
+          "units": [
+            "d"
+          ],
+          "action": "hold",
+          "target": "camp",
+          "via": "normal",
+          "seconds": 0,
+          "quote": "丁队留营待命"
+        }
+      ],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "all-reports",
+    "text": "各队报告现在的位置，先不要调兵。",
+    "status": 200,
+    "result": {
+      "kind": "query",
+      "reply": "传令：甲、乙、丙、丁四队回报当前位置与状况，未得新令前原地待命。",
+      "topic": "position",
+      "units": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "commands": [],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "slow",
+    "text": "甲队缓行前往东沟，不要突击。",
+    "status": 200,
+    "result": {
+      "kind": "order",
+      "reply": "请核对后传令。",
+      "commands": [
+        {
+          "units": [
+            "a"
+          ],
+          "action": "move",
+          "target": "east",
+          "via": "normal",
+          "rush": false,
+          "slow": true,
+          "seconds": 0,
+          "quote": "甲队缓行前往东沟，不要突击。"
+        }
+      ],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "rush-flank",
+    "text": "丁队急行军经东岭支援后阵。",
+    "status": 200,
+    "result": {
+      "kind": "order",
+      "reply": "请核对后传令。",
+      "commands": [
+        {
+          "units": [
+            "d"
+          ],
+          "action": "rescue",
+          "target": "rear",
+          "via": "ridge",
+          "rush": true,
+          "slow": false,
+          "seconds": 0,
+          "quote": "丁队急行军经东岭支援后阵。"
+        }
+      ],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "rest-minute",
+    "text": "乙队原地休整一分钟。",
+    "status": 200,
+    "result": {
+      "kind": "order",
+      "reply": "请核对后传令。",
+      "commands": [
+        {
+          "units": [
+            "b"
+          ],
+          "action": "rest",
+          "target": "camp",
+          "via": "normal",
+          "seconds": 60,
+          "quote": "乙队原地休整一分钟。"
+        }
+      ],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "unsupported",
+    "text": "甲队放火烧旧营，然后撤回。",
+    "status": 200,
+    "result": {
+      "kind": "clarify",
+      "reply": "放火烧旧营",
+      "commands": [],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  },
+  {
+    "name": "advice",
+    "text": "正常行军、急行和休整有什么区别？先别执行。",
+    "status": 200,
+    "result": {
+      "kind": "answer",
+      "reply": "正常行军按常规速度推进，不额外赶路也不拖慢；急行军加快赶路，但更易疲惫、遇敌更仓促；休整是原地停下恢复，默认约45秒，之后自动恢复原任务，不消敌也不推进。三者在接敌时都不能替代进攻或撤回。",
+      "topic": "status",
+      "units": [
+        "a"
+      ],
+      "commands": [],
+      "promptVersion": "yiling-radio-command-v4-20261116"
+    },
+    "passed": true
+  }
+]

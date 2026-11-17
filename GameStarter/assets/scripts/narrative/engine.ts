@@ -1,3 +1,5 @@
+import { applyAction, applyEffects, settleEvents } from './engine-effects';
+import { createJudgeRequest } from './engine-request';
 import type { Chapter, DialogueNode, Line, Outcome, Effect, JudgeRequest, JudgeResult, Value, Condition } from '../../../../content/schema/narrative';
 import { evaluate, emptyContext, InteractionContext } from './conditions';
 import { createState, cloneState, rewindState, validateState, uniqueId, RuntimeState } from './state';
@@ -270,24 +272,16 @@ export class NarrativeEngine {
         });
         return true;
     }
-    private applyAction(id: string, context: InteractionContext): void {
-        const action = this.chapter.actions.find(a => a.id === id);
-        if (!action || !this.ok(action.availableWhen, context)) throw new Error(`Action unavailable ${id}`);
-        this.applyEffects(action.effects.filter(e => e.type !== 'fulfillPromise'), context, id); this.state.actions.push(id);
-        this.log('action', id, {}, context);
-        for (const p of Object.values(this.state.promises)) if (p.status === 'pending') {
-            const def = this.chapter.promises.find(x => x.id === p.id)!;
-            if (def.requiredActionIds.includes(id) && !p.actions.includes(id)) p.actions.push(id);
-            if (action.timeCost === 'delay') {
-                p.delays++; this.log(p.delays >= def.delayBudget ? 'promise_break' : 'promise_warning', p.id, {}, context);
-                if (p.delays >= def.delayBudget) { p.status = 'broken'; this.applyEffects(def.brokenEffects, context, id); }
-            }
-            if (p.status === 'pending' && def.requiredActionIds.every(a => p.actions.includes(a)) && this.ok(def.completedWhen, context)) p.status = 'fulfilled';
-        }
-        this.applyEffects(action.effects.filter(e => e.type === 'fulfillPromise'), context, id);
-        this.settle(context);
-        if (!this.pendingNext && action.next) this.pendingNext = action.next;
+    private mutationHost() {
+        const engine = this;
+        return {
+            chapter: this.chapter, state: this.state, nodeId: this.session?.nodeId ?? null,
+            get pendingNext() { return engine.pendingNext; },
+            set pendingNext(value: string | null) { engine.pendingNext = value; },
+            log: (kind: string, target: string, changes: Record<string, Value>, context: InteractionContext) => this.log(kind, target, changes, context),
+        };
     }
+    private applyAction(id: string, context: InteractionContext): void { applyAction(this.mutationHost(), id, context); }
     private reply(outcome: Outcome, key: string, context: InteractionContext): void {
         const s = this.session!; this.uiEpoch++;
         this.session = { nodeId: s.nodeId, lines: outcome.reply, index: 0, phase: 'reply', outcome, outcomeKey: key, context };
@@ -314,31 +308,7 @@ export class NarrativeEngine {
             this.state.evidence.entry_notice?.loopId === this.state.loopId && !context.evidenceIds.includes('entry_notice'))
             context.evidenceIds.push('entry_notice');
         if (!this.ok(n.availableWhen, context)) throw new Error('Input prerequisites changed');
-        // NPC owns only current-loop facts; player memory and other actors' histories are excluded.
-        const caseFlags = new Set<string>();
-        const inspect = (c: Parameters<typeof evaluate>[0]): void => {
-            if ('flag' in c) caseFlags.add(c.flag);
-            else if ('all' in c) c.all.forEach(inspect);
-            else if ('any' in c) c.any.forEach(inspect);
-            else if ('not' in c) inspect(c.not);
-        };
-        def.acceptanceCases.forEach(c => inspect(c.when));
-        const constraints = this.chapter.initialFlags.filter(f => f.scope === 'loop' && caseFlags.has(f.id) && f.owner !== n.characterId)
-            .map(f => `程序校验事实（不代表NPC已知）：${f.id}=${JSON.stringify(this.state.flags[f.id])}`);
-        const facts = this.chapter.initialFlags.filter(f => f.scope === 'loop' && f.owner === n.characterId)
-            .map(f => `${f.id}=${JSON.stringify(this.state.flags[f.id])}`);
-        const history = this.state.history.filter(e => e.loopId === this.state.loopId && e.actorId === n.characterId).slice(-6)
-            .map(e => `${e.kind}:${e.target}; evidence=${e.evidenceIds.join(',')}`);
-        const request: JudgeRequest = { requestId: uniqueId('judge'), loopId: this.state.loopId, stateRevision: this.state.revision,
-            nodeId: n.id, characterId: n.characterId, intentId, evidenceIds: context.evidenceIds, text,
-            context: [this.chapter.characters.find(a => a.id === n.characterId)!.motivation,
-                `当前目标证词：${n.targetStatement ?? ''}`, ...facts, ...constraints, ...(n.id === 'weiyan.negotiate' ? [] : history),
-                ...(this.state.feedback[n.id]?.missingPoints ?? []).map(point => `上次待补充（须重新核验）：${point}`),
-                ...Object.values(this.state.promises).filter(p => p.actorId === n.characterId).map(p => `本轮承诺 ${p.id}:${p.status}`)] };
-        if (n.id === 'weiyan.negotiate' || n.id === 'tutorial.weiyan.negotiate') {
-            request.context = [];
-            request.weiyan = { engineFacts: { approval: this.state.flags['loop.jiangwei_approval'] === true } };
-        }
+        const request = createJudgeRequest(this.chapter, this.state, n, def, context, intentId, text);
         this.pending = request; const epoch = this.uiEpoch; const controller = new AbortController(); this.controller = controller;
         const stale = () => this.pending !== request || this.state.loopId !== request.loopId || this.state.revision !== request.stateRevision || this.uiEpoch !== epoch;
         try {
@@ -383,45 +353,8 @@ export class NarrativeEngine {
         if (this.state.committed.includes(key)) return;
         this.state.committed.push(key); this.applyEffects(effects, context, target); this.log(kind, target, {}, context);
     }
-    private applyEffects(effects: Effect[], context: InteractionContext, target: string): void {
-        const changes: Record<string, Value> = {};
-        const granted: string[] = [];
-        for (const effect of effects) {
-            if (effect.type === 'setFlag') {
-                const def = this.chapter.initialFlags.find(f => f.id === effect.flag);
-                if (!def || typeof effect.value !== typeof def.initial || (def.allowedValues && !def.allowedValues.includes(effect.value))) throw new Error(`Invalid flag ${effect.flag}`);
-                this.state.flags[effect.flag] = effect.value; changes[effect.flag] = effect.value;
-            } else if (effect.type === 'grantEvidence') {
-                if (!this.chapter.evidence.some(e => e.id === effect.evidenceId)) throw new Error('Unknown evidence');
-                if (!this.state.evidence[effect.evidenceId]) {
-                    this.state.evidence[effect.evidenceId] = { loopId: this.state.loopId, nodeId: this.session?.nodeId ?? target, sourceEvent: '' };
-                    granted.push(effect.evidenceId);
-                }
-            } else {
-                const def = this.chapter.promises.find(p => p.id === effect.promiseId);
-                if (!def) throw new Error('Unknown promise');
-                const p = this.state.promises[def.id];
-                if (effect.type === 'startPromise' && !p) this.state.promises[def.id] = { id: def.id, actorId: context.actorId ?? '', startedEvent: target, status: 'pending', actions: [], delays: 0 };
-                if (effect.type === 'fulfillPromise') {
-                    if (!p || p.status === 'broken' || !def.requiredActionIds.every(a => p.actions.includes(a)) || !this.ok(def.completedWhen, context)) throw new Error('Promise not actually fulfilled');
-                    p.status = 'fulfilled';
-                }
-                if (effect.type === 'breakPromise' && p?.status === 'pending') { p.status = 'broken'; this.applyEffects(def.brokenEffects, context, target); }
-            }
-        }
-        const eventId = this.log('effects', target, changes, context);
-        for (const id of granted) this.state.evidence[id].sourceEvent = eventId;
-    }
-    private settle(context: InteractionContext): void {
-        for (let pass = 0; pass <= this.chapter.events.length; pass++) {
-            const event = [...this.chapter.events].sort((a, b) => b.priority - a.priority)
-                .find(e => !this.state.firedEvents.includes(e.id) && this.ok(e.when, context));
-            if (!event) return;
-            this.state.firedEvents.push(event.id); this.applyEffects(event.effects, context, event.id);
-            this.log('event', event.id, {}, context); if (event.next && !this.pendingNext) this.pendingNext = event.next;
-        }
-        throw new Error('Event settlement failed');
-    }
+    private applyEffects(effects: Effect[], context: InteractionContext, target: string): void { applyEffects(this.mutationHost(), effects, context, target); }
+    private settle(context: InteractionContext): void { settleEvents(this.mutationHost(), context); }
     private log(kind: string, target: string, changes: Record<string, Value>, context = this.selection): string {
         this.state.revision++;
         const id = uniqueId('event');

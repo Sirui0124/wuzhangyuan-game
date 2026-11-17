@@ -1,0 +1,73 @@
+/* Shared military folio: covers are woven cloth; reading leaves are warm paper. */
+:root{
+ --folio-cover:url('/ui/folio-cover-neutral-v1.png');
+ --folio-leaf:url('/ui/panel-grain.svg'),linear-gradient(94deg,#b4a17b,#d7c8a6 3%,#d9cbad 94%,#baaa87);
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{
+ background:#24231d var(--folio-cover) center/100% 100% no-repeat;border:0;border-radius:0;
+ box-shadow:0 28px 80px #000a,0 2px 5px #0009;--panel-ink:#e7d9b9;--panel-muted:#c1b295;--panel-accent:#b99c64;color:var(--panel-ink);
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::before,
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header{background:none;padding-left:15px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1{
+ color:#342f22;border:0;padding:20px 7px 21px;background:url('/ui/panel-grain.svg'),linear-gradient(93deg,#9d895e,#ddcba0 17%,#c6b58c 85%,#99845c);
+ clip-path:polygon(1% 0,97% 1%,100% 18%,98% 43%,100% 76%,96% 100%,2% 99%,0 81%,2% 58%,0 26%);
+ box-shadow:inset 0 0 0 3px #4d43284d,inset 0 0 0 5px #e4cf9c42;text-shadow:0 1px #f1e2b53b;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header::after{
+ content:'';display:block;position:static;width:17px;height:21px;margin:16px 0 0 7px;transform:rotate(-6deg);opacity:.8;
+ border:2px solid #9d5038;box-shadow:inset 0 0 0 2px #29241b;background:repeating-linear-gradient(90deg,transparent 0 3px,#9d5038 3px 5px,transparent 5px 8px);clip-path:polygon(0 2%,96% 0,100% 96%,3% 100%);
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close{border:0;background:#171912b3;box-shadow:inset 0 0 0 1px #a18a5566;top:23px;right:23px;width:28px;height:28px;min-height:28px;padding:6px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close svg{width:16px;height:16px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]:not([data-page=pause]):not([data-page=history]) .folio-body{
+ background:linear-gradient(100deg,#191811e8,#1c1c16d9);border:1px solid #ab8d4e33;box-shadow:inset 3px 0 #e5cc8e0e,0 3px 12px #0003;
+ padding:22px 26px;scrollbar-color:#ac925c #28251b;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body{
+ background:var(--folio-leaf);border:1px solid #c4ad7b;box-shadow:3px 3px 0 #9b8b69,5px 5px 0 #403b2a,0 6px 14px #0006,inset 3px 0 #f1e1b34d;
+ color:#332e24;scrollbar-color:#81704b #d3c09a;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content p{color:#332e24}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content small{color:#85513a}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body :is(h2,h3,blockquote){color:#443825}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body :is(.quiet-button,summary){color:#73452e}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .settings-section h2{color:#dfc895;border-bottom:1px solid #ac8e4b33;padding-bottom:10px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] :is(.save-leaf,.supply-card){background:url('/ui/panel-grain.svg'),linear-gradient(105deg,#51432e52,#191a14b3);border:1px solid #b49a624d;box-shadow:inset 0 0 0 3px #b49a620c,0 3px 10px #0003;border-radius:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-leaf.is-empty{background:url('/ui/panel-grain.svg'),#1c1b1566;border-style:dashed}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-button{
+ color:#eddbb4;background:url('/ui/panel-grain.svg'),linear-gradient(105deg,#7b633540,#29271dcc 45%,#6f5c3533);border:1px solid #ae915d;border-radius:0;
+ clip-path:polygon(7px 0,calc(100% - 7px) 0,100% 7px,100% calc(100% - 7px),calc(100% - 7px) 100%,7px 100%,0 calc(100% - 7px),0 7px);box-shadow:inset 0 0 0 3px #ad935a15;
+}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-button:hover:not(:disabled){background-color:#8e713955;border-color:#e2c88d}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-button{background:#50412e;color:#f0dfb9}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-button:focus-visible{outline:0;box-shadow:inset 0 0 0 2px #f1d99b}
+/* The dossier lives in a native dialog outside #game-root, but shares the book materials. */
+:root .character-dossier{padding:14px 18px 20px 32px;border:0;background:#24231d var(--folio-cover) center/100% 100% no-repeat;color:#e5d4af;box-shadow:0 28px 80px #000a}
+:root .character-dossier>header{border:0;padding:14px 20px 20px}
+:root .character-dossier>header h1{color:#e5d4af;letter-spacing:4px;text-shadow:0 2px 2px #000}
+:root .character-dossier [data-character-close]{color:#cbb88b}
+:root .character-dossier .character-book{background:var(--folio-leaf);color:#332e24;border:1px solid #b9a16d;box-shadow:3px 3px #8c7c59;max-height:calc(88dvh - 116px)}
+:root .character-dossier .character-book>nav{background:url('/ui/panel-grain.svg'),#9e895f21;border-color:#88714655}
+:root .character-dossier .character-book>nav button[aria-current=true]{background:#9a573b17;color:#833f2e;box-shadow:inset 2px 0 #9a573b}
+:root .character-dossier .character-portrait{background:radial-gradient(ellipse at 50% 30%,#8e805e33,transparent 70%)}
+/* The approved achievement cards remain intact; the surrounding archive gets a cloth cover. */
+:root .ending-album{background:#24231d var(--folio-cover) center/100% 100% fixed no-repeat}
+:root .ending-album .album-header,:root .ending-album .album-toolbar,:root .ending-album .album-footer{color:#d2bf98;text-shadow:0 1px 3px #000}
+:root .ending-album .album-book{background:#1919139c;padding:14px;box-shadow:inset 0 0 0 1px #b39a5e33}
+@media(max-width:650px){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{background-size:auto 100%;background-position:left top;box-shadow:0 24px 60px #0009,inset -2px 0 #8f7845}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header{padding-left:8px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1{padding:14px 4px;letter-spacing:4px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]:not([data-page=pause]):not([data-page=history]) .folio-body{padding:15px 13px}
+ :root .character-dossier{padding:10px 12px 18px 18px}
+ :root .character-dossier>header{padding:12px 10px 16px}
+ :root .ending-album{background-size:auto 100%;background-position:left top}
+ :root .ending-album .album-book{padding:8px}
+}
+@media(forced-colors:active){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page],:root .character-dossier,:root .ending-album{background:Canvas;color:CanvasText;border:1px solid CanvasText}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-body,:root .character-dossier .character-book{background:Canvas;color:CanvasText;border:1px solid CanvasText}
+}

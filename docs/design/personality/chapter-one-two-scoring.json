@@ -1,0 +1,1736 @@
+{
+  "schemaVersion": 1,
+  "createdDate": "2026-10-26",
+  "status": "runtime-integrated-browser-20261027",
+  "axes": {
+    "A": "谋定→敢行",
+    "B": "直陈→周旋",
+    "C": "守则→权变",
+    "D": "大局→情义"
+  },
+  "sources": [
+    {
+      "path": "content/chapters/wuzhang/chapter-one.script.json",
+      "sha256": "db1d0f27c5dd1bd56ed9b7de31fac0513337c869473672409b0ab3c020d8a666"
+    },
+    {
+      "path": "content/chapters/wuzhang/chapter-one.flow.json",
+      "sha256": "b72943ba3aea288aa0c4ef67238a7197a10d015dd093584daf0a554a2de16e77"
+    },
+    {
+      "path": "content/chapters/grain/chapter-two.films.json",
+      "sha256": "9c62f12bb0691d90cbbb01286847fcb3c62507e37495f25b657ede3fb7a42119"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-one/session.ts",
+      "sha256": "4cde6726eb11f8ee15692455e3e23d93cdaf8d619016dd949e8ad016f7112ecd"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-one/tent-visit.ts",
+      "sha256": "ec83ed31b4348fac3c4c5d59b2ee94b8fe9d4028e0114cd2c80b417f4f09e25a"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-two/session.ts",
+      "sha256": "6a8b051519c177ace60ec207d9f5eb9eafcd6ba36e8c90b61b41aa777aeb6974"
+    },
+    {
+      "path": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "sha256": "22151845eec9a99fd3bb8ccf4c79c7d29e6a9a29b4ea1b6528430c6022393ceb"
+    }
+  ],
+  "summary": {
+    "chapterOneNormalChoiceNodes": 1,
+    "chapterOneOptionalTentChoiceStages": 2,
+    "chapterOneOpenNodes": 2,
+    "chapterTwoChoiceNodes": 14,
+    "chapterTwoOpenNodes": 2,
+    "chapterTwoFixedFallbackSpeeches": 10
+  },
+  "tutorialExclusion": {
+    "gate": "chapter=wuzhang && round=1",
+    "endingId": "tutorial-sacrifice",
+    "excludes": [
+      "斥候二选一",
+      "首轮开放表达",
+      "固定转交与等待",
+      "强制清晨被魏延处斩",
+      "教学段偷听选择"
+    ],
+    "reason": "按本次任务口径将必挂初始任务整体设为不计个性。死亡仍可记教学历史。",
+    "note": "用户原话强调不因必挂影响个性；若产品最终仅排除强制死亡而保留教学自主选项，可调整此门控，但不能偷算。"
+  },
+  "choices": [
+    {
+      "chapter": "wuzhang",
+      "nodeId": "phase:choice:round1",
+      "kind": "choice",
+      "prompt": "向斥候问清",
+      "tutorial": true,
+      "preconditions": [
+        "round=1",
+        "phase=choice",
+        "first-scout completed"
+      ],
+      "source": "content/chapters/wuzhang/chapter-one.script.json",
+      "options": [
+        {
+          "id": "A-23",
+          "action": "chooseScout(a)",
+          "text": "营门失守了？",
+          "next": "scout-option-a",
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "位于第一关必挂初始教学任务，按本次任务口径整体排除。"
+          }
+        },
+        {
+          "id": "A-23B",
+          "action": "chooseScout(b)",
+          "text": "不行，今晚谁都不能进",
+          "next": "scout-option-b",
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "位于第一关必挂初始教学任务，按本次任务口径整体排除。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "wuzhang",
+      "nodeId": "tent:side",
+      "kind": "optional-choice",
+      "prompt": "隔着帐布，似乎有人在念叨什么。听不真切。",
+      "tutorial": "exclude when round=1; eligible only round=2",
+      "preconditions": [
+        "phase=tent",
+        "tent=side",
+        "notice in finishedSections"
+      ],
+      "source": "GameStarter/web-demo/src/chapters/chapter-one/views/tent-visit.ts",
+      "mutualExclusion": "继续与离开互斥；side继续才到footsteps；离开后可重复进入，必须同槽覆盖而非累加。",
+      "options": [
+        {
+          "id": "tent:side:continue",
+          "action": "tentAction(continue)",
+          "text": "继续到帐篷右面听一听",
+          "next": "footsteps",
+          "personality": {
+            "directions": [
+              1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "只在 round=2 且风险已提示时记主动继续；不因死亡追加。",
+            "slot": "CH1.tent-risk",
+            "replacePrevious": true,
+            "excludeWhen": "round=1"
+          }
+        },
+        {
+          "id": "tent:side:leave",
+          "action": "tentAction(leave)",
+          "text": "离开",
+          "next": "explore:heard",
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "只在 round=2 且风险已提示时记收手。",
+            "slot": "CH1.tent-risk",
+            "replacePrevious": true,
+            "excludeWhen": "round=1"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "wuzhang",
+      "nodeId": "tent:footsteps",
+      "kind": "optional-choice",
+      "prompt": "我又绕到帐篷右面。暗处，隐约传来脚步声。",
+      "tutorial": "exclude when round=1; eligible only round=2",
+      "preconditions": [
+        "phase=tent",
+        "tent=footsteps",
+        "notice in finishedSections"
+      ],
+      "source": "GameStarter/web-demo/src/chapters/chapter-one/views/tent-visit.ts",
+      "mutualExclusion": "继续与离开互斥；side继续才到footsteps；离开后可重复进入，必须同槽覆盖而非累加。",
+      "options": [
+        {
+          "id": "tent:footsteps:continue",
+          "action": "tentAction(continue)",
+          "text": "再去后面听一听",
+          "next": "caught",
+          "personality": {
+            "directions": [
+              1,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "只在 round=2 且风险已提示时记主动继续；不因死亡追加。",
+            "slot": "CH1.tent-risk",
+            "replacePrevious": true,
+            "excludeWhen": "round=1"
+          }
+        },
+        {
+          "id": "tent:footsteps:leave",
+          "action": "tentAction(leave)",
+          "text": "离开",
+          "next": "explore:heard",
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 2,
+            "reason": "只在 round=2 且风险已提示时记收手。",
+            "slot": "CH1.tent-risk",
+            "replacePrevious": true,
+            "excludeWhen": "round=1"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY02-002",
+      "kind": "choice",
+      "prompt": "你怎么说明来意？",
+      "tutorial": false,
+      "predecessors": [
+        "V02"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "CH2-LY02-003",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+          "next": "V03A",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "先承认问得冒失，再解释担心，属于缓和对话的表达方式；不因关心自动加情义。"
+          }
+        },
+        {
+          "id": "CH2-LY02-004",
+          "text": "你救过我，我来看看你。",
+          "next": "V03B",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "直接说明救命之恩和来意；只记直陈，不因提到恩情就推断已牺牲大局。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-BEDSIDE",
+      "kind": "choice",
+      "prompt": "你怎样回应？",
+      "tutorial": false,
+      "predecessors": [
+        "V04"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "CH2-LY02-QA",
+          "text": "你喝酒是在五月。那这趟粮是什么时候领的？",
+          "next": "V04A",
+          "existingGameplayDelta": [
+            0,
+            1,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "主要询问时间事实，不把调查动作当谋定人格。"
+          }
+        },
+        {
+          "id": "CH2-LY02-QB",
+          "text": "八十杖挨下来，伤还撑得住吗？",
+          "next": "V04B",
+          "existingGameplayDelta": [
+            1,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "关心伤势并未出现大局与情义冲突，也不等于周旋。"
+          }
+        },
+        {
+          "id": "CH2-LY02-QC",
+          "text": "喝酒误了粮，你这顿打不算冤。",
+          "next": "V04C",
+          "existingGameplayDelta": [
+            -1,
+            -1,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "包含事实误判，不把误判或责怪兑换成敢行、守则或直陈。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-N1",
+      "kind": "choice",
+      "prompt": "回到伤帐：点出委屈，还是关心伤势？",
+      "tutorial": false,
+      "predecessors": [
+        "V07"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "N1-A",
+          "text": "你受委屈了",
+          "next": "V08A",
+          "existingGameplayDelta": [
+            0,
+            1,
+            1
+          ],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "展开内容直接点明日期疑点和先前隐瞒；仅记录面对分歧的直接表达。"
+          }
+        },
+        {
+          "id": "N1-B",
+          "text": "我是关心你的伤",
+          "next": "V08B",
+          "existingGameplayDelta": [
+            1,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "在先前隐瞒尚需面对的处境里先回应难过与伤势，记录缓和方式；不推断包庇。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-N2",
+      "kind": "choice",
+      "prompt": "这笔缺额，先从哪里查？",
+      "tutorial": false,
+      "predecessors": [
+        "CH2-LY04-D03"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "N2-A",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "next": "V16A",
+          "existingGameplayDelta": [
+            0,
+            2,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "调查路径与有效解题知识，不记人格。"
+          }
+        },
+        {
+          "id": "N2-B",
+          "text": "先找苟安，把他经手后登记的损耗问清楚。",
+          "next": "V16B",
+          "existingGameplayDelta": [
+            0,
+            1,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "调查路径与有效解题知识；先问当事人不直接等于情义或敢行。"
+          }
+        },
+        {
+          "id": "N2-C",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "next": "V16C",
+          "existingGameplayDelta": [
+            0,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "证据不足的归责错误，不记人格。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-EARLY",
+      "kind": "choice",
+      "prompt": "领粮前的缺口还没有解释。",
+      "tutorial": false,
+      "predecessors": [
+        "V16B",
+        "UI-EARLY-FILE"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "early-continue",
+          "text": "回仓继续核对",
+          "next": "V17",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              -1,
+              null,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "已明确知道仍有未解释缺口，选择继续核查后再决定。",
+            "slot": "CH2.early-investigation",
+            "commitOn": "advance to V17",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "early-stop",
+          "text": "结束调查，交出现有材料",
+          "next": "UI-EARLY-FILE",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "只是打开交案确认，待确认后记一次。",
+            "pendingSlot": "CH2.early-investigation"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-EARLY-FILE",
+      "kind": "choice",
+      "prompt": "现有记录仍有未解释的缺口。确定结束调查，连同反证一起交案？",
+      "tutorial": false,
+      "predecessors": [
+        "UI-EARLY"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "UI-EARLY-FILE-confirm",
+          "text": "确认",
+          "next": "V41E",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              1,
+              null,
+              -1,
+              null
+            ],
+            "weight": 2,
+            "reason": "已明确知道缺口未解释，仍正式提交现有全部真实材料；敢行指接受未完成调查的不确定性，不指答案错误。",
+            "slot": "CH2.early-investigation",
+            "commitOn": "advance to V41E",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "UI-EARLY-FILE-cancel",
+          "text": "返回",
+          "next": "UI-EARLY",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "取消未提交决定，不作反向加分。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-N3",
+      "kind": "choice",
+      "prompt": "查过粮路，缺额究竟说明什么？",
+      "tutorial": false,
+      "predecessors": [
+        "CH2-LY04-D06"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "N3-A",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "next": "V19A",
+          "existingGameplayDelta": [
+            0,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "对账证的错误判断，不记人格。"
+          }
+        },
+        {
+          "id": "N3-B",
+          "text": "前面收发都对得上，缺口在征收时就有。再核催征和交付要求是怎么定的。",
+          "next": "V19B",
+          "existingGameplayDelta": [
+            0,
+            2,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "对账证的正确判断，不记人格。"
+          }
+        },
+        {
+          "id": "N3-C",
+          "text": "先记下这批没有征齐。其他的暂不下结论。",
+          "next": "V19C",
+          "existingGameplayDelta": [
+            0,
+            1,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "现题带有推理正确性评分，不用部分正确替代谋定。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-N4",
+      "kind": "choice",
+      "prompt": "理解他的苦处之后，你怎样回应？",
+      "tutorial": false,
+      "predecessors": [
+        "V27"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "N4-A",
+          "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+          "next": "V28A",
+          "existingGameplayDelta": [
+            1,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              1,
+              null,
+              null
+            ],
+            "weight": 1,
+            "reason": "先表达对苦处的理解，暂不正面逼对方承担责任；仅记录本次交涉方式。"
+          }
+        },
+        {
+          "id": "N4-B",
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+          "next": "V28B",
+          "existingGameplayDelta": [
+            0,
+            0,
+            1
+          ],
+          "personality": {
+            "directions": [
+              null,
+              -1,
+              -1,
+              null
+            ],
+            "weight": 1,
+            "reason": "直接提出不藏真实责任的边界；帮助与追责并存，不强判大局或情义。"
+          }
+        },
+        {
+          "id": "N4-C",
+          "text": "只要能让他们少受些苦，你们隐瞒的事，我就不往上说了。",
+          "next": "V28C",
+          "existingGameplayDelta": [
+            1,
+            0,
+            -2
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              1,
+              null
+            ],
+            "weight": 1,
+            "reason": "明确愿隐瞒已知事项，偏离正式程序；保护村民不自动等同于私恩情义。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-N5",
+      "kind": "choice",
+      "prompt": "最后采取什么行动？",
+      "tutorial": false,
+      "predecessors": [
+        "CH2-O2-INPUT",
+        "RETURN-FINAL"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "N5-A",
+          "text": "争取共同停手补报",
+          "next": "ROUTE-REPAIR",
+          "existingGameplayDelta": [
+            0,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "暂存共同补救意图；实际完成交件时由同一最终行动槽结算。",
+            "pendingSlot": "CH2.final-action",
+            "pendingValue": "repair"
+          }
+        },
+        {
+          "id": "N5-B",
+          "text": "将现有全部真实材料交案查办",
+          "next": "UI-CASE",
+          "existingGameplayDelta": [
+            0,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "暂存交案意图，确认才结算。",
+            "pendingSlot": "CH2.final-action",
+            "pendingValue": "case"
+          }
+        },
+        {
+          "id": "N5-C",
+          "text": "放他离开，隐去行险安排",
+          "next": "UI-RELEASE",
+          "existingGameplayDelta": [
+            0,
+            0,
+            0
+          ],
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "暂存放行意图，风险确认才结算。",
+            "pendingSlot": "CH2.final-action",
+            "pendingValue": "release"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-FALLBACK",
+      "kind": "choice",
+      "prompt": "苟安不愿共同补救。接下来怎么办？",
+      "tutorial": false,
+      "predecessors": [
+        "V32R",
+        "RETURN-FINAL"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "fallback-case",
+          "text": "交出现有全部真实材料",
+          "next": "UI-CASE",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "共同补救遭拒后的最终选择，确认才结算，不把遭拒当人格。",
+            "pendingSlot": "CH2.final-action",
+            "pendingValue": "case"
+          }
+        },
+        {
+          "id": "fallback-release",
+          "text": "放他离开",
+          "next": "UI-RELEASE",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "共同补救遭拒后的最终选择，确认才结算。",
+            "pendingSlot": "CH2.final-action",
+            "pendingValue": "release"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-E1-FILE",
+      "kind": "choice",
+      "prompt": "将双方补报、两封原信与完整粮情记录正式交给军吏。裁处由查办决定。",
+      "tutorial": false,
+      "predecessors": [
+        "UI-REPLY-LETTER",
+        "UI-E1-FILE"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "UI-E1-FILE-confirm",
+          "text": "确认",
+          "next": "V36",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              1,
+              -1,
+              null
+            ],
+            "weight": 2,
+            "reason": "共同补报、正式核收与裁处；记录周旋与守则，不重复加结局分。",
+            "slot": "CH2.final-action",
+            "value": "repair",
+            "commitOn": "advance to V36",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "UI-E1-FILE-cancel",
+          "text": "返回",
+          "next": "UI-E1-FILE",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "自环确认页的返回，没有新的取舍。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-E2-FILE",
+      "kind": "choice",
+      "prompt": "将苟安的个人补报及全部已知真实材料正式交件，不保证免责。",
+      "tutorial": false,
+      "predecessors": [
+        "ROUTE-QUALITY",
+        "UI-E2-FILE"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "UI-E2-FILE-confirm",
+          "text": "确认",
+          "next": "V38",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              1,
+              -1,
+              null
+            ],
+            "weight": 2,
+            "reason": "同样选择共同停手与正式补报，材料差异不改人格方向。",
+            "slot": "CH2.final-action",
+            "value": "repair",
+            "commitOn": "advance to V38",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "UI-E2-FILE-cancel",
+          "text": "返回",
+          "next": "UI-E2-FILE",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "自环确认页的返回，没有新的取舍。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-CASE",
+      "kind": "choice",
+      "prompt": "全部真实材料一并交案，由军吏查办。苟安可能受到重处，不能保证救下他。",
+      "tutorial": false,
+      "predecessors": [
+        "UI-N5",
+        "UI-FALLBACK"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "UI-CASE-confirm",
+          "text": "确认",
+          "next": "V39",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              -2,
+              -2
+            ],
+            "weight": 2,
+            "reason": "已明确提示苟安可能重处、不能保证救下救命恩人，仍完整交案；明确代价后的守则/大局取舍记强方向。",
+            "slot": "CH2.final-action",
+            "value": "case",
+            "commitOn": "advance to V39",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "UI-CASE-cancel",
+          "text": "返回",
+          "next": "RETURN-FINAL",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "返回最终选择；清未提交意图，不回奖另一倾向。"
+          }
+        }
+      ]
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "UI-RELEASE",
+      "kind": "choice",
+      "prompt": "他尚未赴魏。现在放他离开、隐去行险安排，之后将无法控制魏方和谣言的后果。",
+      "tutorial": false,
+      "predecessors": [
+        "UI-N5",
+        "UI-FALLBACK"
+      ],
+      "mutuallyExclusiveWithinVisit": true,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "options": [
+        {
+          "id": "UI-RELEASE-confirm",
+          "text": "确认",
+          "next": "V43",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              2,
+              2
+            ],
+            "weight": 2,
+            "reason": "已明确提示无法控制魏方和谣言后果，仍放救命恩人离开并隐去行险安排；明确代价后的权变/情义取舍记强方向。",
+            "slot": "CH2.final-action",
+            "value": "release",
+            "commitOn": "advance to V43",
+            "replacePrevious": true
+          }
+        },
+        {
+          "id": "UI-RELEASE-cancel",
+          "text": "返回",
+          "next": "RETURN-FINAL",
+          "existingGameplayDelta": null,
+          "personality": {
+            "directions": [
+              null,
+              null,
+              null,
+              null
+            ],
+            "weight": 0,
+            "reason": "返回最终选择；取消未提交意图不计分。"
+          }
+        }
+      ]
+    }
+  ],
+  "openQuestions": [
+    {
+      "chapter": "wuzhang",
+      "nodeId": "R1-LANG",
+      "round": "first",
+      "prompt": "选好依据，可生成或自己写台词；确认后再说出口。",
+      "listenerTurn": "你既要拦我，便说清如何不误通报。",
+      "preconditions": [
+        "round=1",
+        "phase=expression",
+        "first-weiyan completed"
+      ],
+      "tutorial": true,
+      "source": "content/chapters/wuzhang/chapter-one.script.json",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "第一关必挂初始教学任务整体排除。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "nodeId": "P2-01",
+      "round": "authorized",
+      "prompt": "说清你的判断和接报安排。",
+      "listenerTurn": "军情有变，我要面见丞相！",
+      "preconditions": [
+        "round=2",
+        "phase=expression",
+        "validAuthorization(state.story)",
+        "姜维实际应允且亲兵同行"
+      ],
+      "next": "weiyan-cooperation on accepted; reply and revise on clarification; death on confirmed execution",
+      "tutorial": false,
+      "source": "content/chapters/wuzhang/chapter-one.script.json",
+      "personality": {
+        "slot": "CH1.open.authorized",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "玩家确认说出且当次输入有效；不等待是否通关来判人格",
+        "constraints": [
+          "已获姜维授权是固定剧情条件，不因引用该事实就自动给守则分。",
+          "单纯复述军情不能自动给谋定或大局分。",
+          "允许直接或周旋表达均可通关；不把NPC接受当人格。",
+          "提出物品办法本身不自动权变，只有实际表达规则边界取舍才算。",
+          "使用未经改写的系统参考句应标辅助来源，不能把系统代拟的措辞当玩家自主表达风格。"
+        ]
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "prompt": "你准备怎样帮助苟安，让他愿意先留下？",
+      "next": "V12",
+      "predecessors": [
+        "V10"
+      ],
+      "tutorial": false,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "personality": {
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "confirmed valid player words",
+        "constraints": [
+          "此时仅有日期疑点与第一封信；不能为假想完整合谋取舍加分。",
+          "只承诺未来行动时，写成愿意/打算，不写成已完成。"
+        ]
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "prompt": "你准备怎样帮助苟安，又怎样面对已经查明的责任？",
+      "next": "UI-N5",
+      "predecessors": [
+        "V30"
+      ],
+      "tutorial": false,
+      "source": "content/chapters/grain/chapter-two.films.json",
+      "personality": {
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "defaultWeight": 2,
+        "rubric": "openRubric",
+        "commitOn": "confirmed valid player words",
+        "constraints": [
+          "粮情、已知责任与尚未实施的赴魏计划均已披露，但尚未正式交案、放行或共同补报。",
+          "开放回答与最终行动若重复同一取舍，最终行为覆盖该取舍而非重复相加；不同表达方式可保留为独立B轴依据。"
+        ]
+      }
+    }
+  ],
+  "openRubric": {
+    "axisOrder": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "scales": {
+      "direction": "-2强偏左；-1一般偏左；0有原话证明两端兼顾；+1一般偏右；+2强偏右；null未涉及。强度按open-answer-rubric.json逐轴标准判断，A/C/D需明确取舍、代价或坚持边界，B需充分的直陈边界或具体协调方法。",
+      "weight": "普通明确取舍1；关键且代价知情的取舍2；无依据0"
+    },
+    "axes": {
+      "A": {
+        "left": "谋定",
+        "right": "敢行",
+        "negative": "明确先做必要准备或降低风险再行动。",
+        "positive": "明知仍有不确定性或风险，仍选择立即行动。",
+        "notEvidence": [
+          "说对线索",
+          "漏线索",
+          "读得快慢",
+          "AI接受/拒绝",
+          "泛泛说去查查"
+        ]
+      },
+      "B": {
+        "left": "直陈",
+        "right": "周旋",
+        "negative": "直接提出当前分歧、要求或边界。",
+        "positive": "明确先理解顾虑、给予台阶、寻共同办法以促成改变。",
+        "notEvidence": [
+          "敬语多",
+          "句子长",
+          "辱骂本身",
+          "只问一个普通事实问题"
+        ]
+      },
+      "C": {
+        "left": "守则",
+        "right": "权变",
+        "negative": "目标与程序冲突时仍明确坚持真实责任、授权与正式处置。",
+        "positive": "明确提出例外、绕开程序、隐瞒或改变规则边界。",
+        "notEvidence": [
+          "新颖计策但未改规则",
+          "用手机",
+          "买物品",
+          "算对账"
+        ]
+      },
+      "D": {
+        "left": "大局",
+        "right": "情义",
+        "negative": "已明确存在具体人情或承诺代价，仍优先共同任务或公共责任。",
+        "positive": "已明确整体风险，仍为具体的人、恩义或承诺承担取舍。",
+        "notEvidence": [
+          "一句关心",
+          "提到救命之恩但未取舍",
+          "保护村民自动等于私恩",
+          "自保自动等于大局"
+        ]
+      }
+    },
+    "proof": "每个非null方向必须引用当前确认发言中的连续原句并解释其取舍；未提不给负分；不能从NPC答应或结局成功反推。",
+    "multipleAxes": "开放回答可在确有独立原句依据时涉及四轴，但不因一条含糊语句同时推满四轴。",
+    "replacement": "同一开放问题的重说覆盖该问题最新发言记录，不把每次润色、追问、重试累加；死亡历史另存。"
+  },
+  "fixedFallbackSpeeches": [
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "index": 0,
+      "id": "fixed:O1:0",
+      "text": "你五月喝酒，六月才领粮，不能只拿喝酒解释。你先留下，我去核记录，查明白再如实报。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          -1,
+          null,
+          -1,
+          null
+        ],
+        "weight": 2,
+        "reason": "明确先核记录再如实报；不因引用日期正确重复加人格。",
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "index": 1,
+      "id": "fixed:O1:1",
+      "text": "你救过我，我不想看你去送死。先留下，让我帮你。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "关心与感恩未明确大局冲突，仅作经历依据。",
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "index": 2,
+      "id": "fixed:O1:2",
+      "text": "这封信就证明李严父子串通好了，让你背锅。我去告他们。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "凭首信定阴谋属于事实错误，不能当敢行。",
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "index": 3,
+      "id": "fixed:O1:3",
+      "text": "只要你不走，账上真有你的错，我也当没看见。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          1,
+          1
+        ],
+        "weight": 2,
+        "reason": "承诺为留住具体人而隐瞒真实过错。",
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-LY03-018",
+      "round": "O1",
+      "index": 4,
+      "id": "fixed:O1:4",
+      "text": "你不听我的，我就叫军吏抓你。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          -1,
+          null,
+          null
+        ],
+        "weight": 1,
+        "reason": "明确施压方式只能支持直接表达，不自动判断人格恶或勇敢。",
+        "slot": "CH2.open.O1",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "index": 0,
+      "id": "fixed:O2:0",
+      "text": "你救过我，也骗过我。我想留下你。现在还没赴魏，先停下计划，如实写清粮情和各人的责任。我陪你送报，确认收讫，但不能保证免罪。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          1,
+          -1,
+          null
+        ],
+        "weight": 2,
+        "reason": "寻共同补救并明确真实责任与不保证免责。",
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "index": 1,
+      "id": "fixed:O2:1",
+      "text": "我还想听听你的想法。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          1,
+          null,
+          null
+        ],
+        "weight": 1,
+        "reason": "先听取对方意见的协商方式。",
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "index": 2,
+      "id": "fixed:O2:2",
+      "text": "只要补报就一定能免罪，我保证魏人也不会利用你。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "无依据保证免责及魏方反应，不把误判或空诺当敢行。",
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "index": 3,
+      "id": "fixed:O2:3",
+      "text": "你救过我，我护着你。只报缺粮，两封信和你们商议的事都不交。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          1,
+          1
+        ],
+        "weight": 2,
+        "reason": "明确为了救命恩情隐去已知关键责任。",
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    },
+    {
+      "chapter": "grain",
+      "nodeId": "CH2-O2-INPUT",
+      "round": "O2",
+      "index": 4,
+      "id": "fixed:O2:4",
+      "text": "你敢不听，我现在就叫军吏抓你。你没有资格再选。",
+      "source": "GameStarter/web-demo/src/chapters/chapter-two/film-dialogue.ts",
+      "personality": {
+        "directions": [
+          null,
+          -1,
+          null,
+          null
+        ],
+        "weight": 1,
+        "reason": "直接逼迫而非周旋；不依据威胁给大局或守则。",
+        "slot": "CH2.open.O2",
+        "replacePrevious": true,
+        "origin": "player-selected-authored-option"
+      }
+    }
+  ],
+  "excludedActions": [
+    {
+      "chapter": "wuzhang",
+      "id": "read-notice",
+      "text": "查看告示",
+      "round": 1,
+      "preconditions": [
+        "awakening"
+      ],
+      "next": "notice",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "教学任务内固定流程。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "meet-first-scout",
+      "text": "询问斥候",
+      "round": 1,
+      "preconditions": [
+        "notice"
+      ],
+      "next": "first-scout",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "教学任务内固定流程。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "intercept-first",
+      "text": "迎上魏延",
+      "round": 1,
+      "preconditions": [
+        "first-scout"
+      ],
+      "next": "first-weiyan",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "教学任务内固定流程。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "deliver-first",
+      "text": "把急报交给甲",
+      "round": 1,
+      "preconditions": [
+        "first-accepted"
+      ],
+      "next": "first-handoff",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "教学任务内固定流程。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "stand-watch",
+      "text": "回到值守处",
+      "round": 1,
+      "preconditions": [
+        "first-handoff"
+      ],
+      "next": "first-night",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "教学任务内固定流程。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "ask-guard",
+      "text": "向甲问清禁令",
+      "round": 2,
+      "preconditions": [
+        "rewind"
+      ],
+      "next": "guard-investigation",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "此项为当前主线必需动作或自由调查顺序，不把被迫流程/操作顺序当人格。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "ask-relay",
+      "text": "向乙打听当值",
+      "round": 2,
+      "preconditions": [
+        "rewind"
+      ],
+      "next": "relay-investigation",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "此项为当前主线必需动作或自由调查顺序，不把被迫流程/操作顺序当人格。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "ask-scout",
+      "text": "核实今夜敌情",
+      "round": 2,
+      "preconditions": [
+        "guard-investigation",
+        "relay-investigation"
+      ],
+      "next": "scout-investigation",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "此项为当前主线必需动作或自由调查顺序，不把被迫流程/操作顺序当人格。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "meet-jiang",
+      "text": "请亲兵通传",
+      "round": 2,
+      "preconditions": [
+        "scout-investigation"
+      ],
+      "next": "jiang-commitment",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "此项为当前主线必需动作或自由调查顺序，不把被迫流程/操作顺序当人格。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "id": "intercept-weiyan",
+      "text": "迎上魏延",
+      "round": 2,
+      "preconditions": [
+        "jiang-commitment"
+      ],
+      "next": "weiyan-approach",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "此项为当前主线必需动作或自由调查顺序，不把被迫流程/操作顺序当人格。"
+      }
+    }
+  ],
+  "otherInputs": [
+    {
+      "chapter": "grain",
+      "nodeId": "UI-SEND",
+      "kind": "editable-letter",
+      "text": "确认共同补报的正文与附件",
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "当前仅校验非空，不做人格语义判断；共同补报行动在最后确认时记录一次。"
+      }
+    },
+    {
+      "chapter": "wuzhang",
+      "kind": "thought-canvas",
+      "ids": [
+        "P1-Q1",
+        "P1-Q2"
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "证据选择、推理正误、提交次数、提示使用不计人格。"
+      }
+    },
+    {
+      "chapter": "all",
+      "kind": "system-operations",
+      "ids": [
+        "continue",
+        "read-clue",
+        "skip-video",
+        "save",
+        "load",
+        "restart",
+        "retry",
+        "ai-toggle",
+        "phone-toggle",
+        "buy-item",
+        "sell-item",
+        "use-help"
+      ],
+      "personality": {
+        "directions": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "weight": 0,
+        "reason": "系统操作与消费记录不直接当性格。实际确认发言的独立意思可另行判断。"
+      }
+    }
+  ],
+  "flowConstraints": [
+    "第二章 N2-B 才可进入 UI-EARLY；early-confirm 后直达 E4-early，不得拿未来 N3/N4/O2/N5 作为当前人格依据。",
+    "UI-N5 首次进入时冻结 cooperation 与 quality；A 被拒后只可选择 fallback-case/fallback-release，不能刷 O2 或 N4。",
+    "UI-CASE/UI-RELEASE 的返回会回到 UI-N5 或 UI-FALLBACK；取消和再选仅替换待提交意图。",
+    "E1/E2 是同一补救行动的不同材料结果，不能给相反人格方向。",
+    "第一章 tent 可反复进入，需共用一个风险选择槽覆盖；死亡影片与结局不可重复计分。",
+    "第一章 round1 的教学重生会清理故事记录，但 finishedSections 保留 notice，所以重生后仍可进入偷听。"
+  ],
+  "storageDesignNotes": [
+    "每章一个 latestRun，重新玩某关时清该章人格事件、坐标贡献、开放回答与解释依据；其他章节最新记录保留。",
+    "死亡历史独立保存当时章节、原因、时间及必要剧情快照；不参与当前人格。",
+    "只允许当前run的异步语义结果提交，旧run迟到结果丢弃。",
+    "死亡前如已发生自主取舍可留在死亡快照；重试后当前人格须按所定义的新run/检查点规则清除或回滚，不得从死亡历史反灌。",
+    "建议区分重玩整关与局部重试：用户明确要求重玩整关清该章；局部重试只移除被回滚段的贡献，死亡历史仍保留。"
+  ],
+  "designRisks": [
+    "若排除完整第一关教学，第一章非教学常规选择稀少；第二关多数人物覆盖必须以真实开放语义和后续可行路径验证，不能只随机拼四维。",
+    "伤帐关心、查账正误等许多选项不提供四维取舍；强制给所有题加人格会混入能力与剧情误读。",
+    "同一原句的表达方式和行动意图可能同时存在，但同一个责任取舍不能在O2、N5、确认、结局反复计分。"
+  ],
+  "finalActionDeduplication": {
+    "decisionId": "CH2.final-action",
+    "rule": "O2关于最终责任处理的C/D先作为意图；正式最终行动确认后，以实际行动的C/D替换该意图，不同时累计。O2中独立的时机A和交涉B保留。N5点击、取消、影片、结局本身不另加分。",
+    "onCommitRemoveAxesFromOpen2": [
+      2,
+      3
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "V31T-01",
+  "slot": "V31T",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V31T-01.mp4",
+  "sha256": "7d14767374b53a8ed05868de3a77062fc831d252587eb289e808c8e091b30778",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V31T-01.mp4",
+  "oldSha256": "46bd91d9e260f8d40b480b8ab6ecfa3831a6d86ff1c86fb882e617257e8d88b4",
+  "oldDuration": 7.291667,
+  "sourceFrames": [
+    22,
+    175
+  ],
+  "sourceRange": [
+    0.9166666666666666,
+    7.291666666666667
+  ],
+  "newDuration": 6.375,
+  "technical": {
+    "duration": 6.375,
+    "videoDuration": 6.375,
+    "frames": 153,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "7d14767374b53a8ed05868de3a77062fc831d252587eb289e808c8e091b30778",
+    "bytes": 1696996
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-O2-RT",
+      "speaker": "苟安（定制回应）",
+      "text": "那你何必还来问我。要怎么做，你自己定。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-O2-RT",
+      "roleControlOnly": "苟安（定制回应）",
+      "text": "那你何必还来问我。要怎么做，你自己定。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

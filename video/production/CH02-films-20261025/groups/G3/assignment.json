@@ -1,0 +1,431 @@
+{
+  "group": "G3",
+  "title": "揭穿与访村夜谈",
+  "clips": [
+    {
+      "id": "V21",
+      "name": "拆穿、第二封信与合谋供述",
+      "scriptNodes": [
+        "CH2-LY07-E02",
+        "CH2-LY07-004",
+        "CH2-LY07-005",
+        "CH2-LY07-006",
+        "CH2-LY07-010",
+        "CH2-LY07-011",
+        "CH2-LY07-012",
+        "CH2-LY07-013",
+        "CH2-LY07-014",
+        "CH2-LY07-016",
+        "CH2-LY07-017",
+        "CH2-LY07-018",
+        "CH2-LY07-024"
+      ],
+      "entry": "UI-RETURN-ACCOUNT确认回帐",
+      "next": [
+        "V22"
+      ],
+      "endEvent": "信与供述实际出现后取得；早停查路线不到这里",
+      "mode": "固定视频",
+      "note": "固定质问，不增加一次自由输入；第二封信文字用准确后期字幕/文书。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-E02",
+          "speaker": "我",
+          "text": "你已确认没征齐，为什么还说粮早已备好、被李严扣住？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-004",
+          "speaker": "苟安",
+          "text": "因为你想让大军继续打。我若告诉你，我想让它停下来，你还肯替我查吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-005",
+          "speaker": "演出",
+          "text": "苟安取出另一封李丰来信，推到我面前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY07-006",
+          "speaker": "证物·第二封信摘要",
+          "text": "李丰担忧父亲的安危，劝父亲与苟安停止原先的计划。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY07-010",
+          "speaker": "我",
+          "text": "李丰劝你和李严停手。你们究竟安排了什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-011",
+          "speaker": "苟安",
+          "text": "把缺粮的事捅上去，逼他们查，逼这一回退军。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-012",
+          "speaker": "苟安",
+          "text": "李严肯担一部分责任，我装成被他推出去顶罪的人，让外人把材料送上去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-013",
+          "speaker": "我",
+          "text": "你知道我想留住你。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-014",
+          "speaker": "苟安",
+          "text": "你想扳倒李严，让大军继续打。我就给了你一个往下查的理由。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-016",
+          "speaker": "我",
+          "text": "那天在崖边救我，你也算过我会替你做这些？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-017",
+          "speaker": "苟安",
+          "text": "那时候你快掉下去了，我只想着先把人拉上来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-018",
+          "speaker": "苟安",
+          "text": "骗你，是后来的事。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-024",
+          "speaker": "我（心声）",
+          "text": "救命是真的，利用也是真的。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V22",
+      "name": "邀请访村与正式出营批准",
+      "scriptNodes": [
+        "CH2-LY05-001",
+        "CH2-LY05-002",
+        "CH2-LY05-003",
+        "CH2-LY05-004",
+        "CH2-LY05-005",
+        "CH2-LY05-006",
+        "CH2-LY05-007",
+        "CH2-LY05-008",
+        "CH2-LY05-009",
+        "CH2-LY05-010"
+      ],
+      "entry": "V21结束",
+      "next": [
+        "V23"
+      ],
+      "endEvent": "接待令牌与正式出营批准分开记录",
+      "mode": "固定视频",
+      "note": "现有LI03候选＋后续短对白；令牌不直接授出营权限。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY05-001",
+          "speaker": "演出",
+          "text": "问出合谋后，我仍站在苟安榻前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY05-002",
+          "speaker": "视频（LI03，我）",
+          "text": "所以，你让我查了半天，到头来还是要退兵？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY05-003",
+          "speaker": "视频（LI03，苟安）",
+          "text": "你查了粮，可问过种粮的人吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-004",
+          "speaker": "视频（LI03）",
+          "text": "苟安从榻边递出一块令牌。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY05-005",
+          "speaker": "视频（LI03，苟安）",
+          "text": "拿着。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-006",
+          "speaker": "视频（LI03，苟安）",
+          "text": "出营的事，我替你禀明。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-007",
+          "speaker": "视频（LI03，苟安）",
+          "text": "去村里看看，回来再骂我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-008",
+          "speaker": "我",
+          "text": "这令牌能做什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY05-009",
+          "speaker": "苟安",
+          "text": "那边的人认这块令牌，会接待你，让你核对材料。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-010",
+          "speaker": "粮队管事",
+          "text": "出营已经报准，你随返程粮队去，回来向我交差。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V23",
+      "name": "获准访村的连续见闻",
+      "scriptNodes": [
+        "CH2-LY06-001",
+        "CH2-LY06-012",
+        "CH2-LY06-RETURN"
+      ],
+      "entry": "出营已实际报准",
+      "next": [
+        "V24"
+      ],
+      "endEvent": "访村完整实际呈现后补C06",
+      "mode": "固定视频",
+      "note": "沿LI04候选；村中不插新的选择、取证或同情考试。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY06-001",
+          "speaker": "视频（LI04）",
+          "text": "老妇人收粮",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY06-012",
+          "speaker": "视频（LI04，我（心声））",
+          "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY06-RETURN",
+          "speaker": "视频（衔接）",
+          "text": "返回见苟安",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V24",
+      "name": "夜访回忆",
+      "scriptNodes": [
+        "CH2-LY08-001",
+        "CH2-LY08-002",
+        "CH2-LY08-003",
+        "CH2-LY08-004",
+        "CH2-LY08-005",
+        "CH2-LY08-006",
+        "CH2-LY08-007",
+        "CH2-LY08-008",
+        "CH2-LY08-009",
+        "CH2-LY08-010",
+        "CH2-LY08-011",
+        "CH2-LY08-012",
+        "CH2-LY08-013"
+      ],
+      "entry": "访村后返营",
+      "next": [
+        "V25"
+      ],
+      "endEvent": "保存苟安所述回忆来源，不算我亲见",
+      "mode": "固定视频",
+      "note": "LI05A/B是同一回忆逻辑段；可顺接制作小段，不因此增加交互。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY08-001",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "那夜，我去见过他。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-002",
+          "speaker": "视频（LI05A）",
+          "text": "回忆转入李严书房，灯下只有李严与苟安。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY08-003",
+          "speaker": "视频（LI05A，李严）",
+          "text": "蜀国经不起这么折腾了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-004",
+          "speaker": "视频（LI05A，李严）",
+          "text": "要让他停下来，就得动一动他的权柄。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-005",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "真要做到这一步？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-006",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "粮草供不上，他总得退。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-007",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "往后，也未必还能打几次。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-008",
+          "speaker": "视频（LI05B，李严）",
+          "text": "错了一回，谁肯认？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-009",
+          "speaker": "视频（LI05B，李严）",
+          "text": "总说再打一次，就能把前头赔进去的赢回来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-010",
+          "speaker": "视频（LI05B，李严）",
+          "text": "今日怪你误了粮，明日怪我办事不力。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-011",
+          "speaker": "视频（LI05B，李严）",
+          "text": "换了你我，照旧征粮，照旧出兵。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-012",
+          "speaker": "视频（LI05B，苟安）",
+          "text": "可借魏人的手……还能由得我们吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-013",
+          "speaker": "演出",
+          "text": "灯影淡去，我仍站在伤帐榻前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V25",
+      "name": "赴魏散谣的未实行计划与风险",
+      "scriptNodes": [
+        "CH2-LY09-P01",
+        "CH2-LY09-P02",
+        "CH2-LY09-P03",
+        "CH2-LY09-P04",
+        "CH2-LY09-P05",
+        "CH2-LY09-001",
+        "CH2-LY09-002",
+        "CH2-LY09-003",
+        "CH2-LY09-004",
+        "CH2-LY09-005"
+      ],
+      "entry": "V24结束",
+      "next": [
+        "V26"
+      ],
+      "endEvent": "实际听完计划/未实施/风险才补C14",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-P01",
+          "speaker": "苟安",
+          "text": "要是退了军还接着征，我们还有一个打算。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P02",
+          "speaker": "苟安",
+          "text": "我去魏国，求他们放我回来，散布丞相要篡位的谣言，逼朝廷召军。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P03",
+          "speaker": "我",
+          "text": "李严知道？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-P04",
+          "speaker": "苟安",
+          "text": "知道，李丰也正是为这事劝我们住手。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P05",
+          "speaker": "苟安",
+          "text": "眼下还没有赴魏，也没有把谣言传出去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-001",
+          "speaker": "苟安",
+          "text": "只要把军召回来，先让这些人活过这一回。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-002",
+          "speaker": "我",
+          "text": "你去了魏国，他们逼问粮道，你怎么应付？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-003",
+          "speaker": "我",
+          "text": "他们要是趁缺粮追击呢？谣言传开了，你又怎么收场？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-004",
+          "speaker": "苟安",
+          "text": "我没有这个把握。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-005",
+          "speaker": "苟安",
+          "text": "可再这么征下去，后方撑得住吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    }
+  ],
+  "contract": "../../制作总控.md",
+  "referenceManifest": "../../references/manifest.json"
+}

@@ -1,0 +1,299 @@
+{
+  "group": "G3",
+  "reviewRound": "user-20261025-1549",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "status": "picture-repair-complete",
+  "sourceComments": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\comments.json",
+  "sourceCommentsSha256": "04cb64a5d492d51355e9fd6032b7e83e7ebe49fa9c321d2150e1501f91f983a0",
+  "sourceSnapshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-1549\\version-snapshot.json",
+  "sourceSnapshotSha256": "c6a65c3ab0c36a5ad0fd8d57df2916212e3e35cc55ed5db562a47a07526c6d13",
+  "userCommentsPreserved": true,
+  "clips": [
+    {
+      "id": "V21",
+      "userComment": "",
+      "observedUserPictureApproved": false,
+      "applicableGlobalCorrections": [
+        "生成Prompt必须明确唯一允许发声的对白原句。角色名称、某某说、旁白、画外、编号、导演/表演说明不可被朗读。",
+        "视频画面不得出现工作文档式正文、说明卡、流程文字、字幕列表或制作信息。精确信息另存映射，不烧进影片。",
+        "不得用可见矩形阴影、局部方框模糊层、马赛克或脏遮罩掩盖错误。撤除旧后期层并检查原素材，必要时重生成。"
+      ],
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V21-拆穿、第二封信与合谋供述_画面修复V4.mp4",
+      "oldSha256": "3c2dd3979870cb8e65b93753b9f4cff9408e086eaed9f8878ea6d78661a5cace",
+      "oldReviewedRange": [
+        0,
+        85.875
+      ],
+      "classification": [
+        "document-card",
+        "local-blur-mask"
+      ],
+      "issues": [
+        {
+          "id": "remove-summary-and-paper-masks",
+          "oldPeriods": [
+            [
+              20.166667,
+              26.958333
+            ],
+            [
+              74.041667,
+              81.458333
+            ]
+          ],
+          "state": "closed",
+          "repairPlan": "递信撤卡/撤局部失焦，补拍素白外背闭合折信交接；尾段回未叠层源取干净近景。",
+          "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-20261025\\V21-拆穿、第二封信与合谋供述_无字卡返修V1.mp4",
+          "newSha256": "ebbf4d8aa70cdeae114b7df1adf55bb4e90708e4234526a771b650e1987aa754",
+          "evidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-current-policy-review.json"
+        }
+      ],
+      "reviewState": "repaired-awaiting-user-review",
+      "scanEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-old-1fps.jpg",
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-20261025\\V21-拆穿、第二封信与合谋供述_无字卡返修V1.mp4",
+      "newSha256": "ebbf4d8aa70cdeae114b7df1adf55bb4e90708e4234526a771b650e1987aa754",
+      "audio": {
+        "userDirectComments": [],
+        "action": "本组未获新增TTS授权；本轮只登记既有临时音频/元说明风险，不扩为全组配音",
+        "newTTS": 0,
+        "audioApproved": false,
+        "verbatimListeningCompleted": false
+      },
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "newReviewedRange": [
+        [
+          0,
+          85.875
+        ]
+      ],
+      "actualCheckEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-current-policy-review.json",
+      "technicalEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-track-coverage.json",
+      "action": "原片干净近景重剪＋单次8秒局部折信补拍；撤卡撤纸面失焦，未改既有完整音频",
+      "findings": [
+        "原19.666667至26.958333秒摘要卡/纸面失焦整体替换为真实折信交接；素白外背、接住后松手、收近，完整动作无伪字、字卡和可见补丁。",
+        "原73.041667至81.458333秒回未叠层原片动态取干净近景，纸面在构图外；保留说话表演，无新增局部模糊、马赛克或方框暗影。",
+        "全片未见工作正文、字幕列表、制作标签、字卡或明显方框遮挡，无恢复玩家句NPC持续代说或重复短循环。",
+        "第二封信准确事实另存CH2-LY07-006来源/信息层映射，不新增朗读、不擅自改游戏；玩家原句CH2-LY07-010仍保留。"
+      ],
+      "informationMapping": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\second-letter-information-mapping.json",
+      "integrationConditions": [
+        "玩家问句及心声从画外发出，保留当前自然听者窗口，不恢复旧持续代说。",
+        "第二封折信只交接一次；不恢复摘要卡、文字正文或纸面局部模糊层。",
+        "完成一次真实接信后仍须由既有信息层呈现CH2-LY07-006全文并按原设计确认读完，不能把动画播完直接当成已读或授予线索。"
+      ]
+    },
+    {
+      "id": "V22",
+      "userComment": "",
+      "observedUserPictureApproved": false,
+      "applicableGlobalCorrections": [
+        "生成Prompt必须明确唯一允许发声的对白原句。角色名称、某某说、旁白、画外、编号、导演/表演说明不可被朗读。",
+        "视频画面不得出现工作文档式正文、说明卡、流程文字、字幕列表或制作信息。精确信息另存映射，不烧进影片。",
+        "不得用可见矩形阴影、局部方框模糊层、马赛克或脏遮罩掩盖错误。撤除旧后期层并检查原素材，必要时重生成。"
+      ],
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V22-邀请访村与正式出营批准_画面修复V2.mp4",
+      "oldSha256": "6ba2865ec7cd3abf6d55a40bbbd1c034fc0b5b4180fb6b8956d3265a79b051e4",
+      "oldReviewedRange": [
+        0,
+        48.525333
+      ],
+      "classification": [
+        "global-clean-picture-scan"
+      ],
+      "issues": [],
+      "reviewState": "reviewed-unchanged",
+      "scanEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V22-old-1fps.jpg",
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V22-邀请访村与正式出营批准_画面修复V2.mp4",
+      "newSha256": "6ba2865ec7cd3abf6d55a40bbbd1c034fc0b5b4180fb6b8956d3265a79b051e4",
+      "audio": {
+        "userDirectComments": [],
+        "action": "本组未获新增TTS授权；本轮只登记既有临时音频/元说明风险，不扩为全组配音",
+        "newTTS": 0,
+        "audioApproved": false,
+        "verbatimListeningCompleted": false
+      },
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "action": "本轮扫查未发现三类画面问题，保留当前文件，不重导",
+      "findings": [
+        "日间伤帐对白、木令牌递放与粮队管事批准按原顺序呈现，无工作文档字卡、字幕列表、方框模糊或暗影补丁。",
+        "人物原片近景及下沿道具未构成可读文书正文；令牌不冒充正式出营许可。"
+      ],
+      "actualCheckEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V22-current-policy-review.json",
+      "newReviewedRange": [
+        [
+          0,
+          48.525333
+        ]
+      ]
+    },
+    {
+      "id": "V23",
+      "userComment": "",
+      "observedUserPictureApproved": false,
+      "applicableGlobalCorrections": [
+        "生成Prompt必须明确唯一允许发声的对白原句。角色名称、某某说、旁白、画外、编号、导演/表演说明不可被朗读。",
+        "视频画面不得出现工作文档式正文、说明卡、流程文字、字幕列表或制作信息。精确信息另存映射，不烧进影片。",
+        "不得用可见矩形阴影、局部方框模糊层、马赛克或脏遮罩掩盖错误。撤除旧后期层并检查原素材，必要时重生成。"
+      ],
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V23-获准访村的连续见闻_画面修复V2.mp4",
+      "oldSha256": "5c5403e0adc963eff3d8ccd024bf7f1a392959a19bd0598b55facfc6250dcfb3",
+      "oldReviewedRange": [
+        0,
+        17.417
+      ],
+      "classification": [
+        "global-clean-picture-scan"
+      ],
+      "issues": [],
+      "reviewState": "reviewed-unchanged",
+      "scanEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V23-old-1fps.jpg",
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V23-获准访村的连续见闻_画面修复V2.mp4",
+      "newSha256": "5c5403e0adc963eff3d8ccd024bf7f1a392959a19bd0598b55facfc6250dcfb3",
+      "audio": {
+        "userDirectComments": [],
+        "action": "本组未获新增TTS授权；本轮只登记既有临时音频/元说明风险，不扩为全组配音",
+        "newTTS": 0,
+        "audioApproved": false,
+        "verbatimListeningCompleted": false
+      },
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "action": "本轮扫查未发现三类画面问题，保留当前文件，不重导",
+      "findings": [
+        "村中收粮手部、粮袋与夜间回帐均为实景动作；无工作文字、字卡、字幕列表或可见补丁。",
+        "同一收粮动作不重复完成，无新增朗读或剧情事实。"
+      ],
+      "actualCheckEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V23-current-policy-review.json",
+      "newReviewedRange": [
+        [
+          0,
+          17.417
+        ]
+      ]
+    },
+    {
+      "id": "V24",
+      "userComment": "",
+      "observedUserPictureApproved": false,
+      "applicableGlobalCorrections": [
+        "生成Prompt必须明确唯一允许发声的对白原句。角色名称、某某说、旁白、画外、编号、导演/表演说明不可被朗读。",
+        "视频画面不得出现工作文档式正文、说明卡、流程文字、字幕列表或制作信息。精确信息另存映射，不烧进影片。",
+        "不得用可见矩形阴影、局部方框模糊层、马赛克或脏遮罩掩盖错误。撤除旧后期层并检查原素材，必要时重生成。"
+      ],
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V24-夜访回忆_画面修复V2.mp4",
+      "oldSha256": "a70e6ece2aa064e3f6502566bf8273ad4b44672a2e2545635766dfbf4609a9a7",
+      "oldReviewedRange": [
+        0,
+        73.457683
+      ],
+      "classification": [
+        "global-clean-picture-scan"
+      ],
+      "issues": [],
+      "reviewState": "reviewed-unchanged",
+      "scanEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V24-old-1fps.jpg",
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V24-夜访回忆_画面修复V2.mp4",
+      "newSha256": "a70e6ece2aa064e3f6502566bf8273ad4b44672a2e2545635766dfbf4609a9a7",
+      "audio": {
+        "userDirectComments": [],
+        "action": "本组未获新增TTS授权；本轮只登记既有临时音频/元说明风险，不扩为全组配音",
+        "newTTS": 0,
+        "audioApproved": false,
+        "verbatimListeningCompleted": false
+      },
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "action": "本轮扫查未发现三类画面问题，保留当前文件，不重导",
+      "findings": [
+        "夜帐引入、书房口述回忆、回夜帐边界保留；空案与自然景深不构成文档文字或矩形遮罩。",
+        "未发现烧入说明卡、字幕列表、制作信息；李严只在自己发言时开口，回忆不是玩家亲见。"
+      ],
+      "actualCheckEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V24-current-policy-review.json",
+      "newReviewedRange": [
+        [
+          0,
+          73.457683
+        ]
+      ]
+    },
+    {
+      "id": "V25",
+      "userComment": "",
+      "observedUserPictureApproved": false,
+      "applicableGlobalCorrections": [
+        "生成Prompt必须明确唯一允许发声的对白原句。角色名称、某某说、旁白、画外、编号、导演/表演说明不可被朗读。",
+        "视频画面不得出现工作文档式正文、说明卡、流程文字、字幕列表或制作信息。精确信息另存映射，不烧进影片。",
+        "不得用可见矩形阴影、局部方框模糊层、马赛克或脏遮罩掩盖错误。撤除旧后期层并检查原素材，必要时重生成。"
+      ],
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V25-赴魏散谣的未实行计划与风险_画面修复V2.mp4",
+      "oldSha256": "0d463a52831df177bdd594d0f19f6cc7bbfa2329c717e5e9bd8e884cb58f8087",
+      "oldReviewedRange": [
+        0,
+        75.152
+      ],
+      "classification": [
+        "global-clean-picture-scan"
+      ],
+      "issues": [],
+      "reviewState": "reviewed-unchanged",
+      "scanEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V25-old-1fps.jpg",
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V25-赴魏散谣的未实行计划与风险_画面修复V2.mp4",
+      "newSha256": "0d463a52831df177bdd594d0f19f6cc7bbfa2329c717e5e9bd8e884cb58f8087",
+      "audio": {
+        "userDirectComments": [],
+        "action": "本组未获新增TTS授权；本轮只登记既有临时音频/元说明风险，不扩为全组配音",
+        "newTTS": 0,
+        "audioApproved": false,
+        "verbatimListeningCompleted": false
+      },
+      "userApproved": false,
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "action": "本轮扫查未发现三类画面问题，保留当前文件，不重导",
+      "findings": [
+        "夜帐计划对白及前臂/灯火观察镜均无说明卡、字幕列表、制作文字或可见方框补丁。",
+        "保持未实施计划，未出现赴魏、散谣或召军已执行的文字/行动；玩家问句的自然听者窗口保留。"
+      ],
+      "actualCheckEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V25-current-policy-review.json",
+      "newReviewedRange": [
+        [
+          0,
+          75.152
+        ]
+      ]
+    }
+  ],
+  "unresolved": [
+    "正式音频与逐字听审仍待后续，G3本轮零新增TTS且完整既有音频保留",
+    "V21新版待用户重新审核；未迁移浏览器通过标记",
+    "第二封信精确信息由已设计信息层承载，游戏接入须按来源映射核实；本轮未改游戏"
+  ],
+  "scope": "本轮G3画面修复、逐片新标准扫查和声音问题登记；非正式声音或用户审核通过",
+  "completedUTC": "2026-10-25T08:15:58.246182+00:00",
+  "userApproved": false,
+  "generationRequests": [
+    {
+      "id": "V21-03-UR1",
+      "task_id": "task_wOFniwBRm9KSHNtZjM9cs2BEz30ymx11",
+      "status": "succeeded",
+      "duration": 8,
+      "model": "MiniMax-H3",
+      "actualPromptSha256": "3725f618f4d26a5c3508ad5423232c70fb85d26af101870a07fb12bac908567e",
+      "promptOnlySubmitted": true,
+      "dialogueWhitelist": "video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-03-UR1-dialogue-whitelist.json",
+      "allowedUtterances": [],
+      "newTTS": 0,
+      "generatedAudioReview": "未逐字听审，生成原声未用于替换本轮影片完整既有音轨"
+    }
+  ],
+  "sourceCommentsSha256AtStart": "3cf15c67591a985c7b61fbd8213a48c80d5fbc25929a623af3f627dbbb8127dd",
+  "sourceCommentsUpdatedSinceStart": true,
+  "sourceCommentsRecheck": {
+    "globalCorrectionsUnchanged": true,
+    "G3DirectCommentsStillEmpty": true,
+    "observedAddedField": "audioModelCorrection",
+    "audioModelCorrection": "用户明确指定豆包音频生成模型1.0（Seed-Audio1.0），上传参考音频生成；不使用Seed-TTS预置音色或新克隆替代。错误2.0生成隔离且未混入候选。",
+    "impact": "总控补充音频模型约束，G3本轮不新增TTS，画面范围与五条适用全片要求未变；本组未修改源评论文件"
+  }
+}

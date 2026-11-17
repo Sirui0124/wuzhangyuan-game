@@ -1,0 +1,141 @@
+{
+  "id": "CH2-E4-LATE-002-R1",
+  "node": "CH2-E4-LATE-002",
+  "role": "军吏",
+  "model": "seed-audio-1.0",
+  "text": "苟安认下的责任先录在案，其他的还要核。",
+  "status": "succeeded",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "36ed309d-9545-43d5-b846-9f515aba252c",
+  "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\audio-reference\\military-clerk-V26-06-2p85-7p95.wav",
+  "referenceSha256": "6e32aed521b581bab84fea0a3aca93d6f90526656aabb0b25d4c2e2d22ebd6ad",
+  "referenceSourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\generated\\V26-06-16x9.mp4",
+  "referenceSourceRange": [
+    2.85,
+    7.95
+  ],
+  "referenceUploadField": "references[0].audio_data",
+  "referenceUploaded": true,
+  "bodySha256": "1efba21ddca518e5490d9e8c1caa7026bb5879845c10f8b2ab6e1be955c74f5c",
+  "text_prompt": "只采用@音频1中成年男性的音色，不复述参考原句。用克制、自然、不夸张的普通话陈述，仅朗读引号内唯一原话：“苟安认下的责任先录在案，其他的还要核。”其他所有文字都是控制说明，不得朗读姓名、角色标签、某某说、旁白、画外、编号或导演说明，不新增词句。总长约4.5秒，开头留0.2秒后说话，句末安静。“核”读hé，是核查的核，句末不加任何词。没有BGM、背景音乐、配乐、吟唱、环境声或音效，只有这一句干净人声。",
+  "noClone": true,
+  "noPresetSpeaker": true,
+  "userApproved": false,
+  "promptVersion": 1,
+  "reason": "Existing original end-word boundary unstable across independent ASR; preserve exact whitelist without blind truncation. Actual hearing unavailable.",
+  "httpStatus": 200,
+  "logId": "2026102517261695962326D595118EB5E7",
+  "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G6/user-review-batch2/CH2-E4-LATE-002-R1-seed-audio1-reference.wav",
+  "sha256": "2daaebe44a7113d3b5a6b9b4cfb3be9f503ca7fc053d70b805b10eff1607c432",
+  "duration": 4.5,
+  "originalDuration": 4.5,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 4320,
+        "start_time": 360,
+        "text": "苟安认下的责任先录在案，其他的还要核。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 360,
+            "text": "苟"
+          },
+          {
+            "end_time": 800,
+            "start_time": 680,
+            "text": "安"
+          },
+          {
+            "end_time": 1040,
+            "start_time": 1000,
+            "text": "认"
+          },
+          {
+            "end_time": 1320,
+            "start_time": 1160,
+            "text": "下"
+          },
+          {
+            "end_time": 1440,
+            "start_time": 1320,
+            "text": "的"
+          },
+          {
+            "end_time": 1640,
+            "start_time": 1440,
+            "text": "责"
+          },
+          {
+            "end_time": 1800,
+            "start_time": 1640,
+            "text": "任"
+          },
+          {
+            "end_time": 2040,
+            "start_time": 1880,
+            "text": "先"
+          },
+          {
+            "end_time": 2240,
+            "start_time": 2160,
+            "text": "录"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2360,
+            "text": "在"
+          },
+          {
+            "end_time": 2760,
+            "start_time": 2600,
+            "text": "案"
+          },
+          {
+            "end_time": 2760,
+            "start_time": 2760,
+            "text": "，"
+          },
+          {
+            "end_time": 3440,
+            "start_time": 3280,
+            "text": "其"
+          },
+          {
+            "end_time": 3560,
+            "start_time": 3440,
+            "text": "他"
+          },
+          {
+            "end_time": 3840,
+            "start_time": 3560,
+            "text": "的"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3840,
+            "text": "还"
+          },
+          {
+            "end_time": 4120,
+            "start_time": 4000,
+            "text": "要"
+          },
+          {
+            "end_time": 4320,
+            "start_time": 4280,
+            "text": "核"
+          },
+          {
+            "end_time": 4320,
+            "start_time": 4320,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "苟安认下的责任先录在案，其他的还要核。"
+  },
+  "referenceAcceptedInRequest": true,
+  "listeningReview": "pending; no hearing/timbre/no-BGM approval claimed"
+}

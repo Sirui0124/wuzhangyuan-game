@@ -1,0 +1,195 @@
+{
+  "id": "CH2-LY09-022",
+  "node": "CH2-LY09-022",
+  "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+  "kind": "regular-dialogue",
+  "targetSeconds": 6.66,
+  "context": "对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "86187800-7234-47dd-80df-22140892820e",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:20:59.012Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在常规交谈场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。对眼前的人自然说话，语气随问句、请求或解释变化，克制而清楚，有胸腔厚度。唯一允许发声的原句：“你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约6.66秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+      "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+      "bytes": 1252564,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+      "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+      "bytes": 1084984,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "2302d7e5efec51a9008ece2d277c44d91b988cdeec9d55f90d4647ba334e2026",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "2026102719205965380CDB799C60A509D6",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY09-022-v1.wav",
+  "sha256": "e5da92ce1275a8b6be55de08d59aa550fe4bf09eeca896c9baf4e3dff4e4ab72",
+  "duration": 6.8,
+  "originalDuration": 6.8,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 6760,
+        "start_time": 240,
+        "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+        "words": [
+          {
+            "end_time": 480,
+            "start_time": 240,
+            "text": "你"
+          },
+          {
+            "end_time": 600,
+            "start_time": 520,
+            "text": "瞒"
+          },
+          {
+            "end_time": 960,
+            "start_time": 760,
+            "text": "下"
+          },
+          {
+            "end_time": 1160,
+            "start_time": 1000,
+            "text": "缺"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1320,
+            "text": "粮"
+          },
+          {
+            "end_time": 1400,
+            "start_time": 1400,
+            "text": "，"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 1840,
+            "text": "再"
+          },
+          {
+            "end_time": 2280,
+            "start_time": 2080,
+            "text": "拿"
+          },
+          {
+            "end_time": 2400,
+            "start_time": 2360,
+            "text": "篡"
+          },
+          {
+            "end_time": 2680,
+            "start_time": 2560,
+            "text": "位"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2680,
+            "text": "的"
+          },
+          {
+            "end_time": 2960,
+            "start_time": 2840,
+            "text": "谣"
+          },
+          {
+            "end_time": 3160,
+            "start_time": 3000,
+            "text": "言"
+          },
+          {
+            "end_time": 3480,
+            "start_time": 3360,
+            "text": "逼"
+          },
+          {
+            "end_time": 3760,
+            "start_time": 3560,
+            "text": "退"
+          },
+          {
+            "end_time": 4040,
+            "start_time": 3840,
+            "text": "军"
+          },
+          {
+            "end_time": 4040,
+            "start_time": 4040,
+            "text": "，"
+          },
+          {
+            "end_time": 5080,
+            "start_time": 4920,
+            "text": "最"
+          },
+          {
+            "end_time": 5200,
+            "start_time": 5080,
+            "text": "后"
+          },
+          {
+            "end_time": 5440,
+            "start_time": 5200,
+            "text": "受"
+          },
+          {
+            "end_time": 5600,
+            "start_time": 5560,
+            "text": "牵"
+          },
+          {
+            "end_time": 5840,
+            "start_time": 5760,
+            "text": "连"
+          },
+          {
+            "end_time": 6160,
+            "start_time": 5960,
+            "text": "的"
+          },
+          {
+            "end_time": 6320,
+            "start_time": 6160,
+            "text": "也"
+          },
+          {
+            "end_time": 6440,
+            "start_time": 6320,
+            "text": "有"
+          },
+          {
+            "end_time": 6640,
+            "start_time": 6440,
+            "text": "百"
+          },
+          {
+            "end_time": 6760,
+            "start_time": 6640,
+            "text": "姓"
+          },
+          {
+            "end_time": 6760,
+            "start_time": 6760,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:21:26.972Z"
+}

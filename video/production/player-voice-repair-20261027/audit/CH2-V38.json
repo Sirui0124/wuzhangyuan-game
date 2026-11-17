@@ -1,0 +1,80 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V38",
+  "src": "/video/current/CH2-V38-c454ac7e3b-20261025.mp4",
+  "title": "救下眼前的人",
+  "subtitles": "/video/subtitles/CH2-V38-c454ac7e3b-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V38-c454ac7e3b-20261025.mp4",
+  "sha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+  "duration": 20.1815,
+  "cues": [
+    {
+      "start": 0.21,
+      "end": 4.11,
+      "text": "这些是我拿到的材料和苟安的停手说明，请一并收下"
+    },
+    {
+      "start": 5.73,
+      "end": 9.23,
+      "text": "材料收到了。苟安停手补报的经过已经记下"
+    },
+    {
+      "start": 9.23,
+      "end": 13.61,
+      "text": "人先留营受查。李严一节，还要继续核"
+    },
+    {
+      "start": 13.61,
+      "end": 17.37,
+      "text": "我留下了救过我的人。可我交出的结论"
+    },
+    {
+      "start": 17.37,
+      "end": 19.59,
+      "text": "还不足以把每一处责任说清"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-E2-001",
+      "node": "CH2-E2-001",
+      "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-001.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "341eb1a9e1768a2ba8d34678ef4324a9c062e2b15b7edf6e5b95652f285f2047",
+      "duration": 4.18325,
+      "speechRange": [
+        0.3,
+        3.84
+      ],
+      "correlation": 0.9999859127757331,
+      "insertAt": 0.25,
+      "speechStart": 0.55,
+      "speechEnd": 4.09
+    },
+    {
+      "id": "CH2-E2-003",
+      "node": "CH2-E2-003",
+      "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+      "speaker": "我（心声）",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-E2-003.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "0aae9d5da303d7ccaaafe84c17da4190af69d192af636f49eff1070471d08f7f",
+      "duration": 5.972,
+      "speechRange": [
+        0.22,
+        5.8
+      ],
+      "correlation": 0.9782145140695466,
+      "insertAt": 13.8667,
+      "speechStart": 14.08675,
+      "speechEnd": 19.66675
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

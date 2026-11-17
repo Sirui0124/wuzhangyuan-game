@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "operation": "reversible-move",
+  "permanentDeletions": 0,
+  "entries": [
+    {
+      "original": "source-art/visuals/style-tests/20261019-first-person/branch-E1-gate.png",
+      "archive": "source-art/visuals/archive/20261022/style-branches/branch-E1-gate.png",
+      "originalAbsolute": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\style-tests\\20261019-first-person\\branch-E1-gate.png",
+      "archiveAbsolute": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\archive\\20261022\\style-branches\\branch-E1-gate.png",
+      "sha256": "9263da916c8f64ea9aa3468375f61ad7f7cb226d714a4992b9bdd5ce05dc505a",
+      "reason": "Existing README explicitly marks pre-correction landscape branch, not first-person candidate",
+      "referenceCheck": "Only the adjacent README uses the image filename; no runtime or video Prompt path reference found",
+      "meta": false
+    },
+    {
+      "original": "source-art/visuals/style-tests/20261019-first-person/branch-E2-waiting.png",
+      "archive": "source-art/visuals/archive/20261022/style-branches/branch-E2-waiting.png",
+      "originalAbsolute": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\style-tests\\20261019-first-person\\branch-E2-waiting.png",
+      "archiveAbsolute": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\visuals\\archive\\20261022\\style-branches\\branch-E2-waiting.png",
+      "sha256": "33dd676d4360aac28a884f81db44484e534588935b7887332146690a34ea4d42",
+      "reason": "Existing README explicitly marks pre-correction landscape branch, not first-person candidate",
+      "referenceCheck": "Only the adjacent README uses the image filename; no runtime or video Prompt path reference found",
+      "meta": false
+    },
+    {
+      "original": "source-art/visuals/runtime/ui/materials/ui-button-darkwood-v01.png",
+      "archive": "source-art/visuals/archive/20261022/ui-material-prototypes/ui-button-darkwood-v01.png",
+      "sha256": "384f055d973f0a4295e856d1c8744891099d18e95d2bdfa2c52eb2a99e906aa2",
+      "reason": "User rejected first material samples; entire page review takes priority",
+      "referenceCheck": "Four material_ entries removed from authoritative manifest; live material-ui.css no longer calls samples",
+      "meta": false
+    },
+    {
+      "original": "source-art/visuals/runtime/ui/materials/ui-panel-hemp-paper-v01.png",
+      "archive": "source-art/visuals/archive/20261022/ui-material-prototypes/ui-panel-hemp-paper-v01.png",
+      "sha256": "4b7b88c4e65e03bd42a5eba3f7c9f46b6e00f4a2dcf7d895f02975647d50eb20",
+      "reason": "User rejected first material samples; entire page review takes priority",
+      "referenceCheck": "Four material_ entries removed from authoritative manifest; live material-ui.css no longer calls samples",
+      "meta": false
+    },
+    {
+      "original": "source-art/visuals/runtime/ui/materials/ui-panel-ink-linen-v01.png",
+      "archive": "source-art/visuals/archive/20261022/ui-material-prototypes/ui-panel-ink-linen-v01.png",
+      "sha256": "576a6e6045647d3ec0e268a00431c9e84c58415e1d2c874ce867a878de707951",
+      "reason": "User rejected first material samples; entire page review takes priority",
+      "referenceCheck": "Four material_ entries removed from authoritative manifest; live material-ui.css no longer calls samples",
+      "meta": false
+    },
+    {
+      "original": "source-art/visuals/runtime/ui/materials/ui-seal-cinnabar-v01.png",
+      "archive": "source-art/visuals/archive/20261022/ui-material-prototypes/ui-seal-cinnabar-v01.png",
+      "sha256": "6a9feee7d3bd81fba9454caa967f739d315517ea9d41457ff2c922eadea8c4dd",
+      "reason": "User rejected first material samples; entire page review takes priority",
+      "referenceCheck": "Four material_ entries removed from authoritative manifest; live material-ui.css no longer calls samples",
+      "meta": false
+    }
+  ],
+  "restoration": "Move each archive path back to its original path with matching hash; move .meta sidecar together if present, then restore adjacent README links."
+}

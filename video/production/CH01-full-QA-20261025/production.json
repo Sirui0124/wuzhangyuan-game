@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-25",
+  "authorization": "用户要求第一关所有视频完整检查，穿帮、人物不一致、衔接问题直接修复。",
+  "clips": [
+    {
+      "id": "QA-GUARD-LISTEN",
+      "duration": 8,
+      "name": "甲的统一身份与倾听",
+      "action": "0—1秒对面守卒甲将目光落在摄影机位置；1—6.5秒闭口听我的军情；6.5—8秒轻收下颌，准备回答但不说话。"
+    },
+    {
+      "id": "QA-WEI-LISTEN",
+      "duration": 5,
+      "name": "魏延闭口倾听动态替换定格",
+      "action": "0—1秒魏延止步；1—4秒听我说明禁令，闭口、自然呼吸；4—5秒凝视我，准备回复。"
+    },
+    {
+      "id": "QA-WEI-EXIT",
+      "duration": 6,
+      "name": "魏延接令后沿营道离开",
+      "action": "0—1秒魏延在营道上转身背向摄影机；1—5秒正常步行离去；5—6秒继续远离，摄影机保持原处。"
+    },
+    {
+      "id": "QA-HAND-RELAX",
+      "duration": 4,
+      "name": "天亮后握矛的手放松",
+      "first": true,
+      "action": "0—0.7秒沿首帧自然握矛；0.7—2.5秒拇指与四指依次稍松，仍扶稳木杆；2.5—4秒保持放松扶矛，不掉落、不长出另一只手。"
+    },
+    {
+      "id": "QA-GUARD-LISTEN-R2",
+      "duration": 8,
+      "name": "甲的统一身份与倾听",
+      "action": "0—1秒对面守卒甲将目光落在摄影机位置；1—6.5秒闭口听我的军情；6.5—8秒轻收下颌，准备回答但不说话。",
+      "retries": "QA-GUARD-LISTEN",
+      "reason": "明确终态input_download_failed；使用同一Cloudinary的已验证字节相同的HTTPS交付别名。"
+    },
+    {
+      "id": "QA-WEI-LISTEN-R2",
+      "duration": 5,
+      "name": "魏延闭口倾听动态替换定格",
+      "action": "0—1秒魏延止步；1—4秒听我说明禁令，闭口、自然呼吸；4—5秒凝视我，准备回复。",
+      "retries": "QA-WEI-LISTEN",
+      "reason": "明确终态input_download_failed；使用同一Cloudinary的已验证字节相同的HTTPS交付别名。"
+    },
+    {
+      "id": "QA-WEI-EXIT-R2",
+      "duration": 6,
+      "name": "魏延接令后沿营道离开",
+      "action": "0—1秒魏延在营道上转身背向摄影机；1—5秒正常步行离去；5—6秒继续远离，摄影机保持原处。",
+      "retries": "QA-WEI-EXIT",
+      "reason": "明确终态input_download_failed；使用同一Cloudinary的已验证字节相同的HTTPS交付别名。"
+    },
+    {
+      "id": "QA-HAND-RELAX-R2",
+      "duration": 4,
+      "name": "天亮后握矛的手放松",
+      "first": true,
+      "action": "0—0.7秒沿首帧自然握矛；0.7—2.5秒拇指与四指依次稍松，仍扶稳木杆；2.5—4秒保持放松扶矛，不掉落、不长出另一只手。",
+      "retries": "QA-HAND-RELAX",
+      "reason": "明确终态input_download_failed；使用同一Cloudinary的已验证字节相同的HTTPS交付别名。"
+    },
+    {
+      "id": "QA-GUARD-LISTEN-R3",
+      "duration": 8,
+      "name": "甲倾听首帧锁定返修",
+      "retries": "QA-GUARD-LISTEN-R2",
+      "reason": "R2生成新增了前景人物、字幕和讲话口型，弃用；以已经核对的纯甲镜头作精确首帧锁定。"
+    }
+  ]
+}

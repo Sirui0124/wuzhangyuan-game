@@ -1,0 +1,113 @@
+{
+  "delivery": {
+    "id": "V16C",
+    "name": "先行归责与纠正",
+    "entry": "UI-N2选C",
+    "next": [
+      "V17"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16C-01",
+      "V16C-02"
+    ],
+    "subclips": [
+      "V16C-01",
+      "V16C-02"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16C-先行归责与纠正-画面候选-1dea312b.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "88e4576798046cc205033b8971f4964a462e17eeac04bd2a9d1e192154b7768f",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16C-先行归责与纠正-R4.mp4",
+    "technical": {
+      "duration": 18.05,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "88e4576798046cc205033b8971f4964a462e17eeac04bd2a9d1e192154b7768f"
+    },
+    "visualReview": [
+      {
+        "id": "V16C-01",
+        "observation": "0–8秒管事与核凭据动作，反应近景可用；口型仍须统一配音时核对。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V16C-02",
+        "observation": "2.5秒起把管事反问句烧到纸面，改用既有签收/交付准确概览覆盖，避免将口头反馈伪装新增证物。",
+        "version": "-R4",
+        "evidencePanel": true,
+        "review": "2.5秒起原片把管事反问原句烧在纸面，2.1秒起用之前已取得的签收/交付准确概览覆盖，保留完整反馈时长；不把口头反馈变新增书面证据",
+        "audioIssue": "按原管事反馈留配音位，原轨待统一处理"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V16C-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "我的煤药层 祖师我判断的所不称义一出这样出现场 绝善医有安 醒经速气",
+        "expected": ""
+      },
+      {
+        "id": "V16C-02",
+        "type": "按原管事反馈留配音位，原轨待统一处理"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "1dea312b317dac7fcff728c081ddaec681ccf2a5c059de0077b9901b515df3a9"
+  },
+  "usability": {
+    "id": "V16C",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16C-先行归责与纠正-画面候选-1dea312b.mp4",
+    "sha256": "88e4576798046cc205033b8971f4964a462e17eeac04bd2a9d1e192154b7768f",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "wrong-visible-speaker-and-false-document",
+        "subclip": "V16C-01",
+        "time": [
+          0.8,
+          5.4
+        ],
+        "description": "玩家归责段出现NPC讲话，且纸面含认罪式假字；原有反馈概览未覆盖这段。",
+        "repair": "用此前已经取得的签收/交付核看动作替换玩家段，保持原句时长；去除纸面伪字"
+      },
+      {
+        "state": "pending",
+        "type": "overlay-provenance-and-coverage",
+        "subclip": "V16C-02",
+        "description": "比较插页对应D01/D02是否逐字准确并覆盖全部烧字，须重看当前成片"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V16C-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "我的煤药层 祖师我判断的所不称义一出这样出现场 绝善医有安 醒经速气",
+        "expected": ""
+      },
+      {
+        "id": "V16C-02",
+        "type": "按原管事反馈留配音位，原轨待统一处理"
+      }
+    ],
+    "userApproved": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "V39",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+  "sha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+  "oldSHA": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+  "oldDuration": 19.616,
+  "duration": 10.208333,
+  "removedSeconds": 9.407667,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+    "containerDuration": 10.208333,
+    "videoFrames": 245,
+    "firstPTS": 0.0,
+    "lastPTS": 10.166666666666666,
+    "videoEnd": 10.208333333333332,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 10.208,
+    "audioDecodedSamples": 489984,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          0,
+          58
+        ],
+        [
+          139,
+          223
+        ]
+      ],
+      "node": "CH2-LY12A-001",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.15,
+      "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+      "timelineRange": [
+        0,
+        5.916666666666667
+      ]
+    },
+    {
+      "pictures": [
+        [
+          323,
+          426
+        ]
+      ],
+      "node": "CH2-LY12A-003",
+      "audio": "original-whitelist-window",
+      "audioStart": 13.45,
+      "delay": 0,
+      "reason": "仅真实共同核收原句，不能提前宣布定案",
+      "timelineRange": [
+        5.916666666666667,
+        10.208333333333334
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-LY12A-001",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-001.wav",
+      "sourceSha256": "b4b2b970b3b25233e905399a3019f4b05526de754535b12d5d18fea5ed914aad",
+      "sourceRange": [
+        0,
+        5.5797083333333335
+      ],
+      "timelineRange": [
+        0.15,
+        5.729708333333334
+      ],
+      "samples": 267826
+    },
+    {
+      "node": "CH2-LY12A-003",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+      "sourceSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "sourceRange": [
+        13.45,
+        17.741666666666667
+      ],
+      "timelineRange": [
+        5.916666666666667,
+        10.208333333333334
+      ],
+      "samples": 206000
+    }
+  ],
+  "mixPeakBefore": 0.7678148746490479,
+  "mixScale": 1,
+  "newVideoRequests": 0,
+  "newAudioRequests": 0,
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-LY12A-001",
+    "CH2-LY12A-003"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

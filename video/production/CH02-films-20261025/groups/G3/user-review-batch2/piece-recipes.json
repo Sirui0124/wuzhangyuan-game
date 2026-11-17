@@ -1,0 +1,137 @@
+{
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-01.mov": {
+    "id": "25-01",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-01.mov",
+    "frames": 164,
+    "duration": 6.833333333333333,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-01-16x9.mp4",
+    "videoSha256": "c873207096d610eb46ed845fd5a3efd2ad255b4503ba65e59928e95903a89323",
+    "videoStart": 2.3,
+    "audioSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V25-01-raw.mp4",
+    "audioSha256": "12aae6cc1ac8d047a5add6da448a15ec67cc376b5911ce8da91025b1052c8abf",
+    "audioStart": 2.3,
+    "audioLength": 6.8,
+    "delay": 0,
+    "nodes": [
+      "CH2-LY09-P01"
+    ],
+    "purpose": "保留完整条件式计划引入，去开始无用等待",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-03.mov": {
+    "id": "25-03",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-03.mov",
+    "frames": 53,
+    "duration": 2.2083333333333335,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-03-listening-trim.mp4",
+    "videoSha256": "624b885de47a201e823d188dc36bafce4521f7e240e0a2b45cc2f47064beec98",
+    "videoStart": 0,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-P03.wav",
+    "audioSha256": "f6c372f4c6523435de856bf8cc276231b8d8485e015238eb6d08e80ccca92f62",
+    "audioStart": 0,
+    "audioLength": 1.8050833333333334,
+    "delay": 0.2,
+    "nodes": [
+      "CH2-LY09-P03"
+    ],
+    "purpose": "复用既有准确玩家原句，非新TTS；自然听者缩至原句及短气口",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-04.mov": {
+    "id": "25-04",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-04.mov",
+    "frames": 108,
+    "duration": 4.5,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-04-16x9.mp4",
+    "videoSha256": "36f08bd911baf6233df3cd68266e4b4adbaf36d5167b23416adb9cc632014df0",
+    "videoStart": 0.2,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G3/user-review-batch2/audio/CH2-LY09-P04-seed-audio1.wav",
+    "audioSha256": "e76f711d372ff2073131c0ba17e0de4e9dc33c0f2f74597f28e6b77bdae54966",
+    "audioStart": 0,
+    "audioLength": 4.5,
+    "delay": 0,
+    "nodes": [
+      "CH2-LY09-P04"
+    ],
+    "purpose": "必要补句已生成，ASR可能多我字，待实际听审；不在缺P02时采用整片",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-05.mov": {
+    "id": "25-05",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-05.mov",
+    "frames": 178,
+    "duration": 7.416666666666667,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-05-16x9.mp4",
+    "videoSha256": "0d699993a978f159a6dc6391a7055674f4d6637bbee9d5e75d8148e129aed9c5",
+    "videoStart": 2.8,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G3/user-review-batch2/audio/V25-05-clean-lines-seed-audio1.wav",
+    "audioSha256": "62cfd66ecd1f084bbbbfca4edb7cca6e64c3ae14633701d1020b7398e91a3d53",
+    "audioStart": 1.65,
+    "audioLength": 7.35,
+    "delay": 0,
+    "nodes": [
+      "CH2-LY09-P05",
+      "CH2-LY09-001"
+    ],
+    "purpose": "只保留尚未实施和救人动机两句，删除生成前置等待",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-06.mov": {
+    "id": "25-06",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-06.mov",
+    "frames": 105,
+    "duration": 4.375,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V25-06-repaired.mp4",
+    "videoSha256": "08725a9dc1c1ca86e85005a066144ce93a80ed9a4d102129fb173345ea04d054",
+    "videoStart": 0,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-002.wav",
+    "audioSha256": "57ca37304e95d2b7b25ded448b3fdcf0b2094b44897decf2834741f5ae589db9",
+    "audioStart": 0,
+    "audioLength": 3.9745,
+    "delay": 0.2,
+    "nodes": [
+      "CH2-LY09-002"
+    ],
+    "purpose": "复用既有准确玩家原句，非新TTS；自然听者缩至原句及短气口",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-07.mov": {
+    "id": "25-07",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-07.mov",
+    "frames": 134,
+    "duration": 5.583333333333333,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\picture-usability-v2\\V25-07-repaired.mp4",
+    "videoSha256": "479f1246d31c04fae9a781cfa91fff24647f871a1c7d61d34f9e5c82474b7de5",
+    "videoStart": 0,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY09-003.wav",
+    "audioSha256": "61dbb2c8765f5f49d146e1c383fa2041f6238673a60726bf5dd3af9118c76194",
+    "audioStart": 0,
+    "audioLength": 5.17425,
+    "delay": 0.2,
+    "nodes": [
+      "CH2-LY09-003"
+    ],
+    "purpose": "复用既有准确玩家原句，非新TTS；自然听者缩至原句及短气口",
+    "silent": false
+  },
+  "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-08.mov": {
+    "id": "25-08",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\pieces\\25-08.mov",
+    "frames": 150,
+    "duration": 6.25,
+    "videoSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V25-08-16x9.mp4",
+    "videoSha256": "9e456c79e1a3603d41f95b4b1b991c2baef622d9de9ad33b8567dbf628fee79f",
+    "videoStart": 2,
+    "audioSource": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G3/user-review-batch2/audio/V25-08-clean-lines-seed-audio1.wav",
+    "audioSha256": "325649854c2a64ae587add0162adc264ea4767abffcb1ccac1c8028285f3e3f7",
+    "audioStart": 0,
+    "audioLength": 6,
+    "delay": 0,
+    "nodes": [
+      "CH2-LY09-004",
+      "CH2-LY09-005"
+    ],
+    "purpose": "保留无把握与后方承受风险两句，不改变尚未实行计划边界",
+    "silent": false
+  }
+}

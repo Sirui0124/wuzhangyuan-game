@@ -1,0 +1,79 @@
+{
+  "id": "CH2-LY02-012",
+  "expected": "这份交接记录，可以让我看看吗？",
+  "sha256": "27fcb76e8ed058fb0bdc7f65fae0e461f22e8152a97dda5e37862c2a7a4a551b",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-012-v1.wav",
+  "recognized": "这份交接记录可以让我看看吗",
+  "similarity": 1.0,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.18,
+      "text": "这份交接记录可以让我看看吗",
+      "noSpeechProbability": 0.010364759713411331,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": "这"
+        },
+        {
+          "start": 0.54,
+          "end": 0.66,
+          "text": "份"
+        },
+        {
+          "start": 0.66,
+          "end": 0.8,
+          "text": "交"
+        },
+        {
+          "start": 0.8,
+          "end": 0.94,
+          "text": "接"
+        },
+        {
+          "start": 0.94,
+          "end": 1.08,
+          "text": "记"
+        },
+        {
+          "start": 1.08,
+          "end": 1.28,
+          "text": "录"
+        },
+        {
+          "start": 1.28,
+          "end": 2.54,
+          "text": "可以"
+        },
+        {
+          "start": 2.54,
+          "end": 2.7,
+          "text": "让"
+        },
+        {
+          "start": 2.7,
+          "end": 2.82,
+          "text": "我"
+        },
+        {
+          "start": 2.82,
+          "end": 2.96,
+          "text": "看看"
+        },
+        {
+          "start": 2.96,
+          "end": 3.18,
+          "text": "吗"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

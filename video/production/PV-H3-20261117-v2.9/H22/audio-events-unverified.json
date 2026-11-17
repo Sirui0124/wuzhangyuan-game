@@ -1,0 +1,61 @@
+{
+  "source_sha256": "a07daf59b50522b9c6ccac66a5bf53b2b276a1a296bf3284a22ff06431f12d57",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Horse",
+          "p": 0.568
+        },
+        {
+          "label": "Clip-clop",
+          "p": 0.5666
+        },
+        {
+          "label": "Animal",
+          "p": 0.369
+        },
+        {
+          "label": "Neigh, whinny",
+          "p": 0.0749
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0486
+        },
+        {
+          "label": "Music",
+          "p": 0.0321
+        },
+        {
+          "label": "Rattle",
+          "p": 0.0184
+        },
+        {
+          "label": "Speech",
+          "p": 0.0148
+        },
+        {
+          "label": "Clatter",
+          "p": 0.0073
+        },
+        {
+          "label": "Livestock, farm animals, working animals",
+          "p": 0.0072
+        },
+        {
+          "label": "Run",
+          "p": 0.0069
+        },
+        {
+          "label": "Inside, small room",
+          "p": 0.0065
+        }
+      ],
+      "music": 0.0321
+    }
+  ]
+}

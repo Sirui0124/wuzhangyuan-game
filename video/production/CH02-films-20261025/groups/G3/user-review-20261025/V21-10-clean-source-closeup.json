@@ -1,0 +1,19 @@
+{
+  "id": "V21-10",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-20261025\\V21-10-clean-source-closeup.mp4",
+  "sha256": "458eefb2587bd5ee4d5381f277fa913448b062321668fc47811b467bfc1be8f0",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\generated\\V21-10-raw.mp4",
+  "sourceSha256": "7191cb23b4e90ebf932055dbd1760938e2fd4fd7ee75dd9119454543b65111e8",
+  "sourceTime": [
+    0,
+    8.416667
+  ],
+  "filter": "setpts=PTS-STARTPTS,crop=1344:756:0:0,scale=1280:720,crop=768:432:300:'if(lt(t,4),24,min(70,24+(t-4)*11.5))',scale=1280:720,setsar=1,fps=24,trim=end_frame=202,setpts=N/24/TB",
+  "frameCount": 202,
+  "fps": 24,
+  "sourceAudio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\edited\\V21-10-visualcrop.mp4",
+  "sourceAudioSha256": "378a8be96d5a596e38f7e41697a913edbd2c992f0451ec4665558ef4eb30f948",
+  "method": "回未叠层原片随表演取干净近景，纸面在构图外；不强切嘴/下颌，不加遮罩、模糊或字卡",
+  "reviewState": "pending-dynamic-review",
+  "fullExistingAudioPreserved": true
+}

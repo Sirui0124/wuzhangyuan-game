@@ -1,0 +1,44 @@
+{
+  "id": "V32A-04",
+  "sourceId": "G4-L02-closed-effective",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\assembled\\L02-定制②听者反应底片-闭口有效段.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-04-final.mp4",
+  "postVoice": [
+    {
+      "node": "CH2-LY11-018",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-018.wav",
+      "start": 1,
+      "end": 5.199916666666667
+    }
+  ],
+  "textLayers": [],
+  "trim": [
+    0,
+    7.4
+  ],
+  "spatialCrop": null,
+  "reuse": {
+    "authorization": "总控明确允许同组/协调后跨组闭口段剪辑替代；G4已协调只读引用",
+    "originalSource": "G4 V28A-01 0–6.25秒以0.75倍均匀放慢，G4有效段限制0–7.4秒",
+    "newPaidRequest": false
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "听者半趴与相邻坐姿/起身镜头仍需用户审阅连续性；没有新增玩家正脸"
+  ],
+  "audioIssues": [
+    "未逐字听审"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 7.42,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-04-final.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:07.42, start: 0.000000, bitrate: 2708 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2506 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 194 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

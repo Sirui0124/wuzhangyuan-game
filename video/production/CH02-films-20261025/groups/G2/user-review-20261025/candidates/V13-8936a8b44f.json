@@ -1,0 +1,101 @@
+{
+  "id": "V13",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-8936a8b44f.mp4",
+  "sha256": "1313248fd61c412cc572cb518ddc3f9598b6ae80d8f7fba684f438c0f6f4c661",
+  "videoFrames": 367,
+  "videoSeconds": 15.291666666666666,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V13",
+    "parts": [
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-entry-2692bd34ab.mp4",
+        "range": [
+          0,
+          1.375
+        ]
+      },
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-player-c629368fdd.mp4",
+        "range": [
+          0,
+          4.083333333333333
+        ]
+      },
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-manager-f2e6805a25.mp4",
+        "range": [
+          0,
+          3.9583333333333335
+        ]
+      },
+      {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-clerk-ac83257ba3.mp4",
+        "range": [
+          0,
+          6.041666666666667
+        ]
+      }
+    ],
+    "audio": null,
+    "sourceNodes": [
+      "CH2-LY04-001",
+      "CH2-LY04-002",
+      "CH2-LY04-003"
+    ],
+    "audioMode": "parts",
+    "childIds": [
+      "V13-entry",
+      "V13-player",
+      "V13-manager",
+      "V13-clerk"
+    ]
+  },
+  "sourceParts": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-entry-2692bd34ab.mp4",
+      "range": [
+        0,
+        1.375
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-entry-2692bd34ab.mp4",
+      "sourceSha256": "8cae97075c7943590b8c8729a92757db89a22332785139fe43416ee26d5a146f"
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-player-c629368fdd.mp4",
+      "range": [
+        0,
+        4.083333333333333
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-player-c629368fdd.mp4",
+      "sourceSha256": "46f210d5eda9a59ccb64400f5874f192444eb3355f16c6c0fa66cd159284b89f"
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-manager-f2e6805a25.mp4",
+      "range": [
+        0,
+        3.9583333333333335
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-manager-f2e6805a25.mp4",
+      "sourceSha256": "e2bacb2270641bf4989f0aefdb452d748bd72c9d24f41beeb53a7349d6b6aa67"
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-clerk-ac83257ba3.mp4",
+      "range": [
+        0,
+        6.041666666666667
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-clerk-ac83257ba3.mp4",
+      "sourceSha256": "5c97f7adb4ccb1f4921fdf66374a0464100a2f671984ba429c2b814b6e7f686d"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

@@ -1,0 +1,70 @@
+{
+  "group": "chapterTwo",
+  "id": "CH2-V08B",
+  "src": "/video/current/CH2-V08B-10b75e1dc5-20261025.mp4",
+  "title": "关心伤势分支",
+  "subtitles": "/video/subtitles/CH2-V08B-10b75e1dc5-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\CH2-V08B-10b75e1dc5-20261025.mp4",
+  "sha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+  "duration": 12.52275,
+  "cues": [
+    {
+      "start": 0.0,
+      "end": 1.88,
+      "text": "我还是怕你太难过"
+    },
+    {
+      "start": 2.56,
+      "end": 3.68,
+      "text": "毕竟也不容易"
+    },
+    {
+      "start": 6.32,
+      "end": 12.24,
+      "text": "伤总能养好。可这口气，没那么容易过去"
+    }
+  ],
+  "presetMatches": [
+    {
+      "id": "CH2-LY02-B01",
+      "node": "CH2-LY02-B01",
+      "text": "我还是怕你太难过",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "9a9c70abb803b24cfc36094dc5e351cadd1c96152ab280e365bef23058b231ff",
+      "duration": 1.9735,
+      "speechRange": [
+        0.26,
+        1.7
+      ],
+      "correlation": 0.9701837803028586,
+      "insertAt": 0.3213,
+      "speechStart": 0.58125,
+      "speechEnd": 2.02125
+    },
+    {
+      "id": "CH2-LY02-B02",
+      "node": "CH2-LY02-B02",
+      "text": "毕竟也不容易",
+      "speaker": "我",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+      "chapter": 2,
+      "provider": "existing local seed-tts-2.0",
+      "sha256": "37e1ead8e1657138840d00103b1251685330b0b495558817c94886ac6f850391",
+      "duration": 1.572,
+      "speechRange": [
+        0.34,
+        1.22
+      ],
+      "correlation": 0.9885107184329548,
+      "insertAt": 2.5143,
+      "speechStart": 2.85425,
+      "speechEnd": 3.73425
+    }
+  ],
+  "unmatchedTextCandidates": [],
+  "method": "Normalized waveform cross-correlation against original preset WAV; no claim of subjective listening",
+  "humanListeningReview": false
+}

@@ -1,0 +1,13 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+const here=fileURLToPath(new URL('.',import.meta.url));
+const r=spawnSync(process.execPath,[fileURLToPath(new URL('../../node_modules/typescript/bin/tsc',import.meta.url)),'-p',here+'tsconfig.json'],{stdio:'inherit',windowsHide:true});
+if(r.status!==0)process.exit(r.status??1);
+const image=readFileSync(new URL('../yiling-rescue/public/art/yiling-retreat-map-v1.png',import.meta.url)).toString('base64');
+const css=readFileSync(here+'public/style.css','utf8').replace('MAP_IMAGE','data:image/png;base64,'+image);
+const code=readFileSync(here+'.build/engine.js','utf8')+'\n'+readFileSync(here+'.build/app.js','utf8').replace(/^import .*?;\r?\n/m,'');
+const html=readFileSync(here+'public/index.html','utf8').replace('/*STYLE*/',()=>css).replace('/*SCRIPT*/',()=>code.replace(/<\/script/gi,'<\\/script'));
+writeFileSync(here+'.build/index.html',html);
+const out=fileURLToPath(new URL('../../outputs/yiling-field-demo-20261103/',import.meta.url));mkdirSync(out,{recursive:true});writeFileSync(out+'夷陵-归路-派兵接应Demo.html',html);
+console.log('已构建独立HTML：'+out+'夷陵-归路-派兵接应Demo.html');

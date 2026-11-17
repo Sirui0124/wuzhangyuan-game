@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><title>G6动态审片</title>
+<style>body{background:#121719;color:#eee;font:18px system-ui;margin:18px}video{width:min(96vw,1280px);height:auto;max-height:76vh;display:block;background:#000}button,select{font:inherit;margin:8px;padding:8px}#time{font:20px monospace}</style>
+<select aria-label="片段" id="clips"></select><label><input id="adopt" type="checkbox" checked>采用剪辑</label><button id="play">从头播放</button><button id="pause">暂停</button><button id="next">下一片</button><label>定位秒数 <input id="seek" type="number" min="0" step="0.1" value="0" aria-label="定位秒数" style="width:75px"></label><button id="jump">定位并播放</button><span id="time">尚未播放</span><video id="v" controls preload="metadata"></video><p>动态画面审查工具。抽帧仅辅助，声音未听审时必须明确记录。</p>
+<script>
+let rows=[],i=0,adopted={};const v=document.querySelector('#v'),sel=document.querySelector('#clips'),t=document.querySelector('#time'),ad=document.querySelector('#adopt');
+Promise.all([fetch('plan.json',{cache:'no-store'}).then(r=>r.json()),fetch('review/visual-adopted.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}),fetch('review/adopted.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}),fetch('delivery.json',{cache:'no-store'}).then(r=>r.ok?r.json():{})]).then(([p,a,b,d])=>{rows=p.requests.concat(p.retries||[]).concat((d.films||[]).map(f=>({id:'ASSEMBLED-'+f.id,duration:f.duration,audioStrategy:'整段画面候选',directPath:f.path})));adopted={...a,...b};rows.forEach(c=>{let o=document.createElement('option');o.value=c.id;o.textContent=c.id+' · '+c.duration+'秒 · '+c.audioStrategy;sel.append(o)});load()});
+function load(){let a=ad.checked&&adopted[rows[i].id],direct=rows[i].directPath||(a&&a.path);v.src=direct?direct.replaceAll('\\','/').split('/G6/')[1]:'generated/'+rows[i].id+'-16x9.mp4';sel.value=rows[i].id;t.textContent=rows[i].id+' 准备';}
+ad.onchange=load;
+sel.onchange=()=>{i=rows.findIndex(c=>c.id===sel.value);load()};document.querySelector('#play').onclick=()=>{v.currentTime=0;v.play()};document.querySelector('#pause').onclick=()=>v.pause();document.querySelector('#next').onclick=()=>{i=(i+1)%rows.length;load()};
+document.querySelector('#jump').onclick=()=>{v.currentTime=Math.max(0,Math.min(Number(document.querySelector('#seek').value)||0,v.duration-.05));v.play()};
+setInterval(()=>{if(rows[i])t.textContent=rows[i].id+' '+v.currentTime.toFixed(2)+' / '+(isFinite(v.duration)?v.duration.toFixed(2):'?')+' '+(v.paused?'暂停':'播放中')},100);
+</script>

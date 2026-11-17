@@ -1,0 +1,38 @@
+{
+  "id": "V32A-03-C2",
+  "parts": [
+    {
+      "source": "V32A-03",
+      "start": 5.5,
+      "end": 8,
+      "speed": 0.85
+    },
+    {
+      "source": "V32A-04-R2",
+      "start": 1.5,
+      "end": 6.7,
+      "crop": [
+        200,
+        400,
+        632,
+        356
+      ],
+      "speed": 0.85
+    }
+  ],
+  "audioSource": "V32A-03",
+  "reason": "保留原句完整8秒音轨，面部回应后接本场案面观察；两段各使用一次，无短循环",
+  "duration": 9.058823529411764,
+  "newPaidRequest": false,
+  "loop": false,
+  "audioListening": "未逐字听审",
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 9.06,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-03-C2.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:09.06, start: 0.000000, bitrate: 2814 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2720 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 117 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  }
+}

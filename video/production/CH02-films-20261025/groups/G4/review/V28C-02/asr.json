@@ -1,0 +1,145 @@
+{
+  "id": "V28C-02",
+  "expected": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+  "postVoiceText": null,
+  "actual": "你肯替我留这一份我记着可这样真能躲过去吗",
+  "similarity": 0.95,
+  "segments": [
+    {
+      "start": 0.75,
+      "end": 2.45,
+      "text": "你肯替我留这一份",
+      "words": [
+        {
+          "start": 0.75,
+          "end": 1.21,
+          "word": "你",
+          "probability": 0.7873105406761169
+        },
+        {
+          "start": 1.21,
+          "end": 1.41,
+          "word": "肯",
+          "probability": 0.9975461661815643
+        },
+        {
+          "start": 1.41,
+          "end": 1.61,
+          "word": "替",
+          "probability": 0.9990919828414917
+        },
+        {
+          "start": 1.61,
+          "end": 1.77,
+          "word": "我",
+          "probability": 0.9997743964195251
+        },
+        {
+          "start": 1.77,
+          "end": 1.93,
+          "word": "留",
+          "probability": 0.998604953289032
+        },
+        {
+          "start": 1.93,
+          "end": 2.11,
+          "word": "这",
+          "probability": 0.5962158441543579
+        },
+        {
+          "start": 2.11,
+          "end": 2.25,
+          "word": "一",
+          "probability": 0.9801754355430603
+        },
+        {
+          "start": 2.25,
+          "end": 2.45,
+          "word": "份",
+          "probability": 0.5692552328109741
+        }
+      ]
+    },
+    {
+      "start": 3.29,
+      "end": 4.19,
+      "text": "我记着",
+      "words": [
+        {
+          "start": 3.29,
+          "end": 3.69,
+          "word": "我",
+          "probability": 0.9226121306419373
+        },
+        {
+          "start": 3.69,
+          "end": 3.95,
+          "word": "记",
+          "probability": 0.982293426990509
+        },
+        {
+          "start": 3.95,
+          "end": 4.19,
+          "word": "着",
+          "probability": 0.983352541923523
+        }
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 7.74,
+      "text": "可这样真能躲过去吗",
+      "words": [
+        {
+          "start": 6.0,
+          "end": 6.4,
+          "word": "可",
+          "probability": 0.9882325530052185
+        },
+        {
+          "start": 6.4,
+          "end": 6.62,
+          "word": "这样",
+          "probability": 0.987084686756134
+        },
+        {
+          "start": 6.62,
+          "end": 6.82,
+          "word": "真",
+          "probability": 0.9447229504585266
+        },
+        {
+          "start": 6.82,
+          "end": 7.02,
+          "word": "能",
+          "probability": 0.9993842840194702
+        },
+        {
+          "start": 7.02,
+          "end": 7.22,
+          "word": "躲",
+          "probability": 0.990013986825943
+        },
+        {
+          "start": 7.22,
+          "end": 7.36,
+          "word": "过",
+          "probability": 0.9961655139923096
+        },
+        {
+          "start": 7.36,
+          "end": 7.56,
+          "word": "去",
+          "probability": 0.9991976618766785
+        },
+        {
+          "start": 7.56,
+          "end": 7.74,
+          "word": "吗",
+          "probability": 0.9915022850036621
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

@@ -1,0 +1,248 @@
+{
+  "id": "E4-early",
+  "title": "认下来的罪-早停查",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪-早停查-纯台词短版-V4.mp4",
+  "sha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+  "duration": 16.0,
+  "decode": "passed",
+  "videoCoverage": {
+    "videoSeconds": 16.0,
+    "decodedFrames": 384,
+    "expectedSeconds": 16.0,
+    "passed": true
+  },
+  "editDecisionList": [
+    {
+      "slot": "V41E",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+      "sourceSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "frames": 384,
+      "start": 0.0,
+      "end": 16.0,
+      "duration": 16.0,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              124
+            ]
+          ],
+          "node": "CH2-LY07-BAD1",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "收件查办与退军旁白，NPC仅收卷",
+          "timelineRange": [
+            0,
+            5.166666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              359,
+              395
+            ]
+          ],
+          "node": "CH2-LY07-BAD2",
+          "audio": "original-whitelist-window",
+          "audioStart": 14.98,
+          "delay": 0,
+          "reason": "只留大军退了吗，删口型/反应控制说明",
+          "timelineRange": [
+            5.166666666666667,
+            6.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              402,
+              540
+            ],
+            [
+              558,
+              644
+            ]
+          ],
+          "node": "CH2-LY07-BAD3",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "完整早停查心声，苟安闭口反应；未获后期合谋",
+          "timelineRange": [
+            6.666666666666667,
+            16.0
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅早停查确认后播放；不知道后段合谋，不追加死亡结果",
+        "保留军吏接办/退军旁白、苟安询问及完整早停查反思",
+        "反思使用我的画外声，苟安只做闭口反应"
+      ]
+    }
+  ],
+  "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-early-overview-0.jpg",
+  "userApproved": false,
+  "gameIntegrated": false,
+  "executesGameState": false,
+  "artifactType": "edited-review-candidate",
+  "audioReview": "采用G6登记的纯台词短版及已核来源；实际逐字听审仍pending",
+  "visualReview": "已查看全时段有序抽帧及拼接切点，非连续全片观看",
+  "previousVersion": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪·早停查.mp4",
+    "sha256": "0156220eda6e7050cc7896db31a9d2eb1d68510d5649e0249b7988fe5fd368c3",
+    "duration": 32.04
+  },
+  "entryPrerequisite": "普通②B听认罪后UI-EARLY-FILE已明确确认；尚未问出合谋。",
+  "description": "听到认罪便停下追查，未问明背后商议。",
+  "slots": [
+    "V41E"
+  ],
+  "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\visual-review.json",
+  "sources": [
+    {
+      "slot": "V41E",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+      "sourceSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "frames": 384,
+      "start": 0.0,
+      "end": 16.0,
+      "duration": 16.0,
+      "sourceEDL": [
+        {
+          "pictures": [
+            [
+              0,
+              124
+            ]
+          ],
+          "node": "CH2-LY07-BAD1",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "收件查办与退军旁白，NPC仅收卷",
+          "timelineRange": [
+            0,
+            5.166666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              359,
+              395
+            ]
+          ],
+          "node": "CH2-LY07-BAD2",
+          "audio": "original-whitelist-window",
+          "audioStart": 14.98,
+          "delay": 0,
+          "reason": "只留大军退了吗，删口型/反应控制说明",
+          "timelineRange": [
+            5.166666666666667,
+            6.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              402,
+              540
+            ],
+            [
+              558,
+              644
+            ]
+          ],
+          "node": "CH2-LY07-BAD3",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "完整早停查心声，苟安闭口反应；未获后期合谋",
+          "timelineRange": [
+            6.666666666666667,
+            16.0
+          ]
+        }
+      ],
+      "integrationConditions": [
+        "仅早停查确认后播放；不知道后段合谋，不追加死亡结果",
+        "保留军吏接办/退军旁白、苟安询问及完整早停查反思",
+        "反思使用我的画外声，苟安只做闭口反应"
+      ]
+    }
+  ],
+  "previousRevision": {
+    "id": "E4-early",
+    "title": "认下来的罪-早停查",
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪-早停查-V2.mp4",
+    "sha256": "176e4746a466f72d7203a1e1c098d6e97db3b855afd1fa22688a1021d681f90c",
+    "duration": 26.917,
+    "decode": "passed",
+    "videoCoverage": {
+      "videoSeconds": 26.833,
+      "decodedFrames": 644,
+      "expectedSeconds": 26.916666666666668,
+      "passed": true
+    },
+    "editDecisionList": [
+      {
+        "id": "V41E-owner-repair",
+        "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+        "sourceSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+        "start": 0,
+        "frames": 646,
+        "duration": 26.916666666666668,
+        "reason": "采用原组本轮闭口反应/收卷修版；保持本支线事实，未导入别支线对白",
+        "audio": null,
+        "timelineStart": 0,
+        "timelineEnd": 26.916666666666668
+      }
+    ],
+    "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\pace-v2\\E4-early-V2.jpg",
+    "userApproved": false,
+    "gameIntegrated": false,
+    "executesGameState": false,
+    "artifactType": "edited-review-candidate",
+    "audioReview": "原声及已有心声沿用，未完成逐字听审",
+    "visualReview": "关键动作/切点有序抽帧复核完成；非完整连续人工观看，待用户review",
+    "previousVersion": {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪·早停查.mp4",
+      "sha256": "0156220eda6e7050cc7896db31a9d2eb1d68510d5649e0249b7988fe5fd368c3",
+      "duration": 32.04
+    },
+    "entryPrerequisite": "普通②B听认罪后UI-EARLY-FILE已明确确认；尚未问出合谋。",
+    "description": "听到认罪便停下追查，未问明背后商议。",
+    "slots": [
+      "V41E"
+    ],
+    "visualReviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\motion-followup\\assessment.json",
+    "pictureUsability": "usable-with-integration-condition"
+  },
+  "overviewSheets": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\E4-early-overview-0.jpg"
+  ],
+  "adoptionMethod": "byte-identical-source-copy",
+  "sourceSignature": "b7709dd09c60269ecba2bee0874322deb7df0267edc872804a11b8aa795da5df",
+  "postProcessing": {
+    "type": "registered-G6-batch2-short-source-integration",
+    "newGeneration": false
+  },
+  "joinFrames": [],
+  "integrationConditions": [
+    "仅早停查确认后播放；不知道后段合谋，不追加死亡结果",
+    "保留军吏接办/退军旁白、苟安询问及完整早停查反思",
+    "反思使用我的画外声，苟安只做闭口反应"
+  ],
+  "sourceDuration": 16.0,
+  "status": "registered-short-version-awaiting-user-review",
+  "sourceAudioNotes": [
+    {
+      "slot": "V41E",
+      "note": "采用G6本轮已登记声音来源和对白窗口，实际听审pending"
+    }
+  ]
+}

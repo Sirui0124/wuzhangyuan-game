@@ -1,0 +1,97 @@
+{
+  "id": "CH2-LY13-003",
+  "expected": "光改这趟运粮，补不上这些缺口。",
+  "sha256": "edaa0e1a9637f2e71f945e7546c4ac606c7020217291186c5d415f152a6675dc",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-003-v1.wav",
+  "recognized": "光改这趟云凉补补上这些缺口",
+  "similarity": 0.7692307692307693,
+  "providerTextMatches": true,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.34,
+      "text": "光改这趟云凉",
+      "noSpeechProbability": 0.17205777764320374,
+      "words": [
+        {
+          "start": 0.0,
+          "end": 0.54,
+          "text": "光"
+        },
+        {
+          "start": 0.54,
+          "end": 0.7,
+          "text": "改"
+        },
+        {
+          "start": 0.7,
+          "end": 0.82,
+          "text": "这"
+        },
+        {
+          "start": 0.82,
+          "end": 0.94,
+          "text": "趟"
+        },
+        {
+          "start": 0.94,
+          "end": 1.12,
+          "text": "云"
+        },
+        {
+          "start": 1.12,
+          "end": 1.34,
+          "text": "凉"
+        }
+      ]
+    },
+    {
+      "start": 2.4999999999999996,
+      "end": 3.64,
+      "text": "补补上这些缺口",
+      "noSpeechProbability": 0.17205777764320374,
+      "words": [
+        {
+          "start": 2.4999999999999996,
+          "end": 2.78,
+          "text": "补"
+        },
+        {
+          "start": 2.78,
+          "end": 2.88,
+          "text": "补"
+        },
+        {
+          "start": 2.88,
+          "end": 3.02,
+          "text": "上"
+        },
+        {
+          "start": 3.02,
+          "end": 3.16,
+          "text": "这"
+        },
+        {
+          "start": 3.16,
+          "end": 3.28,
+          "text": "些"
+        },
+        {
+          "start": 3.28,
+          "end": 3.42,
+          "text": "缺"
+        },
+        {
+          "start": 3.42,
+          "end": 3.64,
+          "text": "口"
+        }
+      ]
+    }
+  ],
+  "method": "Independent faster-whisper-small on generated WAV, no prompt; exact provider subtitles separately compared",
+  "needsTextReview": false,
+  "humanListeningReview": false,
+  "userApproved": false,
+  "phoneticSimilarity": 1.0
+}

@@ -1,0 +1,77 @@
+{
+  "delivery": {
+    "id": "V16A",
+    "name": "核交接选项",
+    "entry": "UI-N2选A",
+    "next": [
+      "V17"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V16A-01"
+    ],
+    "subclips": [
+      "V16A-01"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16A-核交接选项-画面候选-dc02c0d5.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "4295fdb0e3f66ff6476de62f67317fd055ecc471107270c60088c7ddfa258885",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16A-核交接选项.mp4",
+    "technical": {
+      "duration": 9.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "4295fdb0e3f66ff6476de62f67317fd055ecc471107270c60088c7ddfa258885"
+    },
+    "visualReview": [
+      {
+        "id": "V16A-01",
+        "observation": "0–9.4秒管事近景、抬眼、并排核纸；相同脸与仓中环境，允许轻微道具/服饰差异。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V16A-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "温德女的余拜斯卫瑶,今人终受无朝,托氏新长扁,今女周期新婶现长扁。",
+        "expected": ""
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "dc02c0d54e0c7ff3932abd8519c2f05acbe3e84a8d380f09450d20cb24589981"
+  },
+  "usability": {
+    "id": "V16A",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V16A-核交接选项-画面候选-dc02c0d5.mp4",
+    "sha256": "4295fdb0e3f66ff6476de62f67317fd055ecc471107270c60088c7ddfa258885",
+    "reviewState": "pending",
+    "pictureUsability": null,
+    "issues": [],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V16A-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "温德女的余拜斯卫瑶,今人终受无朝,托氏新长扁,今女周期新婶现长扁。",
+        "expected": ""
+      }
+    ],
+    "userApproved": false
+  }
+}

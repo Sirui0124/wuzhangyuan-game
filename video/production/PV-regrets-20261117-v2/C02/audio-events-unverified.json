@@ -1,0 +1,61 @@
+{
+  "source_sha256": "1968e219ae9f9a7f4aee8c866c085aa4dba63224cb8e48f33864884fa17e8f8f",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.8057
+        },
+        {
+          "label": "Sad music",
+          "p": 0.1614
+        },
+        {
+          "label": "Theme music",
+          "p": 0.1066
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.1026
+        },
+        {
+          "label": "Violin, fiddle",
+          "p": 0.0963
+        },
+        {
+          "label": "Background music",
+          "p": 0.0545
+        },
+        {
+          "label": "Television",
+          "p": 0.0489
+        },
+        {
+          "label": "Orchestra",
+          "p": 0.0408
+        },
+        {
+          "label": "Tender music",
+          "p": 0.0349
+        },
+        {
+          "label": "Soundtrack music",
+          "p": 0.0284
+        },
+        {
+          "label": "Cello",
+          "p": 0.0198
+        },
+        {
+          "label": "Bowed string instrument",
+          "p": 0.0181
+        }
+      ],
+      "music": 0.8057
+    }
+  ]
+}

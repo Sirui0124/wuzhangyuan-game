@@ -1,0 +1,89 @@
+{
+  "delivery": {
+    "id": "V19B",
+    "name": "缺额判断B",
+    "entry": "UI-N3选B",
+    "next": [
+      "V20"
+    ],
+    "endEvent": "所选对白与本段演出实际完成；不重复加分",
+    "children": [
+      "V19B-01"
+    ],
+    "subclips": [
+      "V19B-01"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19B-缺额判断B-画面候选-5a47e505.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "3df4ef9b6c4a76188fc73d0b53fb4c68d4d427fc8df4edb9de3518305c6a5fd2",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19B-缺额判断B.mp4",
+    "technical": {
+      "duration": 10.03,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "3df4ef9b6c4a76188fc73d0b53fb4c68d4d427fc8df4edb9de3518305c6a5fd2"
+    },
+    "visualReview": [
+      {
+        "id": "V19B-01",
+        "observation": "0–10秒既有账页取放与核对，6.5秒后经手人近景有额外开口，保留画面，原玩家句/口型留统一阶段核对；无新增催征公文",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V19B-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "卡顿子隆,你往十中殿,夜十七。两岸应从进口,去到贡柜队。是。",
+        "expected": ""
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "5a47e5051015b592d09f63e2eed7a6d6a35008a84bf60c7ca7032ea733edac68"
+  },
+  "usability": {
+    "id": "V19B",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V19B-缺额判断B-画面候选-5a47e505.mp4",
+    "sha256": "3df4ef9b6c4a76188fc73d0b53fb4c68d4d427fc8df4edb9de3518305c6a5fd2",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "wrong-visible-speaker",
+        "subclip": "V19B-01",
+        "time": [
+          6.4,
+          10
+        ],
+        "description": "玩家判断句尾拍成地方经手人讲话。",
+        "repair": "保留核看旧账的前半并接同场闭册/静观，不删原句"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V19B-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "卡顿子隆,你往十中殿,夜十七。两岸应从进口,去到贡柜队。是。",
+        "expected": ""
+      }
+    ],
+    "userApproved": false
+  }
+}

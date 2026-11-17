@@ -1,0 +1,117 @@
+{
+  "updatedAt": "2026-10-25T19:11:13+08:00",
+  "role": "chapter-two-controller-integration-only",
+  "status": "ready",
+  "scope": "总控只提供已核实缺口与现有文档路径；原制作负责人独立复核并交付自己的请求MD",
+  "policy": {
+    "updatedAt": "2026-10-25T19:11:13+08:00",
+    "source": "2026-10-25用户经汇总对话通知，视频生成API过期",
+    "videoApiSubmissionEnabled": false,
+    "automaticVideoRepostEnabled": false,
+    "futureDelivery": "one-local-markdown-per-video-request",
+    "maxDurationSeconds": 30,
+    "durationIsUpperBoundNotTarget": true,
+    "template": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\docs\\video\\SEEDANCE-PROMPT-TEMPLATE.md",
+    "preserveTaskIdsAndUnknownStates": true,
+    "preserveCurrentApprovedVersions": true,
+    "noCrossBranchOrInteractionBoundaryMerge": true,
+    "ownerRule": "具体请求稿仍由G1-G6及独立结局负责人维护，总控只交缺口与路径，不重复写稿",
+    "audioRuleUnchanged": "V25未知参考音频请求保持unknown-no-repost；音频缺口不自动升级为视频重拍。"
+  },
+  "items": [],
+  "readyVideoRequestCount": 0,
+  "confirmedVideoRegenerationGapCount": 0,
+  "nonVideoGaps": [
+    {
+      "sceneId": "V25",
+      "title": "赴魏散谣的未实行计划与风险—缺失原句补音",
+      "durationSeconds": null,
+      "mdPath": null,
+      "reason": "当前已知缺口是参考音频生成结果未知；尚无由本轮证据确认的新画面重拍需求。不把音频缺口伪装为Seedance视频请求。",
+      "status": "blocked",
+      "blockingReason": "CH2-LY09-P02同步请求连接中断，未获服务端taskId；保留unknown-no-repost，禁止自动重复提交。",
+      "owner": "G3",
+      "ownerThreadId": "01a16f51-b874-7df1-80b2-fde5991b80a5",
+      "requestId": "a31dbf42-96db-420d-a263-a7aaa00bdacd",
+      "evidencePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\P02-unknown-recovery.json"
+    }
+  ],
+  "verification": {
+    "currentFilmCount": 70,
+    "currentFileShaMismatchOrMissing": [],
+    "currentLogicalFilmCount": 63,
+    "pictureUsabilityCounts": {
+      "usable": 21,
+      "usable-with-integration-condition": 42,
+      "needs-repair": 0,
+      "pending": 0
+    },
+    "batch2UnmatchedSlots": [
+      "V25"
+    ],
+    "originalUserCommentTextChanged": false,
+    "reviewStateMetadataWasObservedChanged": true,
+    "reviewStateMetadataNotOverwritten": true,
+    "userApprovedByThisCheck": false
+  },
+  "ownerHandoffs": [
+    {
+      "owner": "G1",
+      "threadId": "01a16f51-a6b7-7b63-99fb-086a1dd5a762",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": false
+    },
+    {
+      "owner": "G2",
+      "threadId": "01a16f51-ae8f-7051-a1f3-c63474171b1f",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": false
+    },
+    {
+      "owner": "G3",
+      "threadId": "01a16f51-b874-7df1-80b2-fde5991b80a5",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": false
+    },
+    {
+      "owner": "G4",
+      "threadId": "01a16f51-c836-7ae2-8ec7-3483401dfe32",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": false
+    },
+    {
+      "owner": "G5",
+      "threadId": "01a16f51-dd26-7b73-b47f-d237b5febdc3",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": true
+    },
+    {
+      "owner": "G6",
+      "threadId": "01a16f51-e9b3-7933-a313-ad21eee998ec",
+      "expectedHandoffPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\re-generation-md-handoff.json",
+      "status": "owner-check-in-progress-at-snapshot",
+      "pathIsExistingDocument": false
+    }
+  ],
+  "existingDocuments": [
+    {
+      "kind": "latest-cleanup-and-picture-check",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\audit\\current-library-cleanup\\最新版整理与检查.md"
+    },
+    {
+      "kind": "batch2-review-report",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\第二批返修与复审说明.md"
+    },
+    {
+      "kind": "current-70-manifest",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\deliveries\\最新成片\\manifest.json"
+    }
+  ],
+  "deduplicationRule": "原评论和旧稿只约束当时版本；706个已删除历史导出不因路径缺失而重新生成；当前版本已修复的旧问题不重复纳入。",
+  "note": "durationSeconds与mdPath为null的非视频缺口不得当成ready生成请求；原组稍后发现并确认的新增缺口由其自己的handoff提供，汇总方应读取原组最终输出。"
+}

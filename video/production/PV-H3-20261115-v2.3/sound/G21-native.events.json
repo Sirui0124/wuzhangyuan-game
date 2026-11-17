@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.8027
+        },
+        {
+          "label": "Speech synthesizer",
+          "p": 0.3828
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0835
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.068
+        },
+        {
+          "label": "Single-lens reflex camera",
+          "p": 0.0276
+        },
+        {
+          "label": "Television",
+          "p": 0.0157
+        },
+        {
+          "label": "Spray",
+          "p": 0.0155
+        },
+        {
+          "label": "Animal",
+          "p": 0.0099
+        },
+        {
+          "label": "Radio",
+          "p": 0.0084
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0081
+        },
+        {
+          "label": "Slap, smack",
+          "p": 0.0074
+        },
+        {
+          "label": "Outside, rural or natural",
+          "p": 0.0064
+        }
+      ],
+      "music": 0.0043
+    }
+  ]
+}

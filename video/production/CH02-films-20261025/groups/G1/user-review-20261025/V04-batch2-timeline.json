@@ -1,0 +1,101 @@
+{
+  "id": "V04",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V04-纯台词与必要动作精剪-R2.mp4",
+  "sha256": "baaf0281ccefcea7800ac979b025023a9669b75a707dc3385db5c899d1d5239e",
+  "duration": 18.17,
+  "sourceTimeline": [
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "sourceRange": [
+        4,
+        9.44
+      ],
+      "slotRange": [
+        0,
+        5.458333333333333
+      ],
+      "node": null,
+      "audio": "same source interval",
+      "audioSha256": null,
+      "audioStart": 0,
+      "audioDelay": 0,
+      "reason": "保留永安/五月饮酒/江风完整原句，删0–4秒导演元说明"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "sourceRange": [
+        9.44,
+        12.48
+      ],
+      "slotRange": [
+        5.458333333333333,
+        8.5
+      ],
+      "node": "CH2-LY02-006",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY02-006.wav",
+      "audioSha256": "787aa1282fca656e447bb44a4532262216cb0c362c8a2ff5d77b98cbc6885556",
+      "audioStart": 0,
+      "audioDelay": 0.3,
+      "reason": "原有玩家原句完整复用，NPC闭口"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "sourceRange": [
+        15.5,
+        19.7
+      ],
+      "slotRange": [
+        8.5,
+        12.708333333333332
+      ],
+      "node": "CH2-LY02-007",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-007-seed-audio1-reference.wav",
+      "audioSha256": "358923e9329c71d79061f690121a930f8b111e2ee715b60b2eb77d44f850b0ff",
+      "audioStart": 0,
+      "audioDelay": 0,
+      "reason": "正确参考模型4秒原句替换乱码，缩短旧8秒段"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "sourceRange": [
+        20.48,
+        23.68
+      ],
+      "slotRange": [
+        12.708333333333332,
+        15.916666666666666
+      ],
+      "node": "CH2-LY02-008",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-008-seed-audio1-reference.wav",
+      "audioSha256": "10bc0258833a2dd9250aed7a8c5a61203ccecb319bc1b88e2b7f237fb28bef66",
+      "audioStart": 0,
+      "audioDelay": 0,
+      "reason": "复用已成功3秒正确模型样本，不重复请求"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V04-饮酒自述与否认赴魏_画面修正V2.mp4",
+      "sourceSha256": "523260797976dd89073e897a1450738ab62cad5f4b464671c7e5f90563447257",
+      "sourceRange": [
+        25.66,
+        27.9
+      ],
+      "slotRange": [
+        15.916666666666666,
+        18.166666666666664
+      ],
+      "node": "CH2-LY02-009",
+      "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY02-009.wav",
+      "audioSha256": "1534da23561d6497292c8c48fc82eaec0826efe0892de63f63383f9ecec0fe16",
+      "audioStart": 0,
+      "audioDelay": 0.3,
+      "reason": "完整既有玩家原句，去不必要尾段"
+    }
+  ],
+  "actualListening": false,
+  "lipSyncReview": "pending user actual viewing/listening; same NPC owns generated NPC lines",
+  "noFrozenPadding": true
+}

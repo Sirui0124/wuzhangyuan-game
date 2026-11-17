@@ -1,0 +1,160 @@
+{
+  "id": "V13-04",
+  "node": "CH2-LY04-003",
+  "role": "仓吏",
+  "text": "这批粮的收发账可以查。其他队的账，先别动。",
+  "targetSeconds": 6,
+  "referenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\V13-04-role-reference.wav",
+  "referenceSha256": "2b793b17bbd2f63f79c33f8463397521974c84d623ec64212d7430955a10588d",
+  "referenceSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V20-08-raw.mp4",
+  "referenceSourceSha256": "dd32106380f49b16d40cd5415de1c9e2b553eb127da9611aa3a3c78d7440169a",
+  "referenceRange": [
+    2,
+    6.6
+  ],
+  "referenceRoleDeclaredInFrozenPlan": "仓吏",
+  "listeningReview": "not-heard; subtitles and ASR cannot replace actual listening",
+  "model": "seed-audio-1.0",
+  "noClone": true,
+  "noPresetSpeaker": true,
+  "status": "succeeded",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "37a18feb-f0c3-43d9-9d9d-a71237e7b93d",
+  "text_prompt": "只采用@音频1中成年男性的音色，不复述参考原句。用克制、自然、不夸张的普通话陈述，仅朗读引号内唯一原话：“这批粮的收发账可以查。其他队的账，先别动。”其他所有文字都是控制说明，不得朗读姓名、角色标签、某某说、旁白、画外、编号或导演说明，不新增词句。总长约6秒，开头留0.25秒后说话，句末安静。没有BGM、背景音乐、配乐、吟唱、环境声或音效，只有这一句干净人声。",
+  "bodySha256": "59fe59dfb6ce6e737750e7fe726d6eb1ad461cbaaf5b4f0ecc73c6ecc2e66cfb",
+  "referenceUploadField": "references[0].audio_data",
+  "referenceUploaded": true,
+  "noStandardTTS": true,
+  "userApproved": false,
+  "httpStatus": 200,
+  "logId": "2026102516224208145FEA8A870094B50D",
+  "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-04-seed-audio1-reference.wav",
+  "sha256": "efd15242c9e958460ebd6b2ea5023a3de7534ca3d145d4d40804f26911223d1b",
+  "duration": 6,
+  "originalDuration": 6,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 2480,
+        "start_time": 240,
+        "text": "这批粮的收发账可以查。",
+        "words": [
+          {
+            "end_time": 520,
+            "start_time": 240,
+            "text": "这"
+          },
+          {
+            "end_time": 720,
+            "start_time": 520,
+            "text": "批"
+          },
+          {
+            "end_time": 960,
+            "start_time": 880,
+            "text": "粮"
+          },
+          {
+            "end_time": 1200,
+            "start_time": 1040,
+            "text": "的"
+          },
+          {
+            "end_time": 1360,
+            "start_time": 1200,
+            "text": "收"
+          },
+          {
+            "end_time": 1600,
+            "start_time": 1360,
+            "text": "发"
+          },
+          {
+            "end_time": 1720,
+            "start_time": 1680,
+            "text": "账"
+          },
+          {
+            "end_time": 2080,
+            "start_time": 1960,
+            "text": "可"
+          },
+          {
+            "end_time": 2160,
+            "start_time": 2080,
+            "text": "以"
+          },
+          {
+            "end_time": 2480,
+            "start_time": 2160,
+            "text": "查"
+          },
+          {
+            "end_time": 2480,
+            "start_time": 2480,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 5960,
+        "start_time": 3360,
+        "text": "其他队的账，先别动。",
+        "words": [
+          {
+            "end_time": 3600,
+            "start_time": 3360,
+            "text": "其"
+          },
+          {
+            "end_time": 3720,
+            "start_time": 3600,
+            "text": "他"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3720,
+            "text": "队"
+          },
+          {
+            "end_time": 4200,
+            "start_time": 4000,
+            "text": "的"
+          },
+          {
+            "end_time": 4360,
+            "start_time": 4280,
+            "text": "账"
+          },
+          {
+            "end_time": 4360,
+            "start_time": 4360,
+            "text": "，"
+          },
+          {
+            "end_time": 5520,
+            "start_time": 5240,
+            "text": "先"
+          },
+          {
+            "end_time": 5680,
+            "start_time": 5520,
+            "text": "别"
+          },
+          {
+            "end_time": 5960,
+            "start_time": 5680,
+            "text": "动"
+          },
+          {
+            "end_time": 5960,
+            "start_time": 5960,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "这批粮的收发账可以查。其他队的账，先别动。"
+  },
+  "referenceAcceptedInRequest": true
+}

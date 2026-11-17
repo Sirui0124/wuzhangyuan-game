@@ -1,0 +1,24 @@
+{
+  "run_id": "schema-validation-only",
+  "role_id": "C001",
+  "step": 1,
+  "observed_at_utc": null,
+  "visible_facts": [
+    "仅用于 Schema 校验的样例，未执行游戏操作。"
+  ],
+  "before_evidence_refs": [],
+  "action": {
+    "kind": "observe",
+    "target": "Schema 校验样例",
+    "input": null,
+    "attempted_at_utc": null
+  },
+  "result": {
+    "outcome": "observed",
+    "visible_result": "仅验证未采集时间可记为 null，不是实际试玩结果。",
+    "observed_at_utc": null
+  },
+  "after_evidence_refs": [],
+  "brief_reason": "验证缺失时间的格式兼容性。",
+  "wait_classification": "none"
+}

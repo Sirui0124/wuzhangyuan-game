@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第二章视频审片台</title>
+<style>
+[hidden]{display:none!important}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;background:#f4f1e9;color:#283028;font:16px/1.6 system-ui,'Microsoft Yahei',sans-serif}main{max-width:1020px;margin:auto;padding:28px 24px 80px}h1{font-size:25px;margin:0}h2{font-size:23px;margin:0}h3{font-size:19px;margin:0}p{margin:8px 0}.muted,small{color:#72796d}.toolbar{position:sticky;top:0;z-index:5;background:#f4f1e9f5;border-bottom:1px solid #d5dacd;padding:12px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap}.toolbar select{flex:1;min-width:200px}select,button,textarea{font:inherit;border:1px solid #bec7b6;border-radius:8px;background:#fffefa;padding:9px 12px}button{cursor:pointer}button:hover{background:#e7eddf}button:disabled{opacity:.5;cursor:default}.scene{margin:40px 0 64px;scroll-margin-top:100px}.scene-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.card{background:#fffefa;border:1px solid #d8ddcf;border-radius:13px;padding:20px;margin:18px 0 28px;box-shadow:0 3px 12px #20302005}.card-head,.actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.card-head{margin-bottom:12px}.badge{font-size:13px;background:#eeeade;border-radius:20px;padding:3px 10px;white-space:nowrap}.badge.pass{background:#dcebd8;color:#285b32}.badge.change{background:#fff0cf;color:#80591e}video{display:block;width:100%;aspect-ratio:16/9;background:#182018;border-radius:8px}.empty{padding:70px 15px;text-align:center;background:#eee}.note-label{display:block;font-size:14px;margin:14px 0 5px}textarea{display:block;width:100%;height:82px;resize:vertical}.actions{margin-top:10px}.approve{background:#35643d;color:white;border-color:#35643d;min-width:92px}.approve:hover{background:#2b5633}.approve.passed{background:#edf4e9;color:#285b32;border-color:#9db593}.save{font-size:13px}.details{border-top:1px solid #e0e4d8;margin-top:16px;padding-top:12px;font-size:14px}summary{cursor:pointer}.line{margin:7px 0}.audit{margin-bottom:14px}.error{color:#a22b24}a{color:#396343}.top-note{margin:6px 0 16px}#progress{font-size:14px}#storage-warning:empty{display:none}@media(max-width:650px){main{padding:18px 12px 50px}.card{padding:13px}.scene-head{align-items:flex-start;flex-direction:column}h2{font-size:20px}.toolbar{gap:8px}.toolbar select{width:100%}}
+</style>
+<main><h1>第二章视频审片台</h1><p class="muted top-note">按场景顺次审阅。本轮同步修正画面、误读和多余时长；“通过”保留为该版本的画面审核记录。</p><div class="toolbar"><select id="scene-nav" aria-label="跳转场景"><option value="">跳转场景</option></select><select id="review-filter" aria-label="审核筛选"><option value="unseen">尚未审过（隐藏已审）</option><option value="recheck">新版待复审</option><option value="reviewed">已审过（含新版）</option><option value="all">全部</option></select><button id="refresh">刷新视频</button><span id="progress">读取中…</span></div><p id="storage-warning" class="error" role="alert"></p><p id="review-counts" class="muted"></p><p id="disk-status" class="muted" role="status"></p><p id="empty-filter" hidden>此筛选下没有视频。</p><div id="scenes"></div></main>
+<script src="/scripts/review-state.js?v=scene-review-2"></script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),R=ChapterReview;
+const NOTE_KEY='ch2-film-notes-20261025',APPROVAL_KEY='ch2-film-approvals-20261025';
+let state=null,audit={},observer=null;
+function load(key){try{const x=JSON.parse(localStorage.getItem(key)||'{}');return x&&typeof x==='object'&&!Array.isArray(x)?x:{};}catch(e){$('storage-warning').textContent='无法读取本机审核记录，请先导出已有意见后再处理浏览器存储。';return {};}}
+const notes=load(NOTE_KEY),approvals=load(APPROVAL_KEY);
+function save(){try{localStorage.setItem(NOTE_KEY,JSON.stringify(notes));localStorage.setItem(APPROVAL_KEY,JSON.stringify(approvals));$('storage-warning').textContent='';return true;}catch(e){$('storage-warning').textContent='本机保存失败，请立即导出本场景审核意见，避免丢失。';return false;}}
+function node(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;}
+function auditText(c){const a=audit[c.id],mtime=c.file?new URL('/'+c.file,location.origin).searchParams.get('v'):null;if(!a||a.mtimeNs!==mtime||!a.pictureUsability)return '制作自查：画面可用性仍在复核。';const names={'usable':'画面可用','usable-with-integration-condition':'画面可用，附接入条件','needs-repair':'画面需返修'};return '制作自查：'+names[a.pictureUsability]+((a.integrationConditions||[]).length?'。'+a.integrationConditions.map(x=>typeof x==='string'?x:JSON.stringify(x)).join('；'):'')+'。';}
+function sceneCount(g){return g.clips.filter(c=>R.approved(c,approvals)).length;}
+function updateScene(g){$('count-'+g.group).textContent=g.clips.length+' 段视频 · 已通过 '+sceneCount(g)+' 段';}
+function downloadScene(g){const text=R.exportScene(g,notes,approvals,undefined,reviewed),url=URL.createObjectURL(new Blob([text],{type:'text/markdown;charset=utf-8'})),a=node('a');a.href=url;a.download='第二章-'+g.title.replace(/[\\/:*?"<>|]/g,'-')+'-全部视频审核意见.md';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function makeCard(c,index,g){
+ const card=node('article','card');card.id='clip-'+c.id;card.dataset.clipId=c.id;
+ const head=node('div','card-head'),title=node('h3','',String(index+1).padStart(2,'0')+' · '+c.name),badge=node('span','badge');head.append(title,badge);card.append(head);
+ if(c.file){const v=node('video');v.controls=true;v.playsInline=true;v.preload='none';v.src='/'+c.file;v.setAttribute('aria-label',c.name);v.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==v)other.pause();}));card.append(v);observer.observe(v);}else card.append(node('div','empty',c.note.includes('修复')?'视频正在修复，完成后刷新查看。':'这一段尚无可播放文件。'));
+ const label=node('label','note-label','修改意见');label.htmlFor='note-'+c.id;const input=node('textarea');input.id=label.htmlFor;input.value=notes[c.id]||'';input.placeholder='例如：00:08 手穿过桌面；结尾停顿太长。';card.append(label,input);
+ const actions=node('div','actions'),saved=node('span','save muted','意见与通过状态自动保存到本机文件。'),pass=node('button','approve');pass.type='button';pass.disabled=!c.file;
+ function update(){const ok=R.approved(c,approvals);badge.textContent=R.reviewClass(c,notes,approvals,reviewed)==='recheck'?'新版待复审':R.status(c,notes,approvals);badge.className='badge'+(ok?' pass':badge.textContent==='待审核'?'':' change');pass.textContent=ok?'✓ 已通过 · 撤销':'通过';pass.className='approve'+(ok?' passed':'');pass.setAttribute('aria-pressed',String(ok));pass.setAttribute('aria-label',(ok?'撤销通过：':'通过：')+c.name);updateScene(g);}
+ input.addEventListener('input',()=>{const had=R.approved(c,approvals);R.editNote(c,notes,approvals,input.value);recordReview(c);diskSave(c,saved);update();});
+ input.addEventListener('change',applyFilter);
+ pass.addEventListener('click',()=>{const next=!R.approved(c,approvals);R.setApproval(c,approvals,next);recordReview(c);diskSave(c,saved);update();applyFilter();});actions.append(saved,pass);card.append(actions);
+ const details=node('details','details');details.append(node('summary','','原文与制作自查'));details.append(node('p','audit muted',auditText(c)));details.append(node('p','muted','片段 '+c.id+' · '+c.entry));for(const l of c.lines){const p=node('p','line'),b=node('strong','',l.speaker+'：');p.append(b,document.createTextNode(l.text));details.append(p);}card.append(details);update();return card;
+}
+function render(){
+ if(observer)observer.disconnect();observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.preload='metadata';e.target.load();observer.unobserve(e.target);}}),{rootMargin:'250px'});
+ const container=$('scenes');container.replaceChildren();const select=$('scene-nav'),old=select.value;select.replaceChildren(new Option('跳转场景（全部视频都在下方）',''));
+ state.groups.forEach((g,i)=>{select.add(new Option((i+1)+'. '+g.title,g.group));const section=node('section','scene');section.id='scene-'+g.group;section.setAttribute('aria-label',g.title);const header=node('div','scene-head'),left=node('div');left.append(node('h2','',g.title));const count=node('p','muted');count.id='count-'+g.group;left.append(count);const exportButton=node('button','','导出本场景全部意见');exportButton.setAttribute('aria-label','导出本场景全部意见：'+g.title);exportButton.onclick=()=>downloadScene(g);header.append(left,exportButton);section.append(header);container.append(section);g.clips.forEach((c,index)=>section.append(makeCard(c,index,g)));updateScene(g);});select.value=old;select.onchange=()=>{const target=$('scene-'+select.value);if(target)target.scrollIntoView({behavior:'smooth',block:'start'});};$('progress').textContent=state.ready+' / '+state.total+' 段可播放';applyFilter();
+}
+async function refresh(){const button=$('refresh');button.disabled=true;try{const response=await fetch('/data.json',{cache:'no-store'});if(!response.ok)throw Error('无法读取视频');state=await response.json();audit={};try{const ar=await fetch('/audit/picture-usability/current.json',{cache:'no-store'});if(ar.ok)audit=Object.fromEntries((await ar.json()).clips.map(x=>[x.id,x]));}catch(e){}render();}catch(e){$('progress').textContent='读取失败，请点击刷新重试。';}finally{button.disabled=false;}}
+
+</script>
+<script src="/scripts/review-sync.js?v=2"></script>
+<script>
+$('review-filter').onchange=applyFilter;
+$('refresh').onclick=async()=>{await saveChain;await refresh();};
+(async()=>{try{await hydrateReviews();await refresh();
+ for(const g of state.groups)for(const c of g.clips){if(notes[c.id]||Object.keys(approvals[c.id]||{}).length){await diskSave(c,$('disk-status'));}}
+ $('disk-status').textContent='现有意见与通过记录已保存到本机文件；后续修改自动保存。';
+}catch(e){$('storage-warning').textContent='文件同步失败：'+e.message;await refresh();}})();
+</script></html>

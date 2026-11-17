@@ -1,0 +1,15 @@
+{
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-redesign-20261115-v2\\v2-原生声音按新剪点对齐.wav",
+  "output": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\PV-redesign-20261115-v2\\开篇PV-v2-92秒-分镜预演-背景声候选.mp4",
+  "model": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\tmp\\pv-tools\\UVR-MDX-NET-Inst_HQ_3.onnx",
+  "model_sha256": "317554b07fe1ea5279a77f2b1520a41ea4b93432560c4ffd08792c30fddf9adc",
+  "metadata_md5_last_10MiB": "55657dd70583b0fedfba5f67df11d711",
+  "primary_stem": "Instrumental",
+  "transform_roundtrip_rmse": 5.82531107795603e-08,
+  "compensate": 1.022,
+  "sample_rate": 44100,
+  "source_pcm_duration": 92.0,
+  "output_picture_seconds": 92,
+  "notice": "音乐人声分离模型用于背景声候选；可能损失呼吸/马嘶/撞击并残留人声，不声称干净环境声。未增加BGM。旧混音、分离候选与图片均待review。",
+  "human_audio_review": "pending"
+}

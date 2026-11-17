@@ -1,0 +1,389 @@
+{
+  "updatedEpoch": 1792901701.536769,
+  "scope": "5 endings, 6 versions; review-only assembly",
+  "complete": true,
+  "films": [
+    {
+      "id": "E1",
+      "title": "一起回头",
+      "description": "两人承担责任，苟安留下做粮兵；我与他推着空车归去，粮荒仍未解决。",
+      "slots": [
+        "V36",
+        "V37",
+        "V42"
+      ],
+      "entryPrerequisite": "UI-E1-FILE已确认；双方停手及全部附件已齐；V36实际核收和裁处完成后进入归途。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V36",
+          "owner": "G5",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V36-53a7893f53-cfr24.mp4",
+          "sha256": "ffbebff16b5b6692684933244486266cb4fcd6a6c04437e41477e7b13c831f94",
+          "duration": 56.0,
+          "start": 0.0,
+          "end": 56.0
+        },
+        {
+          "slot": "V37",
+          "owner": "G5",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-ae658cf754-cfr24.mp4",
+          "sha256": "854931eb3198e7d0786f9d3196fd415484afff754e041284c54c7d58ccfa8dc4",
+          "duration": 30.46,
+          "start": 56.0,
+          "end": 86.46
+        },
+        {
+          "slot": "V42",
+          "owner": "G5",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-694edfe52b-cfr24.mp4",
+          "sha256": "1180ff7d86278d884b8cfc386567972e9cca11f0dc775348ddfd9195fea22405",
+          "duration": 21.83,
+          "start": 86.46,
+          "end": 108.29
+        }
+      ],
+      "sourceAudioNotes": [
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过",
+        "尚未逐字听审；按用户要求保留画面，统一配音阶段处理",
+        "未逐字听审；音频问题独立留后期",
+        "未逐字听审，中央玩家声轨按原句覆盖"
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头.mp4",
+      "sha256": "1c618ba9c993603292c716a106bdb820a4847da0ed2a052a947b6c5de270366d",
+      "duration": 108.3,
+      "decode": "passed",
+      "sourceSignature": "886b6db2d2ad279fca239fe60e1ccdc8d131d99ba3416be93bca6582d947367b",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E1-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 108.28999999999999,
+      "videoCoverage": {
+        "videoSeconds": 108.292,
+        "decodedFrames": 2599,
+        "expectedSeconds": 108.3,
+        "passed": true
+      },
+      "joinFrames": [
+        {
+          "time": 55.75,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E1-join-V36--0.25.jpg"
+        },
+        {
+          "time": 56.25,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E1-join-V36-+0.25.jpg"
+        },
+        {
+          "time": 86.21,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E1-join-V37--0.25.jpg"
+        },
+        {
+          "time": 86.71,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E1-join-V37-+0.25.jpg"
+        }
+      ]
+    },
+    {
+      "id": "E2",
+      "title": "救下眼前的人",
+      "description": "个人补报已经收下，苟安留营候查；其他责任仍待查明。",
+      "slots": [
+        "V38"
+      ],
+      "entryPrerequisite": "Q假且UI-E2-FILE已确认；苟安停手署名已发生；V38承载个人补报核收和留营候查。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V38",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V38-救下眼前的人-R2.mp4",
+          "sha256": "faf1a96218417af8c2b580596ffe30bee4523dadde87ecb6ebe03459d76e0590",
+          "duration": 34.197,
+          "start": 0.0,
+          "end": 34.197
+        }
+      ],
+      "sourceAudioNotes": [
+        "语音错乱/说话人待统一，未逐字听审；不据此重拍",
+        "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音",
+        "未逐字听审，暂不因音频重拍",
+        "采用既有中央原句心声；仍未逐字听审，不声称声音通过"
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人.mp4",
+      "sha256": "aafcb83c59cbb9d1b6f31e8aa5bddb1478be5337f18da0a4214bcc492f902a7a",
+      "duration": 34.2,
+      "decode": "passed",
+      "sourceSignature": "f6212cba55423a02f330b8648f243ce3da067bf4c7cfab7c34553cb68622dffb",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E2-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 34.197,
+      "videoCoverage": {
+        "videoSeconds": 34.125,
+        "decodedFrames": 819,
+        "expectedSeconds": 34.2,
+        "passed": true
+      },
+      "joinFrames": []
+    },
+    {
+      "id": "E3",
+      "title": "真相到了，人没回来",
+      "description": "实际收件、查办与裁处之后，留下空铺、空粮车和未能补上的缺口。",
+      "slots": [
+        "V39",
+        "V40",
+        "V42"
+      ],
+      "entryPrerequisite": "UI-CASE已确认且锁定Q真；先V39实际收件，再V40查办裁处，最后V42。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V39",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+          "sha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+          "duration": 19.616,
+          "start": 0.0,
+          "end": 19.616
+        },
+        {
+          "slot": "V40",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "duration": 55.296,
+          "start": 19.616,
+          "end": 74.912
+        },
+        {
+          "slot": "V42",
+          "owner": "G5",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-694edfe52b-cfr24.mp4",
+          "sha256": "1180ff7d86278d884b8cfc386567972e9cca11f0dc775348ddfd9195fea22405",
+          "duration": 21.83,
+          "start": 74.912,
+          "end": 96.742
+        }
+      ],
+      "sourceAudioNotes": [
+        "原音轨完整保留，未逐字听审",
+        "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音",
+        "NPC原句未逐字听审，暂不因声音返拍",
+        "原临时音轨仍待统一；指定我的原句中央wav已备、3.80秒可完整容纳",
+        "本节点纯演出不朗读说明，现环境音未听审",
+        "未逐字听审",
+        "原临时音轨完整保留，未逐字听审，待统一声音",
+        "三句中央心声已备，暂未混入；原环境音未逐字听审",
+        "未逐字听审，留待统一配音",
+        "原声可能有错词、额外人声或音乐，不能据技术检查声称通过",
+        "未逐字听审；音频问题独立留后期",
+        "未逐字听审，中央玩家声轨按原句覆盖"
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了，人没回来.mp4",
+      "sha256": "d348d1b6d8035f7ec08ff3b1858abadcea9c505928f8bf50a4018408661bb4c2",
+      "duration": 96.75,
+      "decode": "passed",
+      "sourceSignature": "f3199f9b1d5f85fac31e8596c30d976c868293b10318d1a44723197057eb9b7b",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E3-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 96.74199999999999,
+      "videoCoverage": {
+        "videoSeconds": 96.75,
+        "decodedFrames": 2322,
+        "expectedSeconds": 96.75,
+        "passed": true
+      },
+      "joinFrames": [
+        {
+          "time": 19.366,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E3-join-V39--0.25.jpg"
+        },
+        {
+          "time": 19.866,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E3-join-V39-+0.25.jpg"
+        },
+        {
+          "time": 74.662,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E3-join-V40--0.25.jpg"
+        },
+        {
+          "time": 75.162,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E3-join-V40-+0.25.jpg"
+        }
+      ]
+    },
+    {
+      "id": "E4-early",
+      "title": "认下来的罪·早停查",
+      "description": "听到认罪便停下追查，未问明背后商议。",
+      "slots": [
+        "V41E"
+      ],
+      "entryPrerequisite": "普通②B听认罪后UI-EARLY-FILE已明确确认；尚未问出合谋。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V41E",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪.mp4",
+          "sha256": "c539a711f7d723c040cc997da6f2f74e0a5d7d59850186a1b079b1cf4ed787f3",
+          "duration": 32.041333,
+          "start": 0.0,
+          "end": 32.041
+        }
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪·早停查.mp4",
+      "sha256": "0156220eda6e7050cc7896db31a9d2eb1d68510d5649e0249b7988fe5fd368c3",
+      "duration": 32.04,
+      "decode": "passed",
+      "sourceSignature": "6961bbb0ee6fa4cc1e012911f10ad97aa36f4c578a83bf0e8c67161abfbdd95e",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E4-early-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 32.041333,
+      "joinFrames": [],
+      "sourceAudioNotes": [
+        "未逐字听审，暂不因音频重拍"
+      ],
+      "videoCoverage": {
+        "videoSeconds": 32.0,
+        "decodedFrames": 768,
+        "expectedSeconds": 32.04,
+        "passed": true
+      }
+    },
+    {
+      "id": "E4-late",
+      "title": "认下来的罪·晚支撑不足",
+      "description": "已听过李严参与，但几处细节支撑不足；案上仍压着苟安的认罪。",
+      "slots": [
+        "V39",
+        "V41L"
+      ],
+      "entryPrerequisite": "UI-CASE已确认且锁定Q假；先V39实际收件，再V41L支撑不足收束。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V39",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+          "sha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+          "duration": 19.616,
+          "start": 0.0,
+          "end": 19.616
+        },
+        {
+          "slot": "V41L",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R3.mp4",
+          "sha256": "a1e5b1daf53f84f9a7abbfcb6ae169bad74b709670dc3062721ea472c3d76d12",
+          "duration": 39.146,
+          "start": 19.616,
+          "end": 58.762
+        }
+      ],
+      "sourceAudioNotes": [
+        "原音轨完整保留，未逐字听审",
+        "原声未逐字听审，错词/音色/音乐仅标记，最终统一配音",
+        "完整原音轨未裁，未逐字听审",
+        "NPC原句未逐字听审",
+        "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪·晚支撑不足.mp4",
+      "sha256": "67ffbc58bc200fba7a35f5499849f37bbcc41d9ae9a8a5a5b28c95ad2e4ac9a2",
+      "duration": 58.76,
+      "decode": "passed",
+      "sourceSignature": "9b8ea44291710c5e2b90c7357cfcb5f3e4cce551b8beafba35ff01edce0affb3",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E4-late-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 58.762,
+      "videoCoverage": {
+        "videoSeconds": 58.708,
+        "decodedFrames": 1409,
+        "expectedSeconds": 58.76,
+        "passed": true
+      },
+      "joinFrames": [
+        {
+          "time": 19.37,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E4-late-join-V39--0.25.jpg"
+        },
+        {
+          "time": 19.87,
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E4-late-join-V39-+0.25.jpg"
+        }
+      ]
+    },
+    {
+      "id": "E5",
+      "title": "还是走上了险路",
+      "description": "先实际让路放行，再推进时间，交代赴魏与谣言回营的后果。",
+      "slots": [
+        "V43"
+      ],
+      "entryPrerequisite": "UI-RELEASE已确认；V43先实际放行，再叙述后果。",
+      "artifactType": "fixed-route-review-compilation",
+      "executesGameState": false,
+      "userApproved": false,
+      "gameIntegrated": false,
+      "audioReview": "未逐字听审；保留现有采用版本声音",
+      "status": "review-candidate",
+      "sources": [
+        {
+          "slot": "V43",
+          "owner": "G6",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+          "sha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+          "duration": 21.024,
+          "start": 0.0,
+          "end": 21.024
+        }
+      ],
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E5-还是走上了险路.mp4",
+      "sha256": "1e0c7b2fff10fda6cb04561941e7cdec1fe5f1808a9ce0ff4ae2003df7281808",
+      "duration": 21.02,
+      "decode": "passed",
+      "sourceSignature": "1f5e88e70673a0b42e8fc2b05d7caa18f13d699953797202ae82cf54fd18d04f",
+      "overview": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\E5-overview.jpg",
+      "visualReview": "原组检查继承；本合成待连接点复核",
+      "sourceDuration": 21.024,
+      "joinFrames": [],
+      "sourceAudioNotes": [
+        "纯动作原声未听审",
+        "原声未逐字听审，心声或旁白中央wav已备但暂未混入"
+      ],
+      "videoCoverage": {
+        "videoSeconds": 21.0,
+        "decodedFrames": 504,
+        "expectedSeconds": 21.02,
+        "passed": true
+      }
+    }
+  ],
+  "userApproved": false,
+  "gameIntegrated": false
+}

@@ -1,0 +1,95 @@
+{
+  "version": "camp-v3-20261022-spatial-remake",
+  "status": "待review",
+  "tool": "built-in image_gen.imagegen",
+  "referencePolicy": "Each asset uses its own 3D blockout only. No SC03 film frame used.",
+  "assets": [
+    {
+      "id": "report_post",
+      "file": "report_post.png",
+      "original": "C:/Users/zhousirui/.codex/generated_images/01a161c3-94e3-70f0-887c-0fcb14d888a9/exec-195becd4-c374-43c9-b378-36287b24bf17.png",
+      "reference": "../../../spatial/camp-v1/preview-report.png",
+      "role": "spatial geometry and eye-level framing",
+      "camera": {
+        "eye": [
+          -3.5,
+          1.62,
+          35
+        ],
+        "target": [
+          -9.5,
+          1.65,
+          29
+        ]
+      },
+      "prompt": "Use case: historical-scene. Create a new finished 16:9 landscape game environment background, natural live-action historical film still, not a 3D render. Input image 1 is ONLY the highest-priority spatial blockout: keep its eye-level camera, the low open-sided canvas REPORT SHELTER on the LEFT / middle, its worktable under the roof, and the unobstructed dirt road on the RIGHT leading north into the camp. Replace flat proxy materials with believable rough flax canvas, weathered timber, modest dark iron, coarse packed soil. Do not preserve the crude low-poly geometry, blank solid sky, or diagram-like color blocks.\nThis is a humble 6-metre-wide open dispatch shelter in a Three Kingdoms military camp at Wuzhang, not a command pavilion. Its whole front is OPEN between bare timber posts: clearly see the low wooden desk beneath the small sloping linen canopy. One modest local lantern at a post, some tied bamboo document rolls on the low desk, practical rope ties, sparse distant camp poles and ordinary low tents. There is NO central door, NO closed front curtain, NO grand axial entrance, NO monumental tent, NO paired ceremonial braziers. Main command tent stays OUT OF FRAME.\nThe shelter remains to the left and center, and right-side roadway has a clear walkable run away into depth, with restrained flag posts and wooden fence. Wide framing from normal standing eye height, no fisheye, no extreme angle. Bottom third is readable open rough ground for gameplay overlays.\nLighting: cool readable late dusk with soft grey sky and pale distant hills, retain detail in shadows, tiny localized amber from the single practical lantern, restrained dark teal/earth/aged linen colors. Do not turn this into pitch-black night or orange torch fantasy. Subtle fine film grain, real cloth weight and weave, imperfect wood; dry and damp soil patches with only tiny rough highlights, NO mirrored wet floor.\nNO people anywhere, NO human silhouettes, NO text, no signs with writing, no UI, no letters, no labels, no watermarks, no gold ornament, no glowing borders. Deliver one polished natural photorealistic environment plate, exact 16:9 composition.",
+      "review": {
+        "result": "meets requested scene differentiation; pending user review",
+        "observed": [
+          "Open six-metre-scale dispatch canopy left/middle",
+          "Low desk under canopy",
+          "Walkable road on right extending into camp",
+          "No central closed door",
+          "One primary nearby lantern; distant camp lights remain",
+          "No visible people, text, UI or gold ornament",
+          "Coarse earth without mirror puddles"
+        ],
+        "limitations": [
+          "Generated 2D perspective is not a metric projection of the model",
+          "Distant hills, poles and minor props remain generative",
+          "Exact tent size cannot be measured from the raster alone"
+        ]
+      },
+      "sha256": "1771e3b1c2e6dfd2ed501b7037f6b5a56f6efbfbf14d827735c27e754fa5a34c",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "requestedAspectRatio": "16:9",
+      "deliveryNote": "Native 1672x941 output retained without resampling; effectively 16:9 (0.053% ratio difference)."
+    },
+    {
+      "id": "jiangwei_tent_front",
+      "file": "jiangwei_tent_front.png",
+      "original": "C:/Users/zhousirui/.codex/generated_images/01a161c3-94e3-70f0-887c-0fcb14d888a9/exec-35ce8467-81d3-4977-832b-4ff5016e9d86.png",
+      "reference": "../../../spatial/camp-v1/preview-jiangwei.png",
+      "role": "spatial geometry and slightly oblique exterior frontal framing",
+      "camera": {
+        "eye": [
+          12,
+          1.62,
+          24
+        ],
+        "target": [
+          18,
+          1.8,
+          12
+        ]
+      },
+      "prompt": "Use case: historical-scene. Create a new finished 16:9 landscape game environment background, natural live-action historical film still, not a 3D render. Input image 1 is ONLY the highest-priority spatial blockout: preserve the eye-level exterior view of the modest independent CLOSED JIANG WEI TENT in the MIDDLE DISTANCE, a mostly frontal view with a small visible left side. Keep the tent at approximately half the image width, roomy coarse earth foreground, a short practical timber fence on the left, partial ordinary supporting tents near the image edges. Replace the crude blockout with tactile real material; do not inherit flat planes or the solid sky.\nThis is Jiang Wei's own smaller 9m-wide by 10m-deep working tent, not the supreme command tent. Simple low sloping coarse grey-flax canvas roof, humble timber supports and rope lashings, no elevated terrace, no monumental roof or ceremonial portico. At its south-facing front center, one NARROW CLOSED dark grey canvas double flap reaches the ground; the two curtain halves meet shut. This is an EXTERIOR tent-front image: absolutely no view into the tent interior. A LOW modest wooden document table sits OUTSIDE on the RIGHT of its doorway, with two or three tied bamboo rolls, and ONE small hanging lantern close to that table. No paired braziers or symmetrical armies.\nThe main command tent is OUT OF FRAME to the left / northwest. The picture must read as a private working officer's modest closed tent, distinct from an OPEN dispatch canopy. Low fabric eaves, lived-in wrinkled linen, rough wood and muted iron; no gold.\nLighting: readable cool late dusk, soft grey-blue skylight, pale distant layered hills, shadows retain texture. Tiny local amber pool from the single lantern, restrained natural colors, subtle fine film grain, practical live-action materials. Dry and damp coarse packed earth, NO mirror puddles, no polished floor, no magical light. Bottom third has clear open ground for gameplay overlays.\nNO people anywhere, NO silhouettes, NO text or writing, NO signboard, NO UI, NO labels, NO watermark, no grand command pavilion. Deliver one coherent natural photorealistic 16:9 environment plate.",
+      "review": {
+        "result": "meets requested scene differentiation; pending user review",
+        "observed": [
+          "Independent modest closed tent in middle distance",
+          "South front closed double flap; no interior view",
+          "One small lantern and low document table outside at image right",
+          "Short fence at left and open rough earth foreground",
+          "No visible people, text, UI, gold ornament or mirror puddles",
+          "Visually distinct from open report shelter"
+        ],
+        "limitations": [
+          "Camera shifted southwest to avoid a support tent; dialogue C05 remains unchanged",
+          "Generated scene follows spatial relations but is not exact photogrammetric continuity",
+          "Far skyline and microgeometry are not locked across all game/video assets"
+        ]
+      },
+      "sha256": "b14f0aba2a85329e724ead5ea6765b1730e940413b2b97908607f837d407d653",
+      "nativeDimensions": [
+        1672,
+        941
+      ],
+      "requestedAspectRatio": "16:9",
+      "deliveryNote": "Native 1672x941 output retained without resampling; effectively 16:9 (0.053% ratio difference)."
+    }
+  ]
+}

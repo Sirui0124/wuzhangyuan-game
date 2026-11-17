@@ -1,0 +1,80 @@
+{
+  "id": "CH2-V16A",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V16A-f16c45272f-20261025.mp4",
+  "oldSha256": "f16c45272fb337b018d49ddf4def091381c3cadfc887e0a321f4cde324723794",
+  "oldSubtitles": "/video/subtitles/CH2-V16A-f16c45272f-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V16A-620b3343.mp4",
+  "sha256": "02d17c5de3a6620781a0e21c8ba49773ad9e1d7ee06a002ec24235f043199a0a",
+  "bytes": 4460381,
+  "duration": 6.125,
+  "containerDuration": 6.125,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 147,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V16A",
+    "src": "/video/current/PV27-CH2-V16A-620b3343.mp4",
+    "title": "核交接选项",
+    "subtitles": "/video/subtitles/PV27-CH2-V16A-620b3343.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY04-Q1A",
+      "node": "CH2-LY04-Q1A",
+      "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-Q1A.wav",
+      "oldCorrelation": 0.9995144091224908,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY04-Q1A-v1.wav",
+      "newVoiceSha256": "43450ccfd72c632ba3c3e7b7c7ec6c56c9d0244d9e18cf90e89f1ab5b29cba5d",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.5700000000000001,
+        5.890000000000001
+      ],
+      "insertAt": 0.5700000000000001,
+      "voiceSeconds": 5.3,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.0653330087661743,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.81,
+      "end": 4.720000000000001,
+      "text": "先把出仓和签收对一遍，看缺口是在领粮前"
+    },
+    {
+      "start": 4.8100000000000005,
+      "end": 5.760000000000001,
+      "text": "还是在路上"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

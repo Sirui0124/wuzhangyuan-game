@@ -1,0 +1,149 @@
+{
+  "id": "V41E",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+  "sha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+  "oldPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+  "oldSHA": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+  "oldDuration": 26.91,
+  "duration": 16.0,
+  "removedSeconds": 10.91,
+  "videoTrack": {
+    "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+    "containerDuration": 16.0,
+    "videoFrames": 384,
+    "firstPTS": 0.0,
+    "lastPTS": 15.958333333333334,
+    "videoEnd": 16.0,
+    "videoTimeBase": "1/24000",
+    "averageRate": 24.0,
+    "maxFrameGap": 0.04166666666666785,
+    "ptsRegressions": 0,
+    "frameSizes": [
+      [
+        1280,
+        720
+      ]
+    ],
+    "audioEnd": 16.0,
+    "audioDecodedSamples": 768000,
+    "audioSampleRate": 48000,
+    "fullVideoTrack": true
+  },
+  "edl": [
+    {
+      "pictures": [
+        [
+          0,
+          124
+        ]
+      ],
+      "node": "CH2-LY07-BAD1",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.15,
+      "reason": "收件查办与退军旁白，NPC仅收卷",
+      "timelineRange": [
+        0,
+        5.166666666666667
+      ]
+    },
+    {
+      "pictures": [
+        [
+          359,
+          395
+        ]
+      ],
+      "node": "CH2-LY07-BAD2",
+      "audio": "original-whitelist-window",
+      "audioStart": 14.98,
+      "delay": 0,
+      "reason": "只留大军退了吗，删口型/反应控制说明",
+      "timelineRange": [
+        5.166666666666667,
+        6.666666666666667
+      ]
+    },
+    {
+      "pictures": [
+        [
+          402,
+          540
+        ],
+        [
+          558,
+          644
+        ]
+      ],
+      "node": "CH2-LY07-BAD3",
+      "audio": "central-authorized-player",
+      "audioStart": null,
+      "delay": 0.15,
+      "reason": "完整早停查心声，苟安闭口反应；未获后期合谋",
+      "timelineRange": [
+        6.666666666666667,
+        16.0
+      ]
+    }
+  ],
+  "audioTracks": [
+    {
+      "node": "CH2-LY07-BAD1",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY07-BAD1.wav",
+      "sourceSha256": "d40dce9d6c1aeeb44f22378f442a3706a53a621905c647f7d5a0d46c73f1c274",
+      "sourceRange": [
+        0,
+        4.775875
+      ],
+      "timelineRange": [
+        0.15,
+        4.9258750000000004
+      ],
+      "samples": 229242
+    },
+    {
+      "node": "CH2-LY07-BAD2",
+      "mode": "existing-NPC-original-cut",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+      "sourceSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "sourceRange": [
+        14.98,
+        16.48
+      ],
+      "timelineRange": [
+        5.166666666666667,
+        6.666666666666667
+      ],
+      "samples": 72000
+    },
+    {
+      "node": "CH2-LY07-BAD3",
+      "mode": "authorized-existing-player-WAV",
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY07-BAD3.wav",
+      "sourceSha256": "a78cdcd3d77d6f23550c84ccbc00365ad919b2ab3de1b74814bdb81100fa8bd3",
+      "sourceRange": [
+        0,
+        8.990375
+      ],
+      "timelineRange": [
+        6.816666666666667,
+        15.807041666666667
+      ],
+      "samples": 431538
+    }
+  ],
+  "mixPeakBefore": 0.5976641774177551,
+  "mixScale": 1,
+  "newVideoRequests": 0,
+  "newAudioRequests": 0,
+  "originalBaseAudioRemovedExceptWhitelistWindows": true,
+  "whitelistCoverage": [
+    "CH2-LY07-BAD1",
+    "CH2-LY07-BAD2",
+    "CH2-LY07-BAD3"
+  ],
+  "listening": "pending; ASR and engineering checks cannot establish hearing or absence of BGM",
+  "reviewState": "candidate-do-not-adopt-yet",
+  "userApproved": false
+}

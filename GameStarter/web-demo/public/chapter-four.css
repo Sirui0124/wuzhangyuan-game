@@ -1,0 +1,88 @@
+/* Chapter-four layout only. Dialogue, speaker, choices and navigation retain shared type sizes. */
+.yiling-scene { --yiling-content-top:112px; }
+.yiling-scene.yiling-has-reception { --yiling-content-top:160px; }
+.yiling-scene .scene-image { animation:none; }
+:root[data-ui-theme=xuan] #game-root .yiling-scene .scene-image { background-size:cover; }
+.yiling-content { position:absolute;z-index:2;inset:var(--yiling-content-top) 15vw max(40px,env(safe-area-inset-bottom));display:flex;flex-direction:column;justify-content:flex-end;gap:12px;min-height:0; }
+:root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-content .dialogue-box { position:relative;left:auto;right:auto;bottom:auto;width:100%;max-height:100%;margin:0;flex:0 1 auto;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin; }
+:root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-content .dialogue-reading { max-height:none;overflow:visible; }
+:root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-content .dialogue-box::before { inset:0; }
+.yiling-dialogue .dialogue-text,.yiling-dialogue button span { overflow-wrap:anywhere;white-space:pre-wrap; }
+.yiling-notice { flex:none;margin:0;padding:8px 14px;color:var(--dialogue-ink,#e8e1d3);background:#171b18e6;font:16px/1.6 var(--serif);overflow-wrap:anywhere; }
+.yiling-reception-status { position:absolute;z-index:3;top:84px;left:4vw;right:4vw;display:flex;align-items:center;gap:24px;padding:8px 14px;color:#e8e1d3;background:#18201ce6;border-block:1px solid #baaa843d;font:16px/1.6 var(--serif); }
+.yiling-reception-label { flex:none;color:#c6bca8; }
+.yiling-counts { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 20px;margin:20px 0; }
+.yiling-counts>div { min-width:0; }
+.yiling-counts dt { margin:0 0 4px;font:16px/1.6 var(--serif); }
+.yiling-counts dd { display:flex;align-items:baseline;gap:6px;margin:0;font:16px/1.6 var(--serif); }
+.yiling-counts strong { font-size:20px;font-weight:400;font-variant-numeric:tabular-nums; }
+.yiling-counts dd span { opacity:.75; }
+.yiling-counts-compact { display:flex;flex:1;justify-content:flex-start;flex-wrap:wrap;gap:8px 28px;margin:0; }
+.yiling-counts-compact>div { display:flex;align-items:baseline;gap:10px; }
+.yiling-counts-compact dt { margin:0; }
+.yiling-situation,.yiling-clues { color:inherit;overflow-wrap:anywhere; }
+.yiling-situation>p,.yiling-clue>p,.yiling-clue blockquote p { line-height:1.8;white-space:pre-wrap; }
+.yiling-clues { display:grid;gap:16px; }
+.yiling-clue { padding:0 0 16px;border-bottom:1px solid #8b7b5b40; }
+.yiling-clue:last-child { padding-bottom:0;border-bottom:0; }
+.yiling-clue h2 { margin:0 0 10px;font:22px/1.5 var(--serif); }
+.yiling-clue p { margin:0 0 12px; }
+.yiling-clue details { font:16px/1.6 var(--serif); }
+.yiling-clue summary { cursor:pointer; }
+.yiling-clue blockquote { margin:12px 0 0;padding-left:14px;border-left:2px solid #8b7b5b55; }
+.yiling-clue blockquote>span { display:block;margin-bottom:4px; }
+.yiling-clue blockquote p { margin:0; }
+.yiling-count-note { opacity:.8; }
+.yiling-warning { padding-left:12px;border-left:2px solid #af825e85; }
+.yiling-ending { display:block; }
+:root[data-ui-theme=xuan] #game-root .game-scene.yiling-ending .scene-image { filter:brightness(.28) saturate(.55); }
+.yiling-ending-scroll { position:absolute;z-index:2;inset:104px max(6vw,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(6vw,env(safe-area-inset-left));overflow:auto;overscroll-behavior:contain;scrollbar-width:thin; }
+.yiling-ending .ending-copy { width:min(820px,100%);max-width:none;margin:0 auto;padding:12px 20px 24px; }
+.yiling-ending .ending-copy>p { max-width:none;text-wrap:pretty; }
+.yiling-ending .ending-copy>.yiling-counts { text-align:left; }
+.yiling-ending .ending-copy>.yiling-count-note,.yiling-ending .ending-copy>.yiling-warning { font-size:16px;line-height:1.8;letter-spacing:0; }
+.yiling-ending .ending-copy>.yiling-ending-actions { display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px; }
+:root[data-ui-theme=xuan] #game-root .yiling-ending .yiling-ending-actions button { min-height:44px;padding:8px 16px;white-space:normal;font:16px/1.6 var(--serif);letter-spacing:0; }
+.yiling-ending .yiling-notice { text-align:left; }
+.yiling-menu { display:grid;grid-template-columns:minmax(0,1fr);gap:12px;width:min(360px,100%);margin:0 auto;padding:12px 0; }
+.yiling-menu>button { min-height:44px;white-space:normal; }
+.yiling-load-error { display:flex;flex-wrap:wrap;align-content:center;align-items:center;justify-content:center;gap:18px 28px;width:100%;height:var(--game-viewport-height,100dvh);padding:max(24px,env(safe-area-inset-top)) max(24px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(24px,env(safe-area-inset-left));overflow:auto;color:#e8e1d3;background:#171b18;text-align:center;font:20px/1.8 var(--serif); }
+.yiling-load-error h1 { flex-basis:100%;margin:0;font:22px/1.5 var(--serif); }
+.yiling-load-error p { flex-basis:100%;margin:0;overflow-wrap:anywhere; }
+.yiling-load-error button,.yiling-load-error a { min-height:44px;padding:8px 14px;border-bottom:1px solid #b7a88a80;font:16px/1.6 var(--serif); }
+
+@media(max-width:850px) {
+    .yiling-content { left:6vw;right:6vw; }
+    .yiling-reception-status { gap:14px; }
+    .yiling-counts-compact { gap:8px 18px; }
+    .yiling-counts-compact>div { gap:6px; }
+}
+
+@media(max-height:540px) and (orientation:landscape) {
+    .yiling-scene { --yiling-content-top:66px; }
+    .yiling-scene.yiling-has-reception { --yiling-content-top:116px; }
+    :root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-hud { top:max(8px,env(safe-area-inset-top));left:var(--game-safe-left);right:var(--game-safe-right);gap:12px;align-items:center; }
+    :root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-hud nav { flex-wrap:nowrap;gap:14px;max-width:none; }
+    .yiling-content { left:var(--game-safe-left);right:var(--game-safe-right);bottom:max(28px,env(safe-area-inset-bottom)); }
+    :root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-content .dialogue-box { padding:12px 18px;max-height:100%; }
+    .yiling-reception-status { top:54px;left:var(--game-safe-left);right:var(--game-safe-right);padding:6px 12px;gap:16px; }
+    .yiling-counts-compact { flex-wrap:nowrap;justify-content:space-between;gap:10px; }
+    .yiling-counts-compact>div { gap:5px; }
+    .yiling-counts-compact dd { gap:3px; }
+    .yiling-ending-scroll { top:62px;left:var(--game-safe-left);right:var(--game-safe-right);bottom:max(12px,env(safe-area-inset-bottom)); }
+    .yiling-ending .ending-copy { padding:8px 12px 18px; }
+}
+
+@media(max-width:600px) and (orientation:portrait) {
+    .yiling-scene { --yiling-content-top:128px; }
+    .yiling-scene.yiling-has-reception { --yiling-content-top:226px; }
+    :root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-hud { flex-direction:column;align-items:flex-start;gap:8px; }
+    :root[data-ui-theme=xuan] #game-root .yiling-scene .yiling-hud nav { flex-wrap:wrap;justify-content:flex-start;max-width:none;gap:4px 16px; }
+    .yiling-reception-status { top:116px;display:block;padding:8px 12px; }
+    .yiling-reception-label { display:block;margin-bottom:4px; }
+    .yiling-counts-compact { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 14px; }
+    .yiling-counts-compact>div { justify-content:space-between; }
+    .yiling-counts:not(.yiling-counts-compact) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .yiling-ending-scroll { top:126px; }
+    .yiling-ending .ending-copy { padding-inline:6px; }
+}

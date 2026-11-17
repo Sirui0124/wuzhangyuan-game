@@ -1,0 +1,456 @@
+{
+  "version": 3,
+  "world": {
+    "version": 1,
+    "turn": 8,
+    "revision": 13,
+    "seed": 2945746109,
+    "initialSeed": 731115,
+    "camp": 2500,
+    "stock": 0,
+    "eaten": 5000,
+    "relief": 0,
+    "losses": 0,
+    "fronts": {
+      "fu": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "complete",
+        "policy": {
+          "troops": 900,
+          "mode": "borrow",
+          "guard": 0,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          500,
+          500
+        ],
+        "out": [
+          false,
+          false
+        ],
+        "supply": false,
+        "loss": 0,
+        "report": "900名接应兵已归营，下回合可调用。",
+        "factor": 1,
+        "riskBonus": 0
+      },
+      "feng": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "complete",
+        "policy": {
+          "troops": 800,
+          "mode": "clear",
+          "guard": 300,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          500,
+          1000
+        ],
+        "out": [
+          false,
+          false
+        ],
+        "supply": false,
+        "loss": 0,
+        "report": "800名接应兵已归营，下回合可调用。",
+        "factor": 1,
+        "riskBonus": 0
+      },
+      "sha": {
+        "men": 0,
+        "food": 0,
+        "status": "done",
+        "result": "complete",
+        "policy": {
+          "troops": 800,
+          "mode": "east",
+          "guard": 500,
+          "native": true,
+          "package": false,
+          "finish": "all",
+          "wait": "now"
+        },
+        "work": [
+          500,
+          1000,
+          0
+        ],
+        "out": [
+          true,
+          true
+        ],
+        "supply": false,
+        "loss": 0,
+        "report": "800名接应兵已归营，下回合可调用。",
+        "factor": 1,
+        "riskBonus": 0
+      }
+    },
+    "queued": {},
+    "returns": [],
+    "saved": {
+      "沙摩柯": 2,
+      "傅肜": 3,
+      "张南": 5,
+      "冯习": 6
+    },
+    "history": [
+      {
+        "turn": 1,
+        "camp": 0,
+        "stock": 100,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "傅肜已退到隘口，接替队仍守后阵，等隘口整队。 本轮用粮450斤，队中余950斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "900人换防，完成500/500工作量"
+            ]
+          },
+          {
+            "route": "feng",
+            "text": "侧路已清，原军吏还在迁旗；前部暂等新旗。 本轮用粮400斤，队中余1100斤。 新请示：旧营新增散兵，接应分身乏术。请查看该路军情。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "0名接应兵与原军吏迁旗，完成250/500",
+              "800人清侧路，完成500/500"
+            ]
+          },
+          {
+            "route": "sha",
+            "text": "东沟已经接上，下一回合可过林口；出口仍需守住。 本轮用粮400斤，队中余1600斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "500名接应兵与本部熟路军士搜东沟，完成500/500"
+            ]
+          }
+        ],
+        "saved": []
+      },
+      {
+        "turn": 2,
+        "camp": 0,
+        "stock": 100,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "隘口已经准备好，后队按旗号交替撤。 本轮用粮450斤，队中余500斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "傅肜原部在隘口整队，本轮结束可回身掩护"
+            ]
+          },
+          {
+            "route": "feng",
+            "text": "现有队伍本轮先处理新增任务，接应进度暂缓；重整已完成，下轮自动恢复原接应。部队奉令稳住现场，暂不推进接应。 本轮用粮400斤，队中余700斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "800人坚守，等待下一道军令"
+            ]
+          },
+          {
+            "route": "sha",
+            "text": "沙摩柯与首批已脱险，西沟部众仍需接应。 本轮用粮400斤，队中余1200斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "东沟部众通过林口",
+              "500名接应兵与本部熟路军士搜西沟，完成750/1000"
+            ]
+          }
+        ],
+        "saved": [
+          "沙摩柯"
+        ]
+      },
+      {
+        "turn": 3,
+        "camp": 0,
+        "stock": 100,
+        "lines": [
+          {
+            "route": "fu",
+            "text": "傅肜与队尾已过隘口，最后掩护队也撤下。 接应队下回合归营。 本轮用粮450斤，余粮随队归营。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "傅肜原部掩护，900人接队尾，完成500/500"
+            ]
+          },
+          {
+            "route": "feng",
+            "text": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮400斤，队中余300斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "800名接应兵与原军吏迁旗，完成250/500"
+            ]
+          },
+          {
+            "route": "sha",
+            "text": "沙摩柯与首批已脱险，西沟部众仍需接应。 本轮用粮400斤，队中余800斤。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "500名接应兵与本部熟路军士搜西沟，完成250/1000"
+            ]
+          }
+        ],
+        "saved": [
+          "傅肜"
+        ]
+      },
+      {
+        "turn": 4,
+        "camp": 900,
+        "stock": 150,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "新旗已立，侧路已清，下一步需留人分流、护送队伍通过。 本轮用粮300斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。",
+            "risk": 25,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，500人护送，完成250/1000"
+            ]
+          },
+          {
+            "route": "sha",
+            "text": "两沟已知待接部众均通过林口，最后守口队可以撤回。 接应队下回合归营。 本轮用粮400斤，余粮随队归营。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "西沟部众通过林口"
+            ]
+          },
+          {
+            "route": "fu",
+            "text": "900名接应兵已归营，下回合可调用。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": []
+      },
+      {
+        "turn": 5,
+        "camp": 1700,
+        "stock": 400,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "张南与前队已脱险，冯习仍在收后队。 本轮用粮150斤，队中余0斤。口粮不足，接应进展减半、受挫概率增加25个百分点。",
+            "risk": 25,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，500人护送，完成250/1000"
+            ]
+          },
+          {
+            "route": "sha",
+            "text": "800名接应兵已归营，下回合可调用。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": [
+          "张南"
+        ]
+      },
+      {
+        "turn": 6,
+        "camp": 1700,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "冯习与后续部众已通过，岔口最后留守的人准备收队。 接应队下回合归营。 本轮用粮400斤，余粮随队归营。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": [
+              "300人引导岔口，500人护送，完成500/1000"
+            ]
+          }
+        ],
+        "saved": [
+          "冯习"
+        ]
+      },
+      {
+        "turn": 7,
+        "camp": 2500,
+        "stock": 0,
+        "lines": [
+          {
+            "route": "feng",
+            "text": "800名接应兵已归营，下回合可调用。",
+            "risk": 0,
+            "loss": 0,
+            "jobs": []
+          }
+        ],
+        "saved": []
+      }
+    ],
+    "ended": true,
+    "commands": 6
+  },
+  "revision": 13,
+  "missions": {
+    "fu": {
+      "action": "rescue",
+      "goal": "all"
+    },
+    "feng": {
+      "action": "rescue",
+      "goal": "all"
+    },
+    "sha": {
+      "action": "rescue",
+      "goal": "all"
+    }
+  },
+  "queued": {},
+  "alerts": [
+    {
+      "id": "task-conflict",
+      "route": "feng",
+      "title": "旧营新增散兵，接应分身乏术",
+      "text": "旧营又汇来一批饥饿散兵。军吏要兼顾收拢，原来的后队会走慢。可再派400人接手，或发400斤救济粮让散兵自行跟队；也可让现队先重整1回合，下轮自动恢复接应。照旧执行：本冲突使接应效率降至50%。少量增援或救济只能部分缓解。",
+      "turn": 1,
+      "resolved": true
+    }
+  ],
+  "seen": [
+    "task-conflict"
+  ],
+  "orders": [
+    {
+      "turn": 1,
+      "text": "先派900名预备兵、带500斤粮去东路后阵接傅肜，护着他和部众撤回接应营。",
+      "commands": [
+        {
+          "route": "fu",
+          "action": "rescue",
+          "count": 900,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 500,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "text": "派800名预备兵带700斤粮去南岸旧营，接冯习、张南及其部众回来。",
+      "commands": [
+        {
+          "route": "feng",
+          "action": "rescue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 700,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "text": "把余下800名预备兵带1200斤粮派往南面山林接沙摩柯，沿两沟收拢部众再一同撤回。",
+      "commands": [
+        {
+          "route": "sha",
+          "action": "rescue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 1200,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "text": "冯习、张南这一路先让现队原地重整一个时段，收拢饥饿散兵，随后按原接应令继续撤离；其余两路照旧。",
+      "commands": [
+        {
+          "route": "feng",
+          "action": "reorganize",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 0,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    },
+    {
+      "turn": 5,
+      "text": "给冯习、张南现有接应队补送营里余下的150斤粮，不另派兵，继续护送部众过侧路。",
+      "commands": [
+        {
+          "route": "feng",
+          "action": "continue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 150,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    },
+    {
+      "turn": 6,
+      "text": "将沙摩柯队归营带回的400斤粮即刻送给冯习、张南现有800名接应兵，不加派人；继续收齐冯习后队撤回。",
+      "commands": [
+        {
+          "route": "feng",
+          "action": "continue",
+          "count": 800,
+          "countMode": "set",
+          "goal": "all",
+          "grain": 400,
+          "relief": 0,
+          "waitFor": "now"
+        }
+      ]
+    }
+  ],
+  "conflict": {
+    "route": "feng",
+    "kind": "crowd",
+    "baseMen": 800,
+    "helpers": 0,
+    "grain": 0,
+    "needGrain": 400,
+    "resolved": true
+  }
+}

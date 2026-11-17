@@ -1,0 +1,75 @@
+{
+  "id": "V32A-07",
+  "sourceId": "V32A-07-R2 + C13 follow-brush local reconstruction",
+  "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\sources\\V32A-07-C13-follow-clause.mp4",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-07-final-711818516b.mp4",
+  "postVoice": [],
+  "textLayers": [
+    {
+      "text": "若仍不听便赴魏",
+      "start": 0,
+      "end": 2.5,
+      "fullFrame": true
+    },
+    {
+      "text": "若仍不听便赴魏\n\n苟安",
+      "start": 7.4,
+      "end": 9.62,
+      "fullFrame": true,
+      "strike": true,
+      "strikeLine": 0
+    }
+  ],
+  "trim": null,
+  "spatialCrop": null,
+  "reuse": {
+    "newPaidRequest": false,
+    "paidRepairTask": "task_3EvIHe3Ddwdhin1uxLFICucERTF1fWb4",
+    "sourceRange": [
+      3.8,
+      9.42
+    ],
+    "liveActionSeconds": 5.58,
+    "temporalLoop": false,
+    "rotationDegrees": 18,
+    "sourceCrop": [
+      400,
+      325,
+      448,
+      252
+    ],
+    "signatureCrop": [
+      400,
+      370,
+      448,
+      252
+    ],
+    "panTime": [
+      5.25,
+      5.75
+    ],
+    "exactGlyphs": "postproduction composite; source text shifted9px to keep entire clause inside crop",
+    "unknownOriginalUntouched": true
+  },
+  "visualReview": "candidate-pass-with-limits",
+  "visualIssues": [
+    "上方原生大伪字已通过跟随笔尖裁幅排除，不再与撤回句并列；实际横划→提笔→下方署名→笔离纸/写字手退出顺序保留",
+    "撤回句是配准于真实墨线的后期字层；先有全句后横划，未把文字卡当作动作替代",
+    "局部448×252裁幅放大并旋转18度校正，有柔化；原生署名字形不能确认准确写出苟安，只作署名动作，准确姓名由前后核阅层说明"
+  ],
+  "audioIssues": [
+    "未逐字听审"
+  ],
+  "metadata": {
+    "size": [
+      1280,
+      720
+    ],
+    "duration": 9.58,
+    "audio": true,
+    "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\edited\\V32A-07-final-711818516b.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:09.58, start: 0.000000, bitrate: 2183 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1280x720 [SAR 1:1 DAR 16:9], 2062 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 113 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+  },
+  "decode": "passed",
+  "audioListening": "未逐字听审",
+  "userReview": "待review"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "V28C-02",
+  "slot": "V28C",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V28C-02.mp4",
+  "sha256": "d954cee2518ec431e056cba360f90a250bc6a2462343261f84409d0adc4d1b90",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V28C-02.mp4",
+  "oldSha256": "1a328ff5700cd5d536713945e530c9b8e840bf31969a56d92aa90c88118c48ec",
+  "oldDuration": 8.0,
+  "sourceFrames": [
+    6,
+    192
+  ],
+  "sourceRange": [
+    0.25,
+    8.0
+  ],
+  "newDuration": 7.75,
+  "technical": {
+    "duration": 7.75,
+    "videoDuration": 7.75,
+    "frames": 186,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "d954cee2518ec431e056cba360f90a250bc6a2462343261f84409d0adc4d1b90",
+    "bytes": 3158696
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-LY09-RC",
+      "speaker": "苟安",
+      "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY09-RC",
+      "roleControlOnly": "苟安",
+      "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

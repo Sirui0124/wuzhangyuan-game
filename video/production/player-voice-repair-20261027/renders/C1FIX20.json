@@ -1,0 +1,123 @@
+{
+  "id": "C1FIX20",
+  "group": "chapterDialogue",
+  "oldSrc": "/video/current/C1FIX20-QA-20261025.mp4",
+  "oldSha256": "e842986623f68fbb703764465d7abaeec353be7ab926ee15b84fed9f12fc3c05",
+  "oldSubtitles": "/video/subtitles/C1FIX20-QA-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-C1FIX20-a7b7b3a5.mp4",
+  "sha256": "52e96c3f6c42a5954dd2592aeb479dd98c3bea528ccf25121639686d249ce12a",
+  "bytes": 3276254,
+  "duration": 12.0,
+  "containerDuration": 12.0,
+  "width": 1344,
+  "height": 756,
+  "fps": "24/1",
+  "frames": 288,
+  "videoCodec": "h264",
+  "current": {
+    "id": "C1FIX20",
+    "src": "/video/current/PV27-C1FIX20-a7b7b3a5.mp4",
+    "title": "天亮，没有人来收矛",
+    "rows": [
+      "B-03",
+      "B-04"
+    ],
+    "afterPlayback": "advance",
+    "subtitles": "/video/subtitles/PV27-C1FIX20-a7b7b3a5.vtt"
+  },
+  "replacements": [
+    {
+      "id": "C1-B-03",
+      "node": "B-03",
+      "text": "帐内又传来咳嗽。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-03.wav",
+      "oldCorrelation": 0.9362115242826066,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-03-v1.wav",
+      "newVoiceSha256": "4dd53e17d61212a26aff98475799c3676d39d76a78b575f8d370cc20110b3356",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.6155,
+        2.8754999999999997
+      ],
+      "insertAt": 0.6155,
+      "voiceSeconds": 2.08,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.2374897003173828,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "C1-B-04",
+      "node": "B-04",
+      "text": "天亮了。你握着长矛的手慢慢松开。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\voice\\B-04.wav",
+      "oldCorrelation": 0.7390403381526589,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\C1-B-04-v1.wav",
+      "newVoiceSha256": "db8b0c266a113379610a202357ce2d51c9b3fa06a2ae69fb415ed28660fe9245",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        7.908,
+        11.908
+      ],
+      "insertAt": 7.908,
+      "voiceSeconds": 4.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1261812448501587,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.9355,
+      "end": 2.2855,
+      "text": "帐内又传来咳嗽"
+    },
+    {
+      "start": 7.988,
+      "end": 11.898,
+      "text": "天亮了。你握着长矛的手慢慢松开"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

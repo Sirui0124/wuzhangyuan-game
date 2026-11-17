@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "scope": "第二章结局合辑整合；不重复制作G5/G6负责的源片",
+  "status": "ready",
+  "purpose": "regeneration-gap-audit-only",
+  "maxRequestDurationSeconds": 30,
+  "videoApiGenerationEnabled": false,
+  "automaticVideoResubmissionEnabled": false,
+  "newGenerationRequestCount": 0,
+  "items": [],
+  "itemSchema": {
+    "sceneId": "string",
+    "title": "string",
+    "durationSeconds": "integer 1..30",
+    "mdPath": "absolute path",
+    "reason": "string",
+    "status": "ready|blocked",
+    "blockingReason": "string|null"
+  },
+  "finding": "当前无确认需重生成的条目；已修复旧问题不重复纳入。待实际听审/用户review不自动转成重拍。",
+  "blockingReason": null,
+  "summaryMdPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\重生成需求核查说明.md",
+  "checkedDeliveries": [
+    {
+      "sceneId": "E1",
+      "title": "一起回头",
+      "currentDurationSeconds": 54.042,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E1-一起回头-54秒-V3.mp4",
+      "currentSha256": "7bf506462c8d90e59eb1c9e3d7382e91b873c111f1c83773a5709446111dfe6e",
+      "finding": "现54.042秒；快乐招呼/推车保留，说明浮层及已确认导演误读已处理。军吏身份提问属于角色说明问题，尚未形成重拍要求。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "E2",
+      "title": "救下眼前的人",
+      "currentDurationSeconds": 20.166667,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E2-救下眼前的人-纯台词短版-V4.mp4",
+      "currentSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "finding": "已采用G6 V38纯台词R1；旧纸面制作文字/元说明问题不再按旧版本重复立项。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "E3",
+      "title": "真相到了人没回来",
+      "currentDurationSeconds": 33.5,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E3-真相到了人没回来-纯台词短版-V4.mp4",
+      "currentSha256": "4b9395b41e0a920c893b020e635bd5660e492a8cd9b8711430b822bec75eda50",
+      "finding": "已采用V39短版+V40短版R2；旧元说明、冗余时长及入座闪镜已由新版处理，片尾为空铺。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "E4-early",
+      "title": "认下来的罪-早停查",
+      "currentDurationSeconds": 16.0,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-early-认下来的罪-早停查-纯台词短版-V4.mp4",
+      "currentSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "finding": "已采用V41E纯台词短版16秒；保留早停查原句，旧误读音画已处理。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "E4-late",
+      "title": "认下来的罪-晚支撑不足",
+      "currentDurationSeconds": 36.416667,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E4-late-认下来的罪-晚支撑不足-纯台词短版-V4.mp4",
+      "currentSha256": "3ff60d65a25de1787a4364086c1ec1f586a19478d911a8f37a357333b9136090",
+      "finding": "已采用V39短版+V41L短版R2；边界不稳台词已在制作组补齐，结局侧不重复生成。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "E5",
+      "title": "还是走上了险路",
+      "currentDurationSeconds": 12.333333,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\E5-还是走上了险路-纯台词短版-V4.mp4",
+      "currentSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "finding": "已采用V43短版12.333333秒；保留实际放行及后来赴魏后果，旧污染人声与冗余音画已处理。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    },
+    {
+      "sceneId": "EPILOGUE",
+      "title": "魏地广人众",
+      "currentDurationSeconds": 15,
+      "currentVideoPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\films\\EPILOGUE-魏地广人众-V2.mp4",
+      "currentSha256": "ce067491fc135c66ee0bb6041982ec77660b5da3fc5af9ba0d36a0f950eb50b6",
+      "finding": "独立15秒干净翻卷版；三句原心声保留，可复用，不重新并回各分支。",
+      "confirmedRegenerationNeeded": false,
+      "userApproved": false,
+      "audioListening": false
+    }
+  ],
+  "existingDocuments": [
+    {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\revision-v2\\prompts\\E1-CLERK-NOCARD-V2.md",
+      "purpose": "历史已完成请求，非本轮重生成稿",
+      "doNotResubmit": true
+    },
+    {
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\revision-v2\\prompts\\E1-GOUAN-HAPPY-V2.md",
+      "purpose": "历史已完成请求，非本轮重生成稿",
+      "doNotResubmit": true
+    }
+  ],
+  "sourceOwners": [
+    "G5：裁处、快乐结局相关源片及独立尾声",
+    "G6：其余分支源片"
+  ],
+  "pendingReview": [
+    "实际逐字听审、音色、口型和BGM检查",
+    "用户审阅；不继承旧版本通过状态"
+  ],
+  "preservation": {
+    "currentMediaUnchanged": true,
+    "existingTaskIdsAndUnknownStatesUnchanged": true,
+    "userCommentsUnchanged": true,
+    "userApproved": false,
+    "gameIntegrated": false
+  },
+  "evidencePaths": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\G6-batch2-integration\\audit.json",
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\ENDINGS-20261025\\chapter-two\\review\\batch2-audio\\G5-handoff-verification.json"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "selectedModel": "Seed-Audio1.0",
+  "apiModel": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "status": "correct-model-reference-candidates-produced-pending-listening",
+  "documentation": "https://docs.volcengine.com/docs/DoubaoVoice/audio-generation-http?lang=zh",
+  "requestAuthentication": "existing official X-Api-Key; no credentials saved in contract",
+  "speaker": null,
+  "references": [
+    {
+      "role": "苟安音色与语气参考",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\gouan-reference-user-approved-V10-14p4-17p6.wav",
+      "sha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "duration": 3.2,
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V10-第一封信后的交谈_画面修正V2.mp4",
+      "sourceSha256": "9084d3b2420652f048d300721a2cfc9aa8cf7d81bd03722723bdeb43b932a292",
+      "sourceRange": [
+        14.4,
+        17.6
+      ],
+      "userApprovedSourceAudioWindow": [
+        12,
+        28
+      ],
+      "transcript": "我不想一直背着“饮酒误军”这几个字。",
+      "uploaded": true,
+      "uploadMechanism": "references[0].audio_data Base64 in actual successful POST",
+      "acceptedInRequest": true,
+      "requestId": "a05569b9-e353-44de-bb1c-f1b4d83a2e99"
+    }
+  ],
+  "probeText": "我没打算去魏国。",
+  "noClone": true,
+  "noPresetSpeaker": true,
+  "wrongTts2Quarantine": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\QUARANTINED-TTS2.json",
+  "userApproved": false,
+  "probeResult": {
+    "status": "succeeded",
+    "model": "seed-audio-1.0",
+    "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+    "node": "CH2-LY02-008",
+    "text": "我没打算去魏国。",
+    "text_prompt": "仅使用@音频1中成年男性的音色，克制、自然、吐字清楚。仅朗读下面引号内这一句中文原话：“我没打算去魏国。”不得朗读任何控制说明，不复述参考音频原句，不增加姓名、角色标签、某某说、旁白、画外或其他词句。总长约3秒，0.3秒后开始说话，末尾安静。全片无BGM、无背景音乐、无配乐，无音效，只有这一句干净人声。",
+    "requestId": "a05569b9-e353-44de-bb1c-f1b4d83a2e99",
+    "reference": {
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/gouan-reference-user-approved-V10-14p4-17p6.wav",
+      "sha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "bytes": 307278,
+      "field": "references[0].audio_data",
+      "speakerNotSent": true,
+      "uploaded": true,
+      "acceptedInRequest": true
+    },
+    "bodySha256": "990a0c1c98ae6a4d9b94d311d096ef7fb14b9244cfa8f9d5e448363bc226c71f",
+    "noClone": true,
+    "wrongTts2Adopted": false,
+    "httpStatus": 200,
+    "logId": "20261025161345AC14DC66EECAA194B421",
+    "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-008-seed-audio1-reference.wav",
+    "sha256": "10bc0258833a2dd9250aed7a8c5a61203ccecb319bc1b88e2b7f237fb28bef66",
+    "duration": 3,
+    "original_duration": 3,
+    "subtitle": {
+      "sentences": [
+        {
+          "end_time": 2400,
+          "start_time": 400,
+          "text": "我没打算去魏国。",
+          "words": [
+            {
+              "end_time": 720,
+              "start_time": 400,
+              "text": "我"
+            },
+            {
+              "end_time": 960,
+              "start_time": 720,
+              "text": "没"
+            },
+            {
+              "end_time": 1160,
+              "start_time": 960,
+              "text": "打"
+            },
+            {
+              "end_time": 1400,
+              "start_time": 1160,
+              "text": "算"
+            },
+            {
+              "end_time": 1800,
+              "start_time": 1400,
+              "text": "去"
+            },
+            {
+              "end_time": 2080,
+              "start_time": 2000,
+              "text": "魏"
+            },
+            {
+              "end_time": 2400,
+              "start_time": 2320,
+              "text": "国"
+            },
+            {
+              "end_time": 2400,
+              "start_time": 2400,
+              "text": "。"
+            }
+          ]
+        }
+      ],
+      "text": "我没打算去魏国。"
+    },
+    "listeningReview": "pending actual listening/user review"
+  },
+  "asrEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\seed-audio-probe-asr.json",
+  "listeningReview": {
+    "status": "not-completed",
+    "limitation": "Tool explicitly reports audio input unsupported for this execution model; provider subtitle and independent ASR match but do not establish timbre/no-BGM listening approval.",
+    "requiredAction": "actual listening remains pending; batch2 direct user authorization removed it as an execution blocker"
+  },
+  "batch2Authorization": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\repair-policy.json",
+  "G1ReferenceAudioCandidates": [
+    {
+      "node": "CH2-LY02-007",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-007-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-007-seed-audio1-reference.wav",
+      "sha256": "358923e9329c71d79061f690121a930f8b111e2ee715b60b2eb77d44f850b0ff",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-008",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\seed-audio-required-probe-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-008-seed-audio1-reference.wav",
+      "sha256": "10bc0258833a2dd9250aed7a8c5a61203ccecb319bc1b88e2b7f237fb28bef66",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-021",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-021-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-021-seed-audio1-reference.wav",
+      "sha256": "0d946c9e9e0ea48011bb89d2eabe5b874c6f708d7b08cb4c45748f06f99a5ba8",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-012",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-012-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-012-seed-audio1-reference.wav",
+      "sha256": "88881f2d2f620900f0b440f86aa9c054f87604d0246e0ee3edab0250c004efa5",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-013",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-013-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-013-seed-audio1-reference.wav",
+      "sha256": "dbe5919047c152b0f0fb94beae85a03d5d5aa21b087e161bc541e2a8e21bb8ae",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-015",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-015-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-015-seed-audio1-reference.wav",
+      "sha256": "7f8248be36d888678c62ada33167a89804e2820d3839519320cc134ab70ccecb",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY03-017",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY03-017-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY03-017-seed-audio1-reference.wav",
+      "sha256": "6dff24b06abdfc12378d5c775e4d032a42b2a87f2d95067bdff8427d21d3bed0",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-022",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-022-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-022-seed-audio1-reference.wav",
+      "sha256": "e2fd9402e0c575320a9556817c22a9159fa91b311ea4ed8407d19b2bdc8bbafc",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    },
+    {
+      "node": "CH2-LY02-027",
+      "state": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\CH2-LY02-027-seed-audio1-state.json",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G1/user-review-20261025/CH2-LY02-027-seed-audio1-reference.wav",
+      "sha256": "76b744ee9d2bc9d7d689f6fd26a30e2ed4338c828c8dd8f0a61849e39ea4567d",
+      "model": "seed-audio-1.0",
+      "referenceSha256": "891a8095fbc76835b7c8b9824224789a1493a198d6b2adeef68a1b53b36d060e",
+      "uploaded": true,
+      "listeningReview": "pending"
+    }
+  ]
+}

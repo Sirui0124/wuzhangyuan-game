@@ -1,0 +1,107 @@
+{
+  "id": "V08B",
+  "name": "关心伤势分支",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08B-脏段音画一并删除-R1.mp4",
+  "duration": 12.51,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "UI-N1选B",
+  "next": [
+    "V09"
+  ],
+  "endEvent": "所选对白与本段演出实际完成；不重复加分",
+  "subclips": [
+    {
+      "id": "V08B-user-repair-r1",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08B-脏段音画一并删除-R1.mp4",
+      "slotStart": 0,
+      "slotEnd": 12.51,
+      "sourceTrim": [
+        0,
+        12.51
+      ],
+      "audioMode": "user-requested-repair",
+      "review": {
+        "evidenceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\review\\user-repair-free2.html",
+        "actualDynamicReview": true,
+        "visualReview": "浏览器播放至ended，结合关键帧核对画面；听审未完成",
+        "userApproved": false
+      }
+    }
+  ],
+  "centralVoiceCues": [
+    {
+      "node": "CH2-LY02-B01",
+      "speaker": "我",
+      "text": "我还是怕你太难过",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B01.wav",
+      "centralSha256": "9a9c70abb803b24cfc36094dc5e351cadd1c96152ab280e365bef23058b231ff",
+      "slotStart": 0.3,
+      "slotEnd": 2.2734166666666664,
+      "subclip": "V08B-user-repair-r1"
+    },
+    {
+      "node": "CH2-LY02-B02",
+      "speaker": "我",
+      "text": "毕竟也不容易",
+      "centralPath": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-B02.wav",
+      "centralSha256": "37e1ead8e1657138840d00103b1251685330b0b495558817c94886ac6f850391",
+      "slotStart": 2.4934166666666666,
+      "slotEnd": 4.06525,
+      "subclip": "V08B-user-repair-r1"
+    }
+  ],
+  "sha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+  "decode": "passed",
+  "userReview": "待重新review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "本轮用户返修：本地浏览器实际完整播放到ended，未见黑屏、文字卡或可见方框层。",
+  "audioIssues": [
+    "新预置TTS音频未采用；本条仅历史正确原声复用或按用户静音/删除。",
+    "制作核对不替代用户重新审核。"
+  ],
+  "previousFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08B-关心伤势分支_画面修正V2.mp4",
+  "previousSha256": "6ade3a84813e3189ba74e83c23591c6e04354484d156f4b9b350679c88d7f8a6",
+  "pictureRevision": 2,
+  "userApproved": false,
+  "userReviewRepair": {
+    "comment": "5-10s（我话外...不容易）是脏音频，连着这段的视频都截掉",
+    "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\picture-v2\\V08B-关心伤势分支_画面修正V2.mp4",
+    "oldSha256": "6ade3a84813e3189ba74e83c23591c6e04354484d156f4b9b350679c88d7f8a6",
+    "oldInterval": [
+      4.208333333333333,
+      10.041666666666666
+    ],
+    "repairs": [
+      {
+        "treatment": "按用户删除脏声音及同段画面；由约5–10秒微调为完整去掉等来/我画外…不容易段，不裁掉前面两句正常安慰。",
+        "oldRange": [
+          4.208333333333333,
+          10.041666666666666
+        ],
+        "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\V08B-脏段音画一并删除-R1.mp4",
+        "newSha256": "10b75e1dc56a7a3a222fdb7e621f2a66e607b9486acfc80ab6b5ae2ec90eb9f2",
+        "requestedRange": [
+          5,
+          10
+        ],
+        "sourceKeptRanges": [
+          [
+            0,
+            4.208333333333333
+          ],
+          [
+            10.041666666666666,
+            18.34
+          ]
+        ],
+        "locator": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\inspection\\V08B-asr.json"
+      }
+    ]
+  },
+  "sourceAssemblyArchive": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\user-review-20261025\\old-assembly\\V08B-6ade3a84813e.json"
+}

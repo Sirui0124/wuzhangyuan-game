@@ -1,0 +1,61 @@
+{
+  "source_sha256": "241dcc243669a1031e9baeda0368f59d3376bb7897751e2e52a887ac9fa559b9",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.8154
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0891
+        },
+        {
+          "label": "Television",
+          "p": 0.0755
+        },
+        {
+          "label": "Rain",
+          "p": 0.0458
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0435
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0184
+        },
+        {
+          "label": "Boiling",
+          "p": 0.0131
+        },
+        {
+          "label": "Speech",
+          "p": 0.009
+        },
+        {
+          "label": "White noise",
+          "p": 0.0086
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0081
+        },
+        {
+          "label": "Fire",
+          "p": 0.008
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0078
+        }
+      ],
+      "music": 0.8154
+    }
+  ]
+}

@@ -1,0 +1,1575 @@
+{
+  "group": "G6",
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "status": "repaired-ready-for-user-review-hearing-pending",
+  "updatedUTC": "2026-10-25T09:38:31.727964+00:00",
+  "commentsSource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\comments-and-versions.json",
+  "policySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\reviews\\user-20261025-batch2\\repair-policy.json",
+  "userApproved": false,
+  "originalFilesPreserved": true,
+  "newVideoRequests": 0,
+  "newAudioRequests": 1,
+  "reusedExistingPlayerLines": 11,
+  "reusedOriginalNPCLines": 7,
+  "referenceGeneratedNPCLines": 1,
+  "speechWhitelistCount": 19,
+  "pureActionNodes": 4,
+  "scope": "G6 production only; no game/ENDINGS/online edits",
+  "audioListening": "pending actual listening; cannot establish word-perfect hearing, timbre, BGM absence, or subjective lip sync using ASR",
+  "films": [
+    {
+      "id": "V38",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+      "oldSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+      "oldDuration": 34.197,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+      "newSha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+      "newDuration": 20.166667,
+      "removedSeconds": 14.030333000000002,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V38",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/user-review-20261025/V38-%E6%95%91%E4%B8%8B%E7%9C%BC%E5%89%8D%E7%9A%84%E4%BA%BA-%E5%8E%BB%E5%85%83%E6%96%87%E4%B9%A6R3.mp4?v=1792915384133012100"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V38",
+          "node": "CH2-E2-001",
+          "role": "player",
+          "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "clip": "V38",
+          "node": "CH2-E2-002",
+          "role": "clerk",
+          "text": "材料收到了。苟安停手补报的经过已经记下，人先留营受查。李严一节，还要继续核。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V38",
+          "node": "CH2-E2-003",
+          "role": "player",
+          "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "speakers": [
+        "clerk",
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 0.4,
+          "end": 8.96,
+          "reason": "原段未识别出白名单玩家递交原句，含不连贯控制/乱码；替换授权玩家WAV",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 10.46,
+          "end": 13.94,
+          "reason": "核收前元说明/乱码",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 17.62,
+          "end": 18.94,
+          "reason": "核收中间额外元说明/乱码",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              0,
+              132
+            ]
+          ],
+          "node": "CH2-E2-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "实际交材料；NPC闭口听",
+          "timelineRange": [
+            0,
+            5.5
+          ]
+        },
+        {
+          "pictures": [
+            [
+              335,
+              424
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.94,
+          "delay": 0,
+          "reason": "只保留材料收到/停手补报已记下，前端标签截至真实材料原句",
+          "timelineRange": [
+            5.5,
+            9.208333333333334
+          ]
+        },
+        {
+          "pictures": [
+            [
+              514,
+              621
+            ]
+          ],
+          "node": "CH2-E2-002",
+          "audio": "original-whitelist-window",
+          "audioStart": 21.4,
+          "delay": 0,
+          "reason": "保留留营受查、李严仍待核，删前后空余",
+          "timelineRange": [
+            9.208333333333334,
+            13.666666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              629,
+              785
+            ]
+          ],
+          "node": "CH2-E2-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "苟安仍活着的闭口反应；完整心声",
+          "timelineRange": [
+            13.666666666666668,
+            20.166666666666668
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-E2-001",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E2-001.wav",
+          "sourceSha256": "341eb1a9e1768a2ba8d34678ef4324a9c062e2b15b7edf6e5b95652f285f2047",
+          "sourceRange": [
+            0,
+            4.183291666666666
+          ],
+          "timelineRange": [
+            0.25,
+            4.433291666666666
+          ],
+          "samples": 200798
+        },
+        {
+          "node": "CH2-E2-002",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+          "sourceSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+          "sourceRange": [
+            13.94,
+            17.648333333333333
+          ],
+          "timelineRange": [
+            5.5,
+            9.208333333333334
+          ],
+          "samples": 178000
+        },
+        {
+          "node": "CH2-E2-002",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-20261025\\V38-救下眼前的人-去元文书R3.mp4",
+          "sourceSha256": "a9d685d602b57ddd46323fdfdc9df6ef300d28f571c122164f97695f800b2ed6",
+          "sourceRange": [
+            21.4,
+            25.85833333333333
+          ],
+          "timelineRange": [
+            9.208333333333334,
+            13.666666666666668
+          ],
+          "samples": 214000
+        },
+        {
+          "node": "CH2-E2-003",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E2-003.wav",
+          "sourceSha256": "0aae9d5da303d7ccaaafe84c17da4190af69d192af636f49eff1070471d08f7f",
+          "sourceRange": [
+            0,
+            5.971875
+          ],
+          "timelineRange": [
+            13.866666666666667,
+            19.838541666666668
+          ],
+          "samples": 286650
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "停手署名和材料提交实际发生后接入；只得到留营受查、李严一节待核的阶段结论",
+        "苟安末段仍在伤帐，没有换成死亡或空铺",
+        "我的画外对白/心声由玩家WAV承担；军吏只承担核收及阶段结论原句"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+          "containerDuration": 20.166667,
+          "videoFrames": 484,
+          "firstPTS": 0.0,
+          "lastPTS": 20.125,
+          "videoEnd": 20.166666666666668,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 20.166,
+          "audioDecodedSamples": 967968,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-纯台词短版-R1.mp4",
+          "sha256": "c454ac7e3ba2e15475d91a44b720365667efae544ed9bd664ef5ef89ce297e28",
+          "duration": 20.166667,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V38-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 0,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending"
+    },
+    {
+      "id": "V39",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+      "oldSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+      "oldDuration": 19.616,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+      "newSha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+      "newDuration": 10.208333,
+      "removedSeconds": 9.407667,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V39",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/assembled/V39-%E6%99%9A%E4%BA%A4%E6%A1%88%E7%9A%84%E5%85%B1%E5%90%8C%E6%94%B6%E4%BB%B6-R2.mp4?v=1792898667216112700"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V39",
+          "node": "CH2-LY12A-001",
+          "role": "player",
+          "text": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "clip": "V39",
+          "node": "CH2-LY12A-003",
+          "role": "clerk",
+          "text": "收下了。缺多少粮，各人做过什么，会分别查清。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "speakers": [
+        "clerk",
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 0,
+          "end": 9.54,
+          "reason": "递交段不连贯控制/乱码；替换完整玩家原句",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 10.14,
+          "end": 11.86,
+          "reason": "核收前控制/乱码",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 17.76,
+          "end": 19.6,
+          "reason": "核收后控制/乱码",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              0,
+              58
+            ],
+            [
+              139,
+              223
+            ]
+          ],
+          "node": "CH2-LY12A-001",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "保留递交动作和中性案头；不让NPC代说我的话",
+          "timelineRange": [
+            0,
+            5.916666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              323,
+              426
+            ]
+          ],
+          "node": "CH2-LY12A-003",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.45,
+          "delay": 0,
+          "reason": "仅真实共同核收原句，不能提前宣布定案",
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-LY12A-001",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-001.wav",
+          "sourceSha256": "b4b2b970b3b25233e905399a3019f4b05526de754535b12d5d18fea5ed914aad",
+          "sourceRange": [
+            0,
+            5.5797083333333335
+          ],
+          "timelineRange": [
+            0.15,
+            5.729708333333334
+          ],
+          "samples": 267826
+        },
+        {
+          "node": "CH2-LY12A-003",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V39-晚交案的共同收件-R2.mp4",
+          "sourceSha256": "c66327bc72af660861cc323ae1e660ab792742a9e16f61ec1f80eecce895fbf5",
+          "sourceRange": [
+            13.45,
+            17.741666666666667
+          ],
+          "timelineRange": [
+            5.916666666666667,
+            10.208333333333334
+          ],
+          "samples": 206000
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "实际收下材料后才按锁定Q分流，Q真去V40，Q假去V41L",
+        "共同收件不提前判定李严责任或凭空补齐缺失证据",
+        "我的递交说明与军吏核收原句均保留，删掉元说明音画"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+          "containerDuration": 10.208333,
+          "videoFrames": 245,
+          "firstPTS": 0.0,
+          "lastPTS": 10.166666666666666,
+          "videoEnd": 10.208333333333332,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 10.208,
+          "audioDecodedSamples": 489984,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-纯台词短版-R1.mp4",
+          "sha256": "7456a80ac45ddcf69a6a098c4e3f53e63e2424aa31aafe12c126a6a35146c2ad",
+          "duration": 10.208333,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V39-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 0,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending"
+    },
+    {
+      "id": "V40",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+      "oldSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+      "oldDuration": 55.296,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+      "newSha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+      "newDuration": 23.291667,
+      "removedSeconds": 32.004333,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V40",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/assembled/V40-%E6%9F%A5%E5%8A%9E%E3%80%81%E8%8B%9F%E5%AE%89%E4%B9%8B%E6%AD%BB%E4%B8%8E%E7%A9%BA%E9%93%BA-R2.mp4?v=1792901256522406200"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-004",
+          "role": "action",
+          "text": "查办继续，直到裁处将定，两人仍未共同完成停手、补报与各自交代责任；苟安仍想把推动阻战与行险的主责揽在自己身上。",
+          "spoken": false,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-005",
+          "role": "gouan",
+          "text": "往下推的人是我，要问就问我。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-006",
+          "role": "player",
+          "text": "李严知情的事也写在材料里，该查就得查。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-007",
+          "role": "action",
+          "text": "正式处置传来，我无权更改决定。",
+          "spoken": false,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-008",
+          "role": "clerk",
+          "text": "李严革职，交回官印。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-009",
+          "role": "clerk",
+          "text": "苟安参与阻挠运粮、欺瞒军情，已按军法处死。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-010",
+          "role": "action",
+          "text": "苟安的铺位空了，撤军的空粮车从帐外经过。",
+          "spoken": false,
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-011",
+          "role": "player",
+          "text": "李严倒了。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-012",
+          "role": "player",
+          "text": "苟安也死了。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "clip": "V40",
+          "node": "CH2-LY12A-013",
+          "role": "player",
+          "text": "可粮呢？",
+          "spoken": true,
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "speakers": [
+        "clerk",
+        "gouan",
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 12.04,
+          "end": 19.34,
+          "reason": "原监听反应段额外控制/乱码，换玩家原句",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 20.54,
+          "end": 24.9,
+          "reason": "纯演出节点误读/乱码，删并缩短转场",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 32.1,
+          "end": 37.25,
+          "reason": "死讯前控制文字，含苟安死讯标签型读出",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 40.9,
+          "end": 47.28,
+          "reason": "空铺段控制/乱码；换三句合法心声并缩短必要画面",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              0,
+              26
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "短暂交代查办中的伤帐；不念演出说明",
+          "timelineRange": [
+            0,
+            1.0833333333333333
+          ]
+        },
+        {
+          "pictures": [
+            [
+              151,
+              200
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 6.3,
+          "delay": 0,
+          "reason": "苟安主动担责前半",
+          "timelineRange": [
+            1.0833333333333333,
+            3.125
+          ]
+        },
+        {
+          "pictures": [
+            [
+              239,
+              276
+            ]
+          ],
+          "node": "CH2-LY12A-005",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.95,
+          "delay": 0,
+          "reason": "苟安承担问责后半，缩掉过长停顿",
+          "timelineRange": [
+            3.125,
+            4.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              288,
+              390
+            ]
+          ],
+          "node": "CH2-LY12A-006",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "我要求查李严，苟安闭口反应",
+          "timelineRange": [
+            4.666666666666667,
+            8.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              480,
+              501
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "正式处置另时传来，用无字卷束短转场，不念007演出说明",
+          "timelineRange": [
+            8.916666666666668,
+            9.791666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              684,
+              759
+            ]
+          ],
+          "node": "CH2-LY12A-008",
+          "audio": "original-whitelist-window",
+          "audioStart": 28.52,
+          "delay": 0,
+          "reason": "李严革职/交官印真实原句",
+          "timelineRange": [
+            9.791666666666668,
+            12.916666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              759,
+              762
+            ],
+            [
+              897,
+              981
+            ]
+          ],
+          "node": "CH2-LY12A-009",
+          "audio": "original-whitelist-window",
+          "audioStart": 37.25,
+          "delay": 0,
+          "reason": "实际军法死讯先于空铺；删除苟安死讯等标签段；前镜连续尾部3帧承接死讯起音，再切已坐定镜头，删掉孤立入座闪镜；原句音轨完整不动",
+          "timelineRange": [
+            12.916666666666668,
+            16.541666666666668
+          ]
+        },
+        {
+          "pictures": [
+            [
+              988,
+              1058
+            ],
+            [
+              1164,
+              1256
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "死亡报告后才空铺/空粮车；三句心声完整放入",
+          "timelineRange": [
+            16.541666666666668,
+            23.291666666666668
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-LY12A-005",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "sourceRange": [
+            6.3,
+            8.341666666666667
+          ],
+          "timelineRange": [
+            1.0833333333333333,
+            3.125
+          ],
+          "samples": 98000
+        },
+        {
+          "node": "CH2-LY12A-005",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "sourceRange": [
+            9.95,
+            11.491666666666665
+          ],
+          "timelineRange": [
+            3.125,
+            4.666666666666667
+          ],
+          "samples": 74000
+        },
+        {
+          "node": "CH2-LY12A-006",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-006.wav",
+          "sourceSha256": "86272be461834b1de460aa997d3906e2e6bf211f3cdf7457ae2760a239175567",
+          "sourceRange": [
+            0,
+            3.8012916666666667
+          ],
+          "timelineRange": [
+            4.816666666666667,
+            8.617958333333334
+          ],
+          "samples": 182462
+        },
+        {
+          "node": "CH2-LY12A-008",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "sourceRange": [
+            28.52,
+            31.645
+          ],
+          "timelineRange": [
+            9.791666666666668,
+            12.916666666666668
+          ],
+          "samples": 150000
+        },
+        {
+          "node": "CH2-LY12A-009",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V40-查办、苟安之死与空铺-R2.mp4",
+          "sourceSha256": "12b4de4c97475f882089d13a6dc5d82207ff1a2486d5e7a6396eeadfd4b17fe2",
+          "sourceRange": [
+            37.25,
+            40.875
+          ],
+          "timelineRange": [
+            12.916666666666668,
+            16.541666666666668
+          ],
+          "samples": 174000
+        },
+        {
+          "node": "CH2-LY12A-011",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-011.wav",
+          "sourceSha256": "4abcc3756aeb385566af15daff2bed20cfdd84a6ef306bcd7c5b0ef747537108",
+          "sourceRange": [
+            0,
+            1.3950416666666667
+          ],
+          "timelineRange": [
+            16.89166666666667,
+            18.286708333333337
+          ],
+          "samples": 66962
+        },
+        {
+          "node": "CH2-LY12A-012",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-012.wav",
+          "sourceSha256": "a1360953c1a58559b6c11c60c935a0d68ddf6d6bedf3deea217e55a886cf95bb",
+          "sourceRange": [
+            0,
+            1.5733333333333333
+          ],
+          "timelineRange": [
+            18.691666666666666,
+            20.265
+          ],
+          "samples": 75520
+        },
+        {
+          "node": "CH2-LY12A-013",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12A-013.wav",
+          "sourceSha256": "8e1df73fc3057b88a2011bfada38993d4b7c98411b0d1c8b1d8488b972f4e5d0",
+          "sourceRange": [
+            0,
+            1.1764166666666667
+          ],
+          "timelineRange": [
+            21.44166666666667,
+            22.618083333333338
+          ],
+          "samples": 56468
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "仅在V39实际收件且Q真后进入查办；苟安担责及我要求查李严均保留",
+        "正式裁处及军法处死原句先于空铺和空粮车；不把提交材料直接当处死",
+        "三句合法末心声完整保留；不将G5的V42重复附在本片",
+        "死讯起音保留完整，孤立入座闪镜已用前镜连续尾部3帧替换"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+          "containerDuration": 23.291667,
+          "videoFrames": 559,
+          "firstPTS": 0.0,
+          "lastPTS": 23.25,
+          "videoEnd": 23.291666666666668,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 23.291,
+          "audioDecodedSamples": 1117968,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-纯台词短版-R2.mp4",
+          "sha256": "8e3037a39a13f8b28478ecf5bb745ab4b91f9b3c3ad4f5df73fe3890363d2e7b",
+          "duration": 23.291667,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 0,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending",
+      "seamEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V40-R2-seam-evidence.json"
+    },
+    {
+      "id": "V41E",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+      "oldSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+      "oldDuration": 26.91,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+      "newSha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+      "newDuration": 16.0,
+      "removedSeconds": 10.91,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V41E",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/assembled/V41E-%E6%97%A9%E5%81%9C%E6%9F%A5%E7%89%88%EF%BC%9A%E8%AE%A4%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%BD%AA-R2.mp4?v=1792903961183795700"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V41E",
+          "node": "CH2-LY07-BAD1",
+          "role": "player",
+          "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+          "spoken": true,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "clip": "V41E",
+          "node": "CH2-LY07-BAD2",
+          "role": "gouan",
+          "text": "大军退了吗？",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V41E",
+          "node": "CH2-LY07-BAD3",
+          "role": "player",
+          "text": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+          "spoken": true,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "speakers": [
+        "gouan",
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 5.53,
+          "end": 10.61,
+          "reason": "收件演出控制/乱码，换合法退军旁白",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 16.52,
+          "end": 23.18,
+          "reason": "问题后的控制/反应说明，换完整合法反思",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              0,
+              124
+            ]
+          ],
+          "node": "CH2-LY07-BAD1",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "收件查办与退军旁白，NPC仅收卷",
+          "timelineRange": [
+            0,
+            5.166666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              359,
+              395
+            ]
+          ],
+          "node": "CH2-LY07-BAD2",
+          "audio": "original-whitelist-window",
+          "audioStart": 14.98,
+          "delay": 0,
+          "reason": "只留大军退了吗，删口型/反应控制说明",
+          "timelineRange": [
+            5.166666666666667,
+            6.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              402,
+              540
+            ],
+            [
+              558,
+              644
+            ]
+          ],
+          "node": "CH2-LY07-BAD3",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.15,
+          "reason": "完整早停查心声，苟安闭口反应；未获后期合谋",
+          "timelineRange": [
+            6.666666666666667,
+            16.0
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-LY07-BAD1",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY07-BAD1.wav",
+          "sourceSha256": "d40dce9d6c1aeeb44f22378f442a3706a53a621905c647f7d5a0d46c73f1c274",
+          "sourceRange": [
+            0,
+            4.775875
+          ],
+          "timelineRange": [
+            0.15,
+            4.9258750000000004
+          ],
+          "samples": 229242
+        },
+        {
+          "node": "CH2-LY07-BAD2",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41E-早停查版：认下来的罪-R2.mp4",
+          "sourceSha256": "71ed0d0d39ddf1b4b08588f002ed35d01199804e67874c7599fb179fdbb618c1",
+          "sourceRange": [
+            14.98,
+            16.48
+          ],
+          "timelineRange": [
+            5.166666666666667,
+            6.666666666666667
+          ],
+          "samples": 72000
+        },
+        {
+          "node": "CH2-LY07-BAD3",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY07-BAD3.wav",
+          "sourceSha256": "a78cdcd3d77d6f23550c84ccbc00365ad919b2ab3de1b74814bdb81100fa8bd3",
+          "sourceRange": [
+            0,
+            8.990375
+          ],
+          "timelineRange": [
+            6.816666666666667,
+            15.807041666666667
+          ],
+          "samples": 431538
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "仅早停查确认后播放；不知道后段合谋，不追加死亡结果",
+        "保留军吏接办/退军旁白、苟安询问及完整早停查反思",
+        "反思使用我的画外声，苟安只做闭口反应"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+          "containerDuration": 16.0,
+          "videoFrames": 384,
+          "firstPTS": 0.0,
+          "lastPTS": 15.958333333333334,
+          "videoEnd": 16.0,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 16.0,
+          "audioDecodedSamples": 768000,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-纯台词短版-R1.mp4",
+          "sha256": "0d1a10e00162a74279f19be18c8c902ccdc284978e61d504031e8c0e6dcbaecc",
+          "duration": 16.0,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41E-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 0,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending"
+    },
+    {
+      "id": "V41L",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+      "oldSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+      "oldDuration": 35.264,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+      "newSha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+      "newDuration": 26.208333,
+      "removedSeconds": 9.055667000000003,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V41L",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/assembled/V41L-%E6%99%9A%E6%94%AF%E6%92%91%E4%B8%8D%E8%B6%B3%E7%89%88%EF%BC%9A%E8%AE%A4%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%BD%AA-R4.mp4?v=1792903975849065800"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V41L",
+          "node": "CH2-E4-LATE-001",
+          "role": "clerk",
+          "text": "你说李严参与，材料里也有这些线索。可几处细节还对不上，眼下不能照你的结论认定。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V41L",
+          "node": "CH2-E4-LATE-002",
+          "role": "clerk",
+          "text": "苟安认下的责任先录在案，其他的还要核。",
+          "spoken": true,
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "clip": "V41L",
+          "node": "CH2-E4-LATE-003",
+          "role": "player",
+          "text": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+          "spoken": true,
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "speakers": [
+        "clerk",
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 19.9,
+          "end": 25.45,
+          "reason": "句末核字边界不稳；ASR不能证明读错，不再盲截，以同角色参考仅补该句",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 27.66,
+          "end": 35.18,
+          "reason": "心声画面原声不连贯控制/乱码，换完整已授权心声",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              34,
+              112
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 1.42,
+          "delay": 0,
+          "reason": "李严参与线索第一分句",
+          "timelineRange": [
+            0,
+            3.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              122,
+              192
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 5.08,
+          "delay": 0,
+          "reason": "材料里已有线索，缩停顿",
+          "timelineRange": [
+            3.25,
+            6.166666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              232,
+              316
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 9.65,
+          "delay": 0,
+          "reason": "细节尚不能对上",
+          "timelineRange": [
+            6.166666666666666,
+            9.666666666666666
+          ]
+        },
+        {
+          "pictures": [
+            [
+              332,
+              418
+            ]
+          ],
+          "node": "CH2-E4-LATE-001",
+          "audio": "original-whitelist-window",
+          "audioStart": 13.82,
+          "delay": 0,
+          "reason": "不能照结论认定",
+          "timelineRange": [
+            9.666666666666666,
+            13.25
+          ]
+        },
+        {
+          "pictures": [
+            [
+              478,
+              592
+            ]
+          ],
+          "node": "CH2-E4-LATE-002",
+          "audio": "seed-audio1-reference",
+          "audioStart": 19.9,
+          "delay": 0.125,
+          "reason": "句尾边界不稳的一句用冻结同军吏参考补齐，实际上传Seed-Audio1.0；连续案头近景承载军吏画外续答，避免新声音对应旧口型",
+          "crop": [
+            0,
+            360,
+            640,
+            360
+          ],
+          "timelineRange": [
+            13.25,
+            18.0
+          ]
+        },
+        {
+          "pictures": [
+            [
+              648,
+              845
+            ]
+          ],
+          "node": "CH2-E4-LATE-003",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.2,
+          "reason": "完整晚支撑不足心声，闭口低头归卷动作",
+          "timelineRange": [
+            18.0,
+            26.208333333333336
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-E4-LATE-001",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+          "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+          "sourceRange": [
+            1.42,
+            4.67
+          ],
+          "timelineRange": [
+            0,
+            3.25
+          ],
+          "samples": 156000
+        },
+        {
+          "node": "CH2-E4-LATE-001",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+          "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+          "sourceRange": [
+            5.08,
+            7.996666666666666
+          ],
+          "timelineRange": [
+            3.25,
+            6.166666666666666
+          ],
+          "samples": 140000
+        },
+        {
+          "node": "CH2-E4-LATE-001",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+          "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+          "sourceRange": [
+            9.65,
+            13.15
+          ],
+          "timelineRange": [
+            6.166666666666666,
+            9.666666666666666
+          ],
+          "samples": 168000
+        },
+        {
+          "node": "CH2-E4-LATE-001",
+          "mode": "existing-NPC-original-cut",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V41L-晚支撑不足版：认下来的罪-R4.mp4",
+          "sourceSha256": "361439746b03d93cb13f631711e551be7a27ed913d3d489be393739acdb33d74",
+          "sourceRange": [
+            13.82,
+            17.403333333333332
+          ],
+          "timelineRange": [
+            9.666666666666666,
+            13.25
+          ],
+          "samples": 172000
+        },
+        {
+          "node": "CH2-E4-LATE-002",
+          "mode": "seed-audio1-actual-uploaded-role-reference",
+          "source": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G6/user-review-batch2/CH2-E4-LATE-002-R1-seed-audio1-reference.wav",
+          "sourceSha256": "2daaebe44a7113d3b5a6b9b4cfb3be9f503ca7fc053d70b805b10eff1607c432",
+          "sourceRange": [
+            0,
+            4.5
+          ],
+          "timelineRange": [
+            13.375,
+            17.875
+          ],
+          "samples": 216000
+        },
+        {
+          "node": "CH2-E4-LATE-003",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E4-LATE-003.wav",
+          "sourceSha256": "769c5467325a55b0e8554aba9ec6d1cca0efabedbe72643a8f124e77e97a3750",
+          "sourceRange": [
+            0,
+            7.40875
+          ],
+          "timelineRange": [
+            18.2,
+            25.60875
+          ],
+          "samples": 355620
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "仅V39实际收件且Q假后播放；明确有李严线索但支撑不足",
+        "军吏两句结论与完整晚支撑不足心声保留，不能变成早停查或最终定罪",
+        "第二句实际上传同军吏冻结参考至Seed-Audio1.0，使用连续案头近景承载续答，避免给旧口型硬配新声"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+          "containerDuration": 26.208333,
+          "videoFrames": 629,
+          "firstPTS": 0.0,
+          "lastPTS": 26.166666666666668,
+          "videoEnd": 26.208333333333336,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 26.208,
+          "audioDecodedSamples": 1257984,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-纯台词短版-R2.mp4",
+          "sha256": "7b46501850be4c8fa7c71d4b41e156e1efeb8752199718e71ecc95e5593494a4",
+          "duration": 26.208333,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V41L-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 1,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending",
+      "newVoiceState": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\CH2-E4-LATE-002-R1-seed-audio-state.json",
+      "newVoiceASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\CH2-E4-LATE-002-R1-seed-audio1-reference-asr.json"
+    },
+    {
+      "id": "V43",
+      "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\assembled\\V43-放行与赴魏散谣后果.mp4",
+      "oldSha256": "e3055a9d93751eb23eb0ae98f22b2eab2f638f08da87bb305a3c42192d242cf6",
+      "oldDuration": 21.024,
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+      "newSha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+      "newDuration": 12.333333,
+      "removedSeconds": 8.690667000000001,
+      "reviewedSnapshot": {
+        "approved": false,
+        "id": "V43",
+        "note": "",
+        "save": "意见与通过状态自动保存到本机文件。",
+        "video": "/groups/G6/assembled/V43-%E6%94%BE%E8%A1%8C%E4%B8%8E%E8%B5%B4%E9%AD%8F%E6%95%A3%E8%B0%A3%E5%90%8E%E6%9E%9C.mp4?v=1792897915604843800"
+      },
+      "userApproved": false,
+      "whitelist": [
+        {
+          "clip": "V43",
+          "node": "CH2-E5-001",
+          "role": "action",
+          "text": "我让开营外的路。苟安离开，未向军吏呈报他的行险安排。",
+          "spoken": false,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "clip": "V43",
+          "node": "CH2-E5-002",
+          "role": "player",
+          "text": "后来，苟安去了魏国。关于丞相的谣言，还是传回了营中。",
+          "spoken": true,
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "speakers": [
+        "player"
+      ],
+      "suspectedMisreadIntervals": [
+        {
+          "start": 0.82,
+          "end": 9.44,
+          "reason": "纯放行演出原声不连贯控制/乱码，去掉原声并压缩步行",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        },
+        {
+          "start": 13.34,
+          "end": 13.98,
+          "reason": "后果段非白名单短声，整段原声去除，换后来原句",
+          "evidence": "ASR locator plus frozen original speech/source structure; not an actual listening claim"
+        }
+      ],
+      "actualEdits": [
+        {
+          "pictures": [
+            [
+              2,
+              62
+            ],
+            [
+              150,
+              226
+            ]
+          ],
+          "node": null,
+          "audio": "silence-essential-action",
+          "audioStart": null,
+          "delay": 0,
+          "reason": "保留回身/离开实行动作，删中间重复步行，原污染声音去除；不以静音填旧长片",
+          "timelineRange": [
+            0,
+            5.666666666666667
+          ]
+        },
+        {
+          "pictures": [
+            [
+              228,
+              288
+            ],
+            [
+              384,
+              484
+            ]
+          ],
+          "node": "CH2-E5-002",
+          "audio": "central-authorized-player",
+          "audioStart": null,
+          "delay": 0.25,
+          "reason": "放行后另时营地与兵士反应，明确后来，禁止兵士代说旁白",
+          "timelineRange": [
+            5.666666666666667,
+            12.333333333333334
+          ]
+        }
+      ],
+      "audioTracks": [
+        {
+          "node": "CH2-E5-002",
+          "mode": "authorized-existing-player-WAV",
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-E5-002.wav",
+          "sourceSha256": "3b3531de06c41f74693f5a40b849a8eee3853900d90d0574491c94ae5e15cab3",
+          "sourceRange": [
+            0,
+            5.97175
+          ],
+          "timelineRange": [
+            5.916666666666667,
+            11.888416666666668
+          ],
+          "samples": 286644
+        }
+      ],
+      "keyActionAndBranchContinuity": [
+        "实际放行的回身与离开动作先发生，之后才旁白后来赴魏及谣言传回",
+        "没有新增谣言内容或正式查办结果",
+        "纯放行动作保留5.667秒并去掉污染原声；有实际动作推进，不静止填满旧9.42秒"
+      ],
+      "verification": {
+        "videoTrack": {
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+          "containerDuration": 12.333333,
+          "videoFrames": 296,
+          "firstPTS": 0.0,
+          "lastPTS": 12.291666666666666,
+          "videoEnd": 12.333333333333332,
+          "videoTimeBase": "1/24000",
+          "averageRate": 24.0,
+          "maxFrameGap": 0.04166666666666785,
+          "ptsRegressions": 0,
+          "frameSizes": [
+            [
+              1280,
+              720
+            ]
+          ],
+          "audioEnd": 12.333,
+          "audioDecodedSamples": 591984,
+          "audioSampleRate": 48000,
+          "fullVideoTrack": true
+        },
+        "fullCandidateASR": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1-asr.json",
+        "orderedPictureEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-picture-evidence.json",
+        "nativePlayback": {
+          "method": "IAB native video at 1x muted started at 0 and visibly reached ended; separate from actual hearing",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-纯台词短版-R1.mp4",
+          "sha256": "6005ad8d3c03e5d2d26d9afbbf3d52fa91e6cb3b4d8abdf6d2672d5a2883ec0c",
+          "duration": 12.333333,
+          "endScreenshot": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G6\\user-review-batch2\\V43-playback-end.png"
+        },
+        "audioSourcesOnlyWhitelist": true
+      },
+      "newVideoRequests": 0,
+      "newAudioRequests": 0,
+      "unresolved": [
+        "实际逐字听审、跨片音色一致性、原声片段BGM与细口型审核未完成；ASR/技术检查不代替用户通过"
+      ],
+      "status": "ready-for-user-review-hearing-pending"
+    }
+  ],
+  "totals": {
+    "oldSeconds": 192.30700000000002,
+    "newSeconds": 108.208333,
+    "removedSeconds": 84.098667
+  }
+}

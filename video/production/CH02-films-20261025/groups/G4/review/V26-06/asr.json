@@ -1,0 +1,127 @@
+{
+  "id": "V26-06",
+  "expected": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+  "postVoiceText": null,
+  "actual": "眼下看到的是这些来年谁强谁弱还说不准",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 2.96,
+      "end": 4.64,
+      "text": "眼下看到的是这些",
+      "words": [
+        {
+          "start": 2.96,
+          "end": 3.46,
+          "word": "眼",
+          "probability": 0.9705809354782104
+        },
+        {
+          "start": 3.46,
+          "end": 3.68,
+          "word": "下",
+          "probability": 0.9967143535614014
+        },
+        {
+          "start": 3.68,
+          "end": 3.92,
+          "word": "看到",
+          "probability": 0.9924259185791016
+        },
+        {
+          "start": 3.92,
+          "end": 4.24,
+          "word": "的是",
+          "probability": 0.9775770306587219
+        },
+        {
+          "start": 4.24,
+          "end": 4.42,
+          "word": "这",
+          "probability": 0.41741275787353516
+        },
+        {
+          "start": 4.42,
+          "end": 4.64,
+          "word": "些",
+          "probability": 0.9971477389335632
+        }
+      ]
+    },
+    {
+      "start": 5.2,
+      "end": 6.68,
+      "text": "来年谁强谁弱",
+      "words": [
+        {
+          "start": 5.2,
+          "end": 5.64,
+          "word": "来",
+          "probability": 0.7999679446220398
+        },
+        {
+          "start": 5.64,
+          "end": 5.86,
+          "word": "年",
+          "probability": 0.9975905418395996
+        },
+        {
+          "start": 5.86,
+          "end": 6.04,
+          "word": "谁",
+          "probability": 0.9662414789199829
+        },
+        {
+          "start": 6.04,
+          "end": 6.26,
+          "word": "强",
+          "probability": 0.982669472694397
+        },
+        {
+          "start": 6.26,
+          "end": 6.42,
+          "word": "谁",
+          "probability": 0.9878134727478027
+        },
+        {
+          "start": 6.42,
+          "end": 6.68,
+          "word": "弱",
+          "probability": 0.995220959186554
+        }
+      ]
+    },
+    {
+      "start": 6.68,
+      "end": 7.78,
+      "text": "还说不准",
+      "words": [
+        {
+          "start": 6.68,
+          "end": 7.32,
+          "word": "还",
+          "probability": 0.7188439965248108
+        },
+        {
+          "start": 7.32,
+          "end": 7.5,
+          "word": "说",
+          "probability": 0.996134877204895
+        },
+        {
+          "start": 7.5,
+          "end": 7.64,
+          "word": "不",
+          "probability": 0.9991965889930725
+        },
+        {
+          "start": 7.64,
+          "end": 7.78,
+          "word": "准",
+          "probability": 0.9998907446861267
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

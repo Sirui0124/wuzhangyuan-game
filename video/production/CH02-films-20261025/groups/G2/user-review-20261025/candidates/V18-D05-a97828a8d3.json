@@ -1,0 +1,45 @@
+{
+  "id": "V18-D05",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-D05-a97828a8d3.mp4",
+  "sha256": "aa99c4d603969d11b83cd62b0b1587dcdaa6835e94f7b09934b30fe4428e3cda",
+  "videoFrames": 45,
+  "videoSeconds": 1.875,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V18-D05",
+    "parts": [
+      {
+        "source": "V18-04",
+        "range": [
+          0,
+          1.9
+        ]
+      }
+    ],
+    "audio": null,
+    "sourceNodes": [
+      "CH2-LY04-D05"
+    ],
+    "comment": "original actual closed-roll handoff, before camera cuts to pseudo-writing; exact body preserved in external source map only"
+  },
+  "sourceParts": [
+    {
+      "source": "V18-04",
+      "range": [
+        0,
+        1.9
+      ],
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V18-04-raw.mp4",
+      "sourceSha256": "e9bb31e449460dfa32dcf0e339dfe046e411cded143a3f832f2e890e4a1de955"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

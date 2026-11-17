@@ -1,0 +1,1159 @@
+{
+  "group": "G5",
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "status": "five-edited-two-preserved-awaiting-listening-and-user-review",
+  "completedAt": "2026-10-25T17:09:14.920470+08:00",
+  "sourceUserReview": "reviews/user-20261025-batch2/comments-and-versions.json",
+  "sourcePolicy": "reviews/user-20261025-batch2/repair-policy.json",
+  "sourceWhitelist": "reviews/user-20261025-batch2/spoken-whitelist.json",
+  "userReviewedThrough": "V27",
+  "G5UserReviewed": false,
+  "sourceFacts": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\source-facts-map.json",
+  "nodeCount": 35,
+  "childCount": 27,
+  "legalSpokenLines": 21,
+  "clips": [
+    {
+      "id": "V32A",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V32A-31dd1af561-cfr24.mp4?v=1792908930367505100",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V32A-31dd1af561-cfr24.mp4",
+        "sha256": "441fbe43f92f67e52db5f02aed7f9f6c7800caa80b13c40e7ac7ec9a8a2169a9",
+        "duration": 57.63,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+        "sha256": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+        "duration": 43.71
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY11-001",
+          "roleControlOnly": "我",
+          "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-002",
+          "roleControlOnly": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-017",
+          "roleControlOnly": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-018",
+          "roleControlOnly": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-019",
+          "roleControlOnly": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY11-020",
+          "roleControlOnly": "苟安·书信",
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-021",
+          "roleControlOnly": "苟安·书信",
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-022",
+          "roleControlOnly": "演出",
+          "text": "苟安划去“若仍不听便赴魏”，在自己交代的经过下署名。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "misreadIntervals": [
+        {
+          "start": 6.72,
+          "end": 7.58,
+          "reason": "冤妃你：疑似角色说明残音，第一句改用完整既有独立WAV",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 9.88,
+          "end": 12.96,
+          "reason": "角色/镜头说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 25.33,
+          "end": 28.55,
+          "reason": "灰麻衣/动作类说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 32.29,
+          "end": 33.17,
+          "reason": "逻辑/回答类说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        }
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V32A-clean-speech-f9fc4b7f7f.mp4",
+      "newSHA": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+      "newDuration": 30.71,
+      "durationChange": -13.0,
+      "action": "连同多余镜头删除角色/口型/镜头说明误读；五句白名单原话全部保留，两句玩家对白用既有独立WAV；书写、横划、下方署写、提笔保留。",
+      "editDecisionList": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            0.5,
+            6.625
+          ],
+          "reason": "保留第一句完整玩家画外对白，独立既有WAV排除底片误读串音",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY11-001.wav",
+          "audioRange": null,
+          "delay": 0.15,
+          "mute": false,
+          "timelineRange": [
+            0,
+            6.125
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            8.25,
+            9.75
+          ],
+          "reason": "只保留“那就把纸铺开”，删前后角色/拍摄说明",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            6.125,
+            7.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            13.5,
+            18.125
+          ],
+          "reason": "保留“你救不了…保得住我”完整原句，删此前误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            7.625,
+            12.25
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            20.083333333333332,
+            24.791666666666668
+          ],
+          "reason": "完整保留玩家提问，既有独立WAV，闭口听者不代说",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY11-018.wav",
+          "audioRange": null,
+          "delay": 0.2,
+          "mute": false,
+          "timelineRange": [
+            12.25,
+            16.958333333333336
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            28.625,
+            32.291666666666664
+          ],
+          "reason": "保留愿意留下/不赴魏不散谣，删前后导演说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            16.958333333333336,
+            20.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            33.625,
+            43.708333333333336
+          ],
+          "reason": "保留必要连续书写、横划、下方署写、提笔；空台词白名单",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            20.625,
+            30.708333333333336
+          ]
+        }
+      ],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V32A-bb21c6e9f5\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V32A-bb21c6e9f5.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json"
+      ],
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "endEvent": "苟安实际停手、交代与署名；不是E1或E2已结算",
+      "keyActionsAndBoundaries": [
+        "夜帐同一苟安与交代语境；回应段使用既有夜帐源，NPC口型与对白实际听审仍待完成。",
+        "动作段的原生墨迹不证明精确条款或署名字形；原事实保留独立来源映射，由既有游戏信息承接。"
+      ],
+      "audio": {
+        "status": "corrected-by-edit-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V33",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V33-3ba2700e32-cfr24.mp4?v=1792899943578021200",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V33-3ba2700e32-cfr24.mp4",
+        "sha256": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+        "duration": 9.47,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V33-3ba2700e32-cfr24.mp4",
+        "sha256": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+        "duration": 9.47
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY11-024",
+          "roleControlOnly": "传信人",
+          "text": "我照收件处的指引送去，有回信就交给你。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "misreadIntervals": [
+        {
+          "start": 0.27,
+          "end": 3.13,
+          "reason": "收件镜头/动作说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 6.79,
+          "end": 9.45,
+          "reason": "动作/镜头说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        }
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V33-clean-speech-d02f529faf.mp4",
+      "newSHA": "a0455d1624ab7d0fff573ecd1af6a728dd2e2c924cb84a2c5f16a27196d96545",
+      "newDuration": 8.38,
+      "durationChange": -1.09,
+      "action": "清除传信原句前后的工作说明人声，缩短走近前与收袋后尾段；实际交接/松手/收入袋动作保留。",
+      "editDecisionList": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V33-3ba2700e32-cfr24.mp4",
+          "sourceSHA": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+          "range": [
+            0.75,
+            9.125
+          ],
+          "reason": "完整递件接触→我松手→信收入袋；只保留传信人的唯一原话，不因话前有真动作而删掉交接",
+          "audio": null,
+          "audioRange": [
+            3.5,
+            6.65
+          ],
+          "delay": 2.75,
+          "mute": false,
+          "timelineRange": [
+            0,
+            8.375
+          ]
+        }
+      ],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V33-a0455d1624\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V33-a0455d1624.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json"
+      ],
+      "entry": "Q真且SEND确认，正文附件仍真实",
+      "next": [
+        "V34"
+      ],
+      "endEvent": "实际交传信人才记寄出",
+      "keyActionsAndBoundaries": [
+        "必须保留玩家递出→传信人抓稳→玩家松手→信收入袋的完整关系；不要把卷上短墨迹当准确事实证明。"
+      ],
+      "audio": {
+        "status": "corrected-by-edit-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V34",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V34-dc2c0bde30-cfr24.mp4?v=1792909040085858600",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V34-dc2c0bde30-cfr24.mp4",
+        "sha256": "b7801ff6a94f76dedd87438c6a36b21fde13167d9b7b38233499bd1722090de7",
+        "duration": 45.58,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+        "sha256": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+        "duration": 44.01
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-002",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "我只怕再打下去，百姓撑不住……你说不打，往后又靠什么撑住？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-003",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "蜀国休兵，魏国未必肯停。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-004",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "投魏的计划，就此撤回。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-005",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "粮情如实报，我愿受责。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-001",
+          "roleControlOnly": "视频（LI06B1）",
+          "text": "李严在日间书房读完来信。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-ACT01",
+          "roleControlOnly": "演出·实际补报",
+          "text": "李严撤回原先行险的安排，将更正后的粮情和自己参与的经过写成说明，署名后一同交出。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "misreadIntervals": [
+        {
+          "start": 0,
+          "end": 4.2,
+          "reason": "编号/只由本场NPC说话并做口型等元说明",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 10.12,
+          "end": 14.4,
+          "reason": "唯一开口等控制说明",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 28.21,
+          "end": 29.55,
+          "reason": "角色/动作说明",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 31.55,
+          "end": 34.39,
+          "reason": "错误复述与额外乱码；保留前半“粮情如实报”和后半“我愿受责”",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 37.61,
+          "end": 42.75,
+          "reason": "原本无台词的实际补报动作说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        }
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V34-clean-speech-520f7c53cd.mp4",
+      "newSHA": "12881e6c1073f2952c587f39cb3cc9a790a0e9c12d5ce9a80a658fc35bf8cd88",
+      "newDuration": 25.75,
+      "durationChange": -18.26,
+      "action": "保留先读信动作，删除误读编号/角色/唯一开口等冗余音画；同一李严原声两处片段拼回完整“粮情如实报，我愿受责”；无台词写签递件段清除误读人声。",
+      "editDecisionList": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            0.0,
+            1.5
+          ],
+          "reason": "保留李严先读完来信的真实必要动作；此时底音误读编号，清除该人声后即切入质疑原句",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            0,
+            1.5
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            4.458333333333333,
+            10.125
+          ],
+          "reason": "仅李严“我只怕…靠什么撑住”原句，删除编号/角色/口型/导演说明",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            1.5,
+            7.166666666666667
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            18.041666666666668,
+            26.166666666666668
+          ],
+          "reason": "保留蜀魏休兵判断和撤回投魏计划两句；移除话前无效等待",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            7.166666666666667,
+            15.291666666666668
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            30.208333333333332,
+            31.541666666666668
+          ],
+          "reason": "同一李严原声保留“粮情如实报”",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            15.291666666666668,
+            16.625000000000004
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            34.791666666666664,
+            36.083333333333336
+          ],
+          "reason": "同一李严原声保留“我愿受责”，中间错误复述/乱码连同画面删去",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            16.625000000000004,
+            17.916666666666675
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            36.166666666666664,
+            44.0
+          ],
+          "reason": "无台词写、提笔、取件、交出与接触；原底音误念演出说明，清除人声而保留实际动作",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            17.916666666666675,
+            25.75000000000001
+          ]
+        }
+      ],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V34-12881e6c10\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V34-12881e6c10.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\critical\\V34-12881e6c10\\index.json"
+      ],
+      "entry": "信实际送达李严",
+      "next": [
+        "V35"
+      ],
+      "endEvent": "远方实际停手补报发生；我尚未取得附件",
+      "keyActionsAndBoundaries": [
+        "先读信→质疑→撤回计划→愿受责→书写签署→递件次序保留；原生短笔迹不是准确姓名证明。",
+        "“粮情如实报/我愿受责”来自同一李严原声两个时间窗，拼接流畅性、语气及口型待听审。"
+      ],
+      "audio": {
+        "status": "corrected-by-edit-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V35",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V35-35d5d8645c-cfr24.mp4?v=1792909195582826700",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V35-35d5d8645c-cfr24.mp4",
+        "sha256": "c827a0ea4f750433d842d4e7674f996da0636f630a1b996f33748cc25cfefb26",
+        "duration": 35.63,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V35-no-cards-190c43cbb2.mp4",
+        "sha256": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+        "duration": 16.21
+      },
+      "spokenWhitelist": [],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-RECV01",
+          "roleControlOnly": "演出·回信到营",
+          "text": "传信人回到营中，将李严的回信和署名补报交到我手里。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12B-006",
+          "roleControlOnly": "李严·回信",
+          "text": "此次粮乏，应据实请退。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-007",
+          "roleControlOnly": "李严·回信",
+          "text": "日后是否再战，留待另议。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-008",
+          "roleControlOnly": "李严·回信",
+          "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-009",
+          "roleControlOnly": "李严·回信",
+          "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-RECV02",
+          "roleControlOnly": "演出·核阅补报",
+          "text": "我核过随信附送的更正粮情与李严本人责任说明；该说清的部分已经成文，原来的行险安排已经撤回。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "misreadIntervals": [
+        {
+          "start": 0.27,
+          "end": 8.25,
+          "reason": "错误复用V33传信整段原声；此场白名单为空，所有人声必须清除",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        }
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V35-clean-speech-a13a080130.mp4",
+      "newSHA": "486c5c0cbf871e201aae26ed02d074779fb056a0503da42701410ba308bcb827",
+      "newDuration": 13.29,
+      "durationChange": -2.92,
+      "action": "清除上一轮错误沿用V33的传信人声，因本场无合法台词；缩短收件前与松手后冗余，保留完整取件/接触/松手及8秒展开回信/两附件落桌。",
+      "editDecisionList": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V35-no-cards-190c43cbb2.mp4",
+          "sourceSHA": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+          "range": [
+            0.8333333333333334,
+            6.125
+          ],
+          "reason": "台词白名单为空；清除误借V33的全部人声，缩短取件前和松手后退远，完整取件/接触/松手保留",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            0,
+            5.291666666666667
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V35-no-cards-190c43cbb2.mp4",
+          "sourceSHA": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+          "range": [
+            8.208333333333334,
+            16.208333333333332
+          ],
+          "reason": "连续展开回信、两附件落桌并逐一松手；不朗读纸面内容",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            5.291666666666667,
+            13.291666666666664
+          ]
+        }
+      ],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V35-486c5c0cbf\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V35-486c5c0cbf.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\critical\\V35-486c5c0cbf\\index.json"
+      ],
+      "entry": "传信人真实带回签字说明",
+      "next": [
+        "UI-E1-FILE"
+      ],
+      "endEvent": "实际到营、读完回信并核附件才补齐李严补救事件",
+      "keyActionsAndBoundaries": [
+        "无台词；取件、双方接触、传信人完全松手后，才能接展开回信及两张独立附件落桌。",
+        "收件必要动态段约5.29秒清除了全部旧人声；此时长由实际动作决定，没有为保旧片长添加静帧/循环。"
+      ],
+      "audio": {
+        "status": "corrected-by-edit-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V36",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V36-00214332a0-cfr24.mp4?v=1792904955010823200",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V36-00214332a0-cfr24.mp4",
+        "sha256": "4c8730beeb3f1610f28f3ccb789010ab137fe23937352cf3c2acf09ef3d0ab42",
+        "duration": 55.96,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+        "sha256": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+        "duration": 54.18
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-010",
+          "roleControlOnly": "我",
+          "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12B-011",
+          "roleControlOnly": "军吏",
+          "text": "原信、查粮材料和两人的补充说明都已收齐。停手和各自的责任，会一并核实。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-014",
+          "roleControlOnly": "军吏",
+          "text": "李严交出此次粮运调度职责，受处分，仍须配合查问。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-015",
+          "roleControlOnly": "军吏",
+          "text": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任，留下做普通粮兵。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-016",
+          "roleControlOnly": "军吏",
+          "text": "这次处置，已考虑两人停手补救的情节。该担的责任仍要担。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-017",
+          "roleControlOnly": "演出",
+          "text": "退军令到，未能补足的粮食缺口仍在。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "misreadIntervals": [
+        {
+          "start": 9.21,
+          "end": 10.71,
+          "reason": "先收齐才谈核实：来自plan.action，不能作为对白",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 22.11,
+          "end": 23.55,
+          "reason": "宣读裁处动作说明误读",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        },
+        {
+          "start": 50.37,
+          "end": 53.43,
+          "reason": "退军令/传令动作说明疑似误读，白名单为空，整段清人声",
+          "source": "baseline current-SHA ASR auxiliary; not human listening proof"
+        }
+      ],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V36-clean-speech-08ede9bf82.mp4",
+      "newSHA": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+      "newDuration": 37.29,
+      "durationChange": -16.89,
+      "action": "删除“先收齐才谈核实”等动作说明误读和因此拖长的镜头；保留玩家登记请求与军吏四句责任裁处；退军令实际交接保留且不念演出说明。",
+      "editDecisionList": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            0.0,
+            6.0
+          ],
+          "reason": "玩家完整原句用既有独立WAV，实际收件/松手动作保留",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12B-010.wav",
+          "audioRange": null,
+          "delay": 0.1,
+          "mute": false,
+          "timelineRange": [
+            0,
+            6.0
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            12.0,
+            19.75
+          ],
+          "reason": "军吏实际收齐材料/核实责任的完整对白；删“先收齐才谈核实”动作说明误读及因此拖长画面",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            6.0,
+            13.75
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            24.541666666666668,
+            29.791666666666668
+          ],
+          "reason": "保留李严处分原句，删其前裁处导演说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            13.75,
+            19.0
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            30.625,
+            37.75
+          ],
+          "reason": "保留苟安免队长/责任/做粮兵原句",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            19.0,
+            26.125
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            42.833333333333336,
+            50.333333333333336
+          ],
+          "reason": "保留考虑停手补救但仍担责完整原句，删话前冗余反应",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            26.125,
+            33.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            50.5,
+            54.166666666666664
+          ],
+          "reason": "回令接触与接过完整动作，空台词白名单，清除演出说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            33.625,
+            37.291666666666664
+          ]
+        }
+      ],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V36-3d25fb9f77\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V36-3d25fb9f77.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\critical\\V36-3d25fb9f77\\index.json"
+      ],
+      "entry": "UI-E1-FILE确认；双方停手与全部附件已齐",
+      "next": [
+        "V37"
+      ],
+      "endEvent": "正式核收与裁处后才成立E1",
+      "keyActionsAndBoundaries": [
+        "实际材料接触/松手、收齐、核实、两人分别担责与回令交接均保留；没有自动结案或改变分支。",
+        "末段无台词，清除的是演出说明人声；真实回令递交保留。"
+      ],
+      "audio": {
+        "status": "corrected-by-edit-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V37",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V37-22a2176b0a-cfr24.mp4?v=1792909324398389500",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4",
+        "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+        "duration": 29.87,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4",
+        "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+        "duration": 29.87
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-018",
+          "roleControlOnly": "视频（LI06B2，我（心声））",
+          "text": "他被免了队长，留下做粮兵。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-019",
+          "roleControlOnly": "视频（LI06B2，我（心声））",
+          "text": "人活着，可这趟北伐，还是得退。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-020",
+          "roleControlOnly": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-021",
+          "roleControlOnly": "视频（LI06B2）",
+          "text": "我走到空车后搭手，车轮越过浅车辙继续向南。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "misreadIntervals": [],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4",
+      "newSHA": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "newDuration": 29.87,
+      "durationChange": 0.0,
+      "action": "当前SHA自查只定位到三句合法原话/心声；保留原文件、空车、快乐搭手与撤军动作，没有因是心声而删除。",
+      "editDecisionList": [],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V37-774d79f97b\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V37-774d79f97b.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json"
+      ],
+      "entry": "E1实际裁处完成",
+      "next": [
+        "V42"
+      ],
+      "endEvent": "无新增剧情状态",
+      "keyActionsAndBoundaries": [
+        "保持原定E1分支，普通粮兵/空车/南撤及快乐搭手；不能作为其他结局结果。"
+      ],
+      "audio": {
+        "status": "ASR-audited-existing-audio-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    },
+    {
+      "id": "V42",
+      "reviewPolicy": "20261025-no-meta-no-cards-no-boxes",
+      "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+      "userComment": "",
+      "userReviewedVersion": {
+        "browserVideo": "/groups/G5/assembled/V42-R2-continuous-voiced-cfr24.mp4?v=1792907068994914200",
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4",
+        "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+        "duration": 15.1,
+        "approved": false,
+        "note": "",
+        "reviewedByUserInStory": false
+      },
+      "productionBaseline": {
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4",
+        "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+        "duration": 15.1
+      },
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY13-002",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "魏地广人众，蜀中这些年，却一再折损。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-003",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "光改这趟运粮，补不上这些缺口。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-004",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "还得往更早的时候去。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY13-001",
+          "roleControlOnly": "视频（LI07）",
+          "text": "旧卷摊开，户口、征发与历次损耗的记录逐一映入眼前。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "misreadIntervals": [],
+      "newFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4",
+      "newSHA": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "newDuration": 15.1,
+      "durationChange": 0.0,
+      "action": "当前SHA自查只定位到三句合法心声；保留干净纸背/翻页原文件，没有把心声当元说明删除。",
+      "editDecisionList": [],
+      "pictureEvidence": [
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review-motion.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\review\\V42-8abbd6b608\\sequence-index.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\final-asr\\V42-8abbd6b608.json",
+        "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\technical-checks.json"
+      ],
+      "entry": "仅E1或E3对应裁处完成",
+      "next": [
+        "END-E1",
+        "END-E3"
+      ],
+      "endEvent": "按入口保存E1/E3，不新设结局",
+      "keyActionsAndBoundaries": [
+        "只用于原定E1/E3旧记录语境；纸背不提供人口/粮数精确证明。"
+      ],
+      "audio": {
+        "status": "ASR-audited-existing-audio-pending-listening",
+        "textAudit": "ASR定位只见白名单原句及同音识别差异；ASR不能保证逐字正确、说话人、口型、音色或无BGM。",
+        "actualListeningCompleted": false,
+        "speakerListeningVerified": false,
+        "timbreApproved": false,
+        "bgmVerifiedAbsent": false,
+        "newAudioRequests": 0,
+        "newTTS": 0,
+        "wrongPresetTTS2Adopted": false,
+        "source": "既有同角色NPC原声及已有玩家独立WAV；未把旧7条错误preset TTS2用于本组"
+      },
+      "userApproved": false,
+      "audioApproved": false,
+      "gameIntegrated": false,
+      "unresolved": [
+        "实际逐字听审、切口听感、说话人/音色、口型与无BGM审核仍待完成。"
+      ]
+    }
+  ],
+  "newAudioRequests": 0,
+  "newVideoRequests": 0,
+  "newReferenceUploads": 0,
+  "newTTS": 0,
+  "unknownOriginal": {
+    "id": "V32A-01",
+    "neverRepost": true
+  },
+  "oldWrongPresetTTS2Adopted": false,
+  "userApproved": false,
+  "audioApproved": false,
+  "gameIntegrated": false,
+  "unresolved": [
+    "七条均待实际听审：逐字发音、说话人/音色、拼接流畅、口型及BGM不能由ASR/技术检查判定。"
+  ],
+  "handoffToENDINGS": {
+    "sourceFiles": [
+      "V36-02-final-30f94a3f01.mp4",
+      "V36-06-final-53ddf10e06.mp4"
+    ],
+    "notified": true,
+    "replaceEntireE1": false,
+    "protectHappyEndingAndFinalInnerVoice": true
+  }
+}

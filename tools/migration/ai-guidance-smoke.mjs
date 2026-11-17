@@ -1,0 +1,91 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { createStaticServer } from '../../GameStarter/web-demo/serve.mjs';
+const server = createStaticServer(); await new Promise(ok => server.listen(0, '127.0.0.1', ok));
+const base = 'http://127.0.0.1:' + server.address().port;
+const out = 'outputs/ai-guidance-20261102'; mkdirSync(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const checks = [], errors = []; let modelCalls = 0;
+async function fixture() {
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  let config = { apiKey: '', baseUrl: 'https://example.test/v1', model: 'fixture' };
+  await context.route('http://127.0.0.1:8787/**', async route => {
+    const headers = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' };
+    if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 204, headers });
+    const path = new URL(route.request().url()).pathname;
+    if (path === '/health') return route.fulfill({ headers, json: { configured: !!config.apiKey } });
+    if (path.endsWith('/settings')) {
+      if (route.request().method() === 'POST') config = route.request().postDataJSON();
+      return route.fulfill({ headers, json: config });
+    }
+    modelCalls++; return route.fulfill({ headers, json: { text: 'OK', responseId: 'fixture' } });
+  });
+  const page = await context.newPage(); page.on('pageerror', error => errors.push(error.message));
+  return { context, page };
+}
+try {
+  const first = await fixture(); const p = first.page;
+  await p.goto(base); await p.locator('.ai-setup-intro').waitFor(); await p.locator('#api-key:not([disabled])').waitFor();
+  assert.equal(await p.locator('#api-settings').getAttribute('open'), '');
+  assert.equal(await p.locator('#api-key').getAttribute('type'), 'password');
+  assert.equal(modelCalls, 0);
+  await p.screenshot({ path: out + '/first-setup.png' });
+  await p.getByRole('button', { name: '暂不配置，继续游戏', exact: true }).click();
+  await p.reload(); await p.locator('.game-menu').waitFor(); assert.equal(await p.locator('.ai-setup-intro').count(), 0);
+  checks.push('首次说明 Token、配置字段与可跳过玩法；退出后不重复弹出，零模型请求');
+  await p.goto(base + '/?playtest=weiyan-first'); await p.locator('#player-expression').waitFor();
+  assert.match(await p.locator('.ai-guidance').innerText(), /本地判定/);
+  await p.screenshot({path:out+'/expression-guidance.png'});
+  const saveBefore = await p.evaluate(() => localStorage.getItem('wuzhang-chapter-session-v1:weiyan-first'));
+  await p.locator('[data-action=configure-ai]').click(); await p.locator('#api-key:not([disabled])').waitFor();
+  await p.locator('#api-key').fill('fixture-only-token'); await p.locator('[data-action=save-api]').click();
+  await p.getByText('配置已保存。', { exact: true }).waitFor(); await p.locator('.modal-close').click();
+  assert.equal(await p.locator('[data-action=generate-expression]').innerText(), '润色表达');
+  assert.equal(modelCalls, 0);
+  assert.equal(await p.evaluate(() => JSON.parse(localStorage.getItem('wuzhang-chapter-session-v1:weiyan-first')).phase), JSON.parse(saveBefore).phase);
+  checks.push('表达环节可直接配置并启用 AI；保存不收费测试，不推进剧情');
+  await first.context.close();
+  const third = await fixture();
+  await third.context.addInitScript(() => {
+    localStorage.setItem('wuzhang-runtime-mode-v1', 'ai-phone');
+    localStorage.setItem('wuzhang-chapter-history-v1', JSON.stringify({ version: 1, entered: ['wuzhang', 'grain'], completed: ['wuzhang', 'grain'] }));
+  });
+  await third.page.goto(base + '/?chapter=jieting&playtest=reinforcement');
+  await third.page.locator('[data-option]').first().waitFor();
+  assert.match(await third.page.locator('.ai-guidance').innerText(), /预设发言/);
+  assert.equal(await third.page.locator('#player-expression').count(), 0);
+  await third.page.screenshot({ path: out + '/jieting-no-token.png' });
+  checks.push('街亭按实际未配置状态展示预设发言与配置入口，不把启用偏好当作已接入');
+  await third.context.close();
+  const fifth = await fixture(); await fifth.page.goto(base + '/?chapter=jingzhou&playtest=reports');
+  await fifth.page.locator('.jz-narrative').waitFor();
+  for (let i = 0; i < 12 && !(await fifth.page.locator('#jz-inquiry').count()); i++) await fifth.page.locator('.dialogue-advance').click();
+  await fifth.page.locator('#jz-inquiry').fill('这份军报是谁亲眼看见的？');
+  await fifth.page.locator('[data-action=configure-ai]').click();
+  await fifth.page.locator('.ai-setup-dialog #api-key:not([disabled])').waitFor();
+  await fifth.page.locator('[data-setup-close]').click();
+  assert.equal(await fifth.page.locator('#jz-inquiry').inputValue(), '这份军报是谁亲眼看见的？');
+  checks.push('荆州提示预设问题与自由追问的区别；配置返回保留问题草稿');
+  await fifth.context.close();
+  const second = await fixture();
+  await second.context.addInitScript(() => localStorage.setItem('wuzhang-chapter-history-v1', JSON.stringify({version:1,entered:['wuzhang'],completed:['wuzhang']})));
+  await second.page.goto(base + '/?chapter=grain&playtest=open1');
+  await second.page.locator('[data-fixed-speech]').first().waitFor();
+  assert.match(await second.page.locator('.ai-guidance').innerText(), /预设发言/);
+  checks.push('第二章未配置时保留预设发言，并能打开共用配置');
+  await second.context.close();
+  const fourth = await fixture();
+  await fourth.context.route('**/api/yiling-rescue/health', route => route.fulfill({json:{ok:true,configured:false}}));
+  await fourth.page.goto(base + '/?chapter=yiling');
+  await fourth.page.locator('.rescue-ai-guide').waitFor();
+  await fourth.page.locator('.rescue-ai-guide button').click();
+  await fourth.page.locator('.ai-setup-dialog #api-key:not([disabled])').waitFor();
+  await fourth.page.screenshot({path:out+'/yiling-setup.png'});
+  await fourth.page.locator('[data-setup-close]').click();
+  checks.push('夷陵提前说明必需的 AI 能力，直接打开共用配置，不发出军令或改进度');
+  await fourth.context.close();
+  assert.deepEqual(errors, []); assert.equal(modelCalls, 0);
+  writeFileSync(out + '/verification.json', JSON.stringify({ checks, errors, modelCalls }, null, 2));
+  console.log(JSON.stringify({ checks, errors, modelCalls }));
+} finally { await browser.close(); server.closeAllConnections(); await new Promise(ok => server.close(ok)); }

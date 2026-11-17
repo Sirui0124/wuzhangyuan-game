@@ -1,0 +1,150 @@
+{
+  "status": "batch2-review-ready-except-V25-unknown-audio",
+  "groups": [
+    {
+      "group": "G1",
+      "title": "伤帐初识与第一次交谈",
+      "clips": [
+        "V01",
+        "V02",
+        "V03A",
+        "V03B",
+        "V04",
+        "V05",
+        "V06",
+        "V07",
+        "V08A",
+        "V08B",
+        "V09",
+        "V10",
+        "L01",
+        "V11T",
+        "V11D",
+        "V11R",
+        "V11A",
+        "V11N",
+        "V12"
+      ]
+    },
+    {
+      "group": "G2",
+      "title": "查粮取证与三种判断",
+      "clips": [
+        "V13",
+        "V14",
+        "V15",
+        "V16A",
+        "V16B",
+        "V16C",
+        "V17",
+        "V18",
+        "V19A",
+        "V19B",
+        "V19C",
+        "V20"
+      ]
+    },
+    {
+      "group": "G3",
+      "title": "揭穿与访村夜谈",
+      "clips": [
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25"
+      ]
+    },
+    {
+      "group": "G4",
+      "title": "军情与第二次交谈",
+      "clips": [
+        "V26",
+        "V27",
+        "V28A",
+        "V28B",
+        "V28C",
+        "V29",
+        "V30",
+        "L02",
+        "V31T",
+        "V31D",
+        "V31R",
+        "V31A",
+        "V31N",
+        "V32R"
+      ]
+    },
+    {
+      "group": "G5",
+      "title": "共同补救与归途",
+      "clips": [
+        "V32A",
+        "V33",
+        "V34",
+        "V35",
+        "V36",
+        "V37",
+        "V42"
+      ]
+    },
+    {
+      "group": "G6",
+      "title": "救人交案与放行结局",
+      "clips": [
+        "V38",
+        "V39",
+        "V40",
+        "V41E",
+        "V41L",
+        "V43"
+      ]
+    }
+  ],
+  "threads": [
+    {
+      "group": "G1",
+      "threadId": "01a16f51-a6b7-7b63-99fb-086a1dd5a762",
+      "hostId": "local"
+    },
+    {
+      "group": "G2",
+      "threadId": "01a16f51-ae8f-7051-a1f3-c63474171b1f",
+      "hostId": "local"
+    },
+    {
+      "group": "G3",
+      "threadId": "01a16f51-b874-7df1-80b2-fde5991b80a5",
+      "hostId": "local"
+    },
+    {
+      "group": "G4",
+      "threadId": "01a16f51-c836-7ae2-8ec7-3483401dfe32",
+      "hostId": "local"
+    },
+    {
+      "group": "G5",
+      "threadId": "01a16f51-dd26-7b73-b47f-d237b5febdc3",
+      "hostId": "local"
+    },
+    {
+      "group": "G6",
+      "threadId": "01a16f51-e9b3-7933-a313-ad21eee998ec",
+      "hostId": "local"
+    }
+  ],
+  "productionCompletedAt": "2026-10-25 12:17:26",
+  "userApproved": false,
+  "gameIntegrated": false,
+  "pictureUsabilityReviewStartedAt": "2026-10-25 12:48:42",
+  "pictureUsabilityCompletedAt": "2026-10-25T14:31:25.630964+08:00",
+  "activeUserRepairPolicy": "reviews/user-20261025-batch2/repair-policy.json",
+  "videoRegenerationPolicy": {
+    "policyFile": "regeneration-policy.json",
+    "videoApiSubmissionEnabled": false,
+    "automaticVideoRepostEnabled": false,
+    "maxDurationSeconds": 30,
+    "deliveryFormat": "independent-local-markdown",
+    "effectiveAt": "2026-10-25T19:11:13+08:00"
+  }
+}

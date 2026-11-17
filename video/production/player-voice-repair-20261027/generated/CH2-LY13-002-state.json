@@ -1,0 +1,145 @@
+{
+  "id": "CH2-LY13-002",
+  "node": "CH2-LY13-002",
+  "text": "魏地广人众，蜀中这些年，却一再折损。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 4.02,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "f9c49a7a-a24c-4726-b5b3-36781d4fd571",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:14:55.587Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“魏地广人众，蜀中这些年，却一再折损。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约4.02秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "321ce1940368d33a887544e095988331254ca394758454da1949df2d251edc24",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "202610271914554C6F2BA18920BAE5171E",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY13-002-v1.wav",
+  "sha256": "9e4d3ae6123d9ce8b7db812005b6ed352ea663f9cbefbfc0d07d7690837c0b6c",
+  "duration": 4,
+  "originalDuration": 4,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 3960,
+        "start_time": 120,
+        "text": "魏地广人众，蜀中这些年，却一再折损。",
+        "words": [
+          {
+            "end_time": 200,
+            "start_time": 120,
+            "text": "魏"
+          },
+          {
+            "end_time": 440,
+            "start_time": 360,
+            "text": "地"
+          },
+          {
+            "end_time": 720,
+            "start_time": 560,
+            "text": "广"
+          },
+          {
+            "end_time": 960,
+            "start_time": 760,
+            "text": "人"
+          },
+          {
+            "end_time": 1120,
+            "start_time": 1080,
+            "text": "众"
+          },
+          {
+            "end_time": 1120,
+            "start_time": 1120,
+            "text": "，"
+          },
+          {
+            "end_time": 2040,
+            "start_time": 2000,
+            "text": "蜀"
+          },
+          {
+            "end_time": 2320,
+            "start_time": 2240,
+            "text": "中"
+          },
+          {
+            "end_time": 2560,
+            "start_time": 2440,
+            "text": "这"
+          },
+          {
+            "end_time": 2680,
+            "start_time": 2560,
+            "text": "些"
+          },
+          {
+            "end_time": 2960,
+            "start_time": 2680,
+            "text": "年"
+          },
+          {
+            "end_time": 2960,
+            "start_time": 2960,
+            "text": "，"
+          },
+          {
+            "end_time": 3240,
+            "start_time": 3000,
+            "text": "却"
+          },
+          {
+            "end_time": 3440,
+            "start_time": 3240,
+            "text": "一"
+          },
+          {
+            "end_time": 3600,
+            "start_time": 3480,
+            "text": "再"
+          },
+          {
+            "end_time": 3800,
+            "start_time": 3720,
+            "text": "折"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3920,
+            "text": "损"
+          },
+          {
+            "end_time": 3960,
+            "start_time": 3960,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "魏地广人众，蜀中这些年，却一再折损。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:15:40.273Z"
+}

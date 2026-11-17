@@ -1,0 +1,2940 @@
+{
+  "version": "ch2-unified-flow-20261025-review3",
+  "status": "分段待review；无Prompt、无新生成、未接游戏",
+  "sourceTable": "https://my.feishu.cn/sheets/HDuhsadNNhnzgBtG6vScRQo0nEc",
+  "reviewDoc": "https://my.feishu.cn/docx/N6zrdpuSboQEIdx2AxncXGvDnkc",
+  "clips": [
+    {
+      "id": "V01",
+      "name": "山路获救",
+      "scriptNodes": [
+        "CH2-LY01-001"
+      ],
+      "entry": "开章",
+      "next": [
+        "V02"
+      ],
+      "endEvent": "实际救援发生；尚未识别苟安",
+      "mode": "固定视频",
+      "note": "沿用LI01候选；现片能否承载改后台词另核。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY01-001",
+          "speaker": "视频（LI01）",
+          "text": "山路上的粮袋滑向崖边，我失足时被一名队长拉住。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V02",
+      "name": "回忆与伤帐认人",
+      "scriptNodes": [
+        "CH2-LY01-002",
+        "CH2-LY01-007",
+        "CH2-LY01-008",
+        "CH2-LY01-009",
+        "CH2-LY01-011",
+        "CH2-LY01-012",
+        "CH2-LY01-013",
+        "CH2-LY01-014",
+        "CH2-LY02-001"
+      ],
+      "entry": "V01结束",
+      "next": [
+        "UI-LIGHT"
+      ],
+      "endEvent": "实际认人；记忆不是本轮事实",
+      "mode": "固定视频",
+      "note": "含LI02及画外心声；对面苟安不替我说话。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY01-002",
+          "speaker": "我（心声）",
+          "text": "第四次北伐。这回，我成了运粮兵。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-007",
+          "speaker": "我（心声）",
+          "text": "我记得，苟安是李严的部下。他因运粮受罚，怀恨在心。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-008",
+          "speaker": "我（心声）",
+          "text": "后来他投了魏，又回来散布丞相篡位的谣言，后主便召回了丞相。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-009",
+          "speaker": "我（心声）",
+          "text": "得先弄清苟安现在的打算，也许还来得及。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-011",
+          "speaker": "视频（LI02）",
+          "text": "我掀帘，认出榻上的伤者正是崖边救我的队长。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY01-012",
+          "speaker": "我（心声）",
+          "text": "原来你就是苟安？",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY01-013",
+          "speaker": "我",
+          "text": "你接下来打算降魏？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY01-014",
+          "speaker": "苟安",
+          "text": "你说什么？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-001",
+          "speaker": "苟安",
+          "text": "谁让你来问这个的？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V03A",
+      "name": "开场说明来意A",
+      "scriptNodes": [
+        "CH2-LY02-003"
+      ],
+      "entry": "UI-LIGHT选A",
+      "next": [
+        "V04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "额外不计分轻选；只播所选一项。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-003",
+          "speaker": "我（选项）",
+          "text": "是我问得冒失。看你伤成这样，我怕你一气之下走了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V03B",
+      "name": "开场说明来意B",
+      "scriptNodes": [
+        "CH2-LY02-004"
+      ],
+      "entry": "UI-LIGHT选B",
+      "next": [
+        "V04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "额外不计分轻选；只播所选一项。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-004",
+          "speaker": "我（选项）",
+          "text": "你救过我，我来看看你。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V04",
+      "name": "饮酒自述与否认赴魏",
+      "scriptNodes": [
+        "CH2-LY02-005",
+        "CH2-LY02-006",
+        "CH2-LY02-007",
+        "CH2-LY02-008",
+        "CH2-LY02-009"
+      ],
+      "entry": "V03A/B结束",
+      "next": [
+        "V05"
+      ],
+      "endEvent": "按原来源保存实际口供",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-005",
+          "speaker": "苟安",
+          "text": "永安那地方，五月不灌两口酒，江风能钻进骨头缝。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-006",
+          "speaker": "我",
+          "text": "那咱们确实是误了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-007",
+          "speaker": "苟安",
+          "text": "我认栽，没什么委屈，养好伤就行了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-008",
+          "speaker": "苟安",
+          "text": "我没打算去魏国。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-009",
+          "speaker": "我",
+          "text": "那是我多心了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V05",
+      "name": "夜间取账",
+      "scriptNodes": [
+        "CH2-LY02-010",
+        "CH2-LY02-011",
+        "CH2-LY02-012",
+        "CH2-LY02-013"
+      ],
+      "entry": "V04结束",
+      "next": [
+        "UI-DATE"
+      ],
+      "endEvent": "获准查看，不等于拿走原件",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-010",
+          "speaker": "演出",
+          "text": "此后几夜，我在营外留意粮队的动静。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-011",
+          "speaker": "演出",
+          "text": "第三夜，一队粮兵在灯下交接文书。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-012",
+          "speaker": "我",
+          "text": "这份交接记录，可以让我看看吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-013",
+          "speaker": "粮队管事",
+          "text": "嗯，看吧。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V06",
+      "name": "日期疑点",
+      "scriptNodes": [
+        "CH2-LY02-015"
+      ],
+      "entry": "UI-DATE实际读完",
+      "next": [
+        "UI-GO-GOUAN"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "六月领粮不能单独证明五月粮在哪里。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-015",
+          "speaker": "我（心声）",
+          "text": "他说五月喝的酒，六月初二才领到粮。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V07",
+      "name": "带记录回伤帐",
+      "scriptNodes": [
+        "CH2-LY02-016",
+        "CH2-LY02-017"
+      ],
+      "entry": "UI-GO-GOUAN实际选择去找",
+      "next": [
+        "UI-N1"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-016",
+          "speaker": "演出",
+          "text": "我带着获准抄取的记录回到伤帐。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY02-017",
+          "speaker": "苟安",
+          "text": "你这几夜总在外头走，是来看我，还是怕我跑了？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V08A",
+      "name": "点出委屈分支",
+      "scriptNodes": [
+        "CH2-LY02-018",
+        "CH2-LY02-018A",
+        "CH2-LY02-021",
+        "CH2-LY02-022"
+      ],
+      "entry": "UI-N1选A",
+      "next": [
+        "V09"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "按钮短标签不重复读。保留用户原句；日期推断措辞可在review时改，不擅自换。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-018",
+          "speaker": "我",
+          "text": "你心里就是委屈。我查了记录，你五月喝酒，六月才领到粮。这笔迟粮，不能只拿喝酒来解释吧？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-018A",
+          "speaker": "我",
+          "text": "所以你上次在瞒我。你一定不想就这么算了",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-021",
+          "speaker": "苟安",
+          "text": "......",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-022",
+          "speaker": "苟安",
+          "text": "你说得对，我是委屈。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N1=[0,1,1]仅本题一次"
+    },
+    {
+      "id": "V08B",
+      "name": "关心伤势分支",
+      "scriptNodes": [
+        "CH2-LY02-B01",
+        "CH2-LY02-B02",
+        "CH2-LY02-B03"
+      ],
+      "entry": "UI-N1选B",
+      "next": [
+        "V09"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "按钮短标签不重复读，直接说展开句。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-B01",
+          "speaker": "我",
+          "text": "我还是怕你太难过",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B02",
+          "speaker": "我",
+          "text": "毕竟也不容易",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-B03",
+          "speaker": "苟安",
+          "text": "伤总能养好。可这口气，没那么容易过去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N1=[1,0,0]仅本题一次"
+    },
+    {
+      "id": "V09",
+      "name": "李严下属的顾虑",
+      "scriptNodes": [
+        "CH2-LY02-023",
+        "CH2-LY02-024",
+        "CH2-LY02-025",
+        "CH2-LY02-026",
+        "CH2-LY02-027",
+        "CH2-LY03-001"
+      ],
+      "entry": "V08A/B结束",
+      "next": [
+        "UI-FIRST-LETTER"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY02-023",
+          "speaker": "我",
+          "text": "你不是李严的人吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-024",
+          "speaker": "我",
+          "text": "为什么不找他说明白？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY02-025",
+          "speaker": "苟安",
+          "text": "我就是个替他跑腿的，他哪会替我说话。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-026",
+          "speaker": "苟安",
+          "text": "认个酒误，养好伤，还能接着吃这碗饭。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY02-027",
+          "speaker": "苟安",
+          "text": "真把话说明白，往后还在谁手底下领粮？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-001",
+          "speaker": "演出",
+          "text": "苟安取出一封李丰的信，放在榻边。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V10",
+      "name": "第一封信后的交谈",
+      "scriptNodes": [
+        "CH2-LY03-004",
+        "CH2-LY03-005",
+        "CH2-LY03-006",
+        "CH2-LY03-010",
+        "CH2-LY03-011",
+        "CH2-LY03-012",
+        "CH2-LY03-013",
+        "CH2-LY03-014",
+        "CH2-LY03-015",
+        "CH2-LY03-016",
+        "CH2-LY03-017"
+      ],
+      "entry": "UI-FIRST-LETTER实际读完",
+      "next": [
+        "UI-O1"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY03-004",
+          "speaker": "我",
+          "text": "你们先前议的是什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-005",
+          "speaker": "苟安",
+          "text": "迟粮的事，究竟要不要往上说。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-006",
+          "speaker": "苟安",
+          "text": "我不想一直背着“饮酒误军”这几个字。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-010",
+          "speaker": "苟安",
+          "text": "我想把事情揭开，让这回北伐先停下来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-011",
+          "speaker": "我",
+          "text": "你想讨回公道，为什么一定要停北伐？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-012",
+          "speaker": "苟安",
+          "text": "这回把粮送到了，下一回呢？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-013",
+          "speaker": "苟安",
+          "text": "难道换个人挨打，粮就自己长出来了？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-014",
+          "speaker": "我",
+          "text": "如果还是没人肯查呢？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-015",
+          "speaker": "苟安",
+          "text": "那我就换个肯听的地方。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-016",
+          "speaker": "我",
+          "text": "你就信得过魏国？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY03-017",
+          "speaker": "苟安",
+          "text": "我也没底。你想让我留下，就给我指条路。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "L01",
+      "name": "定制①听者反应底片",
+      "scriptNodes": [],
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O1-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "动态语音＋无口型听者底片",
+      "note": "输入界面不播回应；本人原话走TTS或玩家声音，苟安闭口听。静默底片可循环，不产生事件。",
+      "status": "分段待review；未生成新视频",
+      "lines": [],
+      "dynamicSource": "CH2-LY03-018.confirmedText"
+    },
+    {
+      "id": "V11T",
+      "name": "定制①回应T",
+      "scriptNodes": [
+        "CH2-O1-RT"
+      ],
+      "entry": "O1有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "五模板按T负/D负/R负/D正/其余优先，只播一个。无安全匹配走动态回应，不以示例代原话。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O1-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "你这么说，叫我怎么信你？……要说粮的事，就说粮的事。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压"
+    },
+    {
+      "id": "V11D",
+      "name": "定制①回应D",
+      "scriptNodes": [
+        "CH2-O1-RD"
+      ],
+      "entry": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "五模板按T负/D负/R负/D正/其余优先，只播一个。无安全匹配走动态回应，不以示例代原话。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O1-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中"
+    },
+    {
+      "id": "V11R",
+      "name": "定制①回应R",
+      "scriptNodes": [
+        "CH2-O1-RR"
+      ],
+      "entry": "O1有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "五模板按T负/D负/R负/D正/其余优先，只播一个。无安全匹配走动态回应，不以示例代原话。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O1-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "这话说得痛快，可真问到跟前，拿什么让人认？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断"
+    },
+    {
+      "id": "V11A",
+      "name": "定制①回应A",
+      "scriptNodes": [
+        "CH2-O1-RA"
+      ],
+      "entry": "O1有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "五模板按T负/D负/R负/D正/其余优先，只播一个。无安全匹配走动态回应，不以示例代原话。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O1-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "你去查。查到什么，你照实回来告诉我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动"
+    },
+    {
+      "id": "V11N",
+      "name": "定制①回应N",
+      "scriptNodes": [
+        "CH2-O1-RN"
+      ],
+      "entry": "O1有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "V12"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "五模板按T负/D负/R负/D正/其余优先，只播一个。无安全匹配走动态回应，不以示例代原话。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O1-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "先看看这批粮，再说往后。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "其余有效表达；中性句不得补玩家未说过的关心、承诺或动机"
+    },
+    {
+      "id": "V12",
+      "name": "暂留与交付凭据",
+      "scriptNodes": [
+        "CH2-LY03-021",
+        "CH2-LY03-022",
+        "CH2-LY03-023",
+        "CH2-LY03-024",
+        "CH2-LY03-025"
+      ],
+      "entry": "定制①一个安全回应结束",
+      "next": [
+        "V13"
+      ],
+      "endEvent": "实际暂留、交本队凭据；被扣粮说法仅是口供",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY03-021",
+          "speaker": "苟安",
+          "text": "好，我先不走。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-022",
+          "speaker": "演出",
+          "text": "苟安交出本队领取凭据，指着上面的村名和追加粮批次。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY03-023",
+          "speaker": "苟安",
+          "text": "就是这批。记录上写的那天之前，粮早就备好了，是李严扣着不发。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-024",
+          "speaker": "苟安",
+          "text": "凭这个能领本队材料，别拿着它乱闯。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY03-025",
+          "speaker": "我（心声）",
+          "text": "先查清这批粮出了什么事。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V13",
+      "name": "仓中核凭据、获准查账",
+      "scriptNodes": [
+        "CH2-LY04-001",
+        "CH2-LY04-002",
+        "CH2-LY04-003"
+      ],
+      "entry": "持真实本队凭据到仓",
+      "next": [
+        "V14"
+      ],
+      "endEvent": "实际核验及获准查本批",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-001",
+          "speaker": "我",
+          "text": "我来领取本队这批粮的交接材料。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-002",
+          "speaker": "粮队管事",
+          "text": "凭据对得上，我陪你问仓吏。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY04-003",
+          "speaker": "仓吏",
+          "text": "这批粮的收发账可以查。其他队的账，先别动。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V14",
+      "name": "粮运画卷",
+      "scriptNodes": [
+        "CH2-LY04-004"
+      ],
+      "entry": "获准查本批后",
+      "next": [
+        "V15"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "流程示意，不提前显示缺额答案；无旁白、无新增人声。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-004",
+          "speaker": "视频（粮运画卷）",
+          "text": "画卷铺开，先呈现地方应征、实际征收、入仓、调拨发出、粮队领取的关系，再从粮队领取处沿粮路往回看。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V15",
+      "name": "倒查起点与三份账页",
+      "scriptNodes": [
+        "CH2-LY04-F01",
+        "CH2-LY04-D01",
+        "CH2-LY04-D02",
+        "CH2-LY04-D03"
+      ],
+      "entry": "V14结束",
+      "next": [
+        "UI-N2"
+      ],
+      "endEvent": "各原件实际展示到相应文字后才取得",
+      "mode": "固定视频",
+      "note": "文书由后期/游戏准确叠字，不让模型编字；无玩家选择的原件可连续展示，保存逐条来源。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-F01",
+          "speaker": "我",
+          "text": "我从领粮这头往回查，看看哪一段出了岔子，李严又动了什么手脚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D01",
+          "speaker": "原始账页·本队签收",
+          "text": "本队签收：列明批次、经手人、应交粮数和实际收到的粮数。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D02",
+          "speaker": "原始账页·出仓交付",
+          "text": "出仓交付：记有交给本队的实粮数；欠交的部分列在缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-D03",
+          "speaker": "原始账页·途中损耗",
+          "text": "途中损耗：记在本队行程册中，发生在领粮之后。领粮时欠交的部分，另记在交付缺额栏。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ]
+    },
+    {
+      "id": "V16A",
+      "name": "核交接选项",
+      "scriptNodes": [
+        "CH2-LY04-Q1A"
+      ],
+      "entry": "UI-N2选A",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q1A",
+          "speaker": "我（普通选项）",
+          "text": "先把出仓和签收对一遍，看缺口是在领粮前，还是在路上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "commitScore": "N2严谨+2一次"
+    },
+    {
+      "id": "V16B",
+      "name": "去问损耗与认罪",
+      "scriptNodes": [
+        "CH2-LY07-W01",
+        "CH2-LY07-W02"
+      ],
+      "entry": "UI-N2选B",
+      "next": [
+        "UI-EARLY"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "Q1B为按钮、W01是实际说出口的展开句，只说一次，不把按钮再念一遍。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-W01",
+          "speaker": "我（选项）",
+          "text": "先说说你经手后，账上记的那些损耗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-W02",
+          "speaker": "苟安",
+          "text": "好，这笔罪，我认。你报上去吧，别再查了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N2严谨+1一次；实际听到有限认罪口供"
+    },
+    {
+      "id": "V16C",
+      "name": "先行归责与纠正",
+      "scriptNodes": [
+        "CH2-LY04-Q1C",
+        "CH2-LY04-Q1FB0"
+      ],
+      "entry": "UI-N2选C",
+      "next": [
+        "V17"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q1C",
+          "speaker": "我（普通选项）",
+          "text": "苟安认过饮酒误事，这笔缺粮先记在他头上。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q1FB0",
+          "speaker": "粮队管事",
+          "text": "领粮时就缺的那部分，你也算到他头上了？再对对交付记录。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N2不加分"
+    },
+    {
+      "id": "V17",
+      "name": "共同交付核对",
+      "scriptNodes": [
+        "CH2-LY04-F02"
+      ],
+      "entry": "V16A/C或B后明确继续返回仓中",
+      "next": [
+        "V18"
+      ],
+      "endEvent": "保留B+1，不补成A+2",
+      "mode": "固定视频",
+      "note": "B返回入口可补中性到仓镜头，不说玩家已选A。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-F02",
+          "speaker": "前线接收人",
+          "text": "出仓数和本队签收数对得上。路上损耗另有登记，领粮时的缺口还得往前查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V18",
+      "name": "入仓、实收、应征连续核对",
+      "scriptNodes": [
+        "CH2-LY04-T01",
+        "CH2-LY04-D04",
+        "CH2-LY04-W01",
+        "CH2-LY04-D05",
+        "CH2-LY04-C01",
+        "CH2-LY04-D06"
+      ],
+      "entry": "V17结束",
+      "next": [
+        "UI-N3"
+      ],
+      "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+      "mode": "固定视频",
+      "note": "三处账面展示连续完成，若制作需拆小段只能自动续播，不能新增考试。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-T01",
+          "speaker": "我",
+          "text": "苟安说粮早已备好。我得看看，入仓的粮后来发到哪儿了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D04",
+          "speaker": "原始账页·入仓收讫",
+          "text": "本批入仓账：入仓实粮均有发往本队的记录。未征齐的粮列为缺额，仓内没有另存的足额粮。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-W01",
+          "speaker": "我",
+          "text": "仓里这笔对上了。地方送来的粮，都入仓了吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D05",
+          "speaker": "原始账页·地方实收",
+          "text": "地方实收账：本批粮未收足；已收到的粮均有对应的入仓记录。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY04-C01",
+          "speaker": "我",
+          "text": "收到的粮对上了。原定要交多少？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-D06",
+          "speaker": "原始账页·应征及缺额栏",
+          "text": "应征栏：要求交纳的粮数。实收栏：已收到的粮数。本批实收少于应征，差额记为欠交。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ]
+    },
+    {
+      "id": "V19A",
+      "name": "缺额判断A",
+      "scriptNodes": [
+        "CH2-LY04-Q4A",
+        "CH2-LY04-Q4FB0"
+      ],
+      "entry": "UI-N3选A",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4A",
+          "speaker": "我（普通选项）",
+          "text": "应征数还在，粮本该备齐。我还是去查是谁扣住没交。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB0",
+          "speaker": "地方经手人",
+          "text": "应征栏写的是要收多少。这批粮还没收齐，你说被扣的粮在哪儿？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V19B",
+      "name": "缺额判断B",
+      "scriptNodes": [
+        "CH2-LY04-Q4B"
+      ],
+      "entry": "UI-N3选B",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4B",
+          "speaker": "我（普通选项）",
+          "text": "收发都对得上，征收时就缺粮了。再查是谁定的催征和交粮要求。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V19C",
+      "name": "缺额判断C",
+      "scriptNodes": [
+        "CH2-LY04-Q4C",
+        "CH2-LY04-Q4FB1"
+      ],
+      "entry": "UI-N3选C",
+      "next": [
+        "V20"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-Q4C",
+          "speaker": "我（普通选项）",
+          "text": "先记下这批粮没征齐。其他的还得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY04-Q4FB1",
+          "speaker": "地方经手人",
+          "text": "先记下。前面的交付、入仓记录也带上，问人时一块核对。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N3严谨分别0/2/1一次"
+    },
+    {
+      "id": "V20",
+      "name": "调度决定与受杖前签认",
+      "scriptNodes": [
+        "CH2-LY04-C04",
+        "CH2-LY06-014",
+        "CH2-LY06-015",
+        "CH2-LY06-016",
+        "CH2-LY06-017",
+        "CH2-LY06-018",
+        "CH2-LY06-019",
+        "CH2-LY06-021"
+      ],
+      "entry": "V19A/B/C结束",
+      "next": [
+        "UI-RETURN-ACCOUNT"
+      ],
+      "endEvent": "核完M07/M08才知道受杖前知情及同日未补足",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY04-C04",
+          "speaker": "地方经手人",
+          "text": "李严叫停了追加催征，交粮的数目还是原来那么多。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-014",
+          "speaker": "仓中经手人",
+          "text": "这是仓里留的缺额报告。村名、批次都和交接记录对得上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-015",
+          "speaker": "缺额报告·正文",
+          "text": "本村追加粮尚未征齐，实收不足，无法按原数交付。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY06-016",
+          "speaker": "我",
+          "text": "这份确认是谁写的？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY06-017",
+          "speaker": "仓中经手人",
+          "text": "苟安亲笔写的，报告送到那天我就在场。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-018",
+          "speaker": "送达记录·正文",
+          "text": "报告送达、苟安签认：均在本批交接记录所列当日。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY06-019",
+          "speaker": "仓中经手人",
+          "text": "签字在受杖之前，回执和当天仓账都核过了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY06-021",
+          "speaker": "仓吏",
+          "text": "当天仓账还记着缺额：粮没收齐，发出的也少于应交数。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V21",
+      "name": "拆穿、第二封信与合谋供述",
+      "scriptNodes": [
+        "CH2-LY07-E02",
+        "CH2-LY07-004",
+        "CH2-LY07-005",
+        "CH2-LY07-006",
+        "CH2-LY07-010",
+        "CH2-LY07-011",
+        "CH2-LY07-012",
+        "CH2-LY07-013",
+        "CH2-LY07-014",
+        "CH2-LY07-016",
+        "CH2-LY07-017",
+        "CH2-LY07-018",
+        "CH2-LY07-024"
+      ],
+      "entry": "UI-RETURN-ACCOUNT确认回帐",
+      "next": [
+        "V22"
+      ],
+      "endEvent": "信与供述实际出现后取得；早停查路线不到这里",
+      "mode": "固定视频",
+      "note": "固定质问，不增加一次自由输入；第二封信文字用准确后期字幕/文书。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-E02",
+          "speaker": "我",
+          "text": "你已确认没征齐，为什么还说粮早已备好、被李严扣住？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-004",
+          "speaker": "苟安",
+          "text": "因为你想让大军继续打。我若告诉你，我想让它停下来，你还肯替我查吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-005",
+          "speaker": "演出",
+          "text": "苟安取出另一封李丰来信，推到我面前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY07-006",
+          "speaker": "证物·第二封信摘要",
+          "text": "李丰担忧父亲的安危，劝父亲与苟安停止原先的计划。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY07-010",
+          "speaker": "我",
+          "text": "李丰劝你和李严停手。你们究竟安排了什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-011",
+          "speaker": "苟安",
+          "text": "把缺粮的事捅上去，逼他们查，逼这一回退军。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-012",
+          "speaker": "苟安",
+          "text": "李严肯担一部分责任，我装成被他推出去顶罪的人，让外人把材料送上去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-013",
+          "speaker": "我",
+          "text": "你知道我想留住你。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-014",
+          "speaker": "苟安",
+          "text": "你想扳倒李严，让大军继续打。我就给了你一个往下查的理由。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-016",
+          "speaker": "我",
+          "text": "那天在崖边救我，你也算过我会替你做这些？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY07-017",
+          "speaker": "苟安",
+          "text": "那时候你快掉下去了，我只想着先把人拉上来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-018",
+          "speaker": "苟安",
+          "text": "骗你，是后来的事。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-024",
+          "speaker": "我（心声）",
+          "text": "救命是真的，利用也是真的。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V22",
+      "name": "邀请访村与正式出营批准",
+      "scriptNodes": [
+        "CH2-LY05-001",
+        "CH2-LY05-002",
+        "CH2-LY05-003",
+        "CH2-LY05-004",
+        "CH2-LY05-005",
+        "CH2-LY05-006",
+        "CH2-LY05-007",
+        "CH2-LY05-008",
+        "CH2-LY05-009",
+        "CH2-LY05-010"
+      ],
+      "entry": "V21结束",
+      "next": [
+        "V23"
+      ],
+      "endEvent": "接待令牌与正式出营批准分开记录",
+      "mode": "固定视频",
+      "note": "现有LI03候选＋后续短对白；令牌不直接授出营权限。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY05-001",
+          "speaker": "演出",
+          "text": "问出合谋后，我仍站在苟安榻前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY05-002",
+          "speaker": "视频（LI03，我）",
+          "text": "所以，你让我查了半天，到头来还是要退兵？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY05-003",
+          "speaker": "视频（LI03，苟安）",
+          "text": "你查了粮，可问过种粮的人吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-004",
+          "speaker": "视频（LI03）",
+          "text": "苟安从榻边递出一块令牌。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY05-005",
+          "speaker": "视频（LI03，苟安）",
+          "text": "拿着。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-006",
+          "speaker": "视频（LI03，苟安）",
+          "text": "出营的事，我替你禀明。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-007",
+          "speaker": "视频（LI03，苟安）",
+          "text": "去村里看看，回来再骂我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-008",
+          "speaker": "我",
+          "text": "这令牌能做什么？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY05-009",
+          "speaker": "苟安",
+          "text": "那边的人认这块令牌，会接待你，让你核对材料。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY05-010",
+          "speaker": "粮队管事",
+          "text": "出营已经报准，你随返程粮队去，回来向我交差。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V23",
+      "name": "获准访村的连续见闻",
+      "scriptNodes": [
+        "CH2-LY06-001",
+        "CH2-LY06-012",
+        "CH2-LY06-RETURN"
+      ],
+      "entry": "出营已实际报准",
+      "next": [
+        "V24"
+      ],
+      "endEvent": "访村完整实际呈现后补C06",
+      "mode": "固定视频",
+      "note": "沿LI04候选；村中不插新的选择、取证或同情考试。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY06-001",
+          "speaker": "视频（LI04）",
+          "text": "老妇人收粮",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY06-012",
+          "speaker": "视频（LI04，我（心声））",
+          "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY06-RETURN",
+          "speaker": "视频（衔接）",
+          "text": "返回见苟安",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V24",
+      "name": "夜访回忆",
+      "scriptNodes": [
+        "CH2-LY08-001",
+        "CH2-LY08-002",
+        "CH2-LY08-003",
+        "CH2-LY08-004",
+        "CH2-LY08-005",
+        "CH2-LY08-006",
+        "CH2-LY08-007",
+        "CH2-LY08-008",
+        "CH2-LY08-009",
+        "CH2-LY08-010",
+        "CH2-LY08-011",
+        "CH2-LY08-012",
+        "CH2-LY08-013"
+      ],
+      "entry": "访村后返营",
+      "next": [
+        "V25"
+      ],
+      "endEvent": "保存苟安所述回忆来源，不算我亲见",
+      "mode": "固定视频",
+      "note": "LI05A/B是同一回忆逻辑段；可顺接制作小段，不因此增加交互。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY08-001",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "那夜，我去见过他。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-002",
+          "speaker": "视频（LI05A）",
+          "text": "回忆转入李严书房，灯下只有李严与苟安。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY08-003",
+          "speaker": "视频（LI05A，李严）",
+          "text": "蜀国经不起这么折腾了。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-004",
+          "speaker": "视频（LI05A，李严）",
+          "text": "要让他停下来，就得动一动他的权柄。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-005",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "真要做到这一步？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-006",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "粮草供不上，他总得退。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-007",
+          "speaker": "视频（LI05A，苟安）",
+          "text": "往后，也未必还能打几次。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-008",
+          "speaker": "视频（LI05B，李严）",
+          "text": "错了一回，谁肯认？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-009",
+          "speaker": "视频（LI05B，李严）",
+          "text": "总说再打一次，就能把前头赔进去的赢回来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-010",
+          "speaker": "视频（LI05B，李严）",
+          "text": "今日怪你误了粮，明日怪我办事不力。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-011",
+          "speaker": "视频（LI05B，李严）",
+          "text": "换了你我，照旧征粮，照旧出兵。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-012",
+          "speaker": "视频（LI05B，苟安）",
+          "text": "可借魏人的手……还能由得我们吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY08-013",
+          "speaker": "演出",
+          "text": "灯影淡去，我仍站在伤帐榻前。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V25",
+      "name": "赴魏散谣的未实行计划与风险",
+      "scriptNodes": [
+        "CH2-LY09-P01",
+        "CH2-LY09-P02",
+        "CH2-LY09-P03",
+        "CH2-LY09-P04",
+        "CH2-LY09-P05",
+        "CH2-LY09-001",
+        "CH2-LY09-002",
+        "CH2-LY09-003",
+        "CH2-LY09-004",
+        "CH2-LY09-005"
+      ],
+      "entry": "V24结束",
+      "next": [
+        "V26"
+      ],
+      "endEvent": "实际听完计划/未实施/风险才补C14",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-P01",
+          "speaker": "苟安",
+          "text": "要是退了军还接着征，我们还有一个打算。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P02",
+          "speaker": "苟安",
+          "text": "我去魏国，求他们放我回来，散布丞相要篡位的谣言，逼朝廷召军。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P03",
+          "speaker": "我",
+          "text": "李严知道？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-P04",
+          "speaker": "苟安",
+          "text": "知道，李丰也正是为这事劝我们住手。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-P05",
+          "speaker": "苟安",
+          "text": "眼下还没有赴魏，也没有把谣言传出去。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-001",
+          "speaker": "苟安",
+          "text": "只要把军召回来，先让这些人活过这一回。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-002",
+          "speaker": "我",
+          "text": "你去了魏国，他们逼问粮道，你怎么应付？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-003",
+          "speaker": "我",
+          "text": "他们要是趁缺粮追击呢？谣言传开了，你又怎么收场？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-004",
+          "speaker": "苟安",
+          "text": "我没有这个把握。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-005",
+          "speaker": "苟安",
+          "text": "可再这么征下去，后方撑得住吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V26",
+      "name": "返营交差与军情说明",
+      "scriptNodes": [
+        "CH2-LY09-006",
+        "CH2-LY09-007",
+        "CH2-LY09-008",
+        "CH2-LY09-009",
+        "CH2-LY09-010",
+        "CH2-LY09-011",
+        "CH2-LY09-012",
+        "CH2-LY09-013",
+        "CH2-LY09-014"
+      ],
+      "entry": "V25结束",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-006",
+          "speaker": "我",
+          "text": "我先回去交差，把实收和欠缺的粮数报清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-007",
+          "speaker": "演出",
+          "text": "我返营交差，军吏核收本次获准查阅的粮情材料。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY09-008",
+          "speaker": "军吏",
+          "text": "缺额、民食和种粮的情况，一并列明。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-009",
+          "speaker": "转运简报·正文",
+          "text": "敌方正在修整粮道、筹集军资，并恢复屯田。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY09-010",
+          "speaker": "我",
+          "text": "那我们退了，他们也还会继续准备？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-011",
+          "speaker": "军吏",
+          "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-012",
+          "speaker": "军吏",
+          "text": "丞相看过这批粮情，答的是此次粮乏，当退。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-013",
+          "speaker": "军吏",
+          "text": "他担心休兵这段日子，魏军修田积粮，将来更难打。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-014",
+          "speaker": "军吏",
+          "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V27",
+      "name": "带回消息后的分歧",
+      "scriptNodes": [
+        "CH2-LY09-017",
+        "CH2-LY09-018",
+        "CH2-LY09-020",
+        "CH2-LY09-021",
+        "CH2-LY09-022",
+        "CH2-LY09-023",
+        "CH2-LY09-024"
+      ],
+      "entry": "V26结束",
+      "next": [
+        "UI-N4"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-017",
+          "speaker": "演出",
+          "text": "我将简报中可转述的消息带回伤帐。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY09-018",
+          "speaker": "我",
+          "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-020",
+          "speaker": "苟安",
+          "text": "所以百姓还得一直这样撑下去？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-021",
+          "speaker": "我",
+          "text": "先把实数报上去，请他重新算算这仗还打得起吗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-022",
+          "speaker": "我",
+          "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-023",
+          "speaker": "苟安",
+          "text": "真话送上去，就一定有人肯听？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY09-024",
+          "speaker": "我",
+          "text": "我也说不准。我能做的是把查到的事、补救的办法写清楚，亲自核实送到了没有。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ]
+    },
+    {
+      "id": "V28A",
+      "name": "访村后态度A",
+      "scriptNodes": [
+        "CH2-LY09-QA",
+        "CH2-LY09-RA"
+      ],
+      "entry": "UI-N4选A",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-QA",
+          "speaker": "我（普通选项）",
+          "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-RA",
+          "speaker": "苟安",
+          "text": "你总算去看过了。我不想下一回还把他们逼到这一步。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N4固定增量一次；口头包庇不等于已执行隐瞒"
+    },
+    {
+      "id": "V28B",
+      "name": "访村后态度B",
+      "scriptNodes": [
+        "CH2-LY09-QB",
+        "CH2-LY09-RB"
+      ],
+      "entry": "UI-N4选B",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-QB",
+          "speaker": "我（普通选项）",
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-RB",
+          "speaker": "苟安",
+          "text": "这话我听见了。可真说出去，会落个什么下场？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N4固定增量一次；口头包庇不等于已执行隐瞒"
+    },
+    {
+      "id": "V28C",
+      "name": "访村后态度C",
+      "scriptNodes": [
+        "CH2-LY09-QC",
+        "CH2-LY09-RC"
+      ],
+      "entry": "UI-N4选C",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY09-QC",
+          "speaker": "我（普通选项）",
+          "text": "只要能让他们少受些苦，你们隐瞒的事，我就不往上说了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY09-RC",
+          "speaker": "苟安",
+          "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "commitScore": "N4固定增量一次；口头包庇不等于已执行隐瞒"
+    },
+    {
+      "id": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "scriptNodes": [
+        "CH2-LY10-001",
+        "CH2-LY10-002",
+        "CH2-LY10-003",
+        "CH2-LY10-004",
+        "CH2-LY10-005",
+        "CH2-LY10-006",
+        "CH2-LY10-007"
+      ],
+      "entry": "UI-ASK-CHANNEL选择前往",
+      "next": [
+        "V30"
+      ],
+      "endEvent": "003至006实际听全才记渠道与风险已告知",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY10-001",
+          "speaker": "演出",
+          "text": "我向收件军吏问明补报与查办的途径。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY10-002",
+          "speaker": "我",
+          "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY10-003",
+          "speaker": "军吏",
+          "text": "可以。停手的实据、补报和各自做过的事，一并交来。该追的责任照样追。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY10-004",
+          "speaker": "军吏",
+          "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY10-005",
+          "speaker": "军吏",
+          "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚，甚至处死。最后如何处置，要等查办。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY10-006",
+          "speaker": "军吏",
+          "text": "案子一交，就正式查办。换个说法也撤不回来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY10-007",
+          "speaker": "我（心声）",
+          "text": "李严做过什么，苟安做过什么，都得如实交代。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V30",
+      "name": "第二次定制交谈的提问",
+      "scriptNodes": [
+        "CH2-O2-OPENING"
+      ],
+      "entry": "返伤帐，途径风险已知",
+      "next": [
+        "UI-O2"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-OPENING",
+          "speaker": "苟安",
+          "text": "该说的，我已经说了。你现在准备拿我怎么办？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "name": "定制②听者反应底片",
+      "scriptNodes": [],
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O2-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "动态语音＋无口型听者底片",
+      "note": "不预制玩家自由句；如与L01时段、造型、光线不一致应单拍，不默认复用。",
+      "status": "分段待review；未生成新视频",
+      "lines": [],
+      "dynamicSource": "CH2-O2-INPUT.confirmedText"
+    },
+    {
+      "id": "V31T",
+      "name": "定制②回应T",
+      "scriptNodes": [
+        "CH2-O2-RT"
+      ],
+      "entry": "O2有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "仅回应已表达意图；A标签也不等于最终补救已接受。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "那你何必还来问我。要怎么做，你自己定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压"
+    },
+    {
+      "id": "V31D",
+      "name": "定制②回应D",
+      "scriptNodes": [
+        "CH2-O2-RD"
+      ],
+      "entry": "O2有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "仅回应已表达意图；A标签也不等于最终补救已接受。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯护我，我记着。可压下这些，就真能把事情停住？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中"
+    },
+    {
+      "id": "V31R",
+      "name": "定制②回应R",
+      "scriptNodes": [
+        "CH2-O2-RR"
+      ],
+      "entry": "O2有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "仅回应已表达意图；A标签也不等于最终补救已接受。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "你想帮我，我听见了。可说到案前，哪一句拿得出凭据？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断"
+    },
+    {
+      "id": "V31A",
+      "name": "定制②回应A",
+      "scriptNodes": [
+        "CH2-O2-RA"
+      ],
+      "entry": "O2有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "仅回应已表达意图；A标签也不等于最终补救已接受。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "办法我听见了。接下来怎么做，你来定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动"
+    },
+    {
+      "id": "V31N",
+      "name": "定制②回应N",
+      "scriptNodes": [
+        "CH2-O2-RN"
+      ],
+      "entry": "O2有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "仅回应已表达意图；A标签也不等于最终补救已接受。 分数只筛候选；不匹配时走DYN-O1或DYN-O2。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-O2-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "你想怎么做，说吧。我听着。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "semanticGuard": "其余有效表达；中性句不得补玩家未说过的关心、承诺或动机"
+    },
+    {
+      "id": "V32R",
+      "name": "补救遭拒",
+      "scriptNodes": [
+        "CH2-LY10-REFUSE"
+      ],
+      "entry": "最终选A但T<4或D<4",
+      "next": [
+        "UI-FALLBACK"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "只播短拒绝，不拍逃跑、死亡；随后回B/C补选。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY10-REFUSE",
+          "speaker": "苟安",
+          "text": "你说得容易。我现在不能把命押在这个办法上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V32A",
+      "name": "同意尝试、苟安实际停手署名",
+      "scriptNodes": [
+        "CH2-LY11-001",
+        "CH2-LY11-002",
+        "CH2-LY11-017",
+        "CH2-LY11-018",
+        "CH2-LY11-019",
+        "CH2-LY11-020",
+        "CH2-LY11-021",
+        "CH2-LY11-022"
+      ],
+      "entry": "最终A且T≥4及D≥4",
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "endEvent": "苟安实际停手、交代与署名；不是E1或E2已结算",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY11-001",
+          "speaker": "我",
+          "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-002",
+          "speaker": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-017",
+          "speaker": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-018",
+          "speaker": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-019",
+          "speaker": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-020",
+          "speaker": "苟安·书信",
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-021",
+          "speaker": "苟安·书信",
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-022",
+          "speaker": "演出",
+          "text": "苟安划去“若仍不听便赴魏”，在自己交代的经过下署名。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V33",
+      "name": "确认后寄出信件",
+      "scriptNodes": [
+        "CH2-LY11-024"
+      ],
+      "entry": "Q真且SEND确认，正文附件仍真实",
+      "next": [
+        "V34"
+      ],
+      "endEvent": "实际交传信人才记寄出",
+      "mode": "固定视频",
+      "note": "确认收件人/正文/附件在UI，不能在未确认前先拍到已寄出。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY11-024",
+          "speaker": "传信人",
+          "text": "我照收件处的指引送去，有回信就交给你。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V34",
+      "name": "李严读信、撤回并补报",
+      "scriptNodes": [
+        "CH2-LY12B-001",
+        "CH2-LY12B-002",
+        "CH2-LY12B-003",
+        "CH2-LY12B-004",
+        "CH2-LY12B-005",
+        "CH2-LY12B-ACT01"
+      ],
+      "entry": "信实际送达李严",
+      "next": [
+        "V35"
+      ],
+      "endEvent": "远方实际停手补报发生；我尚未取得附件",
+      "mode": "固定视频",
+      "note": "沿LI06B1候选；远方镜头不自动发给玩家完整回信。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12B-001",
+          "speaker": "视频（LI06B1）",
+          "text": "李严在日间书房读完来信。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-002",
+          "speaker": "视频（LI06B1，李严）",
+          "text": "我只怕再打下去，百姓撑不住……你说不打，往后又靠什么撑住？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-003",
+          "speaker": "视频（LI06B1，李严）",
+          "text": "蜀国休兵，魏国未必肯停。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-004",
+          "speaker": "视频（LI06B1，李严）",
+          "text": "投魏的计划，就此撤回。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-005",
+          "speaker": "视频（LI06B1，李严）",
+          "text": "粮情如实报，我愿受责。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-ACT01",
+          "speaker": "演出·实际补报",
+          "text": "李严撤回原先行险的安排，将更正后的粮情和自己参与的经过写成说明，署名后一同交出。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V35",
+      "name": "回信到营与核阅",
+      "scriptNodes": [
+        "CH2-LY12B-RECV01",
+        "CH2-LY12B-006",
+        "CH2-LY12B-007",
+        "CH2-LY12B-008",
+        "CH2-LY12B-009",
+        "CH2-LY12B-RECV02"
+      ],
+      "entry": "传信人真实带回签字说明",
+      "next": [
+        "UI-E1-FILE"
+      ],
+      "endEvent": "实际到营、读完回信并核附件才补齐李严补救事件",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12B-RECV01",
+          "speaker": "演出·回信到营",
+          "text": "传信人回到营中，将李严的回信和署名补报交到我手里。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12B-006",
+          "speaker": "李严·回信",
+          "text": "此次粮乏，应据实请退。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-007",
+          "speaker": "李严·回信",
+          "text": "日后是否再战，留待另议。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-008",
+          "speaker": "李严·回信",
+          "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-009",
+          "speaker": "李严·回信",
+          "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-RECV02",
+          "speaker": "演出·核阅补报",
+          "text": "我核过随信附送的更正粮情与李严本人责任说明；该说清的部分已经成文，原来的行险安排已经撤回。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V36",
+      "name": "双方补报正式收件与裁处",
+      "scriptNodes": [
+        "CH2-LY12B-010",
+        "CH2-LY12B-011",
+        "CH2-LY12B-014",
+        "CH2-LY12B-015",
+        "CH2-LY12B-016",
+        "CH2-LY12B-017"
+      ],
+      "entry": "UI-E1-FILE确认；双方停手与全部附件已齐",
+      "next": [
+        "V37"
+      ],
+      "endEvent": "正式核收与裁处后才成立E1",
+      "mode": "固定视频",
+      "note": "",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12B-010",
+          "speaker": "我",
+          "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12B-011",
+          "speaker": "军吏",
+          "text": "原信、查粮材料和两人的补充说明都已收齐。停手和各自的责任，会一并核实。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-014",
+          "speaker": "军吏",
+          "text": "李严交出此次粮运调度职责，受处分，仍须配合查问。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-015",
+          "speaker": "军吏",
+          "text": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任，留下做普通粮兵。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-016",
+          "speaker": "军吏",
+          "text": "这次处置，已考虑两人停手补救的情节。该担的责任仍要担。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-017",
+          "speaker": "演出",
+          "text": "退军令到，未能补足的粮食缺口仍在。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V37",
+      "name": "一起回头的归途",
+      "scriptNodes": [
+        "CH2-LY12B-018",
+        "CH2-LY12B-019",
+        "CH2-LY12B-020",
+        "CH2-LY12B-021"
+      ],
+      "entry": "E1实际裁处完成",
+      "next": [
+        "V42"
+      ],
+      "endEvent": "无新增剧情状态",
+      "mode": "固定视频",
+      "note": "沿LI06B2候选；不能作为E2通用归途，处分不同。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12B-018",
+          "speaker": "视频（LI06B2，我（心声））",
+          "text": "他被免了队长，留下做粮兵。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-019",
+          "speaker": "视频（LI06B2，我（心声））",
+          "text": "人活着，可这趟北伐，还是得退。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-020",
+          "speaker": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-021",
+          "speaker": "视频（LI06B2）",
+          "text": "我走到空车后搭手，车轮越过浅车辙继续向南。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        }
+      ]
+    },
+    {
+      "id": "V38",
+      "name": "救下眼前的人",
+      "scriptNodes": [
+        "CH2-E2-001",
+        "CH2-E2-002",
+        "CH2-E2-003"
+      ],
+      "entry": "Q假且UI-E2-FILE确认；苟安停手署名已实际发生",
+      "next": [
+        "END-E2"
+      ],
+      "endEvent": "个人补报实际核收，留营候查阶段结论已明确告知才E2",
+      "mode": "固定视频",
+      "note": "这是个人补报的阶段结局，不冒充全案最终裁处；附件用中性固定句，不冒称李严已完成补报。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E2-001",
+          "speaker": "我",
+          "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-E2-002",
+          "speaker": "军吏",
+          "text": "材料收到了。苟安停手补报的经过已经记下，人先留营受查。李严一节，还要继续核。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E2-003",
+          "speaker": "我（心声）",
+          "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V39",
+      "name": "晚交案的共同收件",
+      "scriptNodes": [
+        "CH2-LY12A-001",
+        "CH2-LY12A-003"
+      ],
+      "entry": "UI-CASE确认，交全部真实已知材料",
+      "next": [
+        "V40",
+        "V41L"
+      ],
+      "endEvent": "实际收件后按锁定Q分流",
+      "mode": "固定视频",
+      "note": "Q真/假都可复用，不声称已取得缺失材料或已证明全部结论。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12A-001",
+          "speaker": "我",
+          "text": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12A-003",
+          "speaker": "军吏",
+          "text": "收下了。缺多少粮，各人做过什么，会分别查清。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V40",
+      "name": "查办、苟安之死与空铺",
+      "scriptNodes": [
+        "CH2-LY12A-004",
+        "CH2-LY12A-005",
+        "CH2-LY12A-006",
+        "CH2-LY12A-007",
+        "CH2-LY12A-008",
+        "CH2-LY12A-009",
+        "CH2-LY12A-010",
+        "CH2-LY12A-011",
+        "CH2-LY12A-012",
+        "CH2-LY12A-013"
+      ],
+      "entry": "V39实际收件且Q真",
+      "next": [
+        "V42"
+      ],
+      "endEvent": "实际查办裁处完成才E3",
+      "mode": "固定视频",
+      "note": "沿LI06A1/A2候选；不能只因点交案就播放死讯。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12A-004",
+          "speaker": "演出",
+          "text": "查办继续，直到裁处将定，两人仍未共同完成停手、补报与各自交代责任；苟安仍想把推动阻战与行险的主责揽在自己身上。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12A-005",
+          "speaker": "苟安",
+          "text": "往下推的人是我，要问就问我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-006",
+          "speaker": "我",
+          "text": "李严知情的事也写在材料里，该查就得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12A-007",
+          "speaker": "演出",
+          "text": "正式处置传来，我无权更改决定。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12A-008",
+          "speaker": "视频（LI06A1，军吏）",
+          "text": "李严革职，交回官印。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-009",
+          "speaker": "视频（LI06A1，军吏）",
+          "text": "苟安参与阻挠运粮、欺瞒军情，已按军法处死。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-010",
+          "speaker": "视频（LI06A2）",
+          "text": "苟安的铺位空了，撤军的空粮车从帐外经过。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12A-011",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "李严倒了。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12A-012",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "苟安也死了。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12A-013",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "可粮呢？",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V41E",
+      "name": "早停查版：认下来的罪",
+      "scriptNodes": [
+        "CH2-LY07-BAD1",
+        "CH2-LY07-BAD2",
+        "CH2-LY07-BAD3"
+      ],
+      "entry": "普通②B听认罪后，UI-EARLY-FILE明确确认",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "提交现有材料、收件查办与退军收束",
+      "mode": "固定视频",
+      "note": "不知道后段合谋；保留原早支线，不追加死亡。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-BAD1",
+          "speaker": "旁白",
+          "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY07-BAD2",
+          "speaker": "苟安",
+          "text": "大军退了吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-BAD3",
+          "speaker": "旁白",
+          "text": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V41L",
+      "name": "晚支撑不足版：认下来的罪",
+      "scriptNodes": [
+        "CH2-E4-LATE-001",
+        "CH2-E4-LATE-002",
+        "CH2-E4-LATE-003"
+      ],
+      "entry": "V39实际收件且Q假",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "本路线实际查办收束才E4",
+      "mode": "固定视频",
+      "note": "与V41E不可整段混用：已听过李严参与，只是结论可靠支撑不足。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E4-LATE-001",
+          "speaker": "军吏",
+          "text": "你说李严参与，材料里也有这些线索。可几处细节还对不上，眼下不能照你的结论认定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E4-LATE-002",
+          "speaker": "军吏",
+          "text": "苟安认下的责任先录在案，其他的还要核。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E4-LATE-003",
+          "speaker": "我（心声）",
+          "text": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V42",
+      "name": "共同旧卷尾声",
+      "scriptNodes": [
+        "CH2-LY13-001",
+        "CH2-LY13-002",
+        "CH2-LY13-003",
+        "CH2-LY13-004"
+      ],
+      "entry": "仅E1或E3对应裁处完成",
+      "next": [
+        "END-E1",
+        "END-E3"
+      ],
+      "endEvent": "按入口保存E1/E3，不新设结局",
+      "mode": "固定视频",
+      "note": "沿LI07候选；E2、早/晚E4、E5不默认进入此完整尾声。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY13-001",
+          "speaker": "视频（LI07）",
+          "text": "旧卷摊开，户口、征发与历次损耗的记录逐一映入眼前。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY13-002",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "魏地广人众，蜀中这些年，却一再折损。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-003",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "光改这趟运粮，补不上这些缺口。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-004",
+          "speaker": "视频（LI07，我（心声））",
+          "text": "还得往更早的时候去。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V43",
+      "name": "放行与赴魏散谣后果",
+      "scriptNodes": [
+        "CH2-E5-001",
+        "CH2-E5-002"
+      ],
+      "entry": "UI-RELEASE确认",
+      "next": [
+        "END-E5"
+      ],
+      "endEvent": "实际放行后才E5；后果用清楚时间推进表现",
+      "mode": "固定视频",
+      "note": "高分不能抵消最终放行；不销毁后台真实线索。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E5-001",
+          "speaker": "演出·实际放行",
+          "text": "我让开营外的路。苟安离开，未向军吏呈报他的行险安排。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-E5-002",
+          "speaker": "旁白",
+          "text": "后来，苟安去了魏国。关于丞相的谣言，还是传回了营中。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "id": "UI-LIGHT",
+      "description": "额外开场轻选，不计核心五题",
+      "next": [
+        "V03A",
+        "V03B"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-DATE",
+      "description": "展示CH2-LY02-014准确日期记录；实际读完再继续",
+      "next": [
+        "V06"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频",
+      "scriptNodes": [
+        "CH2-LY02-014"
+      ]
+    },
+    {
+      "id": "UI-GO-GOUAN",
+      "description": "去找苟安的行动按钮",
+      "next": [
+        "V07"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-N1",
+      "description": "普通①两选，选后只播对应分支",
+      "next": [
+        "V08A",
+        "V08B"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-FIRST-LETTER",
+      "description": "展示CH2-LY03-002原信；实际读完",
+      "next": [
+        "V10"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频",
+      "scriptNodes": [
+        "CH2-LY03-002"
+      ]
+    },
+    {
+      "id": "UI-O1",
+      "description": "定制①输入、可润色、确认实际原话；空白/服务异常原位",
+      "next": [
+        "L01"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "O1-SCORE",
+      "description": "评分；失败回UI-O1，成功选择一个固定语义回应或动态回应",
+      "next": [
+        "UI-O1",
+        "V11T",
+        "V11D",
+        "V11R",
+        "V11A",
+        "V11N",
+        "DYN-O1"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "DYN-O1",
+      "description": "安全动态NPC语音/文本，非示例替代",
+      "next": [
+        "V12"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-N2",
+      "description": "普通②三选",
+      "next": [
+        "V16A",
+        "V16B",
+        "V16C"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-EARLY",
+      "description": "听认罪后的继续/停查行动，不新增计分核心题",
+      "next": [
+        "V17",
+        "UI-EARLY-FILE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-EARLY-FILE",
+      "description": "明确结束调查及交案确认；取消回上级",
+      "next": [
+        "V41E",
+        "UI-EARLY"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-N3",
+      "description": "普通③三选",
+      "next": [
+        "V19A",
+        "V19B",
+        "V19C"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-RETURN-ACCOUNT",
+      "description": "带缺额报告回去问苟安的行动",
+      "next": [
+        "V21"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-N4",
+      "description": "普通④三选",
+      "next": [
+        "V28A",
+        "V28B",
+        "V28C"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-ASK-CHANNEL",
+      "description": "去问呈报途径的行动",
+      "next": [
+        "V29"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-O2",
+      "description": "定制②输入、编辑、确认原话；服务异常不扣分",
+      "next": [
+        "L02"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "O2-SCORE",
+      "description": "评分成功选一安全回应；异常留原输入",
+      "next": [
+        "UI-O2",
+        "V31T",
+        "V31D",
+        "V31R",
+        "V31A",
+        "V31N",
+        "DYN-O2"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "DYN-O2",
+      "description": "安全动态NPC回应，不替玩家许诺或提前接受补救",
+      "next": [
+        "UI-N5"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-N5",
+      "description": "普通⑤最终A/B/C，不加分；承诺时锁定同一分数/材料版本",
+      "next": [
+        "V32R",
+        "V32A",
+        "UI-CASE",
+        "UI-RELEASE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-FALLBACK",
+      "description": "仅B交案/C放行补选，沿同一快照不刷分",
+      "next": [
+        "UI-CASE",
+        "UI-RELEASE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "BRANCH-QUALITY",
+      "description": "后台沿已锁Q选共同或个人补报，不是玩家额外考试",
+      "next": [
+        "UI-SEND",
+        "UI-E2-FILE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-SEND",
+      "description": "共同方案正文附件可编辑，确认寄出；取消留此处",
+      "next": [
+        "V33",
+        "UI-SEND"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-E1-FILE",
+      "description": "双方补报及原件齐备，正式交件确认；取消留此处",
+      "next": [
+        "V36",
+        "UI-E1-FILE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-E2-FILE",
+      "description": "个人补报与已知材料的正式交件确认；取消留此处",
+      "next": [
+        "V38",
+        "UI-E2-FILE"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-CASE",
+      "description": "正式交案风险确认；取消回原行动菜单，不结算",
+      "next": [
+        "V39",
+        "UI-N5",
+        "UI-FALLBACK"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    },
+    {
+      "id": "UI-RELEASE",
+      "description": "放行风险确认；取消回原行动菜单，不放行",
+      "next": [
+        "V43",
+        "UI-N5",
+        "UI-FALLBACK"
+      ],
+      "type": "控制/界面/动态，不拍成固定对白视频"
+    }
+  ],
+  "endings": [
+    "END-E1",
+    "END-E2",
+    "END-E3",
+    "END-E4",
+    "END-E5"
+  ],
+  "rule": "逻辑播放段不等于生成请求。每个逻辑段内按表演/语速再拆不超过30秒制作单元，自动续播；不跨交互、确认、知情与事件边界。",
+  "sharedBoundaries": [
+    "共用段入口角色态度、造型、伤势、灯光、道具和知情范围一致才复用；不以沿用编号认定旧片可用。",
+    "固定选择在确认本项时记一次分，播放结束不重复加分；剧情事件按真实发言/展示/交件核收记录。",
+    "视频接入后正文只留播放节点、内容说明和衔接；逐句字幕独立保存；当前无新片所以保留对白回退，不同时重复播放两遍。",
+    "UI按钮、输入、错误和分数不念成台词；文书准确叠字不让模型造字；玩家画外声不能由对面NPC张嘴代说。",
+    "63个分段槽位并非63条已确定时长的生成请求；长度要在对白审核和自然语速计时后再定。"
+  ]
+}

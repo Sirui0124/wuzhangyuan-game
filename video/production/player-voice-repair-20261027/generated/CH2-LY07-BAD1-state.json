@@ -1,0 +1,172 @@
+{
+  "id": "CH2-LY07-BAD1",
+  "node": "CH2-LY07-BAD1",
+  "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+  "kind": "thought-or-heavy",
+  "targetSeconds": 4.78,
+  "context": "这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。",
+  "model": "seed-audio-1.0",
+  "endpoint": "https://openspeech.bytedance.com/api/v3/tts/create",
+  "requestId": "ed3df2ca-9a3f-4483-bb9a-beac21495573",
+  "status": "succeeded",
+  "startedAt": "2026-10-27T11:15:46.180Z",
+  "text_prompt": "@音频1和@音频2是同一名成年男性演员在思考和沉重场景中的原声参考。只参考这个人的声线、共鸣、自然咬字和口语节奏，保持同一人的中低沉声线和胸声厚度，不变成通用播报音色，不复述参考录音。这是同一个人的内心独白或沉重叙述，声音稍近，低沉、克制，有思考停顿，不哭喊。唯一允许发声的原句：“军吏接手查办。缺粮的实情报了上去，大军退了。”仅朗读引号内的原句，角色名、我、心声、旁白、画外等标签和全部控制说明均不得读出；原句本来有“我”等词时照读原句。全句约4.78秒内自然说完，句首与句尾各只留约0.05秒气口，不加长叹气，不添加语助词，不漏字、不重复、不匆忙吞字。只生成单人干净近讲人声，无BGM、无背景音乐、无配乐、无音效、无其他人声。",
+  "references": [
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+      "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+      "bytes": 776284,
+      "field": "references[0].audio_data",
+      "userApproved": true
+    },
+    {
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+      "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+      "bytes": 1287844,
+      "field": "references[1].audio_data",
+      "userApproved": true
+    }
+  ],
+  "requestSha256": "e045a724ef9b4523fc4e3c48d8fdd06cd0f4a04737555650eaadd5d0fe00906e",
+  "noPresetSpeaker": true,
+  "noCloneRegistration": true,
+  "userApproved": false,
+  "humanListeningReview": false,
+  "httpStatus": 200,
+  "logId": "2026102719154652589E30E40A440D72E6",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY07-BAD1-v1.wav",
+  "sha256": "21c3544a19f35c89bde1b42ce598e61e3c38c73af475f8b95dbe4b8d319d0a7e",
+  "duration": 4.5,
+  "originalDuration": 4.5,
+  "subtitle": {
+    "sentences": [
+      {
+        "end_time": 1320,
+        "start_time": 200,
+        "text": "军吏接手查办。",
+        "words": [
+          {
+            "end_time": 280,
+            "start_time": 200,
+            "text": "军"
+          },
+          {
+            "end_time": 520,
+            "start_time": 480,
+            "text": "吏"
+          },
+          {
+            "end_time": 800,
+            "start_time": 640,
+            "text": "接"
+          },
+          {
+            "end_time": 960,
+            "start_time": 800,
+            "text": "手"
+          },
+          {
+            "end_time": 1120,
+            "start_time": 1000,
+            "text": "查"
+          },
+          {
+            "end_time": 1320,
+            "start_time": 1280,
+            "text": "办"
+          },
+          {
+            "end_time": 1320,
+            "start_time": 1320,
+            "text": "。"
+          }
+        ]
+      },
+      {
+        "end_time": 4440,
+        "start_time": 2080,
+        "text": "缺粮的实情报了上去，大军退了。",
+        "words": [
+          {
+            "end_time": 2160,
+            "start_time": 2080,
+            "text": "缺"
+          },
+          {
+            "end_time": 2360,
+            "start_time": 2320,
+            "text": "粮"
+          },
+          {
+            "end_time": 2600,
+            "start_time": 2440,
+            "text": "的"
+          },
+          {
+            "end_time": 2680,
+            "start_time": 2600,
+            "text": "实"
+          },
+          {
+            "end_time": 2840,
+            "start_time": 2760,
+            "text": "情"
+          },
+          {
+            "end_time": 3080,
+            "start_time": 2960,
+            "text": "报"
+          },
+          {
+            "end_time": 3240,
+            "start_time": 3080,
+            "text": "了"
+          },
+          {
+            "end_time": 3360,
+            "start_time": 3240,
+            "text": "上"
+          },
+          {
+            "end_time": 3560,
+            "start_time": 3360,
+            "text": "去"
+          },
+          {
+            "end_time": 3560,
+            "start_time": 3560,
+            "text": "，"
+          },
+          {
+            "end_time": 4000,
+            "start_time": 3760,
+            "text": "大"
+          },
+          {
+            "end_time": 4200,
+            "start_time": 4040,
+            "text": "军"
+          },
+          {
+            "end_time": 4400,
+            "start_time": 4280,
+            "text": "退"
+          },
+          {
+            "end_time": 4440,
+            "start_time": 4400,
+            "text": "了"
+          },
+          {
+            "end_time": 4440,
+            "start_time": 4440,
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "text": "军吏接手查办。缺粮的实情报了上去，大军退了。"
+  },
+  "referenceUploaded": true,
+  "finishedAt": "2026-10-27T11:16:07.846Z"
+}

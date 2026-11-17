@@ -1,0 +1,138 @@
+{
+  "id": "CH2-V32A",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V32A-bb21c6e9f5-20261025.mp4",
+  "oldSha256": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+  "oldSubtitles": "/video/subtitles/CH2-V32A-bb21c6e9f5-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V32A-a85d0ecd.mp4",
+  "sha256": "f0b129d12b77557fc9d1cef9359d90fba6be88b67c195d8e94baaeb9ca80f4f8",
+  "bytes": 10723854,
+  "duration": 30.708333333333332,
+  "containerDuration": 30.708333,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 737,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V32A",
+    "src": "/video/current/PV27-CH2-V32A-a85d0ecd.mp4",
+    "title": "同意尝试、苟安实际停手署名",
+    "subtitles": "/video/subtitles/PV27-CH2-V32A-a85d0ecd.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY11-001",
+      "node": "CH2-LY11-001",
+      "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-001.wav",
+      "oldCorrelation": 0.9997515407922184,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-001-v1.wav",
+      "newVoiceSha256": "23029f2e2ce0cc0efd412e43f1a1ec49dce423ed5be772285979902f6d71dab7",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.12999999999999998,
+        6.11
+      ],
+      "insertAt": 0.12999999999999998,
+      "voiceSeconds": 5.9,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9657691121101379,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    },
+    {
+      "id": "CH2-LY11-018",
+      "node": "CH2-LY11-018",
+      "text": "我知道。你愿意和我一起把真话送上去吗？",
+      "kind": "regular-dialogue",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY11-018.wav",
+      "oldCorrelation": 0.9998952507361845,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY11-018-v1.wav",
+      "newVoiceSha256": "a0d4ece155329d9b6c5aed35ce60297d2e5369635abfafabaae05fdfc03d860b",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\03-relay-report.wav",
+          "sha256": "d7b7abaa5d925604fd1a78aab390010ff85405ab47a0113c8fa737d6cdb5ea37",
+          "bytes": 1252564,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\04-request-jiangwei.wav",
+          "sha256": "500f3eb77b4f3ecb78ede28202fc4fc72def0f589b9d92235d8d22da2f81b5ae",
+          "bytes": 1084984,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        12.649999999999999,
+        17.07
+      ],
+      "insertAt": 12.649999999999999,
+      "voiceSeconds": 4.3,
+      "trimmedLeadingSilence": 0,
+      "gain": 0.9676690101623535,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.20999999999999996,
+      "end": 4.5600000000000005,
+      "text": "我陪你写。粮情、原来的计划、准备怎样补救"
+    },
+    {
+      "start": 4.6899999999999995,
+      "end": 5.92,
+      "text": "都如实写上去"
+    },
+    {
+      "start": 6.3,
+      "end": 7.26,
+      "text": "那就把纸铺开"
+    },
+    {
+      "start": 7.82,
+      "end": 12.06,
+      "text": "你救不了这次北伐，也不一定保得住我"
+    },
+    {
+      "start": 12.809999999999999,
+      "end": 16.96,
+      "text": "我知道。你愿意和我一起把真话送上去吗？"
+    },
+    {
+      "start": 17.14,
+      "end": 20.54,
+      "text": "愿意，我留下待核，不去魏国，也不散谣"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

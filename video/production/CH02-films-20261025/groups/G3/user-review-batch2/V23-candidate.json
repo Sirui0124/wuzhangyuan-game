@@ -1,0 +1,58 @@
+{
+  "id": "V23",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\user-review-batch2\\V23-获准访村的连续见闻_补合法心声V1.mp4",
+  "sha256": "10bf78398293bd72fcea5933d29b1a18df78d6635120716ef40283a531780979",
+  "duration": 17.417,
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V23-获准访村的连续见闻_画面修复V2.mp4",
+  "oldSha256": "5c5403e0adc963eff3d8ccd024bf7f1a392959a19bd0598b55facfc6250dcfb3",
+  "oldDuration": 17.417,
+  "videoStreamCopied": true,
+  "decode": "passed",
+  "sourceFiles": [
+    "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\assembled\\V23-获准访村的连续见闻_画面修复V2.mp4"
+  ],
+  "sourceHashes": [
+    "5c5403e0adc963eff3d8ccd024bf7f1a392959a19bd0598b55facfc6250dcfb3"
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-LY06-012",
+      "roleControlOnly": "视频（LI04，我（心声））",
+      "text": "原来，账上没有收齐的数，眼前是这些人最后的口粮。",
+      "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+    }
+  ],
+  "neverReadStageOrDocumentText": [
+    {
+      "node": "CH2-LY06-001",
+      "roleControlOnly": "视频（LI04）",
+      "text": "老妇人收粮",
+      "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+    },
+    {
+      "node": "CH2-LY06-RETURN",
+      "roleControlOnly": "视频（衔接）",
+      "text": "返回见苟安",
+      "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+    }
+  ],
+  "audioRestoration": {
+    "node": "CH2-LY06-012",
+    "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY06-012.wav",
+    "sha256": "b7f25ea4fbb6038eebdf951885a91006a3ef6e7d7ac5e3cf6232e1cf7462717c",
+    "delay": 6.5,
+    "backgroundGain": 0.16,
+    "existingAudio": true,
+    "newTTS": false
+  },
+  "reviewState": "picture-reviewed-audio-listening-pending",
+  "listeningReview": "pending; no audio-capable tool",
+  "userApproved": false,
+  "coverageProof": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\V23-track-coverage.json",
+  "speechReviewPolicy": "20261025-batch2-clean-speech-and-duration",
+  "audioChangedByUserRequest": true,
+  "finalReviewProof": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\V23-final-review.json",
+  "decodedFrames": 417,
+  "videoEndSeconds": 17.416015666666667,
+  "asrEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\user-review-batch2\\V23-candidate-asr.json"
+}

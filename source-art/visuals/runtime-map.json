@@ -1,38 +1,103 @@
 {
-  "version": "wuzhang-assets-v1.2",
+  "version": "wuzhang-art-v3-distinct-20261027",
   "sourceRoot": "../../source-art/visuals",
   "characters": {
-    "weiyan": "runtime/characters/weiyan.png",
+    "weiyan": "runtime/characters/weiyan/neutral-v3.png",
     "scout": "runtime/characters/scout-transparent-v02.png",
-    "guard": "runtime/characters/guard.png",
-    "relay": "runtime/characters/relay.png",
-    "jiangwei": "runtime/characters/jiangwei.png",
-    "zhugeliang": "runtime/characters/zhugeliang.png"
+    "guard": "runtime/characters/guard/neutral-v3.png",
+    "relay": "runtime/characters/relay/neutral-v3.png",
+    "jiangwei": "runtime/characters/jiangwei/neutral-v3.png",
+    "zhugeliang": "runtime/characters/zhugeliang/neutral-v3.png",
+    "weiyan_alert": "runtime/characters/weiyan/alert-v3.png",
+    "weiyan_resolved": "runtime/characters/weiyan/resolved-v3.png",
+    "jiangwei_concerned": "runtime/characters/jiangwei/concerned-v3.png",
+    "jiangwei_resolved": "runtime/characters/jiangwei/resolved-v3.png",
+    "zhugeliang_weary": "runtime/characters/zhugeliang/weary-v3.png",
+    "zhugeliang_resolved": "runtime/characters/zhugeliang/resolved-v3.png",
+    "gouan": "chapter-expansion-20261022/characters/gouan/guarded-v1.png",
+    "liyan": "chapter-expansion-20261022/characters/liyan/neutral-v1.png",
+    "grain-officer": "chapter-expansion-20261022/characters/grain-officer/neutral-v1.png",
+    "warehouse-clerk": "chapter-expansion-20261022/characters/warehouse-clerk/neutral-v1.png",
+    "frontline-receiver": "investigation-expansion-20261022/characters/frontline-receiver/neutral-v1.png",
+    "local-levy-handler": "investigation-expansion-20261022/characters/local-levy-handler/neutral-v1.png",
+    "transport-handler": "investigation-expansion-20261022/characters/transport-handler/neutral-v1.png",
+    "old-woman": "chapter-expansion-20261022/characters/old-woman/neutral-v1.png",
+    "military-clerk": "chapter-expansion-20261022/characters/military-clerk/neutral-v1.png",
+    "masu": "runtime/characters/masu/neutral-v1.png",
+    "wangping": "runtime/characters/wangping/neutral-v1.png",
+    "jieting-scout": "runtime/characters/jieting-scout/neutral-v1.png",
+    "jieting-clerk": "runtime/characters/jieting-clerk/neutral-v1.png",
+    "jieting-water": "runtime/characters/jieting-water/neutral-v1.png",
+    "jieting-mover": "runtime/characters/jieting-mover/neutral-v1.png",
+    "jieting-messenger": "runtime/characters/jieting-messenger/neutral-v1.png",
+    "jieting-leader": "runtime/characters/jieting-leader/neutral-v1.png",
+    "jiangwei_guard": "runtime/characters/jiangwei-guard/neutral-v1.png"
   },
   "scenes": {
-    "camp_gate": "runtime/scenes/camp_gate.png",
-    "report_post": "runtime/scenes/report_post.png",
+    "camp_gate": "runtime/scenes/camp-v3/camp_gate-film-end-20261023.png",
+    "report_post": "runtime/scenes/camp-v3/report_post.png",
     "relay_tent": "runtime/scenes/relay_tent.png",
-    "waiting_area": "runtime/scenes/waiting_area.png"
+    "waiting_area": "runtime/scenes/waiting_area.png",
+    "notice_front": "runtime/scenes/camp-v3/notice-film-end-20261023.png",
+    "jiangwei_tent_front": "runtime/scenes/camp-v3/jiangwei_tent_front.png",
+    "scout_report_end": "runtime/scenes/camp-v3/scout-report-film-end-20261023.png",
+    "tent_side": "runtime/scenes/camp-v3/tent-side-20261024.png",
+    "grain_infirmary": "chapter-expansion-20261022/scenes/infirmary-day-v1.png",
+    "grain_records": "chapter-expansion-20261022/scenes/records-tent-day-v1.png",
+    "jieting_camp": "runtime/scenes/jieting/jieting_camp-v1.png",
+    "jieting_masu_tent": "runtime/scenes/jieting/jieting_masu_tent-v2.png",
+    "jieting_wangping_camp": "runtime/scenes/jieting/jieting_wangping_camp-v1.png",
+    "jieting_water_path": "runtime/scenes/jieting/jieting_water_path-v1.png",
+    "jieting_mountain_path": "runtime/scenes/jieting/jieting_mountain_path-v1.png",
+    "jieting_evening_camp": "runtime/scenes/jieting/jieting_evening_camp-v1.png",
+    "jieting_lure_camp": "runtime/scenes/jieting/jieting_lure_camp-v1.png",
+    "jieting_defense_line": "runtime/scenes/jieting/jieting_defense_line-v1.png",
+    "jieting_masu_tent_after_gift": "runtime/scenes/jieting/jieting_masu_tent-after-gift-v1.png",
+    "jieting_battlefield": "runtime/scenes/jieting/jieting_defense_line-v1.png"
+  },
+  "fallbackCharacters": {
+    "camp_gate": "guard",
+    "report_post": "weiyan",
+    "relay_tent": "relay",
+    "waiting_area": "weiyan",
+    "notice_front": "guard",
+    "jiangwei_tent_front": "jiangwei_guard"
   },
   "cinematics": {
     "weiyan_report_post": "runtime/cinematics/weiyan_report_post.png",
     "report_post_people": "runtime/cinematics/report_post_people.png"
   },
   "ui": {
-    "scene-paper": "runtime/ui/scene-paper.svg",
-    "scene-active": "runtime/ui/scene-active.svg",
-    "title-ink": "runtime/ui/title-ink.svg",
-    "evidence-tag": "runtime/ui/evidence-tag.svg",
-    "evidence-notice": "runtime/ui/evidence-notice.svg",
-    "evidence-report": "runtime/ui/evidence-report.svg",
-    "evidence-testimony": "runtime/ui/evidence-testimony.svg",
-    "evidence-pass": "runtime/ui/evidence-pass.svg"
+    "scene_paper": "runtime/ui/scene-paper.svg",
+    "scene_active": "runtime/ui/scene-active.svg",
+    "title_ink": "runtime/ui/title-ink.svg",
+    "evidence_tag": "runtime/ui/evidence-tag.svg",
+    "evidence_notice": "runtime/ui/evidence-notice.svg",
+    "evidence_report": "runtime/ui/evidence-report.svg",
+    "evidence_testimony": "runtime/ui/evidence-testimony.svg",
+    "evidence_pass": "runtime/ui/evidence-pass.svg",
+    "icon_close": "runtime/ui/icons/close.svg",
+    "icon_arrow": "runtime/ui/icons/arrow.svg",
+    "icon_check": "runtime/ui/icons/check.svg",
+    "icon_grip": "runtime/ui/icons/grip.svg",
+    "icon_hotspot": "runtime/ui/icons/hotspot.svg",
+    "rule_ink": "runtime/ui/icons/rule-ink.svg"
   },
-  "fallbackCharacters": {
-    "camp_gate": "guard",
-    "report_post": "weiyan",
-    "relay_tent": "relay",
-    "waiting_area": "weiyan"
+  "characterExpressions": {
+    "weiyan": {
+      "neutral": "weiyan",
+      "alert": "weiyan_alert",
+      "resolved": "weiyan_resolved"
+    },
+    "jiangwei": {
+      "neutral": "jiangwei",
+      "concerned": "jiangwei_concerned",
+      "resolved": "jiangwei_resolved"
+    },
+    "zhugeliang": {
+      "neutral": "zhugeliang",
+      "weary": "zhugeliang_weary",
+      "resolved": "zhugeliang_resolved"
+    }
   }
 }

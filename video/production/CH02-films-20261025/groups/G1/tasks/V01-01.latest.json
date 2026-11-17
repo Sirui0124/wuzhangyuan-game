@@ -1,0 +1,25 @@
+{
+  "task": {
+    "created_at": 1792869525,
+    "duration": 8,
+    "error": {
+      "code": "content_policy_violation",
+      "message": "content did not pass the safety policy and was not published"
+    },
+    "id": "task_To8K6UeMQzH4LDUvui077TYXbrXU8EwD",
+    "modality": "video",
+    "model": "MiniMax-H3",
+    "progress": 1,
+    "ratio": "16:9",
+    "resolution": "768P",
+    "status": "failed",
+    "task_type": "generation",
+    "updated_at": 1792869932,
+    "usage": {
+      "input_image_count": 2,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "total_seconds": 0
+    }
+  }
+}

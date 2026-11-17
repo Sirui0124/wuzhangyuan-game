@@ -1,6 +1,8 @@
 /** 浏览器只访问代理；API 密钥保存在服务端。 */
 export interface GameApiRequest {
     text: string;
+    /** Omit to use the provider default; the proxy accepts finite values from 0 to 2. */
+    temperature?: number;
     images?: string[];
     previousResponseId?: string;
 }
@@ -48,7 +50,7 @@ export class GameApi {
             if (!response.ok) throw new Error(result.error || `Game API HTTP ${response.status}`);
             return result as GameApiResponse;
         } catch (error) {
-            if (timedOut) throw new Error('回应超时，文字已保留，请重试或使用预设选项。');
+            if (timedOut) throw new Error('回应超时，文字已保留，请重试。');
             throw error;
         } finally {
             clearTimeout(timer); signal?.removeEventListener('abort', cancel);

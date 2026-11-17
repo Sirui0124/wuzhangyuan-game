@@ -1,0 +1,298 @@
+{
+  "policy": "只有spokenWhitelist中的text允许发声；角色/模式/节点标签全部不念。合法旁白及我心声text保留，演出/文书text不念；不新增读文书人声。",
+  "clips": [
+    {
+      "id": "V32A",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY11-001",
+          "roleControlOnly": "我",
+          "text": "我陪你写。粮情、原来的计划、准备怎样补救，都如实写上去。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-002",
+          "roleControlOnly": "苟安",
+          "text": "那就把纸铺开。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-017",
+          "roleControlOnly": "苟安",
+          "text": "你救不了这次北伐，也不一定保得住我。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY11-018",
+          "roleControlOnly": "我",
+          "text": "我知道。你愿意和我一起把真话送上去吗？",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY11-019",
+          "roleControlOnly": "苟安",
+          "text": "愿意，我留下待核，不去魏国，也不散谣。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY11-020",
+          "roleControlOnly": "苟安·书信",
+          "text": "我明知这批粮未征齐，却说已备妥被扣，误导了查粮的人。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-021",
+          "roleControlOnly": "苟安·书信",
+          "text": "我会写清与李严商量的阻战、借魏之计，照实交代。",
+          "voiceAndLipOwnerControlOnly": "文书准确叠字；不自动新增朗读"
+        },
+        {
+          "node": "CH2-LY11-022",
+          "roleControlOnly": "演出",
+          "text": "苟安划去“若仍不听便赴魏”，在自己交代的经过下署名。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "next": [
+        "BRANCH-QUALITY"
+      ],
+      "entry": "最终A且T≥4及D≥4",
+      "endEvent": "苟安实际停手、交代与署名；不是E1或E2已结算"
+    },
+    {
+      "id": "V33",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY11-024",
+          "roleControlOnly": "传信人",
+          "text": "我照收件处的指引送去，有回信就交给你。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [],
+      "next": [
+        "V34"
+      ],
+      "entry": "Q真且SEND确认，正文附件仍真实",
+      "endEvent": "实际交传信人才记寄出"
+    },
+    {
+      "id": "V34",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-002",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "我只怕再打下去，百姓撑不住……你说不打，往后又靠什么撑住？",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-003",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "蜀国休兵，魏国未必肯停。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-004",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "投魏的计划，就此撤回。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-005",
+          "roleControlOnly": "视频（LI06B1，李严）",
+          "text": "粮情如实报，我愿受责。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-001",
+          "roleControlOnly": "视频（LI06B1）",
+          "text": "李严在日间书房读完来信。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-ACT01",
+          "roleControlOnly": "演出·实际补报",
+          "text": "李严撤回原先行险的安排，将更正后的粮情和自己参与的经过写成说明，署名后一同交出。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "next": [
+        "V35"
+      ],
+      "entry": "信实际送达李严",
+      "endEvent": "远方实际停手补报发生；我尚未取得附件"
+    },
+    {
+      "id": "V35",
+      "spokenWhitelist": [],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-RECV01",
+          "roleControlOnly": "演出·回信到营",
+          "text": "传信人回到营中，将李严的回信和署名补报交到我手里。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12B-006",
+          "roleControlOnly": "李严·回信",
+          "text": "此次粮乏，应据实请退。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-007",
+          "roleControlOnly": "李严·回信",
+          "text": "日后是否再战，留待另议。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-008",
+          "roleControlOnly": "李严·回信",
+          "text": "种粮、口粮各需多少，现粮能撑多久，当一并核明。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-009",
+          "roleControlOnly": "李严·回信",
+          "text": "隐瞒粮情和商议行险的事，我会如实交代。借魏之计就此作罢。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12B-RECV02",
+          "roleControlOnly": "演出·核阅补报",
+          "text": "我核过随信附送的更正粮情与李严本人责任说明；该说清的部分已经成文，原来的行险安排已经撤回。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "next": [
+        "UI-E1-FILE"
+      ],
+      "entry": "传信人真实带回签字说明",
+      "endEvent": "实际到营、读完回信并核附件才补齐李严补救事件"
+    },
+    {
+      "id": "V36",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-010",
+          "roleControlOnly": "我",
+          "text": "请将两人的补充说明、原信和查粮材料一同登记收件。",
+          "voiceAndLipOwnerControlOnly": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12B-011",
+          "roleControlOnly": "军吏",
+          "text": "原信、查粮材料和两人的补充说明都已收齐。停手和各自的责任，会一并核实。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-014",
+          "roleControlOnly": "军吏",
+          "text": "李严交出此次粮运调度职责，受处分，仍须配合查问。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-015",
+          "roleControlOnly": "军吏",
+          "text": "苟安免去队长职务，承担饮酒、隐瞒和误导的责任，留下做普通粮兵。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12B-016",
+          "roleControlOnly": "军吏",
+          "text": "这次处置，已考虑两人停手补救的情节。该担的责任仍要担。",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-017",
+          "roleControlOnly": "演出",
+          "text": "退军令到，未能补足的粮食缺口仍在。",
+          "voiceAndLipOwnerControlOnly": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "next": [
+        "V37"
+      ],
+      "entry": "UI-E1-FILE确认；双方停手与全部附件已齐",
+      "endEvent": "正式核收与裁处后才成立E1"
+    },
+    {
+      "id": "V37",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY12B-018",
+          "roleControlOnly": "视频（LI06B2，我（心声））",
+          "text": "他被免了队长，留下做粮兵。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-019",
+          "roleControlOnly": "视频（LI06B2，我（心声））",
+          "text": "人活着，可这趟北伐，还是得退。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12B-020",
+          "roleControlOnly": "视频（LI06B2，苟安）",
+          "text": "别光看着，搭把手！",
+          "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY12B-021",
+          "roleControlOnly": "视频（LI06B2）",
+          "text": "我走到空车后搭手，车轮越过浅车辙继续向南。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "next": [
+        "V42"
+      ],
+      "entry": "E1实际裁处完成",
+      "endEvent": "无新增剧情状态"
+    },
+    {
+      "id": "V42",
+      "spokenWhitelist": [
+        {
+          "node": "CH2-LY13-002",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "魏地广人众，蜀中这些年，却一再折损。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-003",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "光改这趟运粮，补不上这些缺口。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY13-004",
+          "roleControlOnly": "视频（LI07，我（心声））",
+          "text": "还得往更早的时候去。",
+          "voiceAndLipOwnerControlOnly": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "neverReadStageOrDocumentText": [
+        {
+          "node": "CH2-LY13-001",
+          "roleControlOnly": "视频（LI07）",
+          "text": "旧卷摊开，户口、征发与历次损耗的记录逐一映入眼前。",
+          "voiceAndLipOwnerControlOnly": "纯画面/环境动作；无新增台词"
+        }
+      ],
+      "next": [
+        "END-E1",
+        "END-E3"
+      ],
+      "entry": "仅E1或E3对应裁处完成",
+      "endEvent": "按入口保存E1/E3，不新设结局"
+    }
+  ]
+}

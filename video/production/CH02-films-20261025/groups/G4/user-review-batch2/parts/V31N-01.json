@@ -1,0 +1,52 @@
+{
+  "id": "V31N-01",
+  "slot": "V31N",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\user-review-batch2\\parts\\V31N-01.mp4",
+  "sha256": "f980c29a8adebf2ff9efdf6aa572b2395d0e06f78af965dfcd2f7201c0dc3edd",
+  "oldFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G4\\edited\\V31N-01.mp4",
+  "oldSha256": "d21f9c0299dc3c19497e100a29e9e2da0a994be7109a51ec93e0b97734eefd61",
+  "oldDuration": 6.588,
+  "sourceFrames": [
+    36,
+    158
+  ],
+  "sourceRange": [
+    1.5,
+    6.583333333333333
+  ],
+  "newDuration": 5.083333333333333,
+  "technical": {
+    "duration": 5.083333,
+    "videoDuration": 5.083333333333333,
+    "frames": 122,
+    "fps": "24/1",
+    "width": 1280,
+    "height": 720,
+    "sampleRate": 48000,
+    "audioTrack": true,
+    "sha256": "f980c29a8adebf2ff9efdf6aa572b2395d0e06f78af965dfcd2f7201c0dc3edd",
+    "bytes": 1507123
+  },
+  "speakerLines": [
+    {
+      "node": "CH2-O2-RN",
+      "speaker": "苟安（定制回应）",
+      "text": "你想怎么做，说吧。我听着。",
+      "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "spokenWhitelist": [
+    {
+      "node": "CH2-O2-RN",
+      "roleControlOnly": "苟安（定制回应）",
+      "text": "你想怎么做，说吧。我听着。",
+      "voiceAndLipOwnerControlOnly": "只由本行NPC说话并做口型；我不代说"
+    }
+  ],
+  "actionOrBoundary": "原节点/分支/下一段边界保留，无新增事件",
+  "reason": "只收紧对白前后无动作等待，完整真实原句及句间反应保留",
+  "silentAction": false,
+  "newTTS": false,
+  "voiceReuse": null,
+  "listeningReview": "pending, ASR only"
+}

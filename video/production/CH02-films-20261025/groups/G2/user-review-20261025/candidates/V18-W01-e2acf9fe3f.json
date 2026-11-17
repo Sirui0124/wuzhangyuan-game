@@ -1,0 +1,63 @@
+{
+  "id": "V18-W01",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V18-W01-e2acf9fe3f.mp4",
+  "sha256": "3e5a804dc34e03ed7d0d636323c12e77d7a508b156843ada971f6e2787487c94",
+  "videoFrames": 122,
+  "videoSeconds": 5.083333333333333,
+  "resolution": [
+    1280,
+    720
+  ],
+  "fps": 24.0,
+  "audioHz": 48000,
+  "recipe": {
+    "id": "V18-W01",
+    "parts": [
+      {
+        "range": [
+          2.8,
+          5.15
+        ],
+        "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4"
+      },
+      {
+        "range": [
+          0,
+          2.8
+        ],
+        "source": "V15-01"
+      }
+    ],
+    "audio": {
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY04-W01.wav",
+      "offset": 0.25
+    },
+    "sourceNodes": [
+      "CH2-LY04-W01"
+    ]
+  },
+  "sourceParts": [
+    {
+      "range": [
+        2.8,
+        5.15
+      ],
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\generated\\UR-LEDGER-DE-R2.mp4",
+      "sourceSha256": "d5c75dd2b6fe7c4ac428dabfdad763b5e199a1c6d7b407233c47b80a5f006f6b"
+    },
+    {
+      "range": [
+        0,
+        2.8
+      ],
+      "source": "V15-01",
+      "sourceFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\generated\\V15-01-raw.mp4",
+      "sourceSha256": "5918e4b5d5947b34311bfdba6e3351093f8ed7fae322c3b7d72fa315f6546291"
+    }
+  ],
+  "newPolicy": "20261025-no-meta-no-cards-no-boxes",
+  "reviewState": "pending-actual-review",
+  "audioListeningReview": "not-heard",
+  "userApproved": false
+}

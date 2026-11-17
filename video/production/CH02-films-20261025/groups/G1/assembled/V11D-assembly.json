@@ -1,0 +1,83 @@
+{
+  "id": "V11D",
+  "name": "定制①回应D",
+  "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\assembled\\V11D-定制①回应D.mp4",
+  "duration": 8.02,
+  "size": [
+    1280,
+    720
+  ],
+  "fps": 24,
+  "audioRate": 48000,
+  "entry": "O1有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+  "next": [
+    "V12"
+  ],
+  "endEvent": "无新增剧情状态",
+  "subclips": [
+    {
+      "id": "V11D-01",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11D-01-usable-window.mp4",
+      "slotStart": 0,
+      "slotEnd": 8.0,
+      "sourceTrim": [
+        0,
+        8.0
+      ],
+      "audioMode": "npc-native",
+      "review": {
+        "sourcePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\generated\\V11D-01-raw.mp4",
+        "sourceSha256": "679df6c4c279f7a2c99494a0a6f30be7f9f32511557cc25bed8f81d9bc9d6763",
+        "visualReview": "需免费裁掉取出计划外物件的尾部",
+        "actualDynamicReview": true,
+        "reviewedBy": "G3 full1x muted playback +3fps sequence; SHA reverified by G1",
+        "reviewEvidence": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G3\\review\\G1-template-assist-review.json",
+        "findings": [
+          {
+            "time": [
+              0,
+              6.0
+            ],
+            "issue": "短暂低头、抬上身靠近说话，仍留榻上；身份/昼夜稳定，没有交付新物件。"
+          },
+          {
+            "time": [
+              6.2,
+              9.417
+            ],
+            "issue": "下方举起并保留黑色系绳小袋状物，源脚本没有该物件；改变该模板状态。"
+          }
+        ],
+        "audioIssues": [
+          "本次不逐字听审；音频仅标记，纯音频不建议付费重拍",
+          "有效画面已免费取窗并适度慢放；源句完整保留在策划与此条记录，临时音轨截句/语速待统一配音，不删源句。"
+        ],
+        "sourceLines": [
+          {
+            "node": "CH2-O1-RD",
+            "speaker": "苟安（定制回应）",
+            "text": "你肯替我遮掩，我领情。可遮过这一回，下回呢？",
+            "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+          }
+        ],
+        "adoptedPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G1\\edited\\V11D-01-usable-window.mp4",
+        "sourceIntervals": [
+          [
+            0,
+            6
+          ]
+        ],
+        "rate": 0.75
+      }
+    }
+  ],
+  "centralVoiceCues": [],
+  "sha256": "88e57c36d780bd0a92e4a9e20034201ca8b3b8601641ccf360cabbbfb3c3cccd",
+  "decode": "passed",
+  "userReview": "待review",
+  "listeningReview": "未完成逐字听审",
+  "visualReview": "见review/decisions.json；未审项保留pending",
+  "audioIssues": [
+    "未完成逐字听审；NPC原声的错词、音色或音乐仅标记，不触发重拍。"
+  ]
+}

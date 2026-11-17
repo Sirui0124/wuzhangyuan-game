@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-04",
+  "status": "prompts-ready-for-review",
+  "videoGenerated": false,
+  "userDirection": "奔马赶赴夷陵，天空被连营火光映红，庞统声音先入交代救援；下一镜切庞统正面交出铜印。",
+  "dateDecision": {
+    "spoken": "应在闰六月",
+    "basis": "《资治通鉴》卷69将火攻列于闰月；剧情画面为章武二年闰六月，庞统预言只说闰六月，不报具体日。",
+    "source": "https://zh.wikisource.org/wiki/資治通鑑/卷069",
+    "previousUserConfirmed": "用史料年月，台词说“今夜”",
+    "userConfirmed": "最新台词只说闰六月；庞统不报后来年号，不说今夜。"
+  },
+  "requests": [
+    {
+      "id": "CH04-O01",
+      "duration": 20,
+      "file": "CH04-O01-奔马赴夷陵与凤雏画外音-20秒.md",
+      "uploadOrder": [
+        "references/R01-奔马与夷陵火光-中性写实-v4.png"
+      ],
+      "voice": "庞统，画外，梦中嘱托回响",
+      "utterance": "我观天象，主公日后东征恐有大难，应在闰六月。你若见天际赤红，便须星夜速往救援。",
+      "timeline": [
+        [
+          0,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "CH04-O02",
+      "duration": 20,
+      "file": "CH04-O02-梦中凤雏正面交印-20秒.md",
+      "uploadOrder": [
+        "references/R02-庞统正面托印-中性写实-v4.png",
+        "references/R03-庞统身份六视图.png",
+        "references/R04-铜印形制细节-中性写实-v4.png",
+        "references/R05-掌心铜印细节-中性写实-v4.png"
+      ],
+      "voice": "庞统，画内口型，与O01同音色",
+      "utterance": "此乃我的私印，请你持此，速救主公。若已无力挽回败局，也当尽力保全我军儿郎。",
+      "timeline": [
+        [
+          0,
+          14
+        ],
+        [
+          14,
+          20
+        ]
+      ],
+      "handoff": "庞统右手持印，玩家左手接印；接稳后庞统抽手。"
+    }
+  ],
+  "references": {
+    "generator": "built-in image_gen",
+    "horse": {
+      "file": "references/R01-奔马与夷陵火光.png",
+      "prompt": "Use case: historical-scene. Create one photorealistic widescreen 16:9 film reference frame for an ancient Chinese war drama, late Eastern Han / Three Kingdoms, Yiling, summer night AD 222. Single full-bleed frame, absolutely no text or panels.\nFIRST PERSON from a rider galloping on a dark bay horse on a narrow dirt track along low mountains toward a distant military encampment. Frame is mostly the horse's powerful moving neck, mane and two natural ears in the lower half, camera just above the neck looking forward. One pair of simple worn leather reins leads out below frame; no rider face or torso, no other people. Four-legged anatomically correct horse, believable bridle, no ornament.\nDeep moonless blue-black night. Beyond layered dark mountain silhouettes the low clouds and hanging smoke at the distant camp are starting to glow dull dark crimson-orange from a large fire hidden partly behind the ridge. This is firelight reflected on smoke, NOT sunrise, NOT sunset, NOT a red sun, NOT supernatural red sky. Only a few distant flame points visible near mountain foot, not a huge wall of fire immediately in the horse's path. Restrained project look: ink-dark hills, warm fire glow with a physical source, natural brown hide, low saturated night atmosphere, real cloth and leather. Motion implied by wind-whipped mane and slight peripheral motion blur; horse neck and ears remain sharp enough as identity reference. Ground uneven and dry with some loose dust, no modern roads, no buildings, no flaming horse, no weapons foreground. Cinematic actual live-action realism.",
+      "visualReview": "骑手视角、马颈与耳、远山红烟、夜间火源已查看。"
+    },
+    "pangtong": {
+      "file": "references/R02-梦中庞统正面托印.png",
+      "prompt": "Use case: identity-preserve historical-scene. Create ONE photorealistic 16:9 horizontal single-shot film composition reference, no panels, no captions.\nReference image 1 is the established Pang Tong six-view character reference: lock the exact same mature East Asian man's face, narrow long face, high forehead, knitted brows, thin moustache and pointed goatee, tall dark ribbed cloth crown, deep indigo patterned cross-collar robe with reddish-brown thin piping and beige-gray inner collar. Reference image 2 is the prop reference sheet: use ONLY the large three-quarter bronze seal at left for geometry and materials. Do NOT reproduce any reference sheet layout or clay impression.\nWe are looking from the player's eye height directly at Pang Tong in an earlier dream. He is a physically solid human, not a transparent ghost. Frontal medium shot crown to waist, 1.2m away, eyes directed gently toward the camera, mouth naturally closed awaiting dialogue, serious restrained expression. Dark indeterminate room or dream space, smooth near-black background, no visible modern furnishings and no thick fog or fantasy effects. Soft warm practical-looking side illumination from viewer left catches his cheek, fingers and dark blue robe, subtle cool fill gives cloth shape, a narrow suggestion of amber light behind far left without showing a candle prop.\nPang Tong holds out his RIGHT hand palm up toward the viewer at lower center-left of frame, elbow still bent and hand just forward of waist, not a thrusting action. Resting flat on his right palm is the SAME SMALL approximately 2.2cm bronze seal: square brown bronze body, low arched perforated knob, short faded reddish-brown cord, a small chipped corner. The physical bronze side and knob are visible, inscription underside hidden by his palm. The tiny seal must fit comfortably in the palm, NOT huge. His other hand rests naturally near the belt. Do not include the player's receiving hand yet. All five fingers anatomically correct and not fused with the seal or cord. Need crown, recognizable face, torso and prop-bearing palm all clearly within frame. Film realism matching user reference, natural pores and cloth. No halo, glowing eyes, magical effects, background fire, subtitles, readable writing, grids or watermarks.",
+      "framingRevision": "Edit this exact reference frame, preserving the same man, face identity, expression, dark indigo patterned robe, right hand palm-up bearing the same tiny bronze seal with reddish cord, left hand near belt, lighting and dark background. Correct framing ONLY: move the virtual camera back approximately 15 percent so the entire tall crown is visible with a clear margin of dark background above it (at least 8 percent of frame height), and both his seal-bearing palm and belt remain fully within the frame. Keep horizontal 16:9, eye-level frontal medium shot. The crown has the same complete ribbed crisscross construction as visible, reconstruct its small missing top naturally. Do not change his age, beard, facial proportions, seal size, gesture or lighting. No text, no borders, no inset, no other people or objects.",
+      "visualReview": "已检查完整冠顶、庞统身份、右掌托小铜印；仅为生成构图参考，待用户审阅。"
+    }
+  },
+  "cinemaSources": [
+    "https://www.bfi.org.uk/features/watching-lawrence-arabia-first-time-story-world-premiere",
+    "https://theasc.com/article/dual-nature-shadow/"
+  ],
+  "gameRuntimeModified": false,
+  "revision": "v4-neutral-realism",
+  "styleGuide": "docs/visual-direction/写实电影影像风格.md",
+  "imageGenerationRecord": "neutral-realism-generation-v4.json",
+  "newImagesStatus": "待review",
+  "updatedDate": "2026-11-05",
+  "sealResearch": "docs/visual-direction/庞统私印-史料与道具设计.md"
+}

@@ -1,0 +1,2137 @@
+{
+  "group": "G4",
+  "title": "军情与第二次交谈",
+  "source": "assignment.json + ../../sources/CHAPTER-TWO-VIDEO-SEGMENTS.json",
+  "sourceSha256": "354c4c0c1d74f528857d0aee33e20c9254bfb99b8b30839b8f91339024d70cdd",
+  "model": "MiniMax-H3",
+  "resolution": "768P",
+  "ratio": "16:9",
+  "maxConcurrent": 6,
+  "minPollIntervalSeconds": 120,
+  "referenceStatus": "ready",
+  "voice": "同一个约30岁中国成年男性，中音略偏低、清晰自然普通话，胸声温和结实，轻微气息感，克制、有思考停顿，非播音腔、非老年沙哑、非少年尖亮；自然速度、句末落音。心声同一声线，更近、更轻，NPC听不见。",
+  "slots": [
+    {
+      "id": "V26",
+      "name": "返营交差与军情说明",
+      "entry": "V25结束",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "clipIds": [
+        "V26-01",
+        "V26-02",
+        "V26-03",
+        "V26-04",
+        "V26-05",
+        "V26-06",
+        "V26-07",
+        "V26-08",
+        "V26-09"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V27",
+      "name": "带回消息后的分歧",
+      "entry": "V26结束",
+      "next": [
+        "UI-N4"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V27-01",
+        "V27-02",
+        "V27-03",
+        "V27-04",
+        "V27-05",
+        "V27-06",
+        "V27-07"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V28A",
+      "name": "访村后态度A",
+      "entry": "UI-N4选A",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "clipIds": [
+        "V28A-01",
+        "V28A-02"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V28B",
+      "name": "访村后态度B",
+      "entry": "UI-N4选B",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "clipIds": [
+        "V28B-01",
+        "V28B-02"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V28C",
+      "name": "访村后态度C",
+      "entry": "UI-N4选C",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "clipIds": [
+        "V28C-01",
+        "V28C-02"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "entry": "UI-ASK-CHANNEL选择前往",
+      "next": [
+        "V30"
+      ],
+      "endEvent": "003至006实际听全才记渠道与风险已告知",
+      "clipIds": [
+        "V29-01",
+        "V29-02",
+        "V29-03",
+        "V29-04",
+        "V29-05",
+        "V29-06",
+        "V29-07"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V30",
+      "name": "第二次定制交谈的提问",
+      "entry": "返伤帐，途径风险已知",
+      "next": [
+        "UI-O2"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V30-01"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "L02",
+      "name": "定制②听者反应底片",
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O2-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "L02-01"
+      ],
+      "semanticGuard": null
+    },
+    {
+      "id": "V31T",
+      "name": "定制②回应T",
+      "entry": "O2有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V31T-01"
+      ],
+      "semanticGuard": "本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压"
+    },
+    {
+      "id": "V31D",
+      "name": "定制②回应D",
+      "entry": "O2有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V31D-01"
+      ],
+      "semanticGuard": "本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中"
+    },
+    {
+      "id": "V31R",
+      "name": "定制②回应R",
+      "entry": "O2有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V31R-01"
+      ],
+      "semanticGuard": "本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断"
+    },
+    {
+      "id": "V31A",
+      "name": "定制②回应A",
+      "entry": "O2有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V31A-01"
+      ],
+      "semanticGuard": "本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动"
+    },
+    {
+      "id": "V31N",
+      "name": "定制②回应N",
+      "entry": "O2有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V31N-01"
+      ],
+      "semanticGuard": "其余有效表达；中性句不得补玩家未说过的关心、承诺或动机"
+    },
+    {
+      "id": "V32R",
+      "name": "补救遭拒",
+      "entry": "最终选A但T<4或D<4",
+      "next": [
+        "UI-FALLBACK"
+      ],
+      "endEvent": "无新增剧情状态",
+      "clipIds": [
+        "V32R-01"
+      ],
+      "semanticGuard": null
+    }
+  ],
+  "clips": [
+    {
+      "id": "V26-01",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-006"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-006",
+          "speaker": "我",
+          "text": "我先回去交差，把实收和欠缺的粮数报清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安在原伤榻位置，嘴唇合拢听我说完；我不伸手。视线短暂落向帐门，结束仍不离开视角。",
+      "entry": "V25结束",
+      "next": [
+        "V26-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安在原伤榻位置，嘴唇合拢听我说完；我不伸手。视线短暂落向帐门，结束仍不离开视角。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-02",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 4,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-007"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-007",
+          "speaker": "演出",
+          "text": "我返营交差，军吏核收本次获准查阅的粮情材料。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "silent": true,
+      "action": "从收件处门口向案头走近两步，停稳。我将本次获准粮情材料放在桌边，军吏核收纸束，动作不等于正式交案；只见必要的一只手，纸束不增殖。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-03"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "从收件处门口向案头走近两步，停稳。我将本次获准粮情材料放在桌边，军吏核收纸束，动作不等于正式交案；只见必要的一只手，纸束不增殖。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-03",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 7,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-008"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-008",
+          "speaker": "军吏",
+          "text": "缺额、民食和种粮的情况，一并列明。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏在案后抬眼，手停在粮情材料旁，平稳说明，末尾闭口。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "军吏在案后抬眼，手停在粮情材料旁，平稳说明，末尾闭口。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-04",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 6,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-009"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-009",
+          "speaker": "转运简报·正文",
+          "text": "敌方正在修整粮道、筹集军资，并恢复屯田。",
+          "voiceAndLipOwner": "文书准确叠字；不自动新增朗读"
+        }
+      ],
+      "silent": true,
+      "action": "从案前第一视角低头观察一张展开的无字转运简报，平整纸面保留后期叠字空间；军吏手指只在页边，文字不由模型生成。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-05"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "从案前第一视角低头观察一张展开的无字转运简报，平整纸面保留后期叠字空间；军吏手指只在页边，文字不由模型生成。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": true,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-05",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 7,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-010"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-010",
+          "speaker": "我",
+          "text": "那我们退了，他们也还会继续准备？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "视线从纸面抬回军吏中近景，军吏闭嘴听问话，轻微抬眼。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-06"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "视线从纸面抬回军吏中近景，军吏闭嘴听问话，轻微抬眼。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-06",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 8,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-011"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-011",
+          "speaker": "军吏",
+          "text": "眼下看到的是这些。来年谁强谁弱，还说不准。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏双手自然放低，不许断言来年胜负，短停顿后说完，眼神落回我。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-07"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "军吏双手自然放低，不许断言来年胜负，短停顿后说完，眼神落回我。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-07",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 7,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-012"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-012",
+          "speaker": "军吏",
+          "text": "丞相看过这批粮情，答的是此次粮乏，当退。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏在原位继续传达答复，不拍丞相本人或虚构回令，表情克制。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-08"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "军吏在原位继续传达答复，不拍丞相本人或虚构回令，表情克制。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-08",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 8,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-013"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-013",
+          "speaker": "军吏",
+          "text": "他担心休兵这段日子，魏军修田积粮，将来更难打。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏在原案后解释，视线始终面对我，不切虚构魏军现场。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V26-09"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "军吏在原案后解释，视线始终面对我，不切虚构魏军现场。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V26-09",
+      "slot": "V26",
+      "name": "返营交差与军情说明",
+      "duration": 11,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY09-014"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-014",
+          "speaker": "军吏",
+          "text": "兴复汉室是他许下的诺言。他也担心，蜀汉守着这一隅，究竟能撑多久。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏说到诺言时略停，说到能撑多久时降低音量；不用煽情手势，最后闭口等我。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27"
+      ],
+      "endEvent": "粮情交差不等于完整案卷正式交案；C15逐来源记录",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "军吏说到诺言时略停，说到能撑多久时降低音量；不用煽情手势，最后闭口等我。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-01",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 4,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-017"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-017",
+          "speaker": "演出",
+          "text": "我将简报中可转述的消息带回伤帐。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "silent": true,
+      "action": "从伤帐门帘内侧向床榻走近一步，苟安仍在原位，抬眼看我，闭口，不把简报当新取得的证物递交。",
+      "entry": "V26结束",
+      "next": [
+        "V27-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "从伤帐门帘内侧向床榻走近一步，苟安仍在原位，抬眼看我，闭口，不把简报当新取得的证物递交。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-02",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 10,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-018"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-018",
+          "speaker": "我",
+          "text": "丞相答应这次退军了。魏军还在修路积粮，往后的风险也得想。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安在伤榻中近景闭口听消息，双手放在被褥上，不提前作答。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27-03"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "苟安在伤榻中近景闭口听消息，双手放在被褥上，不提前作答。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-03",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 6,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-020"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-020",
+          "speaker": "苟安",
+          "text": "所以百姓还得一直这样撑下去？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安看向我，眉心略收，缓慢问完，手不离榻。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27-04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安看向我，眉心略收，缓慢问完，手不离榻。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-04",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-021"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-021",
+          "speaker": "我",
+          "text": "先把实数报上去，请他重新算算这仗还打得起吗。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安继续闭口听，目光留在我所在的镜头位置，只作一次自然呼吸。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27-05"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安继续闭口听，目光留在我所在的镜头位置，只作一次自然呼吸。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-05",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 10,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-022"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-022",
+          "speaker": "我",
+          "text": "你瞒下缺粮，再拿篡位的谣言逼退军，最后受牵连的也有百姓。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安闭嘴听到谣言牵连百姓，视线短暂下落再看回我；不抢对白，不立刻接受补救。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27-06"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "苟安闭嘴听到谣言牵连百姓，视线短暂下落再看回我；不抢对白，不立刻接受补救。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-06",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 6,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-023"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-023",
+          "speaker": "苟安",
+          "text": "真话送上去，就一定有人肯听？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安抬眼问我，句末停住，嘴唇合拢，保留不信任但不怒吼。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V27-07"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安抬眼问我，句末停住，嘴唇合拢，保留不信任但不怒吼。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V27-07",
+      "slot": "V27",
+      "name": "带回消息后的分歧",
+      "duration": 12,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-024"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-024",
+          "speaker": "我",
+          "text": "我也说不准。我能做的是把查到的事、补救的办法写清楚，亲自核实送到了没有。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安闭嘴听完我的承诺，微微松开攥着的被边，不点头答应，不表示已获豁免。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "UI-N4"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "苟安闭嘴听完我的承诺，微微松开攥着的被边，不点头答应，不表示已获豁免。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28A-01",
+      "slot": "V28A",
+      "name": "访村后态度A",
+      "duration": 9,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-QA"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-QA",
+          "speaker": "我（普通选项）",
+          "text": "村里那些人已经很难了。我明白你为什么想停下来。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安闭口听我的理解，目光稍放松，没有口型。",
+      "entry": "UI-N4选A",
+      "next": [
+        "V28A-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安闭口听我的理解，目光稍放松，没有口型。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28A-02",
+      "slot": "V28A",
+      "name": "访村后态度A",
+      "duration": 9,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-RA"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-RA",
+          "speaker": "苟安",
+          "text": "你总算去看过了。我不想下一回还把他们逼到这一步。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安缓缓吐气，再抬眼说完，语气疲惫、认真，不笑。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安缓缓吐气，再抬眼说完，语气疲惫、认真，不笑。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28B-01",
+      "slot": "V28B",
+      "name": "访村后态度B",
+      "duration": 10,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-QB"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-QB",
+          "speaker": "我（普通选项）",
+          "text": "你救过我，我还想帮你。但你隐瞒的那一份，也得由你自己说清楚。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安闭口，手指停在被边；听到由他自己说清楚时注视我，不回应。",
+      "entry": "UI-N4选B",
+      "next": [
+        "V28B-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "苟安闭口，手指停在被边；听到由他自己说清楚时注视我，不回应。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28B-02",
+      "slot": "V28B",
+      "name": "访村后态度B",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-RB"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-RB",
+          "speaker": "苟安",
+          "text": "这话我听见了。可真说出去，会落个什么下场？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安略收下颌，看着我问后果，末尾停住，不起身。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安略收下颌，看着我问后果，末尾停住，不起身。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28C-01",
+      "slot": "V28C",
+      "name": "访村后态度C",
+      "duration": 9,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-QC"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-QC",
+          "speaker": "我（普通选项）",
+          "text": "只要能让他们少受些苦，你们隐瞒的事，我就不往上说了。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "苟安闭嘴听我的包庇意向，不露出脱罪成功的笑容，不生成任何行动。",
+      "entry": "UI-N4选C",
+      "next": [
+        "V28C-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安闭嘴听我的包庇意向，不露出脱罪成功的笑容，不生成任何行动。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V28C-02",
+      "slot": "V28C",
+      "name": "访村后态度C",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY09-RC"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY09-RC",
+          "speaker": "苟安",
+          "text": "你肯替我留这一分，我记着。可这样真能躲过去吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安声音放轻，短暂移开视线，再望向我问能否躲过；仍不获免罪。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "UI-ASK-CHANNEL"
+      ],
+      "endEvent": "所选对白与本段演出实际完成；不重复加分",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安声音放轻，短暂移开视线，再望向我问能否躲过；仍不获免罪。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-01",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 4,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-001"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-001",
+          "speaker": "演出",
+          "text": "我向收件军吏问明补报与查办的途径。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ],
+      "silent": true,
+      "action": "第一视角在同一收件案前停稳，军吏抬眼闭口等问；桌上没有正式案卷交接或落印。",
+      "entry": "UI-ASK-CHANNEL选择前往",
+      "next": [
+        "V29-02"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 4,
+          "action": "第一视角在同一收件案前停稳，军吏抬眼闭口等问；桌上没有正式案卷交接或落印。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-02",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 12,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-002"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-002",
+          "speaker": "我",
+          "text": "有人瞒了粮情，还商量过借魏散谣。散谣尚未动手，现在停下，把实情补报上来，行吗？",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        }
+      ],
+      "silent": false,
+      "action": "军吏闭口听我咨询，目光在我所在镜头位置，双手静置，不收新案卷。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V29-03"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "军吏闭口听我咨询，目光在我所在镜头位置，双手静置，不收新案卷。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-03",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 11,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-003"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-003",
+          "speaker": "军吏",
+          "text": "可以。停手的实据、补报和各自做过的事，一并交来。该追的责任照样追。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏在原案后说明途径，提到责任时稍停；不写赦免令，不盖章。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V29-04"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "军吏在原案后说明途径，提到责任时稍停；不写赦免令，不盖章。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-04",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 10,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-004"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-004",
+          "speaker": "军吏",
+          "text": "直接交案，也会把缺粮和欺瞒分开查。没征来的粮，按欠缺查。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏平稳区分欠缺与欺瞒，双手不指认任何罪犯；不切审判或押解。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V29-05"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 10,
+          "action": "军吏平稳区分欠缺与欺瞒，双手不指认任何罪犯；不切审判或押解。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-05",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 11,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-005"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-005",
+          "speaker": "军吏",
+          "text": "阻粮、欺瞒军情、借敌行险，都可能受重罚，甚至处死。最后如何处置，要等查办。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏以低稳清晰声线说风险，重罚和处死保留气口；不威吓式指人，不拍处刑画面。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V29-06"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 11,
+          "action": "军吏以低稳清晰声线说风险，重罚和处死保留气口；不威吓式指人，不拍处刑画面。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-06",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 8,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-006"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-006",
+          "speaker": "军吏",
+          "text": "案子一交，就正式查办。换个说法也撤不回来。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "军吏面对我说明不可撤回，末尾闭嘴，案卷仍未递交，保持咨询阶段。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V29-07"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "军吏面对我说明不可撤回，末尾闭嘴，案卷仍未递交，保持咨询阶段。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V29-07",
+      "slot": "V29",
+      "name": "问明补报途径与正式交案风险",
+      "duration": 8,
+      "refset": "clerk",
+      "sourceNodes": [
+        "CH2-LY10-007"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-007",
+          "speaker": "我（心声）",
+          "text": "李严做过什么，苟安做过什么，都得如实交代。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ],
+      "silent": false,
+      "action": "我垂目看案边未提交的纸束。军吏在画外继续静候，听不见心声，不点头回应。",
+      "entry": "上一子片完整句末",
+      "next": [
+        "V30"
+      ],
+      "endEvent": "003至006实际听全才记渠道与风险已告知",
+      "references": [
+        {
+          "id": "military_clerk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件军吏\\image-01.png",
+          "purpose": "同一收件军吏身份、衣冠，不带入别的角色"
+        },
+        {
+          "id": "receipt_desk",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\收件案头\\image-01.png",
+          "purpose": "收件处案头、帐布、文书与光照，准确文字后期叠加"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "我垂目看案边未提交的纸束。军吏在画外继续静候，听不见心声，不点头回应。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：同一收件军吏身份、衣冠，不带入别的角色，只参考具体职责，不默认首帧。",
+            "图片2：收件处案头、帐布、文书与光照，准确文字后期叠加，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": true,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V30-01",
+      "slot": "V30",
+      "name": "第二次定制交谈的提问",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-OPENING"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-OPENING",
+          "speaker": "苟安",
+          "text": "该说的，我已经说了。你现在准备拿我怎么办？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安在同一伤榻坐靠，看我回来，等我停稳后开口；话后闭口，等玩家输入。",
+      "entry": "返伤帐，途径风险已知",
+      "next": [
+        "UI-O2"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安在同一伤榻坐靠，看我回来，等我停稳后开口；话后闭口，等玩家输入。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "L02-01",
+      "slot": "L02",
+      "name": "定制②听者反应底片",
+      "duration": 12,
+      "refset": "gou",
+      "sourceNodes": [],
+      "lines": [],
+      "silent": true,
+      "action": "苟安在同一伤帐原伤榻上闭嘴听玩家的动态语音。嘴唇自然合拢，全段绝无说话、嘀咕、呻吟或口型。视线停在我所在镜头位置，只有自然呼吸、少量眨眼和一次轻微视线移动；手静放被边，不点头表示接受。首尾相同坐姿，方便必要的平滑续播。",
+      "entry": "玩家确认本次原话后",
+      "next": [
+        "O2-SCORE"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 12,
+          "action": "苟安在同一伤帐原伤榻上闭嘴听玩家的动态语音。嘴唇自然合拢，全段绝无说话、嘀咕、呻吟或口型。视线停在我所在镜头位置，只有自然呼吸、少量眨眼和一次轻微视线移动；手静放被边，不点头表示接受。首尾相同坐姿，方便必要的平滑续播。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V31T-01",
+      "slot": "V31T",
+      "name": "定制②回应T",
+      "duration": 7,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-RT"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-RT",
+          "speaker": "苟安（定制回应）",
+          "text": "那你何必还来问我。要怎么做，你自己定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安目光冷下来，收起原本的追问，声音压低；说完略移开眼神，不起身、不逃。",
+      "entry": "O2有效判定且命中T，且本轮信任负分且原话确有威胁、羞辱、轻蔑或关系施压",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "苟安目光冷下来，收起原本的追问，声音压低；说完略移开眼神，不起身、不逃。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V31D-01",
+      "slot": "V31D",
+      "name": "定制②回应D",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-RD"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-RD",
+          "speaker": "苟安（定制回应）",
+          "text": "你肯护我，我记着。可压下这些，就真能把事情停住？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安短暂看向被褥，再看我，语气有迟疑，末尾闭口；不承认事情已被压下。",
+      "entry": "O2有效判定且命中D，且本轮担当负分且原话明确替他隐瞒、包庇或护短；单纯推卸不命中",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安短暂看向被褥，再看我，语气有迟疑，末尾闭口；不承认事情已被压下。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V31R-01",
+      "slot": "V31R",
+      "name": "定制②回应R",
+      "duration": 9,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-RR"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-RR",
+          "speaker": "苟安（定制回应）",
+          "text": "你想帮我，我听见了。可说到案前，哪一句拿得出凭据？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安面向我问凭据，语气认真，无嘲笑，双手不出示新证物。",
+      "entry": "O2有效判定且命中R，且本轮严谨负分且原话确有愿意帮他/出头的意图及越界事实判断",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 9,
+          "action": "苟安面向我问凭据，语气认真，无嘲笑，双手不出示新证物。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V31A-01",
+      "slot": "V31A",
+      "name": "定制②回应A",
+      "duration": 7,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-RA"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-RA",
+          "speaker": "苟安（定制回应）",
+          "text": "办法我听见了。接下来怎么做，你来定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安听完已确认的原话后平静回应，轻微抬眼；不拍签署、补报或已接受最终办法。",
+      "entry": "O2有效判定且命中A，且本轮担当正分且原话明确承诺自己核查、带回或如实报告的行动",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 7,
+          "action": "苟安听完已确认的原话后平静回应，轻微抬眼；不拍签署、补报或已接受最终办法。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V31N-01",
+      "slot": "V31N",
+      "name": "定制②回应N",
+      "duration": 6,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-O2-RN"
+      ],
+      "lines": [
+        {
+          "node": "CH2-O2-RN",
+          "speaker": "苟安（定制回应）",
+          "text": "你想怎么做，说吧。我听着。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安注视我，语气平静中性；不补我未表达的关心或承诺，话后闭口等待。",
+      "entry": "O2有效判定且命中N，且其余有效表达；中性句不得补玩家未说过的关心、承诺或动机",
+      "next": [
+        "UI-N5"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 6,
+          "action": "苟安注视我，语气平静中性；不补我未表达的关心或承诺，话后闭口等待。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    },
+    {
+      "id": "V32R-01",
+      "slot": "V32R",
+      "name": "补救遭拒",
+      "duration": 8,
+      "refset": "gou",
+      "sourceNodes": [
+        "CH2-LY10-REFUSE"
+      ],
+      "lines": [
+        {
+          "node": "CH2-LY10-REFUSE",
+          "speaker": "苟安",
+          "text": "你说得容易。我现在不能把命押在这个办法上。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ],
+      "silent": false,
+      "action": "苟安保持原伤姿，稍摇一次头说短拒绝，之后闭口；不逃跑、不死亡、不出现押解。",
+      "entry": "最终选A但T<4或D<4",
+      "next": [
+        "UI-FALLBACK"
+      ],
+      "endEvent": "无新增剧情状态",
+      "references": [
+        {
+          "id": "gouan",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\苟安\\image-01.png",
+          "purpose": "苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情"
+        },
+        {
+          "id": "wound_tent",
+          "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\references\\generated\\伤帐\\image-01.png",
+          "purpose": "伤帐空间、床榻位置、灯火和材质；不增加人物"
+        }
+      ],
+      "frames": [
+        {
+          "start": 0,
+          "end": 8,
+          "action": "苟安保持原伤姿，稍摇一次头说短拒绝，之后闭口；不逃跑、不死亡、不出现押解。",
+          "camera": "第一视角35–50mm自然透视，机位保持人眼高度；案头观察仅低头，不用第三人称。无无缘由推拉和绕人。",
+          "referenceRelations": [
+            "图片1：苟安身份，锁脸、发髻、衣物与伤势；不复制身份图表情，只参考具体职责，不默认首帧。",
+            "图片2：伤帐空间、床榻位置、灯火和材质；不增加人物，只参考具体职责，不默认首帧。"
+          ]
+        }
+      ],
+      "audioOverlay": false,
+      "textOverlay": false,
+      "status": "待生成"
+    }
+  ]
+}

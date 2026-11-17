@@ -1,0 +1,124 @@
+{
+  "group": "G2",
+  "checkedAt": "2026-10-25T19:12:31.190081+08:00",
+  "status": "ready",
+  "reason": "No confirmed video re-generation gaps remain in G2 after current-version comparison. All12 current files match delivery/report/review SHA; old comments are unchanged and refer to older files. Current modified candidates still await human review.",
+  "videoApiPolicy": {
+    "newVideoApiCallsAllowed": false,
+    "automaticRetryAllowed": false,
+    "unknownPostResubmissionAllowed": false,
+    "preserveExistingTaskIdsAndUnknownStates": true,
+    "futureDeliveryFormat": "one complete local Seedance Markdown per actual generation request",
+    "model": "seedance2.5",
+    "maxDurationSeconds": 30,
+    "doNotPadToMaximum": true,
+    "doNotMergeAcrossBranchesOrInteractionStops": true,
+    "userInstructionOverridesHistorical15SecondLimit": true
+  },
+  "itemFields": [
+    "sceneId",
+    "title",
+    "durationSeconds",
+    "mdPath",
+    "reason",
+    "status",
+    "blockingReason"
+  ],
+  "items": [],
+  "readyCount": 0,
+  "blockedCount": 0,
+  "newMarkdownCount": 0,
+  "reviewAuditPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\re-generation-md-review-audit.json",
+  "currentDeliveryManifest": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\delivery.json",
+  "originalFeedbackAndVersionRelationsPath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\re-generation-md-review-audit.json",
+  "existingGenerationDraftsPolicy": "Previous MiniMax API request MDs remain historical. They are not new Seedance2.5 submission drafts and are not re-listed as current requests.",
+  "preservedApprovedSceneIds": [
+    "V16B"
+  ],
+  "pendingHumanReviewSceneIds": [
+    "V13",
+    "V14",
+    "V15",
+    "V16A",
+    "V16C",
+    "V17",
+    "V18",
+    "V19A",
+    "V19B",
+    "V19C",
+    "V20"
+  ],
+  "nonVideoFollowups": [
+    {
+      "type": "listening-review",
+      "reason": "Actual voice/tone/lip/BGM review still pending; ASR and technical checks do not prove audio acceptance; no automatic video regeneration"
+    },
+    {
+      "type": "game-information-layer",
+      "sceneIds": [
+        "V15",
+        "V18",
+        "V20"
+      ],
+      "reason": "Exact nonspoken D01-D06/report015/receipt018 bodies remain in source-realization.json; gamePresentationImplemented=false. This is game integration work, not a video regeneration request."
+    }
+  ],
+  "existingTaskStates": [
+    {
+      "requestId": "UR-DOC-ABC-R1",
+      "taskId": "task_3eORGC1xhCdLPzbT8N0ofEshgWKnHpiQ",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-DOC-ABC-R1.json"
+    },
+    {
+      "requestId": "UR-LEDGER-DE-R1",
+      "taskId": "task_7hZPE13EaTy8PGsX0ThaTI2WHm8IjB9O",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R1.json"
+    },
+    {
+      "requestId": "UR-LEDGER-DE-R2",
+      "taskId": "task_g5ZWRBdpXbR8PlJkjwSbruALzEPhSseT",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-LEDGER-DE-R2.json"
+    },
+    {
+      "requestId": "UR-REPORT-RECEIPT-R1",
+      "taskId": "task_oANgnANKAPMGKG279CEfQ0BSsbiVijSz",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R1.json"
+    },
+    {
+      "requestId": "UR-REPORT-RECEIPT-R2",
+      "taskId": "task_XWx1XHg9c1OaWTGyJK4YTae3ZsBPAtIN",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-REPORT-RECEIPT-R2.json"
+    },
+    {
+      "requestId": "UR-V13-VOUCHER-R1",
+      "taskId": "task_xJ8ktJ6DSMiKdszyXeDAPAelZilx9ykP",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V13-VOUCHER-R1.json"
+    },
+    {
+      "requestId": "UR-V14-FLOW-R1",
+      "taskId": "task_Byl2kNehOMmCNYwCrGMA7b5yomCTAzjJ",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R1.json"
+    },
+    {
+      "requestId": "UR-V14-FLOW-R2",
+      "taskId": "task_BMBpJigA76CDzEYHdMDt7bH3WnA7Byt9",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V14-FLOW-R2.json"
+    },
+    {
+      "requestId": "UR-V20-OPERATOR-R1",
+      "taskId": "task_UnSAcpl5CvsNqJf0JIYncYMznolccAlx",
+      "status": "succeeded",
+      "statePath": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\jobs\\UR-V20-OPERATOR-R1.json"
+    }
+  ],
+  "userApprovalNotInferred": true,
+  "newVideoApiCallsThisHandoff": 0
+}

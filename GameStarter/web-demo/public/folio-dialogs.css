@@ -1,0 +1,64 @@
+/* Bound folio: an ink cover, a pale vertical title slip and a separate reading leaf. */
+:root[data-ui-theme=xuan] #game-root .game-modal-shade:not(.phone-shade){background:radial-gradient(ellipse at center,#11150f38,#090e0cb3);backdrop-filter:blur(3px)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{display:grid;grid-template-columns:86px minmax(0,1fr);gap:0;padding:0;border:1px solid #bba16e77;border-radius:0;background:url('/ui/panel-grain.svg'),linear-gradient(110deg,#30362b,#171e1a 55%,#20271f);box-shadow:0 24px 80px #0009,inset 0 0 0 5px #0e171455,inset 0 0 0 6px #b9a27320;--panel-paper:#1c241e;--panel-ink:#e3d8bd;--panel-muted:#aaa68f;--panel-accent:#bea06a}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::before{inset:10px;width:auto;height:auto;border:1px solid #b6a2722b;background:none;z-index:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::after{content:'';position:absolute;inset:0 auto 0 85px;width:1px;height:auto;background:linear-gradient(transparent,#c5ae784d 14%,#c5ae784d 86%,transparent);transform:none;opacity:1}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header{position:static;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;min-height:0;margin:0;padding:48px 0 28px;background:linear-gradient(90deg,#080f0a30,#b5a17409);border:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-emblem{display:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1{position:relative;writing-mode:vertical-rl;text-orientation:upright;font:400 28px/1.45 WuzhangBrush,var(--serif);letter-spacing:6px;margin:0;padding:18px 7px 13px;color:#32392d;background:url('/ui/panel-grain.svg'),linear-gradient(90deg,#baa983,#d1bf97 50%,#baaa85);border:1px solid #decca350;box-shadow:0 2px 6px #0003,inset 0 0 0 3px #35402c0c}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1::after{content:'';position:absolute;left:50%;bottom:-24px;width:5px;height:5px;border:1px solid #bca477;transform:translateX(-50%) rotate(45deg)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close{position:absolute;top:16px;right:17px;width:36px;height:36px;min-height:36px;margin:0;padding:9px;z-index:3;border:1px solid #b49d6b4d;background:#151d1777;color:#bfb18e;transform:rotate(45deg)}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close svg{transform:rotate(-45deg);width:18px;height:18px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close:hover{background:#6e624133;color:#fff0c7;border-color:#cbb583}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-body{min-width:0;min-height:0;margin:60px 32px 30px 28px;padding:0 10px 4px 0;scrollbar-color:#ad966366 transparent}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause]{width:min(590px,100%);height:auto;min-height:340px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .folio-body{margin:54px 42px 36px 34px;padding:0 4px 5px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-context{margin:0 0 26px;padding-left:3px;font-size:23px;line-height:1.85;letter-spacing:3px;color:#d1c6a9}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions{display:grid;grid-template-columns:1fr 1fr;gap:20px 0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary{display:flex;align-items:center;justify-content:center;gap:12px;border:0;background:transparent;padding:7px 8px;min-height:44px;font-size:17px;letter-spacing:2px;color:#bfb69d;box-shadow:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-secondary:nth-child(odd){border-left:1px solid #b9a27333}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-secondary svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.2}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-secondary:hover{color:#f5e6be;background:#bba16e0d}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .map-chapter-action{grid-column:1/-1;margin:0;min-height:56px;border:0;background:transparent;box-shadow:none;padding:12px 16px;font-size:20px;letter-spacing:3px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .map-chapter-action span{font:inherit;color:inherit}
+/* Dialogue remains the real sequence. Names form a margin, not a synthetic timeline. */
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-question{margin:0 0 18px;font:400 24px/1.6 var(--serif);letter-spacing:2px;color:var(--panel-ink);text-wrap:balance}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history]{width:min(900px,100%);height:auto;max-height:min(730px,calc(100dvh - 76px))}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body{max-height:min(640px,calc(100dvh - 168px));margin:62px 30px 28px 24px;padding:25px 30px;background:url('/ui/panel-grain.svg'),linear-gradient(95deg,#b7aa8e,#d1c5a9 4%,#d5c9ae 94%,#bfb296);border:1px solid #e5d7b55c;box-shadow:0 3px 15px #0004,inset 3px 0 #f0e4c62b;scrollbar-color:#776c52 #c3b89f;color:#353c32}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-scroll{padding:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .dialogue-stream{padding:0;margin:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .dialogue-stream::before{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-mark{display:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .dialogue-stream li{padding:18px 0 20px;border-bottom:1px solid #5e634329}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .dialogue-stream li:first-child{padding-top:3px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .dialogue-stream li:last-child{border-bottom:0;padding-bottom:4px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content{display:grid;grid-template-columns:100px minmax(0,1fr);gap:22px;max-width:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content small{font-size:16px;line-height:1.8;letter-spacing:1px;margin:0;padding-top:3px;color:#795642;overflow-wrap:anywhere}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content p{font-size:20px;line-height:1.85;color:#303b32;text-shadow:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .panel-empty{color:#5c634f;font-size:19px;padding:24px 0}
+@media(max-width:650px){
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]{grid-template-columns:56px minmax(0,1fr)}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::before{inset:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page]::after{left:55px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header{padding:45px 0 20px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1{font-size:22px;padding:13px 4px 10px;letter-spacing:4px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .modal-close{top:12px;right:13px;width:32px;height:32px;min-height:32px;padding:7px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-body{margin:54px 12px 18px 13px;padding-right:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause]{min-height:320px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .folio-body{margin:54px 19px 25px 17px;padding:0 3px 5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-context{font-size:21px;letter-spacing:2px;margin-bottom:24px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions{gap:15px 0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .map-chapter-action{font-size:19px;min-height:52px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-actions .pause-secondary{font-size:16px;letter-spacing:0;gap:7px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history]{height:auto;max-height:calc(100dvh - 36px)}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .folio-body{max-height:calc(100dvh - 110px);margin:54px 12px 18px 10px;padding:18px 17px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content{grid-template-columns:1fr;gap:5px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content small{font-size:14px;padding:0}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=history] .history-content p{font-size:18px;line-height:1.85}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-grid{display:flex;flex-direction:column}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-leaf{grid-template-columns:70px 1fr;gap:0 10px;padding:8px}
+ :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .save-content h2{font-size:18px;letter-spacing:0}
+}
+@media(max-height:480px) and (min-width:651px){:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause]{min-height:0}:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .folio-body{margin-top:28px;margin-bottom:20px}:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] .pause-context{font-size:20px;line-height:1.5;margin-bottom:16px}}
+@media(forced-colors:active){:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page],:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-body,:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .folio-header h1{background:Canvas;color:CanvasText}:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] .history-content :is(small,p){color:CanvasText}}

@@ -1,0 +1,25 @@
+{
+  "task": {
+    "created_at": 1792871577,
+    "duration": 9,
+    "error": {
+      "code": "input_download_failed",
+      "message": "download media: Get \"https://res.cloudinary.com/cpxdw5vd/image/upload/v1792869157/parallel-world/minimax-reference/d24f553d3bdc91e9e8a74ee2e606e7b67c9e1873223e3275f94370f5467684b9.png\": dial tcp [2a04:4e42:8c::393]:443: connect: network is unreachable"
+    },
+    "id": "task_MXL7Q7uUk4Ve6uOaR6KJ4NTXHjhEvrZQ",
+    "modality": "video",
+    "model": "MiniMax-H3",
+    "progress": 1,
+    "ratio": "16:9",
+    "resolution": "768P",
+    "status": "failed",
+    "task_type": "generation",
+    "updated_at": 1792871616,
+    "usage": {
+      "input_image_count": 1,
+      "input_seconds": 0,
+      "output_seconds": 0,
+      "total_seconds": 0
+    }
+  }
+}

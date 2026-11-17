@@ -1,0 +1,114 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.6591
+        },
+        {
+          "label": "Speech",
+          "p": 0.5203
+        },
+        {
+          "label": "Chop",
+          "p": 0.0516
+        },
+        {
+          "label": "Walk, footsteps",
+          "p": 0.0415
+        },
+        {
+          "label": "Bouncing",
+          "p": 0.0335
+        },
+        {
+          "label": "Sad music",
+          "p": 0.0329
+        },
+        {
+          "label": "Theme music",
+          "p": 0.0242
+        },
+        {
+          "label": "Tender music",
+          "p": 0.0236
+        },
+        {
+          "label": "Tap",
+          "p": 0.0193
+        },
+        {
+          "label": "Basketball bounce",
+          "p": 0.0181
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0177
+        },
+        {
+          "label": "Background music",
+          "p": 0.0156
+        }
+      ],
+      "music": 0.6591
+    },
+    {
+      "start": 8.0,
+      "top": [
+        {
+          "label": "Music",
+          "p": 0.5997
+        },
+        {
+          "label": "Television",
+          "p": 0.0442
+        },
+        {
+          "label": "Theme music",
+          "p": 0.044
+        },
+        {
+          "label": "Speech",
+          "p": 0.0438
+        },
+        {
+          "label": "Video game music",
+          "p": 0.0271
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0224
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0215
+        },
+        {
+          "label": "Shuffle",
+          "p": 0.021
+        },
+        {
+          "label": "Slam",
+          "p": 0.0204
+        },
+        {
+          "label": "Soundtrack music",
+          "p": 0.0204
+        },
+        {
+          "label": "Slap, smack",
+          "p": 0.0186
+        },
+        {
+          "label": "Gasp",
+          "p": 0.0168
+        }
+      ],
+      "music": 0.5997
+    }
+  ]
+}

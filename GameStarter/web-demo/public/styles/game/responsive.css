@@ -1,0 +1,303 @@
+@keyframes scene-appear{
+from{
+opacity:.5}
+to{
+opacity:1}
+}
+@keyframes line-appear{
+from{
+opacity:0}
+to{
+opacity:1}
+}
+@keyframes note-open{
+from{
+opacity:0;transform:translateY(-5px)}
+to{
+opacity:1;transform:none}
+}
+
+html[data-reduced=true] *,html[data-reduced=true] *:before,html[data-reduced=true] *:after{
+animation:none!important;transition:none!important}
+
+@media(max-height:750px){
+.game-hud{
+top:19px}
+.dialogue-box{
+bottom:60px;padding:22px 29px 16px}
+.dialogue-text{
+min-height:66px;font-size:23px}
+.dialogue-speaker{
+margin-bottom:15px}
+.dialogue-foot{
+margin-top:13px}
+.scene-routes{
+top:110px}
+.game-menu nav button{
+font-size:17px;padding:10px 7px}
+.game-menu>section>p{
+margin-bottom:20px;font-size:13px}
+.thought-context{
+top:101px}
+.canvas-viewport{
+inset:115px 0 70px}
+.expression-center{
+top:47%}
+.expression-center h1{
+font-size:28px;margin-bottom:8px}
+.expression-paper{
+margin-top:18px}
+.expression-paper textarea{
+min-height:80px;max-height:125px;font-size:15px}
+.expression-paper>small{
+margin-top:5px}
+.expression-paper .ink-circle{
+width:52px;height:52px;margin-top:13px;font-size:14px}
+.expression-options{
+margin-top:5px}
+.expression-selected{
+margin-bottom:5px}
+.canvas-tools{
+bottom:20px}
+.canvas-instruction{
+bottom:24px;font-size:9px}
+.ending-copy h1{
+margin-top:25px;font-size:49px}
+.ending-copy>div{
+margin-top:30px}
+.game-menu>header,.game-menu>footer{
+padding-top:20px;padding-bottom:20px}
+}
+
+@media(max-width:900px){
+.game-hud nav{
+gap:17px;font-size:11px;letter-spacing:1px}
+.game-mark{
+font-size:14px}
+.portrait-stage{
+width:58vw}
+.dialogue-box{
+width:79vw;left:5vw}
+.game-menu>section{
+width:50vw;margin-left:8vw}
+.canvas-instruction{
+display:none}
+.thought-context{
+font-size:10px}
+.thought-center{
+width:40vw}
+.expression-center{
+width:42vw;left:48%}
+.weiyan-presence{
+width:30vw;right:0}
+.weiyan-presence p{
+font-size:13px}
+.note-library>div{
+grid-template-columns:repeat(3,1fr)}
+.canvas-tools{
+gap:20px}
+.map-chapter.next{
+left:53%}
+.map-chapter h2{
+font-size:27px}
+}
+
+@media(max-width:600px){
+.game-hud{
+left:20px;right:20px;top:20px}
+.game-mark{
+font-size:12px;letter-spacing:1px;gap:9px}
+.chapter-seal{
+width:25px;height:33px;line-height:32px;font-size:15px}
+.game-mark small{
+font-size:8px;letter-spacing:1px}
+.game-hud nav{
+gap:12px;font-size:10px}
+.game-hud nav button[data-action=records],.game-hud nav button[data-action=save]{
+display:none}
+.portrait-stage{
+width:86vw;height:79%;right:-12vw}
+.dialogue-box{
+left:5vw;width:90vw;padding:20px 22px;bottom:67px}
+.dialogue-text{
+font-size:20px}
+.dialogue-speaker{
+font-size:16px}
+.scene-routes{
+left:6vw;gap:22px;top:110px}
+.scene-routes button{
+font-size:12px;letter-spacing:1px}
+.scene-hotspot{
+font-size:15px}
+.scene-hotspot small{
+display:none}
+.open-thought-callout{
+bottom:155px;font-size:14px;right:8vw}
+.game-notice{
+bottom:240px;right:5vw;font-size:10px}
+.game-menu>section{
+width:84vw;margin:0 auto}
+.game-logo{
+height:28vh}
+.game-menu nav{
+width:65%}
+.game-menu>section>p{
+letter-spacing:4px;font-size:14px}
+.game-menu>footer{
+font-size:9px;letter-spacing:1px;gap:10px}
+.game-menu>header{
+font-size:10px;letter-spacing:1px}
+.thought-context{
+left:22px;right:20px;top:91px;font-size:9px}
+.thought-context span{
+font-size:9px;margin-bottom:5px}
+.canvas-viewport{
+inset:125px 0 85px}
+.thought-center{
+width:52vw;top:46%}
+.thought-center h1{
+font-size:22px;line-height:1.7}
+.thought-center>p{
+font-size:9px}
+.ink-circle{
+width:56px;height:56px;font-size:12px}
+.canvas-tools{
+left:22px;right:22px;font-size:10px;gap:18px;flex-wrap:wrap;bottom:23px}
+.canvas-tools button{
+padding:4px 0}
+.thought-notice{
+font-size:9px;bottom:72px;width:80vw}
+.expression-center{
+width:57vw;left:40%;top:48%}
+.expression-center h1{
+font-size:25px}
+.expression-paper textarea{
+font-size:14px;min-height:100px;max-height:160px}
+.expression-selected{
+gap:6px}
+.expression-selected button{
+font-size:9px}
+.expression-paper>small{
+font-size:9px}
+.expression-options{
+gap:10px;font-size:9px}
+.weiyan-presence{
+width:38vw;right:-7vw;top:24%;height:62%}
+.weiyan-presence>div{
+left:0;width:76%;top:0}
+.weiyan-presence h2{
+font-size:16px}
+.weiyan-presence p{
+font-size:10px;letter-spacing:0;line-height:1.9}
+.note-library{
+left:15px;right:15px;padding:20px;bottom:95px}
+.note-library>div{
+grid-template-columns:repeat(2,1fr);gap:12px 20px}
+.note-library>div>button{
+font-size:13px}
+.game-modal-shade{
+padding:15px}
+.game-modal{
+padding:30px 25px;max-height:90vh}
+.game-modal h2{
+font-size:23px}
+.setting-group label{
+font-size:12px;gap:13px}
+.game-save-row{
+gap:10px}
+.game-save-row button{
+padding:5px}
+.ending-copy{
+padding:25px}
+.ending-copy h1{
+font-size:38px;letter-spacing:5px}
+.ending-copy p{
+font-size:17px}
+.ending-copy>div{
+gap:25px}
+.ending-primary{
+font-size:12px}
+.ending-kicker{
+font-size:9px;letter-spacing:2px}
+.chapter-map>header{
+top:25px}
+.chapter-map>header h1{
+font-size:23px;letter-spacing:3px}
+.chapter-map>header small{
+font-size:9px}
+.map-chapter.first{
+left:10%;top:58%}
+.map-chapter.next{
+left:37%;top:28%}
+.map-chapter{
+padding-left:17px;max-width:58vw}
+.map-chapter h2{
+font-size:25px}
+.map-chapter p{
+font-size:10px}
+.chapter-map>footer{
+font-size:8px;letter-spacing:1px;padding:0 20px}
+}
+
+.character-art{
+opacity:0;transition:opacity .3s}
+.character-art.is-ready{
+opacity:1}
+.weiyan-presence .character-art.is-ready{
+opacity:.19}
+
+.thought-screen[data-phase=expression] .thought-world{
+opacity:.11;filter:blur(1px);pointer-events:none}
+.thought-screen[data-phase=expression] .thought-world button{
+pointer-events:none}
+.expression-evidence{
+position:absolute;z-index:9;left:8vw;top:26%;width:26vw;max-width:420px;color:#697d69}
+.expression-evidence>section{
+position:relative;margin-bottom:115px;padding-left:16px;border-left:2px solid #90a28a70}
+.expression-evidence>section>button:first-child{
+font-size:25px;line-height:1.7;text-align:left;padding:0;color:#61765f}
+.expression-evidence p{
+font-size:17px;line-height:1.9;color:#8c9b80;margin:12px 0}
+.expression-evidence small{
+font-size:11px;color:#a0aa94;line-height:1.9}
+.expression-evidence .unpick-evidence{
+position:absolute;right:0;top:-15px;color:#aab19f;opacity:0}
+.expression-evidence section:hover .unpick-evidence,.expression-evidence section:focus-within .unpick-evidence{
+opacity:1}
+.expression-evidence>button{
+font-size:12px;color:#8e9f80}
+.expression-evidence>p{
+font-size:17px;margin-top:60px}
+.expression-center{
+z-index:10}
+.expression-center h1{
+white-space:nowrap}
+.thought-center:not(.expression-center) h1{
+text-shadow:0 0 23px #eeece3,0 0 14px #eeece3,0 0 10px #eeece3}
+.note-source{
+font-size:12px}
+@media(max-height:750px){
+.expression-evidence{
+top:25%}
+.expression-evidence>section{
+margin-bottom:65px}
+.expression-evidence>section>button:first-child{
+font-size:21px}
+.expression-evidence p{
+font-size:14px}
+}
+@media(max-width:900px){
+.expression-evidence{
+left:5vw;width:25vw}
+.expression-evidence>section>button:first-child{
+font-size:19px}
+.expression-evidence p{
+font-size:14px}
+}
+@media(max-width:600px){
+.expression-evidence{
+display:none}
+.expression-center{
+left:40%}
+}
+

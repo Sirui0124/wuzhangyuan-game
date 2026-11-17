@@ -1,0 +1,60 @@
+{
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Static",
+          "p": 0.0804
+        },
+        {
+          "label": "Rain on surface",
+          "p": 0.0726
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0609
+        },
+        {
+          "label": "Fire",
+          "p": 0.0548
+        },
+        {
+          "label": "Rain",
+          "p": 0.0487
+        },
+        {
+          "label": "White noise",
+          "p": 0.0424
+        },
+        {
+          "label": "Eruption",
+          "p": 0.0374
+        },
+        {
+          "label": "Car",
+          "p": 0.035
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.021
+        },
+        {
+          "label": "Explosion",
+          "p": 0.0178
+        },
+        {
+          "label": "Sound effect",
+          "p": 0.0155
+        },
+        {
+          "label": "Flap",
+          "p": 0.0139
+        }
+      ],
+      "music": 0.005
+    }
+  ]
+}

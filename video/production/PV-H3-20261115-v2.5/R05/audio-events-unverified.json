@@ -1,0 +1,61 @@
+{
+  "source_sha256": "7d0acb15f7ea2be3c43057999a84f9838319c37542a5d569a25bcf3633fe23d3",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Speech",
+          "p": 0.803
+        },
+        {
+          "label": "Music",
+          "p": 0.6952
+        },
+        {
+          "label": "Television",
+          "p": 0.1816
+        },
+        {
+          "label": "Violin, fiddle",
+          "p": 0.0394
+        },
+        {
+          "label": "Animal",
+          "p": 0.0341
+        },
+        {
+          "label": "Musical instrument",
+          "p": 0.0315
+        },
+        {
+          "label": "Male speech, man speaking",
+          "p": 0.0291
+        },
+        {
+          "label": "Narration, monologue",
+          "p": 0.0174
+        },
+        {
+          "label": "Classical music",
+          "p": 0.0167
+        },
+        {
+          "label": "Domestic animals, pets",
+          "p": 0.0151
+        },
+        {
+          "label": "Opera",
+          "p": 0.015
+        },
+        {
+          "label": "Orchestra",
+          "p": 0.0148
+        }
+      ],
+      "music": 0.6952
+    }
+  ]
+}

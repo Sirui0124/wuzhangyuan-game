@@ -1,0 +1,185 @@
+{
+  "delivery": {
+    "id": "V18",
+    "name": "入仓、实收、应征连续核对",
+    "entry": "V17结束",
+    "next": [
+      "UI-N3"
+    ],
+    "endEvent": "原件逐段实际展示后取得；无独立Q2题",
+    "children": [
+      "V18-01",
+      "V18-02",
+      "V18-03",
+      "V18-04",
+      "V18-05",
+      "V18-06"
+    ],
+    "subclips": [
+      "V18-01",
+      "V18-02",
+      "V18-03",
+      "V18-04",
+      "V18-05",
+      "V18-06"
+    ],
+    "status": "visual_candidate_audio_pending",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V18-入仓、实收、应征连续核对-画面候选-9801909c.mp4",
+    "decode": "passed",
+    "size": [
+      1280,
+      720
+    ],
+    "fps": 24,
+    "audioHz": 48000,
+    "sha256": "46ed513e425a83c3f7f4c959de19c9ba0b08206fdebcd745c5b71b539d40dd47",
+    "assemblySource": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V18-入仓、实收、应征连续核对-R2.mp4",
+    "technical": {
+      "duration": 50.04,
+      "size": [
+        1280,
+        720
+      ],
+      "fps24": true,
+      "audio48000": true,
+      "audioTrack": true,
+      "decodeExitCode": 0,
+      "decodeWarnings": "",
+      "sha256": "46ed513e425a83c3f7f4c959de19c9ba0b08206fdebcd745c5b71b539d40dd47"
+    },
+    "visualReview": [
+      {
+        "id": "V18-01",
+        "observation": "0–9.4秒从交付木牍转入仓账，取出并接过原件，交接有实物接触；未拍隐藏满仓。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V18-02",
+        "observation": "0–10秒入仓/对应发出分栏指认与安静观察；原生字不作为数字证据，准确原文在本取得时点叠加。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V18-03",
+        "observation": "0–8秒问地方实收，仓中经手人拿卷、低头和退到案边；开口动作待配音口型阶段核对，不因临时错音重拍。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V18-04",
+        "observation": "0–10秒实收账取放与并排，对应实物接触正常，尾部账页停稳。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V18-05",
+        "observation": "0–6.58秒从木牍抬眼问应征，角色近景及回到纸卷；音轨/口型待统一处理。",
+        "review": "已检查0.5秒连续序列；动态播放观察情况见本组审片记录"
+      },
+      {
+        "id": "V18-06",
+        "observation": "0–10秒已检查，3–6.7秒多出讲解者，采用7–10秒指认原件并静观补时，准确三栏内容按原D06叠加，不新增朗读",
+        "version": "-R2",
+        "trimStart": 7.0,
+        "trimEnd": 10.0,
+        "tailHold": 4.0,
+        "review": "原片3–6.7秒额外加入讲解者，文书源无新增对白。采用7–10秒原件指认与落稳，末帧静观4秒（无嘴动循环）保证七秒应征/实收/欠交观察；精确文字从本段首次实际看到原件时显示，末段环境声仍待统一音频阶段",
+        "audioIssue": "原片额外人声不作为正式文书朗读；本地剪辑保留画面源，末静观暂缺环境声"
+      }
+    ],
+    "audioIssues": [
+      {
+        "id": "V18-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "龙蝉,财卖PING熊塔地印开此,输出道每边躁慢。",
+        "expected": ""
+      },
+      {
+        "id": "V18-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "随此之春还免向威龙捕宁, 弃于千间口袋。",
+        "expected": ""
+      },
+      {
+        "id": "V18-04",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "形容藤城甘居长的这个低方宽,手边成志心。权令十方行收站意外地带的人先出。",
+        "expected": ""
+      },
+      {
+        "id": "V18-05",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "与行许经萌力 进入个活来 尽好是亲争鬼 一几人",
+        "expected": ""
+      },
+      {
+        "id": "V18-06",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "董事等的章程去南补台车运现场,先属。",
+        "expected": ""
+      },
+      {
+        "id": "V18-06",
+        "type": "原片额外人声不作为正式文书朗读；本地剪辑保留画面源，末静观暂缺环境声"
+      }
+    ],
+    "audioReview": "统一配音阶段处理；本轮未做主观逐字听审或BGM听审",
+    "assemblySha256": "9801909c0c7e32e44c0ca95d2f0cf62c67bca28c2f798f2fe883d593acc53b2b"
+  },
+  "usability": {
+    "id": "V18",
+    "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\assembled\\V18-入仓、实收、应征连续核对-画面候选-9801909c.mp4",
+    "sha256": "46ed513e425a83c3f7f4c959de19c9ba0b08206fdebcd745c5b71b539d40dd47",
+    "reviewState": "reviewed-needs-repair",
+    "pictureUsability": "needs-repair",
+    "issues": [
+      {
+        "state": "open",
+        "type": "wrong-visible-speaker",
+        "subclip": "V18-05",
+        "time": [
+          1.9,
+          4.8
+        ],
+        "description": "玩家问原定应交多少的独白段，镜头内仓中经手人持续开口。",
+        "repair": "改用刚取得地方实收账的同场核看动作，不提前展示应征账D06；保留原问句全部时长"
+      }
+    ],
+    "dynamicReview": [],
+    "integrationConditions": [],
+    "audioIssues": [
+      {
+        "id": "V18-01",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "龙蝉,财卖PING熊塔地印开此,输出道每边躁慢。",
+        "expected": ""
+      },
+      {
+        "id": "V18-02",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "随此之春还免向威龙捕宁, 弃于千间口袋。",
+        "expected": ""
+      },
+      {
+        "id": "V18-04",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "形容藤城甘居长的这个低方宽,手边成志心。权令十方行收站意外地带的人先出。",
+        "expected": ""
+      },
+      {
+        "id": "V18-05",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "与行许经萌力 进入个活来 尽好是亲争鬼 一几人",
+        "expected": ""
+      },
+      {
+        "id": "V18-06",
+        "type": "ASR提示错词或额外人声，未听审",
+        "recognized": "董事等的章程去南补台车运现场,先属。",
+        "expected": ""
+      },
+      {
+        "id": "V18-06",
+        "type": "原片额外人声不作为正式文书朗读；本地剪辑保留画面源，末静观暂缺环境声"
+      }
+    ],
+    "userApproved": false
+  }
+}

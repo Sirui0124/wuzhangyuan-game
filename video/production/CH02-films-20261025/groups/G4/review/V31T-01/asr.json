@@ -1,0 +1,115 @@
+{
+  "id": "V31T-01",
+  "expected": "那你何必还来问我。要怎么做，你自己定。",
+  "postVoiceText": null,
+  "actual": "那你何必还来问我要怎么做你自己定",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 1.58,
+      "end": 3.88,
+      "text": "那你何必还来问我",
+      "words": [
+        {
+          "start": 1.58,
+          "end": 2.08,
+          "word": "那",
+          "probability": 0.9545938372612
+        },
+        {
+          "start": 2.08,
+          "end": 2.2,
+          "word": "你",
+          "probability": 0.9836512207984924
+        },
+        {
+          "start": 2.2,
+          "end": 2.36,
+          "word": "何",
+          "probability": 0.9965597987174988
+        },
+        {
+          "start": 2.36,
+          "end": 2.5,
+          "word": "必",
+          "probability": 0.9985201954841614
+        },
+        {
+          "start": 2.5,
+          "end": 2.64,
+          "word": "还",
+          "probability": 0.5414133667945862
+        },
+        {
+          "start": 2.64,
+          "end": 2.74,
+          "word": "来",
+          "probability": 0.9903850555419922
+        },
+        {
+          "start": 2.74,
+          "end": 2.9,
+          "word": "问",
+          "probability": 0.9941692352294922
+        },
+        {
+          "start": 2.9,
+          "end": 3.88,
+          "word": "我",
+          "probability": 0.9953539371490479
+        }
+      ]
+    },
+    {
+      "start": 4.46,
+      "end": 5.46,
+      "text": "要怎么做",
+      "words": [
+        {
+          "start": 4.46,
+          "end": 4.92,
+          "word": "要",
+          "probability": 0.7395747303962708
+        },
+        {
+          "start": 4.92,
+          "end": 5.14,
+          "word": "怎么",
+          "probability": 0.9759746193885803
+        },
+        {
+          "start": 5.14,
+          "end": 5.46,
+          "word": "做",
+          "probability": 0.9966008067131042
+        }
+      ]
+    },
+    {
+      "start": 6.06,
+      "end": 7.02,
+      "text": "你自己定",
+      "words": [
+        {
+          "start": 6.06,
+          "end": 6.52,
+          "word": "你",
+          "probability": 0.7573058009147644
+        },
+        {
+          "start": 6.52,
+          "end": 6.76,
+          "word": "自己",
+          "probability": 0.9965025186538696
+        },
+        {
+          "start": 6.76,
+          "end": 7.02,
+          "word": "定",
+          "probability": 0.5565469264984131
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "V13",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\candidates\\V13-7204845056.mp4",
+  "sha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a",
+  "pictureUsability": "usable-with-integration-condition",
+  "observations": [
+    "凭据置案、双方触碰和玩家松手的4秒补拍清楚；进仓与管事/仓吏衔接保留。无工作字卡、正文列表或局部方框遮罩。"
+  ],
+  "repairs": [
+    "撤下旧工作正文、字幕列、方框模糊和矩形暗影；重新从未叠层原片/新短镜头剪辑",
+    "误读角色、工作说明或文书文字的声音删除；合法原句见batch2白名单；不保长静音、定格或循环填满旧长度",
+    "最终服务末字5.960秒与父片trim交叉核查后，免费追加0.4秒自然手部动作，保留整句与尾气；不新增声音或模型请求。"
+  ],
+  "integrationConditions": [
+    "保持原节点及分支顺序，影片动作不额外授予后续材料或自动判定。"
+  ],
+  "audioReview": "原句/服务字幕/ASR技术核对；实际1倍速播放只验证结束，不代表听审。新Seed-Audio1.0真实上传同角色参考；未用预置TTS。",
+  "audioIssues": [
+    "工具不能实际听音，声音和BGM听审pending。",
+    "替换声音与可见口型仍需用户终审。"
+  ],
+  "unresolved": [
+    "修改版本待用户重新审核"
+  ],
+  "evidence": [
+    {
+      "method": "directly inspected complete current-SHA 0.5-second sequence; final changed boundaries also checked densely",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\review\\V13",
+      "sha256": "22a96a9c7c50f8ec89550d4f024e633db8644de0e8c34c81f7716c5f6d885c2a"
+    },
+    {
+      "method": "canonical audio ending versus leaf and parent trim boundary audit; no actual listening",
+      "path": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\batch2-boundary-audit.json"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "source_sha256": "87ac21703a608ba87acf28e0396ea8a4e118a41dbcddbcb97226fb3cf09a57cf",
+  "model": "Xenova/ast-finetuned-audioset-10-10-0.4593 quantized ONNX; official numpy fbank",
+  "scope": "machine audio event screening, not listening approval",
+  "windows": [
+    {
+      "start": 0.0,
+      "top": [
+        {
+          "label": "Rain on surface",
+          "p": 0.3632
+        },
+        {
+          "label": "Rain",
+          "p": 0.194
+        },
+        {
+          "label": "Raindrop",
+          "p": 0.0945
+        },
+        {
+          "label": "Thunder",
+          "p": 0.0713
+        },
+        {
+          "label": "Thunderstorm",
+          "p": 0.06
+        },
+        {
+          "label": "White noise",
+          "p": 0.0255
+        },
+        {
+          "label": "Rustle",
+          "p": 0.0195
+        },
+        {
+          "label": "Vehicle",
+          "p": 0.0126
+        },
+        {
+          "label": "Static",
+          "p": 0.0114
+        },
+        {
+          "label": "Music",
+          "p": 0.0088
+        },
+        {
+          "label": "Car",
+          "p": 0.0084
+        },
+        {
+          "label": "Speech",
+          "p": 0.0083
+        }
+      ],
+      "music": 0.0088
+    }
+  ]
+}

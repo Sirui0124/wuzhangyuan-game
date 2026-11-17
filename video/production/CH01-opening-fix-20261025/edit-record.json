@@ -1,0 +1,116 @@
+{
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-fix-20261025\\PR01-开场修订-烛光起始-原版穿越-20261025.mp4",
+  "metadata": {
+    "frames": 1066,
+    "width": 1344,
+    "height": 756,
+    "fps": "24/1",
+    "videoDuration": 44.416666666666664,
+    "duration": 44.416667,
+    "sha256": "2f119fb1875edee3f0893f8e3adf0d28262fa50f18f0b301c43779067e46fdab",
+    "bytes": 16636748
+  },
+  "parts": [
+    {
+      "name": "ancient-a.mp4",
+      "frames": 226,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "videoDuration": 9.416666666666666,
+      "duration": 9.429,
+      "sha256": "41569fb7d7f42c064c5b70c65e0818af87dd3d860bd2d27c5512f96fb7be161a",
+      "bytes": 5140971
+    },
+    {
+      "name": "ancient-c.mp4",
+      "frames": 119,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "videoDuration": 4.958333333333333,
+      "duration": 4.958333,
+      "sha256": "51a8b1432b778f81031e1e19206f364fb724a8fccad0f5939b6f795b914e39a7",
+      "bytes": 2767167
+    },
+    {
+      "name": "10-restored-modern-30s.mp4",
+      "frames": 720,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "videoDuration": 30.0,
+      "duration": 30.0,
+      "sha256": "2f161e883de68f44c2f11bf783050c550433947180a40f17551249c2ccd59a00",
+      "bytes": 9114946
+    },
+    {
+      "name": "PR01-开场修订-烛光起始-原版穿越-20261025.mp4",
+      "frames": 1066,
+      "width": 1344,
+      "height": 756,
+      "fps": "24/1",
+      "videoDuration": 44.416666666666664,
+      "duration": 44.416667,
+      "sha256": "2f119fb1875edee3f0893f8e3adf0d28262fa50f18f0b301c43779067e46fdab",
+      "bytes": 16636748
+    }
+  ],
+  "cuts": [
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PR01-A-20261024-57daca70.mp4",
+      "start": 0.05,
+      "end": 1.3,
+      "output": "01-lit-flame.mp4"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PR01-B-bridge-20261024-lamp-continuity-7f11b341.mp4",
+      "start": 0,
+      "end": 2.2,
+      "output": "02-riders.mp4"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\generated\\OP01-16x9.mp4",
+      "start": 6.2,
+      "end": 7.2,
+      "output": "03-established-lamps.mp4"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\generated\\OP01-16x9.mp4",
+      "start": 8,
+      "end": 9.4,
+      "output": "04-report.mp4"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\generated\\OP01-16x9.mp4",
+      "start": 9.4,
+      "end": 11,
+      "output": "05-stride.mp4"
+    },
+    {
+      "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-cinematic-20261025\\generated\\OP01-16x9.mp4",
+      "start": 13.1,
+      "end": 15,
+      "output": "06-arrive-once.mp4"
+    }
+  ],
+  "replacement": {
+    "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-opening-fix-20261025\\generated\\ZL-REACTION-16x9.mp4",
+    "range": [
+      0.5,
+      1.9
+    ],
+    "task_id": "task_UAEcBrMyDjkxpTmx2kzLTBL5VSrke0vG"
+  },
+  "restoredModern": {
+    "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PR01-DEF-20261024-77fc2fdd.mp4",
+    "sha256": "b9dba4d8d756b31a76e77eabe3919931e9b8790b416474a7c3c70be46e00d8a9",
+    "start": 0,
+    "end": 30,
+    "rate": 1,
+    "frames": 720,
+    "audio": "原画原声，仅统一发布画幅及编码"
+  },
+  "reviewState": "待review",
+  "decode": "passed"
+}

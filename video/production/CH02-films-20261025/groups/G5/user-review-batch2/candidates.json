@@ -1,0 +1,497 @@
+{
+  "policy": "20261025-batch2-clean-speech-and-duration",
+  "clips": [
+    {
+      "id": "V32A",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V32A-clean-speech-f9fc4b7f7f.mp4",
+      "sha256": "bb21c6e9f52365ca809f75775e5701ed658a707c0c9236b9fe5d96e0bdaee55c",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 30.71,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V32A-clean-speech-f9fc4b7f7f.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:30.71, start: 0.000000, bitrate: 2667 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 2534 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 126 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "parts": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            0.5,
+            6.625
+          ],
+          "reason": "保留第一句完整玩家画外对白，独立既有WAV排除底片误读串音",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY11-001.wav",
+          "audioRange": null,
+          "delay": 0.15,
+          "mute": false,
+          "timelineRange": [
+            0,
+            6.125
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            8.25,
+            9.75
+          ],
+          "reason": "只保留“那就把纸铺开”，删前后角色/拍摄说明",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            6.125,
+            7.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            13.5,
+            18.125
+          ],
+          "reason": "保留“你救不了…保得住我”完整原句，删此前误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            7.625,
+            12.25
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            20.083333333333332,
+            24.791666666666668
+          ],
+          "reason": "完整保留玩家提问，既有独立WAV，闭口听者不代说",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY11-018.wav",
+          "audioRange": null,
+          "delay": 0.2,
+          "mute": false,
+          "timelineRange": [
+            12.25,
+            16.958333333333336
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            28.625,
+            32.291666666666664
+          ],
+          "reason": "保留愿意留下/不赴魏不散谣，删前后导演说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            16.958333333333336,
+            20.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V32A-no-cards-363e633360.mp4",
+          "sourceSHA": "710ecaf35be6eb7941465d3f6a38c0e2aafbde45e20cc10808f16fb0f9850921",
+          "range": [
+            33.625,
+            43.708333333333336
+          ],
+          "reason": "保留必要连续书写、横划、下方署写、提笔；空台词白名单",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            20.625,
+            30.708333333333336
+          ]
+        }
+      ],
+      "reviewState": "pending",
+      "userApproved": false,
+      "audioApproved": false
+    },
+    {
+      "id": "V33",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V33-clean-speech-d02f529faf.mp4",
+      "sha256": "a0455d1624ab7d0fff573ecd1af6a728dd2e2c924cb84a2c5f16a27196d96545",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 8.38,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V33-clean-speech-d02f529faf.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:08.38, start: 0.000000, bitrate: 5290 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 5229 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 54 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "parts": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V33-3ba2700e32-cfr24.mp4",
+          "sourceSHA": "37e7da6b6c4baa324d6711cd21bc8d35b64aca82c584c850ff23594939b2b7d1",
+          "range": [
+            0.75,
+            9.125
+          ],
+          "reason": "完整递件接触→我松手→信收入袋；只保留传信人的唯一原话，不因话前有真动作而删掉交接",
+          "audio": null,
+          "audioRange": [
+            3.5,
+            6.65
+          ],
+          "delay": 2.75,
+          "mute": false,
+          "timelineRange": [
+            0,
+            8.375
+          ]
+        }
+      ],
+      "reviewState": "pending",
+      "userApproved": false,
+      "audioApproved": false
+    },
+    {
+      "id": "V34",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V34-clean-speech-520f7c53cd.mp4",
+      "sha256": "12881e6c1073f2952c587f39cb3cc9a790a0e9c12d5ce9a80a658fc35bf8cd88",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 25.75,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V34-clean-speech-520f7c53cd.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:25.75, start: 0.000000, bitrate: 3197 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 3105 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 85 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "parts": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            0.0,
+            1.5
+          ],
+          "reason": "保留李严先读完来信的真实必要动作；此时底音误读编号，清除该人声后即切入质疑原句",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            0,
+            1.5
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            4.458333333333333,
+            10.125
+          ],
+          "reason": "仅李严“我只怕…靠什么撑住”原句，删除编号/角色/口型/导演说明",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            1.5,
+            7.166666666666667
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            18.041666666666668,
+            26.166666666666668
+          ],
+          "reason": "保留蜀魏休兵判断和撤回投魏计划两句；移除话前无效等待",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            7.166666666666667,
+            15.291666666666668
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            30.208333333333332,
+            31.541666666666668
+          ],
+          "reason": "同一李严原声保留“粮情如实报”",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            15.291666666666668,
+            16.625000000000004
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            34.791666666666664,
+            36.083333333333336
+          ],
+          "reason": "同一李严原声保留“我愿受责”，中间错误复述/乱码连同画面删去",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            16.625000000000004,
+            17.916666666666675
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V34-no-cards-f0b44113d0.mp4",
+          "sourceSHA": "538a36ccad9003b075a6118e9e3bb40091e50998e55c9a5aa3d7b66828bcea96",
+          "range": [
+            36.166666666666664,
+            44.0
+          ],
+          "reason": "无台词写、提笔、取件、交出与接触；原底音误念演出说明，清除人声而保留实际动作",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            17.916666666666675,
+            25.75000000000001
+          ]
+        }
+      ],
+      "reviewState": "pending",
+      "userApproved": false,
+      "audioApproved": false
+    },
+    {
+      "id": "V35",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V35-clean-speech-a13a080130.mp4",
+      "sha256": "486c5c0cbf871e201aae26ed02d074779fb056a0503da42701410ba308bcb827",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 13.29,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V35-clean-speech-a13a080130.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:13.29, start: 0.000000, bitrate: 5514 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 5428 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 79 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "parts": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V35-no-cards-190c43cbb2.mp4",
+          "sourceSHA": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+          "range": [
+            0.8333333333333334,
+            6.125
+          ],
+          "reason": "台词白名单为空；清除误借V33的全部人声，缩短取件前和松手后退远，完整取件/接触/松手保留",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            0,
+            5.291666666666667
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V35-no-cards-190c43cbb2.mp4",
+          "sourceSHA": "95dbe2752ab17ba5221685c045919d348cd43518119e8aa89808d2bd85134bee",
+          "range": [
+            8.208333333333334,
+            16.208333333333332
+          ],
+          "reason": "连续展开回信、两附件落桌并逐一松手；不朗读纸面内容",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            5.291666666666667,
+            13.291666666666664
+          ]
+        }
+      ],
+      "reviewState": "pending",
+      "userApproved": false,
+      "audioApproved": false
+    },
+    {
+      "id": "V36",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V36-clean-speech-08ede9bf82.mp4",
+      "sha256": "3d25fb9f7718fcaec97d4daaa66335927ed280b23d1697272c458fd562f9f575",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 37.29,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-batch2\\assembled\\V36-clean-speech-08ede9bf82.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:37.29, start: 0.000000, bitrate: 3556 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 3436 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 113 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "parts": [
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            0.0,
+            6.0
+          ],
+          "reason": "玩家完整原句用既有独立WAV，实际收件/松手动作保留",
+          "audio": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\voice\\CH2-LY12B-010.wav",
+          "audioRange": null,
+          "delay": 0.1,
+          "mute": false,
+          "timelineRange": [
+            0,
+            6.0
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            12.0,
+            19.75
+          ],
+          "reason": "军吏实际收齐材料/核实责任的完整对白；删“先收齐才谈核实”动作说明误读及因此拖长画面",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            6.0,
+            13.75
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            24.541666666666668,
+            29.791666666666668
+          ],
+          "reason": "保留李严处分原句，删其前裁处导演说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            13.75,
+            19.0
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            30.625,
+            37.75
+          ],
+          "reason": "保留苟安免队长/责任/做粮兵原句",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            19.0,
+            26.125
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            42.833333333333336,
+            50.333333333333336
+          ],
+          "reason": "保留考虑停手补救但仍担责完整原句，删话前冗余反应",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": false,
+          "timelineRange": [
+            26.125,
+            33.625
+          ]
+        },
+        {
+          "source": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\user-review-20261025\\assembled\\V36-no-cards-958219a8d3.mp4",
+          "sourceSHA": "00660256addaf279fe06edfe2b411be08d6a69c2be87f0f350e26acadf73f31e",
+          "range": [
+            50.5,
+            54.166666666666664
+          ],
+          "reason": "回令接触与接过完整动作，空台词白名单，清除演出说明误读",
+          "audio": null,
+          "audioRange": null,
+          "delay": 0,
+          "mute": true,
+          "timelineRange": [
+            33.625,
+            37.291666666666664
+          ]
+        }
+      ],
+      "reviewState": "pending",
+      "userApproved": false,
+      "audioApproved": false
+    },
+    {
+      "id": "V37",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4",
+      "sha256": "774d79f97bb46ef3cce71e5ea120dfa67c7bf7bc17068b1c19b75a09ecf8b69c",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 29.87,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V37-22a2176b0a-cfr24.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:29.87, start: 0.000000, bitrate: 6048 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 5862 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 186 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "unchanged": true,
+      "parts": [],
+      "userApproved": false
+    },
+    {
+      "id": "V42",
+      "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4",
+      "sha256": "8abbd6b6087cf63d30dee4dade2fc5af245a7f595ea54242058de724cfd44284",
+      "metadata": {
+        "size": [
+          1280,
+          720
+        ],
+        "duration": 15.1,
+        "audio": true,
+        "probe": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G5\\assembled\\V42-R2-continuous-voiced-cfr24.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:15.10, start: 0.000000, bitrate: 5275 kb/s\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/iec61966-2-1, progressive), 1280x720 [SAR 1:1 DAR 16:9], 5094 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 195 kb/s (default)\n      Metadata:\n        handler_name    : SoundHandler\n        vendor_id       : [0][0][0][0]\nAt least one output file must be specified\n"
+      },
+      "unchanged": true,
+      "parts": [],
+      "userApproved": false
+    }
+  ],
+  "newAudioRequests": 0,
+  "newVideoRequests": 0,
+  "newTTS": 0
+}

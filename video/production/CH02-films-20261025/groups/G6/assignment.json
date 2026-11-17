@@ -1,0 +1,266 @@
+{
+  "group": "G6",
+  "title": "救人交案与放行结局",
+  "clips": [
+    {
+      "id": "V38",
+      "name": "救下眼前的人",
+      "scriptNodes": [
+        "CH2-E2-001",
+        "CH2-E2-002",
+        "CH2-E2-003"
+      ],
+      "entry": "Q假且UI-E2-FILE确认；苟安停手署名已实际发生",
+      "next": [
+        "END-E2"
+      ],
+      "endEvent": "个人补报实际核收，留营候查阶段结论已明确告知才E2",
+      "mode": "固定视频",
+      "note": "这是个人补报的阶段结局，不冒充全案最终裁处；附件用中性固定句，不冒称李严已完成补报。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E2-001",
+          "speaker": "我",
+          "text": "这些是我拿到的材料和苟安的停手说明，请一并收下。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-E2-002",
+          "speaker": "军吏",
+          "text": "材料收到了。苟安停手补报的经过已经记下，人先留营受查。李严一节，还要继续核。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E2-003",
+          "speaker": "我（心声）",
+          "text": "我留下了救过我的人。可我交出的结论，还不足以把每一处责任说清。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V39",
+      "name": "晚交案的共同收件",
+      "scriptNodes": [
+        "CH2-LY12A-001",
+        "CH2-LY12A-003"
+      ],
+      "entry": "UI-CASE确认，交全部真实已知材料",
+      "next": [
+        "V40",
+        "V41L"
+      ],
+      "endEvent": "实际收件后按锁定Q分流",
+      "mode": "固定视频",
+      "note": "Q真/假都可复用，不声称已取得缺失材料或已证明全部结论。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12A-001",
+          "speaker": "我",
+          "text": "这些是我拿到的材料。查到的、他亲口说的，都在里面。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12A-003",
+          "speaker": "军吏",
+          "text": "收下了。缺多少粮，各人做过什么，会分别查清。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        }
+      ]
+    },
+    {
+      "id": "V40",
+      "name": "查办、苟安之死与空铺",
+      "scriptNodes": [
+        "CH2-LY12A-004",
+        "CH2-LY12A-005",
+        "CH2-LY12A-006",
+        "CH2-LY12A-007",
+        "CH2-LY12A-008",
+        "CH2-LY12A-009",
+        "CH2-LY12A-010",
+        "CH2-LY12A-011",
+        "CH2-LY12A-012",
+        "CH2-LY12A-013"
+      ],
+      "entry": "V39实际收件且Q真",
+      "next": [
+        "V42"
+      ],
+      "endEvent": "实际查办裁处完成才E3",
+      "mode": "固定视频",
+      "note": "沿LI06A1/A2候选；不能只因点交案就播放死讯。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY12A-004",
+          "speaker": "演出",
+          "text": "查办继续，直到裁处将定，两人仍未共同完成停手、补报与各自交代责任；苟安仍想把推动阻战与行险的主责揽在自己身上。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12A-005",
+          "speaker": "苟安",
+          "text": "往下推的人是我，要问就问我。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-006",
+          "speaker": "我",
+          "text": "李严知情的事也写在材料里，该查就得查。",
+          "voiceAndLipOwner": "我的画外对白；镜头对面的NPC闭口听"
+        },
+        {
+          "node": "CH2-LY12A-007",
+          "speaker": "演出",
+          "text": "正式处置传来，我无权更改决定。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY12A-008",
+          "speaker": "视频（LI06A1，军吏）",
+          "text": "李严革职，交回官印。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-009",
+          "speaker": "视频（LI06A1，军吏）",
+          "text": "苟安参与阻挠运粮、欺瞒军情，已按军法处死。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY12A-010",
+          "speaker": "视频（LI06A2）",
+          "text": "苟安的铺位空了，撤军的空粮车从帐外经过。",
+          "voiceAndLipOwner": "纯画面/环境动作；无新增台词"
+        },
+        {
+          "node": "CH2-LY12A-011",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "李严倒了。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12A-012",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "苟安也死了。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        },
+        {
+          "node": "CH2-LY12A-013",
+          "speaker": "视频（LI06A2，我（心声））",
+          "text": "可粮呢？",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V41E",
+      "name": "早停查版：认下来的罪",
+      "scriptNodes": [
+        "CH2-LY07-BAD1",
+        "CH2-LY07-BAD2",
+        "CH2-LY07-BAD3"
+      ],
+      "entry": "普通②B听认罪后，UI-EARLY-FILE明确确认",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "提交现有材料、收件查办与退军收束",
+      "mode": "固定视频",
+      "note": "不知道后段合谋；保留原早支线，不追加死亡。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-LY07-BAD1",
+          "speaker": "旁白",
+          "text": "军吏接手查办。缺粮的实情报了上去，大军退了。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-LY07-BAD2",
+          "speaker": "苟安",
+          "text": "大军退了吗？",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-LY07-BAD3",
+          "speaker": "旁白",
+          "text": "他一认罪，我就停了查。他借我报出了缺粮的实情，他和李严究竟商量过什么，我始终没问出来。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    },
+    {
+      "id": "V41L",
+      "name": "晚支撑不足版：认下来的罪",
+      "scriptNodes": [
+        "CH2-E4-LATE-001",
+        "CH2-E4-LATE-002",
+        "CH2-E4-LATE-003"
+      ],
+      "entry": "V39实际收件且Q假",
+      "next": [
+        "END-E4"
+      ],
+      "endEvent": "本路线实际查办收束才E4",
+      "mode": "固定视频",
+      "note": "与V41E不可整段混用：已听过李严参与，只是结论可靠支撑不足。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E4-LATE-001",
+          "speaker": "军吏",
+          "text": "你说李严参与，材料里也有这些线索。可几处细节还对不上，眼下不能照你的结论认定。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E4-LATE-002",
+          "speaker": "军吏",
+          "text": "苟安认下的责任先录在案，其他的还要核。",
+          "voiceAndLipOwner": "只由本行NPC说话并做口型；我不代说"
+        },
+        {
+          "node": "CH2-E4-LATE-003",
+          "speaker": "我（心声）",
+          "text": "我知道事情不止他说的那些。可几处查得不清，最后压在案上的，还是他的认罪。",
+          "voiceAndLipOwner": "我的内心画外声；NPC听不见且不做口型"
+        }
+      ]
+    },
+    {
+      "id": "V43",
+      "name": "放行与赴魏散谣后果",
+      "scriptNodes": [
+        "CH2-E5-001",
+        "CH2-E5-002"
+      ],
+      "entry": "UI-RELEASE确认",
+      "next": [
+        "END-E5"
+      ],
+      "endEvent": "实际放行后才E5；后果用清楚时间推进表现",
+      "mode": "固定视频",
+      "note": "高分不能抵消最终放行；不销毁后台真实线索。",
+      "status": "分段待review；未生成新视频",
+      "lines": [
+        {
+          "node": "CH2-E5-001",
+          "speaker": "演出·实际放行",
+          "text": "我让开营外的路。苟安离开，未向军吏呈报他的行险安排。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        },
+        {
+          "node": "CH2-E5-002",
+          "speaker": "旁白",
+          "text": "后来，苟安去了魏国。关于丞相的谣言，还是传回了营中。",
+          "voiceAndLipOwner": "演出不念说明；旁白只按已定原句画外发声"
+        }
+      ]
+    }
+  ],
+  "contract": "../../制作总控.md",
+  "referenceManifest": "../../references/manifest.json"
+}

@@ -1,0 +1,4496 @@
+{
+  "cases": {
+    "balanced": {
+      "rounds": 5,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 124,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 21.0,
+        "M": 45.9,
+        "S": 55.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 1.0,
+            "clear": 1.0,
+            "merge": 0.0,
+            "found": 1.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 30.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 49.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.5,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [],
+          "fatigue": [
+            54,
+            54,
+            54,
+            54,
+            54
+          ],
+          "strength": [
+            474,
+            484,
+            484,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "return",
+            "M:flag",
+            "M:clear",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            62,
+            72,
+            72,
+            62,
+            62
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "return",
+            "return",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            27,
+            80,
+            80,
+            27,
+            27
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            484,
+            484
+          ]
+        }
+      ]
+    },
+    "targeted": {
+      "rounds": 4,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 0,
+      "unavailable": 190,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 30.0,
+        "M": 49.9,
+        "S": 54.7
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            1,
+            2,
+            4
+          ],
+          "stock": 2,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            40,
+            40,
+            18,
+            40
+          ],
+          "strength": [
+            492,
+            475,
+            475,
+            495,
+            475
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            0,
+            2
+          ],
+          "stock": 0,
+          "margin": {
+            "F": 30.0,
+            "M": 49.9,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            58,
+            58,
+            80,
+            36,
+            58
+          ],
+          "strength": [
+            464,
+            469,
+            449,
+            490,
+            470
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "return",
+            "return",
+            "return",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 30.0,
+            "M": 49.9,
+            "S": 54.7
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南"
+          ],
+          "fatigue": [
+            66,
+            66,
+            88,
+            54,
+            76
+          ],
+          "strength": [
+            444,
+            469,
+            449,
+            484,
+            464
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 30.0,
+            "M": 49.9,
+            "S": 54.7
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            31,
+            31,
+            53,
+            62,
+            84
+          ],
+          "strength": [
+            444,
+            469,
+            449,
+            484,
+            464
+          ]
+        }
+      ]
+    },
+    "rush_all": {
+      "rounds": 5,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 0,
+      "unavailable": 246,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 5.5,
+        "M": 46.8,
+        "S": 48.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "stock": 0,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          "strength": [
+            472,
+            475,
+            475,
+            475,
+            475
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 28.5,
+            "M": 49.9,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.85,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.35,
+            "found": 2,
+            "evacuated": 0.85
+          },
+          "saved": [],
+          "fatigue": [
+            58,
+            58,
+            58,
+            58,
+            58
+          ],
+          "strength": [
+            463,
+            469,
+            469,
+            470,
+            470
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 18.0,
+            "M": 46.8,
+            "S": 53.2
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.7,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 1.7
+          },
+          "saved": [],
+          "fatigue": [
+            76,
+            76,
+            76,
+            76,
+            76
+          ],
+          "strength": [
+            452,
+            462,
+            462,
+            463,
+            463
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "F:rear",
+            "return",
+            "return",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 5.5,
+            "M": 46.8,
+            "S": 48.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "冯习",
+            "张南"
+          ],
+          "fatigue": [
+            94,
+            84,
+            84,
+            94,
+            94
+          ],
+          "strength": [
+            440,
+            462,
+            462,
+            455,
+            455
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "return",
+            "camp",
+            "camp",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 5.5,
+            "M": 46.8,
+            "S": 48.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            100,
+            49,
+            49,
+            100,
+            100
+          ],
+          "strength": [
+            420,
+            462,
+            462,
+            455,
+            455
+          ]
+        }
+      ]
+    },
+    "leave_reserve": {
+      "rounds": 6,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 127,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 21.0,
+        "M": 45.9,
+        "S": 39.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 1.0,
+            "clear": 1.0,
+            "merge": 0.0,
+            "found": 0.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            0
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            500
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 30.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 1.0,
+            "evacuated": 0.5
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            0
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            500
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 49.0,
+            "S": 53.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.5,
+            "found": 1.5,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            54,
+            54,
+            54,
+            54,
+            0
+          ],
+          "strength": [
+            474,
+            484,
+            484,
+            483,
+            500
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "return",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.9,
+            "S": 48.5
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 1.5
+          },
+          "saved": [
+            "傅肜"
+          ],
+          "fatigue": [
+            62,
+            72,
+            72,
+            72,
+            0
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            475,
+            500
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "return",
+            "return",
+            "S:gate",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.9,
+            "S": 39.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南"
+          ],
+          "fatigue": [
+            27,
+            80,
+            80,
+            90,
+            0
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            465,
+            500
+          ]
+        },
+        {
+          "round": 6,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "return",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.9,
+            "S": 39.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            0,
+            45,
+            45,
+            98,
+            0
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            465,
+            500
+          ]
+        }
+      ]
+    },
+    "all_fu": {
+      "rounds": 7,
+      "saved": [
+        "傅肜",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 230,
+      "trappedTeams": 2,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 42.0,
+        "M": 0,
+        "S": 21.3
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "F:rear",
+            "F:rear",
+            "F:rear",
+            "F:exit"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 38.0,
+            "S": 46.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            495,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "F:rear",
+            "F:rear",
+            "F:rear",
+            "F:exit"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 26.0,
+            "S": 36.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            490,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "return",
+            "return",
+            "return",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 11.0,
+            "S": 23.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [
+            "傅肜"
+          ],
+          "fatigue": [
+            44,
+            44,
+            44,
+            44,
+            44
+          ],
+          "strength": [
+            470,
+            470,
+            470,
+            470,
+            470
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search",
+            "S:gate"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 7.9,
+            "S": 23.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.85,
+            "clear": 0.85,
+            "merge": 0.0,
+            "found": 1.35,
+            "evacuated": 0.0
+          },
+          "saved": [
+            "傅肜"
+          ],
+          "fatigue": [
+            62,
+            62,
+            62,
+            62,
+            62
+          ],
+          "strength": [
+            463,
+            463,
+            465,
+            465,
+            465
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search",
+            "S:gate"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 1.8,
+            "S": 23.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 1.7,
+            "clear": 1.7,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.35
+          },
+          "saved": [
+            "傅肜"
+          ],
+          "fatigue": [
+            80,
+            80,
+            80,
+            80,
+            80
+          ],
+          "strength": [
+            454,
+            454,
+            460,
+            460,
+            460
+          ]
+        },
+        {
+          "round": 6,
+          "orders": [
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search",
+            "S:gate"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 0,
+            "S": 21.3
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 1.7,
+            "clear": 1.7,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜"
+          ],
+          "fatigue": [
+            80,
+            80,
+            98,
+            98,
+            98
+          ],
+          "strength": [
+            454,
+            454,
+            454,
+            454,
+            454
+          ]
+        },
+        {
+          "round": 7,
+          "orders": [
+            "trapped",
+            "trapped",
+            "return",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 42.0,
+            "M": 0,
+            "S": 21.3
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 1.7,
+            "clear": 1.7,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            80,
+            80,
+            100,
+            100,
+            100
+          ],
+          "strength": [
+            454,
+            454,
+            454,
+            454,
+            454
+          ]
+        }
+      ]
+    },
+    "assault": {
+      "rounds": 8,
+      "saved": [
+        "傅肜",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 186,
+      "trappedTeams": 0,
+      "unreturnedTeams": 2,
+      "margin": {
+        "F": 21.0,
+        "M": 24.0,
+        "S": 55.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:assault",
+            "M:assault",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 1.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:assault",
+            "M:assault",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 30.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:assault",
+            "M:assault",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 50.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [],
+          "fatigue": [
+            54,
+            54,
+            54,
+            54,
+            54
+          ],
+          "strength": [
+            474,
+            485,
+            485,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "return",
+            "M:assault",
+            "M:assault",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 50.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            62,
+            72,
+            72,
+            62,
+            62
+          ],
+          "strength": [
+            454,
+            480,
+            480,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "M:assault",
+            "M:assault",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 45.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            27,
+            90,
+            90,
+            27,
+            27
+          ],
+          "strength": [
+            454,
+            472,
+            472,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 6,
+          "orders": [
+            "camp",
+            "M:assault",
+            "M:assault",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 40.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            0,
+            100,
+            100,
+            0,
+            0
+          ],
+          "strength": [
+            454,
+            464,
+            464,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 7,
+          "orders": [
+            "camp",
+            "M:assault",
+            "M:assault",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 32.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            0,
+            100,
+            100,
+            0,
+            0
+          ],
+          "strength": [
+            454,
+            455,
+            455,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 8,
+          "orders": [
+            "camp",
+            "M:assault",
+            "M:assault",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 24.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            0,
+            100,
+            100,
+            0,
+            0
+          ],
+          "strength": [
+            454,
+            446,
+            446,
+            484,
+            484
+          ]
+        }
+      ]
+    },
+    "ignore": {
+      "rounds": 5,
+      "saved": [],
+      "completeRoutes": [],
+      "stock": 5,
+      "unavailable": 0,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 0,
+        "M": 0,
+        "S": 0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 26.0,
+            "M": 38.0,
+            "S": 46.0
+          },
+          "work": {
+            "relief": 0.0,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "strength": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 10.0,
+            "M": 26.0,
+            "S": 36.0
+          },
+          "work": {
+            "relief": 0.0,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "strength": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 11.0,
+            "S": 23.0
+          },
+          "work": {
+            "relief": 0.0,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "strength": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 0,
+            "S": 10.0
+          },
+          "work": {
+            "relief": 0.0,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "strength": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 0,
+            "S": 0
+          },
+          "work": {
+            "relief": 0.0,
+            "withdraw": 0.0,
+            "flag": 0.0,
+            "clear": 0.0,
+            "merge": 0.0,
+            "found": 0.0,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "strength": [
+            500,
+            500,
+            500,
+            500,
+            500
+          ]
+        }
+      ]
+    },
+    "rescue_feng": {
+      "rounds": 5,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 118,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 21.0,
+        "M": 31.1,
+        "S": 55.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 36.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 1.0,
+            "clear": 1.0,
+            "merge": 0.0,
+            "found": 1.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 30.0,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "return",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 41.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.5,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "冯习"
+          ],
+          "fatigue": [
+            54,
+            44,
+            54,
+            54,
+            54
+          ],
+          "strength": [
+            474,
+            490,
+            480,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "return",
+            "camp",
+            "M:clear",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 31.1,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            62,
+            9,
+            72,
+            62,
+            62
+          ],
+          "strength": [
+            454,
+            490,
+            470,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "camp",
+            "return",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 21.0,
+            "M": 31.1,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            27,
+            0,
+            80,
+            27,
+            27
+          ],
+          "strength": [
+            454,
+            490,
+            470,
+            484,
+            484
+          ]
+        }
+      ]
+    }
+  },
+  "sensitivity": {
+    "-2": {
+      "balanced": {
+        "rounds": 5,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 5,
+        "unavailable": 115,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 27.0,
+          "M": 48.9,
+          "S": 56.0
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 38.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 1.0,
+              "clear": 1.0,
+              "merge": 0.0,
+              "found": 1.5,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              18,
+              18,
+              18,
+              18
+            ],
+            "strength": [
+              493,
+              495,
+              495,
+              495,
+              495
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 1.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 2,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              36,
+              36,
+              36,
+              36,
+              36
+            ],
+            "strength": [
+              486,
+              490,
+              490,
+              490,
+              490
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 1.5,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [],
+            "fatigue": [
+              54,
+              54,
+              54,
+              54,
+              54
+            ],
+            "strength": [
+              477,
+              485,
+              485,
+              485,
+              485
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "return",
+              "M:flag",
+              "M:clear",
+              "return",
+              "return"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 48.9,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              62,
+              72,
+              72,
+              62,
+              62
+            ],
+            "strength": [
+              457,
+              479,
+              479,
+              485,
+              485
+            ]
+          },
+          {
+            "round": 5,
+            "orders": [
+              "camp",
+              "return",
+              "return",
+              "camp",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 48.9,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              27,
+              80,
+              80,
+              27,
+              27
+            ],
+            "strength": [
+              457,
+              479,
+              479,
+              485,
+              485
+            ]
+          }
+        ]
+      },
+      "targeted": {
+        "rounds": 4,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 0,
+        "unavailable": 184,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 34.0,
+          "M": 50.0,
+          "S": 56.0
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [
+              1,
+              2,
+              4
+            ],
+            "stock": 2,
+            "margin": {
+              "F": 38.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 2,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              40,
+              40,
+              18,
+              40
+            ],
+            "strength": [
+              493,
+              475,
+              475,
+              495,
+              475
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [
+              0,
+              2
+            ],
+            "stock": 0,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              58,
+              58,
+              80,
+              36,
+              58
+            ],
+            "strength": [
+              466,
+              470,
+              450,
+              490,
+              470
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "return",
+              "return",
+              "return",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 0,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南"
+            ],
+            "fatigue": [
+              66,
+              66,
+              88,
+              54,
+              76
+            ],
+            "strength": [
+              446,
+              470,
+              450,
+              485,
+              465
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "camp",
+              "camp",
+              "camp",
+              "return",
+              "return"
+            ],
+            "rush": [],
+            "stock": 0,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              31,
+              31,
+              53,
+              62,
+              84
+            ],
+            "strength": [
+              446,
+              470,
+              450,
+              485,
+              465
+            ]
+          }
+        ]
+      },
+      "leave_reserve": {
+        "rounds": 6,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 5,
+        "unavailable": 117,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 27.0,
+          "M": 48.9,
+          "S": 45.0
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 38.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 1.0,
+              "clear": 1.0,
+              "merge": 0.0,
+              "found": 0.5,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              18,
+              18,
+              18,
+              0
+            ],
+            "strength": [
+              493,
+              495,
+              495,
+              495,
+              500
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 1.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 1.0,
+              "evacuated": 0.5
+            },
+            "saved": [],
+            "fatigue": [
+              36,
+              36,
+              36,
+              36,
+              0
+            ],
+            "strength": [
+              486,
+              490,
+              490,
+              490,
+              500
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 50.0,
+              "S": 55.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 1.5,
+              "found": 1.5,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              54,
+              54,
+              54,
+              54,
+              0
+            ],
+            "strength": [
+              477,
+              485,
+              485,
+              484,
+              500
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "return",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 48.9,
+              "S": 52.5
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 1.5
+            },
+            "saved": [
+              "傅肜"
+            ],
+            "fatigue": [
+              62,
+              72,
+              72,
+              72,
+              0
+            ],
+            "strength": [
+              457,
+              479,
+              479,
+              477,
+              500
+            ]
+          },
+          {
+            "round": 5,
+            "orders": [
+              "camp",
+              "return",
+              "return",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 48.9,
+              "S": 45.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南"
+            ],
+            "fatigue": [
+              27,
+              80,
+              80,
+              90,
+              0
+            ],
+            "strength": [
+              457,
+              479,
+              479,
+              468,
+              500
+            ]
+          },
+          {
+            "round": 6,
+            "orders": [
+              "camp",
+              "camp",
+              "camp",
+              "return",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 27.0,
+              "M": 48.9,
+              "S": 45.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              0,
+              45,
+              45,
+              98,
+              0
+            ],
+            "strength": [
+              457,
+              479,
+              479,
+              468,
+              500
+            ]
+          }
+        ]
+      }
+    },
+    "2": {
+      "balanced": {
+        "rounds": 5,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 5,
+        "unavailable": 133,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 15.0,
+          "M": 41.9,
+          "S": 53.0
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 1.0,
+              "clear": 1.0,
+              "merge": 0.0,
+              "found": 1.5,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              18,
+              18,
+              18,
+              18
+            ],
+            "strength": [
+              491,
+              495,
+              495,
+              495,
+              495
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 26.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 1.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 2,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              36,
+              36,
+              36,
+              36,
+              36
+            ],
+            "strength": [
+              482,
+              490,
+              490,
+              490,
+              490
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 47.0,
+              "S": 53.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 1.5,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [],
+            "fatigue": [
+              54,
+              54,
+              54,
+              54,
+              54
+            ],
+            "strength": [
+              471,
+              483,
+              483,
+              483,
+              483
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "return",
+              "M:flag",
+              "M:clear",
+              "return",
+              "return"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 41.9,
+              "S": 53.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              62,
+              72,
+              72,
+              62,
+              62
+            ],
+            "strength": [
+              451,
+              475,
+              475,
+              483,
+              483
+            ]
+          },
+          {
+            "round": 5,
+            "orders": [
+              "camp",
+              "return",
+              "return",
+              "camp",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 41.9,
+              "S": 53.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              27,
+              80,
+              80,
+              27,
+              27
+            ],
+            "strength": [
+              451,
+              475,
+              475,
+              483,
+              483
+            ]
+          }
+        ]
+      },
+      "targeted": {
+        "rounds": 4,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 0,
+        "unavailable": 198,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 26.0,
+          "M": 47.9,
+          "S": 52.4
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [
+              1,
+              2,
+              4
+            ],
+            "stock": 2,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 56.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 2,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              40,
+              40,
+              18,
+              40
+            ],
+            "strength": [
+              491,
+              475,
+              475,
+              495,
+              475
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [
+              0,
+              2
+            ],
+            "stock": 0,
+            "margin": {
+              "F": 26.0,
+              "M": 47.9,
+              "S": 55.7
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              58,
+              58,
+              80,
+              36,
+              58
+            ],
+            "strength": [
+              462,
+              468,
+              448,
+              489,
+              469
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "return",
+              "return",
+              "return",
+              "S:gate",
+              "S:search"
+            ],
+            "rush": [],
+            "stock": 0,
+            "margin": {
+              "F": 26.0,
+              "M": 47.9,
+              "S": 52.4
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南"
+            ],
+            "fatigue": [
+              66,
+              66,
+              88,
+              54,
+              76
+            ],
+            "strength": [
+              442,
+              468,
+              448,
+              482,
+              462
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "camp",
+              "camp",
+              "camp",
+              "return",
+              "return"
+            ],
+            "rush": [],
+            "stock": 0,
+            "margin": {
+              "F": 26.0,
+              "M": 47.9,
+              "S": 52.4
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              31,
+              31,
+              53,
+              62,
+              84
+            ],
+            "strength": [
+              442,
+              468,
+              448,
+              482,
+              462
+            ]
+          }
+        ]
+      },
+      "leave_reserve": {
+        "rounds": 6,
+        "saved": [
+          "傅肜",
+          "冯习",
+          "张南",
+          "沙摩柯"
+        ],
+        "completeRoutes": [
+          "F",
+          "M",
+          "S"
+        ],
+        "stock": 5,
+        "unavailable": 139,
+        "trappedTeams": 0,
+        "unreturnedTeams": 0,
+        "margin": {
+          "F": 15.0,
+          "M": 41.9,
+          "S": 29.0
+        },
+        "trace": [
+          {
+            "round": 1,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 34.0,
+              "M": 50.0,
+              "S": 54.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 0.0,
+              "flag": 1.0,
+              "clear": 1.0,
+              "merge": 0.0,
+              "found": 0.5,
+              "evacuated": 0.0
+            },
+            "saved": [],
+            "fatigue": [
+              18,
+              18,
+              18,
+              18,
+              0
+            ],
+            "strength": [
+              491,
+              495,
+              495,
+              494,
+              500
+            ]
+          },
+          {
+            "round": 2,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 26.0,
+              "M": 50.0,
+              "S": 52.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 1.0,
+              "flag": 2,
+              "clear": 2,
+              "merge": 0.0,
+              "found": 1.0,
+              "evacuated": 0.5
+            },
+            "saved": [],
+            "fatigue": [
+              36,
+              36,
+              36,
+              36,
+              0
+            ],
+            "strength": [
+              482,
+              490,
+              490,
+              488,
+              500
+            ]
+          },
+          {
+            "round": 3,
+            "orders": [
+              "F:rear",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 47.0,
+              "S": 47.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 1.5,
+              "found": 1.5,
+              "evacuated": 1.0
+            },
+            "saved": [],
+            "fatigue": [
+              54,
+              54,
+              54,
+              54,
+              0
+            ],
+            "strength": [
+              471,
+              483,
+              483,
+              480,
+              500
+            ]
+          },
+          {
+            "round": 4,
+            "orders": [
+              "return",
+              "M:flag",
+              "M:clear",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 41.9,
+              "S": 40.5
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 1.5
+            },
+            "saved": [
+              "傅肜"
+            ],
+            "fatigue": [
+              62,
+              72,
+              72,
+              72,
+              0
+            ],
+            "strength": [
+              451,
+              475,
+              475,
+              471,
+              500
+            ]
+          },
+          {
+            "round": 5,
+            "orders": [
+              "camp",
+              "return",
+              "return",
+              "S:gate",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 41.9,
+              "S": 29.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南"
+            ],
+            "fatigue": [
+              27,
+              80,
+              80,
+              90,
+              0
+            ],
+            "strength": [
+              451,
+              475,
+              475,
+              460,
+              500
+            ]
+          },
+          {
+            "round": 6,
+            "orders": [
+              "camp",
+              "camp",
+              "camp",
+              "return",
+              "camp"
+            ],
+            "rush": [],
+            "stock": 5,
+            "margin": {
+              "F": 15.0,
+              "M": 41.9,
+              "S": 29.0
+            },
+            "work": {
+              "relief": 1,
+              "withdraw": 2,
+              "flag": 2,
+              "clear": 2,
+              "merge": 2,
+              "found": 2,
+              "evacuated": 2
+            },
+            "saved": [
+              "傅肜",
+              "冯习",
+              "张南",
+              "沙摩柯"
+            ],
+            "fatigue": [
+              0,
+              45,
+              45,
+              98,
+              0
+            ],
+            "strength": [
+              451,
+              475,
+              475,
+              460,
+              500
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "urgentOpening": {
+    "balanced": {
+      "rounds": 5,
+      "saved": [
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "M",
+        "S"
+      ],
+      "stock": 5,
+      "unavailable": 94,
+      "trappedTeams": 1,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 0,
+        "M": 45.9,
+        "S": 55.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 14,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 1.0,
+            "clear": 1.0,
+            "merge": 0.0,
+            "found": 1.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 8,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 49.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.5,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            54,
+            54,
+            54,
+            54
+          ],
+          "strength": [
+            484,
+            484,
+            484,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "trapped",
+            "M:flag",
+            "M:clear",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "沙摩柯"
+          ],
+          "fatigue": [
+            36,
+            72,
+            72,
+            62,
+            62
+          ],
+          "strength": [
+            484,
+            477,
+            477,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "trapped",
+            "return",
+            "return",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 5,
+          "margin": {
+            "F": 0,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            36,
+            80,
+            80,
+            27,
+            27
+          ],
+          "strength": [
+            484,
+            477,
+            477,
+            484,
+            484
+          ]
+        }
+      ]
+    },
+    "targeted": {
+      "rounds": 4,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 0,
+      "unavailable": 190,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 8,
+        "M": 49.9,
+        "S": 54.7
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            1,
+            2,
+            4
+          ],
+          "stock": 2,
+          "margin": {
+            "F": 14,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            40,
+            40,
+            18,
+            40
+          ],
+          "strength": [
+            492,
+            475,
+            475,
+            495,
+            475
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            0,
+            2
+          ],
+          "stock": 0,
+          "margin": {
+            "F": 8,
+            "M": 49.9,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            58,
+            58,
+            80,
+            36,
+            58
+          ],
+          "strength": [
+            464,
+            469,
+            449,
+            490,
+            470
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "return",
+            "return",
+            "return",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 8,
+            "M": 49.9,
+            "S": 54.7
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南"
+          ],
+          "fatigue": [
+            66,
+            66,
+            88,
+            54,
+            76
+          ],
+          "strength": [
+            444,
+            469,
+            449,
+            484,
+            464
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "camp",
+            "camp",
+            "camp",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 8,
+            "M": 49.9,
+            "S": 54.7
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            31,
+            31,
+            53,
+            62,
+            84
+          ],
+          "strength": [
+            444,
+            469,
+            449,
+            484,
+            464
+          ]
+        }
+      ]
+    },
+    "rush_all": {
+      "rounds": 5,
+      "saved": [
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "M",
+        "S"
+      ],
+      "stock": 0,
+      "unavailable": 203,
+      "trappedTeams": 1,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 0,
+        "M": 46.8,
+        "S": 48.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "stock": 0,
+          "margin": {
+            "F": 14,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          "strength": [
+            472,
+            475,
+            475,
+            475,
+            475
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 6.5,
+            "M": 49.9,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.85,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.35,
+            "found": 2,
+            "evacuated": 0.85
+          },
+          "saved": [],
+          "fatigue": [
+            58,
+            58,
+            58,
+            58,
+            58
+          ],
+          "strength": [
+            463,
+            469,
+            469,
+            470,
+            470
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 0,
+            "M": 46.8,
+            "S": 53.2
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.85,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 1.7
+          },
+          "saved": [],
+          "fatigue": [
+            58,
+            76,
+            76,
+            76,
+            76
+          ],
+          "strength": [
+            463,
+            462,
+            462,
+            463,
+            463
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "trapped",
+            "return",
+            "return",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 0,
+            "M": 46.8,
+            "S": 48.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.85,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "冯习",
+            "张南"
+          ],
+          "fatigue": [
+            58,
+            84,
+            84,
+            94,
+            94
+          ],
+          "strength": [
+            463,
+            462,
+            462,
+            455,
+            455
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "trapped",
+            "camp",
+            "camp",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 0,
+          "margin": {
+            "F": 0,
+            "M": 46.8,
+            "S": 48.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.85,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            58,
+            49,
+            49,
+            100,
+            100
+          ],
+          "strength": [
+            463,
+            462,
+            462,
+            455,
+            455
+          ]
+        }
+      ]
+    },
+    "stabilize": {
+      "rounds": 5,
+      "saved": [
+        "傅肜",
+        "冯习",
+        "张南",
+        "沙摩柯"
+      ],
+      "completeRoutes": [
+        "F",
+        "M",
+        "S"
+      ],
+      "stock": 4,
+      "unavailable": 124,
+      "trappedTeams": 0,
+      "unreturnedTeams": 0,
+      "margin": {
+        "F": 11,
+        "M": 45.9,
+        "S": 55.0
+      },
+      "trace": [
+        {
+          "round": 1,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 4,
+          "margin": {
+            "F": 26,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 0.0,
+            "flag": 1.0,
+            "clear": 1.0,
+            "merge": 0.0,
+            "found": 1.5,
+            "evacuated": 0.0
+          },
+          "saved": [],
+          "fatigue": [
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "strength": [
+            492,
+            495,
+            495,
+            495,
+            495
+          ]
+        },
+        {
+          "round": 2,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 4,
+          "margin": {
+            "F": 20,
+            "M": 50.0,
+            "S": 56.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 1.0,
+            "flag": 2,
+            "clear": 2,
+            "merge": 0.0,
+            "found": 2,
+            "evacuated": 1.0
+          },
+          "saved": [],
+          "fatigue": [
+            36,
+            36,
+            36,
+            36,
+            36
+          ],
+          "strength": [
+            484,
+            490,
+            490,
+            490,
+            490
+          ]
+        },
+        {
+          "round": 3,
+          "orders": [
+            "F:rear",
+            "M:flag",
+            "M:clear",
+            "S:gate",
+            "S:search"
+          ],
+          "rush": [],
+          "stock": 4,
+          "margin": {
+            "F": 11,
+            "M": 49.0,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 1.5,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [],
+          "fatigue": [
+            54,
+            54,
+            54,
+            54,
+            54
+          ],
+          "strength": [
+            474,
+            484,
+            484,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 4,
+          "orders": [
+            "return",
+            "M:flag",
+            "M:clear",
+            "return",
+            "return"
+          ],
+          "rush": [],
+          "stock": 4,
+          "margin": {
+            "F": 11,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            62,
+            72,
+            72,
+            62,
+            62
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            484,
+            484
+          ]
+        },
+        {
+          "round": 5,
+          "orders": [
+            "camp",
+            "return",
+            "return",
+            "camp",
+            "camp"
+          ],
+          "rush": [],
+          "stock": 4,
+          "margin": {
+            "F": 11,
+            "M": 45.9,
+            "S": 55.0
+          },
+          "work": {
+            "relief": 1,
+            "withdraw": 2,
+            "flag": 2,
+            "clear": 2,
+            "merge": 2,
+            "found": 2,
+            "evacuated": 2
+          },
+          "saved": [
+            "傅肜",
+            "冯习",
+            "张南",
+            "沙摩柯"
+          ],
+          "fatigue": [
+            27,
+            80,
+            80,
+            27,
+            27
+          ],
+          "strength": [
+            454,
+            477,
+            477,
+            484,
+            484
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "CH2-V06",
+  "group": "chapterTwo",
+  "oldSrc": "/video/current/CH2-V06-f75d224722-20261025.mp4",
+  "oldSha256": "f75d224722b938d8af84dfac4d19aa717b09ed3d5adce7a48a24fd0311550a35",
+  "oldSubtitles": "/video/subtitles/CH2-V06-f75d224722-20261025.vtt",
+  "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\current\\PV27-CH2-V06-af3e6652.mp4",
+  "sha256": "dbb92d50560a0cb14e83d94973b49d41578da6149f6c5bef0da3f0f2cf6d64b5",
+  "bytes": 1876966,
+  "duration": 5.0,
+  "containerDuration": 5.0,
+  "width": 1280,
+  "height": 720,
+  "fps": "24/1",
+  "frames": 120,
+  "videoCodec": "h264",
+  "current": {
+    "id": "CH2-V06",
+    "src": "/video/current/PV27-CH2-V06-af3e6652.mp4",
+    "title": "日期疑点",
+    "subtitles": "/video/subtitles/PV27-CH2-V06-af3e6652.vtt"
+  },
+  "replacements": [
+    {
+      "id": "CH2-LY02-015",
+      "node": "CH2-LY02-015",
+      "text": "他说五月喝的酒，六月初二才领到粮。",
+      "kind": "thought-or-heavy",
+      "oldVoice": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/voice/CH2-LY02-015.wav",
+      "oldCorrelation": 0.9995792425247336,
+      "newVoice": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\player-voice-repair-20261027\\generated\\CH2-LY02-015-v1.wav",
+      "newVoiceSha256": "077f389770d670453988dd2eb56d9e82139a87d2e536461d5646d916d7f4f678",
+      "references": [
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\01-rebirth-surprise.wav",
+          "sha256": "fe8985a03d3140798cb05bd0c481911f90174d53e7057cc733239f8589733239",
+          "bytes": 776284,
+          "field": "references[0].audio_data",
+          "userApproved": true
+        },
+        {
+          "file": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\source-art\\audio\\player-reference-review-20261027\\02-awakening-thought.wav",
+          "sha256": "31fac83babeca714cca27d210a87749daa447f26b83e54573d60ea8ba2a31396",
+          "bytes": 1287844,
+          "field": "references[1].audio_data",
+          "userApproved": true
+        }
+      ],
+      "window": [
+        0.48,
+        4.62
+      ],
+      "insertAt": 0.48,
+      "voiceSeconds": 4.0,
+      "trimmedLeadingSilence": 0,
+      "gain": 1.1825116872787476,
+      "speed": 1,
+      "pitchUnchanged": true,
+      "model": "seed-audio-1.0",
+      "newUserApproved": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.6799999999999999,
+      "end": 4.51,
+      "text": "他说五月喝的酒，六月初二才领到粮"
+    }
+  ],
+  "videoPacketsIdentical": true,
+  "masterOutsideReplacementWindowsUnchanged": true,
+  "fullDecodePassed": true,
+  "humanListeningReview": false,
+  "userApproved": false
+}

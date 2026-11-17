@@ -1,0 +1,56 @@
+{
+  "status": "quarantined-pending-actual-listening",
+  "newPresetTTS": 0,
+  "states": [
+    {
+      "id": "V13-03-seed-audio-state.json",
+      "status": "succeeded",
+      "requestId": "682dbb3a-418a-4235-aa0e-2d215c2689b2",
+      "sha256": "4cd014d93f76cebb34950568f6215995df5958c54aedff5dc418bf7bc7621918",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-03-seed-audio1-reference.wav",
+      "quarantinedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\quarantined\\V13-03-seed-audio1-reference.wav"
+    },
+    {
+      "id": "V13-04-seed-audio-state.json",
+      "status": "succeeded",
+      "requestId": "37a18feb-f0c3-43d9-9d9d-a71237e7b93d",
+      "sha256": "efd15242c9e958460ebd6b2ea5023a3de7534ca3d145d4d40804f26911223d1b",
+      "file": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH02-films-20261025/groups/G2/user-review-20261025/audio/V13-04-seed-audio1-reference.wav",
+      "quarantinedFile": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH02-films-20261025\\groups\\G2\\user-review-20261025\\audio\\quarantined\\V13-04-seed-audio1-reference.wav"
+    }
+  ],
+  "adoptIntoCandidate": false,
+  "why": "Two required V13 Seed-Audio1.0 reference-generation requests were started sequentially before actual listening release. Both completed before the deferred-state attempt; FileExistsError prevented overwriting their success records. Both outputs are quarantined and hard-blocked from adoption.",
+  "updatedUtc": "2026-10-25T08:23:31.958732+00:00",
+  "actualSeedAudioRequests": 2,
+  "actualSucceeded": 2,
+  "inFlight": 0,
+  "secondWasAlreadyDispatchedBeforePauseAttempt": true,
+  "newCallsAllowed": false,
+  "deferredStateWritten": false,
+  "deferredAttemptOutcome": "FileExistsError because V13-04 success state already existed; no state overwritten",
+  "generationLoopExited": true,
+  "generationLoopExitCode": 0,
+  "timingEvidence": [
+    {
+      "id": "V13-03-seed-audio-state",
+      "requestId": "682dbb3a-418a-4235-aa0e-2d215c2689b2",
+      "providerLogId": "20261025162224447FC8997E57A7D9113B",
+      "stateCreatedImmediatelyBeforeFetchLocal": "2026-10-25T16:22:25.601262+08:00",
+      "stateSuccessWriteLocal": "2026-10-25T16:22:44.339270+08:00",
+      "exactNetworkPostTimestampLogged": false,
+      "sha256": "4cd014d93f76cebb34950568f6215995df5958c54aedff5dc418bf7bc7621918"
+    },
+    {
+      "id": "V13-04-seed-audio-state",
+      "requestId": "37a18feb-f0c3-43d9-9d9d-a71237e7b93d",
+      "providerLogId": "2026102516224208145FEA8A870094B50D",
+      "stateCreatedImmediatelyBeforeFetchLocal": "2026-10-25T16:22:44.347964+08:00",
+      "stateSuccessWriteLocal": "2026-10-25T16:23:05.087871+08:00",
+      "exactNetworkPostTimestampLogged": false,
+      "sha256": "efd15242c9e958460ebd6b2ea5023a3de7534ca3d145d4d40804f26911223d1b"
+    }
+  ],
+  "deferredAttemptAuditUTC": "2026-10-25T08:23:31.958732+00:00",
+  "deferredAttemptTimeNote": "No deferred record was written. The attempt immediately preceded first quarantine audit creation; exact syscall timestamp was not logged."
+}

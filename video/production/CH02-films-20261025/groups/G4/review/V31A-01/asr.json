@@ -1,0 +1,115 @@
+{
+  "id": "V31A-01",
+  "expected": "办法我听见了。接下来怎么做，你来定。",
+  "postVoiceText": null,
+  "actual": "办法我听见了接下来怎么做你来定",
+  "similarity": 1.0,
+  "segments": [
+    {
+      "start": 1.81,
+      "end": 3.39,
+      "text": "办法我听见了",
+      "words": [
+        {
+          "start": 1.81,
+          "end": 2.31,
+          "word": "办",
+          "probability": 0.5047183632850647
+        },
+        {
+          "start": 2.31,
+          "end": 2.51,
+          "word": "法",
+          "probability": 0.9997183680534363
+        },
+        {
+          "start": 2.51,
+          "end": 2.65,
+          "word": "我",
+          "probability": 0.9944109320640564
+        },
+        {
+          "start": 2.65,
+          "end": 2.85,
+          "word": "听",
+          "probability": 0.9956783652305603
+        },
+        {
+          "start": 2.85,
+          "end": 3.07,
+          "word": "见",
+          "probability": 0.9970957040786743
+        },
+        {
+          "start": 3.07,
+          "end": 3.39,
+          "word": "了",
+          "probability": 0.9975538849830627
+        }
+      ]
+    },
+    {
+      "start": 4.43,
+      "end": 5.59,
+      "text": "接下来怎么做",
+      "words": [
+        {
+          "start": 4.43,
+          "end": 4.85,
+          "word": "接",
+          "probability": 0.9706735014915466
+        },
+        {
+          "start": 4.85,
+          "end": 4.99,
+          "word": "下",
+          "probability": 0.9993728995323181
+        },
+        {
+          "start": 4.99,
+          "end": 5.13,
+          "word": "来",
+          "probability": 0.9998040795326233
+        },
+        {
+          "start": 5.13,
+          "end": 5.31,
+          "word": "怎么",
+          "probability": 0.9935871362686157
+        },
+        {
+          "start": 5.31,
+          "end": 5.59,
+          "word": "做",
+          "probability": 0.9969974756240845
+        }
+      ]
+    },
+    {
+      "start": 6.17,
+      "end": 6.97,
+      "text": "你来定",
+      "words": [
+        {
+          "start": 6.17,
+          "end": 6.59,
+          "word": "你",
+          "probability": 0.8905572891235352
+        },
+        {
+          "start": 6.59,
+          "end": 6.75,
+          "word": "来",
+          "probability": 0.9976243376731873
+        },
+        {
+          "start": 6.75,
+          "end": 6.97,
+          "word": "定",
+          "probability": 0.9654392600059509
+        }
+      ]
+    }
+  ],
+  "limitation": "ASR仅辅助定位；不能证明口型/说话人/逐字听审/BGM通过。"
+}
