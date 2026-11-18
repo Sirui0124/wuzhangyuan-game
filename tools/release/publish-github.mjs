@@ -9,7 +9,7 @@ if(!tag||!windows||!mac||!notes||!/^v[\w.-]+$/.test(tag))throw Error('Usage: --t
 function run(file,args,capture=false){const r=spawnSync(file,args,{cwd:root,encoding:'utf8',stdio:capture?'pipe':'inherit',windowsHide:true});if(r.error)throw r.error;if(r.status!==0)throw Error(`${file} failed: ${r.stderr||r.status}`);return r.stdout?.trim();}
 if(run('git',['status','--porcelain'],true))throw Error('Commit current source before publishing. Working tree must be clean.');
 const repo='Sirui0124/wuzhangyuan-game';
-if(run('gh',['repo','view',repo,'--json','visibility','--jq','.visibility'],true)!=='PRIVATE')throw Error('Expected private repository');
+if(run('gh',['repo','view',repo,'--json','visibility','--jq','.visibility'],true)!=='PUBLIC')throw Error('Expected user-authorized public repository');
 const sha=run('git',['rev-parse','HEAD'],true);
 const artifacts=[windows,mac].flatMap(dir=>JSON.parse(readFileSync(resolve(root,dir,'release-artifacts.json'),'utf8')).artifacts);
 for(const a of artifacts){if(!existsSync(a.path))throw Error(`Missing ${a.path}`);if(createHash('sha256').update(readFileSync(a.path)).digest('hex')!==a.sha256)throw Error(`Hash mismatch: ${a.path}`);}

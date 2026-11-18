@@ -5,9 +5,10 @@
 ## 交付内容
 
 - Git 保存完整源码、各章剧情和设计文档、现用及在制素材、项目规则和发布脚本。Unity 历史试验仍保留。
-- GitHub 私有仓库 `Sirui0124/wuzhangyuan-game` 的 Release 保存 Windows x64 NSIS 安装 EXE、Mac 本地网页版分发文件与 SHA256SUMS.txt。构建产物不进入 Git。
+- GitHub 公开仓库 `Sirui0124/wuzhangyuan-game` 的 Release 保存 Windows x64 NSIS 安装 EXE、Mac 本地网页版分发文件与 SHA256SUMS.txt。2026-11-18已按用户要求由私有转为公开。构建产物不进入 Git。
 - Mac 包含 Apple Silicon 与 Intel 的 Node 24.22.3 官方运行时，SHA-256 固定于构建脚本。此 tar.gz 是 Mac 必需的分发包，不额外生成源码压缩备份；本地同时保留完整原文件夹。
 - 凭据、玩家存档、缓存、依赖安装目录和本机开发工具不上传。AI 密钥由玩家在设置中配置。
+- 2026-11-18用户确认：默认服务网址固定为 `https://api.deepseek.com`，默认模型为 `deepseek-flash`，首次配置只需玩家填写自己的 API key。发布包不预置任何真实密钥，已有用户自定义配置不覆盖。
 
 ## 一次准备
 
@@ -54,6 +55,8 @@ node tools/release/test-web.mjs outputs/mac-web-标签/validation
 
 这只代表 Windows Chrome 验证。Mac 芯片运行时执行、Safari、权限/Gatekeeper 和终端退出行为须在 Mac 实机另验，不从 Windows 结果推断通过。不要把本机测试数据放入已完成的分发包。
 
+每次发布另运行 `node tools/release/verify-default-settings.mjs "Windows独立目录/Wuzhangyuan.exe" "Mac解包目录"`。此检查用隔离用户目录验证两个产物的默认网址、模型、初始空密钥，以及只填写测试密钥即可保存并重新读取；不调用真实模型。2026-11-18已对v2026.11.18-snapshot所用两个发布目录执行通过，无须为本项要求重发玩家包。
+
 ## 提交与发布
 
 核对本次源码和构建来源未发生变化；比较 Git 改动并检查敏感内容，再提交。用新的标签，保留历史版本。发布说明必须包含开放章节、构建版本、验证结果与限制。
@@ -64,6 +67,6 @@ git commit -m "release: Windows and Mac web snapshot"
 npm run publish:github -- --tag=v2026.11.18-snapshot --windows=outputs/windows-release-标签 --mac=outputs/mac-web-标签 --notes=docs/migration/本次发布说明.md
 ```
 
-发布脚本要求工作区干净、目标仓库仍为私有；核对本地两种产物的 SHA-256，推送独立 delivery 分支，创建草稿 Release，再上传产物和校验文件，核对远端大小后设为预发布。不会强推或替换 main，不自动覆盖同名 Release。中断时保留草稿，检查已上传资产后继续；不可用 `--clobber` 直接覆盖已有正式产物。
+发布脚本要求工作区干净、目标仓库仍为用户指定的公开仓库；核对本地两种产物的 SHA-256，推送独立 delivery 分支，创建草稿 Release，再上传产物和校验文件，核对远端大小后设为预发布。不会强推或替换 main，不自动覆盖同名 Release。中断时保留草稿，检查已上传资产后继续；不可用 `--clobber` 直接覆盖已有正式产物。
 
 下载时使用 Release 附件。GitHub 的自动 Source code 下载不等同玩家安装包，源码恢复须使用 Git LFS：`git clone` 后执行 `git lfs pull`。
