@@ -8,11 +8,11 @@ import { CinematicPlayer } from './cinematics';
 const root = document.querySelector<HTMLElement>('#game-root')!;
 root.dataset.chapter = 'yiling';
 const earlyAccess = chapterAccess(localStorage).yiling.earlyAccess;
-const commandMap = new URLSearchParams(location.search).get('playtest') === 'command';
-// Keep map/session startup behind the film so no game audio or mutations run underneath it.
-const opening = new CinematicPlayer('yiling-opening-v2.17', 'wzy-yiling-opening-v1', false, false);
-const openingKey = 'yiling-retreat-and-seal';
 const params = new URLSearchParams(location.search);
+const commandMap = params.get('playtest') === 'command';
+// Keep map/session startup behind the film so no game audio or mutations run underneath it.
+const opening = new CinematicPlayer('yiling-opening-v2.17', 'wzy-yiling-opening-v1', false, false, !params.has('playtest'));
+const openingKey = 'yiling-retreat-and-seal';
 if (params.get('restart') === '1' || params.get('intro') === '1') {
     opening.resetPlayback();
     opening.forget(openingKey);

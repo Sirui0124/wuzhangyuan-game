@@ -3,6 +3,7 @@ import { watchCinematicMedia, type CinematicDiagnostic } from './cinematic-diagn
 import { playbackRates, preferredPlaybackRate, savePlaybackRate } from './playback-preference';
 import { FILM_AUDIO_EVENT, FILM_AUDIO_KEY, readFilmAudio, saveFilmAudio } from './film-audio';
 import { mountCinematicSubtitles } from './cinematic-subtitles';
+import { trackWatchedFilm } from './film-history';
 export type Clip = { id: string; src: string; title: string; subtitles?: string; poster?: string };
 export type Cinematics = { opening: Clip[]; execution: Clip[]; safe: Clip[]; sacrifice?: Clip[] };
 type Active = { key: string; index: number; time: number; rate: number };
@@ -19,7 +20,7 @@ export class CinematicPlayer {
     private prepared: { src: string; video: HTMLVideoElement } | null = null;
     private handoff: { frame: HTMLCanvasElement; muted: boolean } | null = null;
     private diagnostics: CinematicDiagnostic[] = [];
-    constructor(private version: string, private storageKey = KEY, private menuEnabled = false, private mutedAutoplayFallback = true) {
+    constructor(private version: string, private storageKey = KEY, private menuEnabled = false, private mutedAutoplayFallback = true, private archivePlayback = true) {
         this.progress = { version, completed: [], active: null };
         try {
             const p = JSON.parse(localStorage.getItem(this.storageKey) ?? 'null');
@@ -119,6 +120,7 @@ export class CinematicPlayer {
         video.playbackRate = active.rate;
         let firstFrame = false, failed = false;
         const subtitles = mountCinematicSubtitles(video, clip?.subtitles);
+        const releaseHistory = this.archivePlayback ? trackWatchedFilm(video, clip) : () => {};
         const filmAudio = readFilmAudio();
         video.volume = filmAudio.volume / 100;
         video.muted = filmAudio.muted || filmAudio.volume === 0 || (handoff?.muted ?? false);
@@ -246,7 +248,7 @@ export class CinematicPlayer {
         window.addEventListener('pageshow', visibility);
         video.addEventListener('play', guardBackgroundPlay);
         this.mounted.release = () => {
-            releaseHold(); releaseFirstFrame(); diagnostic.dispose(); subtitles.dispose();
+            releaseHold(); releaseFirstFrame(); diagnostic.dispose(); subtitles.dispose(); releaseHistory();
             window.removeEventListener(FILM_AUDIO_EVENT, syncAudio); window.removeEventListener('storage', syncStoredAudio);
             document.removeEventListener('visibilitychange', visibility); window.removeEventListener('pagehide', pauseInBackground); window.removeEventListener('pageshow', visibility);
             video.removeEventListener('play', guardBackgroundPlay);

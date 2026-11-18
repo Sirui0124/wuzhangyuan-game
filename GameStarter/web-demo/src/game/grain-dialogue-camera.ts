@@ -1,5 +1,6 @@
 import { captureCinematicFrame, holdCinematicFrame } from '../cinematic-frame';
 import type { Clip } from '../cinematics';
+import { trackWatchedFilm } from '../film-history';
 import { esc } from './view-common';
 
 // L01 circles across the tent; L02's last second pushes into an extreme close-up.
@@ -13,7 +14,7 @@ export function createGrainDialogueCamera() {
     let releaseTransition = () => {};
     let stopListening = () => {};
     return {
-        listen(root: HTMLElement, clips: Clip[], node: string, words: string, signal: AbortSignal, record: (event: string) => void = () => {}) {
+        listen(root: HTMLElement, clips: Clip[], node: string, words: string, signal: AbortSignal, record: (event: string) => void = () => {}, archivePlayback = true) {
             stopListening();
             const clip = clips.find(c => c.id === 'CH2-LISTEN-STEADY');
             held = null;
@@ -22,6 +23,7 @@ export function createGrainDialogueCamera() {
             root.insertAdjacentHTML('beforeend', `<section class="grain-listener" aria-label="等待苟安回应" aria-busy="true"><video autoplay muted playsinline poster="${poster}" src="${esc(clip.src)}"></video><p>${esc(words)}</p><div class="grain-listener-controls"><span role="status" aria-live="polite">正在等待回应……</span><button data-action="cancel-speech">停止等待</button></div></section>`);
             root.querySelector<HTMLButtonElement>('.grain-listener [data-action="cancel-speech"]')?.focus();
             const video = root.querySelector<HTMLVideoElement>('.grain-listener video')!;
+            const releaseHistory = archivePlayback ? trackWatchedFilm(video, clip) : () => {};
             record('listener-mounted');
             return new Promise<void>(resolve => {
                 let finished = false;
@@ -30,6 +32,7 @@ export function createGrainDialogueCamera() {
                     finished = true;
                     clearTimeout(deadline);
                     video.pause();
+                    releaseHistory();
                     if (!signal.aborted) {
                         const frame = captureCinematicFrame(video);
                         if (frame) held = { node, frame };

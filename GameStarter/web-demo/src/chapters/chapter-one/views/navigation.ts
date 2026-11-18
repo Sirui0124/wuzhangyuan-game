@@ -16,7 +16,7 @@ import { YILING_CAMPAIGN_KEY } from '../../../campaign/yiling-result';
 export function createNavigationViews(game: ChapterSession, media: Media, movies: Record<string, Clip[]>,
     stored: (key?: string) => string | null, hasCompleted: () => boolean, archive: () => { catalog: EndingCatalog; collection: EndingCollection; warning: string }, grainCompleted: () => boolean = () => false) {
     function menu() {
-        return `<main class="game-menu"><div class="menu-art"></div><header><span>三国 · 互动叙事</span><span>建兴十二年 · 秋</span></header><section><img class="game-logo" src="/main-menu-title-v02.png" alt="逆转五丈原"><nav aria-label="主菜单">${stored() ? btn('continue', '继续这一夜', 'menu-continue') : ''}${btn('new', '新游戏')}${btn('chapters', '回溯舆图')}${btn('save', '存档留痕')}${btn('settings', '设置')}</nav></section><footer><a href="/video-review.html">影像回看</a></footer></main>`;
+        return `<main class="game-menu"><div class="menu-art"></div><header><span>三国 · 互动叙事</span><span>建兴十二年 · 秋</span></header><section><img class="game-logo" src="/main-menu-title-v02.png" alt="逆转五丈原"><nav aria-label="主菜单">${stored() ? btn('continue', '继续这一夜', 'menu-continue') : ''}${btn('new', '新游戏')}${btn('chapters', '回溯舆图')}${btn('save', '存档留痕')}${btn('settings', '设置')}</nav></section><footer><a href="/film-history.html">影像回看</a></footer></main>`;
     }
     function endingHTML(state: GameSessionState) {
         if (state.end === 'tent-execution') return tentEndingHTML();
