@@ -19,18 +19,21 @@ async function openChapter(page,origin,suffix=''){
  return frame;
 }
 
-export async function verifyChapterFour(page,origin){
+export async function verifyChapterFour(page,origin,apiOrigin=origin){
  const key='yiling-command-chapter-v1';
- const headers={'User-Agent':'Wuzhangyuan release validation'};
  await openChapter(page,origin);
  const readId=()=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)).id,key);
  const id=await readId();
- const session=async()=>{const response=await page.request.post(origin+'/api/yiling-command/session',{headers,data:{scenarioId:id}});assert.equal(response.status(),200);return(await response.json()).session;};
+ const session=async()=>{
+  const response=await fetch(apiOrigin+'/api/yiling-command/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({scenarioId:id})});
+  assert.equal(response.status,200);
+  return(await response.json()).session;
+ };
  const before=await session();assert.equal(before.routeVersion,'eight-front-20261118-v4');assert.equal(before.roundLimit,8);assert.equal(before.round,0);assert.equal(Object.keys(before.fronts).length,8);
  await page.reload();await page.frameLocator('iframe').locator('.roster-row').first().waitFor();assert.equal(await readId(),id);
  const frame=await openChapter(page,origin,'&playtest=command');assert.equal(await readId(),id);assert.equal((await session()).round,0);
  await frame.locator('#fu-end-round').click();await frame.locator('#round-report[open]').waitFor();assert.match(await frame.locator('#round-report-title').innerText(),/第1轮/);
  const after=await session();assert.equal(after.scenarioId,id);assert.equal(after.round,1);assert.ok(after.revision>before.revision);
- assert.equal((await page.request.get(origin+'/api/yiling-rescue/state?session='+id,{headers})).status(),404);
+ assert.equal((await fetch(apiOrigin+'/api/yiling-rescue/state?session='+id)).status,404);
  return {id,revision:after.revision,routeVersion:after.routeVersion,round:after.round,roundLimit:after.roundLimit,firstContact:true,legacyLinkSameSession:true};
 }

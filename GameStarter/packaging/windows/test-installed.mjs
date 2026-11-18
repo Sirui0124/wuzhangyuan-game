@@ -203,7 +203,7 @@ try{
  }
  {
   await completePrerequisite(page,'jieting');
-  const verified=await verifyChapterFour(page,'http://127.0.0.1:8812');
+  const verified=await verifyChapterFour(page,'http://127.0.0.1:8812',`http://127.0.0.1:${active.meta.staticPort}`);
   assert.ok(existsSync(resolve(userData,'yiling-command/saves',verified.id+'.json')));
   report.rescue={id:verified.id,revision:verified.revision};
   await capture(active,'04b-installed-chapter-four.png');

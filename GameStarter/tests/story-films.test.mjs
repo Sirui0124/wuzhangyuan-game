@@ -58,9 +58,13 @@ test('第一章分支影片与字幕均在发布清单，只接入已采用的�
  const filmNodes=branch.nodes.filter(node=>node.film);
  assert.ok(filmNodes.length>0);
  const registry=Object.values(movies).flat();
+ const emptyTracks=JSON.parse(readFileSync(new URL('../../video/subtitles/empty-tracks.json',import.meta.url))).entries;
  for(const {id,film} of filmNodes){
   for(const clip of [...(film.leadIn??[]),film]){
-   assert.ok(registry.some(entry=>entry.src===clip.src&&entry.subtitles===clip.subtitles),id);
+   const registered=registry.find(entry=>entry.src===clip.src);
+   assert.ok(registered,id);
+   if(clip.subtitles)assert.equal(clip.subtitles,registered.subtitles,id);
+   else assert.ok(emptyTracks.some(entry=>entry.id===registered.id&&entry.status==='planned-no-dialogue'),id);
    assert.doesNotMatch(clip.src,/CH01-(J02|F02)-h3-v6-/);
   }
  }
