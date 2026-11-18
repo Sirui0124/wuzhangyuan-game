@@ -3,21 +3,27 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readdirSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { createStaticServer } from '../../GameStarter/web-demo/serve.mjs';
+import { dialogueFixtures } from '../ai/dialogue-fixtures.mjs';
+import { jiangDutyMigration } from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/jiang-duty-migration.js';
 
-const out = resolve('outputs/review-rebuild-20261029/browser'); mkdirSync(out, {recursive:true});
+const out = resolve('outputs/release-stability/browser'); mkdirSync(out, {recursive:true});
+const fixtures = await dialogueFixtures(resolve('GameStarter/web-demo/.build'));
+const legacy = fixtures.first().snapshot();
+legacy.contentVersion = jiangDutyMigration.from;
 const server = createStaticServer(); await new Promise(ok => server.listen(0,'127.0.0.1',ok));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const browser = await chromium.launch({channel:'chrome',headless:true});
-const errors = [], checks = [], key = 'jieting-chapter-three-v1';
+const errors = [], checks = [], key = 'wuzhang-chapter-session-v1';
 try {
   for (const sample of [{name:'broken-json',raw:'{ broken JSON\n'}, {name:'incompatible',raw:'{"schema":1,"version":"old"}'},
-    {name:'backup-quota',raw:'{ original bytes',blocked:true}, {name:'null-record',raw:'null'}]) {
+    {name:'backup-quota',raw:JSON.stringify(legacy),blocked:true}, {name:'null-record',raw:'null'},
+    {name:'legacy-save',raw:JSON.stringify(legacy),valid:true}]) {
     const context = await browser.newContext({viewport:{width:1440,height:900}});
     await context.route('http://127.0.0.1:8787/**',r=>r.fulfill({headers:{'Access-Control-Allow-Origin':'*'},json:{configured:false}}));
     await context.addInitScript(({key,sample})=>{
       if(!sessionStorage.getItem('initialized')) {
         localStorage.setItem('wuzhang-runtime-mode-v1','offline');
-        localStorage.setItem('wuzhang-chapter-history-v1',JSON.stringify({version:1,entered:['jieting'],completed:[]}));
+        localStorage.setItem('wuzhang-ai-setup-seen-v1','1');
         localStorage.setItem(key,sample.raw);sessionStorage.setItem('initialized','1');
       }
       if(sample.blocked) {
@@ -26,26 +32,34 @@ try {
       }
     },{key,sample});
     const page = await context.newPage(); page.on('pageerror',e=>errors.push(e.message));
-    await page.goto(origin+'/?chapter=jieting');await page.locator('#game-root[data-node]').waitFor();
     const inspect=()=>page.evaluate(key=>({raw:localStorage.getItem(key),backups:Object.keys(localStorage).filter(k=>k.startsWith(key+':recovery:')).map(k=>localStorage.getItem(k))}),key);
-    const value=await inspect();
-    if(sample.blocked){assert.equal(value.raw,sample.raw);assert.deepEqual(value.backups,[]);}
-    else{assert.deepEqual(value.backups,[sample.raw]);assert.equal(JSON.parse(value.raw).schema,1);}
-    const node=await page.locator('#game-root').getAttribute('data-node');
-    await page.locator('[data-action=notes]').click();await page.locator('[data-action=close-modal]').click();
-    assert.equal(await page.locator('#game-root').getAttribute('data-node'),node);
-    await page.locator('[data-action=save]').click();await page.locator('[data-action=close-modal]').click();
-    assert.equal(await page.locator('#game-root').getAttribute('data-node'),node);
-    await page.screenshot({path:resolve(out,sample.name+'.png')});
-    await page.reload();await page.locator('#game-root[data-node]').waitFor();
-    const restored=await inspect();assert.deepEqual(restored.backups,value.backups);
-    if(sample.blocked) assert.equal(restored.raw,sample.raw);
-    else {
-      const narrative=raw=>JSON.parse(raw);
-      assert.deepEqual(narrative(restored.raw),narrative(value.raw));
+    await page.goto(origin);
+    await page.locator('.game-menu').waitFor();
+    assert.equal((await inspect()).raw,sample.raw,sample.name);
+    await page.locator('[data-action=continue]').click();
+    if (sample.valid) {
+      await page.locator('[data-cinema-action=skip]').click();
+      await page.locator('.branch-scene').waitFor();
+      const current=await inspect();
+      assert.deepEqual(current.backups,[sample.raw]);
+      assert.ok(JSON.parse(current.raw).branch);
+      await page.reload();
+      await page.locator('[data-action=continue]').click();
+      await page.locator('.branch-scene').waitFor();
+      assert.deepEqual((await inspect()).backups,[sample.raw]);
+    } else {
+      const warning=sample.blocked?/未能备份/:/原记录已保留/;
+      await page.locator('.menu-warning').filter({hasText:warning}).waitFor();
+      const preserved={raw:sample.raw,backups:sample.blocked?[]:[sample.raw]};
+      assert.deepEqual(await inspect(),preserved);
+      await page.reload();
+      await page.locator('[data-action=continue]').click();
+      await page.locator('.menu-warning').filter({hasText:warning}).waitFor();
+      assert.deepEqual(await inspect(),preserved);
     }
     checks.push(`${sample.name}: exact source preserved across initialization, controls and reload`);
     await context.close();
+    console.log(checks.at(-1));
   }
   const config=JSON.parse(readFileSync('GameStarter/web-demo/.build/cinematics.json'));
   const expected=[...new Set(Object.values(config).flat().map(c=>c.subtitles.split('/').pop()))].sort();
@@ -62,7 +76,7 @@ try {
     document.body.innerHTML='<div id="test-host"></div>';
     window.testPlayer=new CinematicPlayer('stability');window.finished=0;
     testPlayer.mount(document.querySelector('#test-host'),'failure',[{...clip,src:clip.src+'?stability-error'}],'story',()=>window.finished++);
-  },Object.values(config).flat().find(c=>c.id==='CH2-V10'));
+  },config.prologue[0]);
   await page.waitForFunction(()=>document.querySelector('.cinema-screen')?.dataset.mediaState==='error');
   assert.match(await page.locator('#video-status').textContent(),/重试/);
   await page.locator('video').evaluate(v=>{v.dispatchEvent(new Event('volumechange'));v.dispatchEvent(new Event('ended'));});

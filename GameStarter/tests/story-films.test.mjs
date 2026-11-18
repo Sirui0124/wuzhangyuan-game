@@ -5,17 +5,22 @@ import { filmForRows, filmForLine } from '../web-demo/.build/GameStarter/web-dem
 import { endingFilmForState } from '../web-demo/.build/GameStarter/web-demo/src/game/ending-films.js';
 const movies=JSON.parse(readFileSync(new URL('../web-demo/public/cinematics.json',import.meta.url)));
 const flow=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.flow.json',import.meta.url)));
-const script=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.script.json',import.meta.url)));
+const branch=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.branch.json',import.meta.url)));
 
 test('结局影片只呈现已发生的结果，次日问责不借用结局影片',()=>{
+ const legacyFilms=[{id:'C1END-EXEC',ending:'weiyan-execution'},{id:'C1END-TENT',ending:'tent-execution'}];
  const state={phase:'reply',end:'weiyan-execution',tent:'caught',story:{flags:{}}};
- assert.equal(endingFilmForState(movies.chapterEndings,state),null);
+ assert.equal(endingFilmForState(legacyFilms,state),null);
  state.phase='death';
- assert.equal(endingFilmForState(movies.chapterEndings,state).id,'C1END-EXEC');
- state.end='tutorial-sacrifice';assert.equal(endingFilmForState(movies.chapterEndings,state),null);
- state.end='tent-execution';assert.equal(endingFilmForState(movies.chapterEndings,state),null);
- state.tent='dead';assert.equal(endingFilmForState(movies.chapterEndings,state).id,'C1END-TENT');
-
+ assert.equal(endingFilmForState(legacyFilms,state).id,'C1END-EXEC');
+ state.end='tutorial-sacrifice';assert.equal(endingFilmForState(legacyFilms,state),null);
+ state.end='tent-execution';assert.equal(endingFilmForState(legacyFilms,state),null);
+ state.tent='dead';assert.equal(endingFilmForState(legacyFilms,state).id,'C1END-TENT');
+ assert.deepEqual(movies.chapterEndings,[]);
+ const failure=branch.nodes.find(node=>node.id==='C01-FAIL-NIGHT');
+ assert.equal(failure.film.src,'/video/current/EN02B-A-full-speed-20261022.mp4');
+ assert.equal(branch.nodes.find(node=>node.id===failure.film.afterNode).endingId,'E-DEATH');
+ assert.notEqual(failure.film.src,movies.branchDialogue.find(clip=>clip.id==='C1END-EXEC').src);
 });
 
 test('片段只覆盖现有连续剧情行，旧存档在片段中途时保留原文，不从片头重造事件',()=>{
@@ -48,13 +53,13 @@ test('固定分支只播放本轮已知的军情，动态改词仍走实时对�
  assert.equal(filmForLine([canonical,variant],['A-42','A-43'],'玩家自定义的新发言',source),null);
  assert.equal(filmForLine([canonical,variant],['A-43'],'营前有急报。',source),null);
 });
-test('新游戏全部固定有声行均有影片，结算文字和两次动态答应句保留原呈现',()=>{
- const covered=new Set(movies.chapterDialogue.flatMap(film=>film.rows));
- const dynamic=new Set(['A-40B','W07']);
- const rows=new Map(script.rows.map(row=>[row.id,row]));
- for(const section of flow.sections)for(const id of section.rows){
-  const row=rows.get(id);
-  if(row?.speaker==='结算文字'||dynamic.has(id))continue;
-  assert.ok(covered.has(id),`${section.id}: ${id}`);
+test('第一章新版对白沿用文字推进，启用的分支影片与字幕均在发布清单',()=>{
+ assert.deepEqual(movies.chapterDialogue,[]);
+ const filmNodes=branch.nodes.filter(node=>node.film);
+ assert.ok(filmNodes.length>0);
+ for(const {id,film} of filmNodes){
+  for(const clip of [...(film.leadIn??[]),film]){
+   assert.ok(movies.branchDialogue.some(entry=>entry.src===clip.src&&entry.subtitles===clip.subtitles),id);
+  }
  }
 });

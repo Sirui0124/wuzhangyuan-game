@@ -92,7 +92,9 @@ test('前五章只读正式自动档，真实荆州动作重演后按六条判�
  const j=new JingzhouSession(jstory,123);j.apply({type:'begin'});for(const id of j.order)j.apply({type:'judge',id,verdict:j.report(id).truth?'true':'false'});for(const id of j.candidates)j.apply({type:'select',id});j.apply({type:'finish'});
  st.setItem('jingzhou-chapter-five-v1:playtest:reports',JSON.stringify(j.snapshot()));assert.equal((await collectCampaign(st,read)).results[4].status,'missing');
  st.setItem('jingzhou-chapter-five-v1',JSON.stringify(j.snapshot()));let h=await collectCampaign(st,read);assert.equal(h.results[4].people[0].fate,'saved');
- assert.equal(chapterAccess(st,read('/story/chapter-access.json')).luofengpo.unlocked,true);
+ const access=chapterAccess(st,read('/story/chapter-access.json'));
+ assert.equal(access.jingzhou.completed,true);
+ assert.equal(access.luofengpo.unlocked,false);
  const bad=new JingzhouSession(jstory,1);bad.apply({type:'begin'});for(const id of bad.order)bad.apply({type:'judge',id,verdict:'false'});bad.apply({type:'finish'});st.setItem('jingzhou-chapter-five-v1',JSON.stringify(bad.snapshot()));h=await collectCampaign(st,read);assert.equal(h.results[4].people[0].fate,'saved');
  st.setItem('jingzhou-chapter-five-v1','{broken');assert.equal((await collectCampaign(st,read)).results[4].status,'invalid');
 });

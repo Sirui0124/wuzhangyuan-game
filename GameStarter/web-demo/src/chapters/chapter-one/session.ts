@@ -9,6 +9,7 @@ import { ChapterThoughtActions } from './thought-actions';
 import type { ChapterSessionContext } from './session-context';
 import { validateChapterFlow } from './flow-validation';
 import { restoreSessionState } from './session-restore';
+import { legacyBranchMigrationTarget } from './content-version-compatibility';
 import { aiEnabled, type RuntimeMode } from '../../runtime-mode';
 import { advanceTent } from './tent-visit';
 import { BranchProgress } from './branch-progress';
@@ -539,11 +540,16 @@ export class ChapterOneSession {
                 this.branch=branch;this.state=fresh;
                 this.state.story.run=saved.story.run;
                 if(saved.phase==='cinematic' && saved.cinematic==='opening')this.enter(this.flow.entry);
-                else {this.state.phase=saved.phase==='map' && branch.completed?'map':'branch';this.syncBranch(false);}
+                else {
+                    this.state.finishedCinematics=['opening'];
+                    this.state.phase=saved.phase==='map' && branch.completed?'map':'branch';
+                    this.syncBranch(false);
+                }
             } else {
                 // Legacy content cannot safely resume halfway through rewritten dialogue.
                 // The UI archives the original record before requesting this migration.
-                restoreSessionState(raw,{content:this.content,flow:this.flow,contentVersion:saved.contentVersion,rows:this.rows,sections:this.sections});
+                if (typeof saved.contentVersion !== 'string' || !saved.contentVersion) throw Error('第一章存档版本不完整。');
+                restoreSessionState(raw,{content:this.content,flow:this.flow,contentVersion:legacyBranchMigrationTarget(saved.contentVersion),rows:this.rows,sections:this.sections});
                 this.state=fresh;this.branch=new BranchProgress(this.branch.story);
                 this.enter(this.flow.entry);
             }
@@ -576,6 +582,6 @@ export class ChapterOneSession {
         this.state.end=b.completed?'safe':null;
         if(g.node.kind==='terminal' && b.completed)this.state.phase='map';
         const ending=g.node.endingId;
-        if(emit)this.emit(ending&&b.atLastLine?{type:'ending',id:({'E-COOP':'branch-coop','E-FORMAL':'branch-formal','E-DEATH':'branch-dismissed','E-LAMP':'branch-lamp','E-ANGER':'provocation'} as Record<string,string>)[ending]}:{type:'line'});
+        if(emit)this.emit(ending&&b.atLastLine?{type:'ending',id:({'E-COOP':'branch-coop','E-FORMAL':'branch-formal','E-DEATH':'tutorial-sacrifice','E-LAMP':'branch-lamp','E-ANGER':'provocation'} as Record<string,string>)[ending]}:{type:'line'});
     }
 }

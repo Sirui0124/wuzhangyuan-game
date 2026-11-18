@@ -1,11 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dialogueFixtures } from '../../tools/ai/dialogue-fixtures.mjs';
 import { currentClueSources, freshReview, commitRow } from '../web-demo/.build/GameStarter/web-demo/src/thought-canvas-model.js';
 import { sixClueMigration } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/clue-save-migration.js';
+import { roleLabelMigration } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/content-version-compatibility.js';
 import { compactWeiyanFacts } from '../web-demo/.build/GameStarter/web-demo/src/weiyan-facts.js';
 const f = await dialogueFixtures(fileURLToPath(new URL('../web-demo/.build/', import.meta.url)));
+const branchStory = JSON.parse(readFileSync(new URL('../web-demo/.build/story/chapter-one.branch.json', import.meta.url)));
 
 test('runtime has seven fact IDs with separate duty and consent, including first-round branches', () => {
     assert.deepEqual(f.content.clues.map(c => [c.id, c.summary]), [
@@ -58,7 +61,7 @@ function legacySnapshot(s) {
 test('the immediately preceding first and authorized saves retain wording, money and real progress', async () => {
     for (const source of [f.first(), await f.authorized()]) {
         source.setDraft('这一句是已经保存的措辞。');
-        const old = legacySnapshot(source), restored = new f.ChapterSession(f.content, f.flow, f.version);
+        const old = legacySnapshot(source), restored = new f.ChapterSession(f.content, f.flow, roleLabelMigration.to);
         restored.restore(JSON.stringify(old));
         assert.equal(restored.snapshot().story.draft, old.story.draft);
         assert.deepEqual(restored.snapshot().supplies, old.supplies);
@@ -70,7 +73,12 @@ test('the immediately preceding first and authorized saves retain wording, money
 });
 test('legacy aliases never bypass the actual C08 source checks', async () => {
     const old = legacySnapshot(await f.authorized());
+    const current = new f.ChapterSession(f.content, f.flow, f.version, undefined, undefined, 'offline', branchStory);
+    current.restore(JSON.stringify(old));
+    assert.equal(current.snapshot().phase, 'cinematic');
+    assert.equal(current.branch.dialogue.state.jiangAgreed, false);
     old.story.completed = old.story.completed.filter(id => id !== 'J10A');
-    const restored = new f.ChapterSession(f.content, f.flow, f.version);
+    const restored = new f.ChapterSession(f.content, f.flow, roleLabelMigration.to);
     assert.throws(() => restored.restore(JSON.stringify(old)), /来源/);
+    assert.throws(() => current.restore(JSON.stringify(old)), /来源/);
 });

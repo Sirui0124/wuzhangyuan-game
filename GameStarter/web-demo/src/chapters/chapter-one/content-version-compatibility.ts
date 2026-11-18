@@ -21,6 +21,13 @@ export function migrationRuleVersion(currentVersion: string): string {
     return currentVersion === roleLabelMigration.to ? roleLabelMigration.from : currentVersion;
 }
 
+/** Select the verified historical rules for validation before restarting in the branch story. */
+export function legacyBranchMigrationTarget(savedVersion: string): string {
+    return [sixClueMigration.from, jiangDutyMigration.from].includes(savedVersion)
+        ? roleLabelMigration.to
+        : savedVersion;
+}
+
 export function isCompatibleContentVersion(savedVersion: unknown, currentVersion: string): boolean {
     const rulesVersion = migrationRuleVersion(currentVersion);
     return savedVersion === currentVersion

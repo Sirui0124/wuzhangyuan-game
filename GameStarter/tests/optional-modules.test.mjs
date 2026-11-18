@@ -11,9 +11,12 @@ const progress = (chapter, entered = [], completed = []) => ({ chapter, entered,
 test('every entrance points to an existing live node and an illustrated profile', () => {
     const script = json('../../content/chapters/wuzhang/chapter-one.script.json');
     const flow = json('../../content/chapters/wuzhang/chapter-one.flow.json');
+    const branch = json('../../content/chapters/wuzhang/chapter-one.branch.json');
     const grain = [json('../../content/chapters/grain/chapter-two.films.json'), json('../../content/chapters/grain/chapter-two.playable.json')];
     const jieting = json('../../content/chapters/jieting/chapter-three.story.json');
-    const nodes = { wuzhang: new Set([...script.rows.map(r => r.id), ...flow.cinematics.map(c => 'cinematic:' + c.id)]), grain: new Set(grain.flatMap(s => s.nodes.map(n => n.id))), jieting: new Set(jieting.nodes.map(n => n.id)) };
+    const branchPeople = branch.nodes.flatMap(node => node.lines.map(line => 'branch-person:' + line.speaker));
+    const branchEncounters = branch.nodes.filter(node => node.lines.some(line => line.speaker === '姜维')).map(node => 'branch-encounter:' + node.id);
+    const nodes = { wuzhang: new Set([...script.rows.map(r => r.id), ...flow.cinematics.map(c => 'cinematic:' + c.id), ...branchPeople, ...branchEncounters]), grain: new Set(grain.flatMap(s => s.nodes.map(n => n.id))), jieting: new Set(jieting.nodes.map(n => n.id)) };
     const art = json('../web-demo/visual-assets.json').characters;
     for (const entry of characterEntrances) {
         assert.ok(nodes[entry.chapter].has(entry.node), entry.node);
@@ -36,6 +39,8 @@ test('parallel order, branch omissions, old saves and repeat encounters project 
     assert.deepEqual(encounteredCharacters(value).sort(), ['guard', 'relay']);
     assert.equal(JSON.stringify(value), before);
     assert.deepEqual(encounteredCharacters(progress('wuzhang')), []);
+    assert.ok(!encounteredCharacters(progress('wuzhang', [], ['branch-person:小甲'])).includes('jiangwei'));
+    assert.ok(encounteredCharacters(progress('wuzhang', [], ['branch-person:姜维'])).includes('jiangwei'));
     assert.ok(!encounteredCharacters(progress('grain', ['V41E'], ['V02', 'V05'])).includes('old-woman'));
 });
 test('AI disabled uses injected local provider; remote failure never silently falls back', async () => {

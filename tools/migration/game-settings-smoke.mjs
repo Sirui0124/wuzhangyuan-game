@@ -23,6 +23,7 @@ try{
  });
  await page.goto(base);await page.locator('[data-action=settings]').click();
  assert.equal(await page.locator('#reduce-motion').count(),0);
+ assert.equal(await page.locator('#ai-voice-enabled,a[href="/voice-demo.html"]').count(),0);
  assert.equal(await page.locator('#api-settings').evaluate(node=>node.parentElement.classList.contains('settings-section')),true);
  assert.equal(await page.locator('#api-settings').evaluate(node=>node.previousElementSibling.querySelector('#game-ai-enabled') !== null),true);
  await page.locator('#api-settings > summary').click();await page.locator('#api-model:not([disabled])').waitFor();

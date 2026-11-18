@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { dialogueFixtures } from '../../tools/ai/dialogue-fixtures.mjs';
 import { freshReview, commitRow, currentClueSources } from '../web-demo/.build/GameStarter/web-demo/src/thought-canvas-model.js';
 import { jiangDutyMigration } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/jiang-duty-migration.js';
+import { roleLabelMigration } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/content-version-compatibility.js';
 import { chapterOneDecision } from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/narrative-decision.js';
 import { narrativeChoiceHTML } from '../web-demo/.build/GameStarter/web-demo/src/game/narrative-choice.js';
 const f = await dialogueFixtures(resolve('GameStarter/web-demo/.build'));
@@ -53,7 +54,7 @@ test('旧存档仅凭已听乙对白补职责：保留已做推理，不替玩�
   for (const completed of [false, true]) {
     const s = await f.thoughts(); s.think(); s.continueThought(); s.placeThought('C06');
     if (completed) {s.placeThought('C07'); s.think();}
-    const old = previousSave(s), restored = new f.ChapterSession(f.content, f.flow, f.version);
+    const old = previousSave(s), restored = new f.ChapterSession(f.content, f.flow, roleLabelMigration.to);
     restored.restore(JSON.stringify(old));
     assert.ok(restored.collected.includes('C07'));
     assert.equal(!!restored.graph().R02, completed);
@@ -62,7 +63,7 @@ test('旧存档仅凭已听乙对白补职责：保留已做推理，不替玩�
     restored.restore(restored.serialize());
     assert.equal(restored.collected.filter(id => id === 'C07').length, 1);
   }
-  const early = f.first(), restored = new f.ChapterSession(f.content, f.flow, f.version);
+  const early = f.first(), restored = new f.ChapterSession(f.content, f.flow, roleLabelMigration.to);
   restored.restore(JSON.stringify(previousSave(early)));
   assert.ok(!restored.collected.includes('C07'));
 });

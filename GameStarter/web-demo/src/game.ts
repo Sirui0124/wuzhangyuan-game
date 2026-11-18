@@ -62,7 +62,7 @@ const writing = createEvaluationModule({ enabled: () => aiEnabled(mode), online:
 const game = new ChapterSession(script, flow, manifest.contentVersion,
     evaluation.evaluate, writing.evaluate, mode, branchStory);
 // A changed film list invalidates stale playback offsets without resetting narrative saves.
-const audio = new GameAudio(), cinema = new CinematicPlayer(`${manifest.contentVersion}:${JSON.stringify(movies)}`, playtestKey ? `wuzhang-playtest-films${playtestKey}` : 'wuzhang-session-films-v1', true);
+const audio = new GameAudio(), cinema = new CinematicPlayer(`${manifest.contentVersion}:${JSON.stringify(movies)}`, playtestKey ? `wuzhang-playtest-films${playtestKey}` : 'wuzhang-session-films-v1', true, true, !playtestKey);
 const catalog: EndingCatalog = { schemaVersion: 1, chapterId: chapterOne.id, endings: [...[...flow.endings, tentEnding].map(e => ({ ...e, chapter: 'wuzhang', category: 'ending' as const })), ...extraAchievementCatalog(jietingAchievements), ...pangtongAchievementCatalog(pangtongAchievements)].sort((a, b) => ['wuzhang','grain','jieting','luofengpo'].indexOf(a.chapter ?? 'wuzhang') - ['wuzhang','grain','jieting','luofengpo'].indexOf(b.chapter ?? 'wuzhang') || Number(a.category !== 'milestone') - Number(b.category !== 'milestone')) };
 let collection = freshCollection(), collectionWarning = '';
 catalog.endings = catalog.endings.filter(ending => hasPackagedChapter(ending.chapter ?? 'wuzhang'));
@@ -166,10 +166,11 @@ game.onChange(event => {
     if (!ui.restoring) render();
 });
 function load(key = GAME_SAVE_KEY) {
-
     const raw = stored(key); if (!raw) { toast('这里还没有留下进度。'); return; }
-    try { if(!JSON.parse(raw).branch) backupSave(localStorage,key,raw); }
-    catch { toast('旧进度暂未能备份，请稍后再试。');return; }
+    let branchSave = false;
+    try { branchSave = !!JSON.parse(raw)?.branch; } catch { /* Preserve even malformed legacy data. */ }
+    try { if (!branchSave) backupSave(localStorage, key, raw); }
+    catch { ui.storageWarning = '旧进度暂未能备份，请稍后再试。'; render(); return; }
     let loaded = false;
     try { ui.restoring = true; game.restore(raw);    ui.inventoryKind = 'clues'; ui.notesShown = false; ui.storageWarning = ''; ui.home = false; ui.overlay = ''; ui.filmKey = ''; ui.noteOpen = ''; ui.revealAt = 0; ui.renderedWorkspace = ''; clearTimeout(ui.revealTimer); loaded = true; }
     catch { ui.storageWarning = '这份存档与当前内容暂不兼容，原记录已保留。'; }

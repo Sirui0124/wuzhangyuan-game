@@ -6,8 +6,14 @@ export function chapterOneCharacters(game: ChapterSession, visible: boolean): Ch
     const state = game.snapshot();
     if(game.branch) {
         const b=game.branch;
-        const lines=[...b.dialogue.trail.flatMap(f=>f.lines),...b.dialogue.frame.lines.slice(0,b.line+1)];
-        const completed=[...new Set(lines.map(l=>`branch-person:${l.speaker}`))];
+        const frames=[...b.dialogue.trail,{...b.dialogue.frame,lines:b.dialogue.frame.lines.slice(0,b.line+1)}];
+        const completed=[...new Set([
+            ...state.finishedCinematics.map(id=>`cinematic:${id}`),
+            ...frames.flatMap(({nodeId,lines})=>[
+                ...lines.map(l=>`branch-person:${l.speaker}`),
+                ...(lines.some(l=>l.speaker==='姜维') ? [`branch-encounter:${nodeId}`] : []),
+            ]),
+        ])];
         const speaker=b.currentLine?.speaker??'';
         return {chapter:'wuzhang',entered:[],completed,active:speaker==='小甲'?'guard':characterId(speaker),visible};
     }

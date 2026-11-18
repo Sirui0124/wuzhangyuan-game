@@ -32,10 +32,14 @@ try{
  await page.reload();assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),id);
  report.checks.push('第四章营救后端与浏览器刷新后存档保留');
  await page.goto(origin+'/?chapter=yiling&playtest=command');
- await page.frameLocator('iframe').locator('body').waitFor();
  assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
- const command=await page.request.post(origin+'/api/yiling-command/session',{data:{}});assert.equal(command.status(),200);assert.equal((await command.json()).ok,true);
- report.checks.push('第四章三路指令入口及独立后端会话可用，无需模型调用');
+ const command=page.frameLocator('iframe');
+ await command.locator('#skip-info').click();
+ await command.locator('.roster-row').waitFor();
+ await command.locator('#fu-end-round').click();
+ await command.locator('#round-report[open]').waitFor();
+ assert.match(await command.locator('#round-report-title').innerText(),/第1轮/);
+ report.checks.push('第四章前线军令可启动独立会话，并结算首轮军报');
  for(const chapter of ['grain','jieting','jingzhou','luofengpo']){await page.goto(origin+'/?chapter='+chapter);await page.waitForFunction(id=>new URL(location.href).searchParams.get('locked')===id,chapter);}
  report.checks.push('其余章节维持当前暂未开放状态');
  assert.deepEqual(report.errors,[]);assert.deepEqual(report.missing,[]);report.passed=true;

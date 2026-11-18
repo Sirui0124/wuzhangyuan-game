@@ -2,13 +2,15 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {ChapterOneSession} from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/session.js';
-import {createAiService,createSigner} from '../server/chapter-one-ai.mjs';
-import {Dialogue} from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/branch-engine.js';
+import {createAiService,createSigner,replay} from '../server/chapter-one-ai.mjs';
+import {Dialogue,classify} from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/branch-engine.js';
 import {polishInput,polishDraft} from '../server/chapter-one-http.mjs';
+import {chapterOneCharacters} from '../web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/characters.js';
+import {encounteredCharacters} from '../web-demo/.build/GameStarter/web-demo/src/characters/encounters.js';
 const read=name=>JSON.parse(readFileSync(new URL(`../../content/chapters/wuzhang/${name}`,import.meta.url),'utf8'));
 const story=read('chapter-one.branch.json'), script=read('chapter-one.script.json'),flow=read('chapter-one.flow.json');
 const make=()=>new ChapterOneSession(script,flow,'branch-test',undefined,undefined,'offline',story);
-function settle(g){for(let i=0;i<200;i++){const b=g.branch,d=b.dialogue;if(b.noticePending)g.branchAct('notice');else if(!b.atLastLine||d.pending||d.node.kind==='passage')g.branchAct('next');else return;}throw Error('无法停止');}
+function settle(g){for(let i=0;i<200;i++){const b=g.branch,d=b.dialogue;if(b.noticePending)g.branchAct('notice');else if(!b.atLastLine||d.pending||d.node.kind==='passage'||d.node.autoChoice)g.branchAct('next');else return;}throw Error('无法停止');}
 function start(known,branch='critical'){const g=make();g.finishCinematic();settle(g);g.branchAct(known?'ask':'choose',known?'还有谁可以帮忙处理军情？':'enemy');settle(g);for(const id of ['meet','concern',branch]){g.branchAct('choose',id);settle(g);}return g;}
 
 function confirmJiang(){
@@ -17,6 +19,104 @@ function confirmJiang(){
  assert.ok(g.branch.dialogue.choices.some(c=>c.id==='confirm_jiang'));
  g.branchAct('choose','confirm_jiang');return g;
 }
+function planStart(known=false){const g=make();g.finishCinematic();settle(g);g.branchAct(known?'ask':'choose',known?'还有谁能处理军情？':'enemy');settle(g);g.branchAct('choose','meet');settle(g);assert.ok(!g.branch.dialogue.choices.some(c=>c.id==='concern'));g.branchAct('choose','concern_joint');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-AI-JOINT');return g;}
+const assessment=(plan='none',extra={})=>({enemy:'missing',enemyQuote:'',plan,planQuote:'',unsupportedClaim:false,claimQuote:'',offense:'none',offenseQuote:'',...extra});
+
+test('新版人物志只按实际开场和姜维通传解锁，并在读档后保留',()=>{
+ const people=g=>encounteredCharacters(chapterOneCharacters(g,true));
+ assert.ok(!people(make()).includes('zhugeliang'));
+ const g=confirmJiang();
+ assert.ok(people(g).includes('zhugeliang'));
+ assert.ok(!people(g).includes('jiangwei_guard'));
+ settle(g);
+ assert.ok(people(g).includes('jiangwei_guard'));
+ const loaded=make();loaded.restore(g.serialize());
+ assert.deepEqual(people(loaded),people(g));
+});
+
+test('小甲问法排除否定、引用与撤回，仍识别真正的替代接报请求',()=>{
+ const cases=[
+  ['不找姜维，让他处理军情也不合适。','other'],
+  ['不是问谁来接报，我只想问营外的动静。','ask_enemy'],
+  ['谁都不必来接报。','other'],
+  ['不能让姜维来接报。','other'],
+  ['有人说“请姜维来处理军情”，我不这样想。','other'],
+  ['还有谁能处理军情？算了，不找人了。','other'],
+  ['不找别人了。还是请伯约来听报吧。','ask_decision_maker'],
+  ['不能打扰丞相，还有谁能处理军情？','ask_decision_maker'],
+  ['能不能请个人来听军报？','ask_decision_maker'],
+  ['除了丞相，还有谁能处置军情？','ask_decision_maker'],
+  ['姜维','other'],['我来负责转呈军报。','other'],
+ ];
+ for(const [text,expected] of cases)assert.equal(classify(text),expected,text);
+});
+
+test('否定规则修复不改写旧存档经历，新旧问话均能恢复并通过服务端重放',()=>{
+ for(const version of [1,2]){
+  const g=make();g.finishCinematic();settle(g);
+  g.branch.dialogue.ask('不找姜维，让他处理军情也不合适。',version);settle(g);
+  assert.equal(g.branch.dialogue.state.knowsJiang,version===1);
+  const saved=g.serialize(),restored=make();restored.restore(saved);
+  assert.deepEqual(restored.branch.snapshot(),g.branch.snapshot());
+  const d=replay(story,g.branch.dialogue.audit,createSigner('guard-compat'),Dialogue);
+  assert.equal(d.state.knowsJiang,version===1);
+ }
+});
+
+test('方案追问的预写回应不再要求送回令，故障也不替玩家补伯约答案',async()=>{
+ const g=planStart(false),d=g.branch.dialogue;
+ const service=createAiService({Dialogue,storyLoader:async()=>story,signer:createSigner('fallback-review'),model:async input=>{
+  if(input.system.includes('语义分类器'))return {text:JSON.stringify(assessment())};
+  throw Error('只模拟措辞生成故障');
+ }});
+ const r=await service({version:story.version,nodeId:d.nodeId,audit:d.audit,requestId:'fallback-review-123',text:'还没想好。'});
+ assert.equal(r.outcome,'ASK');assert.equal(r.replySource,'fixed');
+ assert.match(r.reply,/请谁来听这份军报/);assert.doesNotMatch(r.reply,/回令|姜维|伯约/);
+ g.branchReply('还没想好。',r);settle(g);assert.equal(g.branch.dialogue.exchange.length,1);
+});
+test('新成功路线两种说法共用当面报军情，不再往返送回执，旧存档入口仍可回放',()=>{
+ for(const outcome of ['INVITE_JIANG','RELAY_JIANG']){
+  const g=planStart(true);g.branchAct('offline',outcome,'请伯约听取军情。');settle(g);
+  assert.equal(g.branch.dialogue.nodeId,'C01-END-JOINT');
+  assert.equal(g.branch.dialogue.state.orderDelivered,true);
+  const ids=g.branch.dialogue.trail.map(f=>f.nodeId);
+  assert.ok(ids.includes('C01-JIANG-JOINT'));assert.ok(!ids.includes('C01-ORDER-RELAY'));
+  const restored=make();restored.restore(g.serialize());assert.equal(restored.branch.dialogue.nodeId,'C01-END-JOINT');
+ }
+ const old=planStart(true);const audit=old.branch.dialogue.audit.map(e=>e.type==='choose'&&e.id==='concern_joint'?{...e,id:'concern_plan'}:e);
+ const legacy=new Dialogue(story);for(const e of audit){if(e.type==='choose')legacy.choose(e.id);else if(e.type==='next')legacy.next();else if(e.type==='guard')legacy.ask(e.text);}
+ assert.equal(legacy.nodeId,'C01-AI-PLAN');assert.equal(legacy.aiRoute('RELAY_JIANG').target,'C01-JIANG-RELAY');
+});
+function turns(g,queue){let index=0;const histories=[];const service=createAiService({Dialogue,storyLoader:async()=>story,signer:createSigner('plan-turns'),model:async input=>{
+ if(input.system.includes('语义分类器')){assert.match(input.system,/offenseQuote/);histories.push(JSON.parse(input.text));return {text:JSON.stringify(queue[index++])};}
+ if(input.system.includes('校验魏延'))return {text:'{"valid":true}'};
+ return {text:JSON.stringify({utterance:g.branch.dialogue.aiRoute(JSON.parse(input.text).outcome).fallback})};
+ }});return {histories,submit:async text=>{const d=g.branch.dialogue;const r=await service({version:story.version,nodeId:d.nodeId,audit:d.audit,requestId:`plan-test-${index}-1234`,text});g.branchReply(text,r);settle(g);return r;}};}
+test('新入口三次未说明办法后强闯灯灭，不允许重置轮数',async()=>{
+ const g=planStart(),t=turns(g,[assessment(),assessment(),assessment()]);
+ assert.equal((await t.submit('将军请回。')).outcome,'ASK');assert.equal(g.branch.dialogue.exchange.length,1);
+ assert.throws(()=>g.branchAct('retry'),/下一次发言/);
+ const restored=make();restored.restore(g.serialize());assert.equal(restored.branch.dialogue.exchange.length,1);
+ assert.equal((await t.submit('总会有人处理。')).outcome,'ASK');
+ assert.equal((await t.submit('你再等等。')).outcome,'FORCE_ENTER');assert.equal(g.branch.dialogue.node.endingId,'E-LAMP');
+ assert.deepEqual(t.histories.map(h=>h.history.length),[0,1,2]);
+ g.branchAct('choose','rewind');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-GUARD-1');
+});
+test('新交涉不强制复述敌情，可承接补充并统一送伯约处理',async()=>{
+ const g=planStart(true),t=turns(g,[assessment(),assessment('relay_jiang',{planQuote:'送给姜将军，再把回令带回来'})]);
+ await t.submit('我去办。');const result=await t.submit('送给姜将军，再把回令带回来。');
+ assert.equal(result.outcome,'RELAY_JIANG');assert.equal(g.branch.dialogue.node.endingId,'E-FORMAL');assert.equal(t.histories[1].history[0].player,'我去办。');
+});
+test('重说按最新撤回判断，自行转呈仍进小甲和天亮失败',async()=>{
+ const g=planStart(true),t=turns(g,[assessment(),assessment('self_relay',{planQuote:'我自己转呈，有回令便送回前营'})]);
+ await t.submit('我想请伯约。');await t.submit('不去找伯约了，我自己转呈，有回令便送回前营。');assert.equal(g.branch.dialogue.node.endingId,'E-DEATH');
+});
+test('严重冒犯单独处斩；没有原话依据不能处斩',async()=>{
+ const g=planStart(),t=turns(g,[assessment('none',{offense:'grave',offenseQuote:'我要投敌，替魏军打开营门'})]);
+ assert.equal((await t.submit('我要投敌，替魏军打开营门。')).outcome,'EXECUTION');assert.equal(g.branch.dialogue.node.endingId,'E-ANGER');
+ const invalid=planStart(),bad=turns(invalid,[assessment('none',{offense:'grave',offenseQuote:''}),assessment('none',{offense:'grave',offenseQuote:''})]);
+ await assert.rejects(bad.submit('将军何必发怒？'),/原话依据/);assert.equal(invalid.branch.dialogue.exchange.length,0);
+});
 test('提前确认对白润色兼容旧文案存档，仍拒绝伪造的应允',()=>{
  const oldStory=structuredClone(story),node=oldStory.nodes.find(n=>n.id==='C01-JIANG-CONFIRM');
  for(const line of node.lines){const r=node.textRevisions.find(r=>r.speaker===line.speaker&&r.new===line.text);if(r)line.text=r.old;}
@@ -92,12 +192,12 @@ test('再问营外情况后收录小甲线索，魏延补充同一条；存档�
  loaded.branchAct('choose','meet');assert.match(loaded.branch.clues.find(c=>c.id==='branch-enemy').text,/小甲说/);
  settle(loaded);const updated=loaded.branch.clues.filter(c=>c.id==='branch-enemy');assert.equal(updated.length,1);assert.match(updated[0].text,/前营正等着回话/);
 });
-test('四种结局及死亡回溯，不从提示直接授予应允与送达',()=>{
+test('四种结局及失职重试，不从提示直接授予应允与送达',()=>{
  for(const [known,outcome,end] of [[true,'INVITE_JIANG','E-COOP'],[true,'RELAY_JIANG','E-FORMAL'],[false,'SELF_RELAY','E-DEATH'],[false,'ENTER','E-LAMP']]){
   const g=start(known);assert.equal(g.branch.dialogue.state.jiangAgreed,false);assert.equal(g.branch.completed,false);
   g.branchAct('offline',outcome,'魏军还没攻营，我会把军报交到。');settle(g);
   if(end==='E-COOP'){g.branchAct('choose','stay');settle(g);}
-  if(end==='E-DEATH')for(const id of ['wait','admit']){g.branchAct('choose',id);settle(g);}
+
   assert.equal(g.branch.dialogue.node.endingId,end);assert.equal(g.branch.completed,['E-COOP','E-FORMAL'].includes(end));
   const loaded=make();loaded.restore(g.serialize());assert.deepEqual(loaded.branch.snapshot(),g.branch.snapshot());
   if(end==='E-DEATH'){g.branchAct('choose','rewind');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-GUARD-2');assert.equal(g.branch.dialogue.state.knowsJiang,false);}
@@ -158,4 +258,16 @@ test('润色纠错或补回删除内容被核验拒绝，不回填或改变剧�
  const g=start(true),d=g.branch.dialogue,before=d.serialize();let calls=0;
  await assert.rejects(polishDraft(d,'魏军已经攻营，我来转呈。',async()=>({text:JSON.stringify(++calls===1?{text:'魏军还没攻营，我去请伯约。'}:{valid:false})})),/改变了原意/);
  assert.equal(d.serialize(),before);
+});
+
+
+test('冒犯复核否定初判时保留补充机会，不误入处斩',async()=>{
+ const g=planStart(),d=g.branch.dialogue;
+ const service=createAiService({Dialogue,storyLoader:async()=>story,signer:createSigner('offense-check'),model:async input=>{
+  if(input.system.includes('语义分类器'))return {text:JSON.stringify(assessment('none',{offense:'grave',offenseQuote:'投敌'}))};
+  if(input.system.includes('严重冒犯'))return {text:'{"valid":false}'};
+  throw Error('使用对应后备问话');
+ }});
+ const text='我岂会投敌？';const r=await service({version:story.version,nodeId:d.nodeId,audit:d.audit,requestId:'offense-check-0001',text});
+ assert.equal(r.outcome,'ASK');g.branchReply(text,r);settle(g);assert.equal(d.nodeId,'C01-AI-JOINT');assert.equal(d.exchange.length,1);
 });

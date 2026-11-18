@@ -20,9 +20,9 @@ await page.addInitScript(() => {
  };
 });
 const url=`http://127.0.0.1:${server.address().port}`;
-async function start(){await page.goto(url);await page.locator('[data-action="new"]').click();await page.locator('[data-action="new-confirmed"]').click();await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.1);assert.match(await page.locator('video').getAttribute('src'),/PV-regrets-v8/);assert.equal(await page.locator('.chapter-map').count(),0);}
+async function start(){await page.goto(url);await page.locator('.game-menu').waitFor();assert.equal(await page.locator('.game-menu').getByText('一灯未灭，天命未定。').count(),0);await page.screenshot({path:resolve(out,'menu.png')});await page.locator('[data-action="new"]').click();await page.locator('[data-action="new-confirmed"]').click();await page.waitForFunction(()=>document.querySelector('video')?.currentTime>.1);assert.match(await page.locator('video').getAttribute('src'),/PV-regrets-v11/);assert.equal(await page.locator('.chapter-map').count(),0);}
 try {
- await start();assert.equal(await page.locator('video').evaluate(v=>v.duration),73);checks.push('新游戏先播放73秒PV，地图未提前显示');
+ await start();assert.ok(Math.abs(await page.locator('video').evaluate(v=>v.duration)-1750/24)<0.05);checks.push('新游戏先播放72.917秒PV，地图未提前显示');
  assert.equal(await page.evaluate(()=>window.__bgmSources.filter(r=>r.active&&r.source.loop).length),0);checks.push('PV播放时无运行中的背景音乐循环');
  await page.locator('video').evaluate(async v=>{v.currentTime=v.duration-.2;await v.play()});await page.locator('.chapter-map').waitFor();checks.push('PV实际ended事件进入地图');
  await page.screenshot({path:resolve(out,'map.png')});

@@ -44,9 +44,8 @@ try {
  assert.equal(await page.evaluate(key=>JSON.parse(localStorage.getItem(key+':manual:1')).id,key),slot.id);
  await frame.locator('[data-action=campaign-pause]').click();
  await page.locator('[data-action=settings]').click();
- await page.locator('#ai-voice-enabled').waitFor();
- const voice=page.locator('#ai-voice-enabled');
- if(await voice.isEnabled()){await voice.setChecked(false);assert.equal(await voice.isChecked(),false);}
+ await page.locator('#game-ai-enabled').waitFor();
+ assert.equal(await page.locator('#ai-voice-enabled').count(),0);
  await page.locator('[data-action=close-modal]').click();
  await page.locator('[data-action=pause-restart]').click();
  await page.locator('[data-action=pause-restart-confirm]').click();

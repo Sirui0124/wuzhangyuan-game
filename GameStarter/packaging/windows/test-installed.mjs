@@ -236,8 +236,13 @@ try{
   for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await fetch(direct+path)).status,404,path);
   await page.goto(origin+'/?chapter=yiling&playtest=command');await page.locator('iframe').waitFor();
   assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
-  const command=await page.evaluate(async()=>{const r=await fetch('/api/yiling-command/session',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});return {status:r.status,body:await r.json()};});assert.equal(command.status,200);assert.equal(command.body.ok,true);
-  report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four command entry and backend session are available.');
+  const command=page.frameLocator('iframe');
+  await command.locator('#skip-info').click();
+  await command.locator('.roster-row').waitFor();
+  await command.locator('#fu-end-round').click();
+  await command.locator('#round-report[open]').waitFor();
+  assert.match(await command.locator('#round-report-title').innerText(),/第1轮/);
+  report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four command gameplay settles the first round and shows its report.');
  }
  // Release URLs must not request excluded playtest JSON.
  await page.goto('http://127.0.0.1:8812/?playtest=weiyan-second');await page.locator('.game-menu').waitFor();
