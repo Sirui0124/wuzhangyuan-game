@@ -18,9 +18,10 @@ const sums=resolve(out,'SHA256SUMS.txt');writeFileSync(sums,artifacts.map(a=>`${
 run('git',['push','origin',`HEAD:refs/heads/codex/delivery-${tag}`]);
 run('gh',['release','create',tag,'--repo',repo,'--target',sha,'--title',`逆转五丈原 ${tag} · Windows / Mac 网页版`,'--notes-file',resolve(root,notes),'--draft']);
 run('gh',['release','upload',tag,'--repo',repo,...artifacts.map(a=>a.path),sums]);
-const remote=JSON.parse(run('gh',['release','view',tag,'--repo',repo,'--json','assets'],true));
+const remote=JSON.parse(run('gh',['release','view',tag,'--repo',repo,'--json','assets,databaseId'],true));
 for(const a of artifacts){const uploaded=remote.assets.find(x=>x.name===basename(a.path));if(!uploaded||uploaded.size!==a.bytes)throw Error(`Remote size mismatch: ${a.path}`);}
-const release=JSON.parse(run('gh',['api',`repos/${repo}/releases/tags/${tag}`],true));
+// Draft tags are not exposed by the by-tag endpoint until publication.
+const release=JSON.parse(run('gh',['api',`repos/${repo}/releases/${remote.databaseId}`],true));
 for(const a of artifacts){const uploaded=release.assets.find(x=>x.name===basename(a.path));if(uploaded?.digest!==`sha256:${a.sha256}`)throw Error(`Remote SHA-256 mismatch: ${a.path}`);}
 run('gh',['release','edit',tag,'--repo',repo,'--draft=false','--prerelease']);
 console.log(run('gh',['release','view',tag,'--repo',repo,'--json','url','--jq','.url'],true));
