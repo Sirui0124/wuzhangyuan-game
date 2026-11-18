@@ -172,7 +172,7 @@ try{
    await page.goto(`http://127.0.0.1:8812/?chapter=${chapter}`);
    await page.waitForFunction(id=>new URL(location.href).searchParams.get('locked')===id,chapter);
   }
-  report.checks.push('Current release keeps chapters two, three, five and seven closed; chapter source content remains packaged.');
+  report.checks.push('Current release keeps chapters two, three, five and seven closed; authored originals remain in the local workspace.');
  }
  if(!currentAccess){
  await completePrerequisite(page,'wuzhang');
@@ -242,11 +242,12 @@ try{
  }
  if(currentAccess){
   const origin='http://127.0.0.1:8812';
-  const profile=await(await page.request.get(origin+'/release-profile.json')).json();assert.deepEqual(profile.chapters,['wuzhang','yiling']);
-  for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await page.request.get(origin+path)).status(),404,path);
+  const direct=`http://127.0.0.1:${active.meta.staticPort}`;
+  const profile=await(await fetch(direct+'/release-profile.json')).json();assert.deepEqual(profile.chapters,['wuzhang','yiling']);
+  for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await fetch(direct+path)).status,404,path);
   await page.goto(origin+'/?chapter=yiling&playtest=command');await page.locator('iframe').waitFor();
   assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
-  const command=await page.request.post(origin+'/api/yiling-command/session',{data:{}});assert.equal(command.status(),200);assert.equal((await command.json()).ok,true);
+  const command=await page.evaluate(async()=>{const r=await fetch('/api/yiling-command/session',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});return {status:r.status,body:await r.json()};});assert.equal(command.status,200);assert.equal(command.body.ok,true);
   report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four command entry and backend session are available.');
  }
  // Release URLs must not request excluded playtest JSON.

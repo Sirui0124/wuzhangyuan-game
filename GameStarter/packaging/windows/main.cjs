@@ -89,7 +89,7 @@ async function configureBrowser() {
     const headers = new Headers(request.headers);
     for (const header of ['host', 'connection', 'content-length']) headers.delete(header);
     if (isApi) headers.set('Origin', webUrl.slice(0, -1));
-    else if (url.pathname.startsWith('/api/yiling-rescue/')) headers.set('Origin', `http://127.0.0.1:${staticPort}`);
+    else if (url.pathname.startsWith('/api/')) headers.set('Origin', `http://127.0.0.1:${staticPort}`);
     try {
       return await fetch(target, { method: request.method, headers, redirect: 'manual', signal: request.signal,
         ...(!['GET', 'HEAD'].includes(request.method) ? { body: request.body, duplex: 'half' } : {}) });

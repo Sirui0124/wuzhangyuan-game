@@ -20,5 +20,7 @@ run('gh',['release','create',tag,'--repo',repo,'--target',sha,'--title',`逆转�
 run('gh',['release','upload',tag,'--repo',repo,...artifacts.map(a=>a.path),sums]);
 const remote=JSON.parse(run('gh',['release','view',tag,'--repo',repo,'--json','assets'],true));
 for(const a of artifacts){const uploaded=remote.assets.find(x=>x.name===basename(a.path));if(!uploaded||uploaded.size!==a.bytes)throw Error(`Remote size mismatch: ${a.path}`);}
+const release=JSON.parse(run('gh',['api',`repos/${repo}/releases/tags/${tag}`],true));
+for(const a of artifacts){const uploaded=release.assets.find(x=>x.name===basename(a.path));if(uploaded?.digest!==`sha256:${a.sha256}`)throw Error(`Remote SHA-256 mismatch: ${a.path}`);}
 run('gh',['release','edit',tag,'--repo',repo,'--draft=false','--prerelease']);
 console.log(run('gh',['release','view',tag,'--repo',repo,'--json','url','--jq','.url'],true));

@@ -71,6 +71,6 @@ git commit -m "release: Windows and Mac web snapshot"
 npm run publish:github -- --tag=v2026.11.18-snapshot --windows=outputs/windows-release-标签 --mac=outputs/mac-web-标签 --notes=docs/migration/本次发布说明.md
 ```
 
-发布脚本要求工作区干净、目标仓库仍为用户指定的公开仓库；核对本地两种产物的 SHA-256，推送独立 delivery 分支，创建草稿 Release，再上传产物和校验文件，核对远端大小后设为预发布。不会强推或替换 main，不自动覆盖同名 Release。中断时保留草稿，检查已上传资产后继续；不可用 `--clobber` 直接覆盖已有正式产物。
+发布脚本要求工作区干净、目标仓库仍为用户指定的公开仓库；核对本地两种产物的 SHA-256，推送独立 delivery 分支，创建草稿 Release，再上传产物和校验文件，核对远端大小与GitHub报告的SHA-256后设为预发布。不会强推或替换 main，不自动覆盖同名 Release。中断时保留草稿，检查已上传资产后继续；不可用 `--clobber` 直接覆盖已有正式产物。
 
 下载时使用 Release 附件。GitHub 的自动 Source code 下载不等同玩家安装包，源码恢复须使用 Git LFS：`git clone` 后执行 `git lfs pull`。
