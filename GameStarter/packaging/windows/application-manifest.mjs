@@ -48,7 +48,7 @@ const extraPayloadFiles = files.filter(file => file.installPath.startsWith('reso
 const forbiddenNames = files.filter(file => /(^|\/)\.(?:env(?:\.|$)|git(?:\/|$)|cache(?:\/|$))|(?:^|\/)[^/]*credentials[^/]*|\.(?:pem|key|p12|pfx|jks|keystore)$/i.test(file.installPath)).map(file => file.installPath);
 
 const archive = resolve(applicationRoot, 'resources/app.asar');
-const wrapperAllowlist = new Set(['main.cjs', 'backend-child.cjs', 'package.json']);
+const wrapperAllowlist = new Set(['main.cjs', 'backend-child.cjs', 'package.json', 'resources/icon.png']);
 const archiveFiles = [], archiveUnexpected = [], wrapperSourceMismatches = [];
 for (const item of asar.listPackage(archive)) {
     const name = slash(item).replace(/^\/+/, '');
@@ -58,7 +58,7 @@ for (const item of asar.listPackage(archive)) {
     const content = asar.extractFile(archive, name);
     archiveFiles.push({ path: name, bytes: content.length, sha256: digest(content) });
     if (!wrapperAllowlist.has(name)) archiveUnexpected.push(name);
-    if (['main.cjs', 'backend-child.cjs'].includes(name) && digest(readFileSync(resolve(project, name))) !== digest(content)) wrapperSourceMismatches.push(name);
+    if (wrapperAllowlist.has(name) && name !== 'package.json' && digest(readFileSync(resolve(project, name))) !== digest(content)) wrapperSourceMismatches.push(name);
 }
 for (const name of wrapperAllowlist) if (!archiveFiles.some(file => file.path === name)) archiveUnexpected.push(name + ' (missing)');
 const packagedMetadata = JSON.parse(asar.extractFile(archive, 'package.json').toString('utf8'));
