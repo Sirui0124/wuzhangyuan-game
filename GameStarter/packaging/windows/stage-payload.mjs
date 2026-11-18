@@ -1,6 +1,6 @@
 import ts from 'typescript';
 import { readdirSync, readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync, lstatSync, rmSync } from 'node:fs';
-import { resolve, dirname, relative, sep, extname, basename } from 'node:path';
+import { resolve, dirname, relative, sep, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { prepareReleaseWeb } from './release-profile.mjs';
@@ -10,7 +10,7 @@ const slash = value => value.replaceAll('\\', '/');
 const hash = path => createHash('sha256').update(readFileSync(path)).digest('hex');
 const comparisonPages = new Set(['art-review.html', 'modal-suite.html', 'thought-options.html', 'menu-button-options.html']);
 const comparisonModules = new Set(['art-review.js', 'art-review-layout.js', 'modal-suite.js', 'thought-options.js']);
-const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'tts.mjs', 'tts-protocol.mjs', 'package.json', 'chapter-one-ai.mjs', 'chapter-one-http.mjs'];
+const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs', 'package.json', 'chapter-one-ai.mjs', 'chapter-one-http.mjs'];
 
 export function excludedReason(path) {
     path = slash(path);
@@ -51,7 +51,6 @@ export function validatePayload(gameRoot) {
         'web/story/chapter-one.branch.json', 'web/release-profile.json', 'web/cinematics.json',
         'web/audio/manifest.json', 'web/art-review/themes.css', 'web/art-review/mindmap.css',
         'GameStarter/server/server.mjs', 'GameStarter/server/package.json', 'GameStarter/web-demo/serve.mjs',
-        'node_modules/ws/package.json', 'node_modules/ws/wrapper.mjs', 'node_modules/ws/lib/websocket.js', 'node_modules/ws/LICENSE',
     ];
     const errors = [], checks = { requiredFiles: 0, moduleImports: 0, staticReferences: 0 };
     function requireFile(path, message) {
@@ -117,7 +116,7 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
     for (const name of ['server.mjs', 'ai.mjs', 'package.json', '.build/data.js', '.build/engine.js']) add(resolve(root, 'demos/yiling-rescue', name), `demos/yiling-rescue/${name}`, 'rescue-backend');
     // The integrated command-map backend must ship without relying on Node's TS loader.
     const generated = resolve(target, 'compiled-runtime'); mkdirSync(generated, { recursive: true });
-    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'fu-ai.mjs', 'report-ai.mjs']) {
+    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'crisis-rules.mjs', 'crisis-v3.mjs', 'crisis-events.mjs', 'crisis-event-ai.mjs', 'fu-ai.mjs', 'report-ai.mjs', 'route-config.mjs', 'route-ai.mjs']) {
         const source = resolve(root, 'demos/yiling-ui-prototype-v1', name);
         if (name === 'campaign-engine.mjs') {
             const compiled = resolve(generated, name);
@@ -131,16 +130,10 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
     add(ruleFile, `${designDir}/furong-rescue.mjs`, 'command-rules');
     add(resolve(root, designDir, 'furong-rescue.design.json'), `${designDir}/furong-rescue.design.json`, 'command-rules');
     add(resolve(root, 'GameStarter/web-demo/serve.mjs'), 'GameStarter/web-demo/serve.mjs', 'static-server');
-    for (const source of walk(resolve(root, 'node_modules/ws'))) {
-        const name = slash(relative(resolve(root, 'node_modules/ws'), source));
-        if (/^\./.test(basename(name))) continue;
-        add(source, `node_modules/ws/${name}`, 'runtime-dependency');
-    }
     const checks = validatePayload(game);
     const manifest = { schemaVersion: 1, createdAt: new Date().toISOString(), status: 'staged-runtime-payload', platform: 'win32-x64',
         buildRoot: slash(build), stageRoot: slash(target), totals: { files: files.length, bytes: files.reduce((sum, file) => sum + file.bytes, 0), excluded: excluded.length },
         optimization: prepared.report,
-        runtimeVersions: { ws: JSON.parse(readFileSync(resolve(root, 'node_modules/ws/package.json'))).version },
         validation: checks, files, excluded };
     writeFileSync(resolve(target, 'payload-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
     writeFileSync(resolve(target, 'payload-files.txt'), files.map(file => `${file.destination}\t${file.bytes}\t${file.sha256}\t${file.source}`).join('\n') + '\n');

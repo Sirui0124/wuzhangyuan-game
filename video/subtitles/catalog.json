@@ -1017,7 +1017,7 @@
       "videoSha256": "a9de1d29b67a0856432c7fb41d78b54ada2d0da9f5136b609da3dc83e8f376e0",
       "duration": 75.833333,
       "subtitles": "/video/subtitles/yiling-opening-v2.16-20261117.vtt",
-      "subtitleSha256": "df377520b71d9b875daedad7f08d12e3b2698ed68ec045cedb4d7e8bf84bde07",
+      "subtitleSha256": "6b8473fce00f77af5dfb4cfdf311b4ad8506e8390d44aca69299a75981faa49c",
       "cueCount": 0,
       "firstCue": null,
       "lastCue": null
@@ -1025,14 +1025,14 @@
     {
       "group": "prologue",
       "id": "opening-pv-regrets-v8-zhige-20261117",
-      "video": "/video/current/PV-regrets-v8-zhige-20261117.mp4",
-      "videoSha256": "32618cbdd0b3c42763eaf31322f2395b9f05307db5cdd1dffd0460021ff53e86",
-      "duration": 73,
-      "subtitles": "/video/subtitles/PV-regrets-v8-zhige-20261117.vtt",
-      "subtitleSha256": "8eb5aec53542eaedb7502b22fb677161abba1e265b1338f1af1369a1f689837c",
-      "cueCount": 0,
-      "firstCue": null,
-      "lastCue": null
+      "video": "/video/current/PV-regrets-v11-clear-monologue-20261118.mp4",
+      "videoSha256": "510c9e132302ba63c95b14829edb5937dfbb54150612270f5042c3b019004ed3",
+      "duration": 72.91666666666667,
+      "subtitles": "/video/subtitles/PV-regrets-v11-monologue-20261118.vtt",
+      "subtitleSha256": "0cd333e9b73ae8938a4bce2ce35af7175bc44751c9ade3518d8c54b2e63ce5fa",
+      "cueCount": 2,
+      "firstCue": 52.33,
+      "lastCue": 57.65
     },
     {
       "group": "branchDialogue",
@@ -1045,6 +1045,54 @@
       "cueCount": 1,
       "firstCue": 0.14,
       "lastCue": 2.92
+    },
+    {
+      "group": "branchDialogue",
+      "id": "C1END-EXEC",
+      "video": "/video/current/C1END-EXEC-foley-20261029.mp4",
+      "videoSha256": "1527298deed27f735cf66e95368c5c3891d012095681cbb5231a2e14d56782fe",
+      "duration": 12.208333333333334,
+      "subtitles": "/video/subtitles/C1END-EXEC-integrated-20261025.vtt",
+      "subtitleSha256": "8eb5aec53542eaedb7502b22fb677161abba1e265b1338f1af1369a1f689837c",
+      "cueCount": 0,
+      "firstCue": null,
+      "lastCue": null
+    },
+    {
+      "group": "branchDialogue",
+      "id": "branch-dawn-accountability",
+      "video": "/video/current/EN02B-A-full-speed-20261022.mp4",
+      "videoSha256": "03b6203b7c0a7fd2c73a83dada77ebd3071c293c9b4db04fe05b05cae7cb2bc0",
+      "duration": 22.05,
+      "subtitles": "/video/subtitles/EN02B-A-full-speed-20261022.vtt",
+      "subtitleSha256": "b72cde8cbc8d15fce0f7e042e277ac43f3a5bdc47812ad7eff646f2bdcee5968",
+      "cueCount": 3,
+      "firstCue": 1.53,
+      "lastCue": 16.71
+    },
+    {
+      "group": "branchDialogue",
+      "id": "CH01-SEVEN-DAYS-RESTORED-20261118",
+      "video": "/video/current/EN01-full-speed-20261022.mp4",
+      "videoSha256": "ff12586ecb42f0410e25da6295a2a86878ea83789dc3c019571fe9089728261c",
+      "duration": 18.24,
+      "subtitles": "/video/subtitles/EN01-full-speed-20261022.vtt",
+      "subtitleSha256": "0fdb03e11d0ed5e00babb4449d1419b4144e8c6cc3ccce1511ba78a4b40792fe",
+      "cueCount": 1,
+      "firstCue": 2.54,
+      "lastCue": 4.94
+    },
+    {
+      "group": "branchDialogue",
+      "id": "CH01-EPILOGUE-RESTORED-20261118",
+      "video": "/video/current/EN03-EN04-ending-20261022.mp4",
+      "videoSha256": "0fa80b7f5a4d7cc2c6b01103bb42b6ca76d7928e28878e90e2676e4c81df6f1e",
+      "duration": 31.98,
+      "subtitles": "/video/subtitles/EN03-EN04-ending-20261022.vtt",
+      "subtitleSha256": "88f312e80d3484f8532eb1eda2734fe605c3b97eea451f27b63b5fce302d280b",
+      "cueCount": 5,
+      "firstCue": 0.91,
+      "lastCue": 28.76
     }
   ]
 }

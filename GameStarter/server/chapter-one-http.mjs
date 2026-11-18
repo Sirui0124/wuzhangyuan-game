@@ -47,6 +47,6 @@ export function chapterOneHandler(root) {
             if(input.version!==story.version||g.nodeId!==input.nodeId||!g.aiScene||g.pending||typeof input.text!=='string'||!input.text.trim()||input.text.length>800)throw Error('当前内容不能润色，请返回对话重试。');
             const config=await readModelConfig();if(!config.apiKey)throw Error('请先配置AI。');
             send(200,{text:await polishDraft(g,input.text,(request,signal)=>callModel(config,request,signal),signal)});
-        }catch(e){send(signal.aborted?504:502,{error:signal.aborted?'回应超时，原话已保留。':e.message||'连接失败，原话已保留。'});}
+        }catch(e){send(signal.aborted?504:502,{error:signal.aborted?'回应超时，原话已保留。可改用本地规则或固定说法继续。':/fetch|network/i.test(e.message??'')?'暂时连不上AI服务，原话已保留。可重试，或改用本地规则、固定说法继续。':e.message||'连接失败，原话已保留。'});}
     };
 }

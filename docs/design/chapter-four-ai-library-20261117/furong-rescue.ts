@@ -25,7 +25,7 @@ export type State = {
 export type RoundInput = {
   scenarioId: string; round: number; expectedRevision: number;
   trigger: 'endRound' | 'explicitWait'; commandBatchIds: string[];
-  receiptIds: string[]; facts: Facts; contact: boolean;
+  receiptIds: string[]; facts: Facts; contact: boolean; eligible?: boolean;
 };
 
 function integer(value: number, min: number, max: number, name: string) {
@@ -83,7 +83,7 @@ export function resolveRound(d: Design, state: State, input: RoundInput): { stat
   if (state.designVersion !== d.version || input.scenarioId !== state.scenarioId) throw Error('Scenario or design mismatch');
   integer(state.rngState, 1, 0xffffffff, 'rng state');
   if (!['endRound', 'explicitWait'].includes(input.trigger)) throw Error('Not a tactical round');
-  if (typeof input.contact !== 'boolean' || !uniqueStrings(input.receiptIds) || !uniqueStrings(input.commandBatchIds)) throw Error('Invalid receipt or batch identifiers');
+  if ((input.eligible !== undefined && typeof input.eligible !== 'boolean') || typeof input.contact !== 'boolean' || !uniqueStrings(input.receiptIds) || !uniqueStrings(input.commandBatchIds)) throw Error('Invalid receipt or batch identifiers');
   const inputKey = JSON.stringify({ ...input, commandBatchIds: [...input.commandBatchIds].sort(), receiptIds: [...input.receiptIds].sort(), facts: Object.fromEntries(Object.keys(input.facts).sort().map(k => [k, input.facts[k]])) });
   const previous = state.journal.find(r => r.round === input.round);
   if (previous) {
@@ -96,7 +96,7 @@ export function resolveRound(d: Design, state: State, input: RoundInput): { stat
   const next = structuredClone(state);
   let draw: number | null = null;
   let outcome: Resolution['outcome'] = input.contact ? 'holding' : 'unreachable';
-  if (input.contact && value.probability > 0) {
+  if (input.contact && input.eligible !== false && value.probability > 0) {
     const sample = random(next.rngState); next.rngState = sample.state; draw = sample.value;
     if (draw < value.probability) outcome = 'safe';
   }
@@ -106,7 +106,7 @@ export function resolveRound(d: Design, state: State, input: RoundInput): { stat
   const roundId = `round-${input.round}`;
   const resolution: Resolution = {
     round: input.round, roundId, resolutionId: `${state.scenarioId}/fu/${roundId}`,
-    inputKey, crisis: value.crisis, probability: input.contact ? value.probability : 0,
+    inputKey, crisis: value.crisis, probability: input.contact && input.eligible !== false ? value.probability : 0,
     draw, outcome, pressureAfter: next.pressure, receiptIds: [...input.receiptIds], factors: value.factors
   };
   next.journal.push(resolution);

@@ -46,7 +46,7 @@ process.env.ELECTRON_BUILDER_CACHE=resolve(workspace,'.cache/windows-tooling/ele
 process.env.CSC_IDENTITY_AUTO_DISCOVERY='false';
 for(const name of ['CSC_LINK','CSC_KEY_PASSWORD','WIN_CSC_LINK','WIN_CSC_KEY_PASSWORD'])delete process.env[name];
 const configuration=require('./electron-builder.config.cjs')({stage,output,version,label});
-writeFileSync(resolve(output,'packaging-config.json'),JSON.stringify({...configuration,afterPack:'verify-payload.cjs (all manifest files, size, SHA256 and bundled ws resolution)'},null,2)+'\n');
+writeFileSync(resolve(output,'packaging-config.json'),JSON.stringify({...configuration,afterPack:'verify-payload.cjs (all manifest files, size and SHA256)'},null,2)+'\n');
 const {build,Platform,Arch}=await import('electron-builder');
 if(prepackaged)await require('./verify-payload.cjs')({stage,applicationRoot:prepackaged,report:resolve(output,'pre-installer-payload-check.json')});
 const artifacts=await build({projectDir:project,targets:Platform.WINDOWS.createTarget([directoryOnly?'dir':'nsis'],Arch.x64),config:configuration,publish:'never',...(prepackaged?{prepackaged}:{})});

@@ -6,7 +6,6 @@ export interface SettingsPanelProps {
 
     music: number;
     sfx: number;
-    aiVoiceEnabled: boolean;
     apiLoaded: boolean;
     apiSaving: boolean;
     apiDetailsOpen: boolean;
@@ -58,8 +57,6 @@ export function settingsPanelHTML(props: SettingsPanelProps): string {
         ${apiSettingsHTML(props)}
       </section>
       <section class="settings-section"><h2>声音与阅读</h2>${ranges}
-        <div class="toggle-row"><div class="setting-label"><label for="ai-voice-enabled">AI语音</label>${help('开启后朗读我与魏延的交谈；关闭后保留文字对白，点击继续。', 'AI语音', 'ai-voice-description')}</div><input id="ai-voice-enabled" class="motion-switch" type="checkbox" aria-describedby="ai-voice-description"${props.aiVoiceEnabled ? ' checked' : ''}${props.runtimeMode === 'offline' ? ' disabled' : ''}></div>
-        <p><a href="/voice-demo.html" target="_blank" rel="noopener">实时配音：配置音色与试听 ↗</a></p>
       </section>
     </div>`;
 }
@@ -110,7 +107,7 @@ export function recordsPanelHTML(records: readonly DialogueRecord[]): string {
 }
 
 export function newGamePanelHTML(): string {
-    return `<div class="newgame-confirmation"><h2 class="newgame-question">重新走进这一夜？</h2><p>播放开篇影片后进入舆图，可选择第一章或第四章，其他章节暂未开放。当前各章自动进度会备份，手动存档与已获得成就保留。</p><div class="button-row">${action('new-confirmed', '开始新的经历 →', true)}${action('close-modal', '返回')}</div></div>`;
+    return `<div class="newgame-confirmation"><p>各章进度会重置，并保留备份。<br>手动存档和成就不受影响。</p><div class="button-row">${action('close-modal', '取消')}${action('new-confirmed', '重新开始', true)}</div></div>`;
 }
 
 /** Body must be renderer-produced markup. All display titles and props are escaped separately. */

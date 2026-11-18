@@ -1,7 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { createHash } = require('node:crypto');
-const { createRequire } = require('node:module');
 
 // This runs after electron-builder copies resources and before it creates NSIS.
 // A prepackaged build invokes the same guard explicitly, because afterPack is
@@ -36,15 +35,10 @@ module.exports = async function verifyPayload({ stage, applicationRoot, report }
     }
   }
   walk(path.join(root, 'resources/game'));
-  let dependencyResolution;
-  try {
-    const resolved = createRequire(path.join(root, 'resources/game/GameStarter/server/server.mjs')).resolve('ws');
-    dependencyResolution = { module: 'ws', path: resolved, bundled: resolved.startsWith(path.join(root, 'resources/game/node_modules/ws') + path.sep) };
-  } catch (error) { dependencyResolution = { module: 'ws', bundled: false, error: error.code }; }
-  const result = { checkedAt: new Date().toISOString(), passed: !mismatches.length && !extras.length && dependencyResolution.bundled,
-    applicationRoot: root, expectedFiles: expected.size, checkedFiles: expected.size, mismatches, extraFiles: extras, dependencyResolution };
+  const result = { checkedAt: new Date().toISOString(), passed: !mismatches.length && !extras.length,
+    applicationRoot: root, expectedFiles: expected.size, checkedFiles: expected.size, mismatches, extraFiles: extras };
   if (report) fs.writeFileSync(report, JSON.stringify(result, null, 2) + '\n');
-  if (!result.passed) throw new Error(`Payload verification failed; installer creation refused: ${mismatches.length} missing/changed files, ${extras.length} extras, bundled ws=${dependencyResolution.bundled}`);
-  console.log(`Payload guard passed: ${expected.size} files match manifest; ws resolves inside the packaged application.`);
+  if (!result.passed) throw new Error(`Payload verification failed; installer creation refused: ${mismatches.length} missing/changed files, ${extras.length} extras`);
+  console.log(`Payload guard passed: ${expected.size} files match manifest.`);
   return result;
 };

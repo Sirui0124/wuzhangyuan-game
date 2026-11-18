@@ -2,7 +2,6 @@ import { GameApi } from '../../../assets/scripts/GameApi';
 import { createSettingsController } from './settings';
 import { createGameUIState } from './ui-state';
 import { readRuntimeMode, saveRuntimeMode, setRuntimeConnection } from '../runtime-mode';
-import { readAiVoiceEnabled, saveAiVoiceEnabled } from '../voice-preference';
 
 /** Reuse the existing settings controller without adding a chapter-specific configuration system. */
 export function openAISetup(onClose: () => void = () => {}) {
@@ -14,7 +13,6 @@ export function openAISetup(onClose: () => void = () => {}) {
     const changed = () => window.dispatchEvent(new Event('ai-settings-changed'));
     const render = () => { dialog.innerHTML = `<header><h1>配置 AI Token</h1><button type="button" data-setup-close aria-label="关闭配置">×</button></header><label><input id="game-ai-enabled" type="checkbox"${readRuntimeMode() !== 'offline' ? ' checked' : ''}> 启用 AI</label>${settings.settingsHTML()}`; };
     const settings = createSettingsController(dialog, new GameApi(), { volume: () => 0 }, ui, render,
-        { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled },
         { get: readRuntimeMode, set: mode => { saveRuntimeMode(mode); changed(); }, connected: value => { setRuntimeConnection(value); changed(); } }, { aiOnly: true });
     dialog.addEventListener('click', event => {
         const button = (event.target as Element).closest<HTMLElement>('button');

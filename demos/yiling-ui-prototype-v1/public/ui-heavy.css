@@ -225,3 +225,13 @@ html,body{height:100%;overflow:hidden}
 .report-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:14px}.report-table th{text-align:left;font-weight:normal;color:#796447;font-size:13px;padding:7px 5px;background:#d9caa933}.report-table td{padding:9px 5px;border-bottom:1px solid #b8a68466;vertical-align:top;line-height:1.5;overflow-wrap:anywhere}.report-table td strong{font-weight:normal}.report-table td small{display:block;font-size:12px;line-height:1.5;margin-top:2px}.report-table th:nth-child(1){width:21%}.report-table th:nth-child(2){width:21%}.report-table th:nth-child(3){width:24%}.report-table th:nth-child(4){width:34%}
 .round-report form{position:sticky;bottom:-22px;background:#e9dfc5;padding:12px 0;margin:12px 0 -10px;border-top:1px solid #b8a68466}
 @media(max-width:560px){.round-report{padding:16px}.report-heading h2{font-size:19px}.round-report .report-prose p{font-size:16px}.crisis-row{grid-template-columns:minmax(90px,1fr) 54px 76px;gap:4px}.report-section-head>small{font-size:11px}.report-table thead{display:none}.report-table tr{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #b8a684;padding:6px 0}.report-table td{display:block;border:0;padding:4px;font-size:14px}.report-table td:nth-child(3)::before{content:'兵力 ';color:#796447}.report-table td:nth-child(4)::before{content:'去向 ';color:#796447}.round-report form{bottom:-16px}.report-pool{gap:12px}}
+
+/* Independent rescue stages need a full line, not the old narrow status column. */
+.crisis-row.has-stages{grid-template-columns:minmax(0,1fr) 90px;gap:3px 8px}.crisis-row.has-stages>strong{grid-column:1;grid-row:1}.crisis-row.has-stages>span{grid-column:2;grid-row:1}.crisis-row.has-stages>small{grid-column:1/-1;grid-row:2;text-align:left;line-height:1.6;overflow-wrap:anywhere}
+
+/* Eight contacts share the existing scrollable rail; controls retain viewport space. */
+.contact-rail button small{display:block;font-size:12px;line-height:1.35;color:#ad9b78;margin-top:3px}
+.contact-rail button[aria-pressed=true] small{color:#d4bb87}
+.fu-map-status{max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.front-story figure[hidden]{display:none}
+@media(max-height:600px){.contact-rail button{padding-top:4px;padding-bottom:4px}.contact-rail button small{font-size:11px;margin-top:1px}}

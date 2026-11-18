@@ -8,8 +8,8 @@
 
 - `main.cjs`、`backend-child.cjs` 是桌面启动与本机服务入口，打入 `resources/app.asar`。
 - `stage-payload.mjs` 按发布白名单从本次完整网页构建及当前后端源文件准备载荷，生成逐文件大小与 SHA-256 清单。
-- `verify-payload.cjs` 在资源复制完成后、生成安装器之前核对清单中每个文件的大小和 SHA-256，并拒绝多余文件和从包外解析到的 `ws`。`ws` 使用独立资源映射，因为 electron-builder 26.18.0 的通用资源过滤器会跳过资源根目录下的 `node_modules`。
-- `resources/game/web` 保存预编译网页和发布资源；`resources/game/GameStarter/server` 和 `resources/game/node_modules/ws` 保留后端的相对依赖层级。大视频在 ASAR 外，便于 Range 读取。
+- `verify-payload.cjs` 在资源复制完成后、生成安装器之前核对清单中每个文件的大小和 SHA-256，并拒绝清单外的文件。
+- `resources/game/web` 保存预编译网页和发布资源，后端入口位于 `resources/game/GameStarter/server`。大视频在 ASAR 外，便于 Range 读取。实时配音退役后，分发包已移除配音模块及其 `ws` 依赖。
 - API 配置和游戏用户数据由启动器写到当前用户的独立可写目录，不写安装目录。卸载配置保留用户数据；旧浏览器试玩存档不会自动进入 Electron 的独立浏览器资料。
 - 游戏本机服务使用应用自己的进程；启动器不关闭已有开发服务，不把真实凭据或玩家存档复制进安装载荷。
 

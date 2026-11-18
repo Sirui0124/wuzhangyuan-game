@@ -1,5 +1,5 @@
 import { readdirSync, lstatSync, readFileSync, writeFileSync, createReadStream } from 'node:fs';
-import { resolve, dirname, relative, sep } from 'node:path';
+import { resolve, dirname, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
@@ -66,18 +66,11 @@ const metadataKeys = Object.keys(packagedMetadata);
 const unexpectedMetadata = metadataKeys.filter(key => !['name', 'version', 'private', 'description', 'author', 'license', 'main', 'dependencies', 'devDependencies', 'scripts', 'build'].includes(key));
 const requiredRuntime = ['Wuzhangyuan.exe', 'LICENSE.electron.txt', 'LICENSES.chromium.html', 'resources/app.asar', 'ffmpeg.dll', 'icudtl.dat', 'resources.pak', 'snapshot_blob.bin', 'v8_context_snapshot.bin'];
 const missingRuntime = requiredRuntime.filter(path => !actual.has(path));
-const backendRequire = createRequire(resolve(applicationRoot, 'resources/game/GameStarter/server/server.mjs'));
-let dependencyResolution;
-try {
-    const resolved = backendRequire.resolve('ws');
-    const bundled = resolved.startsWith(resolve(applicationRoot, 'resources/game/node_modules/ws') + sep);
-    dependencyResolution = { module: 'ws', resolvedPath: slash(relative(applicationRoot, resolved)), bundled };
-} catch (error) { dependencyResolution = { module: 'ws', bundled: false, error: error.code }; }
-const passed = dependencyResolution.bundled && ![mismatches, extraPayloadFiles, forbiddenNames, archiveUnexpected, wrapperSourceMismatches, unexpectedMetadata, missingRuntime].some(list => list.length);
+const passed = ![mismatches, extraPayloadFiles, forbiddenNames, archiveUnexpected, wrapperSourceMismatches, unexpectedMetadata, missingRuntime].some(list => list.length);
 const check = { schemaVersion: 1, checkedAt: new Date().toISOString(), passed, readOnlyApplicationTree: true,
     applicationTotals: manifest.totals, payload: { expectedFiles: payload.files.length, checkedFiles: payload.files.length, mismatches, extraFiles: extraPayloadFiles },
     archive: { path: 'resources/app.asar', allowedFiles: [...wrapperAllowlist], files: archiveFiles, unexpected: archiveUnexpected, wrapperSourceMismatches, metadataKeys, unexpectedMetadata },
-    runtime: { requiredFiles: requiredRuntime, missing: missingRuntime, dependencyResolution }, forbiddenNames };
+    runtime: { requiredFiles: requiredRuntime, missing: missingRuntime }, forbiddenNames };
 writeFileSync(resolve(output, 'application-manifest-check.json'), JSON.stringify(check, null, 2) + '\n');
-console.log(JSON.stringify({ passed, applicationTotals: manifest.totals, payloadFiles: payload.files.length, asarFiles: archiveFiles.map(file => file.path), mismatches, extraPayloadFiles, forbiddenNames, archiveUnexpected, wrapperSourceMismatches, unexpectedMetadata, missingRuntime, dependencyResolution }, null, 2));
+console.log(JSON.stringify({ passed, applicationTotals: manifest.totals, payloadFiles: payload.files.length, asarFiles: archiveFiles.map(file => file.path), mismatches, extraPayloadFiles, forbiddenNames, archiveUnexpected, wrapperSourceMismatches, unexpectedMetadata, missingRuntime }, null, 2));
 if (!passed) process.exitCode = 1;

@@ -31,6 +31,7 @@ const publicRoot = resolve(root, 'public');
 const publishedSubtitles = new Set(subtitleAudit.subtitlePaths);
 cpSync(publicRoot, destination, { recursive: true, filter: source => {
   const url = '/' + relative(publicRoot, source).split(sep).join('/');
+  if (/^\/voice-(demo|casting|clone)\.html$/.test(url)) return false;
   return !url.endsWith('.vtt') || publishedSubtitles.has(url);
 } });
 // The generated tree is ESM; keep this scoped to build output, not the Cocos project.

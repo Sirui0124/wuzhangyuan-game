@@ -10,7 +10,7 @@ import { canListenAtTent } from '../tent-visit';
 import { tentSceneHTML } from './tent-visit';
 
 /** First-chapter scene presentation. Its row IDs and character staging are chapter-specific. */
-export function createSceneViews(game: ChapterSession, flow: ChapterFlow, media: Media, ui: GameUIState, voiceEnabled: () => boolean) {
+export function createSceneViews(game: ChapterSession, flow: ChapterFlow, media: Media, ui: GameUIState) {
     const portrait = createPortrait(media);
     function hud(state: GameSessionState, light = false) {
         if (light && state.phase !== 'expression' && state.notesPurpose !== 'P2') return `<header class="game-hud light-hud thought-hud"><div class="game-mark">思绪</div><nav aria-label="思绪菜单">${btn('pause', '菜单')}</nav></header>`;
@@ -34,8 +34,8 @@ export function createSceneViews(game: ChapterSession, flow: ChapterFlow, media:
         const status = waiting ? '魏延正在回应'
             : speech.status === 'cancelled' ? '已停止等待，原话和依据已保留。'
             : speech.status === 'failed' ? '这次未能取得回应，原话和依据已保留。'
-            : voiceEnabled() ? '我的话说完后，魏延将接话' : '魏延即将回应';
-        const controls = speech.status === 'ready' ? (voiceEnabled() ? btn('reveal-reply', '略过我的配音') : '')
+            : '魏延即将回应';
+        const controls = speech.status === 'ready' ? ''
             : waiting ? btn('cancel-speech', '停止等待')
             : `${btn('retry-speech', '重试回应')}${btn('revise', '重新组织')}`;
         return `<section class="dialogue-box speech-box" data-speech-status="${speech.status}" tabindex="0" aria-label="我已经说出的话"><div class="dialogue-speaker"><span>我</span></div><p class="said-text">${esc(speech.text)}</p><div class="dialogue-foot speech-feedback"><span class="speech-response-status" role="status" aria-live="polite" aria-atomic="true">${waiting ? '<span class="response-dots" aria-hidden="true"><i></i><i></i><i></i></span>' : ''}<span>${status}</span></span><div class="speech-controls">${controls}</div></div></section>`;

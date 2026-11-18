@@ -1,103 +1,20 @@
-
-/* Selected option A: full bronze fittings and red cord. Source images have
-   asymmetric transparent margins; align the visible plaque, not the PNG box.
-   The first available action is the parchment primary. */
-:root { --menu-action-font-size: 23px; }
-
-:root #game-root main.game-menu nav{
-width:86%;max-width:390px;gap:10px}
-
-:root #game-root main.game-menu nav button{
-
-  --menu-skin:url('/main-menu-button-idle-v02.png');
-  --menu-skin-y:48.416%;
-  position:relative;isolation:isolate;display:flex;flex:none;align-items:center;justify-content:center;
-  height:54px;min-height:54px;padding:0 48px;border:0;
-  color:#e8dfc9;font-size:var(--menu-action-font-size);line-height:1;letter-spacing:5px;
-  text-align:center;text-shadow:0 2px 3px #000;
-  transition:color .18s,filter .18s,transform .18s;
-}
-
-:root #game-root main.game-menu nav button::before{
-
-  content:'';position:absolute;z-index:-1;inset:0;pointer-events:none;
-  background:var(--menu-skin) center var(--menu-skin-y) / 100% 255% no-repeat;
-  filter:drop-shadow(0 4px 4px #0007);
-}
-
-:root #game-root main.game-menu nav button:first-child{
-
-  --menu-skin:url('/main-menu-button-active-v02.png');
-  --menu-skin-y:47.303%;
-  color:#34281b;text-shadow:0 1px 1px #fff6;
-}
-
-:root #game-root main.game-menu nav button>span{
-position:absolute;right:15%;top:50%;transform:translateY(-50%);font-size:16px;line-height:1;letter-spacing:0;opacity:.7}
-
-:root #game-root main.game-menu nav button:hover:not(:disabled){
-transform:translateY(-2px);filter:brightness(1.18);color:#fff0d2}
-
-:root #game-root main.game-menu nav button:first-child:hover:not(:disabled){
-color:#261a10;filter:brightness(1.1)}
-
-:root #game-root main.game-menu nav button:active:not(:disabled){
-transform:translateY(1px);filter:brightness(.95)}
-
-:root #game-root main.game-menu nav button:focus-visible{
-outline:2px solid #eed4a3;outline-offset:4px}
-
-@media(max-height:800px){
-
-  :root { --menu-action-font-size: 21px; }
-
-  :root #game-root main.game-menu>header,:root #game-root main.game-menu>footer{
-padding-top:18px;padding-bottom:18px}
-
-  :root #game-root main.game-menu>section{
-padding-bottom:12px}
-
-  :root #game-root main.game-menu .game-logo{
-height:25vh}
-
-  :root #game-root main.game-menu>section>p{
-margin-bottom:22px}
-
-  :root #game-root main.game-menu nav{
-gap:8px}
-
-  :root #game-root main.game-menu nav button{
-height:48px;min-height:48px;padding-top:0;padding-bottom:0}
-
-}
-
-@media(max-width:700px){
-
-  :root #game-root main.game-menu>section{
-width:min(420px,88vw);margin-left:6vw}
-
-  :root #game-root main.game-menu nav{
-width:94%}
-
-}
-
-@media(max-height:580px){
-
-  :root #game-root main.game-menu{
-overflow-y:auto}
-
-  :root #game-root main.game-menu>section{
-flex:none}
-
-  :root #game-root main.game-menu .game-logo{
-height:100px}
-
-}
-
-@media(prefers-reduced-motion:reduce){
-:root #game-root main.game-menu nav button{
-transition:none}
-:root #game-root main.game-menu nav button:hover:not(:disabled),:root #game-root main.game-menu nav button:active:not(:disabled){
-transform:none}
-}
-
+/* Opening menu v3: shared live typography and restrained bronze decoration. */
+:root #game-root main.game-menu{--menu-action-font-size:clamp(19px,1.8vw,28px);overflow-y:auto}
+:root #game-root main.game-menu .menu-art{background:url('/main-menu-background-v01.jpg') center/cover no-repeat;position:fixed}
+:root #game-root main.game-menu>header{padding:22px 2.8vw;font-family:KaiTi,STKaiti,var(--serif);font-size:clamp(12px,1.35vw,21px);color:#d8c59c;letter-spacing:.2em}
+:root #game-root main.game-menu>section{flex:1;justify-content:flex-start;width:29vw;max-width:490px;margin-left:4.5vw;padding:0 0 30px}
+:root #game-root main.game-menu .game-logo{width:100%;height:30vh;min-height:160px;object-fit:contain;margin-bottom:30px}
+:root #game-root main.game-menu nav{width:90%;max-width:none;gap:8px;margin:0 auto}
+:root #game-root main.game-menu nav button{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;flex:none;width:100%;height:clamp(48px,7.4vh,72px);min-height:48px;padding:0 40px;border:0;border-radius:0;background:transparent;box-shadow:none;font-family:KaiTi,STKaiti,'Kaiti SC',var(--serif);font-size:var(--menu-action-font-size);font-weight:400;line-height:1.4;letter-spacing:.16em;text-indent:.16em;color:#e6d5ae;text-shadow:0 2px 3px #0009;white-space:nowrap;transition:color .18s,filter .18s,background-color .18s}
+:root #game-root main.game-menu nav button::before{content:'';position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,#b38b4a 25%,#c9a264 70%,transparent);pointer-events:none}
+:root #game-root main.game-menu nav button:first-child{width:92%;align-self:center;background:url('/ui/opening-menu/primary-frame.svg') center/100% 100% no-repeat;margin-bottom:3px}
+:root #game-root main.game-menu nav button:first-child::before{inset:0;height:auto;background:none}
+:root #game-root main.game-menu nav button:first-child::after{content:'';position:absolute;left:7%;top:50%;width:23px;height:25px;transform:translateY(-50%);background:url('/ui/opening-menu/seal.svg') center/contain no-repeat;pointer-events:none}
+:root #game-root main.game-menu nav button:hover:not(:disabled){color:#fff0ce;filter:brightness(1.18);transform:none;background-color:#b5955710}
+:root #game-root main.game-menu nav button:active:not(:disabled){filter:brightness(.92);transform:none}
+:root #game-root main.game-menu nav button:focus-visible{outline:2px solid #e4c791;outline-offset:4px}
+:root #game-root main.game-menu>footer{justify-content:center;padding:18px 25px 28px;font:clamp(13px,1.25vw,20px)/1.4 KaiTi,STKaiti,var(--serif);letter-spacing:.16em;color:#d8c59c}
+@media(max-width:700px){:root #game-root main.game-menu>section{width:min(390px,86vw);margin-left:7vw}:root #game-root main.game-menu>header{gap:12px;padding:18px 5vw;letter-spacing:.08em}:root #game-root main.game-menu .menu-art{background-position:60% center}:root #game-root main.game-menu .game-logo{height:27vh}}
+@media(max-height:650px){:root #game-root main.game-menu{--menu-action-font-size:19px}:root #game-root main.game-menu>header{padding-top:12px;padding-bottom:12px}:root #game-root main.game-menu>section{flex:none;min-width:280px;padding-bottom:12px}:root #game-root main.game-menu .game-logo{height:24vh;min-height:110px;margin-bottom:12px}:root #game-root main.game-menu nav{gap:4px}:root #game-root main.game-menu nav button{height:44px;min-height:44px}:root #game-root main.game-menu>footer{padding:12px}}
+@media(prefers-reduced-motion:reduce){:root #game-root main.game-menu nav button{transition:none}}
+@media(forced-colors:active){:root #game-root main.game-menu nav button{border:1px solid ButtonText}}

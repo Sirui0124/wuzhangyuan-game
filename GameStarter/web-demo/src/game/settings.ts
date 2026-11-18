@@ -7,7 +7,7 @@ import { acknowledgeAiSetup } from './ai-guidance';
 
 /** 加载、保存服务配置并测试连接。 */
 export function createSettingsController(root: HTMLElement, api: GameApi, audio: Pick<GameAudio, 'volume'>, ui: GameUIState, render: () => void,
-    voice: { isEnabled(): boolean; setEnabled(enabled: boolean): void }, runtime: { get(): RuntimeMode; set(mode: RuntimeMode): void; connected(value: boolean): void }, options: { aiOnly?: boolean } = {}) {
+    runtime: { get(): RuntimeMode; set(mode: RuntimeMode): void; connected(value: boolean): void }, options: { aiOnly?: boolean } = {}) {
     let apiStatus = '', apiSaving = false, apiLoaded = false, apiDetailsOpen = false, settingsSeq = 0, initialApiSettings = { apiKey: '', baseUrl: '', model: '' };
     let initialSetup = false, enableOnSave = false;
     function captureApiFields() {
@@ -16,7 +16,7 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
         }
     }
     function settingsHTML() {
-        return settingsPanelHTML({ runtimeMode: runtime.get(), music: audio.volume('music'), sfx: audio.volume('sfx'), aiVoiceEnabled: voice.isEnabled(),
+        return settingsPanelHTML({ runtimeMode: runtime.get(), music: audio.volume('music'), sfx: audio.volume('sfx'),
             apiLoaded, apiSaving, apiDetailsOpen, apiConfig: initialApiSettings, apiStatus, initialSetup, aiOnly: options.aiOnly });
     }
     function openSettings(focusAI = false, firstRun = false) {
@@ -56,7 +56,6 @@ export function createSettingsController(root: HTMLElement, api: GameApi, audio:
             runtime.set(!ai ? 'offline' : 'ai');
             render();
         },
-        setVoiceEnabled(enabled: boolean) { voice.setEnabled(enabled); },
         setDetails(open: boolean) { apiDetailsOpen = open; },
         close() { settingsSeq++; if (initialSetup) acknowledgeAiSetup(); initialSetup = false; },
     };

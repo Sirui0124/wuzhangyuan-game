@@ -89,7 +89,17 @@ export function createGameRenderer(options: RendererOptions) {
                 audio.setMusicPaused(true);branchFilmKey=key;
                 if(ui.filmKey!==key||!root.querySelector('video')){
                     ui.filmKey=key;root.innerHTML='<div id="film-host"></div>';
-                    cinema.mount(root.querySelector('#film-host')!,key,[clip],'chapterDialogue',()=>{ui.filmKey='';render();});
+                    cinema.mount(root.querySelector('#film-host')!,key,[...(clip.leadIn??[]),clip],'chapterDialogue',()=>{
+                        ui.filmKey='';
+                        if(clip.afterNode){
+                            for(let i=0;i<100 && b.dialogue.nodeId!==clip.afterNode;i++)b.next();
+                            game.branchChanged();
+                        } else if(clip.afterLine!==undefined){
+                            const nodeId=b.dialogue.nodeId;
+                            for(let i=0;i<100 && b.dialogue.nodeId===nodeId && b.line<clip.afterLine;i++)b.next();
+                            game.branchChanged();
+                        } else render();
+                    });
                 }
                 return;
             }

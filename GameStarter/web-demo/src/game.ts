@@ -13,7 +13,6 @@ import { createCharacterModule } from './characters/module';
 import { chapterOneCharacters } from './chapters/chapter-one/characters';
 import { gameModules } from './modules/config';
 import { createEvaluationModule } from './modules/evaluation';
-import { createDialogueVoice } from './game/dialogue-voice';
 import { bindGameInputEvents } from './game/input-events';
 import { createGameUIState } from './game/ui-state';
 import { createSceneViews } from './chapters/chapter-one/views/scene';
@@ -69,9 +68,10 @@ let collection = freshCollection(), collectionWarning = '';
 catalog.endings = catalog.endings.filter(ending => hasPackagedChapter(ending.chapter ?? 'wuzhang'));
 catalog.endings.push(...[
     {id:'branch-coop',title:'记住了你的名字',description:'请伯约出面，军报与回令完成交接，魏延记住了我。'},
-    {id:'branch-formal',title:'灯火未灭',description:'将军报交伯约处置，回令送回前营，这一夜平安过去。'},
+    {id:'branch-formal',title:'灯火未灭',description:'魏延与姜维当面议事，各自安排军务。这一夜，前营平安，灯火未灭。'},
     {id:'branch-lamp',title:'主灯已灭',description:'魏延闯入帐中，主灯熄灭。'},
-].map((e,i)=>({...e,number:`壹-${i+4}`,phase:'第一章',result:e.id==='branch-lamp'?'失败':'生还',hint:'重读第一章，尝试另一种交涉。',kind:e.id==='branch-lamp'?'failure':'success',chapter:'wuzhang',category:'ending' as const})));
+    {id:'branch-dismissed',title:'失了职守',description:'军报递进了帐，却没有等来回令。魏延收走我的长矛，将我赶离守位。'},
+].map((e,i)=>({...e,number:`壹-${i+4}`,phase:'第一章',result:['branch-lamp','branch-dismissed'].includes(e.id)?'失败':'生还',hint:'重读第一章，尝试另一种交涉。',kind:['branch-lamp','branch-dismissed'].includes(e.id)?'failure':'success',chapter:'wuzhang',category:'ending' as const})));
 const ui = createGameUIState();
 if (new URLSearchParams(location.search).get('view') === 'chapters') ui.menuMap = true;
 const people = createCharacterModule({ root, portraits: media.characters, enabled: gameModules.characters });
@@ -85,14 +85,18 @@ function archiveCollection() {
 }
 const slotKey = (slot: string) => `${GAME_SAVE_KEY}:slot:${slot}`;
 const label = (id: string) => script.clues.find(c => c.id === id)?.summary ?? inferenceRules.find(rule => rule.id === id)?.summary ?? id;
-const dialogueVoice = createDialogueVoice(game, text => toast(text), () => !ui.home && !ui.overlay && !ui.previewFilm && !root.querySelector('video,[data-story-film]') && !document.querySelector('dialog[open],.ending-album-host'));
-const sceneViews = createSceneViews(game, flow, media, ui, dialogueVoice.isEnabled);
+function presentReadyReply() {
+    if (document.hidden || ui.home || ui.overlay || ui.previewFilm || root.querySelector('video,[data-story-film]') || document.querySelector('dialog[open],.ending-album-host')) return;
+    const state = game.snapshot();
+    if (state.phase === 'spoken' && state.speech?.status === 'ready') game.acknowledgeReply();
+}
+const sceneViews = createSceneViews(game, flow, media, ui);
 const workspaceViews = createStoryViews(game, media, ui, sceneViews.hud);
 const navigationViews = createNavigationViews(game, media, movies, stored, () => !!collection.unlocked.safe, () => ({ catalog, collection: archiveCollection(), warning: collectionWarning }), () => grainHasCompleted(grainStory, stored(GRAIN_SAVE_KEY), stored(GRAIN_COMPLETED_KEY)));
-const settings = createSettingsController(root, api, audio, ui, () => render(), dialogueVoice, { get: () => mode, set: setRuntimeMode, connected: value => applyRuntimeMode(setRuntimeConnection(value)) });
+const settings = createSettingsController(root, api, audio, ui, () => render(), { get: () => mode, set: setRuntimeMode, connected: value => applyRuntimeMode(setRuntimeConnection(value)) });
 const { openSettings, saveApiSettings } = settings;
 const modals = createGameModals(game, flow, media, ui, stored, slotKey, settings.settingsHTML, GAME_SAVE_KEY);
-const pauseMenu = createPauseMenu(root, ui, { render: () => render(), settings: settings.settingsHTML, saves: modals.saveHTML, restart: newGame, suspend: () => { audio.setMusicPaused(true); dialogueVoice.stop(); }, home: () => { dialogueVoice.stop(); game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; settings.close(); render(); } });
+const pauseMenu = createPauseMenu(root, ui, { render: () => render(), settings: settings.settingsHTML, saves: modals.saveHTML, restart: newGame, suspend: () => { audio.setMusicPaused(true); }, home: () => { game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; settings.close(); render(); } });
 const branchView=createBranchView(root,game,media,ui,()=>render(),persist);
 const { render, revealDialogue } = createGameRenderer({ root, game, ui, audio, cinema, movies, branch:branchView, paused: () => pauseMenu.render(),
     presented: () => {
@@ -100,14 +104,12 @@ const { render, revealDialogue } = createGameRenderer({ root, game, ui, audio, c
         // After DOM reconciliation, including closing settings and restoring a saved reply.
         queueMicrotask(() => {
             if (ui.restoring) return;
-            if (ui.home || root.querySelector('video,[data-story-film]')) dialogueVoice.stop();
-            else dialogueVoice.sync();
+            presentReadyReply();
         });
     },
     views: { ...sceneViews, ...workspaceViews, ...navigationViews, ...modals } });
-document.addEventListener('visibilitychange', () => { if (!document.hidden) dialogueVoice.sync(); });
-document.addEventListener('close', () => dialogueVoice.sync(), true);
-window.addEventListener('storage', event => { if (event.key === 'wuzhang-ai-voice-enabled' || event.key === null) dialogueVoice.sync(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) presentReadyReply(); });
+document.addEventListener('close', () => presentReadyReply(), true);
 window.addEventListener('pagehide', event => {
     evaluation.cancel(); writing.cancel(); if (!event.persisted) {  people.dispose(); evaluation.dispose(); writing.dispose(); }
 });
@@ -119,19 +121,19 @@ function setRuntimeMode(next: RuntimeMode) {
 }
 function applyRuntimeMode(next: RuntimeMode) {
     if (next === mode) return;
-    evaluation.cancel(); writing.cancel(); dialogueVoice.stop();
+    evaluation.cancel(); writing.cancel();
     ui.inventoryKind = 'clues'; ui.notesShown = false;
     mode = next;
     game.setRuntimeMode(next);
     persist();
-    
+
 }
 function narrativeSnapshot() { return game.serialize(); }
 function persist() {
     if (ui.restoring || ui.home) return;
     const progress = game.snapshot();
     if (!playtestKey) recordChapterHistory('wuzhang', !!game.branch?.completed || ['ending', 'map'].includes(progress.phase) && ['safe'].includes(progress.end ?? ''));
-    
+
     if (!playtestKey) recordAchievements(chapterOneAchievementIds(game.snapshot()), `wuzhang:${game.snapshot().story.run}`);
     try { localStorage.setItem(GAME_SAVE_KEY, narrativeSnapshot()); }
     catch { ui.storageWarning = '当前进度暂未写入浏览器，仍可继续本次游戏。'; }
@@ -164,7 +166,7 @@ game.onChange(event => {
     if (!ui.restoring) render();
 });
 function load(key = GAME_SAVE_KEY) {
-    dialogueVoice.stop();
+
     const raw = stored(key); if (!raw) { toast('这里还没有留下进度。'); return; }
     try { if(!JSON.parse(raw).branch) backupSave(localStorage,key,raw); }
     catch { toast('旧进度暂未能备份，请稍后再试。');return; }
@@ -185,9 +187,9 @@ function newGame(resetChapters = false) {
     }
     pauseMenu.dismiss(); cinema.resetPlayback();
     ui.previewFilm = resetChapters ? 'prologue' : '';
-    dialogueVoice.stop();
-    
-     
+
+
+
     ui.inventoryKind = 'clues';
     ui.home = false; ui.menuMap = false; ui.overlay = ''; ui.notesShown = false; ui.revealAt = 0; clearTimeout(ui.revealTimer); ui.noteOpen = ''; ui.filmKey = ''; ui.notice = ''; ui.storageWarning = ''; game.restart();
 }
@@ -211,7 +213,7 @@ root.addEventListener('click', event => {
     if (target.dataset.tent) {
         const action = target.dataset.tent;
         if (game.tentAction(action)) {
-            
+
             persist();
         }
         return;
@@ -234,7 +236,7 @@ root.addEventListener('click', event => {
     if (action === 'replay-first' || action === 'start-first') newGame();
     if (action === 'continue' || action === 'load-auto') load();
     if (action === 'next') next();
-    if (action === 'menu') { dialogueVoice.stop(); game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; ui.overlay = ''; render(); }
+    if (action === 'menu') { game.cancelSpeech(false); cinema.dispose(); ui.previewFilm = ''; ui.home = true; ui.menuMap = false; ui.overlay = ''; render(); }
     if (action === 'continue-story') { game.continueStory(); return; }
     if (action === 'return-to-story') { game.returnToStory(); return; }
     if (['insert-clue','remove-clue','clear-expression'].includes(action ?? '') && state.phase === 'expression' && !state.speech) {
@@ -278,7 +280,7 @@ if (canvasPlaytest || weiyanPlaytest) {
     const fixture = await read<GameSessionState>(canvasPlaytest ? '/art-review/thought-playtest.json' : `/playtest/${weiyanPlaytest}.json`);
     ui.restoring = true;
     game.restore(JSON.stringify(fixture));
-    
+
     ui.restoring = false;
     ui.home = false;
     if (weiyanPlaytest) persist();

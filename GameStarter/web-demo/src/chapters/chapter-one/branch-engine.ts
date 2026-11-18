@@ -1,20 +1,22 @@
 export type State = Record<string, string | boolean>;
-export type Line = { speaker: string; text: string };
-export type Edge = { id?: string; label?: string; target: string; effects?: State; when?: State; say?: Line[]; response?: Line[] };
+export type Line = { speaker: string; text: string; visible?: boolean };
+export type Edge = { id?: string; label?: string; legacy?: boolean; target: string; effects?: State; when?: State; say?: Line[]; response?: Line[] };
 export type AiRoute = { target?: string; effects?: State; intent: string; fallback: string; variants?: (Partial<Omit<AiRoute, 'variants'>> & { when: State })[] };
 export type AiScene = {
-  npc: string; historyWindowRounds: number; maxTurns: number; inputLabel: string; placeholder: string; scaffold: string;
+  allowRetry?: boolean; npc: string; historyWindowRounds: number; maxTurns: number; inputLabel: string; placeholder: string; scaffold: string;
   knownHint: { when: State; text: string }; routes: Record<string, AiRoute>;
 };
 export type AiReceipt = { nodeId: string; version: string; requestId: string; outcome: string; reply: string; replySource: string; contextHash: string; signature: string };
-export type AuditEvent = { type: 'choose'; id: string } | { type: 'next' } | { type: 'guard'; text: string } | { type: 'ai'; result: AiReceipt } | { type: 'retryAi' } | { type: 'offline'; outcome: string; text: string };
+export type AuditEvent = { type: 'choose'; id: string } | { type: 'next' } | { type: 'guard'; text: string; classifierVersion?: 2 } | { type: 'ai'; result: AiReceipt } | { type: 'retryAi' } | { type: 'offline'; outcome: string; text: string };
 export type Exchange = { id: string; player: string; npc: string };
 export type StoryNode = {
   id: string; title: string; displayTitle?: string; kind: 'passage' | 'choice' | 'router' | 'ending' | 'terminal' | 'ai';
   ai?: { sceneId: string };
+  autoChoice?: string;
   lines: Line[]; requires?: State; afterLines?: State; hintAward?: string;
   textRevisions?: {speaker: string; old: string; new: string}[];
-  film?: {id:string;src:string;title:string;subtitles?:string;beforeLine:number};
+  titleRevisions?: string[];
+  film?: {id:string;src:string;title:string;subtitles?:string;beforeLine:number;afterNode?:string;afterLine?:number;leadIn?:{id:string;src:string;title:string;subtitles?:string}[]};
   next?: string; choices?: Edge[]; routes?: Edge[]; endingId?: string;
   freeInput?: { placeholder: string; submitLabel: string; intentRoutes: { intent: string; target: string }[] };
 };
@@ -50,7 +52,7 @@ export class Dialogue {
   }
   get node() { return this.nodes.get(this.nodeId)!; }
   get hints() { return this.story.hints.filter(h => this.state[h.state] === true); }
-  get choices() { return this.pending ? [] : (this.node.choices ?? []).filter(e=>matches(this.state,e.when)); }
+  get choices() { return this.pending ? [] : (this.node.choices ?? []).filter(e=>!e.legacy&&matches(this.state,e.when)); }
   aiRoute(outcome: string) {
     const base=this.aiScene?.routes[outcome];
     return base ? {...base,...base.variants?.find(v=>matches(this.state,v.when))} : undefined;
@@ -95,20 +97,21 @@ export class Dialogue {
     } else this.finish(edge);
   }
   choose(id: string) {
-    const e = this.choices.find(c => c.id === id);
+    const e = this.pending ? undefined : this.node.choices?.find(c => c.id === id && matches(this.state,c.when));
     if (!e) throw Error('当前没有这个选项。');
     this.take(e, [...(e.say ?? []), ...(e.response ?? [])], e.label!);
     this.audit.push({ type: 'choose', id });
   }
-  ask(text: string) {
+  ask(text: string, classifierVersion: 1 | 2 = 2) {
+    if (classifierVersion !== 1 && classifierVersion !== 2) throw Error('问话规则版本无效。');
     if (this.pending || !this.node.freeInput) throw Error('此处不能自由提问。');
     const input = text.trim();
     if (!input || input.length > 400) throw Error('请写下 1 至 400 字的问题。');
-    const intent = classify(input);
+    const intent = classifierVersion === 1 ? classifyLegacy(input) : classify(input);
     const edge = this.node.freeInput.intentRoutes.find(e => e.intent === intent);
     if (!edge) throw Error('没有对应的问话出口。');
     this.take(edge, [{ speaker: '我', text: input }], input);
-    this.audit.push({ type: 'guard', text: input });
+    this.audit.push({ type: 'guard', text: input, ...(classifierVersion === 2 ? {classifierVersion} : {}) });
     return intent;
   }
   applyAi(text: string, result: AiReceipt) {
@@ -130,7 +133,7 @@ export class Dialogue {
     this.audit.pop(); this.audit.push({type:'offline',outcome,text});
   }
   retryAi() {
-    if (!this.aiScene || this.pending) throw Error('此处不能重新组织回答。');
+    if (!this.aiScene || this.pending || this.aiScene.allowRetry===false) throw Error('请在下一次发言中直接补充或改口。');
     this.save(); this.audit.push({ type:'retryAi' }); this.exchange = []; this.aiHeld = false;
     this.frame = { nodeId:this.nodeId, title:this.node.displayTitle ?? this.node.title, kind:'ai', lines:clone(this.node.lines) };
   }
@@ -155,7 +158,7 @@ export class Dialogue {
 }
 
 /** Bounded local prototype, deliberately not presented as a language model. */
-export function classify(raw: string): string {
+function classifyLegacy(raw: string): string {
   const text = raw.normalize('NFKC').replace(/\s/g, '');
   // Only an actual question/request about an alternative handler earns the clue.
   const question = /谁|哪[个位些路]|何人|能否|可否|能不能|能不|能.*吗|可以.*[吗么]|可不可以|有没有|有无|是否|行不行|成不成|可不|请.*[来出]|找.*[来出]|(?:找|请|叫|让).*(?:人|姜|伯约)/.test(text);
@@ -169,4 +172,18 @@ export function classify(raw: string): string {
   if (/禁令|不许|不让|不准|不能.*[进入]|为何.*[进入]|为什[么麼].*[进入]|守帐|告示/.test(text)) return 'ask_restriction';
   if (/敌[人军骑情]|魏[军骑人]|营[外前]|斥候|动静|打[进起]|号角/.test(text)) return 'ask_enemy';
   return 'other';
+}
+
+/** Local question matching, not general semantic AI. Quotes and withdrawn clauses cannot award a clue. */
+export function classify(raw: string): string {
+  const text = raw.normalize('NFKC').replace(/\s/g, '').replace(/“[^”]*”|「[^」]*」|『[^』]*』|"[^"]*"|'[^']*'/g, '');
+  const clauses = text.split(/[，,。.!！?？;；\n]|但是|不过/).filter(Boolean);
+  let active: string[] = [];
+  for (const clause of clauses) {
+    const polarity = clause.replace(/能不能/g, '能否').replace(/是不是/g, '是否');
+    const rejected = /(?:不是|并非|没(?:有)?)(?:在)?(?:问|想问|要问)|(?:不必|不用|不要|无需|不能|别|不)(?:再)?(?:去)?(?:找|请|问|叫|让)|谁(?:也|都)不|(?:接报|听报|处理军情).*(?:不合适|不行|不必|不用)|(?:不考虑|不打算|不想).*(?:找|请|接报|听报)|算了/.test(polarity);
+    if (rejected) { active = []; continue; }
+    active.push(clause);
+  }
+  return classifyLegacy(active.join('，'));
 }

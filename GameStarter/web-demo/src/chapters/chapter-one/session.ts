@@ -567,15 +567,15 @@ export class ChapterOneSession {
     }
     branchReply(text:string,result:AiReceipt) { if(this.state.phase!=='branch'||!this.branch)return;this.branch.apply(text,result);this.syncBranch(); }
     branchDraft(text:string) {if(this.branch)this.branch.draft=text.slice(0,800);}
-    branchChanged() { this.emit(); }
+    branchChanged() { this.syncBranch(); }
     private syncBranch(emit=true) {
         const b=this.branch!;const g=b.dialogue;
         this.state.round=g.state.deathSeen?2:1;
-        this.state.scene=g.nodeId.includes('JIANG')?'jiangwei_tent_front':g.nodeId.includes('ORDER')||g.nodeId==='C01-REPORT'?'report_post':'camp_gate';
+        this.state.scene=g.nodeId!=='C01-HINT-JIANG' && g.nodeId.includes('JIANG')?'jiangwei_tent_front':g.nodeId.includes('ORDER')||g.nodeId==='C01-REPORT'?'report_post':'camp_gate';
         this.state.story.flags.REPORT_CLOSED=b.completed;
         this.state.end=b.completed?'safe':null;
         if(g.node.kind==='terminal' && b.completed)this.state.phase='map';
         const ending=g.node.endingId;
-        if(emit)this.emit(ending&&b.atLastLine?{type:'ending',id:({'E-COOP':'branch-coop','E-FORMAL':'branch-formal','E-DEATH':'tutorial-sacrifice','E-LAMP':'branch-lamp'} as Record<string,string>)[ending]}:{type:'line'});
+        if(emit)this.emit(ending&&b.atLastLine?{type:'ending',id:({'E-COOP':'branch-coop','E-FORMAL':'branch-formal','E-DEATH':'branch-dismissed','E-LAMP':'branch-lamp','E-ANGER':'provocation'} as Record<string,string>)[ending]}:{type:'line'});
     }
 }

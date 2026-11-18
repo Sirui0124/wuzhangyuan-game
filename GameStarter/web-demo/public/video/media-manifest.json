@@ -1,5 +1,5 @@
 {
-  "version": 38,
+  "version": 41,
   "clips": [
     {
       "file": "current/LI02A-granary-20261018.mp4",
@@ -1448,17 +1448,17 @@
       "status": "current-integrated"
     },
     {
-      "file": "current/PV-regrets-v8-zhige-20261117.mp4",
-      "url": "/video/current/PV-regrets-v8-zhige-20261117.mp4",
-      "source": "../../video/current/PV-regrets-v8-zhige-20261117.mp4",
-      "duration": 73,
+      "file": "current/PV-regrets-v11-clear-monologue-20261118.mp4",
+      "url": "/video/current/PV-regrets-v11-clear-monologue-20261118.mp4",
+      "source": "../../video/current/PV-regrets-v11-clear-monologue-20261118.mp4",
+      "duration": 72.91666666666667,
       "containerDuration": 73,
       "width": 1280,
       "height": 720,
       "fps": "24/1",
       "videoCodec": "h264",
-      "bytes": 28508160,
-      "sha256": "32618cbdd0b3c42763eaf31322f2395b9f05307db5cdd1dffd0460021ff53e86",
+      "bytes": 26889119,
+      "sha256": "510c9e132302ba63c95b14829edb5937dfbb54150612270f5042c3b019004ed3",
       "status": "integrated-awaiting-human-review",
       "fullDecodePassed": true
     },
@@ -1471,6 +1471,42 @@
       "sha256": "a7b2c630cfb2d973439567d59eeee1635076ea765ef2b9ec1f11469f98c78e05",
       "status": "已剪辑接入，待用户review；非逐字听审通过",
       "fullDecodePassed": true
+    },
+    {
+      "file": "current/C1END-EXEC-foley-20261029.mp4",
+      "url": "/video/current/C1END-EXEC-foley-20261029.mp4",
+      "source": "../../video/current/C1END-EXEC-foley-20261029.mp4",
+      "duration": 12.208333333333334,
+      "bytes": 7317570,
+      "sha256": "1527298deed27f735cf66e95368c5c3891d012095681cbb5231a2e14d56782fe",
+      "status": "integrated-awaiting-human-review"
+    },
+    {
+      "file": "current/EN02B-A-full-speed-20261022.mp4",
+      "url": "/video/current/EN02B-A-full-speed-20261022.mp4",
+      "source": "../../video/current/EN02B-A-full-speed-20261022.mp4",
+      "duration": 22.05,
+      "bytes": 5290123,
+      "sha256": "03b6203b7c0a7fd2c73a83dada77ebd3071c293c9b4db04fe05b05cae7cb2bc0",
+      "status": "integrated-awaiting-human-review"
+    },
+    {
+      "file": "current/EN01-full-speed-20261022.mp4",
+      "url": "/video/current/EN01-full-speed-20261022.mp4",
+      "source": "../../video/current/EN01-full-speed-20261022.mp4",
+      "duration": 18.24,
+      "bytes": 3947610,
+      "sha256": "ff12586ecb42f0410e25da6295a2a86878ea83789dc3c019571fe9089728261c",
+      "status": "历史成片恢复接入，待用户视听review"
+    },
+    {
+      "file": "current/EN03-EN04-ending-20261022.mp4",
+      "url": "/video/current/EN03-EN04-ending-20261022.mp4",
+      "source": "../../video/current/EN03-EN04-ending-20261022.mp4",
+      "duration": 31.98,
+      "bytes": 6936933,
+      "sha256": "0fa80b7f5a4d7cc2c6b01103bb42b6ca76d7928e28878e90e2676e4c81df6f1e",
+      "status": "历史成片恢复接入，待用户视听review"
     }
   ]
 }

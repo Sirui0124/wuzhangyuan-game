@@ -35,7 +35,7 @@ function mountChapter() {
         : `<iframe title="第四章 · 夷陵归路" src="/yiling-rescue/index.html?campaign=1${earlyAccess ? '&early=1' : ''}" style="position:fixed;inset:0;width:100%;height:100dvh;border:0;background:#171714"></iframe>`;
     const frame = root.querySelector('iframe')!;
     if (!commandMap) {
-        const link = document.createElement('a');link.href='/?chapter=yiling&playtest=command';link.textContent='前线军令 · 三路试玩';
+        const link = document.createElement('a');link.href='/?chapter=yiling&playtest=command';link.textContent='前线军令 · 八路营救';
         link.style.cssText='position:fixed;right:18px;bottom:12px;z-index:10;padding:8px 14px;border:1px solid #a58a58;background:#302a22;color:#e3c995;font-size:14px;text-decoration:none';root.append(link);
     }
     const shell = createRescueShell(root, frame);

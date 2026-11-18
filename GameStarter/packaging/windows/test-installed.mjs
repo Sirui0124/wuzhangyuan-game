@@ -2,7 +2,6 @@ import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { resolve, dirname, sep } from 'node:path';
 import { createHash } from 'node:crypto';
-import { createRequire } from 'node:module';
 import { _electron as electron } from 'playwright';
 import { listPackage } from '@electron/asar';
 
@@ -75,8 +74,8 @@ async function launch(index){
  assert.equal(health.configured,false,'A clean release must not inherit development credentials');
  const viaRenderer=await page.evaluate(async()=>{const r=await fetch('http://127.0.0.1:8787/health');return {ok:r.ok,data:await r.json()};});
  assert.equal(viaRenderer.ok,true);assert.equal(viaRenderer.data.configured,false);
- const voiceConfigured=await page.evaluate(async()=>{const r=await fetch('http://127.0.0.1:8787/api/game/tts/settings');return (await r.json()).configured;});
- assert.equal(voiceConfigured,false,'Development voice environment is not inherited either');
+ const voiceStatus=await page.evaluate(async()=>(await fetch('http://127.0.0.1:8787/api/game/tts/settings')).status);
+ assert.equal(voiceStatus,410,'Live voice settings are retired');
  assert.notEqual(meta.staticPort,8812);assert.notEqual(meta.apiPort,8787);
  report.launches.push({index,runtime,meta,healthConfigured:health.configured});
  return {app,page,meta};
@@ -113,25 +112,15 @@ try{
  }
  report.payload={files:manifest.files.length,failures:payloadFailures};
  assert.deepEqual(payloadFailures,[],'Every payload manifest file must survive installation byte for byte');
- const serverEntry=resolve(installRoot,'resources/game/GameStarter/server/server.mjs');
- const resolvedWs=createRequire(serverEntry).resolve('ws');
- assert.ok(resolvedWs.startsWith(resolve(installRoot,'resources/game/node_modules/ws')+sep),'Backend ws must resolve from the installed package, never an ancestor workspace');
- report.resolvedWs=resolvedWs;
- report.checks.push('All manifest file sizes and SHA256 hashes match the installation; ws resolves inside the installed runtime dependency directory.');
+ for(const retired of ['GameStarter/server/tts.mjs','GameStarter/server/tts-protocol.mjs','node_modules/ws']){
+  assert.equal(existsSync(resolve(installRoot,'resources/game',retired)),false,retired);
+ }
+ report.checks.push('All manifest file sizes and SHA256 hashes match the installation. Retired voice modules are absent.');
  active=await launch(1);let {page}=active;
  const inlineConfig=await active.app.evaluate(()=>({settingsFile:process.env.GAME_SETTINGS_FILE,hasInheritedKey:!!process.env.DEEPSEEK_API_KEY}));
  assert.equal(resolve(inlineConfig.settingsFile),resolve(userData,'settings/.env'));
  assert.equal(inlineConfig.hasInheritedKey,false);
  report.checks.push('Inline chapter-one and command-map handlers share the player settings path and do not inherit provider credentials.');
- const savedSettings=await page.evaluate(async()=>{
-  const response=await fetch('http://127.0.0.1:8787/api/game/tts/settings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({apiKey:'',player:'validation-player',weiyan:'validation-weiyan',resource:'seed-tts-2.0'})});
-  return {status:response.status,body:await response.json()};
- });
- assert.equal(savedSettings.status,200);assert.equal(savedSettings.body.ok,true);
- const settingsPath=resolve(userData,'settings/.env');
- assert.ok(existsSync(settingsPath),'Settings must be written under the isolated userData');
- assert.ok(readFileSync(settingsPath,'utf8').includes('validation-player'));
- report.checks.push('Saving non-secret voice settings writes only the isolated userData/settings/.env directory without a provider request.');
  report.checks.push('Installed executable starts with PATH limited to Windows; packaged Node/Electron runtime and isolated userData are active.');
  report.checks.push('Occupied development ports are bypassed by private runtime ports; fixed renderer origins reach the clean packaged backend.');
  await capture(active,'01-installed-home.png');

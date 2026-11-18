@@ -13,7 +13,6 @@ import { createSettingsController } from './game/settings';
 import { aiGuidanceHTML } from './game/ai-guidance';
 import { GameApi } from '../../assets/scripts/GameApi';
 import { GameAudio, type AudioBus } from './audio';
-import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
 import { saveRuntimeMode, setRuntimeConnection} from './runtime-mode';
 import { readRuntimeMode, aiEnabled } from './runtime-mode';
 import { fixedSpeeches, fixedJudgment } from './chapters/chapter-two/film-dialogue';
@@ -84,7 +83,7 @@ async function start(){
         if(!isolatedPlaytest&&session.current.kind==='finish')localStorage.setItem(GRAIN_COMPLETED_KEY,'true');
     }catch{error='当前进度未能保存，仍可继续。';}};
     const audio = new GameAudio();
-    const settings = createSettingsController(root, new GameApi(), audio, ui, () => render(), { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled }, {
+    const settings = createSettingsController(root, new GameApi(), audio, ui, () => render(),  {
         get: readRuntimeMode,
         set: mode => { saveRuntimeMode(mode); applyMode(); },
         connected: value => { setRuntimeConnection(value); applyMode(); },
@@ -120,7 +119,6 @@ async function start(){
     root.addEventListener('input', event => {
         const target = event.target as HTMLInputElement;
         if (target.dataset.volume) { audio.setVolume(target.dataset.volume as AudioBus, Number(target.value)); if(target.nextElementSibling) target.nextElementSibling.textContent=target.value+'%'; }
-        if (target.id === 'ai-voice-enabled') settings.setVoiceEnabled(target.checked);
         if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked);
     });
     const dialogueCamera=createGrainDialogueCamera();

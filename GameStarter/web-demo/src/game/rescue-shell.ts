@@ -6,7 +6,6 @@ import { createGameUIState } from './ui-state';
 import { savePanelHTML } from '../game-ui-panels';
 import { esc } from './view-common';
 import { readRuntimeMode, saveRuntimeMode, setRuntimeConnection } from '../runtime-mode';
-import { readAiVoiceEnabled, saveAiVoiceEnabled } from '../voice-preference';
 import { YILING_CAMPAIGN_KEY as SAVE } from '../campaign/yiling-result';
 
 type Slot = { version: 1; id: string; round: number; phase: string; savedAt: number; drafts: string | null };
@@ -19,7 +18,7 @@ export function createRescueShell(root: HTMLElement, frame: HTMLIFrameElement) {
     let busy = false, notice = '';
     const render = () => { pause.render(); if (busy) root.querySelectorAll<HTMLButtonElement>('.game-modal button').forEach(button => button.disabled = true); };
     const settings = createSettingsController(root, new GameApi(), audio, ui, render,
-        { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled },
+
         { get: readRuntimeMode, set: saveRuntimeMode, connected: setRuntimeConnection });
     function readSlot(index: string): Slot | null {
         const raw = localStorage.getItem(slotKey(index));
@@ -94,7 +93,6 @@ export function createRescueShell(root: HTMLElement, frame: HTMLIFrameElement) {
     root.addEventListener('input', event => {
         const input = event.target as HTMLInputElement;
         if (input.dataset.volume) { audio.setVolume(input.dataset.volume as AudioBus, Number(input.value)); if (input.nextElementSibling) input.nextElementSibling.textContent = input.value + '%'; }
-        if (input.id === 'ai-voice-enabled') settings.setVoiceEnabled(input.checked);
         if (input.id === 'game-ai-enabled') settings.setRuntime(input.checked);
     });
     root.addEventListener('toggle', event => { if ((event.target as HTMLElement).id === 'api-settings') settings.setDetails((event.target as HTMLDetailsElement).open); }, true);

@@ -1,10 +1,14 @@
+import {selectCrisisEvents} from './crisis-event-ai.mjs';
+import {crisis} from './crisis-rules.mjs';
+import {modern,eight} from './route-config.mjs';
+import {talkRoute} from './route-ai.mjs';
 import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
 import {randomUUID,randomBytes,createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 import {talk} from './fu-ai.mjs';
 import {narrateReport} from './report-ai.mjs';
-import {VERSION,FRONTS,fresh,orders,settle,derive,message,publicSession,fail} from './campaign-engine.mjs';
+import {VERSION,FRONTS,fresh,orders,settle,prepareSettlement,completeSettlement,derive,message,publicSession,fail} from './campaign-engine.mjs';
 
 function preset(s,front,text){
  const r=s.fronts[front];if(r.status==='home')return '人都已接回，伤兵正在安置。接应队的伤亡已经报给军侯。';
@@ -14,11 +18,11 @@ function preset(s,front,text){
  if(front==='sha')return r.progress>=r.work/2?'东沟的人已接上，西沟还有担架。让接应的人继续往西沟走，掩护的队伍别先撤。':'东沟的人能先走，西沟的伤兵要有人抬。先护送东沟，再把西沟的人接出来。';
  return r.progress>=r.work/2?'张南前队已接上，冯习带的后队还在后面。留下掩护，把后队也接齐。':'张南在前，冯习带后队伤兵。前后两队都要接，先护送前队，再回收后队。';
 }
-export function createCampaignRuntime({directory=fileURLToPath(new URL('../../outputs/yiling-shared-saves/',import.meta.url)),model,reportModel=model?false:undefined}={}){
+export function createCampaignRuntime({directory=fileURLToPath(new URL('../../outputs/yiling-shared-saves/',import.meta.url)),model,routeModel=model,reportModel=model?false:undefined,eventModel=(model||routeModel||reportModel===false)?false:undefined}={}){
  const locks=new Map();
  async function locked(id,fn){const prior=locks.get(id)||Promise.resolve();let release;const gate=new Promise(r=>release=r);const tail=prior.then(()=>gate);locks.set(id,tail);await prior;try{return await fn();}finally{release();if(locks.get(id)===tail)locks.delete(id);}}
  function path(id){if(typeof id!=='string'||!/^[a-f\d-]{36}$/i.test(id))fail('存档编号无效。');return join(directory,id+'.json');}
- async function load(id){try{const s=JSON.parse(await readFile(path(id),'utf8'));if(![VERSION,'shared-2000-v1'].includes(s.balanceVersion))fail('此存档属于旧兵力方案，请新开营救；原记录保留。',409);s.roundLimit??=6;if(s.round>=6&&!s.ended){s.ended=true;s.endReason="deadline";}return s;}catch(e){if(e.code==='ENOENT')fail('营救存档不存在，请新开营救。',404);throw e;}}
+ async function load(id){try{const s=JSON.parse(await readFile(path(id),'utf8'));if(![VERSION,'shared-2000-v1'].includes(s.balanceVersion))fail('此存档属于旧兵力方案，请新开营救；原记录保留。',409);s.roundLimit??=6;if(s.round>=s.roundLimit&&!s.ended){s.ended=true;s.endReason=eight(s)&&Object.values(s.fronts).every(f=>['safe','home'].includes(f.status))?'rescued':'deadline';}return s;}catch(e){if(e.code==='ENOENT')fail('营救存档不存在，请新开营救。',404);throw e;}}
  async function persist(s){await mkdir(directory,{recursive:true});const dest=path(s.scenarioId),tmp=dest+'.'+randomUUID()+'.tmp';await writeFile(tmp,JSON.stringify(s));await rename(tmp,dest);}
  return {
   async session(id,difficulty){if(id)return publicSession(await load(id));const s=fresh({seed:randomBytes(4).readUInt32LE()||1,difficulty:difficulty||'normal'});await persist(s);return publicSession(s);},
@@ -32,19 +36,25 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
     if(current.ended)fail('本次营救已结算，请新开一局。');
     const s=structuredClone(current);
     if(kind==='orders')orders(s,input.orders);
-    if(kind==='round'){if(input.trigger!=='endRound')fail('请明确结束本轮。');settle(s);const narrative=await narrateReport(s,{model:reportModel,signal});s.lastReport.narrative=narrative;s.messages=s.messages.filter(m=>!(m.round===s.round&&m.kind==='report'));for(const p of narrative.paragraphs)message(s,'前线军报',p.text,'report',p.front==='camp-base'?null:p.front);}
+    if(kind==='round'){if(input.trigger!=='endRound')fail('请明确结束本轮。');const prepared=prepareSettlement(s);const selections=prepared.eventDraft?await selectCrisisEvents(prepared.eventDraft,{model:eventModel,signal}):undefined;if(signal?.aborted)fail('本次请求已取消，战局未结算。',499);completeSettlement(s,prepared,selections);const narrative=await narrateReport(s,{model:reportModel,signal});s.lastReport.narrative=narrative;s.messages=s.messages.filter(m=>!(m.round===s.round&&m.kind==='report'));for(const p of narrative.paragraphs)message(s,'前线军报',p.text,'report',p.front==='camp-base'?null:p.front);}
     if(kind==='chat'){
      const f=input.front;if(!Object.hasOwn(FRONTS,f)||typeof input.text!=='string'||!input.text.trim()||input.text.length>500)fail('请写1至500字的问话。');
+     if(!s.fronts[f]||s.fronts[f].status==='locked')fail('尚未收到这一路的消息。');
      const count=s.messages.filter(m=>m.kind==='question'&&m.front===f&&m.round===s.round).length;
      if(count>=8)fail('本轮已交谈八次，可先安排接应，下轮再继续。');
      const text=input.text.trim(),phase=s.phase;
      // The AI authority adapter sees only the units actually at Fu's rear.
-     const result=f==='fu'?await talk(s,text,{signal,model}):null;
+     const result=f==='fu'?await talk(s,text,{signal,model,refresh:derive}):null;
      if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
-     const playerId=message(s,'我',text,'question',f),reply=result?.reply||preset(s,f,text);
-     const replyId=message(s,FRONTS[f].name,reply,'dialogue',f);
+     const routeResult=f!=='fu'&&modern(s)?await talkRoute(s,f,text,{signal,model:routeModel,refresh:derive}):null;
+     if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
+     const playerId=message(s,'我',text,'question',f);
+     if(routeResult){s.fronts[f].planAccepted=routeResult.accepted;if(crisis(s))derive(s);const replyIds=routeResult.replies.map(r=>message(s,r.speaker,r.text,'dialogue',f));(s.routeTurns??=[]).push({front:f,playerId,player:text,replyIds,replies:routeResult.replies,classification:routeResult.classification,promptVersion:routeResult.promptVersion,model:routeResult.model});}
+     const reply=result?.reply||(!routeResult?preset(s,f,text):'');
+     const replyId=routeResult?null:message(s,FRONTS[f].name,reply,'dialogue',f);
      if(result){s.facts.withdrawalAccepted=result.accepted;derive(s);const turn={phase,playerId,player:text,replyId,reply,outcomeId:result.classified.outcomeId,classification:result.classified,promptVersion:result.promptVersion,model:result.model};s.turns.push(turn);if(phase!==s.phase)s.turns.push({...turn,phase:s.phase,transitionCarry:true});}
     }
+    if(signal?.aborted)fail('本次请求已取消，战局未结算。',499);
     s.revision++;s.nextSendAt=0;s.requests[input.requestId]=hash;await persist(s);return publicSession(s);
    });
   }

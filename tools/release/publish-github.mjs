@@ -9,9 +9,16 @@ if(!tag||!windows||!mac||!notes||!/^v[\w.-]+$/.test(tag))throw Error('Usage: --t
 function run(file,args,capture=false){const r=spawnSync(file,args,{cwd:root,encoding:'utf8',stdio:capture?'pipe':'inherit',windowsHide:true});if(r.error)throw r.error;if(r.status!==0)throw Error(`${file} failed: ${r.stderr||r.status}`);return r.stdout?.trim();}
 if(run('git',['status','--porcelain'],true))throw Error('Commit current source before publishing. Working tree must be clean.');
 const repo='Sirui0124/wuzhangyuan-game';
+// Unity work is local-only. A normal push would also publish those commits' history.
+const localCommits=run('git',['rev-list','HEAD','--not','--remotes=origin'],true).split('\n').filter(Boolean);
+for(const commit of localCommits){
+ const unityChanges=run('git',['diff-tree','--root','--no-commit-id','--name-only','-r',commit,'--','UnityPort','tools/unity'],true);
+ if(unityChanges)throw Error('Local-only Unity changes are present in unpublished history. Prepare a web-only delivery branch without those commits before publishing; keep the Unity workspace intact.');
+}
 if(run('gh',['repo','view',repo,'--json','visibility','--jq','.visibility'],true)!=='PUBLIC')throw Error('Expected user-authorized public repository');
 const sha=run('git',['rev-parse','HEAD'],true);
 const artifacts=[windows,mac].flatMap(dir=>JSON.parse(readFileSync(resolve(root,dir,'release-artifacts.json'),'utf8')).artifacts);
+if(artifacts.length!==2||!artifacts.some(a=>/^Wuzhangyuan-.*-win-x64-setup\.exe$/.test(basename(a.path)))||!artifacts.some(a=>/^Wuzhangyuan-.*-mac-web\.tar\.gz$/.test(basename(a.path))))throw Error('Only the Windows web installer and Mac local-web archive may be published; Unity artifacts stay local.');
 for(const a of artifacts){if(!existsSync(a.path))throw Error(`Missing ${a.path}`);if(createHash('sha256').update(readFileSync(a.path)).digest('hex')!==a.sha256)throw Error(`Hash mismatch: ${a.path}`);}
 const out=resolve(root,'outputs',`github-${tag}`);mkdirSync(out,{recursive:true});
 const sums=resolve(out,'SHA256SUMS.txt');writeFileSync(sums,artifacts.map(a=>`${a.sha256}  ${basename(a.path)}`).join('\n')+'\n');

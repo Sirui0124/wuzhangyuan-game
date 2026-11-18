@@ -1,5 +1,4 @@
 import http from 'node:http';
-import { handleTts } from './tts.mjs';
 import { callModel, isMessagesEndpoint } from './model-transport.mjs';
 import { readProfiles, selectProfile, saveTemporaryProfile } from './model-profiles.mjs';
 import { readFile, writeFile, mkdir, rename, unlink } from 'node:fs/promises';
@@ -75,40 +74,26 @@ const server = http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
   const send = (status, body) => { if (res.destroyed || res.writableEnded) return; res.writeHead(status, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(body)); };
-  const voiceSettingsRequest = req.url === '/api/game/tts/settings';
-  const settingsRequest = req.url === '/api/game/settings' || voiceSettingsRequest;
+  const settingsRequest = req.url === '/api/game/settings';
   if (settingsRequest) {
     res.setHeader('Cache-Control', 'no-store');
     if (!localSettingsRequest(req)) { send(403, { error: '设置仅允许本机访问' }); return; }
   }
   if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
-  if (req.url === '/api/game/tts') {
-    if (!localSettingsRequest(req)) { send(403, { error: '语音仅允许本机访问' }); return; }
-    await handleTts(req, res, { ...process.env, ...parseEnv(await readSettingsFile()) }); return;
-  }
+  if (req.url === '/api/game/tts' || req.url === '/api/game/tts/settings') { send(410, { error: '实时配音已移除' }); return; }
   let selected;
   try { selected = selectProfile(config, await readProfiles(settingsFile)); }
   catch { send(503, { error: '本机模型配置档案无法读取，请检查保存的配置。' }); return; }
   const current = selected.config;
   if (req.method === 'GET' && req.url === '/health') { send(200, { ok: true, model: current.model, thinking: isMessagesEndpoint(current.baseUrl) ? 'disabled-requested' : 'disabled', configured: Boolean(current.apiKey), profile: selected.profile, profileExpiresAt: selected.expiresAt, protocol: isMessagesEndpoint(current.baseUrl) ? 'messages' : 'chat-completions' }); return; }
-  if (voiceSettingsRequest && req.method === 'GET') {
-    const values = { ...process.env, ...parseEnv(await readSettingsFile()) };
-    send(200, { configured: Boolean(values.TTS_API_KEY), player: values.TTS_PLAYER_VOICE || '', weiyan: values.TTS_WEIYAN_VOICE || '', resource: values.TTS_RESOURCE_ID || 'seed-tts-2.0' }); return;
-  }
   if (settingsRequest && req.method === 'GET') { send(200, current); return; }
-  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings', '/api/game/tts/settings'].includes(req.url)) { send(404, { error: '接口不存在' }); return; }
+  if (req.method !== 'POST' || !['/api/game/respond', '/api/game/settings'].includes(req.url)) { send(404, { error: '接口不存在' }); return; }
   if (settingsRequest && req.headers['content-type']?.split(';')[0].trim().toLowerCase() !== 'application/json') { send(415, { error: '设置需要使用 JSON 提交' }); return; }
   try {
     let body = ''; let bytes = 0;
     for await (const chunk of req) { bytes += chunk.length; if (bytes > (settingsRequest ? 16384 : 8 * 1024 * 1024)) { send(413, { error: '请求过大' }); return; } body += chunk; }
     let data;
     try { data = JSON.parse(body); } catch { send(400, { error: '无效 JSON' }); return; }
-    if (voiceSettingsRequest) {
-      if (!data || ['apiKey', 'player', 'weiyan', 'resource'].some(k => typeof data[k] !== 'string' || data[k].length > 4096 || /[\r\n\0]/.test(data[k])) || !data.player.trim() || !data.weiyan.trim() || !['seed-tts-2.0', 'seed-icl-2.0'].includes(data.resource)) { send(400, { error: '请填写有效的音色 ID 和资源类型' }); return; }
-      const extra = { TTS_PLAYER_VOICE: data.player.trim(), TTS_WEIYAN_VOICE: data.weiyan.trim(), TTS_RESOURCE_ID: data.resource };
-      if (data.apiKey.trim()) extra.TTS_API_KEY = data.apiKey.trim();
-      await persistSettings(config, extra); send(200, { ok: true }); return;
-    }
     if (settingsRequest) {
       let next;
       try { next = validateSettings(data, current); } catch (error) { send(400, { error: error.message }); return; }

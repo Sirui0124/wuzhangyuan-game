@@ -1,8 +1,8 @@
-export type Front='sha'|'camp'|'fu';
+export type Front='sha'|'camp'|'fu'|'ma'|'cheng'|'du'|'wang'|'huang';
 export type Action='rescue'|'relieve'|'suppress'|'scout'|'verify'|'signal'|'retreat'|'hold'|'rest';
 export type Order={unit:string;action:Action;target:Front|null;men?:number;unitName?:string;rush:boolean;via:'normal'|'side'};
 export type Address={unit:string;target:Front|'auto'};
-export const names:Record<Front,string>={sha:'沙摩柯',camp:'冯习 · 张南',fu:'傅肜'};
+export const names:Record<Front,string>={sha:'沙摩柯',camp:'冯习 · 张南',fu:'傅肜',ma:'马良',cheng:'程畿',du:'杜路 · 刘宁',wang:'王甫',huang:'黄权'};
 export const tasks:Record<Action,string>={rescue:'接应护送',relieve:'接替断后',suppress:'压制追兵',scout:'探查撤路',verify:'核实刘备消息',signal:'传撤离信号',retreat:'撤回接应营',hold:'原地待命',rest:'原地休整'};
 export function numeral(text:string):number{
  if(/^\d+$/.test(text))return Number(text);
@@ -31,7 +31,7 @@ export function resolveCampaignOrders(text:string,address:Address,units:Record<s
   const men=counts.length?numeral(counts[0][1]):undefined;
   if(unit==='new'&&(!men||men%100))throw Error('新编队请写明100的整数倍人数，例如400人。');
   if(unit!=='new'&&men!==undefined&&men!==units[unit].men)throw Error('现有队伍按当前实兵整队调遣；新派兵请选择“新编队”。');
-  const found:Front[]=[];if(/沙摩柯|沙摩|东沟|西沟/.test(c))found.push('sha');if(/冯习|冯習|张南|張南|旧营/.test(c))found.push('camp');if(/傅肜|傅彤|傅将军|后阵/.test(c))found.push('fu');
+  const found:Front[]=[];if(/沙摩柯|沙摩|东沟|西沟/.test(c))found.push('sha');if(/冯习|冯習|张南|張南|旧营/.test(c))found.push('camp');if(/傅肜|傅彤|傅将军|后阵/.test(c))found.push('fu');if(/马良|馬良/.test(c))found.push('ma');if(/程畿/.test(c))found.push('cheng');if(/杜路|刘宁|劉寧/.test(c))found.push('du');if(/王甫/.test(c))found.push('wang');if(/黄权|黃權/.test(c))found.push('huang');
   if(found.length>1)throw Error('本句有多个方向，请分别安排队伍。');
   if(found[0]&&address.target!=='auto'&&found[0]!==address.target)throw Error('手选对象与文字不一致，请修改一处。');
   const explicit=found[0]||(address.target==='auto'?null:address.target);
@@ -39,16 +39,17 @@ export function resolveCampaignOrders(text:string,address:Address,units:Record<s
   if(/撤回|回营|召回|取消/.test(c))actions.push('retreat');
   if(/休整|休息/.test(c))actions.push('rest');
   if(/待命|驻守/.test(c))actions.push('hold');
-  if(/核实|查明.*(?:刘备|陛下)|查证/.test(c))actions.push('verify');
+  const searching=!!explicit&&explicit!=='fu'&&/搜索|搜寻|寻找|查找|核实.*(?:部众|去向|位置|退路)|联络两岸/.test(c);
+  if(!searching&&/核实|查明.*(?:刘备|陛下)|查证/.test(c))actions.push('verify');
   if(/信号|传信|传撤离/.test(c))actions.push('signal');
-  if(/探路|侦察|探查|探明/.test(c))actions.push('scout');
+  if(searching||/探路|侦察|探查|探明/.test(c))actions.push('scout');
   if(/压制|攻打|牵制敌/.test(c))actions.push('suppress');
   if(/断后|掩护|换防/.test(c))actions.push('relieve');
-  if(/接应|护送|接回|救援|营救/.test(c.replace(/接应营/g,'')))actions.push('rescue');
+  if(/接应|护送|接回|救援|营救|渡运|接渡|派船/.test(c.replace(/接应营/g,'')))actions.push('rescue');
   if(actions.length!==1)throw Error(actions.length?'一支队伍同时只能承担一种任务，请拆成独立军令。':'请说明接应、断后、探路、核实消息或撤回等任务。');
   const action=actions[0];let target=explicit;
   if(['verify','signal'].includes(action)){if(target&&target!=='fu')throw Error('核实刘备消息和撤离信号用于傅肜一路。');target='fu';}
-  if(!target&&!['retreat','rest','hold'].includes(action))throw Error('请写明沙摩柯、旧营或傅肜，也可用下拉菜单选择。');
+  if(!target&&!['retreat','rest','hold'].includes(action))throw Error('请写明要接应的人物，也可用下拉菜单选择已联络的路线。');
   return {unit,unitName:unit!=='new'?units[unit].name:undefined,action,target,...(men!==undefined?{men}:unit!=='new'?{men:units[unit].men}:{}),rush:/急行|疾行|快行/.test(c),via:/南侧|绕行|小路/.test(c)?'side':'normal'};
  });
 }

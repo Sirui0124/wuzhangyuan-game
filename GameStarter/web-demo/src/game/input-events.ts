@@ -7,7 +7,7 @@ import { bindDialogueScreenInput } from './dialogue-screen-input';
 
 type InputOptions = {
     root: HTMLElement; game: ChapterSession; ui: GameUIState; audio: GameAudio;
-    settings: { setDetails(open: boolean): void; setVoiceEnabled(enabled: boolean): void; setRuntime(ai: boolean): void };
+    settings: { setDetails(open: boolean): void; setRuntime(ai: boolean): void };
     persist(): void;
     render(): void;
     reviseExpression(): void;
@@ -57,7 +57,6 @@ export function bindGameInputEvents(options: InputOptions) {
         }
         if (target.dataset.volume) { audio.setVolume(target.dataset.volume as AudioBus, Number(target.value)); target.style.setProperty('--range', `${target.value}%`); const output = target.nextElementSibling; if (output) output.textContent = target.value + '%'; }
         if (target.id === 'game-ai-enabled') settings.setRuntime(target.checked);
-        if (target.id === 'ai-voice-enabled') settings.setVoiceEnabled(target.checked);
     });
     document.addEventListener('keydown', event => {
         const focused = event.target as HTMLElement;

@@ -19,10 +19,7 @@ module.exports = function configuration({ stage, output, version, label } = {}) 
       '!node_modules/**/*', '!**/*.test.*', '!**/*.spec.*'
     ],
     extraResources: [
-      { from: path.join(stage, 'game'), to: 'game', filter: ['**/*'] },
-      // Match ws from its own root: electron-builder prunes nested node_modules
-      // while traversing a generic resource tree, although it is runtime data.
-      { from: path.join(stage, 'game/node_modules/ws'), to: 'game/node_modules/ws', filter: ['**/*'] }
+      { from: path.join(stage, 'game'), to: 'game', filter: ['**/*'] }
     ],
     afterPack: context => require('./verify-payload.cjs')({ stage, applicationRoot: context.appOutDir, report: path.join(output, 'after-pack-payload-check.json') }),
     npmRebuild: false,

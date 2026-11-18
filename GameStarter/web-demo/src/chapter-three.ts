@@ -17,7 +17,6 @@ import { esc, type Media } from './game/view-common';
 import { frameModal, recordsPanelHTML, savePanelHTML } from './game-ui-panels';
 import { readRuntimeMode, aiEnabled, saveRuntimeMode, setRuntimeConnection } from './runtime-mode';
 import { generateOpeningQuestion } from './chapters/chapter-three/opening-question';
-import { readAiVoiceEnabled, saveAiVoiceEnabled } from './voice-preference';
 import { JietingSession, createJietingPlaytest } from './chapters/chapter-three/session';
 import type { JietingStory } from './chapters/chapter-three/types';
 import { judgeJietingDialogue } from './chapters/chapter-three/open-dialogue';
@@ -94,7 +93,7 @@ async function start() {
         } catch { ui.storageWarning = '当前进度未能保存，仍可继续游玩。'; }
     };
     
-    const settings = createSettingsController(root, new GameApi(), audio, ui, render, { isEnabled: readAiVoiceEnabled, setEnabled: saveAiVoiceEnabled }, {
+    const settings = createSettingsController(root, new GameApi(), audio, ui, render,  {
         get: readRuntimeMode, set: m => { saveRuntimeMode(m); applyMode(); }, connected: c => { setRuntimeConnection(c); applyMode(); },
     });
     const pause = createPauseMenu(root, ui, { render, settings: settings.settingsHTML, home, saves: saveHTML, restart,
@@ -201,7 +200,6 @@ async function start() {
         const t = event.target as HTMLInputElement;
         if (t.id === 'player-expression') { session.state.draft = t.value; persist(); const button = root.querySelector<HTMLButtonElement>('[data-action=speak]'); if (button) button.disabled = !t.value.trim();const polishButton=root.querySelector<HTMLButtonElement>('[data-action=polish-expression]');if(polishButton)polishButton.disabled=!!request||(!t.value.trim()&&!session.state.selected.length&&true);const undo=root.querySelector<HTMLButtonElement>('[data-action=undo-polish]');if(undo)undo.hidden=!canUndoPolish(); }
         if (t.dataset.volume) { audio.setVolume(t.dataset.volume as AudioBus, Number(t.value)); if (t.nextElementSibling) t.nextElementSibling.textContent = t.value + '%'; }
-        if (t.id === 'ai-voice-enabled') settings.setVoiceEnabled(t.checked);
         if (t.id === 'game-ai-enabled') settings.setRuntime(t.checked);
     });
     root.addEventListener('toggle', e => { if ((e.target as HTMLElement).id === 'api-settings') settings.setDetails((e.target as HTMLDetailsElement).open); }, true);

@@ -21,17 +21,7 @@
 :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:is(.polish-button,.confirm-expression):hover:not(:disabled) { filter:brightness(1.16);background-color:#542c24; }
 :root[data-ui-theme=xuan] #game-root .workspace-screen.expression-workspace button:is(.polish-button,.confirm-expression):disabled { opacity:.45; }
 :root[data-ui-theme=xuan] #game-root .expression-workspace .ai-guidance { border:0;border-top:1px solid #ac906044;border-radius:0;background:none;padding:12px 0 0;font-family:var(--serif); }
-/* The menu retains its landscape and title. Plates share the ledger materials. */
-:root #game-root main.game-menu nav button,
-:root #game-root main.game-menu nav button:first-child {
-  color:var(--campaign-text);background:linear-gradient(#17161288,#171612bb),var(--campaign-material);background-size:auto,200% 200%;background-position:0 0,100% 0;
-  border:1px solid #ac906066;border-radius:0;box-shadow:inset 0 0 0 3px #ac906012,0 3px 8px #0005;text-shadow:0 1px 2px #000;
-}
-:root #game-root main.game-menu nav button::before { content:none; }
-:root #game-root main.game-menu nav button:first-child { background-position:0 0,100% 100%;border:3px double #b49568;color:#f0dfbd; }
-:root #game-root main.game-menu nav button:hover:not(:disabled),
-:root #game-root main.game-menu nav button:first-child:hover:not(:disabled) { color:#fff0d2;filter:brightness(1.15);transform:none;border-color:#c4a578; }
-:root #game-root main.game-menu nav button:focus-visible { outline:2px solid #e0c18e;outline-offset:4px; }
+/* Opening menu materials are owned by styles/game/menu.css. */
 /* Common folio shell; existing light reading leaves remain legible. */
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page],
 :root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=pause] {
@@ -60,3 +50,20 @@
   html #game-root .expression-workspace .expression-paper,html #game-root .expression-workspace #player-expression { background:Canvas !important;color:CanvasText !important;border:1px solid CanvasText;border-image:none; }
   :root #game-root main.game-menu nav button,:root #game-root main.game-menu nav button:first-child,:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page] { background:Canvas;border:1px solid CanvasText;border-image:none;color:CanvasText; }
 }
+/* Compact new-game confirmation; other folios retain their own layout. */
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation){display:flex;flex-direction:column;gap:0;width:min(520px,100%);height:auto;min-height:0;max-height:calc(100dvh - 40px);padding:24px 28px;background:linear-gradient(120deg,#28251ff5,#191a17fa);border:1px solid #ac906066;border-image:none;box-shadow:0 20px 80px #0008;overflow:auto}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .folio-header{position:relative;display:flex;flex-direction:row;align-items:center;width:100%;min-height:44px;height:auto;padding:0;margin:0 0 18px;writing-mode:horizontal-tb;background:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .folio-header h1{writing-mode:horizontal-tb;display:block;margin:0;padding:0;background:none;clip-path:none;border:0;box-shadow:none;text-shadow:none;color:#eadfc7;font:400 26px/1.4 KaiTi,STKaiti,var(--serif);letter-spacing:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) :is(.folio-emblem,.folio-header::after){display:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .modal-close{position:static;transform:none;margin-left:auto;width:44px;height:44px;min-height:44px;padding:12px;background:none;box-shadow:none;border:0;clip-path:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .folio-body{width:100%;margin:0;padding:0;background:none;border:0;box-shadow:none;overflow:visible;flex:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation{padding:0}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation p{font:400 18px/1.8 KaiTi,STKaiti,var(--serif);color:#cfc5b1;letter-spacing:0;margin:0 0 26px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation .button-row{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation button{min-width:96px;min-height:44px;padding:9px 20px;font:400 18px/1.4 KaiTi,STKaiti,var(--serif);letter-spacing:1px;clip-path:none;border-radius:2px}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation button::before,:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation button::after{content:none}
+:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation .quiet-button{border:1px solid #a38d633d;color:#cfc5b1}
+@media(max-width:500px){:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation){padding:18px 20px}:root[data-ui-theme=xuan] #game-root .game-modal.xuan-panel[data-page=new] .newgame-confirmation p{font-size:17px}}
+:root[data-ui-theme=xuan] #game-root section.game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .folio-header::after{content:none;display:none}
+:root[data-ui-theme=xuan] #game-root section.game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation):not([data-page=pause]):not([data-page=history]) .folio-body{background:none;border:0;box-shadow:none;padding:0}
+:root[data-ui-theme=xuan] #game-root section.game-modal.xuan-panel[data-page=new]:has(.newgame-confirmation) .modal-close svg{transform:none}
