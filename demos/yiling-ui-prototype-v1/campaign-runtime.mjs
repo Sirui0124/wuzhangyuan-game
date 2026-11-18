@@ -3,6 +3,7 @@ import {randomUUID,randomBytes,createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 import {talk} from './fu-ai.mjs';
+import {narrateReport} from './report-ai.mjs';
 import {VERSION,FRONTS,fresh,orders,settle,derive,message,publicSession,fail} from './campaign-engine.mjs';
 
 function preset(s,front,text){
@@ -13,11 +14,11 @@ function preset(s,front,text){
  if(front==='sha')return r.progress>=r.work/2?'东沟的人已接上，西沟还有担架。让接应的人继续往西沟走，掩护的队伍别先撤。':'东沟的人能先走，西沟的伤兵要有人抬。先护送东沟，再把西沟的人接出来。';
  return r.progress>=r.work/2?'张南前队已接上，冯习带的后队还在后面。留下掩护，把后队也接齐。':'张南在前，冯习带后队伤兵。前后两队都要接，先护送前队，再回收后队。';
 }
-export function createCampaignRuntime({directory=fileURLToPath(new URL('../../outputs/yiling-shared-saves/',import.meta.url)),cooldownMs=10000,model}={}){
+export function createCampaignRuntime({directory=fileURLToPath(new URL('../../outputs/yiling-shared-saves/',import.meta.url)),model,reportModel=model?false:undefined}={}){
  const locks=new Map();
  async function locked(id,fn){const prior=locks.get(id)||Promise.resolve();let release;const gate=new Promise(r=>release=r);const tail=prior.then(()=>gate);locks.set(id,tail);await prior;try{return await fn();}finally{release();if(locks.get(id)===tail)locks.delete(id);}}
  function path(id){if(typeof id!=='string'||!/^[a-f\d-]{36}$/i.test(id))fail('存档编号无效。');return join(directory,id+'.json');}
- async function load(id){try{const s=JSON.parse(await readFile(path(id),'utf8'));if(![VERSION,'shared-2000-v1'].includes(s.balanceVersion))fail('此存档属于旧兵力方案，请新开营救；原记录保留。',409);return s;}catch(e){if(e.code==='ENOENT')fail('营救存档不存在，请新开营救。',404);throw e;}}
+ async function load(id){try{const s=JSON.parse(await readFile(path(id),'utf8'));if(![VERSION,'shared-2000-v1'].includes(s.balanceVersion))fail('此存档属于旧兵力方案，请新开营救；原记录保留。',409);s.roundLimit??=6;if(s.round>=6&&!s.ended){s.ended=true;s.endReason="deadline";}return s;}catch(e){if(e.code==='ENOENT')fail('营救存档不存在，请新开营救。',404);throw e;}}
  async function persist(s){await mkdir(directory,{recursive:true});const dest=path(s.scenarioId),tmp=dest+'.'+randomUUID()+'.tmp';await writeFile(tmp,JSON.stringify(s));await rename(tmp,dest);}
  return {
   async session(id,difficulty){if(id)return publicSession(await load(id));const s=fresh({seed:randomBytes(4).readUInt32LE()||1,difficulty:difficulty||'normal'});await persist(s);return publicSession(s);},
@@ -28,12 +29,14 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
     const current=await load(input.scenarioId),hash=createHash('sha256').update(JSON.stringify({kind,...input})).digest('hex');
     if(current.requests[input.requestId]){if(current.requests[input.requestId]!==hash)fail('请求编号不能重复用于不同军令。',409);return publicSession(current);}
     if(input.expectedRevision!==current.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新复诵。'),{status:409,session:publicSession(current)});
-    if(kind!=='round'&&current.nextSendAt>Date.now())throw Object.assign(Error('传令仍在间隔中。'),{status:429,session:publicSession(current)});
+    if(current.ended)fail('本次营救已结算，请新开一局。');
     const s=structuredClone(current);
     if(kind==='orders')orders(s,input.orders);
-    if(kind==='round'){if(input.trigger!=='endRound')fail('请明确结束本轮。');settle(s);}
+    if(kind==='round'){if(input.trigger!=='endRound')fail('请明确结束本轮。');settle(s);const narrative=await narrateReport(s,{model:reportModel,signal});s.lastReport.narrative=narrative;s.messages=s.messages.filter(m=>!(m.round===s.round&&m.kind==='report'));for(const p of narrative.paragraphs)message(s,'前线军报',p.text,'report',p.front==='camp-base'?null:p.front);}
     if(kind==='chat'){
      const f=input.front;if(!Object.hasOwn(FRONTS,f)||typeof input.text!=='string'||!input.text.trim()||input.text.length>500)fail('请写1至500字的问话。');
+     const count=s.messages.filter(m=>m.kind==='question'&&m.front===f&&m.round===s.round).length;
+     if(count>=8)fail('本轮已交谈八次，可先安排接应，下轮再继续。');
      const text=input.text.trim(),phase=s.phase;
      // The AI authority adapter sees only the units actually at Fu's rear.
      const result=f==='fu'?await talk(s,text,{signal,model}):null;
@@ -42,7 +45,7 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
      const replyId=message(s,FRONTS[f].name,reply,'dialogue',f);
      if(result){s.facts.withdrawalAccepted=result.accepted;derive(s);const turn={phase,playerId,player:text,replyId,reply,outcomeId:result.classified.outcomeId,classification:result.classified,promptVersion:result.promptVersion,model:result.model};s.turns.push(turn);if(phase!==s.phase)s.turns.push({...turn,phase:s.phase,transitionCarry:true});}
     }
-    s.revision++;if(kind!=='round')s.nextSendAt=Date.now()+cooldownMs;s.requests[input.requestId]=hash;await persist(s);return publicSession(s);
+    s.revision++;s.nextSendAt=0;s.requests[input.requestId]=hash;await persist(s);return publicSession(s);
    });
   }
  };

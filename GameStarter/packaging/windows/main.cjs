@@ -64,7 +64,7 @@ async function startStaticServer() {
     if (url.pathname.startsWith('/playtest/') || url.pathname.startsWith('/__local/') || ['/local', '/local/'].includes(url.pathname)) {
       res.writeHead(404);res.end('Not found');return true;
     }
-    if (url.searchParams.has('playtest')) {
+    if (url.searchParams.has('playtest') && !(url.searchParams.get('chapter') === 'yiling' && url.searchParams.get('playtest') === 'command')) {
       url.searchParams.delete('playtest');res.writeHead(302, { Location: url.pathname + url.search, 'Cache-Control': 'no-store' });res.end();return true;
     }
     res.setHeader('X-Content-Type-Options', 'nosniff');

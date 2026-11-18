@@ -8,11 +8,11 @@ export const TASKS={rescue:'接应护送',relieve:'接替断后',suppress:'压�
 export const DIFFICULTY={easy:{name:'从容',loss:.7,pressure:1},normal:{name:'标准',loss:1,pressure:2},hard:{name:'险局',loss:1.35,pressure:3}};
 export function fail(text,status=400){throw Object.assign(Error(text),{status});}
 export function message(s,speaker,text,kind='report',front=null,unit=null){const id=String(++s.seq);s.messages.push({id,speaker,text,kind,front,unit,round:s.round});return id;}
-function receipt(s,text,front=null,unit=null){const id=s.scenarioId+'/event-'+(++s.eventSeq);s.receipts.push({id,round:s.round,text});message(s,'军侯',text,'report',front,unit);return id;}
+function receipt(s,text,front=null,unit=null){const id=s.scenarioId+'/event-'+(++s.eventSeq);s.receipts.push({id,round:s.round,text,front,unit});message(s,'军侯',text,'report',front,unit);return id;}
 export function fresh({seed=1,difficulty='normal'}={}){
  if(!Object.hasOwn(DIFFICULTY,difficulty))fail('难度不正确。');
  const scenarioId=randomUUID();
- const s={schemaVersion:2,balanceVersion:VERSION,scenarioId,revision:0,round:0,difficulty,seed:seed>>>0||1,phase:'deceived_and_bereaved',core:createState(design,scenarioId,seed>>>0||1),facts:Object.fromEntries(Object.keys(design.factDefinitions).map(k=>[k,false])),total:2500,reserve:2000,wounded:0,dead:0,units:{'1':{id:'1',name:'甲队',starter:true,men:500,initial:500,deployed:0,state:'ready',at:'camp',target:null,task:null,status:'营中待命',eta:0}},archive:[],nextUnit:2,fronts:Object.fromEntries(Object.entries(FRONTS).map(([id,f])=>[id,{status:'holding',progress:0,work:f.work,scouted:false,urgency:f.urgency}])),messages:[],receipts:[],turns:[],requests:{},seq:0,eventSeq:0,nextSendAt:0,ended:false};
+ const s={schemaVersion:2,balanceVersion:VERSION,scenarioId,revision:0,round:0,roundLimit:6,difficulty,seed:seed>>>0||1,phase:'deceived_and_bereaved',core:createState(design,scenarioId,seed>>>0||1),facts:Object.fromEntries(Object.keys(design.factDefinitions).map(k=>[k,false])),total:2500,reserve:2000,wounded:0,dead:0,units:{'1':{id:'1',name:'甲队',starter:true,men:500,initial:500,deployed:0,state:'ready',at:'camp',target:null,task:null,status:'营中待命',eta:0}},archive:[],nextUnit:2,fronts:Object.fromEntries(Object.entries(FRONTS).map(([id,f])=>[id,{status:'holding',progress:0,work:f.work,scouted:false,urgency:f.urgency}])),messages:[],receipts:[],turns:[],requests:{},seq:0,eventSeq:0,nextSendAt:0,ended:false};
  message(s,'沙摩柯','东沟的人还能走，西沟还有伤兵。先接东沟，再到西沟接担架，别把人落下。','dialogue','sha');
  message(s,'冯习 · 张南','张南的前队还未撤齐，后面还有伤兵。接应的人护送前队，我带后队跟上。','dialogue','camp');
  message(s,'傅肜','吴人说陛下已经遇害。跟着我的人也都死在这里了……我不走，叫他们再来。','dialogue','fu');
@@ -24,7 +24,7 @@ export function assertLedger(s){
  if(total!==(s.total??2000)||active.length>5||[s.reserve,s.wounded,s.dead,...active.map(u=>u.men)].some(n=>!Number.isInteger(n)||n<0))throw Error('兵力账目不守恒');
 }
 function random(s){let x=s.seed;x^=x<<13;x^=x>>>17;x^=x<<5;s.seed=x>>>0;return s.seed/4294967296;}
-function withdraw(s,u,reason){u.state='returning';u.eta=1;u.at='cross';u.status=reason+' · 归途中';}
+function withdraw(s,u,reason){u.state='returning';u.eta=1;u.at='cross';u.status=reason+' · 返程中，两个时辰后归营';}
 function unitName(s,id){return s.units[id]?.name||`第${id}队`;}
 function archive(s,id,reason){const u=s.units[id];s.archive.push({...u,closedRound:s.round,reason});
  if(u.starter){const target=u.target;delete u.pending;Object.assign(u,{state:'ready',at:'camp',target:null,task:null,eta:0,deployed:0,status:'营中待命'});receipt(s,`${u.name}${reason}，现有${u.men}人在营中待命。`,target,id);}
@@ -71,19 +71,20 @@ export function derive(s){
 }
 export function settle(s){
  if(s.ended)fail('本次营救已经结束。');
+ const before=structuredClone(s),casualties={};
  s.round++;
  for(const [f,route] of Object.entries(s.fronts))if(route.status==='safe'){route.status='home';receipt(s,FRONTS[f].name+'已回到接应营。',f);}
  for(const [id,u] of Object.entries(s.units)){
   if(u.state==='returning'){archive(s,id,'回营');continue;}
   if(u.pending){const o=u.pending;delete u.pending;
-   if(o.action==='retreat'){withdraw(s,u,'撤回');continue;}
+   if(o.action==='retreat'){withdraw(s,u,'奉令撤回');receipt(s,`${unitName(s,id)}奉令撤回，正返回接应营，两个时辰后归营。`,u.target,id);continue;}
    const samePlace=u.state==='active'&&u.target===o.target;
    u.task=o.action;u.target=o.target||u.target;u.rush=o.rush;u.via=o.via;
    if(['hold','rest'].includes(o.action)){u.state='active';u.eta=0;u.status=TASKS[o.action];continue;}
    u.state='marching';u.eta=samePlace?1:['scout','verify','signal'].includes(o.action)?1:o.rush?1:2;u.at='cross';
   }
   if(u.state==='marching'){
-   u.eta--;u.status=`行军 · ${Math.max(0,u.eta)}轮后到位`;if(u.eta>0)continue;
+   u.eta--;u.status=`行军 · ${Math.max(0,u.eta)*2}个时辰后到位`;if(u.eta>0){receipt(s,`${unitName(s,id)}正${u.via==='side'?'沿南侧路':''}赶往${FRONTS[u.target].name}所在处，尚未到位。`,u.target,id);continue;}
    u.state='active';u.at=u.target==='fu'?'rear':u.target==='sha'?'east':'campfire';u.status=TASKS[u.task]+'中';
    receipt(s,`${unitName(s,id)}已到位，${u.men}人${TASKS[u.task]}。`,u.target,id);
    if(u.task==='scout'){s.fronts[u.target].scouted=true;if(u.target==='fu'){s.facts.routeScouted=true;if(u.via==='side')s.facts.alternateRouteOpen=true;}receipt(s,'撤路已探明'+(u.via==='side'?'，南侧替代路线可通行':'')+'。',u.target,id);withdraw(s,u,'侦察完成');}
@@ -108,20 +109,25 @@ export function settle(s){
   s.core=r.state;if(r.resolution.outcome==='safe'){s.fronts.fu.status='safe';s.fronts.fu.urgency=0;receipt(s,'傅肜已经脱离后阵险境，正在返回接应营。','fu');}
   else{s.core.pressure=Math.min(20,before+DIFFICULTY[s.difficulty].pressure);}
  }
+ const combatCover=Object.fromEntries(Object.keys(FRONTS).map(f=>[f,strength(s,f,'relieve')+strength(s,f,'suppress')*.7]));
  for(const [id,u] of Object.entries(s.units)){
   if(u.state!=='active'||!['rescue','relieve','suppress','hold','rest'].includes(u.task))continue;
-  if(s.fronts[u.target].status!=='holding'){withdraw(s,u,'护送完成');continue;}
-  const cfg=FRONTS[u.target],cover=strength(s,u.target,'relieve')+strength(s,u.target,'suppress')*.7;
+  const cfg=FRONTS[u.target],cover=combatCover[u.target];
   const hazard=(['relieve','suppress'].includes(u.task)?.04:.024)+Math.min(.03,.003*Math.max(0,s.round-8));
   const p=Math.min(.12,hazard*DIFFICULTY[s.difficulty].loss*(s.fronts[u.target].scouted?1:1.3)*(1.4-.7*Math.min(1,cover/(cfg.cover*1.5)))*(u.rush?1.15:1));
   let loss=0,dead=0;for(let i=0;i<u.men;i++)if(random(s)<p){loss++;if(random(s)<.3)dead++;}
-  u.men-=loss;u.deployed=u.men;s.wounded+=loss-dead;s.dead+=dead;
-  if(loss)receipt(s,`${unitName(s,id)}本轮伤${loss-dead}、亡${dead}，现有${u.men}人。`,u.target,id);
+  casualties[id]={wounded:loss-dead,dead};u.men-=loss;u.deployed=u.men;s.wounded+=loss-dead;s.dead+=dead;
+  if(u.men===0)receipt(s,`${unitName(s,id)}本轮出战${loss}人，伤${loss-dead}人、亡${dead}人，已无可战兵力。`,u.target,id);
   if(u.men===0){s.archive.push({...u,closedRound:s.round,reason:'失去战力'});delete s.units[id];}
-  else if(u.men<Math.max(50,u.initial*.35)){withdraw(s,u,'战力不足，自动撤回');receipt(s,`${unitName(s,id)}损耗过重，正撤回接应营。`,u.target,id);}
+  else if(s.fronts[u.target].status!=='holding'){withdraw(s,u,'该路危机已解除');receipt(s,`${unitName(s,id)}本轮出战${u.men+loss}人，伤${loss-dead}人、亡${dead}人。该路危机已解除，余兵${u.men}人正在返程，两个时辰后归营。`,u.target,id);}
+  else {u.status=TASKS[u.task]+'中 · 该路尚未解围';receipt(s,`${unitName(s,id)}本轮出战${u.men+loss}人，伤${loss-dead}人、亡${dead}人，余兵${u.men}人继续在当地${TASKS[u.task]}，该路尚未解围。`,u.target,id);}
  }
  derive(s);assertLedger(s);
- s.ended=Object.values(s.fronts).every(f=>f.status==='home')&&!Object.values(s.units).some(u=>u.state!=='ready');
- if(s.ended)receipt(s,`三路归营。历时${s.round}轮，接应兵力存活${(s.total??2000)-s.dead}人，其中伤${s.wounded}人、阵亡${s.dead}人。`);
+ const allHome=Object.values(s.fronts).every(f=>f.status==='home')&&!Object.values(s.units).some(u=>u.state!=='ready');
+ s.endReason=allHome?'rescued':s.round>=(s.roundLimit??6)?'deadline':null;
+ s.ended=!!s.endReason;
+ if(s.endReason==='deadline')receipt(s,'十二时辰已尽，本次调度结束。各路按实际营救状态记录，返程队伍仍在途中，未归营兵力不计入预备兵。');
+ if(allHome)receipt(s,`三路归营。历时${s.round}轮，接应兵力存活${(s.total??2000)-s.dead}人，其中伤${s.wounded}人、阵亡${s.dead}人。`);
+ s.lastReport={round:s.round,elapsed:s.round*2,ended:s.ended,pool:{reserve:s.reserve,ready:Object.values(s.units).filter(u=>u.state==='ready').reduce((n,u)=>n+u.men,0),outside:Object.values(s.units).filter(u=>u.state!=='ready').reduce((n,u)=>n+u.men,0)},events:s.receipts.filter(x=>x.round===s.round).map(x=>x.text),fronts:Object.entries(s.fronts).map(([id,f])=>({id,before:before.fronts[id].urgency,after:f.urgency,status:f.status})),units:Object.entries(before.units).map(([id,u])=>{const after=s.units[id],arch=s.archive.findLast(a=>a.id===id&&a.closedRound===s.round);return {id,name:u.name||`第${id}队`,target:after?.target||u.pending?.target||u.target,task:TASKS[after?.task||u.pending?.action||u.task]||'营中待命',via:after?.via||u.pending?.via||u.via||'normal',previousState:u.state,wounded:casualties[id]?.wounded||0,dead:casualties[id]?.dead||0,eta:after?.eta||0,before:u.men,after:after?.men??arch?.men??0,state:after?.state??(arch?.reason==='失去战力'?'lost':'home'),status:after?.status??(arch?.reason==='失去战力'?'已无可战兵力':'已归营')};})};
 }
-export function publicSession(s){s=structuredClone(s);derive(s);for(const f of ['sha','camp']){const r=s.fronts[f],cfg=FRONTS[f];r.urgency=r.status!=='holding'?0:Math.max(1,Math.min(100,Math.round(cfg.urgency-r.progress/r.work*(cfg.urgency-9)+Math.max(0,s.round-5)*2)));}return {...s,seed:undefined,requests:undefined,core:undefined,turns:undefined,archive:undefined,receipts:undefined,grade:s.ended?(s.round<=12&&s.wounded+s.dead<=250?'从容接回':s.wounded+s.dead<=500?'力战接回':'艰难接回'):null};}
+export function publicSession(s){s=structuredClone(s);derive(s);for(const f of ['sha','camp']){const r=s.fronts[f],cfg=FRONTS[f];r.urgency=r.status!=='holding'?0:Math.max(1,Math.min(100,Math.round(cfg.urgency-r.progress/r.work*(cfg.urgency-9)+Math.max(0,s.round-5)*2)));}return {...s,seed:undefined,requests:undefined,core:undefined,turns:undefined,archive:undefined,receipts:undefined,grade:s.ended?(s.endReason==='deadline'?'时限已至':s.round<=12&&s.wounded+s.dead<=250?'从容接回':s.wounded+s.dead<=500?'力战接回':'艰难接回'):null};}

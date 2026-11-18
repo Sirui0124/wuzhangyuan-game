@@ -10,7 +10,7 @@ TypeScript 桌面浏览器游戏，当前接入第一章五丈原、第二章祁
 
 2026-11-18用户决定暂停Unity移植，现有UnityPort仅保留历史试验。Windows交付可安装EXE；Mac交付含Apple Silicon及Intel运行时的本地网页版，用浏览器游玩。
 
-根目录执行 `npm run build:delivery` 从同一份网页构建生成两个版本。完整打包、验证和GitHub Release发布步骤见 [固定发布流程](docs/migration/RELEASE-WINDOWS-MAC.md)。源码及设计进入Git，安装器与Mac分发包进入私有仓库的GitHub Release。
+根目录执行 `npm run build:delivery` 从同一份网页构建生成两个版本。完整打包、验证和GitHub Release发布步骤见 [固定发布流程](docs/migration/RELEASE-WINDOWS-MAC.md)。源码及设计进入Git，安装器与Mac分发包进入公开仓库的GitHub Release。
 
 ## 安装与启动
 
@@ -82,6 +82,6 @@ npm run test:stability:browser
 
 策划、规则和审核以本地文件为准；修改后由执行者同步程序并验证，不依赖在线文档库。
 
-私有仓库：[Sirui0124/wuzhangyuan-game](https://github.com/Sirui0124/wuzhangyuan-game)。克隆前安装 Git LFS，克隆后运行 `git lfs pull`。凭据、本机存档、缓存和构建产物不提交。
+公开仓库：[Sirui0124/wuzhangyuan-game](https://github.com/Sirui0124/wuzhangyuan-game)。克隆前安装 Git LFS，克隆后运行 `git lfs pull`。凭据、本机存档、缓存和构建产物不提交。
 
 2026-10-29 全面检查、字幕发布清理、共享校验与存档保护见[review 与重构记录](docs/architecture/REVIEW-20261029.md)。

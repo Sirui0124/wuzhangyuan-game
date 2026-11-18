@@ -54,6 +54,6 @@ for(const name of ['payload-manifest.json','payload-files.txt','payload-verifica
   const source=resolve(stage,name);if(existsSync(source))copyFileSync(source,resolve(output,name));
 }
 const releases=artifacts.filter(file=>existsSync(file)).map(file=>{const data=readFileSync(file);return{path:file,bytes:data.length,sha256:createHash('sha256').update(data).digest('hex')};});
-const record={createdAt:new Date().toISOString(),timeZone:'Asia/Shanghai',label,version,electron:pkg.devDependencies.electron,electronBuilder:pkg.devDependencies['electron-builder'],architecture:'x64',installer:'NSIS current-user',signed:false,compression:'store',stage,webBuildRoot:buildRoot,output,artifacts:releases,validation:{payloadManifestVerified:true,installerGenerated:!directoryOnly,installed:false,startedAfterInstall:false,uninstalled:false}};
+const record={createdAt:new Date().toISOString(),timeZone:'Asia/Shanghai',label,version,electron:pkg.devDependencies.electron,electronBuilder:pkg.devDependencies['electron-builder'],architecture:'x64',installer:'NSIS current-user',signed:false,compression:configuration.compression,stage,webBuildRoot:buildRoot,output,artifacts:releases,validation:{payloadManifestVerified:true,installerGenerated:!directoryOnly,installed:false,startedAfterInstall:false,uninstalled:false}};
 writeFileSync(resolve(output,'release-artifacts.json'),JSON.stringify(record,null,2)+'\n');
 console.log(JSON.stringify(record,null,2));

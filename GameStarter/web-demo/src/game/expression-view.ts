@@ -4,7 +4,7 @@ import { aiGuidanceHTML } from './ai-guidance';
 
 /** Shared visual structure; chapters retain their own state and action handlers. */
 export function expressionHeadingHTML(listener: string, question: string) {
-    return `<header class="expression-heading"><h1>对${esc(listener)}说</h1>${question ? `<aside class="expression-current-reply" aria-label="${esc(listener)}上一句话"><p>${esc(question)}</p><small>— ${esc(listener)}</small></aside>` : ''}</header>`;
+    return `<header class="expression-heading"><h1>对${esc(listener)}说</h1>${question ? `<aside class="expression-current-reply" aria-label="${esc(listener)}上一句话"><p>${esc(question)}</p><small>${esc(listener)}</small></aside>` : ''}</header>`;
 }
 
 export function expressionPaperHTML(view: {

@@ -20,7 +20,24 @@ function renderGuide(){const step=ui.guide??-1,g=GUIDE[step];$('field-guide').hi
 function advanceGuide(step:number){if(ui.guide!==step)return;ui.guide=step===3?-1:step+1;save();renderGuide();}
 async function guidedAct(path:'chat'|'orders'|'round',payload:Record<string,unknown>){await client.act(path,payload);advanceGuide(path==='chat'?1:path==='orders'?2:3);}
 function draft(){return $<HTMLTextAreaElement>('draft');}
-function remaining(){return Math.max(0,Math.ceil(((client.session?.nextSendAt||0)-Date.now())/1000));}
+function chatCount(){const s=client.session;return s?.messages.filter(m=>m.kind==='question'&&m.front===ui.front&&m.round===s.round).length||0;}
+let bannerTimer:ReturnType<typeof setTimeout>|undefined;
+function showRoundBanner(){const s=client.session;if(!s)return;const b=$('round-banner');b.textContent=s.ended?(s.endReason==='deadline'?'十二时辰已尽':'营救调度结束'):`已过${s.round*2}时辰 · 第${s.round+1}轮`;b.hidden=false;clearTimeout(bannerTimer);bannerTimer=setTimeout(()=>{b.hidden=true;},3500);}
+function showReport(){const s=client.session,r=s?.lastReport;if(!r)return;
+ $('round-report-title').textContent=`第${r.round}轮结报 · 已过${r.elapsed}时辰`;
+ const crisis=r.fronts.map(f=>{const d=f.after-f.before;return `<div class="crisis-row"><strong>${names[f.id]}</strong><small>${f.status==='home'?'已归营':f.status==='safe'?'返程中':'仍受困'}</small><span>${f.after}<b class="${d>0?'rise':d<0?'fall':'unchanged'}">${d>0?'+':''}${d||'—'}</b></span></div>`;}).join('');
+ const prose=r.narrative?.paragraphs.map(p=>`<article class="report-prose"><h4>${p.front==='camp-base'?'接应营':names[p.front as Front]||'前线'}</h4><p>${esc(p.text)}</p></article>`).join('')||r.events.map(t=>`<p>${esc(t)}</p>`).join('');
+ const pool=r.pool?`<div class="report-pool"><span>营中可调 <strong>${r.pool.reserve+r.pool.ready}</strong>人</span><span>在外 <strong>${r.pool.outside}</strong>人</span></div>`:'';
+ const units=r.units.map(u=>`<tr><td><strong>${esc(u.name)}</strong><small>${u.target?names[u.target]: '接应营'}</small></td><td>${esc(u.task||'本轮差遣')}<small>${u.via==='side'?'经南侧路':''}</small></td><td>${u.before} → <strong>${u.after}</strong><small>${u.wounded||u.dead?`伤 ${u.wounded||0} · 亡 ${u.dead||0}`:'无新增伤亡'}</small></td><td>${u.state==='returning'?'返程中':u.state==='marching'?'行军中':u.state==='ready'?'营中待命':u.state==='home'?'已归营':u.state==='lost'?'无可战兵力':esc(u.status)}<small>${u.state==='returning'?'两个时辰后归营':u.state==='marching'?`${(u.eta||1)*2}个时辰后到位`:''}</small></td></tr>`).join('');
+ $('round-report-body').innerHTML=`<section class="report-fronts"><div class="report-section-head"><h3>各路军情</h3><small>危机度 / 本轮变化</small></div>${crisis}</section><section class="report-narrative"><h3>本轮战报</h3>${prose}</section><section class="report-deployment"><div class="report-section-head"><h3>接应兵力派遣</h3></div>${pool}<div class="report-table-wrap"><table class="report-table"><thead><tr><th>队伍 / 去向</th><th>差遣</th><th>轮初 → 现有</th><th>当前去向</th></tr></thead><tbody>${units}</tbody></table></div></section>`+(r.ended?'<p class="report-end">'+(s.endReason==='deadline'?'十二时辰已尽，按当前军情结算。尚在返程的部队不会提前计入营中兵力。':'本次营救结束。')+'</p>':'');
+ const dialog=$<HTMLDialogElement>('round-report');if(!dialog.open)dialog.showModal();
+}
+function syncRound(){const s=client.session;if(!s)return;const limit=s.roundLimit||6;
+ $('round-clock').innerHTML=`<strong>十二时辰</strong><span>${s.ended?'调度结束':`第${Math.min(s.round+1,limit)}轮 / 共${limit}轮`} · 已过${s.round*2}时辰</span><div class="round-ticks" aria-hidden="true">${Array.from({length:limit},(_,i)=>`<i class="${i<s.round?'done':i===s.round&&!s.ended?'current':''}"></i>`).join('')}</div>`;
+ $('round-action-note').textContent=s.ended?'本次调度已结算':'推进两个时辰';$('review-round').hidden=!s.lastReport;
+ const seenKey='yiling-round-report-'+s.scenarioId;
+ if(s.lastReport&&Number(localStorage.getItem(seenKey)||0)<s.lastReport.round&&!$<HTMLDialogElement>('info').open){showReport();}
+}
 function guidance(){const s=client.session;if(!s)return [];const f=s.fronts[ui.front];if(f.status==='home')return ['伤兵都安置好了吗？','还有没有落在后面的弟兄？'];if(f.status==='safe')return ['撤出来的人怎么样？','先回接应营吧。'];
  if(ui.front==='sha')return f.progress>=f.work/2?['西沟还剩多少担架？','掩护的人能再撑一阵吗？']:['东沟的人能先撤出来吗？','西沟的伤兵要怎样接走？'];
  if(ui.front==='camp')return f.progress>=f.work/2?['冯习，后队伤兵接上了吗？','掩护队该守在哪里？']:['张南，前队撤到哪里了？','冯习，后队伤兵能走吗？'];
@@ -32,8 +49,10 @@ const STORIES:Record<Front,{image:string;caption:string;title:string;text:string
  fu:{image:'fu',caption:'后阵传令兵送来的初报',title:'守住后阵，却不肯独活',text:'傅肜受刘备重恩，留下断后，为撤离争取时间。吴军诈称刘备已经遇害，他身边原有的弟兄又全部战死，悲愤之下不肯独自离开。核实刘备的消息、回应他对战死弟兄的愧疚，以及真正到位的接应，各有作用。新援军并不是他已战死的原部众。'}
 };
 function openStory(){const f=ui.front,story=STORIES[f],route=client.session?.fronts[f];$('story-title').textContent=names[f];$('story-crisis').textContent='危机度 '+(route?.urgency??'—');const img=$<HTMLImageElement>('story-image');img.src='/art/intro/'+story.image+'.png';img.alt=story.caption;$('story-caption').textContent=story.caption;$('story-heading').textContent=story.title;$('story-text').textContent=story.text;$('story-current').textContent=route?.status==='home'?'当前军报：已归营。':route?.status==='safe'?'当前军报：已撤出，正在归营。':f==='fu'&&client.session?.facts.liubeiAliveVerified?'当前军报：刘备仍在的可信消息已经送达傅肜。':'当前军报：仍待接应。';$<HTMLDialogElement>('front-story').showModal();}
-function updateCooldown(){const s=client.session,n=remaining(),text=client.busy?'等回执':n?'00:'+String(n).padStart(2,'0'):'可传话';$('command-countdown').textContent=text;$('compact-countdown').textContent=text;
- $<HTMLButtonElement>('send').disabled=client.busy||!s||!!client.pending||(n>0&&(ui.mode==='front'||!!preview));
+function updateCooldown(){const s=client.session,count=chatCount();
+ $('compact-countdown').hidden=true;
+ $('filter-hint').textContent=ui.mode==='front'&&!s?.ended?(count>=8?'本轮已交谈八次，下轮再继续。':count===7?'本轮还可问一次。':''):'';
+ $<HTMLButtonElement>('send').disabled=client.busy||!s||s.ended||!!client.pending||(ui.mode==='front'&&count>=8);
  $<HTMLButtonElement>('fu-end-round').disabled=client.busy||!s||s.ended||!!client.pending;
  $<HTMLButtonElement>('reset').disabled=client.busy;
  $<HTMLButtonElement>('suggest').disabled=client.busy;
@@ -44,7 +63,7 @@ function parse(){return resolveCampaignOrders(draft().value,ui.address,client.se
 function recognition(){const el=$('intent-summary');el.hidden=ui.mode==='front'||!!preview||!draft().value.trim();if(el.hidden)return;try{el.textContent=parse().map(describe).join('；');el.classList.remove('needs-input');}catch(e){el.textContent=(e as Error).message;el.classList.add('needs-input');}}
 function renderLogs(bottom=false){const s=client.session,log=$('log'),old=log.scrollTop,tail=log.scrollHeight-old-log.clientHeight<40;
  const messages=(s?.messages||[]).filter(e=>ui.filter==='all'||(ui.mode==='front'?e.front===ui.front:ui.address.unit!=='auto'&&ui.address.unit!=='new'?e.unit===ui.address.unit:e.kind==='order'||e.speaker==='军侯'));
- log.innerHTML=messages.map(e=>`<article class="entry ${e.kind==='question'||e.kind==='order'?'mine':''}"><div class="meta"><strong>${esc(e.speaker)}</strong><span>${e.kind==='order'?'军令':'往来'}</span><time>第${e.round}轮</time></div><p>${esc(e.text)}</p></article>`).join('')||'<p class="empty">这一路暂无新的往来记录。</p>';
+ log.innerHTML=messages.map(e=>`<article class="entry ${e.kind==='question'||e.kind==='order'?'mine':''}"><div class="meta"><strong>${esc(e.speaker)}</strong></div><p>${esc(e.text)}</p></article>`).join('')||'<p class="empty">这一路暂无新的往来记录。</p>';
  log.scrollTop=bottom||tail?log.scrollHeight:old;const latest=messages.at(-1)?.id||'';if(bottom||tail)$('new-reports').hidden=true;else if(latest!==lastMessage)$('new-reports').hidden=false;lastMessage=latest;
 }
 function render(){const s=client.session,front=ui.mode==='front',input=draft(),focused=document.activeElement===input,start=input.selectionStart,end=input.selectionEnd;
@@ -61,11 +80,11 @@ function render(){const s=client.session,front=ui.mode==='front',input=draft(),f
  $('suggestions').hidden=!front||!!preview;$('suggestions').innerHTML=guidance().map(q=>`<button data-suggestion="${esc(q)}">${esc(q)}</button>`).join('');
  $('send').textContent=preview?'确认传令':front?'传话':'请军侯复诵';$('suggest').hidden=!preview;
  $('army-roster').innerHTML=s?`<div class="pool-summary"><span>预备兵 <strong>${s.reserve}</strong>人</span><small>在外 ${Object.values(s.units).filter(u=>u.state!=='ready').reduce((n,u)=>n+u.men,0)} · ${Object.keys(s.units).length}/5队${s.wounded||s.dead?` · 伤${s.wounded} 亡${s.dead}`:''}</small>${s.total!==2500?'<small>旧局兵力保留 · 新开营救采用甲队配置</small>':''}</div>`+(Object.entries(s.units).map(([id,u])=>`<button class="roster-row" data-unit="${id}"><span class="roster-seal">${u.name==='甲队'?'甲':id}</span><span class="roster-detail"><strong>${u.name||'第'+id+'队'} <small>${u.men}人</small></strong><span>${u.target?names[u.target]:'接应营'} · ${esc(u.status)}</span></span></button>`).join('')||'<p class="unit-status">尚未派遣</p>'):'<p>正在读取军情……</p>';
- $('fu-status').hidden=false;$('fu-network').textContent=client.error||(client.busy?'正等回执……':s?.ended?'三路归营':s?`第${s.round+1}轮`:'尚未建立联络');$('fu-status').classList.toggle('has-error',!!client.error);$('fu-retry').hidden=!client.pending||client.busy;$<HTMLButtonElement>('fu-refresh').disabled=client.busy;
- $('fu-round-actions').hidden=false;$('fu-end-round').textContent=s?.ended?'营救完成':'结束本轮';
+ $('fu-status').hidden=false;$('fu-network').textContent=client.error||(client.busy?'正等回执……':s?.ended?(s.grade||'调度结束'):s?'':'尚未建立联络');$('fu-status').classList.toggle('has-error',!!client.error);$('fu-retry').hidden=!client.pending||client.busy;$<HTMLButtonElement>('fu-refresh').disabled=client.busy;
+ $('fu-round-actions').hidden=false;$('fu-end-round').textContent=s?.ended?'调度结束':'结束本轮';
  $('about').textContent='军令与营救';$('reset').textContent='新开营救';$('command-panel').classList.toggle('is-dispatch',drawer&&innerWidth<=740);$('close-command').hidden=innerWidth>740;$('close-command').textContent='收起';$('open-situation').setAttribute('aria-expanded',String(drawer));
  const next=document.getElementById('campaign-next');if(next)next.hidden=!integrated||!s?.ended;
- recognition();updateCooldown();resizeDraft();renderLogs();renderMap();renderGuide();
+ recognition();updateCooldown();resizeDraft();renderLogs();renderMap();renderGuide();syncRound();
  if(focused&&!input.hidden&&!input.disabled){input.focus({preventScroll:true});input.setSelectionRange(start,end);}
 }
 async function run(action:()=>Promise<unknown>,clear=false){const savedKey=key(),text=draft().value;feedback('');try{await action();if(clear&&ui.drafts[savedKey]===text){ui.drafts[savedKey]='';preview=null;save();}render();renderLogs(true);if(integrated)parent.postMessage({type:'wzy-shared-progress'},location.origin);}catch(e){feedback((e as Error).message);}}
@@ -79,6 +98,7 @@ document.addEventListener('click',e=>{const b=(e.target as Element).closest<HTML
  case 'mode-toggle':ui.mode=ui.mode==='front'?'dispatch':'front';ui.filter='current';preview=null;save();render();renderLogs(true);break;
  case 'send':if(ui.mode==='front'){if(!draft().value.trim()){feedback('请写下想问的话。');break;}void run(()=>guidedAct('chat',{front:ui.front,text:draft().value.trim()}),true);}else if(preview){const batch=preview;void run(()=>guidedAct('orders',{orders:batch}),true);}else{try{preview=parse();render();}catch(e){feedback((e as Error).message);}}break;
  case 'suggest':case 'edit-order':if(!client.busy){preview=null;render();draft().focus();}break;
+ case 'review-round':showReport();break;
  case 'fu-end-round':void run(()=>guidedAct('round',{trigger:'endRound'}));break;
  case 'fu-refresh':void run(()=>client.load());break;
  case 'fu-retry':{const path=client.pending?.path;void run(async()=>{await client.retry();if(path==='chat'||path==='orders'||path==='round')advanceGuide(path==='chat'?1:path==='orders'?2:3);},true);break;}
@@ -119,18 +139,20 @@ for(const [i,[a,b]] of edges.entries()){const [x,y,v,w]=bends[i],d=`M${coords[a]
 function banner(front:Front){const glyph=front==='sha'?'沙':front==='camp'?'冯':'傅';return `<svg class="army-emblem" viewBox="0 0 64 68" aria-hidden="true"><ellipse class="marker-ground" cx="32" cy="61" rx="23" ry="5"/><path class="spear" d="M12 59V12M12 4l-3 9h6zM52 59V12M52 4l-3 9h6z"/><path class="flag-shadow" d="M21 11h29l-4 18 4 15-14 7-15-7z"/><path class="flag-cloth" d="M18 8h28l-4 18 4 15-14 7-14-7z"/><path class="flag-trim" d="M22 12h18l-3 14 4 13-9 5-10-5z"/><path class="flag-fold" d="M18 8l7 7v24l7 9M18 15h-6m6 22h-6"/><text x="31" y="34">${glyph}</text><path class="flag-pole" d="M18 5v54M15 5h6"/><path class="marker-base" d="M22 57h20l7 5H15z"/></svg>`;}
 function renderMap(){const s=client.session;const places:[string,string,number,number,Front?][]=[['接应营','',170,289],['岔口','',440,177],['傅肜','后阵',850,100,'fu'],['冯习 · 张南','旧营',620,131,'camp'],['南侧路','',520,265],['东岭','',920,210],['沙摩柯','东沟',300,216,'sha'],['西沟 · 伤兵','',290,148]];
  const returned=FS.filter(f=>s&&s.fronts[f].status!=='holding');$('fu-map-status').hidden=!returned.length;$('fu-map-status').dataset.front=returned[0]||'fu';$('fu-map-status').textContent=returned.map(f=>names[f]+(s!.fronts[f].status==='home'?' · 已归营':' · 已撤出，归途中')).join('　');
- $('places').innerHTML=places.filter(p=>!p[4]||!returned.includes(p[4])).map(([name,place,x,y,f])=>{const status=f?s?.fronts[f].status:null;return `<${f?'button':'span'} class="place ${f?'army-marker army-'+f:'minor'} ${f===ui.front?'selected':''}" ${f?`data-front="${f}" aria-label="联络${name}"`:''} style="left:${x/10.8}%;top:${y/3.6}%">${f?`<span class="front-urgency" data-urgency="${f}">危机度 <strong>${s?.fronts[f].urgency??'—'}</strong></span>`+banner(f):''}<span class="place-label">${name}${place?`<small>${status==='home'?'已归营':status==='safe'?'撤出，归途中':place}</small>`:''}</span></${f?'button':'span'}>`;}).join('')+Object.entries(s?.units||{}).filter(([,u])=>u.at!=='camp').map(([id,u],i)=>{const [x,y]=coords[u.at]||coords.cross;return `<button class="rescue-marker" data-unit="${id}" title="${u.name||'第'+id+'队'} · ${u.status}" style="left:${(x+i*22)/10.8}%;top:${(y+35)/3.6}%"><span>${u.name==='甲队'?'甲':id}</span></button>`;}).join('');positionMap();}
+ $('places').innerHTML=places.filter(p=>!p[4]||!returned.includes(p[4])).map(([name,place,x,y,f])=>{const status=f?s?.fronts[f].status:null;return `<${f?'button':'span'} class="place ${f?'army-marker army-'+f:'minor'} ${f===ui.front?'selected':''}" ${f?`data-front="${f}" aria-label="联络${name}"`:''} style="left:${x/10.8}%;top:${y/3.6}%">${f?`<span class="front-urgency" data-urgency="${f}">危机度 <strong>${s?.fronts[f].urgency??'—'}</strong></span>`+banner(f):''}<span class="place-label">${name}${place?`<small>${status==='home'?'已归营':status==='safe'?'撤出，归途中':place}</small>`:''}</span></${f?'button':'span'}>`;}).join('')+Object.entries(s?.units||{}).filter(([,u])=>u.at!=='camp').map(([id,u],i)=>{const [x,y]=u.state==='returning'?[245+(i%3)*120,230+Math.floor(i/3)*35]:coords[u.at]||coords.cross;return `<button class="rescue-marker ${u.state==='returning'?'returning':''}" data-unit="${id}" title="${u.name||'第'+id+'队'} · ${u.status}" style="left:${(x+i*22)/10.8}%;top:${(y+35)/3.6}%"><span>${u.name==='甲队'?'甲':id}</span>${u.state==='returning'?`<small>${u.men}人 · 返程中</small>`:''}</button>`;}).join('');positionMap();}
 function positionMap(){const h=$('map-world').parentElement!.clientHeight,w=$('map-world').parentElement!.clientWidth,anchor=ui.front==='fu'?100:ui.front==='camp'?131:216;const fit=innerWidth>650&&h>=180;$('map-world').style.minHeight=fit?'0px':'330px';const shift=fit||h>=330?0:Math.max(h-330,Math.min(0,h/2-anchor/360*330));$('map-world').style.setProperty('--map-shift',shift+'px');const x=ui.front==='fu'?850:ui.front==='camp'?620:300;$('map-world').style.setProperty('--map-x',(innerWidth<=650?Math.max(w-760,Math.min(0,w/2-x/1080*760)):0)+'px');}
 function layoutLimits(){
  const desk=$('desk'),style=getComputedStyle(desk);
  const chrome=parseFloat(style.paddingTop)+parseFloat(style.paddingBottom)+document.querySelector('header')!.getBoundingClientRect().height+document.querySelector('.divider')!.getBoundingClientRect().height+document.querySelector('footer')!.getBoundingClientRect().height;
  const available=Math.max(0,innerHeight-chrome);
- const work=Math.min(available,innerWidth<=740?400:ui.mode==='dispatch'?340:300);
+ const work=Math.min(available,innerWidth<=740?450:ui.mode==='dispatch'?340:300);
  return {max:Math.max(0,available-work)};
 }
 function setHeight(){const {max}=layoutLimits(),h=Math.max(0,Math.min(max,ui.mapHeight??(ui.expanded?100:innerHeight*.34)));$('desk').style.setProperty('--map-h',h+'px');$('resize').setAttribute('aria-valuemin','0');$('resize').setAttribute('aria-valuenow',String(Math.round(h)));$('resize').setAttribute('aria-valuemax',String(Math.round(max)));$('layout-toggle').textContent=ui.expanded?'恢复军图 ↑':'展开军报 ↓';requestAnimationFrame(positionMap);}
 let drag:{y:number;h:number}|null=null;const handle=$('resize');handle.addEventListener('pointerdown',e=>{drag={y:e.clientY,h:$('map-world').parentElement!.clientHeight};handle.setPointerCapture(e.pointerId);});handle.addEventListener('pointermove',e=>{if(drag){ui.mapHeight=Math.max(0,Math.min(layoutLimits().max,drag.h+e.clientY-drag.y));setHeight();}});handle.addEventListener('pointerup',()=>{drag=null;save();});handle.addEventListener('pointercancel',()=>{drag=null;save();});handle.addEventListener('keydown',e=>{if(!['ArrowUp','ArrowDown','Home','End'].includes(e.key))return;e.preventDefault();ui.mapHeight=e.key==='Home'?0:e.key==='End'?layoutLimits().max:$('map-world').parentElement!.clientHeight+(e.key==='ArrowUp'?-20:20);setHeight();save();});
 window.addEventListener('resize',()=>{setHeight();render();});
 window.addEventListener('message',e=>{if(e.origin===location.origin&&e.source===parent&&e.data?.type==='wzy-shared-error')feedback(String(e.data.message));});
-render();setHeight();void run(()=>client.load());setInterval(updateCooldown,250);
+render();setHeight();void run(async()=>{await client.load();showRoundBanner();});
 if(!ui.seen)$<HTMLDialogElement>('info').showModal();
+$('round-report').addEventListener('close',()=>{const s=client.session;if(s?.lastReport)localStorage.setItem('yiling-round-report-'+s.scenarioId,String(s.lastReport.round));showRoundBanner();});
+$('info').addEventListener('close',syncRound);

@@ -19,7 +19,7 @@
   "stateSemantics": {
     "deathSeen": "经历转呈未竟死亡后为真；回溯保留，用于守卫第二轮默认问题。",
     "knowsJiang": "小甲实际告知伯约可代为把关；不代表当值、授权或本人已经答应。",
-    "jiangAgreed": "本轮实际听完姜维亲口应允，不由提示推断。",
+    "jiangAgreed": "本轮实际听完姜维亲口应允；可在见魏延前确认，也可交涉后取得。不等于军报已处理或回令已送达。",
     "metWei": "本轮已开始魏延交涉。",
     "enteredWithoutDuty": "初见魏延时未获得伯约线索的记录；最终AI节点依真实已知状态决定可执行的安排。",
     "stance": "unset / formal / cooperate；根据真实选择赋值，不是好感积分。",
@@ -382,6 +382,12 @@
           "id": "meet",
           "label": "去迎魏延",
           "target": "C01-WEI-ENTRY"
+        },
+        {
+          "id": "confirm_jiang",
+          "label": "先问过伯约",
+          "target": "C01-JIANG-CONFIRM",
+          "when": { "knowsJiang": true, "jiangAgreed": false, "metWei": false }
         }
       ],
       "displayTitle": "营道来人"
@@ -410,6 +416,37 @@
       "hintAward": "H-JIANG-DUTY",
       "displayTitle": "还有一人",
       "next": "C01-GUARD-NEXT"
+    },
+    {
+      "id": "C01-JIANG-CONFIRM",
+      "film": {"id":"jiang-previsit-guide","src":"/video/current/C1T14-answer-20261024-629f6a30.mp4","title":"亲兵引路","subtitles":"/video/subtitles/C1T14-answer-20261024-629f6a30.vtt","beforeLine":3},
+      "title": "先问过伯约",
+      "displayTitle": "侧帐外",
+      "kind": "passage",
+      "requires": { "knowsJiang": true, "jiangAgreed": false, "metWei": false },
+      "textRevisions": [{"speaker": "我", "old": "还没到我手里。今夜帐里不见人，若来了急报，能否先送给将军？", "new": "还没有。小的只是担心，若有急报，拦在帐外怕误事，放进去又违了丞相的令。"}, {"speaker": "姜维", "old": "有军报便送来；来人要当面说，也带来见我。该禀丞相的，我自会进去。", "new": "来找我。军报先交我看，来人有话，也领来见我。若须丞相定夺，我再进去。"}],
+      "lines": [
+        { "speaker": "我", "text": "劳烦你在这里守着，我先去问问伯约。" },
+        { "speaker": "小甲", "text": "快去。这里有我。" },
+        { "speaker": "演出", "text": "我绕到侧帐，请亲兵通传。片刻后，姜维从帘边走出来。" },
+        { "speaker": "姜维", "text": "前营有报来了？" },
+        { "speaker": "我", "text": "还没有。小的只是担心，若有急报，拦在帐外怕误事，放进去又违了丞相的令。" },
+        { "speaker": "姜维", "text": "来找我。军报先交我看，来人有话，也领来见我。若须丞相定夺，我再进去。" },
+        { "speaker": "我", "text": "那我回帐前候着。" }
+      ],
+      "afterLines": { "jiangAgreed": true },
+      "next": "C01-CONFIRMED-RETURN"
+    },
+    {
+      "id": "C01-CONFIRMED-RETURN",
+      "title": "回到帐前",
+      "displayTitle": "中军帐前",
+      "kind": "choice",
+      "lines": [{ "speaker": "小甲", "text": "回来了？魏将军已到帐前，你去接一接。" }],
+      "choices": [
+        { "id": "meet", "label": "去迎魏延", "target": "C01-WEI-ENTRY" },
+        { "id": "ask", "label": "再问一句", "target": "C01-GATE-GUARD" }
+      ]
     },
     {
       "id": "C01-JIANG",
@@ -1469,6 +1506,11 @@
   "aiScenes": {
     "weiyan_final": {
       "npc": "魏延",
+      "polishContext": {
+        "place": "五丈原，中军帐前",
+        "speaker": "守帐军士",
+        "listener": "魏延"
+      },
       "historyWindowRounds": 2,
       "maxTurns": 3,
       "inputLabel": "向魏延说明你的办法",
@@ -1497,18 +1539,29 @@
         "text": "伯约可以代为听取军情、判断是否需要禀报丞相；可以请亲兵通传。他尚未答应。",
         "source": "C01-HINT-JIANG"
       },
+      "jiangAgreedFact": {
+        "id": "F-JIANG-AGREED",
+        "text": "姜维已亲口答应：军报可先送给他；来人需当面说，也可以带去见他。由他判断是否禀报丞相。尚未处理这份军报或下令。",
+        "source": "C01-JIANG-CONFIRM"
+      },
       "assessmentRules": [
         "理解军情：玩家用自己的话说清魏军在营外、未攻营或仍在试探即可；不要求文言、原句或每个细节。只说军情紧急、我都知道，没有具体内容，不算理解。",
         "结合最近两轮完整问答和当前发言。缺事实后补事实、缺接报办法后补办法可合并；最新撤回或否定优先，不能累计已撤回的话。",
         "有效办法分：请姜维/伯约出来与魏延当面交谈 invite_jiang；由我把军报交给姜维/伯约判断，再把回令带回 relay_jiang；仅由我递报传话 self_relay；无办法 none；明确让魏延直接进帐 let_enter。",
         "提姜维名字不等于安排他接报；请他过来处理、听报、判断是否禀报均可。仅提到其他人物或未知职位，先追问，不自动变成姜维。",
-        "事实与提议分开：我去请伯约是提议；伯约已经答应/已下令/丞相已授权是尚未发生的断言，unsupportedClaim=true。一般安抚如我会尽快不算伪造授权。",
+        "事实与提议分开：我去请伯约是提议。jiangHasAgreed=true时，玩家说伯约已经答应接报属实；false时这项断言为unsupportedClaim。提前应允不代表已经下令或丞相授权，仍不得声称这些事已发生。带魏延去见已应允的伯约属于invite_jiang。一般安抚如我会尽快不算伪造授权。",
         "怀疑、引用、否定、假设不等于本人放行。例如不能让将军进去不是 let_enter。普通质疑、不够恭敬或生硬不判死。",
         "只输出语义字段与对应的玩家原文片段。不要写NPC台词、结局、状态、解释或任意跳转。"
       ],
       "routes": {
         "INVITE_JIANG": {
           "target": "C01-JIANG",
+          "variants": [{
+            "when": { "jiangAgreed": true },
+            "target": "C01-REPORT-COOP",
+            "intent": "伯约已亲口答应接报，魏延让小卒带路，携军报同去；不再派小卒重复请求应允，不宣称已经下令。",
+            "fallback": "伯约既然应了，你带路。"
+          }],
           "effects": {
             "stance": "cooperate"
           },

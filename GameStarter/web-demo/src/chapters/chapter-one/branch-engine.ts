@@ -1,7 +1,7 @@
 export type State = Record<string, string | boolean>;
 export type Line = { speaker: string; text: string };
 export type Edge = { id?: string; label?: string; target: string; effects?: State; when?: State; say?: Line[]; response?: Line[] };
-export type AiRoute = { target?: string; effects?: State; intent: string; fallback: string };
+export type AiRoute = { target?: string; effects?: State; intent: string; fallback: string; variants?: (Partial<Omit<AiRoute, 'variants'>> & { when: State })[] };
 export type AiScene = {
   npc: string; historyWindowRounds: number; maxTurns: number; inputLabel: string; placeholder: string; scaffold: string;
   knownHint: { when: State; text: string }; routes: Record<string, AiRoute>;
@@ -13,6 +13,8 @@ export type StoryNode = {
   id: string; title: string; displayTitle?: string; kind: 'passage' | 'choice' | 'router' | 'ending' | 'terminal' | 'ai';
   ai?: { sceneId: string };
   lines: Line[]; requires?: State; afterLines?: State; hintAward?: string;
+  textRevisions?: {speaker: string; old: string; new: string}[];
+  film?: {id:string;src:string;title:string;subtitles?:string;beforeLine:number};
   next?: string; choices?: Edge[]; routes?: Edge[]; endingId?: string;
   freeInput?: { placeholder: string; submitLabel: string; intentRoutes: { intent: string; target: string }[] };
 };
@@ -48,7 +50,11 @@ export class Dialogue {
   }
   get node() { return this.nodes.get(this.nodeId)!; }
   get hints() { return this.story.hints.filter(h => this.state[h.state] === true); }
-  get choices() { return this.pending ? [] : (this.node.choices ?? []); }
+  get choices() { return this.pending ? [] : (this.node.choices ?? []).filter(e=>matches(this.state,e.when)); }
+  aiRoute(outcome: string) {
+    const base=this.aiScene?.routes[outcome];
+    return base ? {...base,...base.variants?.find(v=>matches(this.state,v.when))} : undefined;
+  }
   get aiScene() { return this.node.ai ? this.story.aiScenes[this.node.ai.sceneId] : null; }
   get aiHint() { const h = this.aiScene?.knownHint; return h && matches(this.state, h.when) ? h.text : ''; }
   snapshot(): Snapshot { return clone({ state: this.state, nodeId: this.nodeId, pending: this.pending, frame: this.frame, trail: this.trail, audit: this.audit, exchange: this.exchange, aiHeld: this.aiHeld }); }
@@ -107,7 +113,7 @@ export class Dialogue {
   }
   applyAi(text: string, result: AiReceipt) {
     if (!this.aiScene || this.pending || this.aiHeld || result.nodeId !== this.nodeId || result.version !== this.story.version) throw Error('对话已变化，请重新提交。');
-    const route = this.aiScene.routes[result.outcome];
+    const route = this.aiRoute(result.outcome);
     if (!route || !text.trim() || !result.reply || this.exchange.length >= this.aiScene.maxTurns) throw Error('AI 回应不完整，请重试。');
     if (['INVITE_JIANG','RELAY_JIANG'].includes(result.outcome) && !this.state.knowsJiang) throw Error('接报安排不符合本轮已知情况。');
     this.save(); this.trail.push(clone(this.frame));
@@ -118,7 +124,7 @@ export class Dialogue {
     this.aiHeld = result.outcome === 'HOLD';
   }
   applyOffline(outcome: string, text: string) {
-    const route = this.aiScene?.routes[outcome];
+    const route = this.aiRoute(outcome);
     if (!route || !['INVITE_JIANG','RELAY_JIANG','SELF_RELAY','ENTER'].includes(outcome)) throw Error('无效的固定回答。');
     this.applyAi(text, {nodeId:this.nodeId,version:this.story.version,requestId:'offline-fixed',outcome,reply:route.fallback,replySource:'offline',contextHash:'',signature:''});
     this.audit.pop(); this.audit.push({type:'offline',outcome,text});

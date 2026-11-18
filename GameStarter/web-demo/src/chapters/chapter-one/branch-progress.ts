@@ -22,7 +22,13 @@ export class BranchProgress {
         if (!this.atLastLine) { this.line++; this.skipDirections(); return; }
         this.dialogue.next(); this.resetInput();
     }
-    choose(id: string) { if (!this.atLastLine) return; this.dialogue.choose(id); this.resetInput(); }
+    choose(id: string) {
+        if (!this.atLastLine) return;
+        if(id==='reread' && this.dialogue.node.kind==='ending' && this.dialogue.choices.some(c=>c.id===id&&c.target===this.story.entry)) {
+            this.dialogue.restart();this.noticeOpened=false;
+        } else this.dialogue.choose(id);
+        this.resetInput();
+    }
     ask(text: string) { if (!this.atLastLine) return; this.dialogue.ask(text); this.resetInput(); }
     apply(text: string, result: AiReceipt) { this.dialogue.applyAi(text,result); this.resetInput(); }
     offline(outcome: string, text: string) { this.dialogue.applyOffline(outcome,text); this.resetInput(); }
@@ -59,15 +65,31 @@ export class BranchProgress {
             else if(e.type==='ai')rebuilt.applyAi((e.result as AiReceipt & {text:string}).text,e.result);
             else throw Error('第一章存档含未知操作。');
         }
+        // Only declared wording revisions may differ; actions, facts and AI receipts stay exact.
+        for(const frame of [g.frame,...g.trail]) {
+            const revisions=g.nodes.get(frame.nodeId)?.textRevisions??[];
+            for(const line of frame.lines) {
+                const revision=revisions.find(r=>r.speaker===line.speaker&&r.old===line.text);
+                if(revision)line.text=revision.new;
+            }
+        }
         if(JSON.stringify(rebuilt.snapshot())!==JSON.stringify(g.snapshot()))throw Error('第一章存档与实际经过不符。');
         this.dialogue=rebuilt;this.line=saved.line;this.noticeOpened=saved.noticeOpened===true;this.skipDirections();this.draft=saved.draft;this.selected=saved.selected.filter(id=>this.clues.some(c=>c.id===id));
     }
     get clues() {
-        const g=this.dialogue, all=[...g.trail.flatMap(f=>f.lines),...g.frame.lines.slice(0,this.line)];
+        const g=this.dialogue, readFrames=[...g.trail,{...g.frame,lines:g.frame.lines.slice(0,this.line)}];
+        const all=readFrames.flatMap(f=>f.lines);
+        const heardLine=(nodeId:string,index:number)=>{
+            const source=g.nodes.get(nodeId)?.lines[index];
+            return !!source && readFrames.some(f=>f.nodeId===nodeId && f.lines.some(l=>l.speaker===source.speaker&&l.text===source.text));
+        };
         const clues: {id:string;title:string;text:string}[]=[];
         if(all.some(l=>l.speaker==='告示'))clues.push({id:'branch-order',title:'帐前禁令',text:'丞相早已明令：今夜帐内有要事，不得擅入。'});
-        if(g.state.metWei)clues.push({id:'branch-enemy',title:'营外的魏军',text:'魏军骑兵已经到了营外，还没有攻营。前营正等着回话。'});
-        if(g.state.knowsJiang)clues.push({id:'branch-jiang',title:'伯约可以代为把关',text:'伯约可以代为听取军情，判断是否需要禀报丞相；可请亲兵通传，尚未取得本人应允。'});
+        if(heardLine('C01-WEI-OPEN',1))clues.push({id:'branch-enemy',title:'营外的魏军',text:'魏军骑兵已经到了营外，还没有攻营。前营正等着回话。'});
+        else if(heardLine('C01-GUARD-ENEMY',2))clues.push({id:'branch-enemy',title:'营外的魏军',text:'小甲说：魏军骑兵在营外来回走，尚未攻营，也没有退去。来意还不清楚。'});
+        if(g.state.knowsJiang)clues.push(g.state.jiangAgreed
+            ? {id:'branch-jiang',title:'伯约已答应接报',text:'伯约亲口答应：有军报便送给他；来人要当面说，也可以带去见他。该禀报丞相的，由他进去禀报。'}
+            : {id:'branch-jiang',title:'伯约可以代为把关',text:'伯约可以代为听取军情，判断是否需要禀报丞相；可请亲兵通传，尚未取得本人应允。'});
         return clues;
     }
 }

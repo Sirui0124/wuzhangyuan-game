@@ -5,6 +5,7 @@ import type { GameUIState } from '../../../game/ui-state';
 import { esc, btn, type Media } from '../../../game/view-common';
 import type { EndingCatalog, EndingCollection } from '../../../endings';
 import type { Clip } from '../../../cinematics';
+import { hasPackagedChapter } from '../../../release-profile';
 import { tentEndingHTML } from './tent-visit';
 import { achievementCardHTML } from '../../../achievement-card';
 import { commandActionContent, mapActionContent } from '../../../game/map-action';
@@ -32,6 +33,7 @@ export function createNavigationViews(game: ChapterSession, media: Media, movies
         const { catalog, collection, warning } = archive();
         const unlocked = catalog.endings.filter(ending => collection.unlocked[ending.id]);
         const laterChapter = (chapter: typeof grainPreview | typeof jietingChapter | typeof yilingChapter | typeof jingzhouChapter | typeof pangtongChapter, number: string, done: boolean) => {
+            if (!hasPackagedChapter(chapter.id)) return '';
             const progress = access[chapter.id];
             const locked = !progress.unlocked;
             const replay = done || progress.replayable;

@@ -9,6 +9,8 @@
 .branch-scene .expression-help p { margin:8px 0 0; }
 .branch-scene form { margin:0; }
 .branch-scene #branch-input::placeholder { color:#b9b1a3; opacity:.8; }
+.branch-scene .polish-spark { display:inline-block; width:14px; height:14px; margin-left:7px; vertical-align:-1px; }
+.branch-scene :is(.polish-button,.confirm-expression):disabled { opacity:.45; cursor:default; }
 #game-root:has(.branch-scene) > .character-identity { display:none; }
 /* Brief discovery feedback; the clue remains available in the shared reference popover. */
 .branch-clue-gained { position:fixed; z-index:8; left:4vw; top:90px; display:flex; align-items:center; gap:18px; padding:12px 22px; color:#e8dfce; background:linear-gradient(90deg,#1c1913e8,#28231bba,transparent); border-left:2px solid #b69a65; pointer-events:none; font:20px/1.6 var(--serif); animation:branch-clue-arrive 4.5s both; }
@@ -22,3 +24,18 @@
 @keyframes branch-notice-focus { from { opacity:.4; transform:scale(1.025); } to { opacity:1; transform:scale(1); } }
 @media(max-height:500px) { .branch-clue-gained { top:50px; padding:4px 14px; font-size:16px; } .branch-clue-gained small { font-size:14px; } }
 @media(prefers-reduced-motion:reduce) { .branch-scene[data-phase=explore] .scene-hotspot>i,.branch-scene[data-reading-notice=true] .scene-image { animation:none; } }
+/* Ending results use the chapter ending layout, not a spoken choice panel. */
+:root[data-ui-theme=xuan] #game-root .branch-ending { isolation:isolate; box-sizing:border-box; background:#111210; padding:100px 6vw 60px; overflow-y:auto; justify-content:safe center; color:#e8dfce; font-family:KaiTi,'Kaiti SC',STKaiti,serif; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .ending-background { z-index:-2; opacity:.24; filter:saturate(.35); }
+.branch-ending::before { content:''; position:fixed; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(180deg,#10110f55,#10110f22 40%,#10110fc9); }
+:root[data-ui-theme=xuan] #game-root .branch-ending .ending-copy { width:min(820px,100%); margin:auto; padding:24px 0; text-align:center; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .ending-kicker { display:block; font:16px/1.5 var(--serif); letter-spacing:5px; color:#b6a484; }
+:root[data-ui-theme=xuan] #game-root .branch-ending h1 { margin:28px 0 24px; color:#e9dfc5; font:400 clamp(36px,5vw,66px)/1.35 WuzhangBrush,var(--serif); letter-spacing:.13em; text-wrap:balance; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .ending-copy p { margin:0 auto; max-width:34em; color:#cfc6b5; font:clamp(18px,1.666667vw,24px)/1.85 var(--serif); letter-spacing:1px; text-wrap:pretty; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions { display:flex; flex-flow:row nowrap; justify-content:center; gap:24px; margin:44px 0 0; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions button { box-sizing:border-box; flex:0 1 154px; min-width:100px; min-height:48px; padding:10px 22px; border:1px solid #af99724d; border-radius:2px; background:#aa927510; color:#d6c9ae; font:20px/1.5 var(--serif); letter-spacing:4px; cursor:pointer; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions .ending-primary { border-color:#baa073a6; background:#a38a5130; color:#f0dfb5!important; }
+:root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions button:hover { background:#ad925842; border-color:#d0b684; }
+.branch-ending button:focus-visible { outline:2px solid #d0b684; outline-offset:4px; }
+@media(max-height:500px) { :root[data-ui-theme=xuan] #game-root .branch-ending { padding:76px 5vw 18px; } :root[data-ui-theme=xuan] #game-root .branch-ending .ending-copy { padding:4px 0; } :root[data-ui-theme=xuan] #game-root .branch-ending h1 { margin:12px 0; font-size:36px; } :root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions { margin-top:24px; } }
+@media(max-width:500px) { :root[data-ui-theme=xuan] #game-root .branch-ending .branch-ending-actions { gap:16px; } }

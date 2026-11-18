@@ -26,9 +26,8 @@ module.exports = function configuration({ stage, output, version, label } = {}) 
     ],
     afterPack: context => require('./verify-payload.cjs')({ stage, applicationRoot: context.appOutDir, report: path.join(output, 'after-pack-payload-check.json') }),
     npmRebuild: false,
-    // Video is already compressed; avoid a long second compression pass while
-    // keeping this repair build deterministic and easy to validate locally.
-    compression: 'store',
+    // Lossless archive compression reduces the runtime and uncompressed audio.
+    compression: 'normal',
     forceCodeSigning: false,
     publish: null,
     win: {

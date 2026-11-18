@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node server.mjs",
-    "test": "node build.mjs && node --test checks/campaign.test.mjs checks/fu-runtime.test.mjs",
+    "test": "node build.mjs && node --test checks/campaign.test.mjs checks/fu-runtime.test.mjs checks/report-ai.test.mjs",
     "test:browser": "node checks/campaign-browser.mjs",
     "test:balance": "node checks/campaign-balance.mjs",
     "test:live": "node checks/campaign-live.mjs"

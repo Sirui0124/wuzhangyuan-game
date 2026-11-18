@@ -1,0 +1,128 @@
+[
+  {
+    "id": "J01",
+    "name": "提前确认问话",
+    "node": "C01-JIANG-CONFIRM",
+    "lineIndices": [
+      3,
+      4
+    ],
+    "duration": 18,
+    "prompt": "J01-提前确认问话.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "af1d7b9a2f2224c554e896a2d751d1597f0fa674440ae5f606c211ecff5717ed"
+  },
+  {
+    "id": "J02",
+    "name": "提前确认应允",
+    "node": "C01-JIANG-CONFIRM",
+    "lineIndices": [
+      5,
+      6
+    ],
+    "duration": 18,
+    "prompt": "J02-提前确认应允.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "1f25d7909afb012c776380f7f0c6e3e1e8b6b376649b2d2cb3e33237e5e300ae"
+  },
+  {
+    "id": "J03",
+    "name": "交涉后请姜维",
+    "node": "C01-JIANG",
+    "lineIndices": [
+      1,
+      2,
+      3
+    ],
+    "duration": 26,
+    "prompt": "J03-交涉后请姜维.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "3d8104ce657911a0071afe0bb8fb7072f6545b3862c889081b8c38a6a671ab17"
+  },
+  {
+    "id": "J04",
+    "name": "独自送报",
+    "node": "C01-JIANG-RELAY",
+    "lineIndices": [
+      1,
+      2
+    ],
+    "duration": 12,
+    "prompt": "J04-独自送报.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "3e3d70a596bf2b7d18475b4868345a4d452c4a44243eb6d81d07a35493b01d85"
+  },
+  {
+    "id": "J05",
+    "name": "阅报与写令",
+    "node": "C01-JIANG-RELAY",
+    "lineIndices": [
+      4
+    ],
+    "duration": 12,
+    "prompt": "J05-阅报与写令.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "536e318585f8ff3fc5fa49cf9f396957ad392ca26c34f65417b853bd64eae8ba"
+  },
+  {
+    "id": "J06",
+    "name": "交还回令",
+    "node": "C01-JIANG-RELAY",
+    "lineIndices": [
+      6
+    ],
+    "duration": 14,
+    "prompt": "J06-交还回令.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "21bc409f47863a0779ee54f0480c3ca21926d3167c776e45520cf083444132a8"
+  },
+  {
+    "id": "J07",
+    "name": "当面接报",
+    "node": "C01-REPORT",
+    "lineIndices": [
+      0,
+      1,
+      2
+    ],
+    "duration": 24,
+    "prompt": "J07-当面接报.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "5ef4423b98f6b97fe8acb64eeccd22897cc80b000979099c75318ffdc3d34647"
+  },
+  {
+    "id": "J08",
+    "name": "当面下令",
+    "node": "C01-REPORT",
+    "lineIndices": [
+      3,
+      4
+    ],
+    "duration": 18,
+    "prompt": "J08-当面下令.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "791dff926142161f1a874f03994fa4758b82122746142d98747bc822bc51d7f9"
+  },
+  {
+    "id": "J09",
+    "name": "承接与交回选择",
+    "node": "C01-REPORT",
+    "lineIndices": [
+      5,
+      7
+    ],
+    "duration": 15,
+    "prompt": "J09-承接与交回选择.md",
+    "promptStatus": "待review",
+    "videoStatus": "待生成",
+    "sha256": "70a5521fd8ca28bbe1213e2628315fd8e892f6fc33f69c78c1d14095a4e2be7a"
+  }
+]

@@ -25,6 +25,10 @@ Electron 与 electron-builder 使用 packaging/windows/package-lock.json 固定�
 
 ## 构建
 
+2026-11-18本次及后续默认玩家包只包含第一章、第四章。第二章、第三章和其他未开放章节仅从分发副本排除，本地源码与素材不删除；须经用户明确要求才重新加入。`release-profile.mjs` 在独立暂存副本配置章节、清理独立剧情与入口、筛选实际引用素材，再遍历运行依赖；共享兼容代码保留。普通本地网页构建仍包含完整工程。
+
+排除清单与节省字节记录在载荷manifest的optimization中。第一章剧情内直接引用的影片与字幕也必须保留。Windows使用normal无损压缩，不降低素材画质；Mac从校验过的官方运行时提取bin/node和LICENSE，不打包npm、头文件和开发手册。构建后运行 `node --test GameStarter/packaging/windows/stage-payload.test.mjs GameStarter/packaging/windows/release-profile.test.mjs` 验证剪裁不影响原文件和必要依赖。
+
 ```powershell
 npm run build:delivery
 ```
@@ -55,7 +59,7 @@ node tools/release/test-web.mjs outputs/mac-web-标签/validation
 
 这只代表 Windows Chrome 验证。Mac 芯片运行时执行、Safari、权限/Gatekeeper 和终端退出行为须在 Mac 实机另验，不从 Windows 结果推断通过。不要把本机测试数据放入已完成的分发包。
 
-每次发布另运行 `node tools/release/verify-default-settings.mjs "Windows独立目录/Wuzhangyuan.exe" "Mac解包目录"`。此检查用隔离用户目录验证两个产物的默认网址、模型、初始空密钥，以及只填写测试密钥即可保存并重新读取；不调用真实模型。2026-11-18已对v2026.11.18-snapshot所用两个发布目录执行通过，无须为本项要求重发玩家包。
+每次发布另运行 `node tools/release/verify-default-settings.mjs "Windows独立目录/Wuzhangyuan.exe" "Mac解包目录"`。此检查用隔离用户目录验证两个产物的默认网址、模型、初始空密钥，以及只填写测试密钥即可保存并重新读取；不调用真实模型。不要以旧版测试替代新产物验证。`test-web.mjs` 另核对仅第一章、第四章配置、排除章节404、剧情内嵌影片引用，以及第四章两种入口的后端会话。
 
 ## 提交与发布
 

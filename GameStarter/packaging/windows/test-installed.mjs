@@ -240,6 +240,15 @@ try{
   await capture(active,'04d-installed-finale.png');
   }
  }
+ if(currentAccess){
+  const origin='http://127.0.0.1:8812';
+  const profile=await(await page.request.get(origin+'/release-profile.json')).json();assert.deepEqual(profile.chapters,['wuzhang','yiling']);
+  for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await page.request.get(origin+path)).status(),404,path);
+  await page.goto(origin+'/?chapter=yiling&playtest=command');await page.locator('iframe').waitFor();
+  assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
+  const command=await page.request.post(origin+'/api/yiling-command/session',{data:{}});assert.equal(command.status(),200);assert.equal((await command.json()).ok,true);
+  report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four command entry and backend session are available.');
+ }
  // Release URLs must not request excluded playtest JSON.
  await page.goto('http://127.0.0.1:8812/?playtest=weiyan-second');await page.locator('.game-menu').waitFor();
  assert.equal(new URL(page.url()).searchParams.has('playtest'),false);

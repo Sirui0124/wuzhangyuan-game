@@ -27,6 +27,7 @@ export function createGameRenderer(options: RendererOptions) {
     const { root, game, ui, audio, cinema, movies } = options;
     const { sceneHTML, menu, mapHTML, endingHTML, storyHTML, modalHTML } = options.views;
     const composition = createCompositionGuard(root, render);
+    let branchFilmKey='';
     const storyFilms = createStoryFilms(root, game, cinema, (movies.chapterDialogue ?? []) as StoryFilm[], () => render());
     function renderScene(state: GameSessionState) {
         const current = root.querySelector<HTMLElement>('.game-scene');
@@ -79,6 +80,19 @@ export function createGameRenderer(options: RendererOptions) {
             }
             return;
         } else if (state.phase==='branch' && options.branch) {
+            const b=game.branch;
+            const clip=b?.story.nodes.find(n=>n.id===b.dialogue.nodeId)?.film;
+            const atFilm=clip && b?.line===clip.beforeLine && !b.dialogue.pending;
+            const key=atFilm?`branch:${state.story.run}:${b.dialogue.audit.length}:${clip.id}`:'';
+            if(branchFilmKey && branchFilmKey!==key){cinema.forget(branchFilmKey);branchFilmKey='';}
+            if(atFilm && !cinema.done(key)) {
+                audio.setMusicPaused(true);branchFilmKey=key;
+                if(ui.filmKey!==key||!root.querySelector('video')){
+                    ui.filmKey=key;root.innerHTML='<div id="film-host"></div>';
+                    cinema.mount(root.querySelector('#film-host')!,key,[clip],'chapterDialogue',()=>{ui.filmKey='';render();});
+                }
+                return;
+            }
             cinema.dispose();ui.filmKey='';audio.setMusicPaused(false);audio.setMusic('round1');
             root.innerHTML=options.branch.html();
         } else if (endingFilm && !cinema.done(endingKey(endingFilm))) {

@@ -1,4 +1,5 @@
 import { initializeFilmFocus } from './film-focus';
+import { hasPackagedChapter } from './release-profile';
 // Chapter selection keeps the same application shell, fonts and shared UI components.
 import { initializeRuntimeMode } from './runtime-mode';
 import { observeChoiceLayout } from './game/choice-layout';
@@ -13,7 +14,7 @@ const reportsPlaytest = query.get('chapter') === 'jingzhou' && query.get('playte
 const finalePlaytest = query.get('chapter') === 'luofengpo' && query.get('playtest') === 'pangtong';
 await initializeChapterAccess();
 let chapter = requestedChapter(query.get('chapter'));
-if (!chapterAccess(localStorage)[chapter].unlocked) {
+if (!hasPackagedChapter(chapter) || !chapterAccess(localStorage)[chapter].unlocked) {
     history.replaceState(null, '', `/?view=chapters&locked=${chapter}`);
     chapter = 'wuzhang';
 }

@@ -19,7 +19,10 @@ export function resolveCampaignOrders(text:string,address:Address,units:Record<s
  return clauses.map(c=>{
   const matches=[...c.matchAll(/(?:第\s*([\d一二两三四五六七八九十百]+)\s*(?:支)?队|队伍?\s*([\d一二两三四五六七八九十百]+)|([\d一二两三四五六七八九十百]+)队)/g)];
   const named=/甲队/.test(c)?Object.entries(units).find(([,u])=>u.name==='甲队')?.[0]:undefined;if(/甲队/.test(c)&&!named)throw Error('当前没有甲队；旧局可按原队号调度，新开营救使用甲队500人配置。');
-  const ids=[...new Set([...matches.map(m=>String(numeral(m[1]||m[2]||m[3]))),...(named?[named]:[])])];if(ids.length>1)throw Error('每句话请只安排一队，多个队伍用分号分开。');
+  // A count after 队伍 (队伍100人) describes headcount, not unit 100.
+  const unitMatches=matches.filter(m=>!m[2]||!/^\s*(?:人|名|兵)/.test(c.slice(m.index!+m[0].length)));
+  const newUnit=/(?:新增|新建|新编|新组建|组建)(?:一支|一队)?(?:队伍|队)?/.test(c);
+  const ids=[...new Set([...unitMatches.map(m=>String(numeral(m[1]||m[2]||m[3]))),...(named?[named]:[]),...(newUnit?['new']:[])])];if(ids.length>1)throw Error('每句话请只安排一队，多个队伍用分号分开。');
   let unit=ids[0]||address.unit;if(unit==='auto')unit='new';
   if(ids.length&&address.unit!=='auto'&&address.unit!==unit)throw Error('手选队伍与文字不一致，请修改一处。');
   if(unit!=='new'&&!units[unit])throw Error(`第${unit}队当前不在军情中。`);

@@ -27,9 +27,13 @@ for(const [arch,expected] of Object.entries(pins)){
  const name=`node-v24.22.3-darwin-${arch}.tar.gz`,cached=resolve(root,'.cache/release-node',name);mkdirSync(dirname(cached),{recursive:true});
  if(!existsSync(cached)){console.log('Downloading official Node runtime:',name);const r=await fetch(`https://nodejs.org/dist/v24.22.3/${name}`);if(!r.ok)throw Error(`Download failed: ${r.status}`);writeFileSync(cached,Buffer.from(await r.arrayBuffer()));}
  if(createHash('sha256').update(readFileSync(cached)).digest('hex')!==expected)throw Error(`Node checksum mismatch: ${name}`);
- copyFileSync(cached,resolve(folder,'runtime',name));
+ // Players only need Node itself; npm, headers and development manuals stay out.
+ const unpack=resolve(root,`.cache/mac-web-${label}/node-${arch}`);mkdirSync(unpack,{recursive:true});
+ const base=`node-v24.22.3-darwin-${arch}`;
+ run('tar',['-xzf',cached,'-C',unpack,`${base}/bin/node`,`${base}/LICENSE`]);
+ run('tar',['-czf',resolve(folder,'runtime',name),'-C',unpack,base]);
 }
-writeFileSync(resolve(folder,'使用说明.txt'),'逆转五丈原 · Mac 本地网页版\n\n解压后，在终端输入 bash 加一个空格，将「启动游戏.command」拖入终端并回车。\n首次启动自动使用包内对应芯片的Node运行时，无需安装Node或npm。支持Apple Silicon及Intel Mac。\n浏览器地址固定为 http://127.0.0.1:18812/ 。请使用同一浏览器及地址保留进度。\n游戏期间保留启动终端；按Ctrl+C退出服务。\nAI密钥在游戏设置中自行配置，安装包不包含作者密钥。\n后端存档与设置保存在 ~/Library/Application Support/WuzhangyuanWeb；普通章节进度存于浏览器。\n升级时替换游戏文件夹，保留上述用户目录和浏览器数据。\n当前构建在Windows检查资源及浏览器流程，尚未进行Mac实机、Safari或Gatekeeper验证。\n');
+writeFileSync(resolve(folder,'使用说明.txt'),'逆转五丈原 · Mac 本地网页版\n\n本次试玩仅包含第一章和第四章。\n解压后，在终端输入 bash 加一个空格，将「启动游戏.command」拖入终端并回车。\n首次启动自动使用包内对应芯片的Node运行时，无需安装Node或npm。支持Apple Silicon及Intel Mac。\n浏览器地址固定为 http://127.0.0.1:18812/ 。请使用同一浏览器及地址保留进度。\n游戏期间保留启动终端；按Ctrl+C退出服务。\n进入设置，只需填写自己的 DeepSeek API key；网址 https://api.deepseek.com 和模型 deepseek-flash 已默认配好。安装包不含作者密钥。\n后端存档与设置保存在 ~/Library/Application Support/WuzhangyuanWeb；普通章节进度存于浏览器。\n升级时替换游戏文件夹，保留上述用户目录和浏览器数据。\n当前构建在Windows检查资源及浏览器流程，尚未进行Mac实机、Safari或Gatekeeper验证。\n');
 const files=walk(folder).map(p=>({path:relative(folder,p).replaceAll('\\','/'),bytes:readFileSync(p).length,sha256:createHash('sha256').update(readFileSync(p)).digest('hex')}));
 writeFileSync(resolve(folder,'manifest.json'),JSON.stringify({label,node:'24.22.3',files,validation:{macDeviceTested:false}},null,2));
 const archive=resolve(output,`Wuzhangyuan-${label}-mac-web.tar.gz`);

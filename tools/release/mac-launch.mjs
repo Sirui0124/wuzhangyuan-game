@@ -21,6 +21,10 @@ const server=createStaticServer({root:resolve(root,'game/web'),
  rescueOptions:{saveDir:resolve(data,'yiling-rescue/saves'),settingsFile:process.env.GAME_SETTINGS_FILE},
  onRequest:async(req,res)=>{
   if(req.headers.host!=='127.0.0.1:18812'){res.writeHead(403);res.end();return true;}
+  const url=new URL(req.url,'http://127.0.0.1:18812');
+  if(url.searchParams.has('playtest')&&!(url.searchParams.get('chapter')==='yiling'&&url.searchParams.get('playtest')==='command')){
+   url.searchParams.delete('playtest');res.writeHead(302,{Location:url.pathname+url.search});res.end();return true;
+  }
   if(req.url.startsWith('/api/game/')||req.url==='/health'){
    try{
     const headers={...req.headers,host:`127.0.0.1:${apiPort}`};delete headers.connection;

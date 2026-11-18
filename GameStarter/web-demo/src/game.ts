@@ -1,4 +1,5 @@
 import { handleCluePopup } from './game/dialogue-clues';
+import { hasPackagedChapter } from './release-profile';
 import { extraAchievementCatalog, pangtongAchievementCatalog } from './achievements/catalog';
 import { recordAchievements, mergeAchievements, recoverLegacyAchievements } from './achievements/storage';
 import { chapterOneAchievementIds } from './chapters/chapter-one/achievements';
@@ -51,7 +52,7 @@ const GAME_ENDINGS_KEY = MAIN_ENDINGS_KEY + playtestKey;
 const root = document.querySelector<HTMLDivElement>('#game-root')!;
 const read = async <T>(url: string): Promise<T> => { const response = await fetch(url); if (!response.ok) throw new Error(`Missing ${url}`); return response.json(); };
 const [script, flow, manifest, media, movies, grainStory, jietingAchievements, pangtongAchievements] = await Promise.all([
-    read<ChapterReview>(chapterOne.story.script), read<ChapterFlow>(chapterOne.story.flow), read<{ contentVersion: string }>(chapterOne.story.manifest), read<Media>('/media/manifest.json'), read<Record<string, Clip[]>>('/cinematics.json'), read<GrainNavigationStory>('/story/chapter-two.films.json').catch(() => ({ version: '', nodes: [] })), read<Parameters<typeof extraAchievementCatalog>[0]>('/story/chapter-three.story.json'), read<Parameters<typeof pangtongAchievementCatalog>[0]>('/story/chapter-seven.story.json'),
+    read<ChapterReview>(chapterOne.story.script), read<ChapterFlow>(chapterOne.story.flow), read<{ contentVersion: string }>(chapterOne.story.manifest), read<Media>('/media/manifest.json'), read<Record<string, Clip[]>>('/cinematics.json'), hasPackagedChapter('grain') ? read<GrainNavigationStory>('/story/chapter-two.films.json').catch(() => ({ version: '', nodes: [] })) : { version: '', nodes: [] }, hasPackagedChapter('jieting') ? read<Parameters<typeof extraAchievementCatalog>[0]>('/story/chapter-three.story.json') : { endings: [] }, hasPackagedChapter('luofengpo') ? read<Parameters<typeof pangtongAchievementCatalog>[0]>('/story/chapter-seven.story.json') : { endings: [] },
 ]);
 const api = new GameApi();
 const branchStory=await read<BranchStory>('/story/chapter-one.branch.json');
@@ -65,6 +66,7 @@ const game = new ChapterSession(script, flow, manifest.contentVersion,
 const audio = new GameAudio(), cinema = new CinematicPlayer(`${manifest.contentVersion}:${JSON.stringify(movies)}`, playtestKey ? `wuzhang-playtest-films${playtestKey}` : 'wuzhang-session-films-v1', true);
 const catalog: EndingCatalog = { schemaVersion: 1, chapterId: chapterOne.id, endings: [...[...flow.endings, tentEnding].map(e => ({ ...e, chapter: 'wuzhang', category: 'ending' as const })), ...extraAchievementCatalog(jietingAchievements), ...pangtongAchievementCatalog(pangtongAchievements)].sort((a, b) => ['wuzhang','grain','jieting','luofengpo'].indexOf(a.chapter ?? 'wuzhang') - ['wuzhang','grain','jieting','luofengpo'].indexOf(b.chapter ?? 'wuzhang') || Number(a.category !== 'milestone') - Number(b.category !== 'milestone')) };
 let collection = freshCollection(), collectionWarning = '';
+catalog.endings = catalog.endings.filter(ending => hasPackagedChapter(ending.chapter ?? 'wuzhang'));
 catalog.endings.push(...[
     {id:'branch-coop',title:'记住了你的名字',description:'请伯约出面，军报与回令完成交接，魏延记住了我。'},
     {id:'branch-formal',title:'灯火未灭',description:'将军报交伯约处置，回令送回前营，这一夜平安过去。'},

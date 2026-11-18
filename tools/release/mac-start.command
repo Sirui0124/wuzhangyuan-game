@@ -10,5 +10,6 @@ runtime="$HOME/Library/Application Support/WuzhangyuanWeb/runtime/node-v24.22.3-
 if [ ! -x "$runtime/bin/node" ]; then
   mkdir -p "$(dirname "$runtime")"
   tar -xzf "runtime/node-v24.22.3-darwin-$arch.tar.gz" -C "$(dirname "$runtime")"
+  chmod +x "$runtime/bin/node"
 fi
 exec "$runtime/bin/node" launch.mjs

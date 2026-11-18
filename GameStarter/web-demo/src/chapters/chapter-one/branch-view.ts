@@ -10,8 +10,17 @@ import type { AiReceipt } from './branch-engine';
 /** New chapter graph uses the existing menu, save slots, portraits and clue popover. */
 export function createBranchView(root: HTMLElement, game: ChapterOneSession, media: Media, ui: GameUIState, render:()=>void, persist:()=>void) {
     let request: AbortController | null=null, status='', task='', previousDraft='';
-    let knownClues=game.branch?.clues.map(c=>c.id)??[], clueNotice='', clueNoticeUntil=0;
-    const clueToast=()=>clueNotice&&Date.now()<clueNoticeUntil?`<aside class="branch-clue-gained" role="status"><small>记下线索</small><span>${esc(clueNotice)}</span></aside>`:'';
+    const clueNoticeDuration=4500;
+    let knownClues=game.branch?.clues.map(c=>c.id)??[], clueNotice='', clueNoticeStarted=0, clueNoticeTimer=0;
+    const clearClueNotice=()=>{
+        clearTimeout(clueNoticeTimer);clueNoticeTimer=0;clueNotice='';
+        root.querySelector('.branch-clue-gained')?.remove();
+    };
+    const clueToast=()=>{
+        const elapsed=Math.max(0,performance.now()-clueNoticeStarted);
+        // Scene renders must resume the original animation, never restart its lifetime.
+        return clueNotice&&elapsed<clueNoticeDuration?`<aside class="branch-clue-gained" role="status" style="animation-delay:-${elapsed}ms"><small>记下线索</small><span>${esc(clueNotice)}</span></aside>`:'';
+    };
     const fingerprint=()=>JSON.stringify([game.branch?.dialogue.audit,game.branch?.line,game.runtimeMode()]);
     const cancel=()=>{request?.abort();request=null;task='';};
     const portrait=createPortrait(media);
@@ -25,9 +34,18 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
             : g.aiHeld?'<button data-branch="retry">重新组织这段话</button>'
             :g.node.kind==='terminal'?btn('chapters','展开舆图')
             :g.choices.map(c=>`<button data-branch="choose" data-choice="${esc(c.id)}">${esc(c.label)}</button>`).join('');
-        const offline=g.state.knowsJiang ? [ ['INVITE_JIANG','请伯约来听报','魏军还没攻营，我去请伯约来听报，再传回军令。'], ['RELAY_JIANG','我送去请伯约看','魏军还没攻营，我拿军报请伯约看，再把回令送回前营。'] ]
+        const offline=g.state.knowsJiang ? [ ['INVITE_JIANG',g.state.jiangAgreed?'带将军去见伯约':'请伯约来听报',g.state.jiangAgreed?'魏军还没攻营。伯约已经答应接报，我带将军过去。':'魏军还没攻营，我去请伯约来听报，再传回军令。'], ['RELAY_JIANG','我送去请伯约看','魏军还没攻营，我拿军报请伯约看，再把回令送回前营。'] ]
             :[ ['SELF_RELAY','由我转呈军报','魏军还没攻营，我来转呈军报，有回令便送回前营。'], ['ENTER','让将军进去','我不拦将军了，请将军进去见丞相。'] ];
         const hud=`<header class="game-hud dialogue-hud"><div class="dialogue-place"><span>${esc(game.scene.title)}</span><small>${g.state.deathSeen?'再临第六夜':'第六夜'}</small></div><nav>${btn('records','记录')}${btn('save','存档')}${btn('pause','菜单')}</nav></header>`;
+        if(g.node.kind==='ending'&&ready&&!g.pending) {
+            const labels:Record<string,string>={continue:'继续',reread:'重玩',rewind:'重试',stop:'返回'};
+            return `<main class="chapter-ending branch-scene branch-ending" data-phase="ending" data-node="${g.nodeId}" data-line="${b.line}" data-ending="${g.node.endingId??''}">
+                <div class="ending-background" style="background-image:url('${esc(background)}')"></div>${hud}
+                <section class="ending-copy" aria-labelledby="branch-ending-title"><span class="ending-kicker">第一章 · 五丈原</span>
+                <h1 id="branch-ending-title">${esc(g.node.title)}</h1><p>${esc(line?.text??'')}</p>
+                <div class="branch-ending-actions">${g.choices.map((c,i)=>`<button class="${i===0?'ending-primary':''}" data-branch="choose" data-choice="${esc(c.id)}">${esc(labels[c.id??'']??c.label)}</button>`).join('')}</div></section>
+                </main>`;
+        }
         if(b.noticePending) return `<main class="game-scene branch-scene" data-phase="explore" data-node="${g.nodeId}" data-line="${b.line}" data-scene="camp_gate"><div class="scene-image" style="background-image:url('${esc(media.scenes.camp_gate)}')"></div><div class="scene-shade"></div>${hud}<div class="scene-hotspots"><button class="scene-hotspot" data-branch="notice" style="left:52%;top:48%"><i></i><span>查看告示</span></button></div><p class="dialogue-key-hint">先看看帐前的告示</p></main>`;
         if(input) {
             const offlineInput=g.aiScene&&!game.aiEnabled();
@@ -36,10 +54,10 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
                 evidence:'', clues:b.clues, selected:b.selected, draft:b.draft, status,
                 inputId:'branch-input', statusId:'branch-status', maxLength:g.aiScene?800:400,
                 placeholder:g.aiScene?'我的回应…':'也可以自己问一句……', guidance:false,
-                polishActions:g.aiScene?`<button type="button" class="polish-button" data-branch="polish" ${request?'disabled':''}>润色表达</button>${previousDraft?'<button type="button" data-branch="undo-polish">撤回润色</button>':''}`:'',
+                polishActions:g.aiScene?`<button type="button" class="polish-button" data-branch="polish" ${request||!b.draft.trim()?'disabled':''}>润色表达<svg class="polish-spark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C9 6 10 7 16 8C10 9 9 10 8 16C7 10 6 9 0 8C6 7 7 6 8 0Z" fill="currentColor"/></svg></button>${previousDraft?'<button type="button" data-branch="undo-polish">撤回润色</button>':''}`:'',
                 clearButton:'<button type="button" data-branch="clear">清空</button>',
-                confirmActions:`<button type="submit" class="confirm-expression" ${request?'disabled':''}>${request?task:g.aiScene?'确认说出':'问他'}</button>${request?'<button type="button" data-branch="cancel">取消</button>':''}`,
-                help:g.aiScene&&g.aiHint?`<details class="expression-help"><summary>回想小甲的话</summary><p class="branch-hint">${esc(g.aiHint)}</p></details>`:'',
+                confirmActions:`<button type="submit" class="confirm-expression" ${request||!b.draft.trim()?'disabled':''}>${request?task:g.aiScene?'确认说出':'问他'}</button>${request?'<button type="button" data-branch="cancel">取消</button>':''}`,
+                help:g.aiScene&&g.aiHint?`<details class="expression-help"><summary>${g.state.jiangAgreed?'回想伯约的话':'回想小甲的话'}</summary><p class="branch-hint">${esc(g.state.jiangAgreed?b.clues.find(c=>c.id==='branch-jiang')?.text??g.aiHint:g.aiHint)}</p></details>`:'',
             });
             return `<main class="workspace-screen expression-workspace narrative-expression branch-scene" data-phase="expression" data-node="${g.nodeId}" data-line="${b.line}" data-ending="${g.node.endingId??''}">
                 <div class="thought-landscape" style="background-image:url('${esc(background)}')"></div>${character?portraitStage(portrait(character)):''}${hud}
@@ -61,21 +79,22 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
     }
     const canRead = () => {
         const b=game.branch;
-        return !ui.home && !ui.overlay && game.snapshot().phase==='branch' && !!b
+        return !ui.home && !ui.overlay && !root.querySelector('#film-host') && game.snapshot().phase==='branch' && !!b
             && !b.noticePending && (!b.atLastLine || !!b.dialogue.pending || b.dialogue.node.kind==='passage');
     };
     bindDialogueScreenInput(root, () => canRead() ? () => game.branchAct('next') : undefined, '.branch-scene');
-    function sync() { if(ui.home || ui.overlay || game.snapshot().phase!=='branch')cancel(); }
+    function sync() { if(ui.home || ui.overlay || game.snapshot().phase!=='branch'){cancel();clearClueNotice();} }
     let at=fingerprint();
     game.onChange(()=>{
         const next=fingerprint();if(next!==at){cancel();status='';previousDraft='';}at=next;
         const clues=game.branch?.clues??[], gained=clues.filter(c=>!knownClues.includes(c.id));
-        if(gained.length&&!ui.restoring){clueNotice=gained.map(c=>c.title).join(' · ');clueNoticeUntil=Date.now()+4500;}
+        if(ui.restoring || clues.length<knownClues.length)clearClueNotice();
+        else if(gained.length){clearClueNotice();clueNotice=gained.map(c=>c.title).join(' · ');clueNoticeStarted=performance.now();clueNoticeTimer=window.setTimeout(clearClueNotice,clueNoticeDuration);}
         knownClues=clues.map(c=>c.id);
     });
     async function submit(polish=false) {
         const b=game.branch;if(!b||request)return;const g=b.dialogue,text=b.draft.trim();
-        if(!text){status='先写下想说的话。';render();return;}
+        if(!text){root.querySelector<HTMLTextAreaElement>('#branch-input')?.focus();return;}
         if(!g.aiScene){game.branchAct('ask',text);return;}
         const pending=new AbortController(), stamp=fingerprint(), id=crypto.randomUUID();request=pending;task=polish?'正在润色…':'魏延正在回应…';status='';render();
         try {
@@ -91,7 +110,7 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
     root.addEventListener('input',event=>{
         const input=event.target as HTMLTextAreaElement;if(input.id!=='branch-input')return;
         cancel();status='';game.branchDraft(input.value);persist();
-        root.querySelectorAll<HTMLButtonElement>('[data-branch="polish"], [data-branch-form] button[type="submit"]').forEach(button=>button.disabled=false);
+        root.querySelectorAll<HTMLButtonElement>('[data-branch="polish"], [data-branch-form] button[type="submit"]').forEach(button=>button.disabled=!input.value.trim());
         root.querySelector<HTMLButtonElement>('[data-branch-form] button[type=submit]')!.textContent=game.branch?.dialogue.aiScene?'确认说出':'问他';
         root.querySelector('[data-branch="cancel"]')?.remove();
     });

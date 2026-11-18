@@ -41,7 +41,7 @@ node GameStarter/packaging/windows/build-release.mjs --build .cache/windows-rele
 
 `electron-builder.config.cjs` 采用 NSIS x64、当前用户安装、可选择目录、桌面和开始菜单快捷方式，以及自动生成的卸载器。安装不请求管理员权限，完成安装后不擅自启动游戏。卸载保留用户数据。构建只生成本机安装器，不发布、不上传、不购买签名，当前产物未签名。2026-11-02 本轮安装包采用用户要求补充墨绿背景、远山和古铜边框的续命灯图标，统一用于安装器、卸载器、游戏程序与窗口；1024px 母版为 `resources/icon.png`，运行 `resources/make-icon.ps1` 从母版重建 16–256px 的十档 ICO。预览为 `resources/icon-preview.png`；生成原图与用户选择记录在本次输出目录中保留。[NSIS 官方文档](https://www.electron.build/docs/nsis/)
 
-当前修复配置使用 `compression: 'store'`，减少对已压缩视频的重复压缩时间。安装器会比高压缩版本更大；运行内容和清单检查不变。
+2026-11-18发布优化改用 `compression: 'normal'`，对安装载荷无损压缩，不重新编码音视频。发布配置只保留第一章、第四章；其他章的本地源文件保留，待用户明确要求再加入。清单记录排除文件及原因。
 
 ## 检查结果
 

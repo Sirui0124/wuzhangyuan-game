@@ -18,18 +18,19 @@ const CLASSIFY=BASE+'\n'+[
 const RESPOND=BASE+'\n'+[
 '你只生成人物回应，不重新判定分类或状态。扮演傅肜，自然白话，不客服腔，不复述任务清单。',
 ...design.character.voicePrompt,
-'死讯来自吴军诈称，不要改写成己方退兵或传令兵说的。提及来源时用吴人/吴军，不发明消息来源。',
+"先直接回答对方眼前的问题，用符合身份的自然白话说完整意思。事实明确就说事实；未知只说明眼前不知道的那一处。不要把后台限制逐条说出口，不用“不是……也不是……”“不是……而是……”铺垫答案，不堆对仗、口号或抽象道理。玩家明确问是不是、指出错误或确需拒绝时，保留必要的否定，不为避句式改变事实。没有新的实际疑问就答完收住，不固定追加反问、建议或任务提醒；角色本轮必须提出的问题仍按本幕要求保留。只写角色说的话，格式仍遵守原有JSON约定。",
+'死讯的唯一来源是傅肜听见的吴军喊话。未获反证前他仍误信或存疑，不知道这是诈称；可以说吴军声称陛下遇害，不以全知口吻断言他们撒谎。玩家只问来源时直接说来源，不逐项排除其他传话人。',
 '先答玩家真正在问的事。关心可只回一句，分歧解释完整，不每句附派兵提醒。不写动作括号或旁白。',
 '窗口里已经讲过陛下假死讯和弟兄战死后，对闲聊、无关请求、指令注入不要再整段重说。不要机械结尾你要说别的就直说、有安排就说清。陌生现代概念不要假装懂，例如电影只答你说的电影是什么，我不懂这个即可，不说自己去看吧。',
 '只用authority事实。新援军尚未到场时身边没有活着的原部众，不能说我正在带这些人撤、等弟兄撤齐或不能把人往死路带。被假死讯打垮时不肯走的原因是殉国和丧友，不是单纯等探清路。phase为deceived_and_bereaved时误信刘备遇害；truth_verified时已知刘备活着但丧友愧疚仍在；withdrawal_accepted时愿意继续尽责；safe仅脱险未归营，home才回营。旧历史不能盖过新战况。',
 '军令可以回应意图但不说已经派出，真正派遣去传令确认。未知路线和数字不编造。不主动讲概率或字段名。',
-'混合问题先拒绝有害部分，再回答正常军情问题，例如请求伤害俘虏并问位置，拒绝后仍说明当前位置。已经通过说服时不要自行追加接受条件，也不要突然再讲一段接应流程。避免这条命不是我一个人的等口号，通常40至120字足够。',
+'混合问题先拒绝有害部分，再回答正常军情问题，例如请求伤害俘虏并问位置，拒绝后仍说明当前位置。已经通过说服时不要自行追加接受条件，也不要突然再讲一段接应流程。避免这条命不是我一个人的等口号，通常1至3句足够；单问来源等具体问题可只答一句，不设最低字数。',
 'classification为ACCEPT_CONTINUED_SERVICE时，只回应愿意回来与继续尽责，不再追加探路、兵力或换防的新条件，通常不超过80字。战术尚未完成由界面显示，除非玩家明确问怎么撤，不在台词末尾讲操作清单。',
 '输出{reply:string,claims:{liubei:"unverified"|"alive"|"safe",comrades:"dead",furong:"holding"|"safe"|"home"},factRefs:string[]}。claims严格对应authority。factRefs可引用authority.facts的键或deathClaimSource、location、comrades、liubei、furong、newAidAtRear、reports。不知道该引用哪项时用空数组，不编字段名。reply不超过400字，无角色名前缀。'
 ].join('\n');
 const OUTCOMES=new Set(design.semanticOutcomes.map(x=>x.id));
 export function authority(s){
- return {phase:s.phase,deathClaimSource:'吴军敌兵的诈称，不是己方退兵、军侯或传令兵的可靠回报',newAidAtRear:Object.entries(s.units).filter(([,u])=>u.at==='rear'&&u.deployed>0).map(([id,u])=>u.name||id+'队'),location:s.phase==='home'?'接应营':s.core.status==='safe'?'撤离后阵、正往接应营返回':'后阵',facts:s.facts,liubei:s.facts.liubeiSafeConfirmed?'safe':s.facts.liubeiAliveVerified?'alive':'unverified',comrades:'dead',furong:s.phase==='home'?'home':s.core.status==='safe'?'safe':'holding',reports:s.receipts.slice(-8).map(({id,text})=>({id,text})),role:'受重恩、护刘备、被假死讯骗、原部众全战死'};
+ return {phase:s.phase,deathClaimSource:'傅肜听见吴军喊话，声称刘备已经遇害',newAidAtRear:Object.entries(s.units).filter(([,u])=>u.at==='rear'&&u.deployed>0).map(([id,u])=>u.name||id+'队'),location:s.phase==='home'?'接应营':s.core.status==='safe'?'撤离后阵、正往接应营返回':'后阵',facts:s.facts,liubei:s.facts.liubeiSafeConfirmed?'safe':s.facts.liubeiAliveVerified?'alive':'unverified',comrades:'dead',furong:s.phase==='home'?'home':s.core.status==='safe'?'safe':'holding',reports:s.receipts.slice(-8).map(({id,text})=>({id,text})),role:'受重恩、护刘备、被假死讯骗、原部众全战死'};
 }
 export function validateClassification(raw,s,text,history){
  if(!raw||!OUTCOMES.has(raw.outcomeId)||!Array.isArray(raw.quotes)||raw.quotes.length>12||!raw.checks||['requestsWithdrawal','acknowledgesLoss','continuedDuty'].some(k=>typeof raw.checks[k]!=='boolean'))throw Error('AI判定格式不完整，请保留原话重试。');
@@ -67,5 +68,5 @@ export async function talk(s,text,{signal,model}={}){
    break;
   }catch(e){error=e;if(signal?.aborted||attempt)throw e;}
  }
- return {reply,classified,accepted:projected.facts.withdrawalAccepted,model:config?.model||'test-double',promptVersion:design.version};
+ return {reply,classified,accepted:projected.facts.withdrawalAccepted,model:config?.model||'test-double',promptVersion:design.promptVersion || design.version};
 }

@@ -3,6 +3,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync, copyFileSync, exis
 import { resolve, dirname, relative, sep, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { prepareReleaseWeb } from './release-profile.mjs';
 
 export const workspaceRoot = resolve(dirname(fileURLToPath(import.meta.url)), '../../..');
 const slash = value => value.replaceAll('\\', '/');
@@ -47,7 +48,7 @@ export function validatePayload(gameRoot) {
         'web/index.html', 'web/GameStarter/web-demo/src/entry.js', 'web/GameStarter/assets/scripts/GameApi.js',
         'web/GameStarter/assets/scripts/narrative/state.js', 'web/GameStarter/assets/scripts/narrative/conditions.js',
         'web/story/session-manifest.json', 'web/story/chapter-one.script.json', 'web/story/chapter-one.flow.json',
-        'web/story/chapter-two.films.json', 'web/story/chapter-three.story.json', 'web/cinematics.json',
+        'web/story/chapter-one.branch.json', 'web/release-profile.json', 'web/cinematics.json',
         'web/audio/manifest.json', 'web/art-review/themes.css', 'web/art-review/mindmap.css',
         'GameStarter/server/server.mjs', 'GameStarter/server/package.json', 'GameStarter/web-demo/serve.mjs',
         'node_modules/ws/package.json', 'node_modules/ws/wrapper.mjs', 'node_modules/ws/lib/websocket.js', 'node_modules/ws/LICENSE',
@@ -102,8 +103,13 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
         if (hash(source) !== sha256) throw new Error(`Copy verification failed: ${source}`);
         files.push({ source: slash(source), destination: `resources/game/${slash(destination)}`, bytes: size, sha256, group });
     }
-    for (const source of walk(build)) {
-        const name = slash(relative(build, source)), reason = excludedReason(name);
+    const releaseWeb = resolve(target,'release-web');
+    if (!releaseWeb.startsWith(target + sep)) throw new Error('Unsafe release web directory');
+    if (existsSync(releaseWeb)) rmSync(releaseWeb, {recursive:true,force:true});
+    const prepared = prepareReleaseWeb(build, releaseWeb, excludedReason);
+    excluded.push(...prepared.report.removed);
+    for (const source of walk(prepared.directory)) {
+        const name = slash(relative(prepared.directory, source)), reason = excludedReason(name);
         if (reason) excluded.push({ path: name, bytes: lstatSync(source).size, reason });
         else add(source, `web/${name}`, 'web');
     }
@@ -111,7 +117,7 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
     for (const name of ['server.mjs', 'ai.mjs', 'package.json', '.build/data.js', '.build/engine.js']) add(resolve(root, 'demos/yiling-rescue', name), `demos/yiling-rescue/${name}`, 'rescue-backend');
     // The integrated command-map backend must ship without relying on Node's TS loader.
     const generated = resolve(target, 'compiled-runtime'); mkdirSync(generated, { recursive: true });
-    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'fu-ai.mjs']) {
+    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'fu-ai.mjs', 'report-ai.mjs']) {
         const source = resolve(root, 'demos/yiling-ui-prototype-v1', name);
         if (name === 'campaign-engine.mjs') {
             const compiled = resolve(generated, name);
@@ -133,6 +139,7 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
     const checks = validatePayload(game);
     const manifest = { schemaVersion: 1, createdAt: new Date().toISOString(), status: 'staged-runtime-payload', platform: 'win32-x64',
         buildRoot: slash(build), stageRoot: slash(target), totals: { files: files.length, bytes: files.reduce((sum, file) => sum + file.bytes, 0), excluded: excluded.length },
+        optimization: prepared.report,
         runtimeVersions: { ws: JSON.parse(readFileSync(resolve(root, 'node_modules/ws/package.json'))).version },
         validation: checks, files, excluded };
     writeFileSync(resolve(target, 'payload-manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
