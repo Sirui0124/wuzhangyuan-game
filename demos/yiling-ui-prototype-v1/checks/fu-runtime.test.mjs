@@ -11,7 +11,7 @@ async function fixture(model){
 }
 const req=(s,extra={})=>({scenarioId:s.scenarioId,expectedRevision:s.revision,requestId:randomUUID(),...extra});
 const order=(unit,action,extra={})=>({unit,action,target:'fu',...extra});
-const model=async({input})=>input.classification?{reply:input.authority.facts.withdrawalAccepted?'陛下既还在，我就回去见他。这里的事，我得亲口说。':'你从哪儿得的消息？',claims:{liubei:input.authority.liubei,comrades:'dead',furong:input.authority.furong},factRefs:[]}:
+const model=async({input})=>input.classification?{reply:input.authority.facts.withdrawalAccepted?'陛下既还在，我就回去见他。这里的事，我得亲口说。':'你从哪儿得的消息？',claims:{liubei:input.authority.liubei,comrades:'dead',furong:input.authority.furong,...(input.authority.crisis?{crisis:structuredClone(input.authority.crisis)}:{})},factRefs:[]}:
  {outcomeId:input.authority.facts.liubeiAliveVerified?'ACCEPT_CONTINUED_SERVICE':'ASK_LIUBEI_PROOF',checks:{requestsWithdrawal:true,acknowledgesLoss:true,continuedDuty:true},quotes:[{messageId:'current',text:input.current.text}]};
 test('真实行动需结束本轮；消息分轮核实；存档重载与同轮重试幂等',async()=>{
  const {runtime,directory}=await fixture(model);let s=await runtime.session();

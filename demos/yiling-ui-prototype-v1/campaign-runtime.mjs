@@ -2,7 +2,7 @@ import {selectCrisisEvents} from './crisis-event-ai.mjs';
 import {crisis} from './crisis-rules.mjs';
 import {modern,eight} from './route-config.mjs';
 import {talkRoute} from './route-ai.mjs';
-import {mkdir,readFile,writeFile,rename} from 'node:fs/promises';
+import {mkdir,readFile,writeFile,rename,link,unlink} from 'node:fs/promises';
 import {randomUUID,randomBytes,createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
@@ -24,8 +24,43 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
  function path(id){if(typeof id!=='string'||!/^[a-f\d-]{36}$/i.test(id))fail('存档编号无效。');return join(directory,id+'.json');}
  async function load(id){try{const s=JSON.parse(await readFile(path(id),'utf8'));if(![VERSION,'shared-2000-v1'].includes(s.balanceVersion))fail('此存档属于旧兵力方案，请新开营救；原记录保留。',409);s.roundLimit??=6;if(s.round>=s.roundLimit&&!s.ended){s.ended=true;s.endReason=eight(s)&&Object.values(s.fronts).every(f=>['safe','home'].includes(f.status))?'rescued':'deadline';}return s;}catch(e){if(e.code==='ENOENT')fail('营救存档不存在，请新开营救。',404);throw e;}}
  async function persist(s){await mkdir(directory,{recursive:true});const dest=path(s.scenarioId),tmp=dest+'.'+randomUUID()+'.tmp';await writeFile(tmp,JSON.stringify(s));await rename(tmp,dest);}
+ function request(input){if(typeof input?.requestId!=='string'||!/^[a-zA-Z0-9_-]{1,80}$/.test(input.requestId))fail('请求编号无效。');path(input.scenarioId);if(!Number.isInteger(input.expectedRevision)||input.expectedRevision<0)fail('存档版本无效。');}
+ const digest=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+ function operationId(kind,input){const h=digest([kind,input.scenarioId,input.requestId]);return `${h.slice(0,8)}-${h.slice(8,12)}-${h.slice(12,16)}-${h.slice(16,20)}-${h.slice(20,32)}`;}
+ function checkpointPath(id){path(id);return join(directory,'checkpoints',id+'.json');}
+ async function readOptional(dest){try{return JSON.parse(await readFile(dest,'utf8'));}catch(e){if(e.code==='ENOENT')return null;throw e;}}
+ // A hard link publishes a fully written file atomically and refuses replacement.
+ // Checkpoints and restored sessions never overwrite an existing user record.
+ async function createImmutable(dest,value){await mkdir(directory,{recursive:true});await mkdir(join(directory,'checkpoints'),{recursive:true});const tmp=dest+'.'+randomUUID()+'.tmp';try{await writeFile(tmp,JSON.stringify(value),{flag:'wx'});try{await link(tmp,dest);return value;}catch(e){if(e.code==='EEXIST')return JSON.parse(await readFile(dest,'utf8'));throw e;}}finally{await unlink(tmp).catch(e=>{if(e.code!=='ENOENT')throw e;});}}
+ function checkRevision(s,input){if(input.expectedRevision!==s.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新复诵。'),{status:409,session:publicSession(s)});}
+ function checkpointInfo(c){return {id:c.id,scenarioId:c.state.scenarioId,revision:c.state.revision,round:c.state.round,routeVersion:c.state.routeVersion,createdAt:c.createdAt};}
  return {
   async session(id,difficulty){if(id)return publicSession(await load(id));const s=fresh({seed:randomBytes(4).readUInt32LE()||1,difficulty:difficulty||'normal'});await persist(s);return publicSession(s);},
+  async checkpoint(input){
+   request(input);const id=operationId('checkpoint',input),hash=digest({scenarioId:input.scenarioId,expectedRevision:input.expectedRevision,requestId:input.requestId});
+   return locked(input.scenarioId,async()=>{
+    const existing=await readOptional(checkpointPath(id));
+    if(existing){if(existing.requestHash!==hash)fail('请求编号不能重复用于不同存档。',409);return checkpointInfo(existing);}
+    const state=await load(input.scenarioId);checkRevision(state,input);
+    if(!eight(state))fail('此存档不属于八路营救，原记录保留。',409);
+    const c={schemaVersion:1,id,createdAt:new Date().toISOString(),requestHash:hash,state:structuredClone(state)};
+    const saved=await createImmutable(checkpointPath(id),c);if(saved.requestHash!==hash)fail('请求编号不能重复用于不同存档。',409);return checkpointInfo(saved);
+   });
+  },
+  async restore(input){
+   request(input);const cpPath=checkpointPath(input.checkpointId),id=operationId('restore',input),hash=digest({scenarioId:input.scenarioId,expectedRevision:input.expectedRevision,requestId:input.requestId,checkpointId:input.checkpointId});
+   return locked(input.scenarioId,async()=>{
+    const existing=await readOptional(path(id));
+    if(existing){if(existing.restoredFrom?.requestHash!==hash)fail('请求编号不能重复用于不同读档。',409);return publicSession(existing);}
+    const current=await load(input.scenarioId);checkRevision(current,input);
+    const c=await readOptional(cpPath);if(!c)fail('手动存档不存在，原记录保留。',404);
+    if(c.schemaVersion!==1||!c.state||!eight(c.state))fail('手动存档格式不支持，原记录保留。',409);
+    const s=structuredClone(c.state);s.scenarioId=id;s.revision=0;s.requests={};s.nextSendAt=0;
+    if(s.core)s.core.scenarioId=id;
+    s.restoredFrom={checkpointId:c.id,scenarioId:c.state.scenarioId,revision:c.state.revision,createdAt:new Date().toISOString(),requestHash:hash};
+    const saved=await createImmutable(path(id),s);if(saved.restoredFrom?.requestHash!==hash)fail('请求编号不能重复用于不同读档。',409);return publicSession(saved);
+   });
+  },
   async act(kind,input,signal){
    if(!['chat','orders','round'].includes(kind))fail('未知操作。');
    if(typeof input.requestId!=='string'||!/^[a-zA-Z0-9_-]{1,80}$/.test(input.requestId))fail('请求编号无效。');
@@ -69,7 +104,8 @@ export function campaignHandler(runtime=createCampaignRuntime()){
   const controller=new AbortController();res.on('close',()=>{if(!res.writableEnded)controller.abort();});const signal=AbortSignal.any([controller.signal,AbortSignal.timeout(90000)]);
   try{let body='';for await(const part of req){body+=part.toString('utf8');if(Buffer.byteLength(body)>16000)fail('请求过长。',413);}let input;try{input=JSON.parse(body);}catch{fail('JSON格式错误。');}if(!input||typeof input!=='object'||Array.isArray(input))fail('请求格式错误。');
    const kind=new URL(req.url,'http://localhost').pathname.split('/').at(-1);
-   const session=kind==='session'?await runtime.session(input.scenarioId,input.difficulty):await runtime.act(kind,input,signal);send(200,{ok:true,session});
+   if(kind==='checkpoint')return send(200,{ok:true,checkpoint:await runtime.checkpoint(input)});
+   const session=kind==='session'?await runtime.session(input.scenarioId,input.difficulty):kind==='restore'?await runtime.restore(input):await runtime.act(kind,input,signal);send(200,{ok:true,session});
   }catch(e){send(signal.aborted?504:e.status||502,{ok:false,error:signal.aborted?'等待回复超时，请重试原请求。':e.message,...(e.session?{session:e.session}:{})});}
  };
 }

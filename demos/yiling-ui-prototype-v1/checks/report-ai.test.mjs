@@ -4,9 +4,10 @@ import {mkdtemp,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {randomUUID} from 'node:crypto';
-import {fresh,orders,settle} from '../campaign-engine.mjs';
+import {fresh as currentFresh,orders,settle} from '../campaign-engine.mjs';
 import {createCampaignRuntime} from '../campaign-runtime.mjs';
 import {narrateReport,reportInput,validateReport,REPORT_PROMPT} from '../report-ai.mjs';
+const fresh=()=>{const s=currentFresh({seed:753,rules:'three'});delete s.routeVersion;s.fronts.sha.work=3;return s;};
 const order={unit:'new',men:1000,target:'sha',action:'rescue',rush:false,via:'normal'};
 test('行军、战后返程、归营的正文与派遣快照分别准确',async()=>{
  const s=fresh({seed:753});orders(s,[order]);settle(s);
@@ -31,7 +32,7 @@ test('军报模型失败仍提交同一次结算，重试不重复调用模型�
  const request={scenarioId:s.scenarioId,expectedRevision:s.revision,requestId:randomUUID(),trigger:'endRound'};
  s=await runtime.act('round',request);assert.equal(s.lastReport.narrative.source,'facts');assert.equal(s.round,1);assert.equal(calls,1);
  const replay=await runtime.act('round',request);assert.deepEqual(replay,s);assert.equal(calls,1);
- assert.equal(s.messages.filter(m=>m.round===1&&m.kind==='report').length,1);assert.match(s.messages.at(-1).text,/尚未到位/);
+ assert.equal(s.messages.filter(m=>m.round===1&&m.kind==='report').length,s.lastReport.narrative.paragraphs.length);assert.match(s.messages.find(m=>m.round===1&&m.kind==='report'&&m.front==='sha').text,/尚未到位/);
  }finally{await rm(directory,{recursive:true,force:true});}
 });
 test('成功生成的正文保存到结报，读取与重看不重新生成',async()=>{

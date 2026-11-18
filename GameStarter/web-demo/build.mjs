@@ -6,7 +6,6 @@ import { createHash } from 'node:crypto';
 import { prepareWeiyanPlaytest } from '../../tools/ai/prepare-weiyan-playtest.mjs';
 import { checkSubtitles } from '../../tools/video/subtitles.mjs';
 import { writeChapterAccess } from '../scripts/chapter-access-manifest.mjs';
-import { publishRescue } from '../../demos/yiling-rescue/publish.mjs';
 import { publishCommandMap } from '../../demos/yiling-ui-prototype-v1/publish.mjs';
 import { validateMedia } from '../../tools/video/media.mjs';
 const subtitleAudit = checkSubtitles();
@@ -36,7 +35,6 @@ cpSync(publicRoot, destination, { recursive: true, filter: source => {
 } });
 // The generated tree is ESM; keep this scoped to build output, not the Cocos project.
 writeFileSync(resolve(destination, 'package.json'), JSON.stringify({ private: true, type: 'module' }) + '\n');
-publishRescue(destination);
 publishCommandMap(destination);
 // Runtime media is selected explicitly; pending edits and rejected sources stay outside builds.
 for (const clip of cinematicMedia.clips) {

@@ -23,7 +23,10 @@ try {
   await page.locator('[data-cinema-action=toggle]').click();
   if(await video.count()) await video.evaluate(v=>v.play());
   await page.locator('iframe').waitFor();
-  assert.match(await page.locator('iframe').getAttribute('src'),query?/yiling-command\//:/yiling-rescue\//);
+  const frameURL=new URL(await page.locator('iframe').getAttribute('src'),origin);
+  assert.equal(frameURL.pathname,'/yiling-command/index.html');
+  assert.equal(frameURL.searchParams.get('chapter'),'yiling');
+  assert.equal(new URL(page.url()).searchParams.has('playtest'),false);
   assert.equal(await page.locator('video').count(),0);
   await page.reload();await page.locator('iframe').waitFor();assert.equal(await page.locator('video').count(),0);
   await page.goto(origin+'/?chapter=yiling'+query+'&intro=1');await page.locator('video').waitFor();

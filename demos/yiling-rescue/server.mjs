@@ -3,8 +3,9 @@ import {readFile,writeFile,mkdir,rename} from 'node:fs/promises';
 import {resolve,extname,dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {randomUUID,randomBytes} from 'node:crypto';
-import {ROUTES,BY_ID,CAMP} from './.build/data.js';
-import {createState,publicView,targetRoute,offeredFacts,recordChat,think,validateOrders,orderOutlook,resolveRound,nextRound,chooseCampPriority,assertCanAsk} from './.build/engine.js';
+const redirectOnly=process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url);
+const {ROUTES,BY_ID,CAMP}=redirectOnly?{}:await import('./.build/data.js');
+const {createState,publicView,targetRoute,offeredFacts,recordChat,think,validateOrders,orderOutlook,resolveRound,nextRound,chooseCampPriority,assertCanAsk}=redirectOnly?{}:await import('./.build/engine.js');
 import {liveAI,modelConfig,validateTalk,validateAssess} from './ai.mjs';
 const home=fileURLToPath(new URL('.',import.meta.url));
 export function createDemoServer({ai=liveAI,saveDir=resolve(home,'.cache/saves'),settingsFile}={}){
@@ -84,4 +85,7 @@ export function createDemoServer({ai=liveAI,saveDir=resolve(home,'.cache/saves')
   }catch(e){send(e.code==='ENOENT'?404:400,{error:e.name==='TimeoutError'?'AI回应超时，本次未提交；请重试。':e.message??'请求失败，请重试。'});}finally{if(lock)busy.delete(lock);}
  });
 }
-if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){const port=Number(process.env.YILING_DEMO_PORT||8828);createDemoServer().listen(port,'127.0.0.1',()=>console.log(`Yiling rescue demo: http://127.0.0.1:${port}`));}
+if(redirectOnly){
+ const port=Number(process.env.YILING_DEMO_PORT||8828);
+ http.createServer((req,res)=>{res.writeHead(302,{Location:'http://127.0.0.1:8812/?chapter=yiling','Cache-Control':'no-store'});res.end();}).listen(port,'127.0.0.1',()=>console.log(`历史入口转至第四章：http://127.0.0.1:8812/?chapter=yiling`));
+}

@@ -6,6 +6,7 @@ import { endingFilmForState } from '../web-demo/.build/GameStarter/web-demo/src/
 const movies=JSON.parse(readFileSync(new URL('../web-demo/public/cinematics.json',import.meta.url)));
 const flow=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.flow.json',import.meta.url)));
 const branch=JSON.parse(readFileSync(new URL('../../content/chapters/wuzhang/chapter-one.branch.json',import.meta.url)));
+const rowFilms=movies.chapterDialogue.filter(clip=>Array.isArray(clip.rows));
 
 test('结局影片只呈现已发生的结果，次日问责不借用结局影片',()=>{
  const legacyFilms=[{id:'C1END-EXEC',ending:'weiyan-execution'},{id:'C1END-TENT',ending:'tent-execution'}];
@@ -24,7 +25,7 @@ test('结局影片只呈现已发生的结果，次日问责不借用结局影�
 });
 
 test('片段只覆盖现有连续剧情行，旧存档在片段中途时保留原文，不从片头重造事件',()=>{
- for(const film of movies.chapterDialogue){
+ for(const film of rowFilms){
   const section=flow.sections.find(s=>s.rows.some((id,i)=>film.rows.every((v,j)=>v===s.rows[i+j])));
   assert.ok(section,film.id);
   assert.equal(filmForRows([film],section.rows.slice(section.rows.indexOf(film.rows[0]))),film);
@@ -41,7 +42,7 @@ test('缺失、错说话人、待重拍的影片与动态AI接受句不能作为
   if (/C1T(13|14|18)-/.test(film.id)) assert.match(film.src, /20261024/);
   // The new T14 still has the guard mouthing the player's first request; keep J03 as dialogue.
   if (film.id.startsWith('C1T14-')) assert.ok(!film.rows.includes('J03'));
-  assert.ok(!film.rows.some(id=>['A-40B','W07','P2-SAY'].includes(id)),film.id);
+  assert.ok(!film.rows?.some(id=>['A-40B','W07','P2-SAY'].includes(id)),film.id);
  }
 });
 test('固定分支只播放本轮已知的军情，动态改词仍走实时对白',()=>{
@@ -53,13 +54,17 @@ test('固定分支只播放本轮已知的军情，动态改词仍走实时对�
  assert.equal(filmForLine([canonical,variant],['A-42','A-43'],'玩家自定义的新发言',source),null);
  assert.equal(filmForLine([canonical,variant],['A-43'],'营前有急报。',source),null);
 });
-test('第一章新版对白沿用文字推进，启用的分支影片与字幕均在发布清单',()=>{
- assert.deepEqual(movies.chapterDialogue,[]);
+test('第一章分支影片与字幕均在发布清单，只接入已采用的镜头',()=>{
  const filmNodes=branch.nodes.filter(node=>node.film);
  assert.ok(filmNodes.length>0);
+ const registry=Object.values(movies).flat();
  for(const {id,film} of filmNodes){
   for(const clip of [...(film.leadIn??[]),film]){
-   assert.ok(movies.branchDialogue.some(entry=>entry.src===clip.src&&entry.subtitles===clip.subtitles),id);
+   assert.ok(registry.some(entry=>entry.src===clip.src&&entry.subtitles===clip.subtitles),id);
+   assert.doesNotMatch(clip.src,/CH01-(J02|F02)-h3-v6-/);
   }
  }
+ const joint=filmNodes.find(node=>node.id==='C01-JIANG-JOINT');
+ assert.match(joint.film.src,/CH01-J04-h3-v6-1\.3x-/);
+ assert.equal(joint.film.afterNode,'C01-JOINT-DAWN');
 });

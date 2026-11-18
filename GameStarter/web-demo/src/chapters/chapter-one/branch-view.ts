@@ -13,7 +13,7 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
     let request: AbortController | null=null, status='', task='', previousDraft='', failedTurn=false, fixedInput=false;
     let localMode=false, localMatch: {text:string;plan:LocalPlan;stamp:string} | null=null;
     const clueNoticeDuration=4500;
-    let knownClues=game.branch?.clues.map(c=>c.id)??[], clueNotice='', clueNoticeStarted=0, clueNoticeTimer=0;
+    let knownClues=new Map((game.branch?.clues??[]).map(c=>[c.id,JSON.stringify([c.title,c.text])])), clueNotice='', clueNoticeLabel='记下线索', clueNoticeStarted=0, clueNoticeTimer=0;
     const clearClueNotice=()=>{
         clearTimeout(clueNoticeTimer);clueNoticeTimer=0;clueNotice='';
         root.querySelector('.branch-clue-gained')?.remove();
@@ -21,7 +21,7 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
     const clueToast=()=>{
         const elapsed=Math.max(0,performance.now()-clueNoticeStarted);
         // Scene renders must resume the original animation, never restart its lifetime.
-        return clueNotice&&elapsed<clueNoticeDuration?`<aside class="branch-clue-gained" role="status" style="animation-delay:-${elapsed}ms"><small>记下线索</small><span>${esc(clueNotice)}</span></aside>`:'';
+        return clueNotice&&elapsed<clueNoticeDuration?`<aside class="branch-clue-gained" role="status" style="animation-delay:-${elapsed}ms"><small>${clueNoticeLabel}</small><span>${esc(clueNotice)}</span></aside>`:'';
     };
     const fingerprint=()=>JSON.stringify([game.branch?.dialogue.audit,game.branch?.line,game.runtimeMode()]);
     const cancel=()=>{request?.abort();request=null;task='';};
@@ -59,11 +59,11 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
             const paper=offlineInput?'':expressionPaperHTML({
                 evidence:'', clues:b.clues, selected:b.selected, draft:b.draft, status,
                 inputId:'branch-input', statusId:'branch-status', maxLength:g.aiScene?800:400,
-                placeholder:g.aiScene?'我的回应…':'也可以自己问一句……', guidance:false,
+                placeholder:g.aiScene?'我的回应…':g.node.freeInput?.placeholder??'也可以自己问一句……', guidance:false,
                 polishActions:g.aiScene&&!localMode?`<button type="button" class="polish-button" data-branch="polish" ${request||!b.draft.trim()?'disabled':''}>润色表达<svg class="polish-spark" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 0C9 6 10 7 16 8C10 9 9 10 8 16C7 10 6 9 0 8C6 7 7 6 8 0Z" fill="currentColor"/></svg></button>${previousDraft?'<button type="button" data-branch="undo-polish">撤回润色</button>':''}`:'',
                 clearButton:'<button type="button" data-branch="clear">清空</button>',
                 confirmActions:`<button type="submit" class="confirm-expression" ${request||!b.draft.trim()?'disabled':''}>${request?task:localMode?'本地规则检查':failedTurn?'重试':g.aiScene?'确认说出':'问他'}</button>${request?'<button type="button" data-branch="cancel">取消</button>':''}${failedTurn&&!localMode?'<button type="button" data-branch="local-check">本地规则检查</button>':''}${failedTurn||localMode?'<button type="button" data-branch="use-fixed">改用固定说法</button>':''}`,
-                help:g.aiScene&&g.aiHint?`<details class="expression-help"><summary>${g.state.jiangAgreed?'回想伯约的话':'回想小甲的话'}</summary><p class="branch-hint">${esc(g.state.jiangAgreed?b.clues.find(c=>c.id==='branch-jiang')?.text??g.aiHint:g.aiHint)}</p></details>`:'',
+                help:'',
             });
             return `<main class="workspace-screen expression-workspace narrative-expression branch-scene" data-phase="expression" data-node="${g.nodeId}" data-line="${b.line}" data-ending="${g.node.endingId??''}">
                 <div class="thought-landscape" style="background-image:url('${esc(background)}')"></div>${character?portraitStage(portrait(character)):''}${hud}
@@ -83,7 +83,6 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
           <section class="dialogue-box ${reading ? 'dialogue-advance' : 'scout-choice'}" tabindex="0" aria-label="当前对白">
             <span class="dialogue-speaker">${esc(speaker==='演出'?'':speaker)}</span>
             <span class="dialogue-reading"><span class="dialogue-text"><span id="spoken-line">${esc(line?.text ?? '')}</span></span></span>
-            ${g.nodeId==='C01-CONFIRMED-RETURN' && g.state.jiangAgreed ? '<p class="branch-hint">伯约已应允接报。若须丞相定夺，由他入帐禀明。</p>' : ''}
             ${controls ? `<div class="branch-options">${controls}</div>` : ''}
             ${status ? `<p id="branch-status" role="status">${esc(status)}</p>` : ''}
           </section>${reading ? '<p class="dialogue-key-hint" aria-hidden="true">点击屏幕继续 · 空格</p>' : ''}${clueToast()}
@@ -99,10 +98,10 @@ export function createBranchView(root: HTMLElement, game: ChapterOneSession, med
     let at=fingerprint();
     game.onChange(()=>{
         const next=fingerprint();if(next!==at){cancel();status='';previousDraft='';failedTurn=false;fixedInput=false;localMode=false;localMatch=null;}at=next;
-        const clues=game.branch?.clues??[], gained=clues.filter(c=>!knownClues.includes(c.id));
-        if(ui.restoring || clues.length<knownClues.length)clearClueNotice();
-        else if(gained.length){clearClueNotice();clueNotice=gained.map(c=>c.title).join(' · ');clueNoticeStarted=performance.now();clueNoticeTimer=window.setTimeout(clearClueNotice,clueNoticeDuration);}
-        knownClues=clues.map(c=>c.id);
+        const clues=game.branch?.clues??[], gained=clues.filter(c=>knownClues.get(c.id)!==JSON.stringify([c.title,c.text]));
+        if(ui.restoring || clues.length<knownClues.size)clearClueNotice();
+        else if(gained.length){clearClueNotice();clueNoticeLabel=gained.every(c=>knownClues.has(c.id))?'线索已更新':'记下线索';clueNotice=gained.map(c=>c.title).join(' · ');clueNoticeStarted=performance.now();clueNoticeTimer=window.setTimeout(clearClueNotice,clueNoticeDuration);}
+        knownClues=new Map(clues.map(c=>[c.id,JSON.stringify([c.title,c.text])]));
     });
     function inspectLocal() {
         cancel();localMode=true;fixedInput=false;localMatch=null;

@@ -15,6 +15,7 @@ export function resolveCampaignOrders(text:string,address:Address,units:Record<s
  if(/补员|补充兵|增援第|合并|拆分|分兵|粮|兵器|弓箭|骑兵|步兵|骑马|一半|全部兵/.test(text))throw Error('此处支持整队改令或从营中百人编队；补员、拆并与兵种配置尚未开放。');
  // Semicolons delimit full orders; commas only start a new order when a new count/unit follows.
  const clauses=text.replace(/[。\n；;]/g,';').replace(/[,，]\s*(?=(?:再|另)?(?:派|遣|拨|出动)?\s*[\d一二两三四五六七八九十百千]+\s*(?:人|名|兵)|第?[\d一二两三四五六七八九十]+(?:队|支)|队伍|甲队)/g,';').split(';').map(x=>x.trim()).filter(Boolean);
+ if(!clauses.length)throw Error('请写明人数和任务，例如：派400人接应沙摩柯。');
  if(clauses.length>5)throw Error('一批最多安排5支队伍。');
  return clauses.map(c=>{
   const matches=[...c.matchAll(/(?:第\s*([\d一二两三四五六七八九十百]+)\s*(?:支)?队|队伍?\s*([\d一二两三四五六七八九十百]+)|([\d一二两三四五六七八九十百]+)队)/g)];

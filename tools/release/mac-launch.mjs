@@ -18,7 +18,6 @@ const apiPort=gameServer.address().port;
 const {createStaticServer}=await import(pathToFileURL(resolve(root,'game/GameStarter/web-demo/serve.mjs')));
 const server=createStaticServer({root:resolve(root,'game/web'),
  commandOptions:{directory:resolve(data,'yiling-command/saves')},
- rescueOptions:{saveDir:resolve(data,'yiling-rescue/saves'),settingsFile:process.env.GAME_SETTINGS_FILE},
  onRequest:async(req,res)=>{
   if(req.headers.host!=='127.0.0.1:18812'){res.writeHead(403);res.end();return true;}
   const url=new URL(req.url,'http://127.0.0.1:18812');

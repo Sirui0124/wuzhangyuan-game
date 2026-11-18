@@ -1,6 +1,6 @@
 import {crisisAuthority,crisisReference,validCrisisClaims} from './route-ai.mjs';
 import {readFile} from 'node:fs/promises';
-import {modelConfig,parseJSON} from '../yiling-rescue/ai.mjs';
+import {modelConfig,parseJSON} from './model-config.mjs';
 import {callModel} from '../../GameStarter/server/model-transport.mjs';
 export const design=JSON.parse(await readFile(new URL('../../docs/design/chapter-four-ai-library-20261117/furong-rescue.design.json',import.meta.url),'utf8'));
 const BASE=[
@@ -61,7 +61,7 @@ export function validateReply(raw,known){
 }
 export async function talk(s,text,{signal,model,refresh}={}){
  const config=model?null:await modelConfig();
- if(!model&&!config.apiKey)throw Error('本机尚未配置AI，请在游戏设置保存模型配置后重试；本次未推进战局。');
+ if(!model&&!config.apiKey)throw Object.assign(Error('本机尚未配置AI，请在游戏设置保存模型配置后重试；本次未推进战局。'),{status:400});
  const call=async(system,input)=>{
   const result=await(model?model({system,input,signal}):callModel(config,{system,text:JSON.stringify(input),temperature:system===CLASSIFY?.1:.65},signal));
   return typeof result==='string'?parseJSON(result):result.text?parseJSON(result.text):result;

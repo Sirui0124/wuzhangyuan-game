@@ -1,4 +1,4 @@
-import {modelConfig,parseJSON} from '../yiling-rescue/ai.mjs';
+import {modelConfig,parseJSON} from './model-config.mjs';
 import {callModel} from '../../GameStarter/server/model-transport.mjs';
 
 export const CRISIS_EVENT_PROMPT_VERSION='2026-11-18-crisis-event-v1';

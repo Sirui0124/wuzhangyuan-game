@@ -1,3 +1,4 @@
+import { YILING_CAMPAIGN_KEY } from '../campaign/yiling-result';
 /** Historical chapter access is separate from plot saves and never grants plot facts. */
 export const CHAPTER_HISTORY_KEY = 'wuzhang-chapter-history-v1';
 export const chapterOrder = ['wuzhang', 'grain', 'jieting', 'yiling', 'jingzhou', 'luofengpo'] as const;
@@ -76,11 +77,12 @@ export function chapterAccess(store: Store, sources = specs): Record<ChapterId, 
 }
 /** A new campaign keeps archives but must never migrate their old access again. */
 export function startNewChapterProgress(store: Store & Pick<Storage, 'removeItem'> = localStorage, sources = specs) {
-    const keys = [CHAPTER_HISTORY_KEY, 'wzy:chapter-results:v1', 'wzy:chapter-results:v1:yiling-base', 'yiling-rescue-campaign-session-v1', ...sources.flatMap(spec => [spec.saveKey, ...(spec.completedKey ? [spec.completedKey] : [])])];
+    const keys = [CHAPTER_HISTORY_KEY, 'wzy:chapter-results:v1', YILING_CAMPAIGN_KEY, ...sources.flatMap(spec => [spec.saveKey, ...(spec.completedKey ? [spec.completedKey] : [])])];
     const previous = Object.fromEntries(keys.map(key => [key, store.getItem(key)]));
     const backup = JSON.stringify(previous);
     store.setItem(`${CHAPTER_HISTORY_KEY}:before-new`, backup);
     if (store.getItem(`${CHAPTER_HISTORY_KEY}:before-new`) !== backup) throw new Error('新游戏备份未写入');
+    store.setItem(YILING_CAMPAIGN_KEY + ':new-game', '1');
     store.setItem(CHAPTER_HISTORY_KEY, JSON.stringify({ version: 1, entered: [], completed: [], freshStart: true }));
     for (const key of keys) if (key !== CHAPTER_HISTORY_KEY) store.removeItem(key);
 }

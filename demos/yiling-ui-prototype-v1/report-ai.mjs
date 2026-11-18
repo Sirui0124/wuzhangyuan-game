@@ -1,6 +1,6 @@
 import {crisisAuthority} from './route-ai.mjs';
 import {modern,eight,routeAuthority} from './route-config.mjs';
-import {modelConfig,parseJSON} from '../yiling-rescue/ai.mjs';
+import {modelConfig,parseJSON} from './model-config.mjs';
 import {callModel} from '../../GameStarter/server/model-transport.mjs';
 
 export const REPORT_PROMPT_VERSION='2026-11-18-field-report-v8-events';

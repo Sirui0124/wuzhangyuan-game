@@ -5,7 +5,7 @@ import { resolve, sep } from 'node:path';
 import { excludedReason, validatedStageDirectory, validatePayload, workspaceRoot } from './stage-payload.mjs';
 
 test('private configuration and debug saves stay out, but live shared styles and voice pages remain', () => {
-    for (const name of ['.env', '.env.example', 'nested/.env.profiles.json', 'keys/customer.pfx', 'api-defaults.json', 'nested/service-credentials.json', 'playtest/weiyan-second.json', 'art-review/index.json', 'art-review.html', 'GameStarter/web-demo/src/art-review.js']) {
+    for (const name of ['yiling-rescue/index.html', 'yiling-rescue/app.js', '.env', '.env.example', 'nested/.env.profiles.json', 'keys/customer.pfx', 'api-defaults.json', 'nested/service-credentials.json', 'playtest/weiyan-second.json', 'art-review/index.json', 'art-review.html', 'GameStarter/web-demo/src/art-review.js']) {
         assert.ok(excludedReason(name), name);
     }
     for (const name of ['art-review/themes.css', 'art-review/mindmap.css', 'GameStarter/assets/scripts/GameApi.js', 'GameStarter/assets/scripts/narrative/state.js', 'voice-demo.html', 'video-review.html', 'audio/licenses/kenney_interface-sounds.txt', 'video/current/CH2-V01.mp4']) {

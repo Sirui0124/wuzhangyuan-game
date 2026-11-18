@@ -1,10 +1,13 @@
 # Windows 安装版与 Mac 本地网页版发布流程
 
-2026-11-18，适用于当前网页工程。用户已暂停 Unity 移植；UnityPort 保留为历史试验，不进入玩家分发包。本流程替代继续双线移植的交付安排。
+2026-11-18，适用于当前网页工程。用户后续已重新授权Unity独立移植测试，但UnityPort仍不进入本流程的Windows/Electron与Mac网页分发包。Unity验证另见UnityPort/README.md，不以试验版替换本流程的正式网页交付。
+
+2026-11-19：第四章统一最新八路八轮。九路原型保留本地历史源码与存档，脱离正式构建、后端和发布包；旧入口仅转向正式第四章。正式存档指针使用 `yiling-command-chapter-v1`，不能把旧九路、三路或早期八路结果当作当前通关。
 
 ## 交付内容
 
-- Git 保存完整源码、各章剧情和设计文档、现用及在制素材、项目规则和发布脚本。Unity 历史试验仍保留。
+- GitHub保存网页源码、各章剧情和设计文档、现用及在制素材、项目规则和网页发布脚本。2026-11-18用户最新确认：Unity工程、移植流程和测试产物只保留本地，不作为GitHub打包上传内容；已有远端历史不在本次删除或改写。
+- 发布脚本拒绝推送尚未上传且涉及 `UnityPort/` 或 `tools/unity/` 的提交，也只接受网页Windows安装器和Mac本地网页附件。若本地分支含Unity提交，发布前须准备排除这些提交的独立网页交付分支，不能直接推送HEAD，也不能只靠后续删除文件来隐藏历史；本地Unity工程完整保留。
 - GitHub 公开仓库 `Sirui0124/wuzhangyuan-game` 的 Release 保存 Windows x64 NSIS 安装 EXE、Mac 本地网页版分发文件与 SHA256SUMS.txt。2026-11-18已按用户要求由私有转为公开。构建产物不进入 Git。
 - Mac 包含 Apple Silicon 与 Intel 的 Node 24.22.3 官方运行时，SHA-256 固定于构建脚本。此 tar.gz 是 Mac 必需的分发包，不额外生成源码压缩备份；本地同时保留完整原文件夹。
 - 凭据、玩家存档、缓存、依赖安装目录和本机开发工具不上传。AI 密钥由玩家在设置中配置。
@@ -59,7 +62,7 @@ node tools/release/test-web.mjs outputs/mac-web-标签/validation
 
 这只代表 Windows Chrome 验证。Mac 芯片运行时执行、Safari、权限/Gatekeeper 和终端退出行为须在 Mac 实机另验，不从 Windows 结果推断通过。不要把本机测试数据放入已完成的分发包。
 
-每次发布另运行 `node tools/release/verify-default-settings.mjs "Windows独立目录/Wuzhangyuan.exe" "Mac解包目录"`。此检查用隔离用户目录验证两个产物的默认网址、模型、初始空密钥，以及只填写测试密钥即可保存并重新读取；不调用真实模型。不要以旧版测试替代新产物验证。`test-web.mjs` 另核对仅第一章、第四章配置、排除章节404、剧情内嵌影片引用，以及第四章两种入口的后端会话。
+每次发布另运行 `node tools/release/verify-default-settings.mjs "Windows独立目录/Wuzhangyuan.exe" "Mac解包目录"`。此检查用隔离用户目录验证两个产物的默认网址、模型、初始空密钥，以及只填写测试密钥即可保存并重新读取；不调用真实模型。不要以旧版测试替代新产物验证。`test-web.mjs` 另核对仅第一章、第四章配置、排除章节404、剧情内嵌影片引用，以及第四章正式入口和旧军令链接均进入最新八路八轮的后端会话；确认旧九路API不在正式服务、九路后端及页面不进入发布包。
 
 ## 提交与发布
 

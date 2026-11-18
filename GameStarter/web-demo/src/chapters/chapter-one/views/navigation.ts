@@ -11,7 +11,7 @@ import { achievementCardHTML } from '../../../achievement-card';
 import { commandActionContent, mapActionContent } from '../../../game/map-action';
 import { chapterAccess, chapterAccessMessage, type ChapterId } from '../../progression';
 import { RESULT_KEY } from '../../../campaign/results';
-import { YILING_CAMPAIGN_KEY } from '../../../campaign/yiling-result';
+import { commandId, commandSource } from '../../../campaign/yiling-result';
 
 export function createNavigationViews(game: ChapterSession, media: Media, movies: Record<string, Clip[]>,
     stored: (key?: string) => string | null, hasCompleted: () => boolean, archive: () => { catalog: EndingCatalog; collection: EndingCollection; warning: string }, grainCompleted: () => boolean = () => false) {
@@ -38,14 +38,14 @@ export function createNavigationViews(game: ChapterSession, media: Media, movies
             const locked = !progress.unlocked;
             const replay = done || progress.replayable;
             if (chapter.id === 'yiling') {
-                const session = stored(YILING_CAMPAIGN_KEY);
+                const session = commandId(localStorage);
                 let finished = false;
                 try {
                     const result = JSON.parse(stored(RESULT_KEY) ?? '{}')?.yiling;
-                    finished = !!session && result?.status === 'completed' && result.source?.startsWith(`yiling-rescue-campaign:${session}:`);
+                    finished = !!session && result?.status === 'completed' && result.source?.startsWith(commandSource(session));
                 } catch { /* The chapter will verify the save when opened. */ }
                 const label = session ? finished ? '查看本章结局' : '继续这一章' : '开始这一章';
-                return `<section class="map-chapter next" data-map-node="yiling" aria-label="夷陵${progress.earlyAccess ? '，抢先体验' : ''}" style="${mapNodeStyle(chapter)}"><small>第四章${done ? ' · 已通关' : ''}</small><div class="map-chapter-heading"><h2>${esc(chapter.mapTitle)}</h2>${progress.earlyAccess ? '<small class="map-early-access">抢先体验</small>' : ''}</div><a class="chapter-prefix-link map-chapter-action" href="/?chapter=yiling">${commandActionContent(label)}</a></section>`;
+                return `<section class="map-chapter next" data-map-node="yiling" aria-label="夷陵八路营救" style="${mapNodeStyle(chapter)}"><small>第四章${finished ? ' · 已结算' : ''}</small><div class="map-chapter-heading"><h2>${esc(chapter.mapTitle)}</h2></div><a class="chapter-prefix-link map-chapter-action" href="/?chapter=yiling">${commandActionContent(label)}</a></section>`;
             }
             const continueFinale = chapter.id === 'luofengpo' && !!stored('luofengpo-chapter-seven-v1');
             const trial = ''; 

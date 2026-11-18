@@ -36,7 +36,7 @@
     "test:characters": "node tools/migration/characters-smoke.mjs",
     "test:pangtong": "node --test GameStarter/tests/chapter-seven-session.test.mjs && node tools/migration/chapter-seven-smoke.mjs",
     "test:subtitles": "node --test tools/video/*.test.mjs",
-    "test:rescue": "npm --prefix demos/yiling-rescue test",
+    "test:rescue": "npm --prefix demos/yiling-ui-prototype-v1 test",
     "test:stability": "npm run check && npm --prefix GameStarter run build:demo && npm run test:game && npm run test:core && npm run test:api && npm run test:subtitles && npm run test:architecture && npm run test:local && npm run test:rescue && npm run check:assets",
     "test:stability:browser": "node tools/migration/stability-smoke.mjs && node tools/migration/new-game-pv-smoke.mjs && node tools/migration/full-game-smoke.mjs && node tools/migration/chapter-one-fallback-smoke.mjs && node GameStarter/tests/rescue-shell.browser.mjs && node tools/migration/game-settings-smoke.mjs",
     "test:chapters:browser": "node tools/migration/chapter-two-films-smoke.mjs && node tools/migration/chapter-three-endings-smoke.mjs && node tools/migration/jieting-deployment-smoke.mjs && node tools/migration/jieting-five-round-smoke.mjs",

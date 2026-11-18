@@ -1,3 +1,4 @@
+import {verifyChapterFour} from './chapter-four-check.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {writeFileSync,mkdirSync} from 'node:fs';
@@ -25,21 +26,8 @@ try{
  for(const node of branch.nodes??[]){if(node.film)for(const path of [node.film.src,node.film.subtitles].filter(Boolean))assert.equal((await page.request.get(origin+path)).status(),200,path);}
  for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await page.request.get(origin+path)).status(),404,path);
  report.checks.push('包内仅第一章和第四章；其他章节入口与剧情文件缺席，第一章内嵌影片引用完整');
- await page.goto(origin+'/?chapter=yiling');await page.locator('[data-cinema-action=skip]').click();await page.frameLocator('iframe').locator('[data-action=start]').click();await page.frameLocator('iframe').locator('.campaign-header').waitFor();
- const key='yiling-rescue-campaign-session-v1';await page.waitForFunction(k=>!!localStorage.getItem(k),key);
- const id=await page.evaluate(k=>localStorage.getItem(k),key);
- const state=await page.evaluate(async id=>await(await fetch('/api/yiling-rescue/state?session='+encodeURIComponent(id))).json(),id);assert.equal(state.state.id,id);
- await page.reload();assert.equal(await page.evaluate(k=>localStorage.getItem(k),key),id);
- report.checks.push('第四章营救后端与浏览器刷新后存档保留');
- await page.goto(origin+'/?chapter=yiling&playtest=command');
- assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
- const command=page.frameLocator('iframe');
- await command.locator('#skip-info').click();
- await command.locator('.roster-row').waitFor();
- await command.locator('#fu-end-round').click();
- await command.locator('#round-report[open]').waitFor();
- assert.match(await command.locator('#round-report-title').innerText(),/第1轮/);
- report.checks.push('第四章前线军令可启动独立会话，并结算首轮军报');
+ report.chapterFour=await verifyChapterFour(page,origin);
+ report.checks.push('第四章先点军旗阅读并开始交谈；正式入口、刷新和旧军令链接沿用同一v4八路八轮局，首轮军报结算通过，旧九路API返回404');
  for(const chapter of ['grain','jieting','jingzhou','luofengpo']){await page.goto(origin+'/?chapter='+chapter);await page.waitForFunction(id=>new URL(location.href).searchParams.get('locked')===id,chapter);}
  report.checks.push('其余章节维持当前暂未开放状态');
  assert.deepEqual(report.errors,[]);assert.deepEqual(report.missing,[]);report.passed=true;

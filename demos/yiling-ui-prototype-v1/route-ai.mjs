@@ -1,6 +1,6 @@
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
-import {modelConfig,parseJSON} from '../yiling-rescue/ai.mjs';
+import {modelConfig,parseJSON} from './model-config.mjs';
 import {callModel} from '../../GameStarter/server/model-transport.mjs';
 import {routeAuthority,eight} from './route-config.mjs';
 export const ROUTE_PROMPT_VERSION='2026-11-18-eight-front-v5-events';
@@ -86,7 +86,7 @@ export function validateRouteReply(raw,known){
 }
 export async function talkRoute(s,front,text,{model,signal,refresh}={}){
  if(!SPEAKERS[front]||!s.fronts[front]||s.fronts[front].status==='locked')throw Error('尚未收到这一路的消息。');
- const config=model?null:await modelConfig();if(!model&&!config.apiKey)throw Error('尚未配置AI，请在设置中配置后重试；本次未计问答或推进战局。');
+ const config=model?null:await modelConfig();if(!model&&!config.apiKey)throw Object.assign(Error('尚未配置AI，请在设置中配置后重试；本次未计问答或推进战局。'),{status:400});
  const call=async(system,input)=>{const r=await(model?model({system,input,signal}):callModel(config,{system,text:JSON.stringify(input),temperature:system===ROUTE_CLASSIFY?.1:.55},signal));return typeof r==='string'?parseJSON(r):r.text?parseJSON(r.text):r;};
  const history=(s.routeTurns||[]).filter(t=>t.front===front).slice(-4),known=authority(s,front);
  const checked=async(system,input,validate)=>{let error;for(let attempt=0;attempt<2;attempt++){try{return validate(await call(system,{...input,...(attempt?{correction:error.message}: {})}));}catch(e){error=e;if(signal?.aborted||attempt)throw e;}}};

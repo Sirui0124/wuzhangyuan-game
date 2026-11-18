@@ -75,17 +75,9 @@ try {
   assert.match(await second.page.locator('.ai-guidance').innerText(), /预设发言/);
   checks.push('第二章未配置时保留预设发言，并能打开共用配置');
   await second.context.close();
-  const fourth = await fixture();
-  await fourth.context.route('**/api/yiling-rescue/health', route => route.fulfill({json:{ok:true,configured:false}}));
-  await fourth.page.goto(base + '/?chapter=yiling');
-  await fourth.page.locator('.rescue-ai-guide').waitFor();
-  await fourth.page.locator('.rescue-ai-guide button').click();
-  await fourth.page.locator('.ai-setup-dialog #api-key:not([disabled])').waitFor();
-  await fourth.page.screenshot({path:out+'/yiling-setup.png'});
-  await fourth.page.locator('[data-setup-close]').click();
-  checks.push('夷陵提前说明必需的 AI 能力，直接打开共用配置，不发出军令或改进度');
-  await fourth.context.close();
+  // Fourth-chapter AI configuration and failure handling belong to the eight-route shell suite.
   assert.deepEqual(errors, []); assert.equal(modelCalls, 0);
   writeFileSync(out + '/verification.json', JSON.stringify({ checks, errors, modelCalls }, null, 2));
   console.log(JSON.stringify({ checks, errors, modelCalls }));
 } finally { await browser.close(); server.closeAllConnections(); await new Promise(ok => server.close(ok)); }
+

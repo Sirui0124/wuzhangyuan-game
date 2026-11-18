@@ -99,8 +99,12 @@ export class BranchProgress {
         if(all.some(l=>l.speaker==='告示'))clues.push({id:'branch-order',title:'帐前禁令',text:'丞相早已明令：今夜帐内有要事，不得擅入。'});
         if(heardLine('C01-WEI-OPEN',1))clues.push({id:'branch-enemy',title:'营外的魏军',text:'魏军骑兵已经到了营外，还没有攻营。前营正等着回话。'});
         else if(heardLine('C01-GUARD-ENEMY',2))clues.push({id:'branch-enemy',title:'营外的魏军',text:'小甲说：魏军骑兵在营外来回走，尚未攻营，也没有退去。来意还不清楚。'});
-        if(g.state.knowsJiang)clues.push(g.state.jiangAgreed
+        const remembersJiang=heardLine('C01-HINT-JIANG',0);
+        const remembersPromise=heardLine('C01-JIANG-CONFIRM',5);
+        if(g.state.knowsJiang||remembersJiang)clues.push(g.state.jiangAgreed
             ? {id:'branch-jiang',title:'伯约已答应接报',text:'伯约亲口答应：有军报便送给他；来人要当面说，也可以带去见他。该禀报丞相的，由他进去禀报。'}
+            : remembersPromise && g.state.deathSeen
+            ? {id:'branch-jiang',title:'记得伯约的承诺',text:'上一次，伯约答应先看军报，也肯见来报的人；需要禀报丞相的，由他进去。如今重回这一夜，还得再去问过他。'}
             : {id:'branch-jiang',title:'伯约可以代为把关',text:'伯约可以代为听取军情，判断是否需要禀报丞相；可请亲兵通传，尚未取得本人应允。'});
         return clues;
     }

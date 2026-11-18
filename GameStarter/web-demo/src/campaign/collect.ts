@@ -3,7 +3,7 @@ import { JingzhouSession, type Story as JingzhouStory } from '../chapters/chapte
 import { JietingSession } from '../chapters/chapter-three/session';
 import type { JietingStory } from '../chapters/chapter-three/types';
 import { emptyResult, priorChapters, RESULT_KEY, validateResult, type CampaignSnapshot, type ChapterResult, type ResultStore } from './results';
-import { YILING_BASE_KEY, YILING_CAMPAIGN_KEY } from './yiling-result';
+import { commandId, commandSource, YILING_CAMPAIGN_KEY } from './yiling-result';
 type FetchJSON = (url: string) => Promise<any>;
 const fetchJSON: FetchJSON = async url => { const r = await fetch(url); if (!r.ok) throw new Error('章节正文未载入'); return r.json(); };
 const keys = ['wuzhang-chapter-session-v1','grain-chapter-two-films-v1','jieting-chapter-three-v1','yiling-chapter-four-v1','jingzhou-chapter-five-v1',''];
@@ -13,14 +13,13 @@ export async function collectCampaign(store: ResultStore = localStorage, read: F
         try {
             const raw = key ? store.getItem(key) : null;
             if (id === 'yiling') {
-                const adopted = JSON.parse(store.getItem(RESULT_KEY) ?? '{}')?.yiling;
-                if (adopted?.source?.startsWith('yiling-rescue-adopted:') && store.getItem(YILING_BASE_KEY) === JSON.stringify(raw)) {
-                    validateResult(adopted); if(adopted.chapterId!=='yiling'||adopted.status!=='completed')throw new Error('营救结果不完整'); return adopted;
-                }
-                const campaignId = store.getItem(YILING_CAMPAIGN_KEY);
-                if (campaignId) {
-                    if (adopted?.source?.startsWith(`yiling-rescue-campaign:${campaignId}:`)) {
-                        validateResult(adopted); if (adopted.chapterId !== id) throw new Error('营救结果章节不符'); return adopted;
+                const current = commandId(store);
+                if (current) {
+                    const result = JSON.parse(store.getItem(RESULT_KEY) ?? '{}')?.yiling;
+                    if (result?.source?.startsWith(commandSource(current))) {
+                        validateResult(result);
+                        if (result.chapterId !== id) throw new Error('营救结果章节不符');
+                        return result;
                     }
                     return { ...emptyResult(id, 'in-progress'), source: YILING_CAMPAIGN_KEY };
                 }

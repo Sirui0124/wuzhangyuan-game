@@ -15,6 +15,7 @@ const backendFiles = ['server.mjs', 'model-profiles.mjs', 'model-transport.mjs',
 export function excludedReason(path) {
     path = slash(path);
     const parts = path.split('/');
+    if (path.startsWith('yiling-rescue/')) return 'retired-nine-route-demo';
     if (parts.some(part => /^\.env(?:\.|$)/i.test(part) || /^(?:api-defaults|.*credentials.*)\.json$/i.test(part))
         || /\.(?:key|pem|p12|pfx|keystore|jks)$/i.test(path)) return 'credentials-or-private-configuration';
     if (parts.some(part => ['.git', '.cache', 'library', 'temp', 'node_modules', 'outputs'].includes(part))) return 'development-or-cache-directory';
@@ -51,6 +52,8 @@ export function validatePayload(gameRoot) {
         'web/story/chapter-one.branch.json', 'web/release-profile.json', 'web/cinematics.json',
         'web/audio/manifest.json', 'web/art-review/themes.css', 'web/art-review/mindmap.css',
         'GameStarter/server/server.mjs', 'GameStarter/server/package.json', 'GameStarter/web-demo/serve.mjs',
+        'demos/yiling-ui-prototype-v1/campaign-runtime.mjs', 'demos/yiling-ui-prototype-v1/campaign-engine.mjs',
+        'demos/yiling-ui-prototype-v1/model-config.mjs', 'demos/yiling-ui-prototype-v1/crisis-rules.mjs',
     ];
     const errors = [], checks = { requiredFiles: 0, moduleImports: 0, staticReferences: 0 };
     function requireFile(path, message) {
@@ -59,6 +62,7 @@ export function validatePayload(gameRoot) {
     for (const name of required) { requireFile(resolve(game, name), `Missing runtime dependency: ${name}`); checks.requiredFiles++; }
     for (const path of walk(game)) {
         const name = slash(relative(game, path));
+        if (name.startsWith('demos/yiling-rescue/') || name.startsWith('web/yiling-rescue/')) errors.push(`Retired nine-route runtime in current payload: ${name}`);
         if (/(^|\/)\.env(?:\.|$)|\.(?:key|pem|p12|pfx|jks|keystore)$/i.test(name)) errors.push(`Forbidden private file: ${name}`);
         const extension = extname(path);
         if (['.js', '.mjs'].includes(extension) && !name.startsWith('node_modules/')) {
@@ -113,10 +117,9 @@ export function stagePayload(buildRoot, stageRoot, root = workspaceRoot) {
         else add(source, `web/${name}`, 'web');
     }
     for (const name of backendFiles) add(resolve(root, 'GameStarter/server', name), `GameStarter/server/${name}`, 'backend');
-    for (const name of ['server.mjs', 'ai.mjs', 'package.json', '.build/data.js', '.build/engine.js']) add(resolve(root, 'demos/yiling-rescue', name), `demos/yiling-rescue/${name}`, 'rescue-backend');
     // The integrated command-map backend must ship without relying on Node's TS loader.
     const generated = resolve(target, 'compiled-runtime'); mkdirSync(generated, { recursive: true });
-    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'crisis-rules.mjs', 'crisis-v3.mjs', 'crisis-events.mjs', 'crisis-event-ai.mjs', 'fu-ai.mjs', 'report-ai.mjs', 'route-config.mjs', 'route-ai.mjs']) {
+    for (const name of ['campaign-runtime.mjs', 'campaign-engine.mjs', 'model-config.mjs', 'crisis-rules.mjs', 'crisis-v3.mjs', 'crisis-events.mjs', 'crisis-event-ai.mjs', 'fu-ai.mjs', 'report-ai.mjs', 'route-config.mjs', 'route-ai.mjs']) {
         const source = resolve(root, 'demos/yiling-ui-prototype-v1', name);
         if (name === 'campaign-engine.mjs') {
             const compiled = resolve(generated, name);

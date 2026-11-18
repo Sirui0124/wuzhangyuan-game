@@ -125,6 +125,12 @@
       "id": "C01-OPEN",
       "title": "第六夜",
       "kind": "passage",
+      "film": {
+        "id": "CH01-CAMP-ARRIVAL-20261119",
+        "src": "/video/current/CH01-camp-arrival-v2-20261119.mp4",
+        "title": "五丈原军营",
+        "beforeLine": 2
+      },
       "lines": [
         {
           "speaker": "我（心声）",
@@ -253,7 +259,7 @@
       "choices": [
         {
           "id": "decision",
-          "label": "还有谁能处理军情？",
+          "label": "问问遇上事儿了谁能做主",
           "target": "C01-HINT-JIANG",
           "say": [
             {
@@ -275,7 +281,7 @@
         }
       ],
       "freeInput": {
-        "placeholder": "向小甲问一句……",
+        "placeholder": "问问遇上事儿了谁能做主",
         "submitLabel": "问他",
         "intentRoutes": [
           {
@@ -310,7 +316,8 @@
           "old": "你脸色怎么这么差？",
           "new": "你像是有话要问。说吧。"
         }
-      ]
+      ],
+      "note": "2026-11-19：死亡回溯到小甲，首项直接给出问问遇上事儿了谁能做主；点击后先由我开口询问，再听小甲说明伯约。已有线索按经历保留，不自动授予本轮姜维应允。"
     },
     {
       "id": "C01-GUARD-RULE",
@@ -483,6 +490,26 @@
           "speaker": "小甲",
           "old": "快去。这里有我。",
           "new": "快去。魏将军来了，我先替你接着。"
+        },
+        {
+          "speaker": "姜维",
+          "old": "前营有报来了？",
+          "new": "前营有军报？"
+        },
+        {
+          "speaker": "我",
+          "old": "还没有。小的只是担心，若有急报，拦在帐外怕误事，放进去又违了丞相的令。",
+          "new": "还没有。丞相吩咐不许人进帐，可真有急报，小的怕耽误了。"
+        },
+        {
+          "speaker": "姜维",
+          "old": "来找我。军报先交我看，来人有话，也领来见我。若须丞相定夺，我再进去。",
+          "new": "有报先送来给我。来人有话要说，也带过来；要请丞相定夺的，我进去禀报。"
+        },
+        {
+          "speaker": "我",
+          "old": "那我回帐前候着。",
+          "new": "是。那小的回去守着。"
         }
       ],
       "lines": [
@@ -500,19 +527,19 @@
         },
         {
           "speaker": "姜维",
-          "text": "前营有报来了？"
+          "text": "前营有军报？"
         },
         {
           "speaker": "我",
-          "text": "还没有。小的只是担心，若有急报，拦在帐外怕误事，放进去又违了丞相的令。"
+          "text": "还没有。丞相吩咐不许人进帐，可真有急报，小的怕耽误了。"
         },
         {
           "speaker": "姜维",
-          "text": "来找我。军报先交我看，来人有话，也领来见我。若须丞相定夺，我再进去。"
+          "text": "有报先送来给我。来人有话要说，也带过来；要请丞相定夺的，我进去禀报。"
         },
         {
           "speaker": "我",
-          "text": "那我回帐前候着。"
+          "text": "是。那小的回去守着。"
         }
       ],
       "afterLines": {
@@ -521,8 +548,8 @@
       "next": "C01-CONFIRMED-RETURN",
       "production": {
         "scene": "J02",
-        "spokenScript": "C:/Users/zhousirui/Documents/ChatGPT/逆转五丈原/video/production/CH01-complete-20261118/视频发声白名单.json",
-        "note": "恢复固定对白；影片与原接入配置保留于subtitle-audit/held-films.json，未通过实际声音听审。",
+        "spokenScript": "C:\\Users\\zhousirui\\Documents\\ChatGPT\\逆转五丈原\\video\\production\\CH01-revisions-20261119\\J02-对白与镜头修订.md",
+        "note": "2026-11-19用户否决v6角度与脸部真实性；对白已同步固定文字，中近景重拍稿待review，不恢复影片接入。",
         "status": "暂撤接入，待视听复核"
       }
     },
@@ -1947,9 +1974,17 @@
       "next": "C01-JOINT-DAWN",
       "production": {
         "clipId": "J04",
-        "status": "暂撤接入，待视听复核",
+        "status": "2026-11-19用户授权接入1.3倍速版及字幕",
         "playback": "single-continuous-video",
-        "note": "恢复固定对白；影片与原接入配置保留于subtitle-audit/held-films.json，未通过实际声音听审。"
+        "note": "影片覆盖议事对白，结束经天亮过渡到成功结算；原音频已获用户确认。"
+      },
+      "film": {
+        "id": "CH01-J04-h3-v6-1.3x",
+        "src": "/video/current/CH01-J04-h3-v6-1.3x-a22a3554.mp4",
+        "title": "魏延与姜维当面议事",
+        "subtitles": "/video/subtitles/CH01-J04-h3-v6-1.3x-a22a3554.vtt",
+        "beforeLine": 1,
+        "afterNode": "C01-JOINT-DAWN"
       }
     },
     {
@@ -2211,8 +2246,8 @@
         "speaker": "守帐军士",
         "listener": "魏延"
       },
-      "historyWindowRounds": 2,
-      "maxTurns": 3,
+      "historyWindowRounds": 3,
+      "maxTurns": 4,
       "inputLabel": "向魏延说明你的办法",
       "placeholder": "我的回应…",
       "scaffold": "",
@@ -2246,8 +2281,8 @@
       },
       "assessmentRules": [
         "不要求复述魏延已说过的军情。未提敌情记missing，不阻止通过；主动把尚未攻营说成破营等矛盾才记wrong。",
-        "结合最近两轮完整问答和当前发言。缺事实后补事实、缺接报办法后补办法可合并；最新撤回或否定优先，不能累计已撤回的话。",
-        "有效办法分：请姜维/伯约出来与魏延当面交谈 invite_jiang；由我把军报交给姜维/伯约判断，再把回令带回 relay_jiang；仅由我递报传话 self_relay；无办法 none；明确让魏延直接进帐 let_enter。 单说我来办、军报给我不够；self_relay至少表达转呈并取得或传回回话的安排。",
+        "结合本次交涉此前全部三轮以内的完整问答和当前发言。缺事实后补事实、缺接报办法后补办法可合并；最新撤回或否定优先，不能累计已撤回的话。",
+        "有效办法分：请姜维/伯约出来与魏延当面交谈 invite_jiang；由我把军报交给姜维/伯约判断，再把回令带回 relay_jiang；仅由我递报传话 self_relay；无办法 none；明确让魏延直接进帐 let_enter。 单说我来办、军报给我不够；明确自愿代递、转呈即可；不要求再复述如何取回回令。",
         "提姜维名字不等于安排他接报；请他过来处理、听报、判断是否禀报均可。仅提到其他人物或未知职位，先追问，不自动变成姜维。",
         "事实与提议分开：我去请伯约是提议。jiangHasAgreed=true时，玩家说伯约已经答应接报属实；false时这项断言为unsupportedClaim。提前应允不代表已经下令或丞相授权，仍不得声称这些事已发生。带魏延去见已应允的伯约属于invite_jiang。一般安抚如我会尽快不算伪造授权。",
         "怀疑、引用、否定、假设不等于本人放行。例如不能让将军进去不是 let_enter。普通质疑、不够恭敬或生硬不判死。",
@@ -2288,8 +2323,8 @@
         },
         "FORCE_ENTER": {
           "target": "C01-FORCE-ENTRY",
-          "intent": "三次仍未说明可执行办法，魏延失去耐心，拨开阻拦自行入帐；只说自己不再等，不提前描述灯灭。",
-          "fallback": "前营等不起了。让开，我自己去见丞相。"
+          "intent": "第四次仍未说清，魏延自行入帐。",
+          "fallback": "磨磨唧唧的，我自己去讲"
         },
         "EXECUTION": {
           "target": "C01-ANGER-EXEC",

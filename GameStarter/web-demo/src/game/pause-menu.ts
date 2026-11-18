@@ -6,7 +6,7 @@ import { pauseAction, resumeIcon } from './pause-art';
 /** Pause is a presentation layer: retain the scene, media element and playback offset. */
 export function createPauseMenu(root: HTMLElement, ui: GameUIState, options: {
     render(): void; settings(): string; home(): void; suspend(): void;
-    saves?(): string; restart?(): void;
+    saves?(): string; restart?(): void; chapterConfirmsRestart?: boolean;
 }) {
     let active = false, focus: HTMLElement | null = null;
     let playing: HTMLMediaElement[] = [];
@@ -51,7 +51,10 @@ export function createPauseMenu(root: HTMLElement, ui: GameUIState, options: {
             event.preventDefault(); event.stopImmediatePropagation();
             if (action === 'pause-home') { close(false); options.home(); }
             else if (action === 'pause-save' && options.saves) { ui.overlay = 'save'; ui.slotOverwrite = ''; options.render(); }
-            else if (action === 'pause-restart' && options.restart) { ui.overlay = 'restart-chapter'; options.render(); }
+            else if (action === 'pause-restart' && options.restart) {
+                if (options.chapterConfirmsRestart) { close(false); options.restart(); }
+                else { ui.overlay = 'restart-chapter'; options.render(); }
+            }
             else if (action === 'pause-restart-confirm' && options.restart) { close(false); options.restart(); }
             else if (action === 'resume-game') close(true);
             else back();

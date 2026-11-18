@@ -8,7 +8,7 @@ const module=path=>import(pathToFileURL(resolve(build,'GameStarter/web-demo/src'
 const {PangtongSession}=await module('chapters/chapter-seven/session.js');
 const {emptyResult,priorChapters,campaignEvidence,publishChapterResult,RESULT_KEY}=await module('campaign/results.js');
 const {collectCampaign}=await module('campaign/collect.js');
-const {adoptedYilingResult,YILING_BASE_KEY,YILING_CAMPAIGN_KEY}=await module('campaign/yiling-result.js');
+const {commandResult,commandSource,EIGHT_ROUTE_VERSION,YILING_CAMPAIGN_KEY}=await module('campaign/yiling-result.js');
 const {JingzhouSession}=await module('chapters/chapter-five/session.js');
 const {chapterAccess}=await module('chapters/progression.js');
 const {recordPangtongEnding}=await module('chapters/chapter-seven/achievements.js');
@@ -21,19 +21,22 @@ const store=()=>{const m=new Map();return{getItem:k=>m.get(k)??null,setItem:(k,v
 globalThis.localStorage=store();
 test('主线营救结果跟随当前轮次，新开一轮不沿用上一轮获救名单',async()=>{
  const st=store(),id='12345678-1234-1234-1234-123456789abc';
- st.setItem(YILING_CAMPAIGN_KEY,id);
- const result={...emptyResult('yiling'),status:'completed',ending:'multi-route-rescue',source:`yiling-rescue-campaign:${id}:20`,people:[{name:'傅肜',fate:'saved',detail:'本轮已脱险。'}]};
+ st.setItem(YILING_CAMPAIGN_KEY,JSON.stringify({id}));
+ const result={...emptyResult('yiling'),status:'completed',ending:'eight-front-deadline',source:commandSource(id)+'20',people:[{name:'傅肜',fate:'saved',detail:'本轮已脱险。'}]};
  publishChapterResult(result,st);assert.equal((await collectCampaign(st,read)).results[3].people[0].name,'傅肜');
- st.setItem(YILING_CAMPAIGN_KEY,'22345678-1234-1234-1234-123456789abc');
+ st.setItem(YILING_CAMPAIGN_KEY,JSON.stringify({id:'22345678-1234-1234-1234-123456789abc'}));
  const next=(await collectCampaign(st,read)).results[3];assert.equal(next.status,'in-progress');assert.deepEqual(next.people,[]);
 });
-test('独立营救须明确采用完整结局；投降不算阵亡，正式重玩后旧采用结果失效',async()=>{
- const st=store(),run={id:'12345678-1234-1234-1234-123456789abc',revision:7,phase:'ended',routes:['front','fu','huang','sha','ma','cheng','du','wang','sun'].map(id=>({id,status:id==='fu'?'saved':'failed',outcome:id==='fu'?'傅肜脱险。':'这一路未能带回。'}))};
- assert.throws(()=>adoptedYilingResult({...run,phase:'results'}));assert.throws(()=>adoptedYilingResult({...run,routes:run.routes.slice(1)}));
- const result=adoptedYilingResult(run);assert.equal(result.people.find(p=>p.name==='黄权').fate,'unknown');assert.equal(result.people.find(p=>p.name==='杜路、刘宁').fate,'unknown');assert.equal(result.rescued,null);
- publishChapterResult(result,st);assert.equal((await collectCampaign(st,read)).results[3].status,'missing');
- st.setItem(YILING_BASE_KEY,'null');assert.equal((await collectCampaign(st,read)).results[3].source,result.source);
- st.setItem('yiling-chapter-four-v1','{}');assert.equal((await collectCampaign(st,read)).results[3].status,'missing');
+test('八路结算按批次记下脱险，时限未撤的将士去向未明',()=>{
+ const id='12345678-1234-1234-1234-123456789abc';
+ const fronts=Object.fromEntries(['sha','camp','fu','ma','cheng','du','wang','huang'].map(key=>[key,{status:'holding'}]));
+ fronts.fu.status='home';fronts.ma.stages=[{name:'马良',status:'safe'},{name:'随员',status:'holding'}];
+ const session={scenarioId:id,revision:15,round:8,roundLimit:8,routeVersion:EIGHT_ROUTE_VERSION,ended:true,dead:3,fronts};
+ const result=commandResult(session);
+ assert.equal(result.ending,'eight-front-deadline');assert.equal(result.dead,3);assert.equal(result.rescued,null);
+ assert.equal(result.people.find(p=>p.name==='马良').fate,'saved');assert.equal(result.people.find(p=>p.name==='随员').fate,'unknown');
+ assert.deepEqual(commandResult({...session,ended:false}).people,[]);
+ assert.throws(()=>commandResult({...session,roundLimit:6}));
 });
 const correct={'PT-Q1':'when','PT-Q2':'trace','PT-Q3':'letter','PT-Q4':'living','PT-Q5':'alive','PT-Q6':'truth','PT-S0':'loss','PT-LOSS-CHOICE':'release','PT-RETREAT-CONFIRM':'confirm'};
 function play(overrides={},h=history()){

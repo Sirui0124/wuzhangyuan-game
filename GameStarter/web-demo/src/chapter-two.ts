@@ -73,7 +73,7 @@ async function start(){
     const ui=createGameUIState();ui.home=false;if(recoveryPending)ui.overlay='save-recovery';
     const people=createCharacterModule({root,portraits:media.characters,enabled:gameModules.characters});
     const evaluation=createEvaluationModule<Parameters<typeof judgeOpenDialogue>,Awaited<ReturnType<typeof judgeOpenDialogue>>>({enabled:()=>aiEnabled(readRuntimeMode()),online:([input,rules,evidence,_signal,diagnostic],signal)=>judgeOpenDialogue(input,rules,evidence,signal,diagnostic)});
-    const player=new CinematicPlayer(story.version,playtest?'grain-open1-films':'grain-prefix-cinematics-v1',true);
+    const player=new CinematicPlayer(story.version,playtest?'grain-open1-films':'grain-prefix-cinematics-v1',true,true,!playtest);
     if(restarting)player.resetPlayback();
     const snapshot=()=>({...session.state});
     const persist=()=>{if(recoveryPending)return;try{
@@ -160,7 +160,7 @@ async function start(){
         request=controller;error='';closePicker();render();audio.play('submit');
         const diagnostic=beginDialogueDiagnostic({input:session.state.draft.trim(),rubricVersion:session.currentRubric!.version,rubric:session.currentRubric,scene:session.current.round,nodeId:node,storyVersion:story.version,run:session.state.run,evidence:session.clues,selected:session.state.selected});
         requestDiagnostic=diagnostic;
-        const listener=dialogueCamera.listen(root,movies.chapterTwo,node,session.state.draft,controller.signal,event=>recordDialogueDiagnostic(diagnostic,event==='listener-mounted'?'listener-started':'listener-ended',{snapshot:{mediaEvent:event}}));
+        const listener=dialogueCamera.listen(root,movies.chapterTwo,node,session.state.draft,controller.signal,event=>recordDialogueDiagnostic(diagnostic,event==='listener-mounted'?'listener-started':'listener-ended',{snapshot:{mediaEvent:event}}),!playtest);
         try{const j=await evaluation.evaluate([session.state.draft.trim(),session.currentRubric!,session.clues,controller.signal,{requestId:diagnostic,nodeId:node,storyVersion:story.version,run:session.state.run,selected:[...session.state.selected],responseContext:session.dialogueResponseContext}],controller.signal);
             await listener;
             if(request!==controller||session!==current||session.current.id!==node){recordDialogueDiagnostic(diagnostic,'late-result-ignored');return;}

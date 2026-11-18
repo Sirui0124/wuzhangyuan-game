@@ -18,7 +18,7 @@
 
 2026-10-27第二章更新：本批17段中14段已接入待审版，C02、C05C、C06因玩家台词口型落在NPC身上而暂留旧版；见[审核与替换记录](../../docs/video/CHAPTER-TWO-RECEIVED-UPDATE-20261027.md)。读信、查账和回帐确认仍保留，旧存档编号与分数规则不变。
 
-正式入口现按历史进度顺序开放五丈原、祁山、街亭、夷陵、荆州、落凤坡，直达网址同样检查。旧存档已玩到后续章节时，保留该章并允许重玩前章；读取早期存档不会撤销本轮资格。主菜单“新游戏”会备份并重置章节进度，重新从第一章逐章解锁；“重玩本关”和舆图重玩保留本轮资格。规则及验证见[历史章节解锁](../../docs/design/CHAPTER-PROGRESSION-20261027.md)。专用开发试玩不能绕过入口，也不写正式解锁记录。
+当前发行仅开放五丈原、夷陵，直达网址同样检查。旧存档已玩到后续章节时，保留该章并允许重玩前章；读取早期存档不会撤销本轮资格。主菜单“新游戏”会备份并重置章节进度，重新从第一章逐章解锁；“重玩本关”和舆图重玩保留本轮资格。规则及验证见[历史章节解锁](../../docs/design/CHAPTER-PROGRESSION-20261027.md)。专用开发试玩不能绕过入口，也不写正式解锁记录。
 
 - `src/game.ts`：当前入口的依赖装配、生命周期与用户动作。
 - `src/game/`：渲染、设置、模态、输入、拖放、界面状态。
@@ -46,7 +46,7 @@
 
 荆州 `/?chapter=jingzhou&playtest=reports` 先播放关羽帐中短对白，再开始六条判断。结尾直接按正确条数复命、回应关羽并进入结局，不再选三人或抽签。已有进度可续玩；加 `&restart=1` 后确认重开可查看新开场。对应设计见[荆州问报前后](../../docs/design/CHAPTER-FIVE-STORY-20261028.md)，浏览器专项检查为 `node tools/migration/chapter-five-story-smoke.mjs`。
 
-夷陵统一使用 `/?chapter=yiling` 的多路营救版本，包含九路营救、六轮军令及原有兵力安排。旧 `playtest=story`、`playtest=reception` 链接也进入此版本。黄权三队240人的旧接应故事及专用运行代码已删除，旧存档不再生成终章营救经历。本机历史存档保留。多路玩法见[夷陵营救说明](../../demos/yiling-rescue/README.md)。
+[第四章夷陵](http://127.0.0.1:8812/?chapter=yiling)使用八路、八轮、2500人的军图。旧 `playtest=story`、`reception`、`command` 链接都进入同一章。进度与军报跟随本局编号，详情见[八路营救说明](../../demos/yiling-ui-prototype-v1/README.md)。
 
 根目录 `npm run check` 检查架构和类型；`npm run build` 编译；`npm run test:game` 验证当前玩法；`npm test` 构建并执行全部章节单元测试；`npm run test:smoke` 在独立 Chrome 上下文走完整第一章。第三章浏览器检查为 `node tools/migration/chapter-three-smoke.mjs` 与 `node tools/migration/chapter-three-online-smoke.mjs`。测试不读取真实玩家存档。
 
@@ -56,6 +56,6 @@
 
 ## 稳定性回归
 
-`npm run test:stability` 顺序执行类型、构建、全部玩法与底层核心、服务、字幕、架构、本地构建恢复、夷陵营救和发布资源校验。`npm run test:stability:browser` 在构建后运行存档保护、视频切换、跨章字幕、第一章通关、夷陵至荆州及终章回归，使用独立浏览器上下文。
+`npm run test:stability` 顺序执行类型、构建、全部玩法与底层核心、服务、字幕、架构、本地构建恢复、夷陵营救和发布资源校验。`npm run test:stability:browser` 在构建后运行存档保护、视频切换、跨章字幕、第一章通关、夷陵营救存读档，使用独立浏览器上下文。
 
 发布字幕只取 `cinematics.json` 的当前引用；历史 VTT 留在源目录，不进入构建。详见[本轮 review 与重构](../../docs/architecture/REVIEW-20261029.md)。

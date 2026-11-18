@@ -234,4 +234,43 @@ html,body{height:100%;overflow:hidden}
 .contact-rail button[aria-pressed=true] small{color:#d4bb87}
 .fu-map-status{max-width:calc(100% - 24px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .front-story figure[hidden]{display:none}
+#story-film[hidden],#story-reading[hidden],#story-replay[hidden]{display:none}
+.front-story.playing-film{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;padding:0;margin:0;border:0;overflow:hidden;background:#000}
+.playing-film .story-head{display:none}
+#story-film{position:absolute;inset:0;background:#000}
+#story-film video{display:block;width:100%;height:100%;object-fit:contain}
+#story-skip{position:absolute;top:max(14px,env(safe-area-inset-top));right:max(16px,env(safe-area-inset-right));border:1px solid #c6ab78;background:#15150fe0;color:#f6e4bd}
+.front-story section{margin-block:16px}
+.front-story section p{font-size:var(--type-body)}
+#story-current{color:inherit;font-size:var(--type-body)}
+.story-actions{gap:10px;flex-wrap:wrap}
+.desk.map-first{grid-template-rows:auto minmax(0,1fr)}
+.map-first header{min-height:42px}
+.map-first .work,.map-first .divider,.map-first footer,.map-first .map-note,.map-first .round-banner,.map-first .field-guide{display:none}
+.map-viewport{position:absolute;inset:0;overflow:auto;overscroll-behavior:contain}
+.map-world{position:relative;width:100%;height:100%;min-height:210px;transform:none}
+.map-first .map-world{min-height:0}
+.army-marker.unread{min-height:44px;padding:4px}
+.army-marker.unread .place-label{position:relative;padding:6px 12px}
+.front-alert{position:absolute;right:-7px;top:-11px;display:grid;place-items:center;width:20px;height:20px;border:1px solid #f4d59c;border-radius:50%;background:#823922;color:#fff2c7;font:bold 15px/1 Georgia,serif;text-shadow:none}
+#map-error{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);padding:12px;background:#211e18;color:#efdfba}
+.work{grid-template-columns:minmax(0,1fr) 250px}
+.conversation .contact-rail{display:flex;flex:0 0 auto;flex-direction:row;gap:4px;padding:0;overflow:auto;border:0;border-bottom:1px solid #a38b574d;background:none}
+.conversation .contact-rail button{display:flex;align-items:baseline;gap:6px;min-height:36px;padding:5px 10px;white-space:nowrap;border:0;border-bottom:2px solid transparent}
+.conversation .contact-rail button[aria-pressed=true]{border-bottom-color:#d4b06a}
+@media(max-width:1100px){.work{grid-template-columns:minmax(0,1fr) 214px}}
+@media(max-width:740px){
+ .work{grid-template-columns:minmax(0,1fr)}
+ .map-world:not(.many-fronts){min-height:150px}
+ .map-world.many-fronts{min-width:750px;min-height:275px}
+ .army-marker{padding:0}.army-marker .army-emblem{display:none}
+ .army-marker .place-label{padding:3px 5px}
+ .front-urgency{top:-7px}
+ .map-note{display:none}
+ .conversation .contact-rail button{padding:4px 8px;min-height:32px}
+}
+@media(max-width:480px){
+ .map-world:not(.many-fronts) .army-fu{margin-left:5%}
+ .map-world:not(.many-fronts) .army-camp{margin-left:-6%}
+}
 @media(max-height:600px){.contact-rail button{padding-top:4px;padding-bottom:4px}.contact-rail button small{font-size:11px;margin-top:1px}}

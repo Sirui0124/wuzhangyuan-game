@@ -1,3 +1,4 @@
+import {verifyChapterFour} from '../../../tools/release/chapter-four-check.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync, existsSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { resolve, dirname, sep } from 'node:path';
@@ -35,7 +36,7 @@ env.TTS_API_KEY='packaging-validation-only-not-a-real-key';
 const report={passed:false,mode:unpackedProbe?'unpacked-probe-not-installation':'installed-executable',executable,userData,checks:[],errors:[],missing:[],billableRequests:[],launches:[],lifecycle:[]};
 const key='wuzhang-chapter-session-v1';
 const saveKeys=[key,'grain-chapter-two-films-v1','jieting-chapter-three-v1'];
-saveKeys.push('yiling-rescue-campaign-session-v1','jingzhou-chapter-five-v1','luofengpo-chapter-seven-v1');
+saveKeys.push('yiling-command-chapter-v1','jingzhou-chapter-five-v1','luofengpo-chapter-seven-v1');
 const recordKeys=[...saveKeys,'windows-install-validation-marker'];
 async function completePrerequisite(page,chapter){
  await page.evaluate(chapter=>{
@@ -202,19 +203,9 @@ try{
  }
  {
   await completePrerequisite(page,'jieting');
-  await page.goto('http://127.0.0.1:8812/?chapter=yiling');
-  await page.locator('[data-cinema-action=skip]').click();
-  await page.frameLocator('iframe').locator('[data-action=start]').click();
-  await page.frameLocator('iframe').locator('.campaign-header').waitFor();
-  await page.waitForFunction(()=>!!localStorage.getItem('yiling-rescue-campaign-session-v1'));
-  const rescue=await page.evaluate(async()=>{
-   const id=localStorage.getItem('yiling-rescue-campaign-session-v1');
-   const response=await fetch('/api/yiling-rescue/state?session='+encodeURIComponent(id));
-   return {id,status:response.status,state:(await response.json()).state};
-  });
-  assert.equal(rescue.status,200);assert.equal(rescue.state.id,rescue.id);
-  assert.ok(existsSync(resolve(userData,'yiling-rescue/saves',rescue.id+'.json')));
-  report.rescue={id:rescue.id,revision:rescue.state.revision};
+  const verified=await verifyChapterFour(page,'http://127.0.0.1:8812');
+  assert.ok(existsSync(resolve(userData,'yiling-command/saves',verified.id+'.json')));
+  report.rescue={id:verified.id,revision:verified.revision};
   await capture(active,'04b-installed-chapter-four.png');
   if(!currentAccess){
   await completePrerequisite(page,'yiling');
@@ -234,15 +225,7 @@ try{
   const direct=`http://127.0.0.1:${active.meta.staticPort}`;
   const profile=await(await fetch(direct+'/release-profile.json')).json();assert.deepEqual(profile.chapters,['wuzhang','yiling']);
   for(const path of ['/story/chapter-two.json','/story/chapter-three.json','/GameStarter/web-demo/src/chapter-two.js','/GameStarter/web-demo/src/chapter-three.js'])assert.equal((await fetch(direct+path)).status,404,path);
-  await page.goto(origin+'/?chapter=yiling&playtest=command');await page.locator('iframe').waitFor();
-  assert.ok((await page.locator('iframe').getAttribute('src')).includes('yiling-command'));
-  const command=page.frameLocator('iframe');
-  await command.locator('#skip-info').click();
-  await command.locator('.roster-row').waitFor();
-  await command.locator('#fu-end-round').click();
-  await command.locator('#round-report[open]').waitFor();
-  assert.match(await command.locator('#round-report-title').innerText(),/第1轮/);
-  report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four command gameplay settles the first round and shows its report.');
+  report.checks.push('Only chapters one/four are packaged; omitted chapter files return 404; chapter-four map contact, shared official/legacy-link session, first-round report and retired API 404 pass.');
  }
  // Release URLs must not request excluded playtest JSON.
  await page.goto('http://127.0.0.1:8812/?playtest=weiyan-second');await page.locator('.game-menu').waitFor();
@@ -257,8 +240,8 @@ try{
  const restored=await page.evaluate(keys=>Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)])),recordKeys);
  writeFileSync(resolve(output,'save-records-after-restart.json'),JSON.stringify(restored,null,2));
  assert.deepEqual(restored,expected,'All chapter records survive a new app process');
- const restoredRescue=await page.evaluate(async id=>(await (await fetch('/api/yiling-rescue/state?session='+encodeURIComponent(id))).json()).state,report.rescue.id);
- assert.equal(restoredRescue.id,report.rescue.id);assert.equal(restoredRescue.revision,report.rescue.revision);
+ const restoredRescue=await page.evaluate(async id=>(await (await fetch('/api/yiling-command/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({scenarioId:id})})).json()).session,report.rescue.id);
+ assert.equal(restoredRescue.scenarioId,report.rescue.id);assert.equal(restoredRescue.revision,report.rescue.revision);
  await page.locator('[data-action=continue]').click();
  await page.waitForFunction(()=>!document.querySelector('.game-menu'));
  const resumed=JSON.parse(await page.evaluate(key=>localStorage.getItem(key),key));

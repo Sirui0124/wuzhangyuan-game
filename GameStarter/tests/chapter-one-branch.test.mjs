@@ -20,7 +20,7 @@ function confirmJiang(){
  g.branchAct('choose','confirm_jiang');return g;
 }
 function planStart(known=false){const g=make();g.finishCinematic();settle(g);g.branchAct(known?'ask':'choose',known?'还有谁能处理军情？':'enemy');settle(g);g.branchAct('choose','meet');settle(g);assert.ok(!g.branch.dialogue.choices.some(c=>c.id==='concern'));g.branchAct('choose','concern_joint');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-AI-JOINT');return g;}
-const assessment=(plan='none',extra={})=>({enemy:'missing',enemyQuote:'',plan,planQuote:'',unsupportedClaim:false,claimQuote:'',offense:'none',offenseQuote:'',...extra});
+const assessment=(plan='none',extra={})=>({enemy:'missing',enemyQuote:'',plan,planQuote:'',recipientQuote:'',actionQuote:'',unsupportedClaim:false,claimQuote:'',offense:'none',offenseQuote:'',...extra});
 
 test('新版人物志只按实际开场和姜维通传解锁，并在读档后保留',()=>{
  const people=g=>encounteredCharacters(chapterOneCharacters(g,true));
@@ -92,23 +92,30 @@ function turns(g,queue){let index=0;const histories=[];const service=createAiSer
  if(input.system.includes('校验魏延'))return {text:'{"valid":true}'};
  return {text:JSON.stringify({utterance:g.branch.dialogue.aiRoute(JSON.parse(input.text).outcome).fallback})};
  }});return {histories,submit:async text=>{const d=g.branch.dialogue;const r=await service({version:story.version,nodeId:d.nodeId,audit:d.audit,requestId:`plan-test-${index}-1234`,text});g.branchReply(text,r);settle(g);return r;}};}
-test('新入口三次未说明办法后强闯灯灭，不允许重置轮数',async()=>{
- const g=planStart(),t=turns(g,[assessment(),assessment(),assessment()]);
+test('新入口四次未说明办法后强闯灯灭，不允许重置轮数',async()=>{
+ const g=planStart(),t=turns(g,[assessment(),assessment(),assessment(),assessment()]);
  assert.equal((await t.submit('将军请回。')).outcome,'ASK');assert.equal(g.branch.dialogue.exchange.length,1);
  assert.throws(()=>g.branchAct('retry'),/下一次发言/);
  const restored=make();restored.restore(g.serialize());assert.equal(restored.branch.dialogue.exchange.length,1);
  assert.equal((await t.submit('总会有人处理。')).outcome,'ASK');
- assert.equal((await t.submit('你再等等。')).outcome,'FORCE_ENTER');assert.equal(g.branch.dialogue.node.endingId,'E-LAMP');
- assert.deepEqual(t.histories.map(h=>h.history.length),[0,1,2]);
+ assert.equal((await t.submit('你再等等。')).outcome,'ASK');
+ const last=await t.submit('再给我些工夫。');assert.equal(last.outcome,'FORCE_ENTER');assert.equal(last.reply,'磨磨唧唧的，我自己去讲');assert.equal(g.branch.dialogue.node.endingId,'E-LAMP');
+ assert.deepEqual(t.histories.map(h=>h.history.length),[0,1,2,3]);
  g.branchAct('choose','rewind');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-GUARD-1');
 });
 test('新交涉不强制复述敌情，可承接补充并统一送伯约处理',async()=>{
- const g=planStart(true),t=turns(g,[assessment(),assessment('relay_jiang',{planQuote:'送给姜将军，再把回令带回来'})]);
+ const g=planStart(true),t=turns(g,[assessment(),assessment('relay_jiang',{planQuote:'送给姜将军，再把回令带回来',recipientQuote:'姜将军',actionQuote:'送给姜将军，再把回令带回来'})]);
  await t.submit('我去办。');const result=await t.submit('送给姜将军，再把回令带回来。');
  assert.equal(result.outcome,'RELAY_JIANG');assert.equal(g.branch.dialogue.node.endingId,'E-FORMAL');assert.equal(t.histories[1].history[0].player,'我去办。');
 });
+test('第四次给出可行安排仍能成功',async()=>{
+ const g=planStart(true),t=turns(g,[assessment(),assessment(),assessment(),assessment('invite_jiang',{planQuote:'我带将军去见伯约',recipientQuote:'伯约',actionQuote:'我带将军去见伯约'})]);
+ for(const line of ['容我想想。','稍候。','还有个办法。'])assert.equal((await t.submit(line)).outcome,'ASK');
+ assert.equal((await t.submit('我带将军去见伯约。')).outcome,'INVITE_JIANG');
+ assert.equal(g.branch.dialogue.node.endingId,'E-FORMAL');
+});
 test('重说按最新撤回判断，自行转呈仍进小甲和天亮失败',async()=>{
- const g=planStart(true),t=turns(g,[assessment(),assessment('self_relay',{planQuote:'我自己转呈，有回令便送回前营'})]);
+ const g=planStart(true),t=turns(g,[assessment(),assessment('self_relay',{planQuote:'我自己转呈，有回令便送回前营',recipientQuote:'',actionQuote:'我自己转呈，有回令便送回前营'})]);
  await t.submit('我想请伯约。');await t.submit('不去找伯约了，我自己转呈，有回令便送回前营。');assert.equal(g.branch.dialogue.node.endingId,'E-DEATH');
 });
 test('严重冒犯单独处斩；没有原话依据不能处斩',async()=>{
@@ -119,10 +126,16 @@ test('严重冒犯单独处斩；没有原话依据不能处斩',async()=>{
 });
 test('提前确认对白润色兼容旧文案存档，仍拒绝伪造的应允',()=>{
  const oldStory=structuredClone(story),node=oldStory.nodes.find(n=>n.id==='C01-JIANG-CONFIRM');
- for(const line of node.lines){const r=node.textRevisions.find(r=>r.speaker===line.speaker&&r.new===line.text);if(r)line.text=r.old;}
+ for(const line of node.lines){
+  for(const revision of [...node.textRevisions].reverse()){
+   if(revision.speaker===line.speaker&&revision.new===line.text)line.text=revision.old;
+  }
+ }
  const old=new ChapterOneSession(script,flow,'branch-test',undefined,undefined,'offline',oldStory);
  old.finishCinematic();settle(old);old.branchAct('ask','还有谁可以帮忙处理军情？');settle(old);old.branchAct('choose','confirm_jiang');
- while(old.branch.currentLine.speaker!=='我'||!old.branch.currentLine.text.startsWith('还没到'))old.branchAct('next');
+ for(let i=0;i<node.lines.length&&old.branch.line!==4;i++)old.branchAct('next');
+ assert.equal(old.branch.dialogue.nodeId,node.id);
+ assert.match(old.branch.currentLine.text,/^还没到/);
  old.branchDraft('保留这份草稿');const restored=make();restored.restore(old.serialize());
  assert.equal(restored.branch.currentLine.text,story.nodes.find(n=>n.id===node.id).lines[4].text);
  assert.equal(restored.branch.draft,'保留这份草稿');assert.equal(restored.branch.dialogue.state.jiangAgreed,false);
@@ -185,7 +198,9 @@ test('告示须主动查看、读完才入册；动作说明不占对白轮次�
 test('再问营外情况后收录小甲线索，魏延补充同一条；存档不提前泄露未听内容',()=>{
  const g=make();g.finishCinematic();settle(g);g.branchAct('choose','rules');settle(g);
  g.branchAct('choose','ask');settle(g);g.branchAct('choose','enemy');
- while(g.branch.dialogue.nodeId!=='C01-GUARD-ENEMY'||g.branch.dialogue.pending)g.branchAct('next');
+ for(let i=0;i<30&&(g.branch.dialogue.nodeId!=='C01-GUARD-ENEMY'||g.branch.dialogue.pending);i++)g.branchAct('next');
+ assert.equal(g.branch.dialogue.nodeId,'C01-GUARD-ENEMY');
+ assert.equal(g.branch.dialogue.pending,null);
  assert.equal(g.branch.clues.some(c=>c.id==='branch-enemy'),false);
  settle(g);const clue=g.branch.clues.find(c=>c.id==='branch-enemy');assert.match(clue.text,/小甲说/);assert.doesNotMatch(clue.text,/前营.*回话/);
  const loaded=make();loaded.restore(g.serialize());assert.deepEqual(loaded.branch.clues,g.branch.clues);
@@ -270,4 +285,22 @@ test('冒犯复核否定初判时保留补充机会，不误入处斩',async()=>
  }});
  const text='我岂会投敌？';const r=await service({version:story.version,nodeId:d.nodeId,audit:d.audit,requestId:'offense-check-0001',text});
  assert.equal(r.outcome,'ASK');g.branchReply(text,r);settle(g);assert.equal(d.nodeId,'C01-AI-JOINT');assert.equal(d.exchange.length,1);
+});
+
+
+test('未问伯约的死亡回溯保留线索，在小甲处直接给出问人做主的入口',()=>{
+ const g=planStart(false);g.branch.offline('SELF_RELAY','我来转呈军报，有回令便送回前营。');g.branchChanged();settle(g);
+ assert.equal(g.branch.dialogue.node.endingId,'E-DEATH');const clues=structuredClone(g.branch.clues);assert.equal(clues.some(c=>c.id==='branch-jiang'),false);
+ g.branchAct('choose','rewind');settle(g);assert.equal(g.branch.dialogue.nodeId,'C01-GUARD-2');assert.deepEqual(g.branch.clues,clues);
+ assert.equal(g.branch.dialogue.choices[0].label,'问问遇上事儿了谁能做主');assert.equal(g.branch.dialogue.state.jiangAgreed,false);
+ const loaded=make();loaded.restore(g.serialize());assert.deepEqual(loaded.branch.clues,clues);
+ loaded.branchAct('choose','decision');settle(loaded);assert.equal(loaded.branch.dialogue.state.knowsJiang,true);assert.equal(loaded.branch.dialogue.state.jiangAgreed,false);
+ assert.ok(loaded.branch.dialogue.choices.some(c=>c.id==='confirm_jiang'));loaded.branchAct('choose','confirm_jiang');settle(loaded);assert.equal(loaded.branch.dialogue.state.jiangAgreed,true);
+});
+
+test('回溯不抹掉已问得的伯约线索，也不把上次应允当作本轮授权',()=>{
+ const g=confirmJiang();settle(g);g.branchAct('choose','meet');settle(g);g.branchAct('choose','concern_joint');settle(g);
+ g.branch.offline('SELF_RELAY','我来转呈军报，有回令便送回前营。');g.branchChanged();settle(g);g.branchAct('choose','rewind');settle(g);
+ const clue=g.branch.clues.find(c=>c.id==='branch-jiang');assert.ok(clue);assert.match(clue.text,/上一次/);assert.equal(g.branch.dialogue.state.jiangAgreed,false);
+ const loaded=make();loaded.restore(g.serialize());assert.deepEqual(loaded.branch.clues,g.branch.clues);
 });

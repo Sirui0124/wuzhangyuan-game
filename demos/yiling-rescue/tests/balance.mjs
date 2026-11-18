@@ -8,12 +8,16 @@ function run(seed,plans,count){
  const s=createState('simulation',seed),ledger=[];
  chooseCampPriority(s,'liu','ma');chooseCampPriority(s,'clerk','sha');chooseCampPriority(s,'attendant','huang');
  for(let round=1;round<=6;round++){
-  if(round===2)chooseCampPriority(s,'clerk','cheng');if(round===3)chooseCampPriority(s,'boat','sun');
+  if(round===2){chooseCampPriority(s,'liu','front');chooseCampPriority(s,'clerk','fu');chooseCampPriority(s,'attendant','wang');}
+  if(round===3){chooseCampPriority(s,'clerk','cheng');chooseCampPriority(s,'boat','sun');}
+  if(round===4)chooseCampPriority(s,'clerk','du');
   // Optimistic information/persuasion assumptions, respecting actual discovery rounds.
   for(const r of ROUTES){const t=s.tracks[r.id];if(!t.discovered)continue;t.known=r.facts.map(f=>f.id);if(r.core&&!t.agreed){t.agreed=true;t.thought=true;t.risk=Math.max(0,t.risk-8);}}
-  const orders=Object.entries(plans[round-1]).filter(([id])=>s.tracks[id].status==='active').map(([id,troops])=>({id,troops,text:'按已知军情接应'}));
+  const scheduled=Object.entries(plans[round-1]);
+  const unavailable=scheduled.filter(([id])=>!s.tracks[id].discovered).map(([id,troops])=>({id,troops,reason:'本轮尚未发现，未派出兵力'}));
+  const orders=scheduled.filter(([id])=>s.tracks[id].discovered&&s.tracks[id].status==='active').map(([id,troops])=>({id,troops,text:'按已知军情接应'}));
   const report=resolveRound(s,orders,orders.map(o=>({id:o.id,matched:BY_ID[o.id].actions.slice(0,count).map(a=>a.id),reason:'数值模拟'})));
-  ledger.push({round,remaining:s.troops,changes:report.changes});nextRound(s);
+  ledger.push({round,remaining:s.troops,unavailable,changes:report.changes});nextRound(s);
  }
  const saved=ROUTES.filter(r=>s.tracks[r.id].status==='saved').map(r=>r.id);
  assert.equal(s.phase,'ended');assert.ok(s.troops>=0);assert.ok(5000-s.troops<=5000);

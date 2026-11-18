@@ -62,8 +62,11 @@ export function refreshCrisis(s){
   for(const [index,st] of r.stages.entries()){
    const parts={...components,batch:index>0&&id!=='sha'?5:0};
    const urgency=st.status==='holding'?Math.max(1,Math.min(100,Math.round(Object.values(parts).reduce((a,b)=>a+b,0)))):0;
-   const autonomousEligible=!!autonomousConditions&&urgency<30;
-   const batchReady=(eligible&&(id!=='camp'||index===0||cover>0))||autonomousEligible;
+   // A resolved batch has zero urgency, but that must not grant a fresh escape
+   // opportunity or leak autonomous eligibility to a still-trapped batch.
+   const awaiting=st.status==='holding'&&r.status==='holding';
+   const autonomousEligible=awaiting&&!!autonomousConditions&&urgency<30;
+   const batchReady=awaiting&&((eligible&&(id!=='camp'||index===0||cover>0))||autonomousEligible);
    const mode=autonomousEligible?'autonomous':batchReady?'escorted':'blocked';
    const batchReasons=id==='camp'&&index>0&&!cover?[...reasons,'后队伤员尚无实际掩护']:reasons;
    st.urgency=urgency;st.assessment={urgency,mode,autonomousEligible,eligible:st.status==='holding'&&batchReady&&r.status!=='locked',probability:st.status==='holding'&&batchReady&&r.status!=='locked'?crisisProbability(urgency,s.crisisRules):0,reasons:st.status==='holding'?[...batchReasons]:[],components:parts};

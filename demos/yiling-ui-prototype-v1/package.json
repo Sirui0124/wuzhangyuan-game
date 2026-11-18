@@ -5,9 +5,12 @@
   "scripts": {
     "build": "node build.mjs",
     "start": "node server.mjs",
-    "test": "node build.mjs && node --test checks/campaign.test.mjs checks/fu-runtime.test.mjs checks/report-ai.test.mjs",
-    "test:browser": "node checks/campaign-browser.mjs",
+    "test": "node build.mjs && node --test checks/campaign.test.mjs checks/fu-runtime.test.mjs checks/report-ai.test.mjs checks/route-ai.test.mjs checks/route-engine.test.mjs checks/eight-engine.test.mjs checks/eight-ai.test.mjs checks/crisis-ai.test.mjs checks/crisis-engine.test.mjs checks/crisis-event-runtime.test.mjs checks/crisis-event-ai.test.mjs checks/crisis-v4-engine.test.mjs checks/player-feedback.test.mjs checks/crisis-review.test.mjs checks/campaign-checkpoint.test.mjs",
+    "test:browser": "node checks/eight-front-browser.mjs",
+    "test:eight-balance": "node checks/crisis-v4-balance.mjs",
     "test:balance": "node checks/campaign-balance.mjs",
-    "test:live": "node checks/campaign-live.mjs"
+    "test:live": "node checks/campaign-live.mjs",
+    "test:eight-balance-v2": "node checks/eight-safe-final.mjs",
+    "test:eight-balance-v3": "node checks/crisis-balance.mjs"
   }
 }

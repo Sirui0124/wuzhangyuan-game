@@ -6,9 +6,9 @@ import { createGameUIState } from './ui-state';
 import { savePanelHTML } from '../game-ui-panels';
 import { esc } from './view-common';
 import { readRuntimeMode, saveRuntimeMode, setRuntimeConnection } from '../runtime-mode';
-import { YILING_CAMPAIGN_KEY as SAVE } from '../campaign/yiling-result';
+import { commandId, loadCommand, isCurrentCommand, YILING_CAMPAIGN_KEY as SAVE } from '../campaign/yiling-result';
 
-type Slot = { version: 1; id: string; round: number; phase: string; savedAt: number; drafts: string | null };
+type Slot = { version: 1; id: string; round: number; ended: boolean; savedAt: number; scenarioId: string; drafts: Record<string, string>; visitedFronts?: string[] };
 const slotKey = (index: string) => `${SAVE}:manual:${index}`;
 
 /** Shared presentation and manual slots; rescue rules and private state stay in its engine. */
@@ -24,7 +24,12 @@ export function createRescueShell(root: HTMLElement, frame: HTMLIFrameElement) {
         const raw = localStorage.getItem(slotKey(index));
         if (!raw) return null;
         const slot = JSON.parse(raw) as Slot;
-        if (slot.version !== 1 || !/^[0-9a-f-]{36}$/.test(slot.id)) throw new Error('此存档格式无法读取，原始记录已保留。');
+        const uuid = /^[0-9a-f-]{36}$/i;
+        if (!slot || slot.version !== 1 || !uuid.test(slot.id) || !uuid.test(slot.scenarioId)
+            || !Number.isInteger(slot.round) || slot.round < 1 || slot.round > 8 || typeof slot.ended !== 'boolean'
+            || !slot.drafts || typeof slot.drafts !== 'object' || Array.isArray(slot.drafts)
+            || Object.entries(slot.drafts).some(([key, value]) => !key.startsWith(slot.scenarioId + '-') || typeof value !== 'string'))
+            throw new Error('此存档格式无法读取，原始记录已保留。');
         return slot;
     }
     function saves() {
@@ -33,19 +38,19 @@ export function createRescueShell(root: HTMLElement, frame: HTMLIFrameElement) {
             try {
                 const slot = readSlot(key);
                 return { key: slotKey(key), manualIndex: index, exists: !!slot, chapterTitle: '第四章 · 夷陵',
-                    sceneTitle: slot ? `第 ${slot.round} 轮 · ${slot.phase === 'orders' ? '调度下令' : slot.phase === 'results' ? '军报送达' : '营救结束'}` : '',
+                    sceneTitle: slot ? `第 ${slot.round} 轮 · ${slot.ended ? '营救结束' : '调度下令'}` : '',
                     savedAt: slot?.savedAt, overwrite: ui.slotOverwrite === key };
             } catch {
                 return { key: slotKey(key), manualIndex: index, exists: true, summary: '无法读取；原始记录保留', overwrite: ui.slotOverwrite === key };
             }
-        }), { canStore: !!localStorage.getItem(SAVE) });
+        }), { canStore: !!commandId(localStorage) });
     }
     // A save transaction cannot be interrupted by closing the menu or changing chapters.
     root.addEventListener('click', event => { if (busy) { event.preventDefault(); event.stopImmediatePropagation(); } }, true);
     document.addEventListener('keydown', event => { if (busy) { event.preventDefault(); event.stopImmediatePropagation(); } }, true);
     const pause = createPauseMenu(root, ui, { render, settings: settings.settingsHTML, saves,
         home: () => location.assign('/'), suspend: () => {},
-        restart: () => frame.contentWindow?.postMessage({ type: 'wzy-rescue-restart-confirmed' }, location.origin) });
+        chapterConfirmsRestart: true, restart: () => frame.contentWindow?.postMessage({ type: 'wzy-shared-restart' }, location.origin) });
 
     async function transact(index: string, restore: boolean) {
         if (busy || !['1', '2', '3'].includes(index)) return;
@@ -53,30 +58,49 @@ export function createRescueShell(root: HTMLElement, frame: HTMLIFrameElement) {
         if (!restore && original && ui.slotOverwrite !== index) { ui.slotOverwrite = index; render(); return; }
         busy = true; notice = restore ? '正在读取存档……' : '正在保存……'; render();
         try {
-            const session = localStorage.getItem(SAVE);
-            if (!session) throw new Error('请先进入营地，再保存或读取进度。');
-            const current = await fetch('/api/yiling-rescue/state?session=' + encodeURIComponent(session), { cache: 'no-store' });
-            if (!current.ok) throw new Error('当前营救记录暂时无法读取，进度未改动。');
-            const { state } = await current.json();
+            const id = commandId(localStorage);
+            if (!id) throw new Error('军图尚未打开。');
+            const state = await loadCommand(id);
+            if (!isCurrentCommand(state, id)) throw new Error('当前营救进度无法核实。');
             const slot = restore ? readSlot(index) : null;
             if (restore && !slot) throw new Error('此位置没有存档。');
-            if (localStorage.getItem(SAVE) !== session) throw new Error('另一页面已更换进度，请刷新后重试。');
-            const drafts = localStorage.getItem(`${SAVE}:drafts:${session}`);
-            const response = await fetch('/api/yiling-rescue/' + (restore ? 'restore' : 'checkpoint'), {
+            if (commandId(localStorage) !== id) throw new Error('另一页面已更换进度，请刷新后重试。');
+            if (localStorage.getItem('yiling-shared-pending-' + id)) throw new Error('上一道军令的回执尚未核实，请先回到军图重试。');
+            const view = JSON.parse(localStorage.getItem(SAVE + '-ui') ?? '{}');
+            const drafts = Object.fromEntries(Object.entries(view.drafts ?? {}).filter(([key]) => key.startsWith(id + '-')));
+            const response = await fetch('/api/yiling-command/' + (restore ? 'restore' : 'checkpoint'), {
                 method: 'POST', headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ session, revision: state.revision, checkpoint: slot?.id }),
+                body: JSON.stringify({ scenarioId: id, expectedRevision: state.revision, checkpointId: slot?.id, requestId: crypto.randomUUID() }),
             });
             const result = await response.json();
             if (!response.ok) throw new Error(result.error || '存档操作未完成。');
-            if (localStorage.getItem(SAVE) !== session || localStorage.getItem(slotKey(index)) !== original) throw new Error('另一页面已修改记录，本次操作没有覆盖新进度。');
+            if (commandId(localStorage) !== id || localStorage.getItem(slotKey(index)) !== original) throw new Error('另一页面已修改记录，请重新读取。');
             if (restore && slot) {
-                const id = result.state.id as string;
-                localStorage.setItem(`${SAVE}:before-new`, session);
-                if (slot.drafts) localStorage.setItem(`${SAVE}:drafts:${id}`, slot.drafts);
-                localStorage.setItem(SAVE, id);
+                const restored = result.session;
+                if (!isCurrentCommand(restored, restored?.scenarioId)) throw new Error('存档回执不完整。');
+                const pointer = JSON.parse(localStorage.getItem(SAVE)!);
+                const history = [...new Set([...(pointer.history || []), id, restored.scenarioId])];
+                const currentView = JSON.parse(localStorage.getItem(SAVE + '-ui') ?? '{}');
+                for (const [key, value] of Object.entries(slot.drafts)) {
+                    (currentView.drafts ??= {})[restored.scenarioId + key.slice(slot.scenarioId.length)] = value;
+                }
+                if (Object.keys(slot.drafts).length) localStorage.setItem(SAVE + '-ui', JSON.stringify(currentView));
+                if (Array.isArray(slot.visitedFronts)) {
+                    for (const front of slot.visitedFronts) {
+                        if (Object.hasOwn(restored.fronts, front)) localStorage.setItem(`${SAVE}-visited-${restored.scenarioId}-${front}`, 'true');
+                    }
+                }
+                localStorage.setItem(SAVE + ':before-new', id);
+                localStorage.setItem(SAVE, JSON.stringify({ id: restored.scenarioId, history }));
                 pause.dismiss(); frame.src = frame.src;
             } else {
-                localStorage.setItem(slotKey(index), JSON.stringify({ version: 1, ...result.checkpoint, savedAt: Date.now(), drafts } satisfies Slot));
+                const checkpoint = result.checkpoint;
+                if (!checkpoint || checkpoint.scenarioId !== id || checkpoint.revision !== state.revision) throw new Error('存档回执不完整。');
+                localStorage.setItem(slotKey(index), JSON.stringify({
+                    version: 1, id: checkpoint.id, scenarioId: id, round: Math.min(state.round + (state.ended ? 0 : 1), 8),
+                    ended: state.ended, savedAt: Date.now(), drafts,
+                    visitedFronts: Object.keys(state.fronts).filter(front => localStorage.getItem(`${SAVE}-visited-${id}-${front}`) === 'true'),
+                }));
                 notice = '进度已保存。'; ui.slotOverwrite = '';
             }
         } catch (error) { notice = error instanceof Error ? error.message : '存档操作未完成，原进度保留。'; }

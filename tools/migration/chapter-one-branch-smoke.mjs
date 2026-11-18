@@ -6,14 +6,22 @@ import {createStaticServer} from '../../GameStarter/web-demo/serve.mjs';
 import {createAiService,createSigner} from '../../GameStarter/server/chapter-one-ai.mjs';
 import {Dialogue} from '../../GameStarter/web-demo/.build/GameStarter/web-demo/src/chapters/chapter-one/branch-engine.js';
 const story=JSON.parse(readFileSync('content/chapters/wuzhang/chapter-one.branch.json','utf8'));
+const films=JSON.parse(readFileSync('GameStarter/web-demo/public/cinematics.json','utf8'));
+const allowedMedia=new Set([
+ ...films.prologue, ...films.opening,
+ ...story.nodes.flatMap(node=>node.film?[...(node.film.leadIn??[]),node.film]:[]),
+].map(clip=>clip.src));
 const server=createStaticServer({root:resolve(process.argv[2]??'GameStarter/web-demo/.build')});await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const origin=`http://127.0.0.1:${server.address().port}`,out=resolve('outputs/chapter-one-integration');mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 let plan='invite_jiang', modelFail=false, scenario='normal';
 const service=createAiService({Dialogue,storyLoader:async()=>story,signer:createSigner('browser-mainline'),model:async input=>{
  if(modelFail)throw Error('测试连接失败');
- if(input.system.includes('语义分类器') && scenario!=='normal')return {text:JSON.stringify({enemy:'missing',enemyQuote:'',plan:'none',planQuote:'',unsupportedClaim:false,claimQuote:'',offense:scenario==='anger'?'grave':'none',offenseQuote:scenario==='anger'?'我要投敌，替魏军打开营门':''})};
- if(input.system.includes('语义分类器'))return {text:JSON.stringify({enemy:'understood',enemyQuote:'还没攻营',plan,planQuote:plan==='invite_jiang'?'请伯约来听报':plan==='relay_jiang'?'请伯约看报':'我来转呈军报',unsupportedClaim:false,claimQuote:'',offense:'none',offenseQuote:''})};
+ if(input.system.includes('语义分类器') && scenario!=='normal')return {text:JSON.stringify({enemy:'missing',enemyQuote:'',plan:'none',planQuote:'',unsupportedClaim:false,claimQuote:'',offense:scenario==='anger'?'grave':'none',offenseQuote:scenario==='anger'?'我要投敌，替魏军打开营门':'',recipientQuote:'',actionQuote:''})};
+ if(input.system.includes('语义分类器')){
+  const planQuote=plan==='invite_jiang'?'请伯约来听报':plan==='relay_jiang'?'请伯约看报':'我来转呈军报';
+  return {text:JSON.stringify({enemy:'understood',enemyQuote:'还没攻营',plan,planQuote,unsupportedClaim:false,claimQuote:'',offense:'none',offenseQuote:'',recipientQuote:plan==='self_relay'?'':'伯约',actionQuote:planQuote})};
+ }
  if(input.system.includes('校验魏延'))return {text:'{"valid":true}'};
  if(scenario!=='normal')return {text:JSON.stringify({utterance:story.aiScenes.weiyan_plan.routes[JSON.parse(input.text).outcome].fallback})};
  return {text:JSON.stringify({utterance:story.aiScenes.weiyan_plan.routes[plan==='invite_jiang'?'INVITE_JIANG':plan==='relay_jiang'?'RELAY_JIANG':'SELF_RELAY'].fallback})};
@@ -43,7 +51,7 @@ async function toAi(p,known=true,branch='critical'){
  await p.screenshot({path:resolve(out,'restored-guard-desktop.png')});
  if(known){await p.locator('#branch-input').fill('还有谁能帮忙处理军情？');await click(p,'[data-branch-form] button[type="submit"]');await settle(p);}else await choose(p,'enemy');
  for(const id of ['meet','concern_joint'])await choose(p,id);
- assert.equal(await p.locator('.branch-hint').count(),known?1:0);
+ assert.equal(await p.locator('.branch-hint, .expression-help').count(),0);
 }
 try{
  for(const [name,known,branch,outcome] of [['coop',true,'critical','E-FORMAL'],['formal',true,'front','E-FORMAL'],['death',false,'critical','E-DEATH']]){
@@ -59,7 +67,7 @@ try{
   }
   plan=name==='coop'?'invite_jiang':name==='formal'?'relay_jiang':'self_relay';
   await p.locator('#branch-input').fill(`魏军还没攻营，${plan==='invite_jiang'?'我去请伯约来听报':plan==='relay_jiang'?'我拿去请伯约看报':'我来转呈军报'}。`);
-  await click(p,'[data-branch-form] button[type="submit"]');await p.waitForFunction(()=>document.querySelector('.dialogue-advance'));await settle(p);
+  await click(p,'[data-branch-form] button[type="submit"]');await p.waitForFunction(()=>document.querySelector('.dialogue-advance, [data-cinema-action=skip]'));await settle(p);
 
 
   assert.equal(await p.locator('.branch-scene').getAttribute('data-ending'),outcome);
@@ -74,16 +82,18 @@ try{
  }
  for(const mode of ['unclear','anger']){
   scenario=mode;const {ctx,p}=await fixture();await toAi(p);
-  for(let i=0;i<(mode==='unclear'?3:1);i++){
+  for(let i=0;i<(mode==='unclear'?4:1);i++){
    await p.locator('#branch-input').fill(mode==='anger'?'我要投敌，替魏军打开营门。':'将军再等等。');
-   await click(p,'[data-branch-form] button[type="submit"]');await p.waitForFunction(()=>document.querySelector('.dialogue-advance'));await settle(p);
-   if(mode==='unclear'&&i<2){assert.equal(await p.locator('[data-node="C01-AI-JOINT"]').count(),1);assert.equal(await p.locator('[data-branch="retry"]').count(),0);}
+   await click(p,'[data-branch-form] button[type="submit"]');await p.waitForFunction(()=>document.querySelector('.dialogue-advance, [data-cinema-action=skip]'));await settle(p);
+   if(mode==='unclear'&&i<3){assert.equal(await p.locator('[data-node="C01-AI-JOINT"]').count(),1);assert.equal(await p.locator('[data-branch="retry"]').count(),0);}
   }
   assert.equal(await p.locator('.branch-scene').getAttribute('data-ending'),mode==='anger'?'E-ANGER':'E-LAMP');checks.push(mode);await ctx.close();
  }
  for(const name of ['C1END-EXEC-foley-20261029.mp4','EN02B-A-full-speed-20261022.mp4']){const r=await fetch(origin+'/video/current/'+name,{headers:{Range:'bytes=0-99'}});assert.ok(r.ok);assert.match(r.headers.get('content-type'),/video/);await r.arrayBuffer();}
  const {ctx,p}=await fixture(true);await settle(p);for(const id of ['rules','meet','order','listen'])await choose(p,id);assert.equal(await p.locator('.branch-scene').getAttribute('data-ending'),'E-LAMP');checks.push('offense-lamp');await ctx.close();
- assert.ok(!media.some(url=>/CH01-(J02|J04|F02)-h3-v6-/.test(url)), 'held clips must not play');
- assert.deepEqual(ttsRequests,[]);assert.deepEqual(errors,[]);assert.ok(media.length>0&&media.every(url=>url.includes('SC03-full-speed-20261022.mp4')||url.includes('PV-regrets-v11')||url.includes('EN02B-A-full-speed-20261022.mp4')||url.includes('EN01-full-speed-20261022.mp4')||url.includes('EN03-EN04-ending-20261022.mp4')||url.includes('C1END-EXEC-foley-20261029.mp4')||/CH01-(J02|J04|F02)-h3-v6-[a-f0-9]{8}\.mp4/.test(url)));
+ assert.ok(!media.some(url=>/CH01-(J02|F02)-h3-v6-/.test(url)), 'held clips must not play');
+ assert.deepEqual(ttsRequests,[]);assert.deepEqual(errors,[]);
+ assert.ok(media.length>0);
+ for(const url of media)assert.ok(allowedMedia.has(new URL(url).pathname),url);
  writeFileSync(resolve(out,'browser-verification.json'),JSON.stringify({passed:true,checks,errors,expectedFilmsOnly:true,controlledModel:true},null,2));console.log('新第一章正式游戏浏览器检查通过',checks);
 }finally{await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));}

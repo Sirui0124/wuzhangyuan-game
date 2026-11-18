@@ -58,7 +58,7 @@ async function startStaticServer() {
   for (const key of Object.keys(process.env)) if (/^(?:DEEPSEEK|TTS|VOLC|OPENAI|ARK|DOUBAO|GAME_)/i.test(key)) delete process.env[key];
   process.env.GAME_SETTINGS_FILE = join(userData, 'settings', '.env');
   const { createStaticServer } = await import(pathToFileURL(join(payload, 'GameStarter/web-demo/serve.mjs')).href);
-  staticServer = createStaticServer({ root: join(payload, 'web'), commandOptions: { directory: join(app.getPath('userData'), 'yiling-command', 'saves') }, rescueOptions: { saveDir: join(app.getPath('userData'), 'yiling-rescue', 'saves'), settingsFile: join(app.getPath('userData'), 'settings', '.env') }, onRequest: async (req, res) => {
+  staticServer = createStaticServer({ root: join(payload, 'web'), commandOptions: { directory: join(app.getPath('userData'), 'yiling-command', 'saves') }, onRequest: async (req, res) => {
     const url = new URL(req.url, webUrl);
     if (req.headers.host !== `127.0.0.1:${staticPort}`) { res.writeHead(403);res.end('Forbidden');return true; }
     if (url.pathname.startsWith('/playtest/') || url.pathname.startsWith('/__local/') || ['/local', '/local/'].includes(url.pathname)) {

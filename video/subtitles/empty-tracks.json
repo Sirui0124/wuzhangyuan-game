@@ -3,6 +3,13 @@
   "policy": "A zero-cue file needs an explicit SHA-bound reason. This record does not confer listening or user approval.",
   "entries": [
     {
+      "id": "CH04-shamoke-v4",
+      "videoSha256": "b61bab37a8b1a6b94b61d60d34128a771a2c2c249c3d47d27fcd2b76a16013c7",
+      "status": "pending-transcription",
+      "reason": "当前版本按用户指定接入待审前传，整片实际台词和时间码仍待逐句听审。",
+      "humanListeningReview": false
+    },
+    {
       "id": "C1T01-02",
       "videoSha256": "b4dbb07333ce537ebe648012344bea7c3ead9f21bf4a7678beec64fcaa2230e1",
       "status": "planned-no-dialogue",
@@ -138,6 +145,13 @@
       "videoSha256": "07293792663b9912bd194d380e2459138d52298aec61ddbd6b92e25e97ae23fa",
       "status": "pending-transcription",
       "reason": "用户明确要求生成后接入。独立字幕待原声逐字听审与时间码核对；不把拍摄计划秒数当成实际字幕，也不叠加重复字幕。",
+      "humanListeningReview": false
+    },
+    {
+      "id": "CH01-CAMP-ARRIVAL-20261119",
+      "videoSha256": "0cc937ce07bb8a82915fddbbd3763b03d26eaafa159e437dd0461892a2bf0f4b",
+      "status": "planned-no-dialogue",
+      "reason": "军营全景与来骑进营，按无对白环境场景制作。",
       "humanListeningReview": false
     }
   ]
