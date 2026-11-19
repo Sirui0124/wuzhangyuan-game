@@ -30,6 +30,18 @@ export function assertLedger(s){
  if(total!==(s.total??2000)||active.length>5||[s.reserve,s.wounded,s.dead,...active.map(u=>u.men)].some(n=>!Number.isInteger(n)||n<0))throw Error('兵力账目不守恒');
 }
 function random(s){let x=s.seed;x^=x<<13;x^=x>>>17;x^=x<<5;s.seed=x>>>0;return s.seed/4294967296;}
+function legacyFleets(s){return eight(s)&&s.routeVersion!=='eight-front-20261118-v4';}
+export function travelRounds(unit,order){
+ if(['retreat','rest','hold'].includes(order.action))return 0;
+ if(unit?.state==='active'&&unit.target===order.target)return 1;
+ return ['scout','verify','signal'].includes(order.action)?1:2;
+}
+export function previewOrders(state,items){
+ const after=structuredClone(state);
+ orders(after,items);
+ return {revision:state.revision,reserve:after.reserve,freeSlots:5-Object.keys(after.units).length,
+  arrivals:items.map(order=>state.round+Math.max(1,travelRounds(state.units[order.unit],order)))};
+}
 function withdraw(s,u,reason){u.state='returning';u.eta=1;u.at='cross';u.status=reason+' · 返程中，两个时辰后归营';}
 function unitName(s,id){return s.units[id]?.name||`第${id}队`;}
 function archive(s,id,reason){const u=s.units[id];s.archive.push({...u,closedRound:s.round,reason});
@@ -45,17 +57,18 @@ export function orders(s,items){
  for(const [orderIndex,o] of items.entries()){
   if(!o||!Object.hasOwn(TASKS,o.action)||(o.target!==null&&!Object.hasOwn(draft.fronts,o.target)))fail('任务或接应对象不明确。');
   if(o.target&&draft.fronts[o.target].status==='locked')fail('尚未收到这一路的接应消息。');
-  if(typeof o.rush!=='boolean'||!['normal','side'].includes(o.via))fail(`第${orderIndex+1}条军令的行军或路线不正确，请选择普通／急行与常规／南侧道路；本批军令均未发出。`);
+  if(!['normal','side'].includes(o.via))fail(`第${orderIndex+1}条军令的路线不正确，请选择常规或南侧道路；本批军令均未发出。`);
   const existing=o.unit!=='new';let u;
   if(existing){
    if(typeof o.unit!=='string'||!Object.hasOwn(draft.units,o.unit)||seen.has(o.unit))fail('该队不存在，或同一批被重复安排。');
    seen.add(o.unit);u=draft.units[o.unit];
    if(u.state==='returning')fail(`第${o.unit}队正在归营，请等其返回。`);
-   if(eight(draft)&&u.fleetId&&o.action!=='retreat'&&(o.target!==(u.fleetOwner||u.target)||o.action!=='rescue'))fail('船队仍在本路执行，请先撤回，归营后再安排其他任务。');
+   if(legacyFleets(draft)&&u.fleetId&&o.action!=='retreat'&&(o.target!==(u.fleetOwner||u.target)||o.action!=='rescue'))fail('船队仍在本路执行，请先撤回，归营后再安排其他任务。');
    if(o.men!==undefined&&o.men!==u.men)fail('已派出的队伍按现有实兵调度，不能隔空补员或拆队。');
   }else{
    if(['retreat','hold','rest'].includes(o.action))fail('待命兵力无需新编队休整或撤回。');
-   if(!Number.isInteger(o.men)||o.men<100||o.men%100||o.men>draft.reserve)fail(`新编人数须是100的整数倍；当前可调${draft.reserve}人。`);
+   if(!Number.isInteger(o.men)||o.men<100||o.men%100)fail('新编队以100人为单位。');
+   if(o.men>draft.reserve)fail(`第${orderIndex+1}道令要新编${o.men}人，当前预备兵只有${draft.reserve}人。本批尚未发出。`);
    if(Object.keys(draft.units).length>=5)fail('最多同时5支任务队，待出发与归途中也占名额。');
    const id=String(draft.nextUnit++);u={id,men:o.men,initial:o.men,deployed:o.men,state:'queued',at:'camp',target:o.target,task:o.action,status:'待出发',eta:0};draft.units[id]=u;draft.reserve-=o.men;
   }
@@ -63,15 +76,15 @@ export function orders(s,items){
   if(['verify','signal'].includes(o.action)&&o.target!=='fu')fail('核实刘备与撤离信号用于傅肜一路。');
   if(o.action==='signal'&&!draft.facts.withdrawalAccepted)fail(`第${orderIndex+1}条军令暂不能传撤离信号：傅肜尚未接受撤离，先与他把回去的打算说清楚；核实消息和安排接应不受此限制。本批军令均未发出。`);
   if(o.target&&draft.fronts[o.target].status!=='holding'&&!['retreat','rest','hold'].includes(o.action))fail('这一路已经撤离，无需继续派队。');
-  if(eight(draft)&&EIGHT_CONFIG[o.target]?.water&&o.action==='rescue'){
+  if(legacyFleets(draft)&&EIGHT_CONFIG[o.target]?.water&&o.action==='rescue'){
    const boat=draft.boats[o.target];if(boat.state==='lost')fail('本路接应船队已失去联络，无法再次派出。');if(boat.unitId&&boat.unitId!==u.id)fail('本路接应船队已被占用，只有这一支船队，不能另派护送队或就地补员。更换护送兵力须先撤回，期间水上接应会中断；本批军令均未发出。');
    boat.unitId=u.id;boat.state='queued';u.fleetId=boat.id;u.fleetOwner=o.target;
   }
   if(o.action==='retreat'&&u.state==='queued'){archive(draft,u.id,'取消待发军令');continue;}
   if(u.state==='ready'&&['retreat','rest','hold'].includes(o.action)){receipt(draft,`${u.name}在营中待命。`,null,u.id);continue;}
   if(u.state==='ready')u.state='queued';
-  u.pending={...o,unit:u.id,men:u.men};u.status=u.state==='queued'?'待出发':'新令待执行';
-  message(draft,'我',`${unitName(draft,u.id)} · ${u.men}人 · ${TASKS[o.action]}${o.target?' → '+FRONTS[o.target].name:''}${o.rush?' · 急行军':''}${o.via==='side'?' · 南侧路':''}`,'order',o.target,u.id);
+  u.pending={unit:u.id,action:o.action,target:o.target,men:u.men,via:o.via};u.status=u.state==='queued'?'待出发':'新令待执行';
+  message(draft,'我',`${unitName(draft,u.id)} · ${u.men}人 · ${TASKS[o.action]}${o.target?' → '+FRONTS[o.target].name:''}${o.via==='side'?' · 南侧路':''}`,'order',o.target,u.id);
  }
  assertLedger(draft);Object.assign(s,draft);
 }
@@ -80,7 +93,7 @@ function weightedDesign(s){const ratios={cover:Math.min(1,strength(s,'fu','relie
 export function derive(s){
  ensureBoats(s);
  if(eight(s)){for(const id of ['cheng','huang'])s.fronts[id].boatReady=strength(s,id,'rescue')>0;s.fronts.du.passageReady=strength(s,'du','rescue')>0;}
- if(eight(s))for(const boat of Object.values(s.boats||{})){const u=s.units[boat.unitId];if(boat.state!=='lost')boat.state=u?.state||'ready';if(!u)boat.unitId=null;}
+ if(legacyFleets(s))for(const boat of Object.values(s.boats||{})){const u=s.units[boat.unitId];if(boat.state!=='lost')boat.state=u?.state||'ready';if(!u)boat.unitId=null;}
  s.facts.reliefInPosition=strength(s,'fu','relieve')>0;s.facts.escortReady=strength(s,'fu','rescue')>0;s.facts.enemySuppressed=strength(s,'fu','suppress')>0;
  if(s.fronts.fu.status==='home')s.phase='home';else if(s.core.status==='safe')s.phase='safe';else s.phase=s.facts.withdrawalAccepted?'withdrawal_accepted':s.facts.liubeiAliveVerified?'truth_verified':'deceived_and_bereaved';
  if(crisis(s)){refreshCrisis(s);return;}
@@ -96,10 +109,10 @@ export function prepareSettlement(s){
   if(u.state==='returning'){archive(s,id,'回营');continue;}
   if(u.pending){const o=u.pending;delete u.pending;
    if(o.action==='retreat'){withdraw(s,u,'奉令撤回');receipt(s,`${unitName(s,id)}奉令撤回，正返回接应营，两个时辰后归营。`,u.target,id);continue;}
-   const samePlace=u.state==='active'&&u.target===o.target;
-   u.task=o.action;u.target=o.target||u.target;u.rush=o.rush;u.via=o.via;delete u.transport;
+   const travel=travelRounds(u,o);
+   u.task=o.action;u.target=o.target||u.target;u.via=o.via;delete u.transport;
    if(['hold','rest'].includes(o.action)){u.state='active';u.eta=0;u.status=TASKS[o.action];continue;}
-   u.state='marching';u.eta=samePlace?1:['scout','verify','signal'].includes(o.action)?1:o.rush?1:2;u.at='cross';
+   u.state='marching';u.eta=travel;u.at='cross';
   }
   if(u.state==='marching'){
    u.eta--;u.status=`行军 · ${Math.max(0,u.eta)*2}个时辰后到位`;if(u.eta>0){receipt(s,`${unitName(s,id)}正${u.via==='side'?'沿南侧路':''}赶往${FRONTS[u.target].name}所在处，尚未到位。`,u.target,id);continue;}
@@ -145,11 +158,11 @@ export function completeSettlement(s,prepared,selections){
   if(u.state!=='active'||!['rescue','relieve','suppress','hold','rest'].includes(u.task))continue;
   const cfg=FRONTS[u.target],cover=combatCover[u.target];
   const hazard=(['relieve','suppress'].includes(u.task)?.04:.024)+Math.min(.03,.003*Math.max(0,s.round-8));
-  const p=Math.min(.12,hazard*DIFFICULTY[s.difficulty].loss*(s.fronts[u.target].scouted?1:1.3)*(1.4-.7*Math.min(1,cover/(cfg.cover*1.5)))*(u.rush?1.15:1));
+  const p=Math.min(.12,hazard*(s.crisisRules?.lossScale??DIFFICULTY[s.difficulty].loss)*(s.fronts[u.target].scouted?1:1.3)*(1.4-.7*Math.min(1,cover/(cfg.cover*1.5))));
   let loss=0,dead=0;for(let i=0;i<u.men;i++)if(random(s)<p){loss++;if(random(s)<.3)dead++;}
   casualties[id]={wounded:loss-dead,dead};u.men-=loss;u.deployed=u.men;s.wounded+=loss-dead;s.dead+=dead;
   if(u.men===0)receipt(s,`${unitName(s,id)}本轮出战${loss}人，伤${loss-dead}人、亡${dead}人，已无可战兵力。`,u.target,id);
-  if(u.men===0){if(eight(s)&&u.fleetId&&s.boats?.[u.target]){s.boats[u.target].state='lost';s.boats[u.target].unitId=null;}s.archive.push({...u,closedRound:s.round,reason:'失去战力'});delete s.units[id];}
+  if(u.men===0){if(legacyFleets(s)&&u.fleetId&&s.boats?.[u.target]){s.boats[u.target].state='lost';s.boats[u.target].unitId=null;}s.archive.push({...u,closedRound:s.round,reason:'失去战力'});delete s.units[id];}
   else if(s.fronts[u.target].status!=='holding'){withdraw(s,u,'该路危机已解除');receipt(s,`${unitName(s,id)}本轮出战${u.men+loss}人，伤${loss-dead}人、亡${dead}人。该路危机已解除，余兵${u.men}人正在返程，两个时辰后归营。`,u.target,id);}
   else {u.status=TASKS[u.task]+'中 · 该路尚未解围';receipt(s,`${unitName(s,id)}本轮出战${u.men+loss}人，伤${loss-dead}人、亡${dead}人，余兵${u.men}人继续在当地${TASKS[u.task]}，该路尚未解围。`,u.target,id);}
  }

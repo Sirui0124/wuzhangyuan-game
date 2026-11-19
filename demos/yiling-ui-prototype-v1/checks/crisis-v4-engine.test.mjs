@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {fresh,orders,settle,prepareSettlement,completeSettlement,publicSession} from '../campaign-engine.mjs';
 import {refreshCrisis,settleCrisis,recordCrisisArrival} from '../crisis-rules.mjs';
 import {prepareCrisisEvents,applyCrisisEvents} from '../crisis-events.mjs';
-const O=(target,action,men=100,unit='new')=>({target,action,men,unit,rush:true,via:'normal'});
+const O=(target,action,men=100,unit='new')=>({target,action,men,unit,via:'normal'});
 function isolated(value){const s=fresh({seed:712});s.round=1;for(const [id,r]of Object.entries(s.fronts))if(id!=='sha')r.status='locked';const r=s.fronts.sha;r.crisisTuning.base=value;refreshCrisis(s);return s;}
 const seq=(...values)=>()=>values.shift()??.5;
 
@@ -17,7 +17,7 @@ test('沙摩柯真实侦察与联络后无需护送在岗，自主分支实际�
 test('未核实条件不能仅凭低危自救，傅肜/水路/伤员不凭空获得能力',()=>{for(const id of['sha','ma','fu','cheng','huang','wang','camp']){const s=fresh();const r=s.fronts[id];r.status='holding';r.crisisTuning.base=5;refreshCrisis(s);assert.equal(r.assessment.eligible,false,id);assert.equal(r.assessment.autonomousEligible,false,id);}});
 test('事件先于自主判定，跨到低于30同轮获得真实条件下机会',()=>{const s=isolated(40),r=s.fronts.sha;r.localOrganization={retreatVerified:true,mobileGroup:true,verifiedRound:0,relief:45};r.searchVerified=true;r.crisisTuning.base=97;refreshCrisis(s);assert.equal(r.urgency,40);prepareCrisisEvents(s,seq(0,0)); // 40 ->30, still not <30
 applyCrisisEvents(s,[]);refreshCrisis(s);assert.equal(r.urgency,30);assert.equal(r.assessment.autonomousEligible,false);s.round=2;prepareCrisisEvents(s,seq(.21,0));settleCrisis(s,()=>0,()=>{});assert.equal(r.status,'safe');assert.equal(r.stages[0].lastResolution.urgency,25);assert.equal(r.stages[0].lastResolution.mode,'autonomous');});
-test('新组织能力不能抵消全部撤兵影响，真实撤兵后仍可回升',()=>{let rebound=false;for(let seed=1;seed<=60;seed++){const s=fresh({seed});settle(s);settle(s);orders(s,[O('ma','rescue',500)]);settle(s);if(s.fronts.ma.status!=='holding')continue;const before=s.fronts.ma.urgency,u=Object.values(s.units).find(u=>u.target==='ma'&&u.task==='rescue');orders(s,[O('ma','retreat',u.men,u.id)]);settle(s);if(s.fronts.ma.status==='holding'&&s.fronts.ma.urgency>before){rebound=true;break;}}assert.ok(rebound);
+test('新组织能力不能抵消全部撤兵影响，真实撤兵后仍可回升',()=>{let rebound=false;for(let seed=1;seed<=60;seed++){const s=fresh({seed});settle(s);settle(s);orders(s,[O('ma','rescue',500)]);settle(s);settle(s);if(s.fronts.ma.status!=='holding')continue;assert.ok(s.fronts.ma.localOrganization);const before=s.fronts.ma.urgency,u=Object.values(s.units).find(u=>u.target==='ma'&&u.task==='rescue'&&u.state==='active');assert.ok(u);orders(s,[O('ma','retreat',u.men,u.id)]);settle(s);if(s.fronts.ma.status==='holding'&&s.fronts.ma.urgency>before){rebound=true;break;}}assert.ok(rebound);
 });
 test('分段结算与同步结算同seed相同结果，保存draft后继续不重抽',()=>{const s=fresh({seed:731}),t=structuredClone(s);settle(s);const p=prepareSettlement(t),mid=JSON.parse(JSON.stringify(t));completeSettlement(t,p);completeSettlement(mid,JSON.parse(JSON.stringify(p)));assert.deepEqual(t,s);assert.deepEqual(mid,s);assert.equal(publicSession(s).fronts.sha.urgency,s.fronts.sha.urgency);});
 

@@ -1,6 +1,6 @@
 export type Front='sha'|'camp'|'fu';
 export type Unit='甲'|'乙'|'丙'|'丁';
-export type Order={unit:Unit;action:'rescue'|'scout'|'relieve'|'suppress'|'verify'|'signal'|'hold'|'rest'|'retreat';target:Front|null;rush:boolean;via?:'side'|'normal';men?:number};
+export type Order={unit:Unit;action:'rescue'|'scout'|'relieve'|'suppress'|'verify'|'signal'|'hold'|'rest'|'retreat';target:Front|null;via?:'side'|'normal';men?:number};
 export type Address={unit:Unit|'auto';target:Front|'auto'};
 type Context={address:Address;capacity:Record<Unit,number>;fuMode?:boolean};
 const UNITS:Unit[]=['甲','乙','丙','丁'];
@@ -59,21 +59,19 @@ export function resolveOrders(source:string,{address,capacity,fuMode=false}:Cont
     const rest=/休整|休息/.test(clause),hold=/待命|留营|留守|原地等/.test(clause),retreat=/撤回|回营|撤退/.test(clause);
     const rescue=(!specific.length&&/接应(?!营)|接回|救|支援|前往|去|赶到|绕行/.test(clause))||/护送|救出/.test(clause);
     if([rest,hold,retreat,rescue].filter(Boolean).length+specific.length>1)throw Error('同一句里有多个任务，请用逗号分开各队安排；尚未发出军令。');
-    const paceOnly=/^(?:正常行军|急行军|快些|加快|快速|赶过去|赶路)$/.test(clause);
-    const action:Order['action']|null=specific[0]||(rest?'rest':hold?'hold':retreat?'retreat':rescue||targets.length||(target&&paceOnly)?'rescue':null);
+    const action:Order['action']|null=specific[0]||(rest?'rest':hold?'hold':retreat?'retreat':rescue||targets.length?'rescue':null);
     if(!action)throw Error('这句还不能确定任务。可以写“甲队接应傅肜”“乙队原地休整”或“丙队撤回营中”。');
     if(!units.length)throw Error('要派遣哪支队伍？请写明甲乙丙丁队或队伍1至4，也可在下拉菜单手选。');
     const stationed=!['hold','rest','retreat'].includes(action);
     if(stationed&&!target)throw Error('要接应哪一路？请写傅肜、旧营或沙摩柯，也可手选接应对象。');
     if(specific.length&&target!=='fu')throw Error('这类接应岗位当前用于傅肜营救，请选择傅肜。');
-    if(/急行/.test(clause)&&/正常行军/.test(clause))throw Error('同一队的行军方式有冲突，请保留一种。');
     const counts=[...clause.matchAll(/(-?\d+(?:\.\d+)?)\s*人/g)];
     if(counts.length>1)throw Error('每队只写一个出动人数，不同队伍请分句安排。');
     const men=counts.length?Number(counts[0][1]):undefined;
     for(const unit of units){
       if(orders.some(o=>o.unit===unit))throw Error(`${unit}队收到两种安排，请合并成一个明确任务。`);
       if(men!==undefined&&(!stationed||!Number.isInteger(men)||men<1||men>capacity[unit]))throw Error(`${unit}队出动人数须为1至${capacity[unit]}之间的整数，且只用于接应任务。`);
-      orders.push({unit,action,target:stationed?target:null,rush:/急行|赶|加快|快速|快些/.test(clause),via:/绕行|南侧/.test(clause)?'side':'normal',...(men===undefined?{}:{men})});
+      orders.push({unit,action,target:stationed?target:null,via:/绕行|南侧/.test(clause)?'side':'normal',...(men===undefined?{}:{men})});
     }
   }
   return orders;

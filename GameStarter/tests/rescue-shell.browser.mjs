@@ -48,6 +48,7 @@ try {
     await frame.locator('#preview').waitFor();
     await frame.locator('#send').click();
     await frame.locator('#preview').waitFor({state:'hidden'});
+    assert.equal(await frame.locator('#order-pace').count(),0);
     await frame.locator('#draft').fill('尚未发送的军令草稿');
     const queued=await requestSession(former.scenarioId);
     assert.equal(queued.reserve,1700);
@@ -57,6 +58,7 @@ try {
     await page.getByRole('status').filter({hasText:'进度已保存'}).waitFor();
     const slot=await page.evaluate(key=>JSON.parse(localStorage.getItem(key+':manual:1')),key);
     assert.equal(slot.round,1);
+    assert.equal(Object.hasOwn(slot,'rush'),false);
     assert.deepEqual(slot.visitedFronts,['fu']);
     await closeSave();
     await frame.locator('.army-camp.unread').click();
@@ -64,6 +66,7 @@ try {
     assert.equal(await frame.locator('#contacts button').count(),2);
     await frame.locator('#mode-toggle').click();
     await frame.locator('#fu-end-round').click();
+    await frame.locator('#advance-without-order').click();
     await frame.locator('#round-report[open] form button').click();
     assert.equal((await requestSession(former.scenarioId)).round,1);
     await saveMenu();
@@ -77,6 +80,7 @@ try {
     assert.equal(restored.reserve,queued.reserve);
     assert.deepEqual(restored.units,queued.units);
     assert.equal(await frame.locator('#draft').inputValue(),'尚未发送的军令草稿');
+    assert.equal(await frame.locator('#order-pace').count(),0);
     assert.equal((await requestSession(former.scenarioId)).round,1);
     assert.equal(await page.evaluate(key=>JSON.parse(localStorage.getItem(key+':manual:1')).id,key),slot.id);
 

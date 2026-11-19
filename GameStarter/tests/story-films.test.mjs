@@ -19,7 +19,7 @@ test('结局影片只呈现已发生的结果，次日问责不借用结局影�
  state.tent='dead';assert.equal(endingFilmForState(legacyFilms,state).id,'C1END-TENT');
  assert.deepEqual(movies.chapterEndings,[]);
  const failure=branch.nodes.find(node=>node.id==='C01-FAIL-NIGHT');
- assert.equal(failure.film.src,'/video/current/EN02B-A-full-speed-20261022.mp4');
+ assert.equal(failure.film.src,'/video/current/CH01-guard-to-dawn-accountability-1.2x-20261119.mp4');
  assert.equal(branch.nodes.find(node=>node.id===failure.film.afterNode).endingId,'E-DEATH');
  assert.notEqual(failure.film.src,movies.branchDialogue.find(clip=>clip.id==='C1END-EXEC').src);
 });

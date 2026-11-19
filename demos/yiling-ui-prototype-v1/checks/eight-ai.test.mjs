@@ -23,9 +23,12 @@ test('五条新路的对话不能授予位置、船只、通知或出口',async(
 
 test('马良和王甫未找到前由引路人答复，实际会合后才由本人回应',async()=>{
  const s=fresh();for(let i=0;i<4;i++)settle(s);
- for(const [f,messenger] of [['ma','驿卒'],['wang','失散亲随']]){let result=await talkRoute(s,f,'他现在在哪里？',{model});assert.equal(result.replies[0].speaker,messenger);orders(s,[{unit:'new',target:f,action:'rescue',men:300,rush:true,via:'normal'}]);}
+ const guides=[['ma','驿卒'],['wang','失散亲随']];
+ for(const [f,messenger] of guides){const result=await talkRoute(s,f,'他现在在哪里？',{model});assert.equal(result.replies[0].speaker,messenger);orders(s,[{unit:'new',target:f,action:'rescue',men:300,via:'normal'}]);}
  settle(s);
- for(const f of ['ma','wang']){assert.equal(s.fronts[f].located,true);const result=await talkRoute(s,f,'同行的人怎么样？',{model});assert.equal(result.replies[0].speaker,names[f]);}
+ for(const [f,messenger] of guides){assert.equal(s.fronts[f].located,false);const result=await talkRoute(s,f,'他现在在哪里？',{model});assert.equal(result.replies[0].speaker,messenger);}
+ settle(s);
+ for(const [f] of guides){assert.equal(s.fronts[f].located,true);const result=await talkRoute(s,f,'同行的人怎么样？',{model});assert.equal(result.replies[0].speaker,names[f]);}
 });
 
 test('新路线状态引用和说话人校验拒绝越路及伪造实地条件',()=>{

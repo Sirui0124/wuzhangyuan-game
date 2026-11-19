@@ -15,7 +15,7 @@ export function eight(s){return [EIGHT_ROUTE_VERSION,'eight-front-20261118-v1','
 const LEGACY_BASE={sha:.75,camp:.35,ma:.85,cheng:.8,du:.8,wang:.8,huang:.8};
 export function routeTuning(s,id){const r=s.fronts[id];return {...EIGHT_CONFIG[id],...(r.tuning||{base:LEGACY_BASE[id]}),work:r.work};}
 export function ensureBoats(s){
- if(!eight(s)||s.boats)return;
+ if(!eight(s)||s.routeVersion==='eight-front-20261118-v4'||s.boats)return;
  s.boats=Object.fromEntries(['cheng','huang'].map(id=>{const u=Object.values(s.units).find(u=>u.target===id&&u.task==='rescue');const boat={id:id+'-fleet',name:id==='cheng'?'江上接应船队':'江北渡运船队',owner:id,unitId:u?.id||null,state:u?.state||'ready',capacityProgress:1.25};if(u){u.fleetId=boat.id;u.fleetOwner=id;}return [id,boat];}));
 }
 export function initEightRoutes(s){
@@ -32,7 +32,7 @@ export function arriveRoute(s,id,task,receipt,unit){
  if(!eight(s)||!['rescue','scout'].includes(task))return;
  const r=s.fronts[id];
  if(id==='sha'&&!r.searchVerified){r.searchVerified=true;r.scouted=true;receipt(s,'接应人员在谷道核实了会合处，通知沙摩柯，并找到一批失散部众；其余失散者仍无确报。',id,unit);}
- if(['ma','wang'].includes(id)&&!r.located){r.located=true;r.notified=true;r.scouted=true;receipt(s,id==='ma'?'驿卒带队找到马良一行，撤军消息已送达，联络人员开始随接应队撤离。':'亲随辨认出王甫一行，接应队核实了退路，正接同行伤员撤回。',id,unit);}
+ if(['ma','wang'].includes(id)&&!r.located){r.located=true;r.notified=true;r.scouted=true;receipt(s,id==='ma'?'驿卒带队找到了马良和随员，已把撤军消息送到。':'亲随辨认出王甫一行，已核实王甫与同行伤员所在的位置和退路。',id,unit);}
  if(EIGHT_CONFIG[id]?.water&&task==='rescue'&&!r.boatReady){r.boatReady=true;receipt(s,id==='cheng'?'船工引导接应船与程畿船队会合，开始转移同行伤员。':'接应船抵达渡口，两岸联络和南岸接收已落实，开始分批渡运。',id,unit);}
  if(id==='du'&&task==='rescue'&&!r.passageReady){r.passageReady=true;r.notified=true;receipt(s,'接应队守住窄道出口，送达大营的真实接应消息，引导杜路、刘宁所部突围。',id,unit);}
 }

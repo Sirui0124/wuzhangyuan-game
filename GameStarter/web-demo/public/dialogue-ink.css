@@ -2,6 +2,7 @@
 /* Dialogue keeps the actual camp and character, with centred reading on translucent ink. */
 :root[data-ui-theme=xuan] #game-root :is(.game-scene,.expression-workspace) {
   --serif:KaiTi,'Kaiti SC',STKaiti,'楷体',serif;
+  --dialogue-body-size:clamp(18px,1.666667vw,28px);
   --dialogue-ink:#e8e1d3;--dialogue-muted:#b9b1a3;--dialogue-red:#bd735e;
   color:var(--dialogue-ink);font-family:var(--serif);
 }
@@ -50,7 +51,7 @@
 :root[data-ui-theme=xuan][data-art-style][data-art-font] #game-root .game-scene .dialogue-text,
 :root[data-ui-theme=xuan] #game-root .game-scene .said-text {
   display:block;min-height:56px;width:100%;padding:0;margin:0;text-align:left;
-  color:var(--dialogue-ink);font:24px/1.8 var(--serif);letter-spacing:0;text-shadow:none;font-weight:400;
+  color:var(--dialogue-ink);font:var(--dialogue-body-size)/1.8 var(--serif);letter-spacing:0;text-shadow:none;font-weight:400;
 }
 :root[data-ui-theme=xuan] #game-root .game-scene .has-clue #spoken-line { color:var(--dialogue-ink);text-shadow:none; }
 :root[data-ui-theme=xuan] #game-root .game-scene:is([data-phase=dialogue],[data-phase=reply]),

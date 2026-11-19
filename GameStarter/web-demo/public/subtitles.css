@@ -1,8 +1,12 @@
 /* Shared WebVTT appearance for game playback and film review. */
 video::cue {
   background: transparent;
-  color: #fff;
+  color: #f7f5ef;
   font-family: KaiTi, "Kaiti SC", STKaiti, "楷体", serif;
+  font-size: clamp(20px, 2vw, 34px);
+  font-weight: 400;
+  line-height: 1.4;
+  text-shadow: 0 1px 2px #000c, 0 0 3px #0008;
 }
 video::cue-region {
   background: transparent;

@@ -16,15 +16,19 @@ export const CRISIS_CONFIG={
 };
 export function initCrisis(s,{version='v4'}={}){
  if(version==='v3')return legacy.initCrisis(s);
- s.crisisEvents=[];s.crisisRevision='20261118-player-feedback-1';
- s.routeVersion=CRISIS_VERSION;s.crisisRules={certainBelow:10,impossibleAbove:42,exponent:2};
+ // The current eight-route campaign opens three, three, then two fronts.
+ s.fronts.wang.openAt=3;
+ s.crisisEvents=[];s.crisisRevision='20261119-difficulty-probability';
+ // Each new campaign saves its curve so resuming a previous game keeps its original odds.
+ const exponent={easy:1.25,normal:2.5,hard:4}[s.difficulty];
+ s.routeVersion=CRISIS_VERSION;s.crisisRules={certainBelow:10,impossibleAbove:42,exponent,pressureScale:1,lossScale:1};
  for(const [id,r] of Object.entries(s.fronts)){
   delete r.progress;delete r.work;delete r.executions;delete r.tuning;
   r.crisisTuning={...structuredClone(CRISIS_CONFIG[id]),suppressEffect:1};r.pressure=0;r.eventOffset=0;
   r.stages??=[{id:'person',name:'傅肜',status:'holding'}];
   for(const st of r.stages){delete st.work;delete st.progress;st.urgency=r.crisisTuning.base;}
  }
- for(const b of Object.values(s.boats))delete b.capacityProgress;
+ delete s.boats;
  refreshCrisis(s);
 }
 const strength=(s,id,task)=>Object.values(s.units).filter(u=>u.state==='active'&&u.target===id&&u.task===task).reduce((n,u)=>n+u.men,0);
@@ -40,6 +44,7 @@ export function refreshCrisis(s){
  if(!crisis(s))return;
  for(const [id,r] of Object.entries(s.fronts)){
   const cfg=r.crisisTuning,escort=strength(s,id,'rescue'),cover=coverStrength(s,id);
+  r.deployment={escort,cover:Math.round(cover),escortReference:cfg.escort,coverReference:cfg.cover};
   const known=id==='sha'?r.searchVerified:id==='ma'||id==='wang'?r.located&&r.notified:id==='cheng'||id==='huang'?r.boatReady:id==='du'?r.passageReady:r.scouted;
   const f=s.facts,reasons=[];
   if(!escort)reasons.push('护送队尚未在岗');
@@ -55,7 +60,6 @@ export function refreshCrisis(s){
   }
   for(const key of Object.keys(components))if(Object.is(components[key],-0))components[key]=0;
   if(escort&&escort<cfg.escort)reasons.push('现有护送人手有限，接送与照应同行者仍吃紧');
-  if(escort&&escort<cfg.escort&&['cheng','huang'].includes(id))reasons.push('本路只有一支接应船队，不能另派护送队或就地补员；更换护送兵力须先撤回，期间水上接应会中断');
   if(escort&&cover<cfg.cover)reasons.push('掩护兵力不足，追击仍在威胁撤离');
   if(escort&&(r.pressure+(r.eventOffset||0))>0)reasons.push('此前追击造成的压力尚未解除');
   if(r.status!=='holding')reasons.length=0;
@@ -94,7 +98,7 @@ export function settleCrisis(s,random,receipt,selections=[]){
   if(draw===null)receipt(s,'接应条件尚未落实，受困人员仍在原处等待。',id);
 
   if(r.stages.every(x=>x.status!=='holding')){r.status='safe';r.safeRound=s.round;r.urgency=0;}
-  else if(effectiveResponse(s,id))r.pressure=Math.min(20,r.pressure+r.crisisTuning.pressure*({easy:.5,normal:1,hard:1.5}[s.difficulty]));
+  else if(effectiveResponse(s,id))r.pressure=Math.min(20,r.pressure+r.crisisTuning.pressure*(s.crisisRules.pressureScale??{easy:.5,normal:1,hard:1.5}[s.difficulty]));
   if(id==='fu'){
    const a=r.stages[0].lastResolution,safe=r.status==='safe';
    s.core.status=r.status==='safe'?'safe':'holding';s.core.round=s.round;s.core.revision++;s.core.pressure=r.pressure;

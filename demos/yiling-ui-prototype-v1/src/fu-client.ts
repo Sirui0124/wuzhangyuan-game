@@ -1,7 +1,7 @@
 import type {Unit} from './dispatch-intent.js';
 
 export type FuTask='rescue'|'scout'|'relieve'|'suppress'|'verify'|'signal'|'hold'|'rest'|'retreat';
-export type FuOrder={unit:Unit;action:FuTask;target:'fu'|null;men?:number;rush?:boolean;via?:'normal'|'side'};
+export type FuOrder={unit:Unit;action:FuTask;target:'fu'|null;men?:number;via?:'normal'|'side'};
 export type FuMessage={id:string|number;speaker:string;text:string;kind:string;round:number};
 export type CrisisView={
   schemaVersion:1;scenarioId:string;frontId:'fu';revision:number;tacticalRoundId:string;phase:'planning'|'resolving'|'resolved';

@@ -89,7 +89,7 @@ try{
   }
   assert.equal(await p.locator('.branch-scene').getAttribute('data-ending'),mode==='anger'?'E-ANGER':'E-LAMP');checks.push(mode);await ctx.close();
  }
- for(const name of ['C1END-EXEC-foley-20261029.mp4','EN02B-A-full-speed-20261022.mp4']){const r=await fetch(origin+'/video/current/'+name,{headers:{Range:'bytes=0-99'}});assert.ok(r.ok);assert.match(r.headers.get('content-type'),/video/);await r.arrayBuffer();}
+ for(const name of ['C1END-EXEC-foley-20261029.mp4','CH01-guard-to-dawn-accountability-1.2x-20261119.mp4']){const r=await fetch(origin+'/video/current/'+name,{headers:{Range:'bytes=0-99'}});assert.ok(r.ok);assert.match(r.headers.get('content-type'),/video/);await r.arrayBuffer();}
  const {ctx,p}=await fixture(true);await settle(p);for(const id of ['rules','meet','order','listen'])await choose(p,id);assert.equal(await p.locator('.branch-scene').getAttribute('data-ending'),'E-LAMP');checks.push('offense-lamp');await ctx.close();
  assert.ok(!media.some(url=>/CH01-(J02|F02)-h3-v6-/.test(url)), 'held clips must not play');
  assert.deepEqual(ttsRequests,[]);assert.deepEqual(errors,[]);

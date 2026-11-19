@@ -56,19 +56,18 @@ function validateOrders(s,orders){
   if(!o||!Object.hasOwn(CAPACITY,o.unit)||seen.has(o.unit)||!Object.hasOwn(TASKS,o.action))fail('队伍重复或任务不明确。');
   seen.add(o.unit);
   if(o.target!==null&&o.target!=='fu')fail('本轮真实营救只接傅肜，其他两路仍为演示。');
-  if(o.rush!==undefined&&typeof o.rush!=='boolean')fail('行军方式不正确。');
   if(o.via!==undefined&&!['normal','side'].includes(o.via))fail('路线不正确。');
   const task=TASKS[o.action],men=task.minMen?(o.men??CAPACITY[o.unit]):0;
   if(!Number.isInteger(men)||men<task.minMen||men>CAPACITY[o.unit])fail(task.label+'需要'+task.minMen+'至'+CAPACITY[o.unit]+'人。');
   if(o.action==='signal'&&!s.facts.withdrawalAccepted)fail('傅肜尚未接受撤离，先与他把回去的打算说清楚。');
-  return {unit:o.unit,action:o.action,target:task.minMen?'fu':null,men,rush:!!o.rush,via:o.via||'normal'};
+  return {unit:o.unit,action:o.action,target:task.minMen?'fu':null,men,via:o.via||'normal'};
  });
 }
 function applyOrders(s){
  for(const o of s.pendingOrders){
   const u=s.units[o.unit];
   u.deployed=o.men;u.progress=0;
-  u.task={...o,duration:Math.max(1,TASKS[o.action].turns-(o.rush&&['rescue','relieve','suppress'].includes(o.action)?1:0))};
+  u.task={...o,duration:Math.max(1,TASKS[o.action].turns)};
   u.status=TASKS[o.action].label+'中';
   // 换任务即不再占旧岗位，事实在本轮行动后统一重算。
   if(['rescue','relieve','suppress','scout','verify','signal'].includes(o.action))u.at='cross';

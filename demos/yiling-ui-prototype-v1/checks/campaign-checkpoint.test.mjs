@@ -74,3 +74,19 @@ test('HTTP checkpoint/restore端点保留统一响应封装、来源和版本错
   assert.equal((await post('checkpoint',{...input(s),expectedRevision:7})).status,409);
  }finally{await new Promise(resolve=>server.close(resolve));}
 }));
+
+test('问话被明确拒绝时原军令与存档仍可用，重试结算不重复消耗',async()=>fixture(async(directory,r)=>{
+ let s=await r.session();const cmd=O('sha','rescue',300);
+ const before=await raw(directory,s.scenarioId);
+ const quote=await r.preview({...input(s),orders:[cmd]});assert.equal(quote.reserve,1700);assert.equal(await raw(directory,s.scenarioId),before);
+ s=await r.act('orders',{...input(s),orders:[cmd]});
+ const submitted=await raw(directory,s.scenarioId);
+ await assert.rejects(r.act('chat',{...input(s),front:'fu',text:'陛下的消息是谁送来的？'}),e=>e.notCommitted===true);
+ assert.equal(await raw(directory,s.scenarioId),submitted);
+ assert.equal((await r.checkpoint(input(s))).revision,s.revision);
+ const advance={...input(s),trigger:'endRound'};
+ const next=await r.act('round',advance);assert.equal(next.round,1);
+ assert.deepEqual(await r.act('round',advance),next);
+ assert.equal(next.messages.filter(m=>m.kind==='order').length,1);
+ await assert.rejects(r.preview({...input(s),orders:[cmd]}),e=>e.status===409&&e.session.revision===next.revision);
+}));

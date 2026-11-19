@@ -34,7 +34,7 @@ export const ROUTE_RESPOND=BASE+`
 若authority.successCondition为all_safe，整路safe即营救成功，home只是已经回营；不能因仍在归途或时限已尽而说营救失败、尚未救出。holding才仍有本路约定营救对象未脱险。旧存档没有此口径时不替玩家改写原结算。
 人物自身位置和状态以authority.speakerStates为准，整路status不能覆盖本人已safe/home的状态。沙摩柯本人先回营仍可惦记和询问其余部众，不能说还独自在谷里，也不写成主动抛弃部族。张南只据前队状态说前队；冯习据后队及伤员状态说后队。直接问一人只由该人回答，问整个前后交接可各答一句，每人不能替另一个人自称“我”。
 输出 {replies:[{speaker:string,text:string}],claims:{status:string,searchVerified:boolean|null,planAccepted:boolean,stages:[{id:string,status:string}]},factRefs:string[]}。
-说话人只能取authority.availableSpeakers；sha只能一段沙摩柯，camp最多两段，du最多两段，其余最多一段；speaker不能重复。新路线ma/cheng/du/wang/huang的claims另含knowledge，必须逐项复制authority.knowledge，不能新增已知事实。每段2至300字。claims严格复制authority对应状态；stages只保留id/status。factRefs仅可取status,location,searchVerified,planAccepted,stages,speakerStates,aid,reports,knowledge,crisis,crisisRef。若authority.crisisRef存在，claims只需另含crisisRef并逐字复制该字符串，不要抄写crisis浮点分项。若只有authority.crisis而无crisisRef，则claims必须另含crisis并原样复制其危机及分阶段评估；正文不朗读这些数值、概率或字段名。未知消息直接说不知，不主动堆额外解释或操作指导。
+说话人只能取authority.availableSpeakers；sha只能一段沙摩柯，camp最多两段，du最多两段，其余最多一段；speaker不能重复。如果输入中有expectedClaims，请逐字段复制该对象到claims，尤其保留null、false与数组的区别。新路线ma/cheng/du/wang/huang的claims另含knowledge，必须逐项复制authority.knowledge，不能新增已知事实。每段2至300字。claims严格复制authority对应状态；stages只保留id/status。factRefs仅可取status,location,searchVerified,planAccepted,stages,speakerStates,aid,reports,knowledge,crisis,crisisRef。若authority.crisisRef存在，claims只需另含crisisRef并逐字复制该字符串，不要抄写crisis浮点分项。若只有authority.crisis而无crisisRef，则claims必须另含crisis并原样复制其危机及分阶段评估；正文不朗读这些数值、概率或字段名。未知消息直接说不知，不主动堆额外解释或操作指导。
 已接受方案不追加隐藏条件；已在归途不能再说仍在原地抵抗，已归营不重复初始困局。不能用玩家承诺说援军已到。holding只说明尚未撤出，不能推断正在回走、已经到营口或没到营口；没有事件给出的移动进展、具体位置和遭遇都不补写。`;
 const NEW_ROUTES=new Set(['ma','cheng','du','wang','huang']);
 const SPEAKERS={sha:['沙摩柯'],camp:['张南','冯习'],ma:['马良'],cheng:['程畿'],du:['杜路','刘宁'],wang:['王甫'],huang:['黄权']};
@@ -89,13 +89,14 @@ export async function talkRoute(s,front,text,{model,signal,refresh}={}){
  const config=model?null:await modelConfig();if(!model&&!config.apiKey)throw Object.assign(Error('尚未配置AI，请在设置中配置后重试；本次未计问答或推进战局。'),{status:400});
  const call=async(system,input)=>{const r=await(model?model({system,input,signal}):callModel(config,{system,text:JSON.stringify(input),temperature:system===ROUTE_CLASSIFY?.1:.55},signal));return typeof r==='string'?parseJSON(r):r.text?parseJSON(r.text):r;};
  const history=(s.routeTurns||[]).filter(t=>t.front===front).slice(-4),known=authority(s,front);
- const checked=async(system,input,validate)=>{let error;for(let attempt=0;attempt<2;attempt++){try{return validate(await call(system,{...input,...(attempt?{correction:error.message}: {})}));}catch(e){error=e;if(signal?.aborted||attempt)throw e;}}};
+ const checked=async(system,input,validate)=>{let error;for(let attempt=0;attempt<2;attempt++){try{return validate(await call(system,{...input,...(attempt?{correction:error.field?error.message+' 请核对字段 '+error.field:error.message}: {})}));}catch(e){error=e;if(signal?.aborted||attempt)throw e;}}};
  const classification=await checked(ROUTE_CLASSIFY,{authority:known,history,current:{messageId:'current',text}},raw=>validateRouteClassification(raw,s,front,text,history));
  const projected=structuredClone(s);
  if(classification.outcome==='COOPERATE_SEARCH'||classification.outcome==='ARRANGE_RELAY')projected.fronts[front].planAccepted=true;
  if(classification.outcome==='WITHDRAW_PLAN')projected.fronts[front].planAccepted=false;
  if(crisisAuthority(projected,front))refresh?.(projected);
  const nextKnown=authority(projected,front);
- const replies=await checked(ROUTE_RESPOND,{authority:nextKnown,classification,history,current:text},raw=>validateRouteReply(raw,nextKnown));
+ const expectedClaims={status:nextKnown.status,searchVerified:nextKnown.searchVerified,planAccepted:nextKnown.planAccepted,stages:nextKnown.stages.map(({id,status})=>({id,status})),...(NEW_ROUTES.has(front)?{knowledge:nextKnown.knowledge}:{}),...(nextKnown.crisisRef?{crisisRef:nextKnown.crisisRef}:nextKnown.crisis?{crisis:nextKnown.crisis}:{})};
+ const replies=await checked(ROUTE_RESPOND,{authority:nextKnown,expectedClaims,classification,history,current:text},raw=>validateRouteReply(raw,nextKnown));
  return {replies,classification,accepted:nextKnown.planAccepted,promptVersion:ROUTE_PROMPT_VERSION,model:config?.model||'test-double'};
 }

@@ -83,6 +83,7 @@ export class BranchProgress {
                 for(const revision of revisions)if(revision.speaker===line.speaker&&revision.old===line.text)line.text=revision.new;
                 const source=node?.lines.find(l=>l.speaker===line.speaker&&l.text===line.text);
                 if(source?.visible)line.visible=true;
+                else if(source?.speaker==='演出')delete line.visible;
             }
         }
         if(JSON.stringify(rebuilt.snapshot())!==JSON.stringify(g.snapshot()))throw Error('第一章存档与实际经过不符。');

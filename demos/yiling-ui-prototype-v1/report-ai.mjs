@@ -27,8 +27,63 @@ export function reportInput(s){
  return {routeVersion:s.routeVersion||'legacy',crisisModel:!!crisisAuthority(s,'fu'),successCondition:eight(s)?'all_safe':'all_home',rescueComplete:eight(s)?Object.values(s.fronts).every(f=>['safe','home'].includes(f.status)):Object.values(s.fronts).every(f=>f.status==='home'),round:s.round,pool:report.pool,fronts:fronts.map(f=>{const known=modern(s)&&f.id!=='fu'?routeAuthority(s,f.id):null;return {...f,...(!!crisisAuthority(s,'fu')?{urgency:s.fronts[f.id].urgency,...(s.routeVersion==='eight-front-20261118-v4'?{lastCrisisEvent:s.fronts[f.id].lastCrisisEvent||null}:{}),stages:s.fronts[f.id].stages?.map(({id,name,status,urgency,assessment,lastResolution})=>({id,name,status,urgency,assessment,...(s.routeVersion==='eight-front-20261118-v4'?{escapeMode:lastResolution?.outcome==='safe'?lastResolution.mode:null}:{})}))}:{}),name:NAMES[f.id],location:known?.location||{sha:'东沟、西沟',camp:'旧营',fu:'后阵'}[f.id],...(known?{speakerStates:known.speakerStates,knowledge:known.knowledge,searchVerified:known.searchVerified}: {})};}),units:report.units.map(u=>({...u,targetName:NAMES[u.target]||'接应营'})),events:s.receipts.filter(e=>e.round===s.round).map(e=>({id:e.id,front:e.front||'camp-base',text:e.text}))};
 }
 
+// A route's people and its dispatched units travel separately. Each line retains its source route.
+function fieldLines(input){
+ const rows=[];
+ for(const front of Object.keys(NAMES)){
+  const events=input.events.filter(e=>e.front===front);
+  if(!events.length)continue;
+  const state=input.fronts.find(f=>f.id===front),units=input.units.filter(u=>u.target===front);
+  const lines=[];
+  if(state){
+   const batches=state.stages||[];
+   for(const [status,word] of [['home','已归营'],['safe','已脱险，正在归营'],['holding','尚未脱险']]){
+    const people=batches.filter(g=>g.status===status).map(g=>front==='sha'&&state.searchVerified===false&&g.name==='找到的部众'?'失散的部众':g.name);
+    if(people.length)lines.push(people.join('、')+word+'。');
+   }
+   const selfEvacuated=batches.filter(g=>g.status==='safe'&&g.escapeMode==='autonomous');
+   if(selfEvacuated.length)lines.push(selfEvacuated.map(g=>g.name).join('、')+'沿已核实的退路自行撤出。');
+   if(state.status==='safe')lines.push('这一路营救已经成功。');
+   const event=state.lastCrisisEvent;
+   if(event?.round===input.round)lines.push(event.text);
+   // Preserve contact/reconnaissance facts, including the separate first dispatch for newly unlocked routes.
+   for(const e of events)if(/驿卒送来消息|船工回报|散兵带来消息|亲随在退军中|江北使者抵营|亲随辨认出|驿卒带队找到|核实了会合处|反证已送达|核实队回营复报|撤离信号已送达|窄道出口|船工引导接应船|接应船抵达渡口|南侧替代路线可通行/.test(e.text))lines.push(e.text);
+   for(const [key,word] of [['marching','仍在行军，尚未到位'],['returning','正返回营中'],['home','已回营'],['ready','已回营'],['lost','已无可战兵力']]){
+    const moved=units.filter(u=>u.state===key&&(key!=='ready'||u.previousState==='returning'));
+    if(moved.length)lines.push(moved.map(u=>u.name+'（'+u.task+'）').join('、')+word+'。');
+   }
+   const working=units.filter(u=>u.state==='active');
+   if(working.length)lines.push(working.map(u=>u.name+'在当地'+u.task).join('，')+'。');
+   if(state.status==='holding'){
+    const waiting=batches.filter(g=>g.status==='holding');
+    const stalled=waiting.filter(g=>!g.assessment?.eligible||g.assessment.probability===0);
+    const possible=waiting.filter(g=>g.assessment?.eligible&&g.assessment.probability>0);
+    if(possible.length)lines.push((possible.length===waiting.length?'现有条件下仍有机会撤出':possible.map(g=>g.name).join('、')+'已有机会撤出')+'，尚在等前线回报。');
+    if(stalled.length){
+     const reasons=stalled.flatMap(g=>g.assessment?.reasons||[]);
+     const reason=reasons.find(t=>t.includes('后队伤员'))||reasons[0];
+     if(reason)lines.push(reason+'。');
+     else if(stalled.some(g=>g.assessment?.eligible))lines.push('接应队已到，眼下追击太紧，还无法撤出。');
+    }
+   }
+  }else if(front==='camp-base'){
+   lines.push(input.rescueComplete?'各路需要接应的人都已脱险。':'各路军报已收齐。');
+  }
+  if(!lines.length)lines.push('本路尚待下一份回报。');
+  rows.push({front,lines:[...new Set(lines)],eventIds:events.map(e=>e.id)});
+ }
+ return rows;
+}
+function renderFieldLines(rows,leads={}){
+ return rows.map(({front,lines,eventIds})=>{
+  const i=leads[front];
+  const ordered=Number.isInteger(i)&&i>=0&&i<lines.length?[lines[i],...lines.filter((_,n)=>n!==i)]:lines;
+  return {front,text:ordered.join(''),eventIds};
+ });
+}
 // A readable factual fallback also works without a configured model or during outages.
 export function fallbackReport(input){
+ if(input.routeVersion==='eight-front-20261118-v4')return renderFieldLines(fieldLines(input));
  const paragraphs=[];
  for(const front of Object.keys(NAMES)){
   const events=input.events.filter(e=>e.front===front);if(!events.length)continue;
@@ -80,12 +135,22 @@ export function validateReport(raw,input){
 }
 export async function narrateReport(s,{model,signal}={}){
  const input=reportInput(s),fallback=fallbackReport(input);
- if(model===false||!input.events.length)return {paragraphs:fallback,source:'facts',promptVersion:REPORT_PROMPT_VERSION};
+ const promptVersion=input.routeVersion==='eight-front-20261118-v4'?'2026-11-19-route-facts-v1':REPORT_PROMPT_VERSION;
+ if(model===false||!input.events.length)return {paragraphs:fallback,source:'facts',promptVersion};
  try{
-  const config=model?null:await modelConfig();if(!model&&!config.apiKey)return {paragraphs:fallback,source:'facts',promptVersion:REPORT_PROMPT_VERSION};
+  const config=model?null:await modelConfig();if(!model&&!config.apiKey)return {paragraphs:fallback,source:'facts',promptVersion};
   const timeout=AbortSignal.timeout(15000),bounded=signal?AbortSignal.any([signal,timeout]):timeout;
+  if(input.routeVersion==='eight-front-20261118-v4'){
+   const facts=fieldLines(input);
+   const system='选择每一路本轮最值得先读的一条前线军情，优先新到的求援、脱险和影响下一令的变化。只返回 {"leads":{"路线ID":该路线lines中的零起始序号}}。不生成正文。';
+   const payload=facts.map(({front,lines})=>({front,lines}));
+   const answer=await (model?model({system,input:payload,signal:bounded}):callModel(config,{system,text:JSON.stringify(payload),temperature:0},bounded));
+   const raw=typeof answer==='string'?parseJSON(answer):answer.text?parseJSON(answer.text):answer;
+   if(!raw?.leads||typeof raw.leads!=='object')throw Error('未收到军报顺序');
+   return {paragraphs:renderFieldLines(facts,raw.leads),source:'model',promptVersion};
+  }
   const answer=await (model?model({system:REPORT_PROMPT,input,signal:bounded}):callModel(config,{system:REPORT_PROMPT,text:JSON.stringify(input),temperature:.4},bounded));
   const raw=typeof answer==='string'?parseJSON(answer):answer.text?parseJSON(answer.text):answer;
-  return {paragraphs:validateReport(raw,input),source:'model',promptVersion:REPORT_PROMPT_VERSION};
- }catch{return {paragraphs:fallback,source:'facts',promptVersion:REPORT_PROMPT_VERSION};}
+  return {paragraphs:validateReport(raw,input),source:'model',promptVersion};
+ }catch{return {paragraphs:fallback,source:'facts',promptVersion};}
 }

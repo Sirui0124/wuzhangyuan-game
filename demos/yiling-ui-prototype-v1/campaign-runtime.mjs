@@ -8,7 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {join} from 'node:path';
 import {talk} from './fu-ai.mjs';
 import {narrateReport} from './report-ai.mjs';
-import {VERSION,FRONTS,fresh,orders,settle,prepareSettlement,completeSettlement,derive,message,publicSession,fail} from './campaign-engine.mjs';
+import {VERSION,FRONTS,fresh,orders,previewOrders,settle,prepareSettlement,completeSettlement,derive,message,publicSession,fail} from './campaign-engine.mjs';
 
 function preset(s,front,text){
  const r=s.fronts[front];if(r.status==='home')return '人都已接回，伤兵正在安置。接应队的伤亡已经报给军侯。';
@@ -32,10 +32,15 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
  // A hard link publishes a fully written file atomically and refuses replacement.
  // Checkpoints and restored sessions never overwrite an existing user record.
  async function createImmutable(dest,value){await mkdir(directory,{recursive:true});await mkdir(join(directory,'checkpoints'),{recursive:true});const tmp=dest+'.'+randomUUID()+'.tmp';try{await writeFile(tmp,JSON.stringify(value),{flag:'wx'});try{await link(tmp,dest);return value;}catch(e){if(e.code==='EEXIST')return JSON.parse(await readFile(dest,'utf8'));throw e;}}finally{await unlink(tmp).catch(e=>{if(e.code!=='ENOENT')throw e;});}}
- function checkRevision(s,input){if(input.expectedRevision!==s.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新复诵。'),{status:409,session:publicSession(s)});}
+ function checkRevision(s,input){if(input.expectedRevision!==s.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新预览军令。'),{status:409,session:publicSession(s)});}
  function checkpointInfo(c){return {id:c.id,scenarioId:c.state.scenarioId,revision:c.state.revision,round:c.state.round,routeVersion:c.state.routeVersion,createdAt:c.createdAt};}
  return {
   async session(id,difficulty){if(id)return publicSession(await load(id));const s=fresh({seed:randomBytes(4).readUInt32LE()||1,difficulty:difficulty||'normal'});await persist(s);return publicSession(s);},
+  async preview(input){
+   const s=await load(input.scenarioId);
+   checkRevision(s,input);
+   return previewOrders(s,input.orders);
+  },
   async checkpoint(input){
    request(input);const id=operationId('checkpoint',input),hash=digest({scenarioId:input.scenarioId,expectedRevision:input.expectedRevision,requestId:input.requestId});
    return locked(input.scenarioId,async()=>{
@@ -67,7 +72,7 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
    return locked(input.scenarioId,async()=>{
     const current=await load(input.scenarioId),hash=createHash('sha256').update(JSON.stringify({kind,...input})).digest('hex');
     if(current.requests[input.requestId]){if(current.requests[input.requestId]!==hash)fail('请求编号不能重复用于不同军令。',409);return publicSession(current);}
-    if(input.expectedRevision!==current.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新复诵。'),{status:409,session:publicSession(current)});
+    if(input.expectedRevision!==current.revision)throw Object.assign(Error('军情已更新，请按最新兵力重新预览军令。'),{status:409,session:publicSession(current)});
     if(current.ended)fail('本次营救已结算，请新开一局。');
     const s=structuredClone(current);
     if(kind==='orders')orders(s,input.orders);
@@ -79,10 +84,16 @@ export function createCampaignRuntime({directory=fileURLToPath(new URL('../../ou
      if(count>=8)fail('本轮已交谈八次，可先安排接应，下轮再继续。');
      const text=input.text.trim(),phase=s.phase;
      // The AI authority adapter sees only the units actually at Fu's rear.
-     const result=f==='fu'?await talk(s,text,{signal,model,refresh:derive}):null;
-     if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
-     const routeResult=f!=='fu'&&modern(s)?await talkRoute(s,f,text,{signal,model:routeModel,refresh:derive}):null;
-     if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
+     // Failures here precede all writes. A lost network reply after commit must still use the original request ID.
+     let result,routeResult;
+     try{
+      result=f==='fu'?await talk(s,text,{signal,model,refresh:derive}):null;
+      if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
+      routeResult=f!=='fu'&&modern(s)?await talkRoute(s,f,text,{signal,model:routeModel,refresh:derive}):null;
+      if(signal?.aborted)fail('本次请求已取消，原文保留。',499);
+     }catch(error){
+      throw Object.assign(error,{status:error.status||422,notCommitted:true});
+     }
      const playerId=message(s,'我',text,'question',f);
      if(routeResult){s.fronts[f].planAccepted=routeResult.accepted;if(crisis(s))derive(s);const replyIds=routeResult.replies.map(r=>message(s,r.speaker,r.text,'dialogue',f));(s.routeTurns??=[]).push({front:f,playerId,player:text,replyIds,replies:routeResult.replies,classification:routeResult.classification,promptVersion:routeResult.promptVersion,model:routeResult.model});}
      const reply=result?.reply||(!routeResult?preset(s,f,text):'');
@@ -104,8 +115,9 @@ export function campaignHandler(runtime=createCampaignRuntime()){
   const controller=new AbortController();res.on('close',()=>{if(!res.writableEnded)controller.abort();});const signal=AbortSignal.any([controller.signal,AbortSignal.timeout(90000)]);
   try{let body='';for await(const part of req){body+=part.toString('utf8');if(Buffer.byteLength(body)>16000)fail('请求过长。',413);}let input;try{input=JSON.parse(body);}catch{fail('JSON格式错误。');}if(!input||typeof input!=='object'||Array.isArray(input))fail('请求格式错误。');
    const kind=new URL(req.url,'http://localhost').pathname.split('/').at(-1);
+   if(kind==='preview')return send(200,{ok:true,preview:await runtime.preview(input)});
    if(kind==='checkpoint')return send(200,{ok:true,checkpoint:await runtime.checkpoint(input)});
    const session=kind==='session'?await runtime.session(input.scenarioId,input.difficulty):kind==='restore'?await runtime.restore(input):await runtime.act(kind,input,signal);send(200,{ok:true,session});
-  }catch(e){send(signal.aborted?504:e.status||502,{ok:false,error:signal.aborted?'等待回复超时，请重试原请求。':e.message,...(e.session?{session:e.session}:{})});}
+  }catch(e){send(signal.aborted?504:e.status||502,{ok:false,error:e.notCommitted?(signal.aborted?'本次问话超时。':e.message+' ')+'未记入本轮，可改问或继续传令。':signal.aborted?'等待回复超时，请重试原请求。':e.message,...(e.notCommitted?{notCommitted:true}:{}),...(e.session?{session:e.session}:{})});}
  };
 }

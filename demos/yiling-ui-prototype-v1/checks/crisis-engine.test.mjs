@@ -6,7 +6,7 @@ import {crisisProbability,refreshCrisis} from '../crisis-rules.mjs';
 process.env.CRISIS_BALANCE_LIBRARY='1';
 const {simulate,seedFor,audit}=await import('./crisis-balance.mjs');
 const fresh=(options={})=>freshEngine({...options,rules:'eight-v3'});
-const O=(target,action,men,unit='new')=>({target,action,men,unit,rush:true,via:action==='scout'?'side':'normal'});
+const O=(target,action,men,unit='new')=>({target,action,men,unit,via:action==='scout'?'side':'normal'});
 const escaped=r=>['safe','home'].includes(r.status);
 
 test('v3危机来自真实状态，无工作量/进度/隐形执行次数，公开投影一致',()=>{
@@ -21,26 +21,31 @@ test('所有路线使用同一危机概率曲线，低危确定、高危不能�
  let last=1;for(let c=0;c<=100;c++){const p=crisisProbability(c,rules);assert.ok(p>=0&&p<=1&&p<=last);last=p;}
 });
 test('未到位军令不降低危机，实际到位后才影响真实危机',()=>{
- const s=fresh({seed:11}),before=s.fronts.camp.urgency;orders(s,[O('camp','rescue',400)]);assert.equal(publicSession(s).fronts.camp.urgency,before);settle(s);assert.ok(s.fronts.camp.urgency<before);
+ const s=fresh({seed:11}),before=s.fronts.camp.urgency;orders(s,[O('camp','rescue',400)]);assert.equal(publicSession(s).fronts.camp.urgency,before);settle(s);assert.equal(Object.values(s.units).find(u=>u.target==='camp').state,'marching');assert.ok(s.fronts.camp.urgency>=before);settle(s);assert.ok(s.fronts.camp.urgency<before);
 });
-test('无人接应会恶化，真实接应部分缓解后撤兵可重新回升',()=>{const result=audit();assert.ok(result.unaidedRises.length);assert.ok(result.rebound.after>result.rebound.lowered);});
+test('无人接应会恶化，真实接应部分缓解后撤兵可重新回升',()=>{
+ const result=audit();
+ assert.ok(result.unaidedRises.length>0);
+ assert.ok(result.rebound.start>result.rebound.lowered);
+ assert.ok(result.rebound.after>result.rebound.lowered);
+});
 test('旧营接力表态不能代替后队真实掩护',()=>{
- const s=fresh({seed:21});s.fronts.camp.planAccepted=true;orders(s,[O('camp','rescue',500,'1')]);settle(s);
+ const s=fresh({seed:21});s.fronts.camp.planAccepted=true;orders(s,[O('camp','rescue',500,'1')]);settle(s);settle(s);
  const rear=s.fronts.camp.stages.find(st=>st.id==='rear');assert.equal(rear.lastResolution.eligible,false);assert.equal(rear.status,'holding');assert.ok(rear.lastResolution.reasons.length);
 });
 test('同一路全部就绪批次共享一个真实战场抽样，没有强制逐轮排队',()=>{
- const s=fresh({seed:31});s.fronts.camp.planAccepted=true;orders(s,[O('camp','rescue',500,'1'),O('camp','relieve',300)]);settle(s);
+ const s=fresh({seed:31});s.fronts.camp.planAccepted=true;orders(s,[O('camp','rescue',500,'1'),O('camp','relieve',300)]);settle(s);settle(s);
  const a=s.fronts.camp.stages.map(st=>st.lastResolution);assert.ok(a.every(x=>x.eligible));assert.equal(new Set(a.map(x=>x.draw)).size,1);
  for(const x of a)if(x.urgency<=s.crisisRules.certainBelow)assert.equal(x.outcome,'safe');
  assert.ok(s.fronts.camp.stages.every(st=>st.status==='safe'),'Both low-crisis ready batches can leave in same round.');
 });
 test('路线整体概率取剩余批次最低值，危机取最高值',()=>{
- const s=fresh({seed:5});orders(s,[O('camp','rescue',100)]);settle(s);refreshCrisis(s);
+ const s=fresh({seed:5});orders(s,[O('camp','rescue',100)]);settle(s);settle(s);refreshCrisis(s);
  const r=s.fronts.camp,remaining=r.stages.filter(st=>st.status==='holding');assert.ok(remaining.length>0);
  assert.equal(r.urgency,Math.max(...r.stages.map(st=>st.urgency)));assert.equal(r.assessment.probability,Math.min(...remaining.map(st=>st.assessment.probability)));
 });
 test('傅肜消息与掩护齐备但无护送时，未脱险危机不显示为零',()=>{
- const s=fresh({seed:19});orders(s,[O('fu','relieve',400)]);settle(s);
+ const s=fresh({seed:19});orders(s,[O('fu','relieve',400)]);settle(s);settle(s);
  Object.assign(s.facts,{liubeiAliveVerified:true,liubeiSafeConfirmed:true,withdrawalAccepted:true,alternateRouteOpen:true,routeScouted:true,withdrawalSignalDelivered:true});
  s.fronts.fu.pressure=0;refreshCrisis(s);
  assert.equal(s.fronts.fu.status,'holding');assert.equal(s.fronts.fu.assessment.eligible,false);assert.equal(s.fronts.fu.assessment.probability,0);assert.equal(s.fronts.fu.urgency,1);

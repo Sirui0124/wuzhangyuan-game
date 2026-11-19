@@ -8,7 +8,7 @@ import {createStaticServer} from '../../../GameStarter/web-demo/serve.mjs';
 import {publishCommandMap} from '../publish.mjs';
 import {fresh} from '../campaign-engine.mjs';
 const workspace=fileURLToPath(new URL('../../../',import.meta.url));
-const out=resolve(workspace,'outputs/eight-front-events-browser-20261118');await mkdir(out,{recursive:true});
+const out=resolve(workspace,process.env.CH4_BROWSER_OUTPUT||'outputs/eight-front-events-browser-20261118');await mkdir(out,{recursive:true});
 publishCommandMap(resolve(workspace,'GameStarter/web-demo/.build'));
 const directory=await mkdtemp(join(tmpdir(),'wzy-eight-ui-'));
 const routeModel=async({input})=>input.classification?{replies:[{speaker:input.authority.availableSpeakers[0],text:'收到。同行的人还要照应，接应消息以眼前回报为准。'}],claims:{status:input.authority.status,searchVerified:input.authority.searchVerified,planAccepted:input.authority.planAccepted,stages:input.authority.stages.map(({id,status})=>({id,status})),...(input.authority.knowledge?{knowledge:input.authority.knowledge}:{}),...(input.authority.crisis?{crisis:input.authority.crisis}:{})},factRefs:['status']}:{outcome:'DIALOGUE_ONLY',checks:{waitForVerifiedSearch:false,rearEscort:false,keepCover:false},quotes:[]};
@@ -116,7 +116,23 @@ try{
  function assessmentCheck(s){for(const f of Object.values(s.fronts)){for(const key of ['progress','work','executions'])assert.equal(Object.hasOwn(f,key),false,'v4 must not expose '+key);if(f.status==='locked')continue;assert.equal(f.urgency,f.assessment.urgency);assert.equal(typeof f.assessment.eligible,'boolean');assert.ok(Array.isArray(f.assessment.reasons));assert.ok(Number.isFinite(f.assessment.probability));for(const stage of f.stages||[]){assert.equal(Object.hasOwn(stage,'progress'),false);assert.equal(Object.hasOwn(stage,'work'),false);assert.equal(stage.urgency,stage.assessment.urgency);if(stage.status!=='holding')assert.equal(stage.urgency,0);}}}
  assessmentCheck(initial);
  await rejected('chat',{front:'huang',text:'请报军情。'});await rejected('orders',{orders:[{unit:'new',target:'ma',action:'rescue',men:100,rush:true,via:'normal'}]});checks.push('未开放路线问话与军令被拒绝，版本未变');
- async function dispatch(text){if(await board.locator('#mode-toggle').getAttribute('aria-pressed')==='false')await board.locator('#mode-toggle').click();await board.locator('#order-unit').selectOption('auto');await board.locator('#order-target').selectOption('auto');await board.locator('#draft').fill(text);await board.locator('#send').click();await board.locator('#preview').waitFor({state:'visible'});await board.locator('#send').click();await board.locator('#preview').waitFor({state:'hidden'});assert.equal(await board.locator('#feedback').innerText(),'');}
+ async function dispatch(text){
+  if(await board.locator('#mode-toggle').getAttribute('aria-pressed')==='false')await board.locator('#mode-toggle').click();
+  assert.equal(await board.locator('#order-pace').count(),0);
+  await board.locator('#order-unit').selectOption('auto');await board.locator('#order-target').selectOption('auto');
+  await board.locator('#draft').fill(text);
+  const before=await session();
+  await board.getByRole('button',{name:'预览军令',exact:true}).click();
+  await board.getByRole('heading',{name:'军令预览',exact:true}).waitFor();
+  const summary=await board.locator('#preview').innerText();
+  assert.doesNotMatch(summary,/急行|复诵/);
+  for(const row of await board.locator('#preview .order-line').allTextContents())assert.ok(row.includes('第'+(before.round+2)+'轮结束时到位'),row);
+  assert.equal((await session()).revision,before.revision);
+  if(before.round===2)await page.screenshot({path:join(out,'order-preview.png')});
+  await board.getByRole('button',{name:'确认传令',exact:true}).click();
+  await board.locator('#preview').waitFor({state:'hidden'});await board.locator('#feedback').filter({hasText:'军令已入列'}).waitFor();
+  assert.equal((await session()).revision,before.revision+1);
+ }
  async function end(n){await board.locator('#fu-end-round').click();await board.locator('#round-report').waitFor({state:'visible'});assert.match(await board.locator('#round-report-title').innerText(),new RegExp(`第${n}轮`));const snapshot=await session();assessmentCheck(snapshot);for(const f of snapshot.lastReport.fronts){assert.equal(f.after,snapshot.fronts[f.id].urgency);for(const stage of f.stages||[]){const saved=snapshot.fronts[f.id].stages.find(x=>x.id===stage.id);assert.equal(stage.urgency,saved.urgency);assert.match(await board.locator('[data-report-front='+f.id+']').innerText(),new RegExp('危机 '+stage.urgency));}}await board.locator('#round-report button').click();for(const [id,f]of Object.entries(snapshot.fronts))if(f.status==='holding'){const contact=board.locator('#contacts [data-front='+id+']');const urgency=board.locator('[data-urgency='+id+'] strong');if(await contact.count())assert.equal(await urgency.innerText(),String(f.urgency));else assert.equal(await urgency.count(),0);}}
  async function chat(front){
   if(!await board.locator('#contacts [data-front='+front+']').count()){
@@ -125,10 +141,10 @@ try{
   }
   await board.locator('#contacts [data-front='+front+']').click();await board.locator('#draft').fill('现在情况怎样？');await board.locator('#send').click();await board.locator('#log .entry').last().filter({hasText:'同行的人'}).waitFor();}
  await end(1);const eventState=await session();assert.ok(eventState.crisisEvents?.length);const eventText=await readFile(join(directory,id+'.json'),'utf8');const eventHistory=structuredClone(eventState.crisisEvents);await page.reload();await board.locator('.roster-row').waitFor();assert.deepEqual((await session()).crisisEvents,eventHistory);assert.equal(await readFile(join(directory,id+'.json'),'utf8'),eventText);await board.locator('#review-round').click();for(const event of eventHistory)assert.ok((await board.locator('#round-report-body').innerText()).includes(event.text),'persisted event text must appear in report');await page.screenshot({path:join(out,'persisted-events.png')});await board.locator('#round-report button').click();checks.push('无人有效响应的事件实际结算并持久化，刷新及重看不重抽且正文保留');await end(2);assert.ok((await session()).fronts.sha.urgency>=initial.fronts.sha.urgency);checks.push('v4无progress/work/executions，高危无响应危机不下降，军报/地图/assessment数值一致');
- assert.equal(await board.locator('#contacts button').count(),3);assert.equal(await board.locator('.front-alert').count(),2);assert.equal(await board.locator('#order-target option').count(),6);await chat('ma');assert.equal((await session()).fronts.ma.located,false);checks.push('第二轮结报后马良、程畿开放，问话不授予实地找到');
- await dispatch('甲队接应马良，急行军；派400人接应程畿，急行军');await end(3);
- let current=await session();assert.ok(current.fronts.ma.located);assert.ok(current.messages.some(m=>m.front==='cheng'&&/接应船/.test(m.text)));await chat('cheng');await end(4);
- assert.equal(await board.locator('#contacts button').count(),5);assert.equal(await board.locator('.front-alert').count(),3);assert.equal(await board.locator('#order-target option').count(),9);checks.push('第四轮结报后杜路刘宁、王甫、黄权开放，早期实地接应正确');
+ assert.equal(await board.locator('#contacts button').count(),3);assert.equal(await board.locator('.front-alert').count(),3);assert.equal(await board.locator('#order-target option').count(),7);assert.equal((await session()).fronts.wang.status,'holding');await chat('ma');assert.equal((await session()).fronts.ma.located,false);checks.push('第二轮结报后马良、程畿、王甫开放，问话不授予实地找到');
+ await dispatch('甲队接应马良；派400人接应程畿');await end(3);
+ let current=await session();assert.equal(current.fronts.ma.located,false);await chat('cheng');await end(4);current=await session();assert.ok(current.fronts.ma.located);assert.ok(current.messages.some(m=>m.front==='cheng'&&/接应船/.test(m.text)));
+ assert.equal(await board.locator('#contacts button').count(),5);assert.equal(await board.locator('.front-alert').count(),3);assert.equal(await board.locator('#order-target option').count(),9);checks.push('第四轮结报后杜路刘宁、黄权开放，早期实地接应正确');
  for(const id of ['ma','cheng','du','wang','huang']){
   await board.locator('#places [data-front='+id+']').click();
   await board.locator('#story-reading').waitFor();
@@ -140,9 +156,9 @@ try{
  }
  assert.equal(await board.locator('#contacts button').count(),8);
  checks.push('随轮次出现的五路均可由地图点位查看图文与实时危机度');
- await chat('huang');await dispatch('派600人渡运黄权，急行军；派300人接应杜路刘宁，急行军；派200人接应王甫，急行军');await end(5);current=await session();assert.ok(current.messages.some(m=>m.front==='huang'&&/渡运|渡口/.test(m.text)));assert.ok(current.fronts.du.notified);assert.ok(current.fronts.wang.located);
+ await chat('huang');await dispatch('派600人渡运黄权；派300人接应杜路刘宁；派200人接应王甫');await end(5);current=await session();assert.equal(current.fronts.wang.located,false);await end(6);current=await session();assert.ok(current.messages.some(m=>m.front==='huang'&&/渡运|渡口/.test(m.text)));assert.ok(current.fronts.du.notified);assert.ok(current.fronts.wang.located);
  for(const [width,height] of [[1440,900],[1280,600],[800,450],[390,667]]){await page.setViewportSize({width,height});await page.waitForTimeout(80);for(const id of ['#draft','#send','#fu-end-round']){const b=await board.locator(id).boundingBox();assert.ok(b&&b.y>=0&&b.y+b.height<=height+1,`${width}x${height} clips ${id}`);}assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:join(out,`layout-${width}.png`)});checks.push(`${width}×${height}八路输入和结束本轮完整显示`);}
- await page.setViewportSize({width:1440,height:900});await end(6);await end(7);await end(8);current=await session();assert.equal(current.round,8);assert.equal(current.ended,true);assert.equal(current.endReason,'deadline');assert.equal(current.fronts.sha.status,'holding');assert.equal(await board.locator('#fu-end-round').isDisabled(),true);
+ await page.setViewportSize({width:1440,height:900});await end(7);await end(8);current=await session();assert.equal(current.round,8);assert.equal(current.ended,true);assert.equal(current.endReason,'deadline');assert.equal(current.fronts.sha.status,'holding');assert.equal(await board.locator('#fu-end-round').isDisabled(),true);
  const ending=board.locator('#ending-report[open]');
  await ending.waitFor();
  assert.equal(await ending.getByRole('tab').count(),9);

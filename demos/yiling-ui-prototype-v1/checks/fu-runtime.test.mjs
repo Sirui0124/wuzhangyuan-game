@@ -47,9 +47,11 @@ test('最小兵力/跨路线/信号条件校验；同队不能兼任；失败无
   await assert.rejects(runtime.act('orders',req(s,{orders})));
   assert.equal((await runtime.session(s.scenarioId)).revision,0);
  }
- s=await runtime.act('orders',req(s,{orders:[order('甲','relieve',{rush:true})]}));
+ s=await runtime.act('orders',req(s,{orders:[order('甲','relieve')]}));
  s=await runtime.act('round',req(s,{trigger:'endRound'}));
  assert.notEqual(s.phase,'safe');
+ assert.equal(s.facts.reliefInPosition,false);
+ s=await runtime.act('round',req(s,{trigger:'endRound'}));
  assert.equal(s.facts.reliefInPosition,true);
  s=await runtime.act('orders',req(s,{orders:[order('甲','rescue')]}));
  s=await runtime.act('round',req(s,{trigger:'endRound'}));

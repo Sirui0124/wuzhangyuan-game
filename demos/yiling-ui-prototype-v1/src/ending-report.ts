@@ -1,5 +1,5 @@
 import type {Session, RouteStage} from './campaign-client.js';
-import type {Front} from './campaign-intent.js';
+import {batchName,type Front} from './campaign-intent.js';
 
 // Stories are authored; outcomes come only from the saved campaign.
 export const ENDING_STORIES: Record<Front, {name:string; title:string; image:string; caption:string; before:string; saved:string; waiting:string}> = {
@@ -10,7 +10,7 @@ export const ENDING_STORIES: Record<Front, {name:string; title:string; image:str
  cheng:{name:'程畿',title:'末船',image:'river',caption:'江上撤路',before:'追兵逼近，程畿的船落在后头。同行的伤员还没转走，他仍守着末船。',saved:'伤员已转出，程畿与末船同行者也已脱险。',waiting:'江上还有人未撤出，接应船队的消息尚未收齐。'},
  du:{name:'杜路 · 刘宁',title:'围中来信',image:'camp',caption:'被围营地',before:'营中粮食将尽，主力又断了消息。杜路、刘宁守着部众和伤员，等一条能出去的路。',saved:'两将与部众已一同突围，同行伤员也在脱险名册中。',waiting:'两将与部众尚无突围的确报。'},
  wang:{name:'王甫',title:'退军之中',image:'valley',caption:'秭归方向',before:'退军挤满了道路，王甫一行失去了联系。亲随认得队伍的标记，带人去找，也去接那些落后的伤员。',saved:'王甫与同行伤员均已脱险。',waiting:'王甫与同行伤员的脱险消息尚未送到。'},
- huang:{name:'黄权',title:'江北归路',image:'river',caption:'江北渡口',before:'黄权留在江北，归路已断。他等着两岸接应，也等着最后留下掩护的将士有船可渡。',saved:'前批已渡过险处，黄权与末批将士也已脱险。',waiting:'江北仍有人未能撤出，最后一批的归路还未接通。'}
+ huang:{name:'黄权',title:'江北归路',image:'river',caption:'江北渡口',before:'黄权留在江北，归路已断。他等着两岸接应，也等着最后留下掩护的将士有船可渡。',saved:'前批已渡过险处，黄权与末批将士也已脱险。',waiting:'江北尚未传来黄权与末批将士脱险的回报。'}
 };
 const ORDER:Front[]=['sha','camp','fu','ma','cheng','du','wang','huang'];
 const safe=(status:string)=>status==='safe'||status==='home';
@@ -19,7 +19,7 @@ const esc=(v:string)=>v.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;
 export function endingModel(s:Session){
  const routes=ORDER.filter(id=>s.fronts[id]).map(id=>{
   const r=s.fronts[id],story=ENDING_STORIES[id];
-  const stages:RouteStage[]=r.stages?.length?r.stages:[{id:'person',name:story.name,status:r.status}];
+  const stages:RouteStage[]=r.stages?.length?r.stages.map(st=>({...st,name:batchName(id,st,s.routeInfo?.sha?.searchVerified)})):[{id:'person',name:story.name,status:r.status}];
   const saved=stages.filter(x=>safe(x.status)),fallen=stages.filter(x=>dead(x.status)),waiting=stages.filter(x=>!safe(x.status)&&!dead(x.status));
   return {id,story,stages,saved,fallen,waiting,complete:saved.length===stages.length};
  });

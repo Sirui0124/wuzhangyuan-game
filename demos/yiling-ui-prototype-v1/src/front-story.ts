@@ -1,5 +1,5 @@
 import type { Session } from './campaign-client.js';
-import { names, type Front } from './campaign-intent.js';
+import { batchName, names, type Front } from './campaign-intent.js';
 import { ENDING_STORIES } from './ending-report.js';
 
 // Historical outcomes are for the reader. Only the live session supplies current military intelligence.
@@ -33,10 +33,35 @@ const dialog = $<HTMLDialogElement>('front-story');
 const filmHost = $('story-film');
 let active: { front: Front; film?: FrontFilm } | null = null;
 
+export function conditionLabel(stage: {status:string;assessment?:{mode?:string;eligible:boolean;probability:number;reasons:string[]}}){
+    if(stage.status==='home')return '已归营';
+    if(stage.status==='safe')return '脱险返程';
+    const a=stage.assessment;
+    if(!a)return '待接应';
+    if(a.mode==='autonomous')return '可自行撤离';
+    if(!a.eligible){
+        const noEscort=a.reasons.some(r=>r.includes('护送队尚未在岗'));
+        const noCover=a.reasons.some(r=>r.includes('后队伤员'));
+        if(noCover)return noEscort?'缺护送和掩护':'后队缺掩护';
+        return noEscort?'待护送到位':'待会合';
+    }
+    if(a.probability===0)return '追击未压住';
+    if(a.probability===1)return '可撤离';
+    if(a.reasons.some(r=>r.includes('掩护兵力不足')))return '可撤，添掩护有利';
+    if(a.reasons.some(r=>r.includes('护送人手有限')))return '可撤，添护送有利';
+    return '正在争取撤离';
+}
+export function routeBrief(front:Front,session:Session){
+    const route=session.fronts[front],d=route.deployment;
+    if(route.status!=='holding'||!d)return '';
+    const needs:Partial<Record<Front,string>>={camp:'后队伤员须有人掩护。',ma:'护送队可随驿卒直接找人。',wang:'护送队可随亲随直接辨认王甫。',sha:'护送队可沿谷道边找边接人。',fu:'核实刘备消息有助劝撤，也可直接派队护送、掩护。',du:'护送队到位即可接应突围。',cheng:'护送队到江上即可接人。',huang:'护送队到渡口即可接应两岸。'};
+    return (needs[front]||'')+' 在岗／参考兵力：护送 '+d.escort+'／'+d.escortReference+'，掩护 '+d.cover+'／'+d.coverReference+'。参考兵力有助压低危机。';
+}
 function currentIntelligence(front: Front, session: Session) {
     const route = session.fronts[front];
     if (route.status === 'home') return '已归营。';
     if (route.status === 'safe') return '已脱险，正在归营。';
+    if (route.urgency===100) return '追击极紧。危机到100仍能接应，最迟须在第'+(session.roundLimit??8)+'轮结束前脱险。';
     if (route.assessment?.autonomousEligible) return '已具备自行撤离条件，尚未收到脱险回报。';
     if (front === 'sha' && session.routeInfo?.sha?.searchVerified) return '谷道会合处已核实，仍待撤出。';
     if (front === 'fu' && session.facts.liubeiAliveVerified) {
@@ -120,7 +145,8 @@ export function openFrontStory(front: Front, session: Session, firstVisit: boole
     $('story-text').textContent = oldSha
         ? '沙摩柯的部众散在东沟和西沟。东沟还有人能走，西沟的伤兵需用担架。沙摩柯仍在等伤兵撤出。'
         : OPENING[front] ?? story.before;
-    $('story-current').textContent = currentIntelligence(front, session);
+    const groups=session.fronts[front].stages||[];
+    $('story-current').textContent = [currentIntelligence(front, session),routeBrief(front,session),...groups.map(g=>batchName(front,g,session.routeInfo?.sha?.searchVerified)+' · '+conditionLabel(g))].filter(Boolean).join('\n');
     $('story-replay').hidden = !film;
     dialog.showModal();
     if (film && firstVisit) playStoryFilm();
