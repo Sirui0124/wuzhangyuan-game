@@ -1,4 +1,4 @@
-import type { Session } from './campaign-client.js';
+import type { RouteStage, Session } from './campaign-client.js';
 import { batchName, names, type Front } from './campaign-intent.js';
 import { ENDING_STORIES } from './ending-report.js';
 
@@ -51,9 +51,19 @@ export function conditionLabel(stage: {status:string;assessment?:{mode?:string;e
     if(a.reasons.some(r=>r.includes('护送人手有限')))return '可撤，添护送有利';
     return '正在争取撤离';
 }
+export function conditionDetail(stage: RouteStage){
+    const condition=conditionLabel(stage);
+    const assessment=stage.assessment;
+    if(stage.status!=='holding'||!assessment?.eligible)return condition;
+    const p=assessment.probability;
+    if(!Number.isFinite(p)||p<0||p>1)return condition;
+    const percent=Math.round(p*100);
+    const chance=p===0?'0%':p===1?'100%':percent===0?'不足1%':percent===100?'超过99%':'约'+percent+'%';
+    return condition+' · 当前单轮脱险率'+chance;
+}
 export function routeBrief(front:Front,session:Session){
     const route=session.fronts[front],d=route.deployment;
-    if(route.status!=='holding'||!d)return '';
+    if(session.ended||route.status!=='holding'||!d)return '';
     const needs:Partial<Record<Front,string>>={camp:'后队伤员须有人掩护。',ma:'护送队可随驿卒直接找人。',wang:'护送队可随亲随直接辨认王甫。',sha:'护送队可沿谷道边找边接人。',fu:'核实刘备消息有助劝撤，也可直接派队护送、掩护。',du:'护送队到位即可接应突围。',cheng:'护送队到江上即可接人。',huang:'护送队到渡口即可接应两岸。'};
     return (needs[front]||'')+' 在岗／参考兵力：护送 '+d.escort+'／'+d.escortReference+'，掩护 '+d.cover+'／'+d.coverReference+'。参考兵力有助压低危机。';
 }
@@ -61,6 +71,7 @@ function currentIntelligence(front: Front, session: Session) {
     const route = session.fronts[front];
     if (route.status === 'home') return '已归营。';
     if (route.status === 'safe') return '已脱险，正在归营。';
+    if (session.ended) return '营救已结束，仍待撤出的人员列在下方。';
     if (route.urgency===100) return '追击极紧。危机到100仍能接应，最迟须在第'+(session.roundLimit??8)+'轮结束前脱险。';
     if (route.assessment?.autonomousEligible) return '已具备自行撤离条件，尚未收到脱险回报。';
     if (front === 'sha' && session.routeInfo?.sha?.searchVerified) return '谷道会合处已核实，仍待撤出。';
@@ -68,7 +79,7 @@ function currentIntelligence(front: Front, session: Session) {
         return '刘备仍在的可信消息已送达傅肜。' +
             (session.facts.withdrawalAccepted ? '傅肜已答应撤离，仍待脱险回报。' : '傅肜仍在后阵。');
     }
-    return route.lastCrisisEvent?.text || (session.ended ? '本次调度已结束，尚未收到脱险回报。' : '仍待接应。');
+    return route.lastCrisisEvent?.text || '仍待接应。';
 }
 
 function stopFilm() {
@@ -146,7 +157,7 @@ export function openFrontStory(front: Front, session: Session, firstVisit: boole
         ? '沙摩柯的部众散在东沟和西沟。东沟还有人能走，西沟的伤兵需用担架。沙摩柯仍在等伤兵撤出。'
         : OPENING[front] ?? story.before;
     const groups=session.fronts[front].stages||[];
-    $('story-current').textContent = [currentIntelligence(front, session),routeBrief(front,session),...groups.map(g=>batchName(front,g,session.routeInfo?.sha?.searchVerified)+' · '+conditionLabel(g))].filter(Boolean).join('\n');
+    $('story-current').textContent = [currentIntelligence(front, session),routeBrief(front,session),...groups.map(g=>batchName(front,g,session.routeInfo?.sha?.searchVerified)+' · '+(session.ended&&g.status==='holding'?'尚未脱险':conditionDetail(g)))].filter(Boolean).join('\n');
     $('story-replay').hidden = !film;
     dialog.showModal();
     if (film && firstVisit) playStoryFilm();

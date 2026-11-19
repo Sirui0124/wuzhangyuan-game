@@ -8,6 +8,8 @@ import {createStaticServer} from '../../../GameStarter/web-demo/serve.mjs';
 import {publishCommandMap} from '../publish.mjs';
 import {fresh} from '../campaign-engine.mjs';
 const workspace=fileURLToPath(new URL('../../../',import.meta.url));
+const pcOnly=process.env.WUZHANG_TEST_PC_ONLY==='1';
+const layoutSizes=pcOnly?[[1440,900],[1280,600]]:[[1440,900],[1280,600],[800,450],[390,667]];
 const out=resolve(workspace,process.env.CH4_BROWSER_OUTPUT||'outputs/eight-front-events-browser-20261118');await mkdir(out,{recursive:true});
 publishCommandMap(resolve(workspace,'GameStarter/web-demo/.build'));
 const directory=await mkdtemp(join(tmpdir(),'wzy-eight-ui-'));
@@ -24,6 +26,13 @@ try{
  assert.match(await commandFrame.getAttribute('src'),/\/yiling-command\/.*chapter=yiling/);
  const frame=await commandFrame.contentFrame();
  await frame.locator('.map-first .army-sha.unread').waitFor();
+ const chanceLabels=await frame.evaluate(async()=>{
+  const {conditionDetail}=await import('./front-story.js');
+  const text=(probability,status='holding',eligible=true)=>conditionDetail({status,assessment:{eligible,probability,reasons:[]}});
+  return [text(0),text(.002),text(.392),text(.998),text(1),text(.392,'home'),text(.392,'holding',false)];
+ });
+ for(const [i,suffix] of ['0%','不足1%','约39%','超过99%','100%'].entries())assert.ok(chanceLabels[i].endsWith('当前单轮脱险率'+suffix));
+ assert.doesNotMatch(chanceLabels.slice(5).join(' '),/脱险率/);
  assert.equal(await frame.locator('.front-alert').count(),3);
  assert.equal(await frame.locator('.front-urgency,.army-marker small').count(),0);
  assert.equal(await frame.locator('.work').isVisible(),false);
@@ -40,7 +49,7 @@ try{
   for(const field of ['history','text','current'])assert.ok((await frame.locator('#story-'+field).innerText()).length>0);
   await frame.locator('#story-image').evaluate(image=>image.decode());
  }
- await page.setViewportSize({width:390,height:667});
+ if(!pcOnly)await page.setViewportSize({width:390,height:667});
  await readStory('fu');
  assert.equal(await film.count(),0);
  await frame.locator('#close-story').click();
@@ -55,7 +64,7 @@ try{
    return document.elementFromPoint(b.x+b.width/2,b.y+b.height/2)?.closest('button')===el.closest('button');
   }),id+' unread alert must remain reachable');
  }
- await page.screenshot({path:join(out,'first-contact-mobile.png')});
+ await page.screenshot({path:join(out,pcOnly?'first-contact-desktop.png':'first-contact-mobile.png')});
  await page.setViewportSize({width:1440,height:900});
  await readStory('camp');
  await frame.locator('#close-story').click();
@@ -133,7 +142,32 @@ try{
   await board.locator('#preview').waitFor({state:'hidden'});await board.locator('#feedback').filter({hasText:'军令已入列'}).waitFor();
   assert.equal((await session()).revision,before.revision+1);
  }
- async function end(n){await board.locator('#fu-end-round').click();await board.locator('#round-report').waitFor({state:'visible'});assert.match(await board.locator('#round-report-title').innerText(),new RegExp(`第${n}轮`));const snapshot=await session();assessmentCheck(snapshot);for(const f of snapshot.lastReport.fronts){assert.equal(f.after,snapshot.fronts[f.id].urgency);for(const stage of f.stages||[]){const saved=snapshot.fronts[f.id].stages.find(x=>x.id===stage.id);assert.equal(stage.urgency,saved.urgency);assert.match(await board.locator('[data-report-front='+f.id+']').innerText(),new RegExp('危机 '+stage.urgency));}}await board.locator('#round-report button').click();for(const [id,f]of Object.entries(snapshot.fronts))if(f.status==='holding'){const contact=board.locator('#contacts [data-front='+id+']');const urgency=board.locator('[data-urgency='+id+'] strong');if(await contact.count())assert.equal(await urgency.innerText(),String(f.urgency));else assert.equal(await urgency.count(),0);}}
+ async function end(n){
+  await board.locator('#fu-end-round').click();
+  await board.locator('#round-report').waitFor({state:'visible'});
+  assert.match(await board.locator('#round-report-title').innerText(),new RegExp(`第${n}轮`));
+  const snapshot=await session();
+  assessmentCheck(snapshot);
+  for(const f of snapshot.lastReport.fronts){
+   assert.equal(f.after,snapshot.fronts[f.id].urgency);
+   if(f.status==='locked')continue;
+   const reportText=await board.locator('[data-report-front='+f.id+']').innerText();
+   const stages=f.stages||[];
+   const eligible=stages.filter(stage=>stage.status==='holding'&&stage.assessment?.eligible);
+   assert.equal(reportText.split('当前单轮脱险率').length-1,snapshot.ended?0:eligible.length);
+   for(const stage of stages){
+    const saved=snapshot.fronts[f.id].stages.find(x=>x.id===stage.id);
+    assert.equal(stage.urgency,saved.urgency);
+    assert.match(reportText,new RegExp('危机 '+stage.urgency));
+   }
+  }
+  await board.locator('#round-report button').click();
+  for(const [id,f] of Object.entries(snapshot.fronts))if(f.status==='holding'){
+   const contact=board.locator('#contacts [data-front='+id+']'),urgency=board.locator('[data-urgency='+id+'] strong');
+   if(await contact.count())assert.equal(await urgency.innerText(),String(f.urgency));
+   else assert.equal(await urgency.count(),0);
+  }
+ }
  async function chat(front){
   if(!await board.locator('#contacts [data-front='+front+']').count()){
    await board.locator('#places .unread[data-front='+front+']').click();
@@ -157,7 +191,7 @@ try{
  assert.equal(await board.locator('#contacts button').count(),8);
  checks.push('随轮次出现的五路均可由地图点位查看图文与实时危机度');
  await chat('huang');await dispatch('派600人渡运黄权；派300人接应杜路刘宁；派200人接应王甫');await end(5);current=await session();assert.equal(current.fronts.wang.located,false);await end(6);current=await session();assert.ok(current.messages.some(m=>m.front==='huang'&&/渡运|渡口/.test(m.text)));assert.ok(current.fronts.du.notified);assert.ok(current.fronts.wang.located);
- for(const [width,height] of [[1440,900],[1280,600],[800,450],[390,667]]){await page.setViewportSize({width,height});await page.waitForTimeout(80);for(const id of ['#draft','#send','#fu-end-round']){const b=await board.locator(id).boundingBox();assert.ok(b&&b.y>=0&&b.y+b.height<=height+1,`${width}x${height} clips ${id}`);}assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:join(out,`layout-${width}.png`)});checks.push(`${width}×${height}八路输入和结束本轮完整显示`);}
+ for(const [width,height] of layoutSizes){await page.setViewportSize({width,height});await page.waitForTimeout(80);for(const id of ['#draft','#send','#fu-end-round']){const b=await board.locator(id).boundingBox();assert.ok(b&&b.y>=0&&b.y+b.height<=height+1,`${width}x${height} clips ${id}`);}assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:join(out,`layout-${width}.png`)});checks.push(`${width}×${height}八路输入和结束本轮完整显示`);}
  await page.setViewportSize({width:1440,height:900});await end(7);await end(8);current=await session();assert.equal(current.round,8);assert.equal(current.ended,true);assert.equal(current.endReason,'deadline');assert.equal(current.fronts.sha.status,'holding');assert.equal(await board.locator('#fu-end-round').isDisabled(),true);
  const ending=board.locator('#ending-report[open]');
  await ending.waitFor();
@@ -166,7 +200,31 @@ try{
  assert.match(await ending.locator('[data-ending-count]').innerText(),/^02/);
  await ending.locator('[data-ending-close]').click();
  await board.locator('#review-round').click();assert.equal(await board.locator('.crisis-row').count(),8);assert.match(await board.locator('.report-end').innerText(),/十六时辰/);for(const [id,f]of Object.entries(current.fronts)){const row=board.locator('.crisis-row').filter({hasText:({sha:'沙摩柯',camp:'冯习',fu:'傅肜',ma:'马良',cheng:'程畿',du:'杜路',wang:'王甫',huang:'黄权'})[id]});if(f.status==='safe')assert.match(await row.innerText(),/已脱险 · 返程中/);if(f.status==='holding')assert.match(await row.innerText(),/尚未撤出|仍受困|尚未脱险/);}assert.doesNotMatch(await board.locator('.report-end').innerText(),/八路人员均已脱险/);checks.push('截止按真实safe/home/holding分别展示，未完成路线不误报全救');await page.screenshot({path:join(out,'eight-route-report-desktop.png')});
- await page.setViewportSize({width:390,height:667});await board.locator('#round-report').evaluate(el=>{el.scrollTop=el.scrollHeight;});assert.ok(await board.locator('#round-report').evaluate(el=>el.scrollTop>0));await board.locator('#round-report button').scrollIntoViewIfNeeded();const bottom=await board.locator('#round-report button').boundingBox();assert.ok(bottom&&bottom.y>=0&&bottom.y+bottom.height<=667);await page.screenshot({path:join(out,'eight-route-report-mobile-bottom.png')});await board.locator('#round-report button').click();checks.push('第八轮按实际状态截止，八路军报可滚动且阅毕按钮可达');assert.deepEqual(errors,[]);
+ if(!pcOnly)await page.setViewportSize({width:390,height:667});
+ const roundReport=board.locator('#round-report');
+ await roundReport.evaluate(el=>{el.scrollTop=el.scrollHeight;});
+ assert.ok(await roundReport.evaluate(el=>el.scrollHeight<=el.clientHeight||el.scrollTop>0));
+ const reportButton=roundReport.locator('button');
+ await reportButton.scrollIntoViewIfNeeded();
+ const bottom=await reportButton.boundingBox();
+ assert.ok(bottom&&bottom.y>=0&&bottom.y+bottom.height<=page.viewportSize().height);
+ await page.screenshot({path:join(out,pcOnly?'eight-route-report-desktop-bottom.png':'eight-route-report-mobile-bottom.png')});
+ await reportButton.click();checks.push('第八轮按实际状态截止，阅毕按钮可达');assert.deepEqual(errors,[]);
+ await ending.locator('[data-ending-select=memorial]').click();
+ const memorial=ending.locator('#ending-panel-memorial');
+ for(const [width,height] of pcOnly?layoutSizes:[[390,667],[320,667]]){
+  await page.setViewportSize({width,height});
+  await memorial.locator('.ending-losses').scrollIntoViewIfNeeded();
+  assert.equal(await memorial.evaluate(el=>el.scrollWidth<=el.clientWidth+1),true);
+  for(const label of await memorial.locator('.ending-losses b,.ending-losses span').all()){
+   const box=await label.boundingBox();
+   assert.ok(box&&box.x>=0&&box.x+box.width<=width&&box.y>=0&&box.y+box.height<=height,'祭告页两项伤亡人数与单位均须可见');
+  }
+  await ending.locator('[data-ending-select=sha]').click();
+  await ending.locator('[data-ending-select=memorial]').click();
+  assert.equal(await memorial.evaluate(el=>el.scrollTop),0);
+ }
+ checks.push('祭告页可看到两项人数和标签，重读回到篇首');
  await page.waitForFunction(id=>{
   const result=JSON.parse(localStorage.getItem('wzy:chapter-results:v1')||'{}').yiling;
   return result?.status==='completed'&&result.source.startsWith('yiling-command:'+id+':');

@@ -75,3 +75,33 @@
  .folio-result>div+div{padding-left:5%}
  .ending-pagination{height:38px;padding:0 8px}
 }
+
+@media (max-width:640px) {
+ .ending-topbar{height:auto;min-height:44px;gap:4px;padding:4px 8px;letter-spacing:0;white-space:nowrap}
+ .ending-topbar .ending-chapter{display:none}
+ .ending-topbar .ending-brief{gap:7px;letter-spacing:0}
+ .ending-brief b{font-size:16px}
+ .ending-brief button{padding:8px 0 8px 6px;letter-spacing:0}
+ .ending-brief button span{display:none}
+ .ending-book{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+ .ending-roster{padding:4px 8px 6px;border:0;border-bottom:1px solid #687060}
+ .ending-report .ending-book-title{margin:0;padding:0 4px;border:0}
+ .ending-book-title h1{font-size:20px}
+ .ending-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+ .ending-report .ending-tabs button{grid-template-columns:1fr;align-content:center;gap:0;min-height:38px;padding:2px 5px;line-height:1.2}
+ .ending-report .ending-tabs small{font-size:12px}
+ .ending-tabs .ending-memorial-tab{border-top:0;margin:0}
+ .ending-page,.ending-page:has(.folio-scene){display:block;overflow:auto;overscroll-behavior:contain}
+ .folio-scene{min-height:150px}
+ .folio-scene::after{background:linear-gradient(90deg,transparent 15%,#11201cdc 48%,#11201c 100%)}
+ .folio-intro{position:relative;top:auto;right:auto;width:58%;max-height:none;overflow:visible;transform:none;margin-left:auto;padding:14px 12px 14px 0}
+ .ending-prose{overflow:visible;padding:16px}
+ .ending-prose.folio-result{display:block;padding:16px}
+ .folio-result>div+div{margin-top:14px;padding:12px 0 0;border-left:0;border-top:1px solid #536056}
+ .ending-art.art-memorial{height:88px}
+ .art-memorial figcaption{bottom:8px;left:16px;writing-mode:horizontal-tb}
+ .ending-memorial .ending-name{margin:12px 0 4px!important}
+ .ending-memorial h2{font-size:26px;margin:0 0 12px}
+ .ending-losses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-bottom:12px}
+ .ending-pagination{min-height:42px;white-space:nowrap}
+}

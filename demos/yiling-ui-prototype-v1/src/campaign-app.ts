@@ -1,6 +1,6 @@
 import {CampaignClient,SESSION_KEY,integrated,formal,read,type OrderPreview} from './campaign-client.js';
 import {showEnding} from './ending-report.js';
-import {closeFrontStory, openFrontStory, storyContact, conditionLabel, routeBrief} from './front-story.js';
+import {closeFrontStory, openFrontStory, storyContact, conditionLabel, conditionDetail, routeBrief} from './front-story.js';
 import {resolveCampaignOrders,batchName,describe,names,type Front,type Address,type Order} from './campaign-intent.js';
 const $=<T extends HTMLElement=HTMLElement>(id:string)=>document.getElementById(id) as T;
 const esc=(v:string)=>v.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
@@ -52,7 +52,7 @@ let bannerTimer:ReturnType<typeof setTimeout>|undefined;
 function showRoundBanner(){const s=client.session;if(!s)return;const b=$('round-banner');b.textContent=s.ended?(allEightSafe()?'八路全部脱险':s.endReason==='deadline'?timeTitle()+'已尽':'营救调度结束'):`已过${s.round*2}时辰 · 第${s.round+1}轮`;b.hidden=false;clearTimeout(bannerTimer);bannerTimer=setTimeout(()=>{b.hidden=true;},3500);}
 function showReport(){const s=client.session,r=s?.lastReport;if(!r)return;
  $('round-report-title').textContent=`第${r.round}轮结报 · 已过${r.elapsed}时辰`;
- const crisis=r.fronts.filter(f=>f.status!=='locked').map(f=>{const d=f.after-f.before;return `<div class="crisis-row has-stages" data-report-front="${f.id}"><strong>${names[f.id]}</strong><small>${f.stages?f.stages.map(x=>esc(batchName(f.id,x,s.routeInfo?.sha?.searchVerified))+'：'+(x.status==='home'?'已归营':x.status==='safe'?'已脱险 · 返程中':'尚未撤出')+(x.status==='holding'?' · '+conditionLabel(x):'')+(typeof x.urgency==='number'?' · 危机 '+crisisText(x.urgency):'')).join('；'):f.status==='home'?'已归营':f.status==='safe'?'已脱险 · 返程中':'仍受困'}</small><span>${f.after}<b class="${d>0?'rise':d<0?'fall':'unchanged'}">${d>0?'+':''}${d||'—'}</b></span></div>`;}).join('');
+ const crisis=r.fronts.filter(f=>f.status!=='locked').map(f=>{const d=f.after-f.before;return `<div class="crisis-row has-stages" data-report-front="${f.id}"><strong>${names[f.id]}</strong><small>${f.stages?f.stages.map(x=>esc(batchName(f.id,x,s.routeInfo?.sha?.searchVerified))+'：'+(x.status==='home'?'已归营':x.status==='safe'?'已脱险 · 返程中':'尚未撤出')+(x.status==='holding'&&!s.ended?' · '+esc(conditionDetail(x)):'')+(typeof x.urgency==='number'?' · 危机 '+crisisText(x.urgency):'')).join('；'):f.status==='home'?'已归营':f.status==='safe'?'已脱险 · 返程中':'仍受困'}</small><span>${f.after}<b class="${d>0?'rise':d<0?'fall':'unchanged'}">${d>0?'+':''}${d||'—'}</b></span></div>`;}).join('');
  const prose=r.narrative?.paragraphs.map(p=>`<article class="report-prose"><h4>${p.front==='camp-base'?'接应营':names[p.front as Front]||'前线'}</h4><p>${esc(p.text)}</p></article>`).join('')||r.events.map(t=>`<p>${esc(t)}</p>`).join('');
  const eventProse=(r.crisisEvents||r.fronts.flatMap(f=>f.lastCrisisEvent?[f.lastCrisisEvent]:[])||[]).map(e=>`<article class="report-prose" data-crisis-event="${esc(e.eventId)}"><h4>${names[e.front]} · 危机 ${e.before} → ${e.after}（${e.after-e.before>0?'+':''}${e.after-e.before}）</h4>${prose.includes(esc(e.text))?'':`<p>${esc(e.text)}</p>`}</article>`).join('');
  const pool=r.pool?`<div class="report-pool"><span>营中可调 <strong>${r.pool.reserve+r.pool.ready}</strong>人（预备 ${r.pool.reserve}，待命队 ${r.pool.ready}）</span><span>在外 <strong>${r.pool.outside}</strong>人</span></div>`:'';
@@ -230,7 +230,7 @@ function renderMap(){const s=client.session,available=availableFronts(),returned
   const resolved=['safe','home'].includes(s!.fronts[f].status);
   const label=resolved?statusText(s!.fronts[f].status):f==='sha'&&!s?.routeInfo?.sha&&!s?.routeVersion?'东沟':place;
   const route=s!.fronts[f],remaining=route.stages?.filter(g=>g.status==='holding')||[];
-  const condition=remaining.length?conditionLabel(remaining.reduce((a,b)=>(a.urgency??0)>=(b.urgency??0)?a:b)):'';
+  const condition=s?.ended&&remaining.length?'尚未脱险':remaining.length?conditionLabel(remaining.reduce((a,b)=>(a.urgency??0)>=(b.urgency??0)?a:b)):'';
   const detail=visited?`<span class="front-urgency" data-urgency="${f}">危机度 <strong>${crisisText(route.urgency)}</strong>${condition?' · '+esc(condition):''}</span>${banner(f)}`:'';
   const badge=visited||resolved?'':'<span class="front-alert" aria-hidden="true">!</span>';
   return `<button class="place army-marker army-${f} ${visited?(f===ui.front?'selected':''):'unread'}" data-front="${f}" aria-label="${visited?'查看':'初次查看'}${names[f]}的故事${!visited&&resolved?' · '+label:''}" style="left:${x/10.8}%;top:${y/3.6}%">${detail}<span class="place-label">${names[f]}${visited||resolved?`<small>${label}</small>`:badge}</span></button>`;

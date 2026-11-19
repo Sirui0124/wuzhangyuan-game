@@ -60,7 +60,9 @@ try{
    await p.screenshot({path:resolve(out,'formal-ai-desktop.png')});
    await click(p,'[data-clue-picker]');await p.locator('[data-clue-detail="branch-jiang"] summary').click();await click(p,'[data-action="insert-clue"][data-clue="branch-jiang"]');assert.match(await p.locator('#branch-input').inputValue(),/伯约/);
    await p.locator('#branch-input').fill('魏军还没攻营，我去请伯约来听报。');await click(p,'[data-branch="polish"]');await p.waitForFunction(()=>document.querySelector('#branch-status')?.textContent.includes('已润色'));assert.equal(await p.locator('[data-node="C01-AI-JOINT"]').count(),1);
-   await p.setViewportSize({width:844,height:390});await p.screenshot({path:resolve(out,'formal-ai-landscape.png')});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await p.locator('[data-branch-form] button[type="submit"]').scrollIntoViewIfNeeded();assert.ok(await p.locator('[data-branch-form] button[type="submit"]').isVisible());await p.setViewportSize({width:1440,height:900});
+   if(process.env.WUZHANG_TEST_PC_ONLY!=='1'){
+    await p.setViewportSize({width:844,height:390});await p.screenshot({path:resolve(out,'formal-ai-landscape.png')});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await p.locator('[data-branch-form] button[type="submit"]').scrollIntoViewIfNeeded();assert.ok(await p.locator('[data-branch-form] button[type="submit"]').isVisible());await p.setViewportSize({width:1440,height:900});
+   }
    await click(p,'[data-action="save"]');await click(p,'[data-store-slot="1"]');await click(p,'[data-action="close-modal"]');
    await p.reload();await click(p,'[data-action="continue"]');assert.equal(await p.locator('#branch-input').inputValue(),'魏军还没攻营，我去请伯约来听报。');
    modelFail=true;await click(p,'[data-branch-form] button[type="submit"]');await p.waitForFunction(()=>document.querySelector('#branch-status')?.textContent.includes('连接失败'));assert.equal(await p.locator('[data-node="C01-AI-JOINT"]').count(),1);modelFail=false;

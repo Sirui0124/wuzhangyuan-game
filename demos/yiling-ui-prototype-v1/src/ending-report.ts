@@ -51,7 +51,17 @@ export function bindEnding(root:HTMLElement){
  const tabs=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-ending-select]'));
  function select(index:number,focus=false){
   const current=Math.max(0,Math.min(tabs.length-1,index));
-  tabs.forEach((tab,i)=>{const active=i===current;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;const panel=root.querySelector<HTMLElement>('#'+tab.getAttribute('aria-controls'))!;panel.hidden=!active;if(active)panel.querySelector<HTMLElement>('.ending-prose')!.scrollTop=0;});
+  tabs.forEach((tab,i)=>{
+   const active=i===current;
+   tab.setAttribute('aria-selected',String(active));
+   tab.tabIndex=active?0:-1;
+   const panel=root.querySelector<HTMLElement>('#'+tab.getAttribute('aria-controls'))!;
+   panel.hidden=!active;
+   if(active){
+    panel.scrollTop=0;
+    panel.querySelector<HTMLElement>('.ending-prose')!.scrollTop=0;
+   }
+  });
   root.querySelector('[data-ending-count]')!.textContent=`${String(current+1).padStart(2,'0')} / ${String(tabs.length).padStart(2,'0')}`;
   root.querySelector<HTMLButtonElement>('[data-ending-step="-1"]')!.disabled=current===0;
   root.querySelector<HTMLButtonElement>('[data-ending-step="1"]')!.disabled=current===tabs.length-1;
