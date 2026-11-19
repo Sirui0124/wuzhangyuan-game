@@ -75,6 +75,8 @@ try {
     await frame.locator('.roster-row').first().waitFor();
     const restoredId=await currentId(),restored=await requestSession(restoredId);
     assert.equal(restored.round,0);
+    await frame.locator('.army-camp.unread').waitFor();
+    await frame.locator('#contacts button[data-front=fu]').waitFor();
     assert.deepEqual(await frame.locator('#contacts button').evaluateAll(buttons=>buttons.map(b=>b.dataset.front)),['fu']);
     assert.equal(await frame.locator('.front-alert').count(),2);
     assert.equal(restored.reserve,queued.reserve);
